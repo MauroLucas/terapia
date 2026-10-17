@@ -1,0 +1,287 @@
+// Sonidos sintetizados con Web Audio: el prototipo no usa archivos de audio.
+let ctx: AudioContext | null = null
+let master: GainNode | null = null
+
+export function initAudio() {
+  if (ctx) {
+    void ctx.resume()
+    return
+  }
+  ctx = new AudioContext()
+  master = ctx.createGain()
+  master.gain.value = 0.6
+  master.connect(ctx.destination)
+}
+
+function out(): { c: AudioContext; m: GainNode } | null {
+  return ctx && master ? { c: ctx, m: master } : null
+}
+
+function tone(freq: number, dur: number, type: OscillatorType, gain: number, delay = 0, dest?: AudioNode) {
+  const a = out()
+  if (!a) return
+  const t = a.c.currentTime + delay
+  const o = a.c.createOscillator()
+  const g = a.c.createGain()
+  o.type = type
+  o.frequency.value = freq
+  g.gain.setValueAtTime(gain, t)
+  g.gain.exponentialRampToValueAtTime(0.0001, t + dur)
+  o.connect(g).connect(dest ?? a.m)
+  o.start(t)
+  o.stop(t + dur + 0.05)
+}
+
+let noiseBuffer: AudioBuffer | null = null
+function noise(c: AudioContext) {
+  if (!noiseBuffer) {
+    noiseBuffer = c.createBuffer(1, c.sampleRate * 2, c.sampleRate)
+    const d = noiseBuffer.getChannelData(0)
+    for (let i = 0; i < d.length; i++) d[i] = Math.random() * 2 - 1
+  }
+  const src = c.createBufferSource()
+  src.buffer = noiseBuffer
+  return src
+}
+
+function noiseBurst(dur: number, filterFreq: number, gain: number, type: BiquadFilterType = 'lowpass') {
+  const a = out()
+  if (!a) return
+  const t = a.c.currentTime
+  const src = noise(a.c)
+  const f = a.c.createBiquadFilter()
+  f.type = type
+  f.frequency.value = filterFreq
+  const g = a.c.createGain()
+  g.gain.setValueAtTime(gain, t)
+  g.gain.exponentialRampToValueAtTime(0.0001, t + dur)
+  src.connect(f).connect(g).connect(a.m)
+  src.start(t, Math.random())
+  src.stop(t + dur + 0.05)
+}
+
+export const sfx = {
+  // Portero eléctrico: dos zumbidos secos
+  buzz() {
+    for (let i = 0; i < 2; i++) {
+      tone(140, 0.45, 'square', 0.12, i * 0.6)
+      tone(282, 0.45, 'sawtooth', 0.05, i * 0.6)
+    }
+  },
+  textTick() { tone(520 + Math.random() * 60, 0.03, 'sine', 0.03) },
+  thoughtTick() { tone(330 + Math.random() * 30, 0.05, 'sine', 0.025) },
+  intercomTick() { noiseBurst(0.04, 2500, 0.05, 'bandpass') },
+  click() { tone(1400, 0.03, 'square', 0.04) },
+  unlock() { tone(700, 0.08, 'square', 0.06); tone(1050, 0.12, 'square', 0.05, 0.08) },
+  pickup() { tone(880, 0.15, 'triangle', 0.1); tone(1320, 0.25, 'triangle', 0.08, 0.1) },
+  paper() { noiseBurst(0.18, 3000, 0.06, 'highpass') },
+  door() { noiseBurst(0.5, 400, 0.2); tone(90, 0.3, 'sine', 0.15) },
+  handle() { tone(600, 0.05, 'square', 0.05); tone(500, 0.05, 'square', 0.05, 0.12); noiseBurst(0.15, 800, 0.08) },
+  kick(material: string, strength = 1) {
+    const s = Math.min(1, strength)
+    switch (material) {
+      case 'lata':
+        tone(1200 + Math.random() * 300, 0.25, 'triangle', 0.12 * s)
+        tone(2400 + Math.random() * 400, 0.15, 'sine', 0.05 * s)
+        break
+      case 'botella':
+        tone(260 + Math.random() * 60, 0.12, 'sine', 0.15 * s)
+        break
+      case 'caja':
+        noiseBurst(0.12, 300, 0.25 * s)
+        break
+      default:
+        noiseBurst(0.12, 2500, 0.05 * s, 'highpass')
+    }
+  },
+  step() { noiseBurst(0.05, 600, 0.04) },
+  // Dolor de cabeza: tres latidos graves y un zumbido agudo, muy bajo
+  throb() {
+    for (let i = 0; i < 3; i++) tone(58, 0.5, 'sine', 0.22, i * 0.9)
+    tone(3100, 2.6, 'sine', 0.015)
+  },
+  // Ascensor: campanita al llegar al piso
+  ding() { tone(1318.5, 0.9, 'sine', 0.1); tone(1046.5, 1.2, 'sine', 0.08, 0.35) },
+}
+
+// Música y ambientes en loop
+type Loop = { stop: (fade?: number) => void }
+
+function fadeOutAndStop(g: GainNode, nodes: AudioScheduledSourceNode[], fade: number) {
+  const a = out()
+  if (!a) return
+  const t = a.c.currentTime
+  g.gain.cancelScheduledValues(t)
+  g.gain.setValueAtTime(g.gain.value, t)
+  g.gain.linearRampToValueAtTime(0, t + fade)
+  nodes.forEach((n) => n.stop(t + fade + 0.1))
+}
+
+// Tema principal: atmosférico, drones y texturas sin melodía
+export function startDrone(): Loop {
+  const a = out()
+  if (!a) return { stop() {} }
+  const t = a.c.currentTime
+  const g = a.c.createGain()
+  g.gain.setValueAtTime(0, t)
+  g.gain.linearRampToValueAtTime(0.18, t + 6)
+  const f = a.c.createBiquadFilter()
+  f.type = 'lowpass'
+  f.frequency.value = 700
+  f.connect(g).connect(a.m)
+
+  const nodes: AudioScheduledSourceNode[] = []
+  for (const [freq, det] of [[55, 0], [82.4, 4], [110, -6], [164.8, 7], [220, -3]]) {
+    const o = a.c.createOscillator()
+    o.type = freq < 100 ? 'sawtooth' : 'sine'
+    o.frequency.value = freq
+    o.detune.value = det
+    const og = a.c.createGain()
+    og.gain.value = freq < 100 ? 0.25 : 0.12
+    o.connect(og).connect(f)
+    o.start(t)
+    nodes.push(o)
+  }
+  // LFO lento sobre el filtro: la textura "respira"
+  const lfo = a.c.createOscillator()
+  lfo.frequency.value = 0.07
+  const lg = a.c.createGain()
+  lg.gain.value = 400
+  lfo.connect(lg).connect(f.frequency)
+  lfo.start(t)
+  nodes.push(lfo)
+
+  const air = noise(a.c)
+  air.loop = true
+  const af = a.c.createBiquadFilter()
+  af.type = 'bandpass'
+  af.frequency.value = 1200
+  af.Q.value = 0.7
+  const ag = a.c.createGain()
+  ag.gain.value = 0.05
+  air.connect(af).connect(ag).connect(g)
+  air.start(t)
+  nodes.push(air)
+
+  return { stop: (fade = 4) => fadeOutAndStop(g, nodes, fade) }
+}
+
+// Ambiente del departamento: casi silencio, solo un zumbido bajo
+export function startRoomTone(): Loop {
+  const a = out()
+  if (!a) return { stop() {} }
+  const t = a.c.currentTime
+  const g = a.c.createGain()
+  g.gain.value = 0.05
+  g.connect(a.m)
+  const o = a.c.createOscillator()
+  o.frequency.value = 50
+  o.connect(g)
+  o.start(t)
+  return { stop: (fade = 1) => fadeOutAndStop(g, [o], fade) }
+}
+
+// Ascensor: zumbido del motor y aire en el hueco
+export function startElevator(): Loop {
+  const a = out()
+  if (!a) return { stop() {} }
+  const t = a.c.currentTime
+  const g = a.c.createGain()
+  g.gain.setValueAtTime(0, t)
+  g.gain.linearRampToValueAtTime(0.5, t + 1.5)
+  g.connect(a.m)
+  const f = a.c.createBiquadFilter()
+  f.type = 'lowpass'
+  f.frequency.value = 220
+  f.connect(g)
+  const o = a.c.createOscillator()
+  o.type = 'sawtooth'
+  o.frequency.value = 62
+  const og = a.c.createGain()
+  og.gain.value = 0.12
+  o.connect(og).connect(f)
+  o.start(t)
+  const air = noise(a.c)
+  air.loop = true
+  const af = a.c.createBiquadFilter()
+  af.type = 'bandpass'
+  af.frequency.value = 400
+  const ag = a.c.createGain()
+  ag.gain.value = 0.06
+  air.connect(af).connect(ag).connect(g)
+  air.start(t)
+  return { stop: (fade = 1) => fadeOutAndStop(g, [o, air], fade) }
+}
+
+// Reloj de pared: el tic-tac solo se escucha cerca. setMix ajusta volumen (0-1) y paneo (-1 a 1).
+export function startClock(): Loop & { setMix: (volume: number, pan: number) => void } {
+  const a = out()
+  if (!a) return { stop() {}, setMix() {} }
+  const g = a.c.createGain()
+  g.gain.value = 0
+  const panner = a.c.createStereoPanner()
+  g.connect(panner).connect(a.m)
+  let alive = true
+  let n = 0
+  const tick = () => {
+    if (!alive) return
+    tone(n++ % 2 ? 1700 : 2100, 0.03, 'square', 0.06, 0, g)
+    setTimeout(tick, 1000)
+  }
+  tick()
+  return {
+    setMix(volume, pan) {
+      const t = a.c.currentTime
+      g.gain.setTargetAtTime(volume, t, 0.1)
+      panner.pan.setTargetAtTime(pan, t, 0.1)
+    },
+    stop() {
+      alive = false
+      g.disconnect()
+    },
+  }
+}
+
+// Ciudad: ruido de tráfico filtrado
+export function startCity(): Loop {
+  const a = out()
+  if (!a) return { stop() {} }
+  const t = a.c.currentTime
+  const src = noise(a.c)
+  src.loop = true
+  const f = a.c.createBiquadFilter()
+  f.type = 'lowpass'
+  f.frequency.value = 350
+  const g = a.c.createGain()
+  g.gain.setValueAtTime(0, t)
+  g.gain.linearRampToValueAtTime(0.25, t + 2)
+  src.connect(f).connect(g).connect(a.m)
+  src.start(t)
+  const motor = a.c.createOscillator()
+  motor.type = 'sawtooth'
+  motor.frequency.value = 38
+  const mg = a.c.createGain()
+  mg.gain.value = 0.05
+  const mf = a.c.createBiquadFilter()
+  mf.type = 'lowpass'
+  mf.frequency.value = 120
+  motor.connect(mf).connect(mg).connect(g)
+  motor.start(t)
+  return { stop: (fade = 3) => fadeOutAndStop(g, [src, motor], fade) }
+}
+
+// Radio del auto: música tranquila
+export function startRadio(): Loop {
+  const notes = [261.6, 329.6, 392, 493.9, 440, 392, 329.6, 293.7]
+  let i = 0
+  let alive = true
+  const play = () => {
+    if (!alive) return
+    tone(notes[i % notes.length], 1.2, 'triangle', 0.05)
+    if (i % 4 === 0) tone(notes[i % notes.length] / 2, 2.2, 'sine', 0.05)
+    i++
+    setTimeout(play, 600)
+  }
+  play()
+  return { stop: () => { alive = false } }
+}
