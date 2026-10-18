@@ -78,11 +78,13 @@ En orden:
 - La **foto de la billetera** (Casa de Jorge) es de ese viaje, y **"12/08"**, escrito atrás, es **la fecha del viaje**.
 - Por eso Jorge la lleva encima, y por eso dejó la nota "Te extraño, mamá" en el cajón que se abre con esa fecha.
 
-**Por qué estaban distanciados:** de grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte** y **dejaron de hablarse** hasta el viaje.
+**Por qué estaban distanciados:** de grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte**. En la discusión, **Jorge la empujó: ella se cayó y se lastimó**. Después **dejaron de hablarse** hasta el viaje.
+
+**El papá de Jorge** fue un **padre ausente** que no sabía comunicar sus problemas y **los resolvía con violencia**. Jorge creció así: es **disfuncional**, y en la pelea repitió lo que vio de chico.
 
 **La culpa.** La pelea le dejó a Jorge **mucha culpa**, y es uno de los temas centrales del juego: **la culpa se tiene que sentir, y bastante**. Se reencontraron en el viaje, pero ella murió poco después: lo que se dijeron en la pelea es algo que él ya no puede arreglar.
 
-_Por definir: qué fue la pelea y qué se dijeron, cómo se hace sentir la culpa en el juego, a dónde viajaron y en qué año._
+_Por definir: por qué discutieron, cómo se muestra el empujón (con cuidado, sin regodearse), cómo se hace sentir la culpa en el juego, a dónde viajaron y en qué año._
 
 **Un recuerdo de la infancia (Sesión 1):** una noche, de chico, Jorge fue a una feria con su mamá y se perdió. Al entrar, ella le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Él se quedó quieto, y ella lo encontró. _Detalles provisorios, propuestos por el agente._
 

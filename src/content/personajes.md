@@ -46,9 +46,18 @@
 | Detalle clave | Jorge no la reconoce: al ver la foto pregunta "¿Quién es esta señora?". Pero en el cajón con candado dejó una nota con su letra: "Te extraño, mamá" |
 | Qué pasó con ella _(spoiler)_ | Tuvo un **primer ACV** y el médico le recomendó estar más tranquila. Por eso hizo un **viaje con Jorge**, en el que se reencontraron como madre e hijo y volvieron a tener una relación cercana. Poco después murió de un **segundo ACV**, terminal. La foto de la billetera es de ese viaje, y "12/08" es su fecha. Ver "Historia y mundo" → Lore |
 | En el sueño | En la Sesión 1 (la feria) aparece en el recuerdo de cuando Jorge se perdió de chico: le compra algodón de azúcar, lo mira desde el banco de la calesita y, al final, lo encuentra. **No tiene cara**: una luz se la tapa. Le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Aspecto en el prototipo: pelo largo castaño, tapado terracota (provisorio) |
-| Distancia | De grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte** y dejaron de hablarse hasta el viaje. A Jorge le dejó **mucha culpa** |
+| Distancia | De grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte**: Jorge la empujó, ella se cayó y se lastimó. Dejaron de hablarse hasta el viaje. A Jorge le dejó **mucha culpa** |
 | Su muerte _(spoiler)_ | Es lo que llevó a Jorge a la crisis del baño |
-| Por definir | ¿Qué fue la pelea? ¿A dónde viajaron? ¿En qué año? |
+| Por definir | ¿Por qué discutieron? ¿A dónde viajaron? ¿En qué año? |
+
+### Papá de Jorge _(sin nombre)_
+
+| Campo | Valor |
+|---|---|
+| Primera aparición | _Por definir_ |
+| Relación con Jorge | **Padre ausente.** No sabía comunicar sus problemas y los resolvía con **violencia** |
+| Qué dejó en Jorge | Jorge creció así y es disfuncional: en la pelea con su mamá repitió lo que vio de chico |
+| Por definir | ¿Sigue vivo? ¿Vivía con ellos o se fue? ¿Aparece en algún sueño? |
 
 ### María, la ex novia de Jorge
 
