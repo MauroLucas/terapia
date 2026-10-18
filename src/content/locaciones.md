@@ -345,7 +345,8 @@ Los objetos marcados con **✓** se guardan en el inventario al encontrarlos y s
 
 ### Pendiente de definir
 
-- ¿Por qué Jorge sacó la foto de su primera novia?
+- ¿Por qué Jorge sacó la foto de su primera novia (María)? El departamento es el que iban a alquilar juntos.
+- _Idea aprobada:_ el **papelito con el número del papá**, que Jorge guardó y nunca usó, está en algún lugar de la casa. ¿Dónde está y en qué visita aparece?
 - ¿Cuándo y cómo se revela que todo es un sueño?
 
 ## Secuencia de títulos: las escaleras

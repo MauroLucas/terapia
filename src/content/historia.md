@@ -8,13 +8,13 @@ En Neural, una inteligencia artificial permite que el **doctor Vela** vea en pan
 
 - **Punto de partida:** el departamento de 2 ambientes de Jorge.
 - **Época:** los años 2000 _(tentativo)_. Es el "hoy" de Jorge, a los 40: su infancia queda entre fines de los 60 y los 70.
-- _Lugar: por definir._
+- **Lugar:** Argentina (María se va a estudiar a Córdoba). _La ciudad donde vive Jorge, por definir._
 
 ## Lugares y conceptos clave
 
 | Nombre | Qué es |
 |---|---|
-| Departamento de Jorge | 2 ambientes: cuarto, pasillo, cocina y baño. Es la locación **Casa de Jorge** |
+| Departamento de Jorge | 2 ambientes: cuarto, pasillo, cocina y baño. Es **el departamento que iba a alquilar con María**: cuando ella se fue a Córdoba, Jorge se quedó ahí solo. Es la locación **Casa de Jorge** |
 | Neural | Centro de rehabilitación de la memoria. Usa inteligencia artificial para interactuar con los sueños de los pacientes. **No existe:** lo inventa la mente de Jorge (ver "Revelación") |
 | Doctor Vela | **Un personaje de su subconsciente** que trata de ayudarlo a seguir adelante (ver "Personajes" → Doctor Vela) |
 | Hall de Neural | Entrada del edificio: hall grande con recepción, sala de espera, baños, cuarto de maestranza, máquina de bebidas y molinetes con seguridad. Sin carnet no se pasa. Pasando los molinetes, un ascensor sube a los consultorios. Es la locación **Hall del edificio** |
@@ -86,17 +86,26 @@ En orden:
 
 **Por qué discutieron** _(la idea la eligió el usuario; las frases son provisorias)_: cuando Jorge se está yendo de la casa, enojado y sin hablar, su mamá le quiere dar **un número para que llame a su papá**. Jorge no quiere. Ella **insiste**, y él se cierra. Al final ella le dice que **se está pareciendo a él**: _"Vas a terminar como tu padre."_ En ese momento, Jorge la empuja. Lo confirma justo cuando lo niega.
 
-**Ese día ya venía mal.** Jorge no estaba enojado solo por el papá: le venían pasando una serie de cosas, y todo explotó con lo del número. _Por definir: qué cosas le pasaron ese día._
+**Ese día ya venía mal.** Jorge no estaba enojado solo por el papá: todo explotó con lo del número.
+
+1. **A la tarde, María corta con él.** Se va a **estudiar a Córdoba** y no se van a ver por cinco años, así que terminan. Jorge se queda solo con **el departamento que iban a alquilar juntos**: el mismo donde vive hoy.
+2. **A la noche**, mientras arma el bolso para mudarse solo, aparece su mamá con **el papelito del número**. El papá **estaba mal**, y ella **no quería que su hijo viviera con rencor ni con culpa**. Insiste, él explota y la empuja.
+
+Nada de eso fue culpa de ella: fue la que estaba ahí cuando todo explotó. Y justo lo que ella quería evitar (que Jorge cargara con culpa) es lo que él se lleva de esa noche.
+
+**El papelito:** Jorge se lo guardó y **nunca llamó**. Está en algún lugar de la casa _(idea aprobada; dónde está y cuándo aparece, por definir)_.
+
+**En el juego, el empujón no lo hace el jugador.** El recuerdo **se corta justo ahí**, como si la mente de Jorge no quisiera mirarlo, y lo siguiente que se ve es a ella en el piso. No se juega a la violencia: lo que queda es la culpa.
 
 Por eso la culpa es doble: **lastimó a su mamá** y **se convirtió en lo que más odiaba**. La frase de la mamá puede volver en los sueños.
 
-_Por definir: por qué la mamá quería que lo llamara, cómo se muestra el empujón (con cuidado, sin regodearse), cómo se hace sentir la culpa en el juego, a dónde viajaron y en qué año._
+_Por definir: qué le pasaba al papá y qué fue de él, cómo se hace sentir la culpa en el resto del juego, a dónde viajaron y en qué año._
 
 **Un recuerdo de la infancia (Sesión 1):** una noche, de chico, Jorge fue a una feria con su mamá y se perdió. Al entrar, ella le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Él se quedó quieto, y ella lo encontró. _Detalles provisorios, propuestos por el agente._
 
 ### María, la ex novia de Jorge (spoiler)
 
-- Se llama **María**. Fue su **primera novia**. Se separaron **a los 20**, pero **nunca dejaron de hablarse**.
+- Se llama **María**. Fue su **primera novia**. Se separaron **a los 20**: ella se fue a **estudiar a Córdoba** por cinco años y cortaron. Iban a alquilar juntos el departamento donde Jorge vive hoy. Pero **nunca dejaron de hablarse**.
 - **A los 30 se reencuentran en un bar:** ella ya está casada; él sigue soltero.
 - En la realidad, **es quien toca el portero** esa noche (ver "Final"). En el sueño, la mente de Jorge la cambia por el chofer.
 - Su foto es la que falta en el portarretratos del cuarto.
@@ -125,7 +134,7 @@ Son **siete sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 |---|---|---|---|---|
 | 1 | Infancia | **La feria** | Se perdió de chico y su mamá lo encontró | En el prototipo |
 | 2 | Adolescencia | **El papá** | El origen: un padre ausente que resolvía todo con violencia. Quizás también cuando conoce a María _(por definir)_ | Idea |
-| 3 | Juventud (~20) | **La pelea** | Se va de la casa, discute con su mamá y la empuja: dejan de hablarse. Le deja mucha culpa. El mismo año se separa de María, pero siguen hablando | Idea |
+| 3 | Juventud (~20) | **La pelea** | El mismo día: María se va a Córdoba y cortan; a la noche, la mamá le da el número del papá, insiste y él la empuja. Dejan de hablarse. Le deja mucha culpa | Idea |
 | 4 | Los 30 | **El reencuentro** | Se vuelve a ver con María **en un bar**: ella está casada; él, soltero | Idea |
 | 5 | Adultez | **El viaje del 12/08** | El primer ACV de su mamá y el viaje juntos: se reencuentran como madre e hijo | Idea |
 | 6 | La pérdida | **La muerte de su mamá** | El segundo ACV. Es lo que está tachado en el informe | Idea |

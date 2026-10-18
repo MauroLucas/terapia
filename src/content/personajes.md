@@ -48,8 +48,8 @@
 | En el sueño | En la Sesión 1 (la feria) aparece en el recuerdo de cuando Jorge se perdió de chico: le compra algodón de azúcar, lo mira desde el banco de la calesita y, al final, lo encuentra. **No tiene cara**: una luz se la tapa. Le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Aspecto en el prototipo: pelo largo castaño, tapado terracota (provisorio) |
 | Distancia | De grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte**: Jorge la empujó, ella se cayó y se lastimó. Dejaron de hablarse hasta el viaje. A Jorge le dejó **mucha culpa** |
 | Su muerte _(spoiler)_ | Es lo que llevó a Jorge a la crisis del baño |
-| La pelea | Le quería dar un número para que llamara a su papá. Jorge no quería y ella insistió. Le dijo que se estaba pareciendo a él (_"Vas a terminar como tu padre"_, provisorio) y ahí Jorge la empujó |
-| Por definir | ¿Por qué quería que lo llamara? ¿A dónde viajaron? ¿En qué año? |
+| La pelea | Le quería dar un número para que llamara a su papá, que estaba mal: no quería que su hijo viviera con rencor ni con culpa. Jorge no quería y ella insistió. Le dijo que se estaba pareciendo a él (_"Vas a terminar como tu padre"_, provisorio) y ahí Jorge la empujó. Esa misma tarde, María había cortado con él |
+| Por definir | ¿A dónde viajaron? ¿En qué año? |
 
 ### Papá de Jorge _(sin nombre)_
 
@@ -58,7 +58,8 @@
 | Primera aparición | _Por definir_ (en el mapa, la Sesión 2: la adolescencia) |
 | Relación con Jorge | **Padre ausente.** No sabía comunicar sus problemas y los resolvía con **violencia** |
 | Qué dejó en Jorge | Jorge creció así y es disfuncional: en la pelea con su mamá repitió lo que vio de chico |
-| Por definir | ¿Sigue vivo? ¿Vivía con ellos o se fue? ¿Aparece en algún sueño? |
+| Cuando Jorge tenía ~20 | **Estaba mal.** La mamá quería que Jorge lo llamara y le dio su número. Jorge guardó el papelito y **nunca llamó** |
+| Por definir | ¿Qué le pasaba? ¿Qué fue de él? ¿Vivía con ellos o se fue? ¿Aparece en algún sueño? |
 
 ### María, la ex novia de Jorge
 
@@ -66,7 +67,7 @@
 |---|---|
 | Nombre | **María** |
 | Primera aparición | Casa de Jorge: de forma indirecta. Su foto es la que falta en el portarretratos de la cómoda |
-| Relación con Jorge | Fue su **primera novia**. Se separaron **a los 20**, pero **nunca dejaron de hablarse** |
+| Relación con Jorge | Fue su **primera novia**. Iban a alquilar juntos el departamento donde Jorge vive hoy. Se separaron **a los 20**: ella se fue a **estudiar a Córdoba** por cinco años. Pero **nunca dejaron de hablarse** |
 | A los 30 | Se reencuentran **en un bar**: ella ya está casada; él sigue soltero |
 | En el final _(spoiler)_ | Es quien toca el portero. En el sueño, la mente de Jorge la cambia por el chofer. Ver "Historia y mundo" → Final |
 | Por definir | ¿Por qué Jorge sacó su foto? ¿Qué pasó en el reencuentro? ¿Por qué viene justo esa noche? |

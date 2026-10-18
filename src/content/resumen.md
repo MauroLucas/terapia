@@ -36,7 +36,7 @@ El juego trata **salud mental, pérdida de memoria, disociación, violencia fami
 - **Clasificación por edad** acorde a estos temas (ESRB / PEGI).
 - Incluir **líneas de ayuda** en los créditos o en el menú, como hacen otros juegos que tocan estos temas.
 - Tratar el tema con cuidado, sin glorificarlo ni usarlo solo como golpe de efecto.
-- **La violencia familiar** (el papá de Jorge, el empujón a su mamá) se muestra con cuidado: sin regodearse y sin justificarla. Lo que importa es lo que deja: la culpa.
+- **La violencia familiar** (el papá de Jorge, el empujón a su mamá) se muestra con cuidado: sin regodearse y sin justificarla. Lo que importa es lo que deja: la culpa. **El jugador nunca ejecuta la violencia:** el recuerdo se corta antes.
 
 ## Referencias / inspiración
 
