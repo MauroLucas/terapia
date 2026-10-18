@@ -38,6 +38,9 @@ Antes de dar un cambio por terminado: `npm run build` y `npm run lint` sin error
 | `src/prototype/ui.ts` | Globos de diálogo, lectura de documentos, opciones, objetivo en pantalla y párpados (`eyelids`) |
 | `src/prototype/audio.ts` | Sonidos sintetizados con Web Audio (no hay archivos de audio) |
 | `src/prototype/art.ts` | Texturas dibujadas por código (Jorge, objetos) |
+| `src/content/sprites.md` | Sección **Sprites** del GDD: cada sprite con su clave, tamaño, dónde aparece, descripción y prompt para IA, y la imagen del arte provisorio |
+| `public/sprites/` | Imágenes de la sección Sprites (y de Personajes): texturas a ×4, `escena/` (personajes dibujados dentro de la escena), `documentos/` y `fondos/`. Se generan, no se editan a mano |
+| `tools/sprites.html` y `scripts/sprites.py` | Exportan esas imágenes desde el prototipo (ver regla 4) |
 
 ## Reglas
 
@@ -64,6 +67,7 @@ Dónde va cada cosa en el GDD:
 | Personajes nuevos o cambios en uno existente | `personajes.md` |
 | Historia, lore, revelaciones | `historia.md` |
 | Motor, plataformas, prototipo | `tecnico.md` |
+| Sprites nuevos o cambios en uno (personaje, objeto, documento, fondo) | `sprites.md` |
 
 ### 2. Idioma y tono
 
@@ -81,6 +85,7 @@ El juego trata salud mental, pérdida de memoria, violencia familiar e ideación
 - La física corre a **paso fijo** desde `Apartment.update` (`autoUpdate: false`). Los movimientos usan `delta` para ir igual a cualquier FPS.
 - **Prototipo** es el juego completo: todas las locaciones de corrido. Cada locación nueva se **suma al final** de ese flujo y además tiene su **página propia en el menú**, debajo de Prototipo, para probarla suelta. Suelta termina en su cierre (`LevelEnd` o el final propio de la escena) en vez de seguir al siguiente. El aviso de contenido se mantiene en todas.
 - En desarrollo, `window.__apt` expone la escena del departamento para pruebas automáticas (por ejemplo, mover a Jorge con `__apt.player.setPosition(x, 530)`).
+- **Sprites:** si se agrega o cambia un sprite, un objeto, un documento o un ambiente, regenerar las imágenes con `python3 scripts/sprites.py` (con `npm run dev -- --port 5199` levantado) y actualizar `sprites.md` (y `personajes.md` si es un personaje). Si un personaje nuevo se dibuja dentro de la escena en vez de como textura, sumarlo a los recortes del script.
 - Para verificar cambios visuales: levantar `npm run dev`, recorrer el flujo en un navegador headless y revisar capturas. Cerrar el servidor al terminar.
 
 ### 5. Fuera de alcance

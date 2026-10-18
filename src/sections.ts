@@ -13,6 +13,7 @@ export const sections: Section[] = [
   { id: 'mecanicas', title: 'Mecánicas', icon: '⚙️' },
   { id: 'locaciones', title: 'Locaciones', icon: '🗺️' },
   { id: 'arte', title: 'Arte y estilo', icon: '🎨' },
+  { id: 'sprites', title: 'Sprites', icon: '🧩' },
   { id: 'audio', title: 'Audio', icon: '🎵' },
   { id: 'ui', title: 'Interfaz (UI/UX)', icon: '🖥️' },
   { id: 'tecnico', title: 'Aspectos técnicos', icon: '🛠️' },

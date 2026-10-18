@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exportar sprites</title>
+    <style>
+      body { background: #222; color: #ddd; font: 14px system-ui, sans-serif; }
+      figure { display: inline-block; margin: 8px; text-align: center; }
+      img { background: repeating-conic-gradient(#555 0 25%, #444 0 50%) 0 0 / 16px 16px; }
+    </style>
+  </head>
+  <body>
+    <!--
+      Herramienta de desarrollo (no entra en el build): dibuja todas las texturas de
+      src/prototype/art.ts a escala ×4 y las deja en window.sprites (clave → PNG en base64).
+      Después muestra cada página de los objetos que se ven en primer plano (documents.ts)
+      y las deja en window.documentos.
+      La usa scripts/sprites.py para regenerar public/sprites/. Con `npm run dev`, abrir
+      /tools/sprites.html para verlas.
+    -->
+    <div id="out"></div>
+    <script type="module">
+      import * as Phaser from 'phaser'
+      import { makeTextures } from '/src/prototype/art.ts'
+      import { OBJETOS, showPage } from '/src/prototype/documents.ts'
+
+      const S = 4
+      // Dibujar cada textura a escala S: la escala de Graphics se aplica al generar la textura
+      const proto = Phaser.GameObjects.Graphics.prototype
+      const original = proto.generateTexture
+      proto.generateTexture = function (key, w, h) {
+        this.setScale(S)
+        const r = original.call(this, key, w * S, h * S)
+        this.setScale(1)
+        return r
+      }
+
+      class Export extends Phaser.Scene {
+        async create() {
+          makeTextures(this)
+          proto.generateTexture = original
+          const sprites = {}
+          for (const key of this.textures.getTextureKeys()) {
+            const src = this.textures.get(key).getSourceImage()
+            if (src instanceof HTMLCanvasElement) sprites[key] = src.toDataURL('image/png')
+          }
+          window.sprites = sprites
+          const out = document.getElementById('out')
+          for (const [key, url] of Object.entries(sprites)) {
+            const f = document.createElement('figure')
+            f.innerHTML = `<img src="${url}"><figcaption>${key}</figcaption>`
+            out.append(f)
+          }
+          // Documentos: cada página, a tamaño real de pantalla (1280 × 720)
+          const wait = (ms) => new Promise((r) => setTimeout(r, ms))
+          const documentos = {}
+          for (const [id, o] of Object.entries(OBJETOS)) {
+            for (let i = 0; i < o.pages.length; i++) {
+              this.children.removeAll(true)
+              showPage(this, id, i)
+              await wait(300)
+              documentos[`${id}-${i + 1}`] = await new Promise((r) => this.game.renderer.snapshot((img) => r(img.src)))
+            }
+          }
+          this.children.removeAll(true)
+          window.documentos = documentos
+        }
+      }
+      new Phaser.Game({ type: Phaser.CANVAS, width: 1280, height: 720, backgroundColor: '#0f1117', parent: document.createElement('div'), scene: Export, banner: false })
+    </script>
+  </body>
+</html>

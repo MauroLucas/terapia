@@ -46,6 +46,8 @@ Para no tener que jugar todo desde el principio, **cada locación tiene su propi
 
 _El prototipo y este documento se mantienen sincronizados: cada cambio de diseño en uno se refleja en el otro._
 
+**Arte provisorio y sección Sprites:** las texturas del prototipo están dibujadas por código. `scripts/sprites.py` (con `tools/sprites.html`) las exporta a imágenes, junto con los documentos y capturas de cada ambiente, para la sección "Sprites". Cuando llegue el arte final, cada imagen reemplaza la textura con la misma clave.
+
 ## Plataformas
 
 | Plataforma | Notas |

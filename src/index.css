@@ -107,3 +107,16 @@ img { max-width: 100%; border-radius: 8px; }
   .menu-open .sidebar { transform: none; }
   main { padding: 64px 16px 32px; }
 }
+
+/* Imágenes del GDD. Los sprites se exportan a ×4: se muestran a la mitad, sobre un damero que deja ver la transparencia */
+.content img { max-width: 100%; border-radius: 6px; vertical-align: bottom; }
+.content img[src*="sprites/"] {
+  zoom: 0.5;
+  margin: 0 8px 8px 0;
+  padding: 12px;
+  background: repeating-conic-gradient(#2a3040 0 25%, #222837 0 50%) 0 0 / 24px 24px;
+}
+.content img[src*="sprites/fondos/"] { zoom: 1; padding: 0; width: 100%; background: none; }
+.content img[src*="sprites/escena/"] { zoom: 0.67; }
+.content td img[src*="sprites/"] { zoom: 0.5; padding: 6px; margin: 0; }
+.content img[src*="sprites/documentos/"] { zoom: 0.75; padding: 0; background: none; }

@@ -1,3 +1,5 @@
+_Las imágenes son los sprites provisorios del prototipo. La lista completa, con descripciones para generar el arte con IA, está en "Sprites"._
+
 ## Protagonista
 
 ### Jorge
@@ -14,6 +16,11 @@
 
 #### Apariencia
 
+![Jorge](sprites/jorge0.png) ![Jorge caminando](sprites/jorge1.png) ![Jorge sentado](sprites/jorgeSentado.png) ![Jorge de chico](sprites/chico0.png)
+
+_Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesión 1). Ver "Sprites"._
+
+
 | Campo | Valor |
 |---|---|
 | Altura | 1,75 m |
@@ -29,6 +36,8 @@
 
 ### Chofer _(sin nombre)_
 
+![Chofer](sprites/escena/chofer.png)
+
 | Campo | Valor |
 |---|---|
 | Primera aparición | Casa de Jorge: toca el timbre del departamento de Jorge |
@@ -38,6 +47,8 @@
 | En el final _(spoiler)_ | No existe: es la forma en que la mente de Jorge disfraza a María, su ex novia, que toca el portero de verdad |
 
 ### Mamá de Jorge _(sin nombre)_
+
+![Mamá](sprites/mama.png) ![Mamá agachada](sprites/mamaAgachada.png)
 
 | Campo | Valor |
 |---|---|
@@ -54,6 +65,8 @@
 
 ### Papá de Jorge _(sin nombre)_
 
+![Papá](sprites/papa.png)
+
 | Campo | Valor |
 |---|---|
 | Primera aparición | **Sesión 2: El boletín**, como una silueta oscura y sin cara, más grande que las demás. Cerca de él (y de sus cosas) la llama de Vela se achica. **En persona, recién en el epílogo:** después de la revelación, Jorge decide llamarlo e ir a verlo |
@@ -64,6 +77,8 @@
 | Por definir | ¿Qué le pasaba cuando Jorge tenía ~20? ¿Vivía con ellos o se fue? ¿Cómo es el encuentro del epílogo? |
 
 ### María, la ex novia de Jorge
+
+![María](sprites/maria0.png) ![María caminando](sprites/maria1.png)
 
 | Campo | Valor |
 |---|---|
@@ -77,6 +92,8 @@
 
 ### Recepcionista de Neural _(sin nombre)_
 
+![Recepcionista](sprites/escena/recepcionista.png)
+
 | Campo | Valor |
 |---|---|
 | Primera aparición | Hall del edificio: en el mostrador del hall de Neural |
@@ -85,6 +102,8 @@
 | Trato | Amable y formal, lo trata de "usted" _(provisorio)_ |
 
 ### Seguridad de Neural _(sin nombre)_
+
+![Seguridad](sprites/guardia.png)
 
 | Campo | Valor |
 |---|---|
@@ -107,6 +126,8 @@
 
 ### Señora de la sala de espera _(sin nombre)_
 
+![Señora](sprites/escena/senora.png)
+
 | Campo | Valor |
 |---|---|
 | Primera aparición | Hall del edificio: sentada en un sillón del hall de Neural |
@@ -117,6 +138,8 @@
 
 ### Joven de la sala de espera _(sin nombre)_
 
+![Joven](sprites/escena/joven.png)
+
 | Campo | Valor |
 |---|---|
 | Primera aparición | Hall del edificio: sentado en un sillón del hall de Neural |
@@ -126,6 +149,8 @@
 | Por definir | ¿Vuelve a aparecer? |
 
 ### Doctor Vela
+
+![Vela](sprites/vela0.png) ![Vela sentado](sprites/velaSentado.png) ![Vela en el sueño: la llama](sprites/llama.png)
 
 | Campo | Valor |
 |---|---|
@@ -142,6 +167,8 @@
 | Por definir | Nombre de pila |
 
 ### Gente de la feria _(sin nombre)_
+
+![Gente sin cara](sprites/sombra.png)
 
 | Campo | Valor |
 |---|---|

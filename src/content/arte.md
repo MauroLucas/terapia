@@ -25,6 +25,8 @@ _Pendiente: probar 2 o 3 con el mismo personaje (Jorge) y comparar._
 
 ## Diseño de personajes
 
+_La lista completa de sprites, con su imagen y su descripción para IA, está en "Sprites"._
+
 ### Jorge
 
 Hombre de unos 40 años, 1,75 m, pelo negro, sin barba, expresión neutral. Suéter verde escote en V sobre remera negra, pantalón negro y zapatos negros. Ver "Personajes" → Jorge.
@@ -36,7 +38,7 @@ El **suéter verde** es el único color fuerte de su ropa: puede funcionar como 
 _Los generadores suelen funcionar mejor en inglés:_
 
 ```
-2D cartoon game character, side view, full body, man around 30 years old,
+2D cartoon game character, side view, full body, man around 40 years old,
 1.75m, short black hair, clean shaven, neutral expression,
 green V-neck sweater over a black t-shirt, black trousers, black shoes,
 simple clean shapes, muted colors, transparent background
