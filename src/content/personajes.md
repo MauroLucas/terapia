@@ -7,6 +7,7 @@
 | Edad | ~40 años |
 | Rasgo principal | Tiene problemas para recordar su vida _(dentro del sueño: en realidad es disociación, ver "Historia y mundo" → Lore)_ |
 | Motivación | Reconstruir su pasado _(por confirmar)_ |
+| Lo que carga _(spoiler)_ | **Culpa** por la pelea con su mamá, que murió poco después de que se reencontraran |
 | Tratamiento | Paciente de Neural. Lleva **11 sesiones**, pero no recuerda haber ido |
 | Habilidades | Caminar, explorar e interactuar con objetos |
 | De chico | En la Sesión 1 (la feria) aparece de chico, de unos 7 años _(provisorio)_: el mismo suéter verde, pantalón corto azul y zapatillas blancas |
@@ -34,7 +35,7 @@
 | Rol | Conductor que tiene que llevar a Jorge a Neural |
 | Dónde está | Esperando en la calle, con el auto |
 | Relación con Jorge | Ninguna: es simplemente un conductor |
-| En el final _(spoiler)_ | No existe: es la forma en que la mente de Jorge disfraza a su ex novia, que toca el portero de verdad |
+| En el final _(spoiler)_ | No existe: es la forma en que la mente de Jorge disfraza a María, su ex novia, que toca el portero de verdad |
 
 ### Mamá de Jorge _(sin nombre)_
 
@@ -45,19 +46,20 @@
 | Detalle clave | Jorge no la reconoce: al ver la foto pregunta "¿Quién es esta señora?". Pero en el cajón con candado dejó una nota con su letra: "Te extraño, mamá" |
 | Qué pasó con ella _(spoiler)_ | Tuvo un **primer ACV** y el médico le recomendó estar más tranquila. Por eso hizo un **viaje con Jorge**, en el que se reencontraron como madre e hijo y volvieron a tener una relación cercana. Poco después murió de un **segundo ACV**, terminal. La foto de la billetera es de ese viaje, y "12/08" es su fecha. Ver "Historia y mundo" → Lore |
 | En el sueño | En la Sesión 1 (la feria) aparece en el recuerdo de cuando Jorge se perdió de chico: le compra algodón de azúcar, lo mira desde el banco de la calesita y, al final, lo encuentra. **No tiene cara**: una luz se la tapa. Le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Aspecto en el prototipo: pelo largo castaño, tapado terracota (provisorio) |
-| Distancia | De grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte** y dejaron de hablarse hasta el viaje |
+| Distancia | De grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte** y dejaron de hablarse hasta el viaje. A Jorge le dejó **mucha culpa** |
 | Su muerte _(spoiler)_ | Es lo que llevó a Jorge a la crisis del baño |
-| Por definir | ¿A dónde viajaron? ¿En qué año? ¿Qué se dijeron en la pelea? |
+| Por definir | ¿Qué fue la pelea? ¿A dónde viajaron? ¿En qué año? |
 
-### Ex novia de Jorge _(sin nombre)_
+### María, la ex novia de Jorge
 
 | Campo | Valor |
 |---|---|
+| Nombre | **María** |
 | Primera aparición | Casa de Jorge: de forma indirecta. Su foto es la que falta en el portarretratos de la cómoda |
 | Relación con Jorge | Fue su **primera novia**. Se separaron **a los 20**, pero **nunca dejaron de hablarse** |
-| A los 30 | Se reencuentran: ella ya está casada; él sigue soltero |
+| A los 30 | Se reencuentran **en un bar**: ella ya está casada; él sigue soltero |
 | En el final _(spoiler)_ | Es quien toca el portero. En el sueño, la mente de Jorge la cambia por el chofer. Ver "Historia y mundo" → Final |
-| Por definir | Nombre. ¿Por qué Jorge sacó su foto? ¿Qué pasó en el reencuentro? ¿Por qué viene justo esa noche? |
+| Por definir | ¿Por qué Jorge sacó su foto? ¿Qué pasó en el reencuentro? ¿Por qué viene justo esa noche? |
 
 ### Recepcionista de Neural _(sin nombre)_
 
@@ -122,8 +124,8 @@
 | Qué hace | Le hace preguntas sobre cómo está, si mejoró y si toma la medicación. Después lo lleva al cuarto de inducción, le explica el tratamiento y lo hace acostar en la máquina. No se da cuenta cuando Jorge le miente |
 | Aspecto | En el prototipo: guardapolvo blanco sobre camisa celeste, pelo canoso y anteojos (provisorio) |
 | En el sueño | Es una **llama de vela** que flota al lado de Jorge y lo acompaña. Habla por la máquina. No ve la puerta que no se abre |
-| Qué es _(spoiler)_ | Como todo Neural, **lo inventa la mente de Jorge** |
-| Por definir | Nombre de pila. ¿Representa a alguien o a algo de Jorge? |
+| Qué es _(spoiler)_ | **Un personaje del subconsciente de Jorge** que trata de ayudarlo a seguir adelante. Como todo Neural, lo inventa su mente |
+| Por definir | Nombre de pila |
 
 ### Gente de la feria _(sin nombre)_
 

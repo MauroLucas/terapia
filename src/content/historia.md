@@ -7,7 +7,8 @@ En Neural, una inteligencia artificial permite que el **doctor Vela** vea en pan
 ## Ambientación
 
 - **Punto de partida:** el departamento de 2 ambientes de Jorge.
-- _Época y lugar: por definir._
+- **Época:** los años 2000 _(tentativo)_. Es el "hoy" de Jorge, a los 40: su infancia queda entre fines de los 60 y los 70.
+- _Lugar: por definir._
 
 ## Lugares y conceptos clave
 
@@ -15,6 +16,7 @@ En Neural, una inteligencia artificial permite que el **doctor Vela** vea en pan
 |---|---|
 | Departamento de Jorge | 2 ambientes: cuarto, pasillo, cocina y baño. Es la locación **Casa de Jorge** |
 | Neural | Centro de rehabilitación de la memoria. Usa inteligencia artificial para interactuar con los sueños de los pacientes. **No existe:** lo inventa la mente de Jorge (ver "Revelación") |
+| Doctor Vela | **Un personaje de su subconsciente** que trata de ayudarlo a seguir adelante (ver "Personajes" → Doctor Vela) |
 | Hall de Neural | Entrada del edificio: hall grande con recepción, sala de espera, baños, cuarto de maestranza, máquina de bebidas y molinetes con seguridad. Sin carnet no se pasa. Pasando los molinetes, un ascensor sube a los consultorios. Es la locación **Hall del edificio** |
 | Pasillo de los consultorios | Arriba, al salir del ascensor: un pasillo largo con ventanales a la ciudad y una puerta por doctor, cada una con su placa. La del doctor Vela es la última. Es la primera parte de la locación **Consultorio** |
 | Consultorio del doctor Vela | Al final del pasillo: un cuarto cálido, con biblioteca y escritorio, donde Vela charla con Jorge antes de cada sesión. Es la segunda parte de la locación **Consultorio** |
@@ -36,13 +38,14 @@ Por eso, en la Casa de Jorge, la puerta del baño está "bloqueada desde adentro
 | Jorge | Se despierta desorientado y busca la llave para ir a Neural | Está en crisis, pensando en quitarse la vida |
 | Memoria | No recuerda su vida, ni a su mamá | No perdió la memoria: su mente está en un trance disociativo y simula todo. Ver "Lore" |
 
-- **Neural no existe.** Lo **inventa su mente**: el centro, el doctor Vela, la máquina de los sueños y las sesiones son parte de la simulación. Es la forma en que su mente se da permiso para mirar sus recuerdos.
+- **Neural no existe.** Lo **inventa su mente**: el centro, la máquina de los sueños y las sesiones son parte de la simulación. Es la forma en que su mente se da permiso para mirar sus recuerdos.
+- **El doctor Vela es parte de Jorge:** un personaje de su subconsciente que trata de ayudarlo a seguir adelante. Por eso lo acompaña en cada sueño y lo empuja a recordar.
 - **La revelación llega al final del sueño.**
 - **La puerta que no se abre** (ver "Lugares y conceptos clave") es el hilo que la prepara: aparece en cada sesión, igual a la del baño, y nadie más la ve.
 
 ## Final
 
-**Todo pasa en su cabeza, en el baño** (antes "Opción B"). Jorge está ahora mismo sentado en el piso del baño. Todo el juego pasa dentro de su mente. **El portero que suena al inicio es real**, pero **quien toca no es el chofer: es su ex novia** (ver "Personajes" → Ex novia de Jorge).
+**Todo pasa en su cabeza, en el baño** (antes "Opción B"). Jorge está ahora mismo sentado en el piso del baño. Todo el juego pasa dentro de su mente. **El portero que suena al inicio es real**, pero **quien toca no es el chofer: es su ex novia, María** (ver "Personajes" → María).
 
 - En el sueño, su mente **reemplaza a la ex novia por un chofer desconocido**: alguien neutro, sin relación con él. Es una forma de no enfrentarla.
 - Encaja con el **portarretratos vacío**: Jorge sacó su foto.
@@ -75,20 +78,22 @@ En orden:
 - La **foto de la billetera** (Casa de Jorge) es de ese viaje, y **"12/08"**, escrito atrás, es **la fecha del viaje**.
 - Por eso Jorge la lleva encima, y por eso dejó la nota "Te extraño, mamá" en el cajón que se abre con esa fecha.
 
-**Por qué estaban distanciados:** de grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte**. Se dijeron cosas y **dejaron de hablarse** hasta el viaje.
+**Por qué estaban distanciados:** de grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte** y **dejaron de hablarse** hasta el viaje.
 
-_Por definir: a dónde viajaron, en qué año, y qué se dijeron en la pelea._
+**La culpa.** La pelea le dejó a Jorge **mucha culpa**, y es uno de los temas centrales del juego: **la culpa se tiene que sentir, y bastante**. Se reencontraron en el viaje, pero ella murió poco después: lo que se dijeron en la pelea es algo que él ya no puede arreglar.
+
+_Por definir: qué fue la pelea y qué se dijeron, cómo se hace sentir la culpa en el juego, a dónde viajaron y en qué año._
 
 **Un recuerdo de la infancia (Sesión 1):** una noche, de chico, Jorge fue a una feria con su mamá y se perdió. Al entrar, ella le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Él se quedó quieto, y ella lo encontró. _Detalles provisorios, propuestos por el agente._
 
-### La ex novia de Jorge (spoiler)
+### María, la ex novia de Jorge (spoiler)
 
-- Fue su **primera novia**. Se separaron **a los 20**, pero **nunca dejaron de hablarse**.
-- **A los 30 se reencuentran:** ella ya está casada; él sigue soltero.
+- Se llama **María**. Fue su **primera novia**. Se separaron **a los 20**, pero **nunca dejaron de hablarse**.
+- **A los 30 se reencuentran en un bar:** ella ya está casada; él sigue soltero.
 - En la realidad, **es quien toca el portero** esa noche (ver "Final"). En el sueño, la mente de Jorge la cambia por el chofer.
 - Su foto es la que falta en el portarretratos del cuarto.
 
-_Por definir: su nombre, qué pasó en el reencuentro de los 30, por qué Jorge sacó su foto y por qué viene justo esa noche._
+_Por definir: qué pasó en el reencuentro de los 30 (ese nivel se piensa más adelante), por qué Jorge sacó su foto y por qué viene justo esa noche._
 
 ## Estructura: las sesiones
 
@@ -111,9 +116,9 @@ Son **siete sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 | # | Etapa | Recuerdo | Qué se sabe | Estado |
 |---|---|---|---|---|
 | 1 | Infancia | **La feria** | Se perdió de chico y su mamá lo encontró | En el prototipo |
-| 2 | Adolescencia | **La distancia con su mamá** | La pelea fuerte cuando se fue de la casa: dejan de hablarse | Idea |
-| 3 | Juventud | **La novia** | Su primera novia. Se separan a los 20, pero siguen hablando | Idea |
-| 4 | Los 30 | **El reencuentro** | Se vuelve a ver con la ex novia: ella está casada; él, soltero | Idea |
+| 2 | Adolescencia | **La distancia con su mamá** | La pelea fuerte cuando se fue de la casa: dejan de hablarse. Le deja mucha culpa | Idea |
+| 3 | Juventud | **La novia** | María, su primera novia. Se separan a los 20, pero siguen hablando | Idea |
+| 4 | Los 30 | **El reencuentro** | Se vuelve a ver con María **en un bar**: ella está casada; él, soltero | Idea |
 | 5 | Adultez | **El viaje del 12/08** | El primer ACV de su mamá y el viaje juntos: se reencuentran como madre e hijo | Idea |
 | 6 | La pérdida | **La muerte de su mamá** | El segundo ACV. Es lo que está tachado en el informe | Idea |
 | 7 | Hoy | **El baño** | La puerta que no se abre, se abre. El portero: es ella. Jorge elige abrir | Idea |

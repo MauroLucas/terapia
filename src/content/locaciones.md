@@ -1190,7 +1190,7 @@ Más estática, y se corta.
 
 Después, si vuelve al portero: _"No volvió a sonar."_
 
-_¿Quién toca? Encaja con el final (ver "Historia y mundo" → Final): sería la ex novia, tocando de verdad. Propuesta del agente, sin confirmar._
+_¿Quién toca? Encaja con el final (ver "Historia y mundo" → Final): sería María, la ex novia, tocando de verdad. Propuesta del agente, sin confirmar._
 
 ### Otros pensamientos
 
@@ -1231,7 +1231,7 @@ Termina cuando Jorge **se duerme**: se le cierran los ojos. _Por definir: lo que
 
 ### Pendiente de definir
 
-- ¿Quién toca el portero de noche: es la ex novia? ¿Vuelve a pasar?
+- ¿Quién toca el portero de noche: es María? ¿Vuelve a pasar?
 - ¿Quién guardó la sortija en la caja: la mamá, Jorge?
 - ¿Cómo es la próxima mañana? ¿Vuelve el chofer, se repite algo del primer día?
 - ¿La casa cambia un poco cada vez que Jorge vuelve?
