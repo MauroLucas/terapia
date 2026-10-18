@@ -75,6 +75,16 @@ export function createLevel3Game(parent: HTMLElement) {
   return game
 }
 
+// La primera noche sola: la vuelta a la Casa de Jorge después de la Sesión 1
+export function createLevel5Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, LevelEnd] }))
+  game.registry.set('start', 'Apartment')
+  game.registry.set('startData', { noche: true })
+  game.registry.set('solo', true)
+  return game
+}
+
 // Sesión 1 sola (la feria): el sueño y el despertar en la camilla
 export function createLevel4Game(parent: HTMLElement) {
   resetState()

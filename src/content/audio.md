@@ -133,6 +133,18 @@ _Provisorio. Lo único nuevo es el zumbido de la máquina._
 
 _Provisorio._
 
+### La primera noche
+
+| Sonido | Cuándo | Notas |
+|---|---|---|
+| Ambiente | Toda la casa | El mismo de la mañana: zumbido bajo y el reloj de la cocina |
+| Puerta | Al entrar | La misma de las otras puertas |
+| Timbre del portero | Después de la pizarra, y cada tanto hasta que lo atiende | El mismo de la mañana |
+| **Estática del portero** | Al atender | **Nuevo.** Ruido de línea abierta, sin voz, y un clic cuando se corta |
+| Papel | Al anotar en la pizarra y al abrir la caja | El mismo de los documentos |
+
+_Provisorio. Lo único nuevo es la estática._
+
 ## Interfaz
 
 | Sonido | Notas |

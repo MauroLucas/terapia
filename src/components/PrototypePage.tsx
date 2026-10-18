@@ -25,8 +25,8 @@ export function PrototypePage() {
         <h1>Prototipo: juego completo</h1>
       </header>
       <p>
-        El juego entero, de corrido: Casa de Jorge (departamento, escaleras y auto), Hall del edificio (Neural y ascensor), Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción) y Sesión 1 (el sueño de la feria). Cada locación
-        nueva se suma acá. Para probar una locación suelta, entrá a <strong>Casa de Jorge</strong>, <strong>Hall del edificio</strong>, <strong>Consultorio</strong> o <strong>Sesión 1</strong> en el
+        El juego entero, de corrido: Casa de Jorge (departamento, escaleras y auto), Hall del edificio (Neural y ascensor), Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción) Sesión 1 (el sueño de la feria) y La primera noche (la vuelta a casa). Cada locación
+        nueva se suma acá. Para probar una locación suelta, entrá a <strong>Casa de Jorge</strong>, <strong>Hall del edificio</strong>, <strong>Consultorio</strong>, <strong>Sesión 1</strong> o <strong>La primera noche</strong> en el
         menú.
       </p>
       <div className="game-frame" ref={ref} />

@@ -26,7 +26,7 @@ export class Warning extends Phaser.Scene {
     const go = () => {
       initAudio()
       this.cameras.main.fadeOut(900, 0, 0, 0)
-      this.cameras.main.once('camerafadeoutcomplete', () => this.scene.start((this.registry.get('start') as string | undefined) ?? 'Apartment'))
+      this.cameras.main.once('camerafadeoutcomplete', () => this.scene.start((this.registry.get('start') as string | undefined) ?? 'Apartment', this.registry.get('startData') as object | undefined))
     }
     this.input.keyboard!.once('keydown', go)
     this.input.once('pointerdown', go)

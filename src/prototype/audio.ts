@@ -102,6 +102,12 @@ export const sfx = {
   },
   // Ascensor: campanita al llegar al piso
   ding() { tone(1318.5, 0.9, 'sine', 0.1); tone(1046.5, 1.2, 'sine', 0.08, 0.35) },
+  // Portero de noche: nadie habla, solo estática, y se corta
+  estatica() {
+    noiseBurst(1.6, 2200, 0.09, 'bandpass')
+    noiseBurst(0.6, 600, 0.05)
+    tone(90, 0.12, 'square', 0.05, 1.7)
+  },
   // Sueño: algo se ilumina y toma color
   reveal() { tone(1568, 0.7, 'sine', 0.035); tone(2093, 0.9, 'sine', 0.025, 0.12) },
   // Aparece la llama del doctor Vela

@@ -508,7 +508,9 @@ export class Office extends Phaser.Scene {
     this.tone?.stop(2)
     await new Promise((r) => cam.once('camerafadeoutcomplete', r))
     await this.wait(600)
-    this.scene.start('LevelEnd', { titulo: this.registry.get('solo') ? 'Fin de la locación' : 'Fin del prototipo', locacion: 'Sesión 1: La feria' })
+    // Jugando la Sesión 1 suelta, termina acá; en el prototipo completo Jorge vuelve a su casa
+    if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'Sesión 1: La feria' })
+    else this.scene.start('Apartment', { noche: true })
   }
 
   // Se le cierran los ojos muy despacio: dos párpados que bajan y suben, cada vez más pesados

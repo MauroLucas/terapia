@@ -11,6 +11,7 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 2 | **Hall del edificio** | Hall de entrada de Neural | Entrar sin el carnet: lograr que el de seguridad deje los molinetes. Termina con el ascensor | En el prototipo |
 | 3 | **Consultorio** | Pasillo de los consultorios, consultorio del doctor Vela y cuarto de inducción al sueño | Encontrar el consultorio, charlar con el doctor y acostarse en la máquina de los sueños | En el prototipo |
 | 4 | **Sesión 1: La feria** | Sueño lúcido: una feria de noche, en la infancia de Jorge | Recordar el día que Jorge se perdió de chico y quedarse quieto para que su mamá lo encuentre | En el prototipo |
+| 5 | **La primera noche** | Casa de Jorge, de noche, después de la Sesión 1 | Anotar el recuerdo en la pizarra y dormir. Alguien toca el portero | En el prototipo |
 
 ## Casa de Jorge
 
@@ -1090,7 +1091,7 @@ El casco sube y se anota el primer tramo de la **línea de tiempo**: _"Infancia 
 
 ### Final de la locación
 
-Termina en el despertar, cuando Vela cierra la sesión. _Por definir: lo que sigue es la vuelta a la Casa de Jorge, con la pizarra actualizada (ver "Mecánicas" → Progresión)._
+Termina en el despertar, cuando Vela cierra la sesión. Sigue en **La primera noche**: la vuelta a la Casa de Jorge.
 
 ### Pendiente de definir
 
@@ -1099,3 +1100,138 @@ Termina en el despertar, cuando Vela cierra la sesión. _Por definir: lo que sig
 - ¿La mamá le dice "Jorge" o tiene un apodo para él?
 - ¿Qué pasa con la puerta en las próximas sesiones? ¿Cuándo se abre?
 - ¿Vela sabe más de lo que dice sobre la puerta?
+
+## La primera noche
+
+### Resumen
+
+Jorge **vuelve a su casa** después de la Sesión 1. Es la misma Casa de Jorge, **de noche**, pero ahora sabe una cosa nueva: tuvo una mamá que lo encontró en una feria.
+
+Es una locación **corta y tranquila**, sin puzzle. Sirve para cerrar la sesión y mostrar que **lo que Jorge recupera en los sueños sigue con él en la casa**: lo anota en la pizarra y encuentra una prueba de que el recuerdo fue real.
+
+_La idea (la vuelta a casa, la pizarra, la caja de cosas de chico sin puzzle, la puerta del baño igual, alguien que toca el portero) es del usuario. Los diálogos y los detalles los propuso el agente y son provisorios._
+
+### Qué cambió en la casa
+
+| Lugar | De noche |
+|---|---|
+| Todo el departamento | Más oscuro, con luz azulada. En el cuarto, la **lámpara de la mesita** está prendida |
+| Cuarto | Debajo de la cama asoma una **caja de cartón** que dice "JORGE". Antes no estaba |
+| Pizarra | Se puede **anotar el recuerdo** (ver abajo) |
+| Cocina | Lo que Jorge se llevó a la mañana ya no está (las notas, la nota del cajón, el banner). La basura de la mesa sigue en el piso. El cajón quedó abierto y vacío |
+| Puerta del baño | **Igual que la primera vez**: trabada desde adentro |
+| Salida | No se usa: _"Ya es de noche. No tengo a dónde ir."_ |
+
+### Secuencia
+
+1. La imagen aparece desde negro. Jorge acaba de entrar: está en el pasillo, al lado de la salida.
+2. Piensa: _"Ya está. Volví a casa."_ / _"Mi mamá. La feria. La calesita."_ / _"Tengo que anotarlo antes de que se me olvide."_ Objetivo: **Anotar lo que recordé en la pizarra**.
+3. **La pizarra** (en el cuarto): Jorge ubica el recuerdo en la línea de tiempo (ver abajo). Objetivo: **Irme a dormir**.
+4. **El portero:** la primera vez que sale del cuarto después de la pizarra, suena el timbre. _"¿El portero? ¿A esta hora?"_ Objetivo: **Atender el portero**. Sigue sonando cada tanto hasta que lo atiende (ver abajo).
+5. **Dormir:** en la cama. Si todavía no abrió la caja, Jorge piensa _"Hay algo debajo de la cama."_ y la abre antes (ver "La caja").
+6. Antes de acostarse: _"Mañana capaz me olvido de todo."_ / _"Pero está en la pizarra."_ Se acuesta, se le cierran los ojos y termina la locación.
+
+El orden es libre, salvo dos cosas: no se puede dormir sin anotar el recuerdo (_"Antes de dormir tengo que anotar lo que recordé."_) ni con el portero sonando (_"Está sonando el portero."_).
+
+### La pizarra
+
+Se abre la línea de tiempo, todavía vacía: "MI VIDA", de "Nací" a "HOY", con marcas cada diez años. Jorge piensa _"¿Dónde va lo de la feria?"_ y aparecen tres opciones:
+
+| Opción | Qué pasa |
+|---|---|
+| **Entre los 0 y los 10 años** | Es la correcta. Se marca la infancia en verde y, cerca de los 7 años, Jorge escribe con su letra **"La feria con mamá"** y abajo _"me perdí y ella me encontró"_ |
+| Entre los 10 y los 20 / Entre los 20 y los 30 | _"No… Era chico. Tenía las manos chiquitas."_ y vuelve a elegir |
+
+Al anotarlo: _"«La feria con mamá.»"_ / _"Es lo primero que anoto."_ La marca también aparece en la pizarra de la pared. Si la vuelve a mirar: _"Es lo único que hay. Pero ya no está vacía."_
+
+### La caja
+
+Está debajo de la cama, a mano: se abre con **E**, sin puzzle.
+
+> **Jorge (piensa):** Una caja con mi nombre.
+>
+> **Jorge (piensa):** Figuritas, un autito sin una rueda, dibujos…
+
+Adentro está **la sortija de la calesita** y se guarda en el inventario.
+
+> **Jorge (piensa):** La sortija de la calesita.
+>
+> **Jorge (piensa):** Fue real.
+>
+> **Jorge (piensa):** Alguien la guardó todos estos años.
+
+Es la prueba de que **los recuerdos no mienten**: lo que vio en el sueño pasó.
+
+### La foto de la billetera
+
+La billetera está otra vez en la mesita. Si Jorge mira la foto:
+
+> **Jorge (piensa):** La señora de la foto…
+>
+> **Jorge (piensa):** En el sueño no le pude ver la cara.
+>
+> **Jorge (piensa):** Pero algo me dice que es ella. Mi mamá.
+
+Es opcional. Muestra cómo cambia lo que Jorge sabe: a la mañana preguntaba _"¿Quién es esta señora?"_.
+
+### El portero
+
+> **Jorge:** ¿Hola?
+
+Solo se escucha **estática**.
+
+> **Jorge:** ¿Quién es?
+
+Más estática, y se corta.
+
+> **Jorge (piensa):** Se cortó.
+>
+> **Jorge (piensa):** No habló nadie… pero había alguien.
+
+Después, si vuelve al portero: _"No volvió a sonar."_
+
+_**Por definir:** ¿quién toca el portero de noche? (Ver "Historia y mundo" → Final, opción B: el portero que suena es real.)_
+
+### Otros pensamientos
+
+| Dónde | Pensamiento |
+|---|---|
+| Portarretratos | _"Sigue vacío."_ |
+| Calendario | _"Hoy fui a Neural."_ / _"La próxima cruz la pongo mañana."_ |
+| Cajón de la cocina | _"El cajón quedó abierto. Está vacío."_ |
+| Heladera | _"A esta hora no tengo nada que hacer acá."_ |
+| Puerta del baño | _"Parece bloqueada desde adentro."_ (igual que la primera vez) |
+
+### Objetivo en pantalla
+
+| Cuándo | Objetivo |
+|---|---|
+| Al entrar | Anotar lo que recordé en la pizarra |
+| Suena el portero | Atender el portero |
+| Con la pizarra hecha y el portero atendido | Irme a dormir |
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| Pizarra: "Anoté mi primer recuerdo: la feria con mamá, cuando era chico." | Al anotar el recuerdo |
+| La sortija: "En una caja de cosas de chico estaba la sortija de la calesita. El recuerdo fue real." | Al abrir la caja |
+| La señora de la foto: "Creo que es mi mamá: la misma que me encontró en la feria." | Al mirar la foto |
+| El portero, de noche: "Alguien tocó el portero de noche. Atendí y no habló nadie. Se cortó." | Al atender el portero |
+
+### Objetos
+
+| Objeto | Dónde | Qué es |
+|---|---|---|
+| Sortija ✓ | Cuarto: caja debajo de la cama | La sortija de la calesita de la feria. Se puede volver a ver desde el diario |
+
+### Final de la locación
+
+Termina cuando Jorge **se duerme**: se le cierran los ojos. _Por definir: lo que sigue (la próxima ida a Neural y la Sesión 2)._
+
+### Pendiente de definir
+
+- ¿Quién toca el portero de noche? ¿Vuelve a pasar?
+- ¿Quién guardó la sortija en la caja: la mamá, Jorge?
+- ¿Cómo es la próxima mañana? ¿Vuelve el chofer, se repite algo del primer día?
+- ¿La casa cambia un poco cada vez que Jorge vuelve?

@@ -71,9 +71,11 @@ Jorge tiene la misma línea de tiempo en una **pizarra en su cuarto**. El jugado
 - Al empezar el juego solo tiene el título "MI VIDA", las dos puntas ("Nací" y "HOY") y marcas cada diez años _(presentación provisoria)_.
 - Está escrita **con la letra de Jorge**, igual que las notas y el diario.
 
-_En el prototipo está la pizarra vacía de la Casa de Jorge. Todavía no se actualiza: después de la Sesión 1 el prototipo termina en el despertar, sin volver a la casa._
+_En el prototipo, la pizarra está vacía a la mañana y se actualiza en **La primera noche**._
 
-**Primer tramo:** _"Infancia · La feria"_, al despertar de la Sesión 1. En el prototipo se avisa con un cartel chico abajo a la derecha; la línea de tiempo en sí todavía no se dibuja.
+**Cómo se actualiza:** al volver de una sesión, Jorge **ubica el recuerdo** en la línea: el jugador elige entre los tramos de diez años, y si se equivoca Jorge lo corrige con lo que vio en el sueño (_"Era chico. Tenía las manos chiquitas."_). Después lo escribe con su letra. La marca queda también en la pizarra de la pared. Ver "Locaciones" → La primera noche.
+
+**Primer tramo:** _"Infancia · La feria"_. Al despertar de la Sesión 1 se avisa con un cartel chico abajo a la derecha, y esa noche Jorge lo escribe en la pizarra: _"La feria con mamá"_.
 
 **Por definir**
 
@@ -138,7 +140,7 @@ Arriba a la izquierda hay un cartel chico con el **objetivo actual** de la locac
 
 - Se **actualiza solo** según lo que Jorge ya sabe y lo que lleva encima. Cuando cambia, el texto nuevo aparece con un fundido y queda unos segundos en verde.
 - Aparece después de los pensamientos de entrada de la locación y se esconde en las secuencias sin control (por ejemplo, el ascensor).
-- Por ahora está en el **Hall del edificio**, en el **consultorio** del doctor Vela y en la **Sesión 1** (ver "Locaciones" → "Objetivo en pantalla" de cada una). En la Casa de Jorge y el pasillo de los consultorios: _por definir_.
+- Por ahora está en el **Hall del edificio**, en el **consultorio** del doctor Vela, en la **Sesión 1** y en **La primera noche** (ver "Locaciones" → "Objetivo en pantalla" de cada una). En la Casa de Jorge y el pasillo de los consultorios: _por definir_.
 - Textos provisorios, propuestos por el agente.
 
 ## Menús
@@ -171,7 +173,7 @@ _Propuesta:_ de fondo, el cuarto de Jorge a oscuras con él durmiendo.
 ## Flujo de pantallas
 
 ```
-Aviso de contenido → Menú principal → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio y cuarto de inducción) → Sesión 1: La feria → Despertar
+Aviso de contenido → Menú principal → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio y cuarto de inducción) → Sesión 1: La feria → Despertar → La primera noche
                           ↑                    ↓
                           └──── Menú de pausa (Diario / Opciones)
 ```

@@ -2,7 +2,7 @@ import * as Phaser from 'phaser'
 import { addVignette, FONT, HAND_FONT, makeTextures } from '../art'
 import { sfx, startClock, startRoomTone } from '../audio'
 import { addPista, state } from '../state'
-import { onKey, overlay, say, text, toast, type Line, type Point } from '../ui'
+import { choose, eyelids, objective, onKey, overlay, say, text, toast, type Line, type Point } from '../ui'
 import { showObjeto, showPage } from '../documents'
 import { openDiary } from './diary'
 
@@ -11,6 +11,8 @@ import { openDiary } from './diary'
 //                         ↓
 //                       Cocina
 // Cada ambiente ocupa su propio tramo del mundo; la cámara se limita al ambiente actual.
+// Con `{ noche: true }` es La primera noche: Jorge vuelve de la Sesión 1, anota el recuerdo en la pizarra,
+// encuentra la sortija, alguien toca el portero (no habla nadie) y se va a dormir.
 
 const FLOOR = 600
 const CEIL = 110
@@ -84,6 +86,13 @@ export class Apartment extends Phaser.Scene {
   private drawerNote?: Phaser.GameObjects.Graphics
   private bannerStrip?: Phaser.GameObjects.Graphics
   private inv!: Phaser.GameObjects.Container
+  // La primera noche
+  private noche = false
+  private goal?: ReturnType<typeof objective>
+  private pizarraHecha = false
+  private cajaVista = false
+  private timbreNoche: 'no' | 'sonando' | 'atendido' = 'no'
+  private caja?: Phaser.GameObjects.Graphics
   private roomTone?: { stop: (fade?: number) => void }
   private clock?: ReturnType<typeof startClock>
   private ring?: Phaser.Time.TimerEvent
@@ -92,7 +101,11 @@ export class Apartment extends Phaser.Scene {
     super('Apartment')
   }
 
-  create() {
+  create(data: { noche?: boolean } = {}) {
+    this.noche = !!data.noche
+    this.pizarraHecha = this.cajaVista = false
+    this.timbreNoche = 'no'
+    this.goal = undefined
     this.room = 'cuarto'
     this.busy = true
     this.leaving = false
@@ -106,6 +119,7 @@ export class Apartment extends Phaser.Scene {
     this.setupPhysics()
     this.setupItems()
     this.setupHud()
+    if (this.noche) this.setupNoche()
     addVignette(this, 0.8)
 
     this.keys = this.input.keyboard!.addKeys('LEFT,RIGHT,A,D,E,SPACE,TAB,ESC') as Record<string, Phaser.Input.Keyboard.Key>
@@ -116,7 +130,7 @@ export class Apartment extends Phaser.Scene {
       this.roomTone?.stop(0.5)
       this.clock?.stop()
     })
-    void this.intro()
+    void (this.noche ? this.introNoche() : this.intro())
     // Solo en desarrollo: acceso para pruebas automáticas
     if (import.meta.env.DEV) (window as unknown as { __apt?: Apartment }).__apt = this
   }
@@ -316,10 +330,16 @@ export class Apartment extends Phaser.Scene {
     // Basura mínima: un objeto suelto en el cuarto y otro en la cocina
     spawn('bollo', 900, FLOOR - 9, 'papel')
     spawn('lata', K + 560, FLOOR - 7, 'lata')
-    // Mesa tapada (encima del banner)
-    spawn('delivery', TABLE.left + 80, TABLE.top - 16, 'caja', true)
-    spawn('papel', TABLE.left + 140, TABLE.top - 4, 'papel', true)
-    spawn('lata', TABLE.left + 195, TABLE.top - 8, 'lata', true)
+    if (this.noche) {
+      // De noche, la basura de la mesa sigue en el piso, donde quedó a la mañana
+      spawn('delivery', TABLE.left - 70, FLOOR - 15, 'caja')
+      spawn('papel', TABLE.right + 60, FLOOR - 3, 'papel')
+    } else {
+      // Mesa tapada (encima del banner)
+      spawn('delivery', TABLE.left + 80, TABLE.top - 16, 'caja', true)
+      spawn('papel', TABLE.left + 140, TABLE.top - 4, 'papel', true)
+      spawn('lata', TABLE.left + 195, TABLE.top - 8, 'lata', true)
+    }
 
     // Patear: al chocar con Jorge en movimiento, la basura sale despedida
     m.world.on('collisionstart', (ev: Phaser.Physics.Matter.Events.CollisionStartEvent) => {
@@ -443,6 +463,8 @@ export class Apartment extends Phaser.Scene {
       { id: 'mesa', name: 'Mesa', room: 'cocina', x: (TABLE.left + TABLE.right) / 2, y: 440, range: 150, action: () => this.mesa() },
       { id: 'cajon', name: 'Cajón con candado', room: 'cocina', x: K + 1220, y: 460, action: () => this.cajon() },
     ]
+
+    if (this.noche) this.items = this.itemsNoche()
 
     const box = this.add.graphics()
     box.fillStyle(0xf6f3ea).fillRoundedRect(-16, -16, 32, 32, 7)
@@ -721,6 +743,256 @@ export class Apartment extends Phaser.Scene {
     this.leaving = true
     this.cameras.main.fadeOut(1200, 0, 0, 0)
     this.cameras.main.once('camerafadeoutcomplete', () => this.scene.start('Stairs'))
+  }
+
+  // ---------- La primera noche ----------
+
+  // De noche: todo más oscuro, la lámpara de la mesita prendida, lo que Jorge se llevó a la mañana ya no está
+  private setupNoche() {
+    // Ya no hay nada que atender: se puede examinar todo desde el principio
+    this.answered = true
+    this.fridgeNotes?.destroy()
+    this.drawerNote?.destroy()
+    this.bannerStrip?.destroy()
+    this.add.rectangle(0, 0, WORLD_W, 720, 0x0a1024, 0.4).setOrigin(0).setDepth(30)
+    // Luz de la lámpara: un degradé redondo
+    if (!this.textures.exists('luz-lampara')) {
+      const tex = this.textures.createCanvas('luz-lampara', 360, 360)!
+      const ctx = tex.getContext()
+      const grad = ctx.createRadialGradient(180, 180, 0, 180, 180, 180)
+      grad.addColorStop(0, 'rgba(255,217,160,0.32)')
+      grad.addColorStop(0.4, 'rgba(255,217,160,0.12)')
+      grad.addColorStop(1, 'rgba(255,217,160,0)')
+      ctx.fillStyle = grad
+      ctx.fillRect(0, 0, 360, 360)
+      tex.refresh()
+    }
+    this.add.image(454, 510, 'luz-lampara').setDepth(31).setBlendMode(Phaser.BlendModes.ADD)
+    // La caja de cosas de chico, que asoma debajo de la cama
+    this.caja = this.add.graphics().setDepth(4)
+    this.caja.fillStyle(0x9a7a4e).fillRect(270, 562, 96, 38)
+    this.caja.fillStyle(0xb08d5c).fillRect(266, 556, 104, 10)
+    this.caja.lineStyle(2, 0x6b5232).lineBetween(318, 556, 318, 566)
+    this.add.text(318, 584, 'JORGE', { fontFamily: HAND_FONT, fontSize: '12px', color: '#4a3622', resolution: 2 }).setOrigin(0.5).setDepth(4)
+    this.goal = objective(this)
+  }
+
+  private itemsNoche(): Interactable[] {
+    const lejos = async () => say(this, [this.think('A esta hora no tengo nada que hacer acá.')])
+    return [
+      // Cuarto
+      { id: 'billetera', name: 'Billetera', room: 'cuarto', x: 430, y: 500, action: () => this.fotoNoche() },
+      { id: 'caja', name: 'Caja', room: 'cuarto', x: 318, y: 530, action: () => this.cajaNoche() },
+      { id: 'cama', name: 'Dormir', room: 'cuarto', x: 190, y: 470, action: () => this.dormir() },
+      { id: 'portarretratos', name: 'Portarretratos', room: 'cuarto', x: 718, y: 430, action: async () => say(this, [this.think('Sigue vacío.')]) },
+      { id: 'pizarra', name: 'Pizarra', room: 'cuarto', x: 970, y: 300, action: () => this.pizarraNoche() },
+      { id: 'aPasillo', name: 'Puerta al pasillo', room: 'cuarto', x: DOORS.cuartoAPasillo, y: 400, door: true, action: () => this.salirDelCuartoNoche() },
+      // Pasillo
+      { id: 'aCuarto', name: 'Cuarto', room: 'pasillo', x: DOORS.pasilloACuarto, y: 400, door: true, action: () => this.goTo('cuarto', DOORS.cuartoAPasillo) },
+      { id: 'aCocina', name: 'Cocina', room: 'pasillo', x: DOORS.pasilloACocina, y: 400, door: true, action: () => this.goTo('cocina', DOORS.cocinaAPasillo) },
+      {
+        id: 'bano', name: 'Baño', room: 'pasillo', x: DOORS.bano, y: 400, door: true,
+        action: async () => {
+          sfx.handle()
+          this.cameras.main.shake(120, 0.002)
+          await say(this, [this.think('Parece bloqueada desde adentro.')])
+          this.pista('Puerta del baño', 'Está trabada desde adentro.')
+        },
+      },
+      { id: 'portero', name: 'Portero eléctrico', room: 'pasillo', x: DOORS.portero, y: 370, door: true, action: () => this.porteroNoche() },
+      { id: 'salida', name: 'Salida', room: 'pasillo', x: DOORS.salida, y: 390, door: true, action: async () => say(this, [this.think('Ya es de noche. No tengo a dónde ir.')]) },
+      // Cocina
+      { id: 'cocinaAPasillo', name: 'Pasillo', room: 'cocina', x: DOORS.cocinaAPasillo, y: 400, door: true, action: () => this.goTo('pasillo', DOORS.pasilloACocina) },
+      { id: 'calendario', name: 'Calendario', room: 'cocina', x: K + 692, y: 290, action: async () => say(this, [this.think('Hoy fui a Neural.'), this.think('La próxima cruz la pongo mañana.')]) },
+      { id: 'heladera', name: 'Heladera', room: 'cocina', x: K + 270, y: 380, action: lejos },
+      { id: 'cajon', name: 'Cajón', room: 'cocina', x: K + 1220, y: 460, action: async () => say(this, [this.think('El cajón quedó abierto. Está vacío.')]) },
+    ]
+  }
+
+  private async introNoche() {
+    const x = DOORS.salida - 80
+    this.player.setPosition(x, FLOOR - 70).setVisible(true).setFlipX(true)
+    this.facing = -1
+    this.lastX = x
+    this.setCameraRoom('pasillo')
+    this.cameras.main.startFollow(this.player, true, 0.08, 0.08)
+    this.cameras.main.centerOn(x, 360)
+    this.cameras.main.fadeIn(2000, 0, 0, 0)
+    sfx.door()
+    await new Promise((r) => this.time.delayedCall(1800, r))
+    await say(this, [
+      this.think('Ya está. Volví a casa.'),
+      this.think('Mi mamá. La feria. La calesita.'),
+      this.think('Tengo que anotarlo antes de que se me olvide.'),
+    ])
+    this.goal?.set('Anotar lo que recordé en la pizarra')
+    this.busy = false
+    const help = text(this, 24, this.scale.height - 34, '← → / A D caminar   ·   E examinar / usar puertas   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa', 16, '#aab2c4')
+      .setScrollFactor(0)
+      .setDepth(950)
+    this.time.delayedCall(12000, () => this.tweens.add({ targets: help, alpha: 0, duration: 1500 }))
+  }
+
+  private nextGoal() {
+    if (this.timbreNoche === 'sonando') this.goal?.set('Atender el portero')
+    else if (!this.pizarraHecha) this.goal?.set('Anotar lo que recordé en la pizarra')
+    else this.goal?.set('Irme a dormir')
+  }
+
+  // La pizarra: el jugador elige en qué parte de la línea va el recuerdo
+  private pizarraOverlay(feria: boolean) {
+    return overlay(this, (c, w) => {
+      const ink = '#2b3140'
+      c.add(text(this, 0, -150, 'MI VIDA', 30, ink, { fontFamily: HAND_FONT, fontStyle: 'bold' }).setOrigin(0.5))
+      const x0 = -w / 2 + 90
+      const x1 = w / 2 - 90
+      const g = this.add.graphics().lineStyle(4, 0x2b3140).lineBetween(x0, 0, x1, 0)
+      for (let age = 0; age <= 30; age += 10) {
+        const x = x0 + ((x1 - x0) * age) / 30
+        g.lineBetween(x, -12, x, 12)
+        c.add(text(this, x, 22, String(age), 16, '#7a8090', { fontFamily: HAND_FONT }).setOrigin(0.5, 0))
+      }
+      if (feria) {
+        // Primer tramo: la infancia, con la feria marcada cerca de los 7 años
+        const xa = x0 + ((x1 - x0) * 7) / 30
+        g.lineStyle(10, 0x3e7d3c, 0.35).lineBetween(x0, 0, x0 + (x1 - x0) / 3, 0)
+        g.fillStyle(0x3e7d3c).fillCircle(xa, 0, 9)
+        g.lineStyle(2, 0x3e7d3c).lineBetween(xa, -10, xa, -62)
+        c.add(text(this, xa, -66, 'La feria con mamá', 22, '#2e5f2c', { fontFamily: HAND_FONT }).setOrigin(0.5, 1))
+        c.add(text(this, xa, 58, 'me perdí y\nella me encontró', 16, '#4a5060', { fontFamily: HAND_FONT, align: 'center' }).setOrigin(0.5, 0))
+      }
+      c.add(g)
+      c.add(text(this, x0, -24, 'Nací', 22, ink, { fontFamily: HAND_FONT }).setOrigin(0.5, 1))
+      c.add(text(this, x1, -24, 'HOY', 22, '#b11', { fontFamily: HAND_FONT, fontStyle: 'bold' }).setOrigin(0.5, 1))
+    }, { w: 820, h: 420, paper: 0xe9e9e4 })
+  }
+
+  private async pizarraNoche() {
+    if (this.pizarraHecha) {
+      await this.pizarraOverlay(true)
+      await say(this, [this.think('Es lo único que hay. Pero ya no está vacía.')])
+      return
+    }
+    await this.pizarraOverlay(false)
+    await say(this, [this.think('¿Dónde va lo de la feria?')])
+    for (;;) {
+      const i = await choose(this, ['Entre los 0 y los 10 años', 'Entre los 10 y los 20', 'Entre los 20 y los 30'], { x: 640, y: 560 })
+      if (i === 0) break
+      await say(this, [this.think('No… Era chico. Tenía las manos chiquitas.')])
+    }
+    sfx.paper()
+    await this.pizarraOverlay(true)
+    await say(this, [this.think('"La feria con mamá."'), this.think('Es lo primero que anoto.')])
+    this.pizarraHecha = true
+    // En la pizarra de la pared también aparece la marca
+    const mark = this.add.graphics().setDepth(5)
+    mark.lineStyle(5, 0x3e7d3c, 0.5).lineBetween(900, 312, 947, 312)
+    mark.fillStyle(0x3e7d3c).fillCircle(933, 312, 4)
+    mark.lineStyle(1.5, 0x3e7d3c).lineBetween(933, 308, 933, 286)
+    if (!state.lineaDeTiempo.includes('Infancia: la feria')) state.lineaDeTiempo.push('Infancia: la feria')
+    this.pista('Pizarra', 'Anoté mi primer recuerdo: la feria con mamá, cuando era chico.')
+    this.nextGoal()
+  }
+
+  private async fotoNoche() {
+    await showPage(this, 'foto', 0)
+    await say(this, [
+      this.think('La señora de la foto…'),
+      this.think('En el sueño no le pude ver la cara.'),
+      this.think('Pero algo me dice que es ella. Mi mamá.'),
+    ])
+    if (!state.inventario.includes('foto')) this.addInventory('foto')
+    this.pista('La señora de la foto', 'Creo que es mi mamá: la misma que me encontró en la feria.')
+    this.removeItem('billetera')
+  }
+
+  private async cajaNoche() {
+    if (this.cajaVista) {
+      await say(this, [this.think('Cosas de cuando era chico.')])
+      return
+    }
+    this.cajaVista = true
+    sfx.paper()
+    await say(this, [this.think('Una caja con mi nombre.'), this.think('Figuritas, un autito sin una rueda, dibujos…')])
+    const s = this.add.image(318, 548, 'sortija').setDepth(32)
+    await new Promise((r) => this.time.delayedCall(400, r))
+    this.tweens.add({ targets: s, y: s.y - 60, alpha: 0, duration: 600, onComplete: () => s.destroy() })
+    sfx.pickup()
+    this.addInventory('sortija')
+    await showObjeto(this, 'sortija')
+    await say(this, [this.think('La sortija de la calesita.'), this.think('Fue real.'), this.think('Alguien la guardó todos estos años.')])
+    this.pista('La sortija', 'En una caja de cosas de chico estaba la sortija de la calesita. El recuerdo fue real.')
+  }
+
+  // Después de la pizarra, al salir del cuarto, suena el portero
+  private async salirDelCuartoNoche() {
+    await this.goTo('pasillo', DOORS.pasilloACuarto)
+    if (!this.pizarraHecha || this.timbreNoche !== 'no') return
+    await new Promise((r) => this.time.delayedCall(700, r))
+    this.timbreNoche = 'sonando'
+    sfx.buzz()
+    this.cameras.main.shake(200, 0.002)
+    this.ring?.remove()
+    this.ring = this.time.addEvent({
+      delay: 9000,
+      loop: true,
+      callback: () => {
+        if (this.timbreNoche !== 'sonando') return
+        sfx.buzz()
+        this.cameras.main.shake(200, 0.002)
+      },
+    })
+    await new Promise((r) => this.time.delayedCall(1200, r))
+    await say(this, [this.think('¿El portero? ¿A esta hora?')])
+    this.nextGoal()
+  }
+
+  private async porteroNoche() {
+    if (this.timbreNoche !== 'sonando') {
+      await say(this, [this.think(this.timbreNoche === 'atendido' ? 'No volvió a sonar.' : 'Nadie toca.')])
+      return
+    }
+    this.ring?.remove()
+    this.timbreNoche = 'atendido'
+    await say(this, [this.speak('¿Hola?')])
+    sfx.estatica()
+    await say(this, [this.intercom('…'), this.speak('¿Quién es?')])
+    sfx.estatica()
+    await new Promise((r) => this.time.delayedCall(1500, r))
+    await say(this, [this.think('Se cortó.'), this.think('No habló nadie… pero había alguien.')])
+    this.pista('El portero, de noche', 'Alguien tocó el portero de noche. Atendí y no habló nadie. Se cortó.')
+    this.nextGoal()
+  }
+
+  private async dormir() {
+    if (!this.pizarraHecha) {
+      await say(this, [this.think('Antes de dormir tengo que anotar lo que recordé.')])
+      return
+    }
+    if (this.timbreNoche === 'sonando') {
+      await say(this, [this.think('Está sonando el portero.')])
+      return
+    }
+    if (!this.cajaVista) {
+      await say(this, [this.think('Hay algo debajo de la cama.')])
+      await this.cajaNoche()
+    }
+    this.goal?.set(null)
+    this.leaving = true
+    await say(this, [this.think('Mañana capaz me olvido de todo.'), this.think('Pero está en la pizarra.')])
+    // Se acuesta
+    this.player.setVisible(false)
+    this.add.image(250, 488, 'jorge0').setAngle(-90).setDepth(5)
+    this.cameras.main.pan(400, 360, 1200, 'Sine.easeInOut')
+    await new Promise((r) => this.time.delayedCall(1500, r))
+    const lids = eyelids(this, 1)
+    await lids.to(0.5, 2200)
+    await lids.to(0.7, 1200)
+    await lids.to(0, 2800)
+    this.roomTone?.stop(2)
+    this.clock?.stop()
+    await new Promise((r) => this.time.delayedCall(1500, r))
+    this.scene.start('LevelEnd', { titulo: this.registry.get('solo') ? 'Fin de la locación' : 'Fin del prototipo', locacion: 'La primera noche' })
   }
 
   // ---------- HUD: inventario y ayuda ----------

@@ -20,12 +20,12 @@ Hay un **prototipo jugable** en este mismo sitio (página **🕹️ Prototipo** 
 
 | Campo | Valor |
 |---|---|
-| Qué cubre | Aviso de contenido → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción) → Sesión 1: La feria (sueño y despertar) |
+| Qué cubre | Aviso de contenido → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción) → Sesión 1: La feria (sueño y despertar) → La primera noche |
 | Cómo abrirlo | `npm run dev` y entrar a **Prototipo** |
 | Online | Publicado en GitHub Pages: https://maurolucas.github.io/terapia/ (se actualiza solo con cada push a `main`) |
 | Controles | Solo teclado (ver "Mecánicas" → Controles) |
 | Pantalla completa | Botón debajo del juego o tecla **F** |
-| Código | `src/prototype/` (una escena por parte: aviso, departamento, escaleras, auto, Neural, pasillo, consultorio, sueño) |
+| Código | `src/prototype/` (una escena por parte: aviso, departamento, escaleras, auto, Neural, pasillo, consultorio, sueño; La primera noche reusa la escena del departamento) |
 
 **Es provisorio:** los gráficos y los sonidos están hechos por código (sin archivos de arte ni audio). Sirve para probar ritmo, puzzles y diálogos, no el aspecto final.
 
@@ -39,6 +39,7 @@ Para no tener que jugar todo desde el principio, **cada locación tiene su propi
 | **🏥 Hall del edificio** | Aviso de contenido → Hall de Neural → Ascensor → "Fin de la locación" | `src/prototype/scenes/Neural.ts` |
 | **🩺 Consultorio** | Aviso de contenido → Pasillo de los consultorios → Consultorio del doctor Vela → Cuarto de inducción → "Fin de la locación" | `Corridor.ts` y `Office.ts`, en `src/prototype/scenes/` |
 | **🎠 Sesión 1: La feria** | Aviso de contenido → Sueño de la feria → Despertar en la camilla → "Fin de la locación" | `Dream.ts` y `Office.ts` (modo despertar), en `src/prototype/scenes/` |
+| **🌙 La primera noche** | Aviso de contenido → Casa de Jorge de noche → "Fin de la locación" | `Apartment.ts` (modo noche), en `src/prototype/scenes/` |
 
 _El prototipo y este documento se mantienen sincronizados: cada cambio de diseño en uno se refleja en el otro._
 

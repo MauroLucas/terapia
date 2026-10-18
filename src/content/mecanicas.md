@@ -111,7 +111,9 @@ El juego avanza por **sesiones** en Neural. Cada sesión es un sueño lúcido qu
 **Por definir**
 
 - ¿Cuántas sesiones son y qué etapa de la vida cubre cada una? (La primera es la infancia: ver "Locaciones" → Sesión 1: La feria.)
-- ¿Qué se juega en cada vuelta a la casa y a Neural? _Propuesta del agente:_ que la vuelta sea corta (mirar la pizarra, algún objeto nuevo) y que la cadena de favores del Hall no se repita.
+- ¿Qué se juega en cada ida a Neural después de la primera? _Propuesta del agente:_ que la cadena de favores del Hall no se repita.
+
+**La vuelta a casa** quedó definida con la primera (ver "Locaciones" → La primera noche): es **corta y sin puzzle**. Jorge **anota el recuerdo en la pizarra**, encuentra **un objeto** que prueba que el recuerdo fue real, y se va a dormir.
 
 ### Sueño lúcido
 

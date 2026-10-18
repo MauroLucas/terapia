@@ -26,7 +26,7 @@ export function Level4Page() {
       </header>
       <p>
         Solo la primera sesión: el sueño lúcido de la feria, cuando Jorge se perdió de chico, y el despertar en la camilla
-        del doctor Vela. Ver "Locaciones" → Sesión 1: La feria.
+        del doctor Vela (en el prototipo completo, después sigue La primera noche). Ver "Locaciones" → Sesión 1: La feria.
       </p>
       <div className="game-frame" ref={ref} />
       <div className="game-actions">

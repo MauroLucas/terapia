@@ -10,7 +10,7 @@ interface Page {
   opts: { w?: number; h?: number; paper?: number }
 }
 
-export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha'
+export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija'
 
 export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: Page[] }> = {
   foto: {
@@ -146,6 +146,23 @@ export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: P
     nombre: 'Papel higiénico',
     texto: 'Un rollo entero. Estaba en un cubículo del baño de Neural.',
     pages: [],
+  },
+  sortija: {
+    nombre: 'Sortija',
+    texto: 'La sortija de la calesita de la feria. Estaba en una caja de cosas de cuando era chico.',
+    pages: [
+      {
+        opts: { w: 420, h: 380, paper: 0x2b2018 },
+        build: (scene, c) => {
+          const g = scene.add.graphics()
+          g.lineStyle(26, 0xc8962e).strokeCircle(0, -10, 92)
+          g.lineStyle(10, 0xe0b04a).strokeCircle(0, -10, 92)
+          g.lineStyle(5, 0xfff0b8).beginPath().arc(0, -10, 92, Math.PI * 1.08, Math.PI * 1.45).strokePath()
+          c.add(g)
+          c.add(text(scene, 0, 140, 'La sortija de la calesita', 22, '#e8dcc0', { fontFamily: HAND_FONT }).setOrigin(0.5))
+        },
+      },
+    ],
   },
   ficha: {
     nombre: 'Ficha',

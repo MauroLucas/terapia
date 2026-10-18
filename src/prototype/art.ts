@@ -287,6 +287,12 @@ export function makeTextures(scene: Phaser.Scene) {
   g.fillStyle(0x8f7220).fillRect(9, 6, 4, 10)
   g.generateTexture('ficha', 22, 22)
 
+  // La sortija de la calesita (La primera noche)
+  g.clear()
+  g.lineStyle(4, 0xe0b04a).strokeCircle(11, 11, 8)
+  g.lineStyle(1.5, 0xfff0b8).beginPath().arc(11, 11, 8, Math.PI * 1.1, Math.PI * 1.5).strokePath()
+  g.generateTexture('sortija', 22, 22)
+
   GASEOSAS.forEach((gas, i) => {
     g.clear()
     g.fillStyle(gas.color).fillRoundedRect(0, 0, 24, 14, 4)
