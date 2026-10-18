@@ -78,17 +78,32 @@ _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesi�
 
 ### María, la ex novia de Jorge
 
-![María](sprites/maria0.png) ![María caminando](sprites/maria1.png)
+![María](sprites/maria0.png) ![María caminando](sprites/maria1.png) ![María en la fiesta](sprites/mariaFiesta0.png)
 
 | Campo | Valor |
 |---|---|
 | Nombre | **María** |
-| Primera aparición | Casa de Jorge: de forma indirecta. Su foto es la que falta en el portarretratos de la cómoda |
+| Primera aparición | Casa de Jorge: de forma indirecta. Su foto es la que falta en el portarretratos de la cómoda: la de la fiesta de egresados, a los 17 (Sesión 3). Jorge la encuentra en La tercera noche y la vuelve a poner |
 | Relación con Jorge | Fue su **primera novia**. Iban a alquilar juntos el departamento donde Jorge vive hoy. Se separaron **a los 20**: ella se fue a **estudiar a Córdoba** por cinco años. Pero **nunca dejaron de hablarse** |
 | A los 15 | **Se conocen en la plaza del barrio** (Sesión 2): ella se acababa de mudar a la vuelta y se ofrece a ayudarlo con matemática. Aspecto en el prototipo: pelo largo oscuro con flequillo, campera de jean y remera blanca (provisorio). **Tiene cara** |
+| A los 17 | **Sesión 3: La fiesta.** Los martes en la plaza ya no estudian: ella quiere irse de su casa a un depto chiquito con un balcón lleno de plantas. Bailan en la fiesta de egresados, se sacan **la foto** y esa noche, en la casa de ella, se dan **el primer beso**. Cuando Jorge no quiere volver a su casa, ella lo lleva a la suya. Aspecto en la fiesta: vestido bordó y pelo suelto (provisorio) |
 | A los 30 | Se reencuentran **en un bar**: ella ya está casada; él sigue soltero |
 | En el final _(spoiler)_ | Es quien toca el portero. En el sueño, la mente de Jorge la cambia por el chofer. Ver "Historia y mundo" → Final |
 | Por definir | ¿Por qué Jorge sacó su foto? ¿Qué pasó en el reencuentro? ¿Por qué viene justo esa noche? |
+
+### La familia de María _(sin nombre)_
+
+![Mamá de María](sprites/mamaMaria.png) ![Papá de María](sprites/papaMaria.png)
+
+| Campo | Valor |
+|---|---|
+| Primera aparición | Sesión 3: La fiesta, en su casa |
+| Quiénes | **La mamá de María** (le sirve milanesas a Jorge: _"Acá sos de la casa"_) y **el papá de María** (lo invita a quedarse a dormir y le pide que llame a su mamá) |
+| Qué son para Jorge | La familia normal y cálida que él no tuvo: _"En esta casa nadie levanta la voz."_ / _"Mi papá nunca me habló así."_ |
+| Cómo son | **Tienen cara**: son parte del recuerdo. Aspecto en el prototipo: ella con rulos, suéter mostaza y delantal; él pelado, con bigote y camisa a cuadros (provisorio) |
+| Por definir | Nombres. Si María tiene hermanos (en la Sesión 2 dice que su hermano firma los boletines). Si vuelven a aparecer |
+
+_Personajes propuestos por el agente para la idea del usuario de "María como refugio". Provisorios._
 
 ### Recepcionista de Neural _(sin nombre)_
 
@@ -162,7 +177,7 @@ _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesi�
 | Trato | Cálido y tranquilo. No se lleva bien con la tecnología (_"Estas cosas de la tecnología no son lo mío"_), lo que contrasta con la máquina que usa _(provisorio)_ |
 | Qué hace | Le hace preguntas sobre cómo está, si mejoró y si toma la medicación. Después lo lleva al cuarto de inducción, le explica el tratamiento y lo hace acostar en la máquina. No se da cuenta cuando Jorge le miente |
 | Aspecto | En el prototipo: guardapolvo blanco sobre camisa celeste, pelo canoso y anteojos (provisorio) |
-| En el sueño | Es una **llama de vela** que flota al lado de Jorge y lo acompaña. Habla por la máquina. No ve la puerta que no se abre |
+| En el sueño | Es una **llama de vela** que flota al lado de Jorge y lo acompaña. Habla por la máquina |
 | Qué es _(spoiler)_ | **Un personaje del subconsciente de Jorge** que trata de ayudarlo a seguir adelante. Como todo Neural, lo inventa su mente |
 | Por definir | Nombre de pila |
 
@@ -175,6 +190,14 @@ _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesi�
 | Primera aparición | Sesión 1: La feria |
 | Qué son | Siluetas grises, **sin cara**, repartidas por la feria. No son parte del recuerdo: la luz no las ilumina |
 | Qué dicen | Casi nada: _"¿Y tu mamá, nene?"_, o algo que no se entiende |
+
+### Gente de la fiesta _(sin nombre)_
+
+| Campo | Valor |
+|---|---|
+| Primera aparición | Sesión 3: La fiesta |
+| Quiénes | Siluetas sin cara que bailan, y **un amigo** con una cámara descartable que les saca la foto a Jorge y María |
+| Por definir | ¿El amigo tiene nombre? ¿Vuelve a aparecer? |
 
 ### Gente del barrio _(sin nombre)_
 

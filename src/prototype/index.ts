@@ -4,6 +4,7 @@ import { Car } from './scenes/Car'
 import { Corridor } from './scenes/Corridor'
 import { Dream } from './scenes/Dream'
 import { Dream2 } from './scenes/Dream2'
+import { Dream3 } from './scenes/Dream3'
 import { LevelEnd } from './scenes/LevelEnd'
 import { Neural } from './scenes/Neural'
 import { Office } from './scenes/Office'
@@ -44,7 +45,7 @@ const matter: Phaser.Types.Core.PhysicsConfig = { default: 'matter', matter: { g
 // Prototipo: el juego completo, todas las locaciones de corrido. Cada locación nueva se suma acá.
 export function createGame(parent: HTMLElement) {
   resetState()
-  return fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Stairs, Car, Neural, Corridor, Office, Dream, Dream2, LevelEnd] }))
+  return fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Stairs, Car, Neural, Corridor, Office, Dream, Dream2, Dream3, LevelEnd] }))
 }
 
 // Las locaciones sueltas marcan `solo` en el registro: al terminar muestran su cierre en vez de seguir a la locación siguiente.
@@ -124,3 +125,31 @@ export function createLevel4Game(parent: HTMLElement) {
   return game
 }
 
+// Pre-sesión 3 sola: la mañana después de La segunda noche y la consulta con Vela antes del sueño
+export function createLevel9Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Office, LevelEnd] }))
+  game.registry.set('start', 'Apartment')
+  game.registry.set('startData', { manana: true, vuelta: 2 })
+  game.registry.set('solo', true)
+  return game
+}
+
+// Sesión 3 sola (la fiesta): el sueño y el despertar en la camilla
+export function createLevel10Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), scene: [Warning, Dream3, Office, LevelEnd] }))
+  game.registry.set('start', 'Dream3')
+  game.registry.set('solo', true)
+  return game
+}
+
+// La tercera noche sola: la vuelta a casa después de la Sesión 3
+export function createLevel11Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, LevelEnd] }))
+  game.registry.set('start', 'Apartment')
+  game.registry.set('startData', { noche: true, vuelta: 3 })
+  game.registry.set('solo', true)
+  return game
+}

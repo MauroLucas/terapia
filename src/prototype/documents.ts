@@ -10,7 +10,7 @@ interface Page {
   opts: { w?: number; h?: number; paper?: number }
 }
 
-export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin' | 'cuaderno'
+export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin' | 'cuaderno' | 'fotoFiesta'
 
 // Boletín de la Sesión 2. Firmado: la firma de la mamá, un garabato
 function boletinPage(firmado: boolean): Page {
@@ -213,6 +213,38 @@ export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: P
           c.add(text(scene, -180, 140, 'x + 5 = 12', 22, mine, { fontFamily: HAND_FONT }))
           c.add(text(scene, -180, 166, 'x = 7', 22, mine, { fontFamily: HAND_FONT }))
           c.add(text(scene, 70, 166, '✓', 30, hers, { fontFamily: HAND_FONT }))
+        },
+      },
+    ],
+  },
+  fotoFiesta: {
+    nombre: 'Foto de la fiesta',
+    texto: 'María y yo en la fiesta de egresados, a los diecisiete. Es la foto que faltaba en el portarretratos.',
+    pages: [
+      {
+        // La foto con flash: fondo oscuro del salón, guirnaldas, los dos abrazados (provisorio)
+        opts: { w: 520, h: 420, paper: 0x2b2018 },
+        build: (scene, c) => {
+          const g = scene.add.graphics()
+          g.fillStyle(0xf4efe2).fillRect(-230, -180, 460, 360)
+          g.fillStyle(0x2a2238).fillRect(-210, -160, 420, 280)
+          const colores = [0xe0b04a, 0xd9534f, 0x5aa7c8, 0x9ee07a]
+          for (let i = 0; i < 14; i++) g.fillStyle(colores[i % 4]).fillCircle(-200 + i * 30, -140 + Math.sin(i * 0.9) * 8, 5)
+          g.fillStyle(0xfff3c8, 0.18).fillCircle(150, -110, 70)
+          // Jorge (suéter verde) y María (vestido bordó), abrazados
+          g.fillStyle(0x3e7d3c).fillRoundedRect(-100, -10, 76, 130, 14)
+          g.fillStyle(0xe7c09a).fillCircle(-62, -48, 30)
+          g.fillStyle(0x111114).slice(-62, -53, 31, Math.PI, Math.PI * 2, false).fillPath()
+          g.fillStyle(0x2a1d16).fillRoundedRect(4, -86, 64, 110, 18)
+          g.fillStyle(0x8a3048).fillRoundedRect(4, -6, 64, 126, 14)
+          g.fillStyle(0xe9c6a4).fillCircle(36, -46, 28)
+          g.fillStyle(0x2a1d16).slice(36, -52, 30, Math.PI, Math.PI * 2, false).fillPath()
+          g.fillStyle(0x3e7d3c).fillRoundedRect(-30, 20, 50, 14, 7)
+          g.lineStyle(2, 0x222222)
+          g.beginPath().arc(-62, -42, 10, 0.3, Math.PI - 0.3).strokePath()
+          g.beginPath().arc(36, -40, 10, 0.3, Math.PI - 0.3).strokePath()
+          c.add(g)
+          c.add(text(scene, 150, 148, 'J y M', 22, '#7a3b8a', { fontFamily: HAND_FONT }).setOrigin(0.5).setAngle(-5))
         },
       },
     ],

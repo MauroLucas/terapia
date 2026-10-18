@@ -6,7 +6,7 @@ import { eyelids, objective, onKey, say, text, toast, type Line, type Point } fr
 import { openDiary } from './diary'
 
 // Sesión 1: la feria. Primer sueño lúcido: un recuerdo de cuando Jorge, de chico, se perdió en una feria.
-//   [entrada] … [algodón de azúcar] … [calesita] … [vuelta al mundo] … [la puerta] →(vuelve a la entrada)
+//   [entrada] … [algodón de azúcar] … [calesita] … [vuelta al mundo] →(vuelve a la entrada)
 // Está todo a oscuras. El doctor Vela es una llama que acompaña a Jorge: lo que ilumina toma forma y color.
 // Hay que recordar tres momentos (el algodón, la calesita y lo que dijo la mamá en la entrada) y, al final,
 // quedarse quieto: así la mamá lo encuentra. Al despertar sigue en Office (modo despertar).
@@ -26,8 +26,7 @@ const POS = {
   banco: 1770,
   calesita: 2150,
   rueda: 3150,
-  puerta: 3800,
-  bucle: 4280, // pasando la puerta, la feria vuelve a empezar
+  bucle: 4280, // pasando la vuelta al mundo, la feria vuelve a empezar
   vuelta: 700,
 }
 // Gente sin cara. Las que tienen `dice` se pueden "hablar"
@@ -91,7 +90,6 @@ export class Dream extends Phaser.Scene {
   private flameOn = false
   private fragments = new Set<string>()
   private knowsMama = false
-  private doorTried = false
   private looped = false
   private lastCall = 0
   private calls = 0
@@ -110,7 +108,7 @@ export class Dream extends Phaser.Scene {
     this.facing = 1
     this.flameOn = false
     this.fragments = new Set()
-    this.knowsMama = this.doorTried = this.looped = this.hinted = false
+    this.knowsMama = this.looped = this.hinted = false
     this.calls = this.stillMs = this.movingMs = 0
     this.lastCall = 0
     this.objs = []
@@ -207,7 +205,6 @@ export class Dream extends Phaser.Scene {
     this.reveal(POS.rueda + 20, (g2, k) => this.paintBanco(g2, k, POS.rueda + 20))
 
     for (const s of SOMBRAS) this.add.image(s.x, FLOOR - 75, 'sombra').setFlipX(!!s.flip).setAlpha(0.85).setDepth(8)
-    this.drawPuerta()
   }
 
   private drawArco() {
@@ -301,20 +298,6 @@ export class Dream extends Phaser.Scene {
     g.fillStyle(k(0xd9dde5)).fillCircle(x, cy, 14)
   }
 
-  // La puerta que no se abre: igual a la del baño de la Casa de Jorge. Se ve aunque esté oscuro
-  private drawPuerta() {
-    const x = POS.puerta
-    const w = 90
-    const h = 190
-    const g = this.add.graphics().setDepth(785)
-    g.fillStyle(0x15171d).fillRect(x - w / 2 - 8, FLOOR - h - 8, w + 16, h + 8)
-    g.fillStyle(0x3a3f4d).fillRect(x - w / 2, FLOOR - h, w, h)
-    g.lineStyle(2, 0x1a1c22).strokeRect(x - w / 2 + 10, FLOOR - h + 12, w - 20, h / 2 - 20).strokeRect(x - w / 2 + 10, FLOOR - h / 2 + 4, w - 20, h / 2 - 20)
-    g.fillStyle(0xb8b8b8).fillCircle(x + w / 2 - 14, FLOOR - h / 2 + 6, 5)
-    const crack = this.add.rectangle(x, FLOOR - 2, w - 6, 3, 0xdfe8f3, 0.7).setDepth(786).setBlendMode(Phaser.BlendModes.ADD)
-    this.tweens.add({ targets: crack, alpha: 0.25, duration: 1800, yoyo: true, repeat: -1, ease: 'Sine.InOut' })
-  }
-
   // ---------- Personajes y líneas ----------
 
   private kidHead = (): Point => ({ x: this.player.x + 4 * this.facing, y: this.player.y - 52 })
@@ -333,7 +316,6 @@ export class Dream extends Phaser.Scene {
       { x: POS.arco, label: 'Entrada', when: () => this.isRevealed(POS.arco), action: () => this.entrada() },
       { x: POS.algodon, label: 'Algodón de azúcar', when: () => this.isRevealed(POS.algodon), action: () => this.algodon() },
       { x: POS.calesita, label: this.fragments.has('calesita') ? 'Calesita' : 'Subirse a la calesita', when: () => this.isRevealed(POS.calesita), action: () => this.calesita() },
-      { x: POS.puerta, label: 'Puerta', when: () => this.phase !== 'intro', action: () => this.puerta() },
       ...SOMBRAS.filter((s) => s.dice).map((s) => ({ x: s.x, label: 'Alguien', when: () => this.flameOn, action: () => this.sombra(s.x, s.dice!, s.piensa!) })),
     ]
   }
@@ -592,31 +574,12 @@ export class Dream extends Phaser.Scene {
 
   // ---------- Otros ----------
 
-  private async puerta() {
-    sfx.handle()
-    this.cameras.main.shake(100, 0.002)
-    if (this.doorTried) {
-      await say(this, [this.think('No abre.')])
-      return
-    }
-    this.doorTried = true
-    await say(this, [
-      this.think('Una puerta sola. Sin pared.'),
-      this.think('No abre.'),
-      this.think('Es igual a la puerta del baño de casa.'),
-      this.vela('¿Qué puerta, Jorge? En la pantalla no veo ninguna puerta.'),
-    ])
-    if (addPista('Una puerta', 'En el medio de la feria hay una puerta sola, sin pared. No abre. Es igual a la del baño de casa. El doctor Vela no la ve en su pantalla.')) {
-      toast(this, '✎ Nueva pista en el diario (TAB)')
-    }
-  }
-
   private async sombra(x: number, dice: string, piensa: string) {
     const fake = { x, y: FLOOR - 150 }
     await say(this, [{ kind: 'speech', text: dice, anchor: () => fake }, this.think(piensa)])
   }
 
-  // Pasando la puerta, la feria vuelve a empezar
+  // Pasando la vuelta al mundo, la feria vuelve a empezar
   private async bucle() {
     const cam = this.cameras.main
     cam.fadeOut(400, 5, 6, 12)

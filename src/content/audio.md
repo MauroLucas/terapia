@@ -129,7 +129,6 @@ _Provisorio. Lo único nuevo es el zumbido de la máquina._
 | Voz de Vela | Cada vez que habla | El chasquido del portero eléctrico: habla "por la máquina" |
 | Pasos | Al caminar | Más cortos que de grande |
 | Sortija | Al sacarla | El mismo sonido de agarrar un objeto |
-| Puerta | Al tocar la puerta que no se abre | El picaporte de las otras puertas, y la imagen tiembla un poco |
 
 _Provisorio._
 
@@ -161,6 +160,22 @@ Los mismos sonidos que La primera noche. Lo único distinto: en el portero, entr
 | Papel | El boletín, y cuando la mamá lo pasa por debajo de la puerta | El mismo de los documentos |
 
 _Provisorio. Lo nuevo son los pajaritos y lo que se escucha detrás de la puerta._
+
+### Sesión 3: La fiesta
+
+| Sonido | Cuándo | Notas |
+|---|---|---|
+| Pajaritos | En la plaza, de tarde | Los mismos de la Sesión 2 |
+| **Música de la fiesta** | En el club | **Nuevo.** Un tema lento para bailar, con acordes suaves y una melodía simple. Al bailar suena más fuerte y más claro. Se apaga cuando prenden las luces |
+| **Flash** | La foto | **Nuevo.** El silbido agudo de una cámara descartable cargando el flash, y el disparo |
+| **Teléfono** | Al llamar a su mamá desde la casa de María | **Nuevo.** Dos tonos de línea antes de que atienda |
+| Aparece la llama | El primer beso | El mismo soplido de cuando aparece Vela |
+
+_Provisorio. Lo nuevo es la música de la fiesta, el flash y el teléfono._
+
+### La tercera noche
+
+Los mismos sonidos que las otras noches. En el portero, la voz de mujer dice otra vez el nombre de Jorge. Al poner la foto en el portarretratos, el sonido de agarrar un objeto. _Provisorio._
 
 ## Interfaz
 

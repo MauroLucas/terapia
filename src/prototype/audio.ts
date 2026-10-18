@@ -112,6 +112,9 @@ export const sfx = {
   reveal() { tone(1568, 0.7, 'sine', 0.035); tone(2093, 0.9, 'sine', 0.025, 0.12) },
   // Aparece la llama del doctor Vela
   flame() { noiseBurst(0.7, 900, 0.06); tone(523.3, 1.4, 'sine', 0.05, 0.1); tone(784, 1.6, 'sine', 0.03, 0.3) },
+  // Sesión 3: el flash de la cámara (carga y disparo) y el teléfono de la casa de María
+  flash() { tone(2600, 0.25, 'sine', 0.02); tone(3400, 0.2, 'sine', 0.015, 0.12); noiseBurst(0.08, 5000, 0.08, 'highpass') },
+  telefono() { for (let i = 0; i < 2; i++) { tone(440, 0.4, 'square', 0.03, i * 0.5); tone(480, 0.4, 'square', 0.03, i * 0.5) } },
 }
 
 // Música y ambientes en loop
@@ -421,4 +424,45 @@ export function startRadio(): Loop {
   }
   play()
   return { stop: () => { alive = false } }
+}
+
+// Sesión 3: la música de la fiesta de egresados. Un tema lento, para bailar (provisorio).
+// `setVolume(0..1)` la acerca o la aleja: lejos suena apagada, como escuchada desde afuera
+export function startFiesta(): Loop & { setVolume: (v: number) => void } {
+  const a = out()
+  if (!a) return { stop() {}, setVolume() {} }
+  const t = a.c.currentTime
+  const g = a.c.createGain()
+  g.gain.setValueAtTime(0, t)
+  g.gain.linearRampToValueAtTime(0.5, t + 3)
+  g.connect(a.m)
+  const f = a.c.createBiquadFilter()
+  f.type = 'lowpass'
+  f.frequency.value = 1800
+  f.connect(g)
+  const melody = [659.3, 0, 587.3, 523.3, 0, 493.9, 523.3, 0, 587.3, 0, 523.3, 440, 0, 392, 440, 0]
+  const chords = [[261.6, 329.6, 392], [220, 261.6, 329.6], [174.6, 220, 261.6], [196, 246.9, 293.7]]
+  let i = 0
+  let alive = true
+  const beat = 420
+  const step = () => {
+    if (!alive) return
+    const n = melody[i % melody.length]
+    if (n) tone(n, 0.5, 'triangle', 0.07, 0, f)
+    if (i % 4 === 0) for (const c of chords[Math.floor(i / 4) % chords.length]) tone(c, 1.6, 'sine', 0.035, 0, f)
+    if (i % 2 === 0) tone(chords[Math.floor(i / 4) % chords.length][0] / 2, 0.3, 'sine', 0.08, 0, f)
+    i++
+    setTimeout(step, beat)
+  }
+  step()
+  return {
+    stop: (fade = 2) => {
+      alive = false
+      fadeOutAndStop(g, [], fade)
+    },
+    setVolume: (v: number) => {
+      g.gain.setTargetAtTime(0.5 * v, a.c.currentTime, 0.4)
+      f.frequency.setTargetAtTime(400 + 1400 * v, a.c.currentTime, 0.4)
+    },
+  }
 }

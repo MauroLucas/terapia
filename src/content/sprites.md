@@ -115,7 +115,42 @@ teenage girl around 15, long dark hair with bangs, denim jacket over a white t-s
 dark blue jeans, white sneakers, small friendly smile
 ```
 
+#### María en la fiesta (17 años)
+
+![María en la fiesta](sprites/mariaFiesta0.png) ![María en la fiesta caminando A](sprites/mariaFiesta1.png) ![María en la fiesta caminando B](sprites/mariaFiesta2.png)
+
+| Campo | Valor |
+|---|---|
+| Claves | `mariaFiesta0` (parada) · `mariaFiesta1`, `mariaFiesta2` (caminata) |
+| Tamaño en pantalla | 56 × 140 px |
+| Dónde | Sesión 3: La fiesta (el club y la casa de María). En la plaza de esa sesión usa el sprite de los 15 |
+| Descripción | María a los 17, en la fiesta de egresados. Vestido bordó hasta la rodilla, pelo largo oscuro suelto con flequillo, zapatos oscuros. Sonrisa chica |
+
+```
+teenage girl around 17, long dark loose hair with bangs, knee-length burgundy party dress,
+dark flat shoes, small happy smile, school graduation party
+```
+
 _Por definir: María a los 20 y a los 30 (sesiones siguientes)._
+
+### Familia de María
+
+![Mamá de María](sprites/mamaMaria.png) ![Papá de María](sprites/papaMaria.png)
+
+| Campo | Valor |
+|---|---|
+| Claves | `mamaMaria` · `papaMaria` |
+| Tamaño en pantalla | 56 × 140 px · 60 × 140 px |
+| Dónde | Sesión 3: La fiesta (la casa de María) |
+| Descripción | **Tienen cara**: son parte del recuerdo. Ella: unos 45 años, pelo corto castaño claro con rulos, suéter mostaza, delantal blanco, pollera violeta. Él: unos 50, pelado con los costados grises, bigote, camisa a cuadros celeste, pantalón marrón. Cálidos, de entrecasa |
+
+```
+warm middle-aged mother around 45, short light brown curly hair, mustard sweater,
+white kitchen apron, purple skirt, kind smile
+---
+friendly middle-aged father around 50, bald with grey sides, mustache,
+light blue checkered shirt, brown trousers, relaxed posture
+```
 
 ### Papá de Jorge
 
@@ -190,7 +225,9 @@ El prototipo usa solo poses sueltas. Con el arte final harían falta, como míni
 | Jorge de chico | Quieto, caminar, mirar alrededor (perdido), abrazo |
 | Vela | Quieto, caminar, sentado escribiendo |
 | Mamá | Quieta, agacharse y abrazar |
-| María | Quieta, caminar, sentada en la hamaca |
+| María | Quieta, caminar, sentada en la hamaca, bailar (en pareja con Jorge), acercarse para el beso |
+| Jorge a los 17 | Bailar (en pareja con María), acostarse en el sillón |
+| Familia de María | Quietos; ella cocinando, él sentado mirando la tele |
 
 ## Objetos
 
@@ -219,6 +256,7 @@ El prototipo usa solo poses sueltas. Con el arte final harían falta, como míni
 | ![](sprites/sortija.png) | `sortija` | 22 × 22 | Sortija dorada de la calesita | Sesión 1 (la calesita) y La primera noche (la caja) |
 | ![](sprites/boletin.png) | `boletin` | 22 × 28 | Boletín de calificaciones (ícono) | Sesión 2: El boletín |
 | ![](sprites/cuaderno.png) | `cuaderno` | 22 × 28 | Cuaderno de tapa azul (ícono) | La segunda noche: la caja |
+| ![](sprites/fotoFiesta.png) | `fotoFiesta` | 34 × 26 | Foto de la fiesta: Jorge y María, fondo oscuro con flash (ícono) | Sesión 3 (se saca) y La tercera noche (la caja y el portarretratos) |
 
 _Las marcas de gaseosa son genéricas y provisorias. Los objetos del inventario se ven chicos en el juego, pero de cerca se muestran como documentos (ver abajo)._
 
@@ -251,6 +289,8 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 
 ![Cuaderno de matemática](sprites/documentos/cuaderno-1.png) ![Sortija](sprites/documentos/sortija-1.png)
 
+![Foto de la fiesta](sprites/documentos/fotoFiesta-1.png)
+
 | Documento | Descripción para el arte |
 |---|---|
 | Foto (frente y dorso) | Foto de papel de los 2000, Jorge con una señora de vacaciones. Atrás, escrito a mano: "12/08" |
@@ -260,6 +300,7 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 | Informe de Neural | Hoja clínica con una línea tachada en negro |
 | Boletín | Boletín de secundaria, papel crema; un 3 en rojo en Matemática; la firma de la mamá en la segunda versión |
 | Cuaderno | Hoja rayada de cuaderno escolar con las cuentas de Jorge y notas en violeta con la letra de María |
+| Foto de la fiesta | Foto de papel con flash, de una fiesta de egresados: Jorge (suéter verde) y María (vestido bordó) abrazados, guirnaldas de colores atrás. En el borde blanco, "J y M" con la letra de María. Es la foto del portarretratos |
 | Sortija | La sortija de cerca, sobre un fondo oscuro |
 
 ## Fondos
@@ -330,7 +371,7 @@ Uno por ambiente. Las capturas son del prototipo sin la interfaz (a veces se ve 
 
 ![Calesita](sprites/fondos/feria-calesita.png)
 
-**La feria** (4400 px). Noche, guirnaldas de luces, el puesto de algodón de azúcar, la calesita, bancos, la vuelta al mundo y la puerta que no se abre. Todo empieza gris y toma color cuando lo ilumina la llama.
+**La feria** (4400 px). Noche, guirnaldas de luces, el puesto de algodón de azúcar, la calesita, bancos y la vuelta al mundo. Todo empieza gris y toma color cuando lo ilumina la llama.
 
 ### Sesión 2: El boletín
 
@@ -338,7 +379,7 @@ Uno por ambiente. Las capturas son del prototipo sin la interfaz (a veces se ve 
 
 ![Casa de la mamá: cocina](sprites/fondos/casa-mama-cocina.png)
 
-**La casa de la mamá** (2400 px). Casa de barrio, cuando Jorge tenía 15: el cuarto de Jorge con el escritorio y la puerta que no se abre, la cocina con la mesa y la tele, el perchero con la campera del papá y la puerta a la calle. De tarde y después de noche.
+**La casa de la mamá** (2400 px). Casa de barrio, cuando Jorge tenía 15: el cuarto de Jorge con el escritorio, el pasillo, la cocina con la mesa y la tele, el perchero con la campera del papá y la puerta a la calle. De tarde y después de noche.
 
 ![Barrio](sprites/fondos/barrio.png)
 
@@ -347,6 +388,22 @@ Uno por ambiente. Las capturas son del prototipo sin la interfaz (a veces se ve 
 ![Barrio: la plaza](sprites/fondos/barrio-plaza.png)
 
 **El barrio** (3600 px). Cielo de tarde: el frente de la casa, el almacén, la casa de la vecina, el bar (con siluetas en la ventana) y la plaza con hamacas, árboles y un banco, donde está María.
+
+### Sesión 3: La fiesta
+
+![La plaza, dos años después](sprites/fondos/plaza-17.png)
+
+**La plaza** (1800 px). La misma de la Sesión 2, dos años después, en una tarde más cálida: las hamacas, un árbol con un corazón tallado en el tronco, el banco donde estudiaban y un kiosco.
+
+![El club: la fiesta de egresados](sprites/fondos/club.png)
+
+**El club del barrio** (2000 px). La fiesta de egresados, de noche: paredes verdes, piso de parquet, carteles "CLUB SOCIAL Y DEPORTIVO" y "¡FELICIDADES, EGRESADOS!", guirnaldas de colores, la mesa del ponche, la pista con bola de espejos y siluetas bailando.
+
+![Casa de María: cocina y comedor](sprites/fondos/casa-maria.png)
+
+![Casa de María: living](sprites/fondos/casa-maria-living.png)
+
+**La casa de María** (2000 px). Cálida, con luz amarilla de lámparas colgantes: la puerta de calle, la cocina, la mesa servida con fotos y dibujos en la pared, el teléfono de la pared, el living con el sillón del papá y la tele, y el sillón largo donde duerme Jorge.
 
 ## Cómo se regeneran las imágenes
 

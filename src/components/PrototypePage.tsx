@@ -25,8 +25,8 @@ export function PrototypePage() {
         <h1>Prototipo: juego completo</h1>
       </header>
       <p>
-        El juego entero, de corrido: Casa de Jorge (departamento, escaleras y auto), Hall del edificio (Neural y ascensor), Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción), Sesión 1 (el sueño de la feria), La primera noche (la vuelta a casa), Pre-sesión 2 (la mañana y la consulta), Sesión 2 (el boletín) y La segunda noche. Cada locación
-        nueva se suma acá. Para probar una locación suelta, entrá a <strong>Casa de Jorge</strong>, <strong>Hall del edificio</strong>, <strong>Consultorio</strong>, <strong>Sesión 1</strong>, <strong>La primera noche</strong>, <strong>Pre-sesión 2</strong>, <strong>Sesión 2</strong> o <strong>La segunda noche</strong> en el
+        El juego entero, de corrido: Casa de Jorge (departamento, escaleras y auto), Hall del edificio (Neural y ascensor), Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción), Sesión 1 (el sueño de la feria), La primera noche (la vuelta a casa), Pre-sesión 2 (la mañana y la consulta), Sesión 2 (el boletín), La segunda noche, Pre-sesión 3, Sesión 3 (la fiesta) y La tercera noche. Cada locación
+        nueva se suma acá. Para probar una locación suelta, entrá a <strong>Casa de Jorge</strong>, <strong>Hall del edificio</strong>, <strong>Consultorio</strong>, <strong>Sesión 1</strong>, <strong>La primera noche</strong>, <strong>Pre-sesión 2</strong>, <strong>Sesión 2</strong>, <strong>La segunda noche</strong>, <strong>Pre-sesión 3</strong>, <strong>Sesión 3</strong> o <strong>La tercera noche</strong> en el
         menú.
       </p>
       <div className="game-frame" ref={ref} />

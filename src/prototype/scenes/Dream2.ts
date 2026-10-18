@@ -7,7 +7,7 @@ import { choose, eyelids, objective, say, text, toast, type Line, type Point } f
 import { openDiary } from './diary'
 
 // Sesión 2: el boletín. Jorge tiene unos 15 años, en la casa de su mamá y en el barrio.
-//   Casa:   [cuarto de Jorge] [pasillo: la puerta] [comedor: silla y campera del papá] [cocina: mamá | puerta a la calle]
+//   Casa:   [cuarto de Jorge] [pasillo] [comedor: silla y campera del papá] [cocina: mamá | puerta a la calle]
 //   Barrio: [frente de la casa] [almacén] [vecina] [bar: el papá] [esquina] [plaza: María]
 // Jorge necesita que su papá firme el boletín, y el papá no está. Lo que ilumina la llama de Vela se recuerda (pasa de
 // gris a color). Cerca de las cosas del papá hace frío y la llama se achica; cerca de María, crece.
@@ -30,7 +30,6 @@ const POS = {
   cama: 250,
   escritorio: 540,
   puertaCuarto: 790,
-  puertaSola: 1060,
   campera: 1370,
   mesa: 1640,
   sillaPapa: 1780,
@@ -102,7 +101,7 @@ export class Dream2 extends Phaser.Scene {
   private walkDist = 0
   private stepDist = 0
   private flameScale = 1
-  private f = { boletin: false, mama: false, almacen: false, vecina: false, bar: false, maria: false, puerta: false }
+  private f = { boletin: false, mama: false, almacen: false, vecina: false, bar: false, maria: false }
   private tone?: { stop: (fade?: number) => void }
   private birds?: { stop: (fade?: number) => void }
   private voces?: { stop: (fade?: number) => void }
@@ -119,7 +118,7 @@ export class Dream2 extends Phaser.Scene {
     this.flameScale = 1
     this.objs = []
     this.lamps = []
-    this.f = { boletin: false, mama: false, almacen: false, vecina: false, bar: false, maria: false, puerta: false }
+    this.f = { boletin: false, mama: false, almacen: false, vecina: false, bar: false, maria: false }
     this.papa = undefined
     makeTextures(this)
     this.cameras.main.setBackgroundColor('#0b0c10')
@@ -197,12 +196,6 @@ export class Dream2 extends Phaser.Scene {
     return this.add.text(x, y, str, { fontFamily: FONT, fontSize: `${size}px`, color, resolution: 2 }).setOrigin(0.5).setDepth(3)
   }
 
-  private door(g: Phaser.GameObjects.Graphics, cx: number, color: number, w = 90, h = 190) {
-    g.fillStyle(0x15171d).fillRect(cx - w / 2 - 8, FLOOR - h - 8, w + 16, h + 8)
-    g.fillStyle(color).fillRect(cx - w / 2, FLOOR - h, w, h)
-    g.fillStyle(0xb8b8b8).fillCircle(cx + w / 2 - 14, FLOOR - h / 2 + 6, 5)
-  }
-
   private drawCasa() {
     const { x: X, w: Wd } = AREAS.casa
     const g = this.add.graphics()
@@ -239,13 +232,6 @@ export class Dream2 extends Phaser.Scene {
     g.fillStyle(0x3a2f24).fillRect(POS.puertaCuarto - 50, 400, 100, 200)
     g.fillStyle(0x6b5232).fillRect(POS.puertaCuarto - 44, 406, 88, 194)
     g.fillStyle(0xc9b46a).fillCircle(POS.puertaCuarto - 30, 505, 4)
-
-    // Pasillo: la puerta que no se abre (igual a la del baño de la Casa de Jorge)
-    const d = this.add.graphics().setDepth(785)
-    this.door(d, POS.puertaSola, 0x3a3f4d)
-    d.lineStyle(2, 0x1a1c22).strokeRect(POS.puertaSola - 35, FLOOR - 178, 70, 75).strokeRect(POS.puertaSola - 35, FLOOR - 91, 70, 75)
-    const crack = this.add.rectangle(POS.puertaSola, FLOOR - 2, 84, 3, 0xdfe8f3, 0.85).setDepth(786).setBlendMode(Phaser.BlendModes.ADD)
-    this.tweens.add({ targets: crack, alpha: 0.35, duration: 1500, yoyo: true, repeat: -1, ease: 'Sine.InOut' })
 
     // Comedor: perchero con la campera del papá, mesa, su silla en la cabecera, la tele
     this.reveal(POS.campera, (gg, k) => {
@@ -381,7 +367,6 @@ export class Dream2 extends Phaser.Scene {
     const tarde = () => this.phase === 'tarde'
     this.spots = [
       { area: 'casa', x: POS.escritorio, label: 'Boletín', when: () => tarde() && !this.f.boletin, action: () => this.boletin() },
-      { area: 'casa', x: POS.puertaSola, label: 'Puerta', when: () => tarde() || this.phase === 'noche', action: () => this.puertaSola() },
       { area: 'casa', x: POS.campera, label: 'Campera', when: tarde, action: () => say(this, [this.think('Su campera.'), this.think('Huele a cigarrillo. Si está colgada acá, él no está.')]) },
       { area: 'casa', x: POS.sillaPapa, label: 'Silla', when: tarde, action: () => this.silla() },
       { area: 'casa', x: POS.tele, label: 'Tele', when: tarde, action: () => say(this, [this.think('La tele.'), this.think('Cuando él está, está siempre prendida. Para no hablar.')]) },
@@ -450,22 +435,6 @@ export class Dream2 extends Phaser.Scene {
   private async silla() {
     await say(this, [this.think('Su silla. En la cabecera.'), this.think('Nadie se sienta ahí. Ni cuando él no está.')])
     this.pista('La silla de papá', 'En la mesa, la silla de mi papá. Nadie se sienta ahí, ni cuando él no está.')
-  }
-
-  private async puertaSola() {
-    sfx.handle()
-    this.cameras.main.shake(100, 0.002)
-    if (this.f.puerta) {
-      await say(this, [this.think('No abre.')])
-      return
-    }
-    this.f.puerta = true
-    await say(this, [
-      this.think('Otra vez esta puerta.'),
-      this.think('Está más cerca que en la feria. Adentro de la casa.'),
-      this.vela('¿Qué puerta, Jorge? Ahí hay una pared.'),
-    ])
-    this.pista('La puerta, otra vez', 'En el pasillo de la casa de mamá está la misma puerta que en la feria. Más cerca. El doctor Vela sigue sin verla.')
   }
 
   private async hablarMama() {

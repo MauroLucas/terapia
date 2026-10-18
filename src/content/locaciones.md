@@ -15,7 +15,10 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 6 | **Pre-sesión 2** | Casa de Jorge (la mañana, una semana después) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
 | 7 | **Sesión 2: El boletín** | Sueño lúcido: la casa de la mamá y el barrio, a los 15 | Conseguir que el papá firme el boletín. Conoce a María | En el prototipo |
 | 8 | **La segunda noche** | Casa de Jorge, de noche, después de la Sesión 2 | Anotar el boletín en la pizarra y dormir. En la caja, el cuaderno con la letra de María. Una voz de mujer en el portero | En el prototipo |
-| — | **Sesión 3: La pelea** | El departamento (vacío, a los 20) y la casa de la mamá | La visita con María, el corte, la pelea con la mamá | Idea |
+| 9 | **Pre-sesión 3** | Casa de Jorge (la mañana) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
+| 10 | **Sesión 3: La fiesta** | Sueño lúcido: la plaza, el club del barrio y la casa de María, a los 17 | Ver a María, bailar en la fiesta de egresados, quedarse en su casa. El primer beso | En el prototipo |
+| 11 | **La tercera noche** | Casa de Jorge, de noche, después de la Sesión 3 | Anotar la fiesta en la pizarra y dormir. En la caja, la foto del portarretratos | En el prototipo |
+| — | **Sesión 4: La pelea** | El departamento (vacío, a los 20) y la casa de la mamá | La visita con María, el corte, la pelea con la mamá | Idea |
 
 ## Casa de Jorge
 
@@ -949,7 +952,7 @@ Es el **primer sueño lúcido** y la primera sesión: un recuerdo de la **infanc
 
 Jorge aparece **de chico**. La feria está **a oscuras**, y el doctor Vela lo acompaña como una **llama** que flota a su lado: lo que ilumina toma forma y color. Hay que recordar **tres momentos** de esa noche y, al final, hacer lo que le había dicho su mamá: **quedarse quieto** para que ella lo encuentre.
 
-_La idea (perderse de chico, Jorge de chico, Vela como llama, una puerta que no se abre) es del usuario. Los detalles del recuerdo, los diálogos y los puzzles los propuso el agente y son provisorios._
+_La idea (perderse de chico, Jorge de chico, Vela como llama) es del usuario. Los detalles del recuerdo, los diálogos y los puzzles los propuso el agente y son provisorios._
 
 **Por qué este recuerdo:** es un comienzo suave, con la mamá presente pero sin cara, porque Jorge todavía no la reconoce (como en la foto de la billetera). Y deja una idea que vuelve al final del juego: **alguien viene a buscarlo**.
 
@@ -963,7 +966,7 @@ _La idea (perderse de chico, Jorge de chico, Vela como llama, una puerta que no 
 | **Recuerdos** | Al examinar algo importante, el recuerdo aparece como **figuras transparentes y cálidas** (la mamá y Jorge chico) que dicen lo que dijeron esa noche y se desvanecen |
 | **La mamá no tiene cara** | Una luz blanca le tapa la cabeza, siempre |
 | **La gente no tiene cara** | Siluetas grises que no se iluminan nunca: no son parte del recuerdo |
-| **La feria no termina** | Pasando la puerta, la feria vuelve a empezar desde la entrada |
+| **La feria no termina** | Pasando la vuelta al mundo, la feria vuelve a empezar desde la entrada |
 | **No se puede perder** | No hay tiempo límite ni forma de trabarse |
 
 ### La feria
@@ -977,7 +980,6 @@ Se recorre de izquierda a derecha. Jorge aparece **al lado de la calesita**, don
 | Banco | Al lado de la calesita. Ahí lo esperaba la mamá |
 | Calesita | Techo a gajos rojos y blancos, cuatro caballitos que suben y bajan, el palo de la **sortija** a la derecha. Recuerdo de la **calesita** |
 | Vuelta al mundo | Atrás de todo, con un banco abajo. Decorado |
-| **La puerta** | Una puerta sola, sin pared, en el medio de la feria. Se ve aunque esté oscuro y por debajo sale una rayita de luz fría. Es igual a la del baño de la Casa de Jorge |
 | Gente | Cinco siluetas sin cara repartidas por la feria. Dos se pueden "hablar" |
 | Guirnaldas | Lamparitas de colores colgadas arriba, a lo largo de toda la feria |
 
@@ -1013,20 +1015,6 @@ Jorge se sube a un caballito, que sube y baja. Abajo aparece una barra con un **
 - Si falla, no pasa nada: piensa _"Casi…"_ y sigue intentando.
 - **El sueño ayuda:** después de tres intentos fallidos, la franja se agranda.
 - Al sacarla, la sortija sale volando del palo.
-
-### La puerta que no se abre
-
-> **Jorge (piensa):** Una puerta sola. Sin pared.
->
-> **Jorge (piensa):** No abre.
->
-> **Jorge (piensa):** Es igual a la puerta del baño de casa.
->
-> **Vela:** ¿Qué puerta, Jorge? En la pantalla no veo ninguna puerta.
-
-Las veces siguientes, solo: _"No abre."_
-
-**Es un hilo para todas las sesiones:** en cada sueño hay una puerta así, que no se abre y que Vela no puede ver. Prepara la revelación (el Jorge real está del otro lado de la puerta del baño) sin decir nada. _Por definir: dónde está en cada sesión, si cambia y cuándo se abre._
 
 ### La gente sin cara
 
@@ -1092,7 +1080,6 @@ El casco sube y se anota el primer tramo de la **línea de tiempo**: _"Infancia 
 | El algodón de azúcar: "Fui a la feria con una mujer. Me compró algodón de azúcar. No le puedo ver la cara." (o "con mamá", si ya lo sabe) | Al recordar el algodón |
 | La calesita: "Saqué la sortija. Ella me saludaba desde el banco. Me bajé del otro lado de la calesita y no la vi más." | Al recordar la calesita |
 | Lo que me dijo mamá: "Al entrar a la feria, mamá me dijo: «Si te perdés, quedate quieto donde estás, que yo te encuentro»." | Al recordar la entrada |
-| Una puerta: "En el medio de la feria hay una puerta sola, sin pared. No abre. Es igual a la del baño de casa. El doctor Vela no la ve en su pantalla." | Al tocar la puerta |
 
 ### Final de la locación
 
@@ -1307,7 +1294,7 @@ Es la sesión del **papá**: un padre ausente que resolvía todo con violencia. 
 
 _Decidido por el usuario: el boletín, que la violencia del papá era contra la mamá y contra Jorge, el eco de la puerta (Jorge trabándola con la espalda) y que María y Jorge se conocen acá. Los diálogos, los vecinos y los detalles los propuso el agente y son provisorios._
 
-**La casa vuelve en la Sesión 3:** es donde pasa la pelea con la mamá. El jugador la conoce acá.
+**La casa vuelve en la Sesión 4:** es donde pasa la pelea con la mamá. El jugador la conoce acá.
 
 ### Cómo es este sueño
 
@@ -1327,7 +1314,6 @@ Siguen las reglas de la Sesión 1 (ver "Mecánicas" → Sueño lúcido): Vela es
 | Lugar | Qué hay |
 |---|---|
 | Cuarto de Jorge | Cama, escritorio con **el boletín**, un póster de una banda (inventada, "Los Vagos"), una ventana. La puerta del cuarto |
-| Pasillo | **La puerta que no se abre**, más cerca que en la feria: adentro de la casa |
 | Comedor | El perchero con **la campera del papá**, la mesa, **su silla en la cabecera** (con un cenicero), la tele |
 | Cocina | **La mamá**, en la mesada. La puerta a la calle |
 | Frente de la casa | Casa baja, techo de tejas |
@@ -1406,10 +1392,6 @@ Después del corte, Jorge está **sentado en el piso de su cuarto, con la espald
 
 **Que esa noche Jorge no le abre a su mamá** prepara el final: en el baño, cuando María toque, va a elegir abrir.
 
-### La puerta que no se abre
-
-En el pasillo de la casa. _"Otra vez esta puerta."_ / _"Está más cerca que en la feria. Adentro de la casa."_ Vela: _"¿Qué puerta, Jorge? Ahí hay una pared."_ Cada sesión, la puerta está **más cerca** de Jorge.
-
 ### Objetivo en pantalla
 
 | Cuándo | Objetivo |
@@ -1426,7 +1408,6 @@ En el pasillo de la casa. _"Otra vez esta puerta."_ / _"Está más cerca que en 
 | Pista | Cuándo se anota |
 |---|---|
 | El boletín | Al ver el boletín |
-| La puerta, otra vez | Al tocar la puerta del pasillo |
 | La silla de papá | Al mirar su silla |
 | Mamá | Al hablar con ella del boletín |
 | El almacenero | Al hablarle |
@@ -1555,7 +1536,7 @@ Los mismos de La primera noche: **Anotar lo que recordé en la pizarra** → **A
 
 | Pista | Cuándo se anota |
 |---|---|
-| Pizarra: "Anoté el segundo recuerdo: el boletín, cuando tenía quince. Mi papá. Y María." | Al anotar el recuerdo |
+| El boletín en la pizarra: "Anoté el segundo recuerdo: el boletín, cuando tenía quince. Mi papá. Y María." | Al anotar el recuerdo |
 | El cuaderno: "En la caja estaba mi cuaderno de matemática de cuando tenía quince. En los márgenes, la letra de María." | Al abrir la caja |
 | El portero, otra noche: "Otra vez tocaron el portero de noche. Entre la estática, una voz de mujer dijo mi nombre. La conozco y no sé de dónde." | Al atender el portero |
 
@@ -1567,14 +1548,282 @@ Los mismos de La primera noche: **Anotar lo que recordé en la pizarra** → **A
 
 ### Final de la locación
 
-Termina cuando Jorge **se duerme**. En el prototipo completo es el **fin del prototipo**: la Pre-sesión 3 y la Sesión 3 todavía no están.
+Termina cuando Jorge **se duerme**. En el prototipo completo sigue la **Pre-sesión 3**.
 
 ### Pendiente de definir
 
 - ¿La voz del portero vuelve a hablar en las próximas noches? ¿Dice algo más cada vez?
 - ¿Quién guardó el cuaderno en la caja?
 
-## Sesión 3: La pelea _(idea)_
+## Pre-sesión 3
+
+### Resumen
+
+Una semana después de La segunda noche. Es igual a la Pre-sesión 2: Jorge se despierta en su cuarto, **suena el portero** (_"Debe ser el remis."_), puede repasar la pizarra y, al salir del cuarto, aparece sentado frente a Vela.
+
+### Qué cambia
+
+| Lugar | Pre-sesión 3 |
+|---|---|
+| Pizarra | Tiene la feria y el boletín. Al repasarla: _"«La feria con mamá.» «El boletín.»"_ / _"Y María, en la plaza. Todavía está."_ |
+| Caja | _"Mi cuaderno de matemática."_ / _"La letra de María."_ |
+| La consulta | Dos preguntas nuevas (ver abajo) |
+| Cuarto de inducción | _"Hoy no hay nada que buscar, Jorge."_ / _"Solo quiero que te acuerdes de algo lindo."_ / _"Acostate."_ |
+
+### Las preguntas
+
+_Provisorias, propuestas por el agente._ Las respuestas no tienen consecuencias.
+
+| Pregunta | La verdad | La mentira |
+|---|---|---|
+| ¿Cómo te sentiste después de la última vez? | "Mal. Lo de mi papá no me lo saco de la cabeza." → _"Lo sé. Fue mucho."_ / _"Hoy vamos a ir a un lugar más tranquilo."_ | "Bien. Ya pasó." → _"Bueno. Igual hoy vamos a ir a un lugar más tranquilo."_ |
+| ¿Te acordaste de algo más de María? | "Encontré mi cuaderno. Tiene su letra." → _"Entonces ya sabés por dónde seguir."_ | "No. De nada." → _"Ya va a venir."_ |
+
+Después sigue la **Sesión 3: La fiesta**.
+
+## Sesión 3: La fiesta
+
+### Resumen
+
+Es la tercera sesión, otra vez en la **adolescencia**: Jorge tiene **unos 17 años**. Es la sesión de **María**, y es una **sesión de respiro**: no aparece el papá, no hay frío y la llama de Vela está más grande que nunca.
+
+Sirve para que el jugador **quiera a María** antes de la Sesión 4, donde se separan: así la separación duele más.
+
+_Decidido por el usuario: Jorge a los 17, profundizar la relación con María, que sea una sesión de respiro (sin el papá), que se combine todo (el día que se ponen de novios, María como refugio, la fiesta de egresados y el primer plan juntos) y que ese día se saquen **la foto que hoy falta en el portarretratos**. El nombre "La fiesta", los diálogos, la familia de María y los detalles los propuso el agente y son provisorios._
+
+### Cómo es este sueño
+
+Siguen las reglas de siempre (ver "Mecánicas" → Sueño lúcido): Vela es una llama y lo que ilumina pasa de gris a color.
+
+| Regla | Qué pasa |
+|---|---|
+| **Sin frío** | No hay nada del papá. La llama nunca se achica |
+| **El calor de María** | Cerca de María la llama crece, más que en la Sesión 2. Al bailar, crece todavía más |
+| **Un recuerdo que salta** | El sueño pasa de la plaza (un martes a la tarde) a la fiesta (el sábado a la noche) con un fundido |
+| **La familia de María tiene cara** | Son parte del recuerdo y Jorge los mira de frente. La gente de la fiesta, en cambio, son siluetas sin cara |
+
+### Los lugares
+
+| Lugar | Qué hay |
+|---|---|
+| **La plaza**, de tarde | La misma de la Sesión 2, dos años después: las hamacas donde se conocieron, un árbol con un corazón tallado (no es de ellos, _"todavía"_), el banco donde estudiaban (con el cuaderno, cerrado) y un kiosco. **María** espera en el banco |
+| **El club del barrio**, de noche | La fiesta de egresados: guirnaldas de colores, bola de espejos, la mesa del ponche, la pista de baile con siluetas bailando, **María** con vestido bordó y **un amigo** con una cámara descartable |
+| **La casa de María**, de noche | Cálida, con luz amarilla: la cocina con **la mamá de María**, la mesa servida con fotos y dibujos en la pared, el teléfono de la pared, el living con **el papá de María** mirando la tele, y el sillón donde Jorge va a dormir |
+
+### Secuencia
+
+1. **Se le abren los ojos** en la plaza. _"La plaza."_ / _"Es martes."_ / _"Soy más grande. Diecisiete."_
+2. Aparece la llama. Vela: _"Hola, Jorge."_ / _"Hoy no hay nada que buscar. Mirá alrededor."_ Objetivo: **Ir a ver a María**.
+3. **Los martes** (el banco): ya no estudian. María quiere irse de su casa cuando termine el colegio, a un depto chiquito con un balcón lleno de plantas (ver "Diálogos"). Lo invita a la fiesta de egresados.
+4. Vela: _"Vamos al sábado, Jorge."_ Fundido a negro.
+5. **La fiesta:** el club, la música. Objetivo: **Encontrar a María**.
+6. **El baile** (ver abajo). Después, **la foto**.
+7. Se prenden las luces y la fiesta termina. Jorge no quiere volver a su casa: _"A casa no. Hoy no."_ María: _"Vení a casa. Mi mamá siempre cocina de más."_ Objetivo: **Irme de la fiesta con María**.
+8. **La casa de María:** la mamá le sirve milanesas; el papá le dice que se quede a dormir y que **llame a su mamá** (ver abajo).
+9. **El sillón:** María lo saluda, se dan **el primer beso** y Jorge se duerme. _"Esa noche dormí tranquilo."_ Vela: _"Quedate un rato más así, Jorge."_ / _"Después volvemos."_
+10. **Despertar** en la camilla (ver abajo).
+
+### Diálogos
+
+**Los martes:**
+
+> **María:** Llegás tarde.
+>
+> **María:** Y ya no tenemos nada que estudiar, ¿sabés? Aprobaste.
+>
+> **Jorge:** Ya sé. Vengo igual.
+>
+> **María:** Cuando termine el colegio me quiero ir de mi casa.
+>
+> **María:** Un depto chiquito. Con un balcón lleno de plantas.
+
+El jugador elige _"¿Y yo?"_ o _"Yo también me quiero ir."_; en los dos casos María contesta _"Vos traés la heladera."_ (o _"Entonces vos traés la heladera."_) y Jorge piensa _"Algún día."_. Es el primer plan juntos, y prepara la visita al departamento de la Sesión 4.
+
+Después: _"El sábado es la fiesta de egresados. ¿Vas a ir?"_. Si elige _"No sé bailar."_: _"Te enseño. No es tan difícil."_ Si elige _"Sí."_: _"Más te vale."_ Y al final: _"Pasame a buscar a las diez."_
+
+**La casa de María:**
+
+| Quién | Qué dice |
+|---|---|
+| Mamá de María | _"¡Jorge! Pasá, querido."_ / _"¿Comiste algo? Sentate, que hay milanesas."_ / _"Nada de señora, ¿eh? Acá sos de la casa."_ |
+| Papá de María | _"¿Vos sos el de matemática?"_ / _"María dice que ahora sabés más que ella."_ / _"Es tarde. Quedate a dormir, te armamos el sillón."_ / _"Pero llamá a tu casa, que tu mamá se va a preocupar."_ Jorge piensa: _"Mi papá nunca me habló así."_ |
+| La mesa | _"Fotos de vacaciones. Dibujos de cuando María era chica."_ / _"En esta casa nadie levanta la voz."_ |
+
+### El baile
+
+María: _"¿Bailamos?"_ / Jorge: _"Te avisé que no sé."_ / María: _"Seguime a mí."_
+
+Aparece **← → bailar**: el jugador aprieta izquierda y derecha, alternando, y Jorge y María se mueven juntos de un lado al otro. Con cada paso la llama crece un poco. **No se puede hacer mal:** no hay ritmo que seguir ni forma de fallar. A los diez pasos: _"No sé bailar."_ / _"Pero a ella no le importa."_ / María: _"¿Ves? No era tan difícil."_
+
+### La foto
+
+Un amigo se acerca: _"¡Eh, ustedes dos! ¡Miren acá!"_ Flash, y se ve **la foto**: María y Jorge abrazados, con las guirnaldas atrás y "J y M" escrito en el borde con la letra de María.
+
+> **Jorge (piensa):** La foto.
+>
+> **Jorge (piensa):** Esta foto la conozco.
+>
+> **Vela:** Qué lindo recuerdo, Jorge.
+
+Es la foto que falta en el **portarretratos de la Casa de Jorge**. En La tercera noche Jorge la encuentra y la vuelve a poner.
+
+### El llamado a mamá
+
+El teléfono de la pared, en la casa de María:
+
+> **Mamá (por teléfono):** ¿Hola?
+>
+> **Jorge:** Ma, soy yo. Me quedo a dormir en lo de María.
+>
+> **Mamá:** ¿Estás bien, hijo?
+>
+> **Jorge:** Sí, ma. Estoy bien.
+>
+> **Mamá:** Me alegro. Me alegro mucho.
+>
+> **Jorge (piensa):** Hacía mucho que no le decía eso.
+
+Es un momento tranquilo con la mamá antes de la pelea de la Sesión 4. Jorge no le había abierto la puerta en la Sesión 2; acá le habla.
+
+### El primer beso
+
+En el sillón. María: _"Mi mamá te dejó una frazada."_ / _"Buenas noches, Jorge."_ El jugador elige _"Gracias por hoy."_ o _"María…"_. Se acercan, la pantalla se llena de luz cálida y la llama crece al máximo. Jorge piensa: _"El primer beso."_ No se muestra más que eso.
+
+### Objetivo en pantalla
+
+| Cuándo | Objetivo |
+|---|---|
+| En la plaza | Ir a ver a María |
+| En la fiesta | Encontrar a María |
+| Después de la foto | Irme de la fiesta con María |
+| En la casa de María | Saludar a la familia de María → Llamar a mamá → Ir a dormir al sillón |
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| Los martes: "Los martes con María ya no estudiamos: hablamos. Ella quiere un depto chiquito con un balcón lleno de plantas. Algún día." | Después de la plaza |
+| La foto: "En la fiesta de egresados, un amigo nos sacó una foto a María y a mí. Esa foto la conozco." | Después de la foto |
+| La mamá de María: "La mamá de María me recibió como si fuera de la casa." | Al hablar con ella |
+| Mamá, por teléfono: "Llamé a mamá desde la casa de María. Le dije que estaba bien. Hacía mucho que no se lo decía." | Después del llamado |
+| El primer beso: "Esa noche, en la casa de María, nos dimos el primer beso. Dormí en el sillón. Dormí tranquilo." | Al final |
+
+### Objetos
+
+| Objeto | Qué es |
+|---|---|
+| Foto de la fiesta | Se ve en la fiesta, pero no se guarda: aparece en la caja en La tercera noche |
+
+### El despertar
+
+> **Vela:** Despacio. Ya estás acá.
+>
+> **Vela:** Hoy no tuve que cortar nada, Jorge.
+>
+> **Vela:** Se te veía bien. Hacía mucho que no te veía así.
+>
+> **Jorge (piensa):** La fiesta. La foto.
+>
+> **Jorge (piensa):** María.
+
+Se suma a la línea de tiempo: _"Adolescencia · La fiesta"_.
+
+### Pendiente de definir
+
+- ¿Cómo se llaman los papás de María? ¿Tiene hermanos? (En la Sesión 2 dice que su hermano firma los boletines.)
+- ¿El amigo de la cámara es alguien que vuelve a aparecer?
+- ¿Se ponen de novios ese día, o ya lo eran?
+
+## La tercera noche
+
+### Resumen
+
+Jorge vuelve a su casa después de la Sesión 3. Tiene la misma estructura que las otras noches, pero es la primera **noche tranquila**: el recuerdo fue lindo, y lo que encuentra en la caja **llena un hueco** de la casa: **la foto del portarretratos**.
+
+_Decidido por el usuario: que la foto que falta en el portarretratos sea la de este día. Dónde aparece (en la caja), que Jorge la vuelva a poner y los diálogos los propuso el agente y son provisorios._
+
+### Secuencia
+
+1. Desde negro, en el pasillo: _"Volví."_ / _"La plaza. La fiesta. La casa de María."_ / _"Hoy no me duele nada."_ / _"Tengo que anotarlo."_
+2. **La pizarra** (ver abajo).
+3. **El portero:** suena al salir del cuarto, como siempre.
+4. **La caja:** la foto (ver abajo).
+5. **El portarretratos:** Jorge pone la foto. Si se va a dormir sin hacerlo, la pone antes: _"Antes, la foto."_
+6. **Dormir:** _"La foto está otra vez en su lugar."_ / _"Esta noche duermo tranquilo."_ / _"Como en el sillón de María."_
+
+### La pizarra
+
+Ya tiene la feria y el boletín. _"¿Dónde va lo de la fiesta?"_
+
+| Opción | Qué pasa |
+|---|---|
+| Entre los 0 y los 10 años | _"No. Ya era grande. Terminaba la secundaria."_ |
+| **Entre los 10 y los 20** | Es la correcta. Cerca de los 17 escribe **"La fiesta"**, y abajo: _"María. La foto. El primer beso"_ |
+| Entre los 20 y los 30 / Entre los 30 y los 40 | _"No… Todavía iba al colegio. Tenía diecisiete."_ |
+
+Al anotarlo: _"«La fiesta.»"_ / _"Esta vez quiero escribir todo."_ Es lo contrario del boletín (_"No quiero escribir más que eso"_). Si la vuelve a mirar: _"Tres cosas. Y la última es linda."_
+
+### La caja: la foto
+
+> **Jorge (piensa):** La caja otra vez.
+>
+> **Jorge (piensa):** Abajo del cuaderno hay una foto. Boca abajo.
+
+Se ve la foto de la fiesta y se guarda en el inventario.
+
+> **Jorge (piensa):** La foto de la fiesta.
+>
+> **Jorge (piensa):** María y yo.
+>
+> **Jorge (piensa):** Es la foto del portarretratos.
+>
+> **Jorge (piensa):** La saqué yo. No me acuerdo por qué.
+
+_Por qué la sacó sigue por definir (ver "Personajes" → María)._
+
+### El portarretratos
+
+Con la foto, el portarretratos de la cómoda se puede usar: Jorge la pone. _"Ahí está."_ / _"Ahí estaba."_ Desde ese momento el portarretratos ya no está vacío: _"María y yo. Diecisiete años."_
+
+### El portero
+
+> **Jorge:** ¿Hola?
+
+Estática. La voz de mujer otra vez: _"…Jorge…"_
+
+> **Jorge:** ¿Quién sos?
+
+Se corta. _"Se cortó."_ / _"Otra vez la voz."_ / _"Hoy no me dio miedo."_
+
+### Objetivo en pantalla
+
+Los mismos de las otras noches: **Anotar lo que recordé en la pizarra** → **Atender el portero** → **Irme a dormir**.
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| La fiesta en la pizarra: "Anoté el tercer recuerdo: la fiesta de egresados, a los diecisiete. María, la foto, el primer beso." | Al anotar el recuerdo |
+| La foto de la fiesta: "En la caja, boca abajo, estaba la foto de la fiesta de egresados: María y yo. Es la que faltaba en el portarretratos…" | Al abrir la caja |
+| El portarretratos: "Volví a poner la foto de la fiesta en el portarretratos. Ya no está vacío." | Al poner la foto |
+| El portero, la tercera noche: "Otra vez la voz de mujer en el portero, entre la estática. Dijo mi nombre. Esta vez no me dio miedo." | Al atender el portero |
+
+### Objetos
+
+| Objeto | Dónde | Qué es |
+|---|---|---|
+| Foto de la fiesta ✓ | Cuarto: en la caja, abajo del cuaderno | María y Jorge en la fiesta de egresados. Va en el portarretratos. Se puede volver a ver desde el diario |
+
+### Final de la locación
+
+Termina cuando Jorge **se duerme**. En el prototipo completo es el **fin del prototipo**: la Pre-sesión 4 y la Sesión 4 todavía no están.
+
+### Pendiente de definir
+
+- ¿La voz del portero cambia en las noches siguientes?
+- ¿Por qué Jorge sacó la foto del portarretratos?
+
+## Sesión 4: La pelea _(idea)_
 
 _Todavía no está diseñada. Esto es lo que ya se decidió y algunas propuestas._
 
@@ -1588,7 +1837,7 @@ _Todavía no está diseñada. Esto es lo que ya se decidió y algunas propuestas
 ### Propuestas del agente _(sin confirmar)_
 
 - **El departamento, al revés que hoy:** vacío, con luz de día y las ventanas abiertas. El jugador ya lo conoce oscuro y desordenado; acá lo ve lleno de planes.
-- **María imagina cómo va a ser:** _"Acá va la cama."_ / _"En la cómoda ponemos una foto de los dos."_ (el portarretratos que hoy está vacío).
+- **María imagina cómo va a ser:** _"Acá va la cama."_ / _"En la cómoda ponemos la foto de la fiesta."_ (la de la Sesión 3, la que Jorge después saca del portarretratos).
 - **La puerta del baño está abierta.** Es la única vez que el jugador la ve abierta, y adentro no hay nada raro: un baño vacío, con luz. El contraste lo hace pesado sin decir nada.
 - **El inmobiliario** habla de más, como cualquier inmobiliario: _"Es luminoso, ideal para una pareja que arranca."_
 - **Dónde corta María:** en el mismo departamento, al terminar la visita, cuando el inmobiliario los deja solos. El lugar que iba a ser de los dos es donde se termina.

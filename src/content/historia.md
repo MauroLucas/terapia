@@ -22,7 +22,8 @@ En Neural, una inteligencia artificial permite que el **doctor Vela** vea en pan
 | Consultorio del doctor Vela | Al final del pasillo: un cuarto cálido, con biblioteca y escritorio, donde Vela charla con Jorge antes de cada sesión. Es la segunda parte de la locación **Consultorio** |
 | Cuarto de inducción al sueño | Al lado del consultorio. Tiene la **máquina de los sueños**: una camilla con un casco que lee las ondas del cerebro, una pantalla grande donde se ven los sueños y una consola |
 | La feria _(sueño)_ | Primera sesión: una feria de noche, en la infancia de Jorge, con calesita, algodón de azúcar y vuelta al mundo. Ahí se perdió de chico y su mamá lo encontró. Es la locación **Sesión 1: La feria** |
-| La puerta que no se abre | En cada sueño hay una puerta sola, igual a la del baño del departamento. No se abre y Vela no la ve |
+| La casa de la mamá y el barrio _(sueño)_ | Segunda sesión, a los 15: la casa donde creció Jorge, el bar del papá y la plaza donde conoce a María. Es la locación **Sesión 2: El boletín** |
+| La plaza, el club y la casa de María _(sueño)_ | Tercera sesión, a los 17: los martes en la plaza, la fiesta de egresados en el club del barrio y la casa de la familia de María. Es la locación **Sesión 3: La fiesta** |
 | Carnet de Neural | Credencial que los pacientes presentan en la recepción. Jorge no lo lleva encima |
 | Sueño lúcido | Estado al que el doctor induce a Jorge para que explore sus recuerdos de forma consciente. Se induce con **ondas electromagnéticas**, y como Vela ve el sueño **en tiempo real**, puede hablarle e interactuar con él adentro |
 
@@ -41,7 +42,8 @@ Por eso, en la Casa de Jorge, la puerta del baño está "bloqueada desde adentro
 - **Neural no existe.** Lo **inventa su mente**: el centro, la máquina de los sueños y las sesiones son parte de la simulación. Es la forma en que su mente se da permiso para mirar sus recuerdos.
 - **El doctor Vela es parte de Jorge:** un personaje de su subconsciente que trata de ayudarlo a seguir adelante. Por eso lo acompaña en cada sueño y lo empuja a recordar.
 - **La revelación llega al final del sueño.**
-- **La puerta que no se abre** (ver "Lugares y conceptos clave") es el hilo que la prepara: aparece en cada sesión, igual a la del baño, y nadie más la ve.
+- **La puerta del baño** de la Casa de Jorge, trabada desde adentro, es la pista que la prepara.
+- _Antes había, además, una "puerta que no se abre" en cada sueño. El usuario decidió sacarla de todo el juego._
 
 ## Final
 
@@ -138,21 +140,23 @@ Casa de Jorge (pizarra) → Neural → Sesión (una parte de su vida) → Casa d
 
 ### Mapa de sesiones
 
-Son **siete sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
+Son **ocho sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 
 | # | Etapa | Recuerdo | Qué se sabe | Estado |
 |---|---|---|---|---|
 | 1 | Infancia | **La feria** | Se perdió de chico y su mamá lo encontró | En el prototipo |
 | 2 | Adolescencia (~15) | **El boletín** | El papá: un padre ausente que resolvía todo con violencia, contra la mamá y contra Jorge. Jorge termina en el piso de su cuarto, trabando la puerta. Ese día conoce a María | En el prototipo (con La segunda noche) |
-| 3 | Juventud (~20) | **La pelea** | Empieza con Jorge y María **visitando el departamento con un inmobiliario**. El mismo día: María se va a Córdoba y cortan; a la noche, la mamá le da el número del papá, insiste y él la empuja. Dejan de hablarse. Le deja mucha culpa | Idea |
-| 4 | Los 30 | **El reencuentro** | Se vuelve a ver con María **en un bar**: ella está casada; él, soltero | Idea |
-| 5 | Adultez | **El viaje del 12/08** | El primer ACV de su mamá y el viaje juntos: se reencuentran como madre e hijo | Idea |
-| 6 | La pérdida | **La muerte de su mamá** | El segundo ACV. Es lo que está tachado en el informe | Idea |
-| 7 | Hoy | **El baño** | La puerta que no se abre, se abre. El portero: es ella. Jorge elige abrir | Idea |
+| 3 | Adolescencia (~17) | **La fiesta** | **Sesión de respiro:** sin el papá, todo calor. Los martes en la plaza con María (ya no estudian: fantasean con un depto propio), la fiesta de egresados (bailan y un amigo les saca **la foto que hoy falta en el portarretratos**), la noche en la casa de la familia de María y **el primer beso** | En el prototipo (con La tercera noche) |
+| 4 | Juventud (~20) | **La pelea** | Empieza con Jorge y María **visitando el departamento con un inmobiliario**. El mismo día: María se va a Córdoba y cortan; a la noche, la mamá le da el número del papá, insiste y él la empuja. Dejan de hablarse. Le deja mucha culpa | Idea |
+| 5 | Los 30 | **El reencuentro** | Se vuelve a ver con María **en un bar**: ella está casada; él, soltero | Idea |
+| 6 | Adultez | **El viaje del 12/08** | El primer ACV de su mamá y el viaje juntos: se reencuentran como madre e hijo | Idea |
+| 7 | La pérdida | **La muerte de su mamá** | El segundo ACV. Es lo que está tachado en el informe | Idea |
+| 8 | Hoy | **El baño** | La puerta del baño se abre. El portero: es ella. Jorge elige abrir | Idea |
 | — | Epílogo | **El papá** | Jorge lo llama y va a verlo | Idea |
 
 - **Entre sesión y sesión**, Jorge vuelve a su casa (una noche) y a la mañana siguiente vuelve a Neural. La pizarra se va llenando de vuelta en vuelta.
-- La 4 la sumó el usuario como "una secuencia a los 30". _Por definir: si es una sesión completa o una secuencia más corta._
-- _Por definir: la edad exacta de cada recuerdo, salvo los que ya están (la feria cerca de los 7, la separación a los 20, el reencuentro a los 30, hoy a los 40)._
+- La 3 (la fiesta) la sumó el usuario para profundizar la relación con María antes de la pelea: así la separación duele más.
+- La 5 la sumó el usuario como "una secuencia a los 30". _Por definir: si es una sesión completa o una secuencia más corta._
+- _Por definir: la edad exacta de cada recuerdo, salvo los que ya están (la feria cerca de los 7, el boletín a los 15, la fiesta a los 17, la separación a los 20, el reencuentro a los 30, hoy a los 40)._
 
 _El mapa lo propuso el agente con lo que ya estaba en el GDD, y el usuario lo aprobó como base. Se ajusta sesión por sesión._

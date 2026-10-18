@@ -211,6 +211,68 @@ function drawMaria(g: Phaser.GameObjects.Graphics, legs: Legs) {
   g.lineStyle(1.5, 0xb5655a).beginPath().arc(39, 33, 4, 0.2, 1.2).strokePath()
 }
 
+// María a los 17, en la fiesta de egresados (Sesión 3): vestido bordó, pelo suelto
+function drawMariaFiesta(g: Phaser.GameObjects.Graphics, legs: Legs) {
+  const skin = 0xe9c6a4
+  g.lineStyle(6, skin)
+  const feet: [number, number][] =
+    legs === 'stand' ? [[25, 132], [33, 132]] : legs === 'walkA' ? [[17, 132], [41, 132]] : [[23, 132], [36, 132]]
+  g.lineBetween(26, 100, feet[0][0], feet[0][1] - 4)
+  g.lineBetween(32, 100, feet[1][0], feet[1][1] - 4)
+  g.fillStyle(0x2a1d16)
+  for (const [fx, fy] of feet) g.fillRoundedRect(fx - 6, fy - 4, 14, 6, 3)
+  // Pelo largo por detrás
+  g.fillStyle(0x2a1d16).fillRoundedRect(14, 20, 30, 46, 10)
+  // Vestido: más ancho abajo, hasta la rodilla
+  g.fillStyle(0x8a3048).fillRoundedRect(17, 50, 26, 30, 7).fillTriangle(12, 108, 48, 108, 30, 60)
+  g.fillStyle(0x6f263a).fillRect(17, 76, 26, 4)
+  const armX = legs === 'walkA' ? 22 : legs === 'walkB' ? 28 : 25
+  g.fillStyle(skin).fillRoundedRect(armX, 54, 8, 36, 4).fillCircle(armX + 4, 92, 4.5)
+  g.fillStyle(skin).fillRect(26, 38, 9, 12).fillCircle(31, 27, 14).fillTriangle(43, 26, 47, 31, 43, 32)
+  g.fillStyle(0x2a1d16)
+  g.slice(30, 24, 15, Math.PI, Math.PI * 2, false)
+  g.fillPath()
+  g.fillRect(30, 13, 15, 9)
+  g.fillStyle(C.ink).fillCircle(38, 28, 2)
+  g.lineStyle(1.5, 0xb5655a).beginPath().arc(39, 33, 4, 0.2, 1.2).strokePath()
+}
+
+// La mamá de María (Sesión 3): pelo corto con rulos, suéter mostaza y delantal. Tiene cara: es parte del recuerdo
+function drawMamaMaria(g: Phaser.GameObjects.Graphics) {
+  const skin = 0xe6c09c
+  g.lineStyle(10, 0x5a4a3a)
+  g.lineBetween(25, 104, 24, 136).lineBetween(35, 104, 36, 136)
+  g.fillStyle(C.shoes).fillRoundedRect(17, 132, 15, 7, 3).fillRoundedRect(31, 132, 15, 7, 3)
+  g.fillStyle(0x6b5a8a).fillRoundedRect(14, 84, 32, 26, 6)
+  g.fillStyle(0xd9a53a).fillRoundedRect(13, 46, 34, 44, 9)
+  g.fillStyle(0xf1efe8).fillRoundedRect(20, 58, 22, 46, 5)
+  g.fillStyle(0xc4932e).fillRoundedRect(26, 52, 11, 38, 5)
+  g.fillStyle(skin).fillCircle(31, 92, 5)
+  g.fillStyle(skin).fillRect(26, 36, 10, 10).fillCircle(31, 25, 15).fillTriangle(44, 24, 49, 30, 44, 31)
+  g.fillStyle(0x8a6a4a)
+  for (const [cx, cy] of [[20, 14], [28, 9], [37, 10], [16, 22], [18, 31]] as [number, number][]) g.fillCircle(cx, cy, 7)
+  g.fillStyle(C.ink).fillCircle(39, 25, 2)
+  g.lineStyle(1.5, 0x9a5a4a).beginPath().arc(40, 31, 4, 0.2, 1.3).strokePath()
+}
+
+// El papá de María (Sesión 3): pelado con los costados grises, bigote, camisa a cuadros. Tiene cara
+function drawPapaMaria(g: Phaser.GameObjects.Graphics) {
+  const skin = 0xd9ad86
+  g.lineStyle(12, 0x5a4636)
+  g.lineBetween(25, 100, 24, 136).lineBetween(37, 100, 38, 136)
+  g.fillStyle(C.shoes).fillRoundedRect(16, 132, 17, 8, 3).fillRoundedRect(31, 132, 17, 8, 3)
+  g.fillStyle(0x7a9cc0).fillRoundedRect(11, 46, 40, 58, 12)
+  g.lineStyle(1, 0x4f6f94)
+  for (let y = 54; y < 102; y += 9) g.lineBetween(13, y, 49, y)
+  for (let x = 17; x < 50; x += 9) g.lineBetween(x, 48, x, 102)
+  g.fillStyle(0x5f82a8).fillRoundedRect(26, 52, 12, 40, 6)
+  g.fillStyle(skin).fillCircle(32, 94, 5)
+  g.fillStyle(skin).fillRect(26, 36, 11, 11).fillCircle(31, 25, 15).fillTriangle(44, 24, 49, 30, 44, 31)
+  g.fillStyle(0xa9acb3).fillRect(15, 20, 8, 12).fillRect(16, 16, 10, 5)
+  g.fillStyle(0x3a2f28).fillRoundedRect(37, 30, 11, 4, 2)
+  g.fillStyle(C.ink).fillCircle(39, 23, 2)
+}
+
 // Gente de la feria: siluetas grises, sin cara
 function drawSombra(g: Phaser.GameObjects.Graphics) {
   g.fillStyle(0x4d5363)
@@ -391,6 +453,27 @@ export function makeTextures(scene: Phaser.Scene) {
   g.fillStyle(0xf4f1e6).fillRect(4, 6, 14, 10)
   g.lineStyle(1, 0x2b3140).lineBetween(6, 9, 16, 9).lineBetween(6, 12, 14, 12)
   g.generateTexture('cuaderno', 22, 28)
+
+  // Sesión 3: María en la fiesta, la familia de María y la foto de la fiesta
+  const mariaFiesta: [string, Legs][] = [['mariaFiesta0', 'stand'], ['mariaFiesta1', 'walkA'], ['mariaFiesta2', 'walkB']]
+  for (const [key, legs] of mariaFiesta) {
+    g.clear()
+    drawMariaFiesta(g, legs)
+    g.generateTexture(key, 56, 140)
+  }
+  g.clear()
+  drawMamaMaria(g)
+  g.generateTexture('mamaMaria', 56, 140)
+  g.clear()
+  drawPapaMaria(g)
+  g.generateTexture('papaMaria', 60, 140)
+  g.clear()
+  g.fillStyle(0xf4efe2).fillRect(0, 0, 34, 26)
+  g.fillStyle(0x2a2238).fillRect(2, 2, 30, 18)
+  g.fillStyle(0xfff3c8, 0.5).fillCircle(26, 6, 5)
+  g.fillStyle(0x3e7d3c).fillRect(9, 9, 6, 11)
+  g.fillStyle(0x8a3048).fillRect(18, 9, 6, 11)
+  g.generateTexture('fotoFiesta', 34, 26)
 
   g.destroy()
 }

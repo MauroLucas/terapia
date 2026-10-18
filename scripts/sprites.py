@@ -49,6 +49,10 @@ FONDOS = [
     ('barrio', 'Dream2', {}, "REVEAL; s.setArea('barrio'); s.player.setX(3500); s.flame.setX(3570)", 3300),
     ('barrio-bar', 'Dream2', {}, "REVEAL; s.setArea('barrio'); s.player.setX(4500); s.flame.setX(4570)", 4300),
     ('barrio-plaza', 'Dream2', {}, "REVEAL; s.setArea('barrio'); s.player.setX(5500); s.flame.setX(5570)", 5300),
+    ('plaza-17', 'Dream3', {}, 'REVEAL', 400),
+    ('club', 'Dream3', {}, "REVEAL; s.setArea('club'); s.player.setX(3300); s.flame.setX(3370); s.maria.setTexture('mariaFiesta0').setPosition(3510, 530)", 2700),
+    ('casa-maria', 'Dream3', {}, "REVEAL; s.setArea('casa'); s.player.setX(5700); s.flame.setX(5770); s.maria.setPosition(5880, 530)", 5000),
+    ('casa-maria-living', 'Dream3', {}, "REVEAL; s.setArea('casa'); s.player.setX(6300); s.flame.setX(6370); s.maria.setPosition(6700, 530)", 5720),
 ]
 
 # Personajes dibujados en la escena: (archivo, fondo del que se recorta, recorte x, y, ancho, alto en pantalla)
@@ -71,7 +75,7 @@ HIDE_UI = """
 
 REVEAL_JS = """
 if (s.dark) s.dark.setVisible(false)
-for (const o of [...(s.objs || []), ...(s.horses || [])]) { if (!o.revealed && s.revealNow) s.revealNow(o) }
+for (const o of [...(s.objs || []), ...(s.horses || [])]) { if (o.revealed) continue; if (s.revealNow) s.revealNow(o); else { o.revealed = true; o.color.setAlpha(1) } }
 """
 
 
