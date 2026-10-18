@@ -671,10 +671,26 @@ export class Neural extends Phaser.Scene {
     this.pista('Recepción de Neural', 'Tengo turno, pero sin el carnet no me dejan pasar. Si vuelvo a casa a buscarlo, pierdo el turno: tengo que entrar de otra forma.')
   }
 
-  // El de seguridad frena a Jorge si intenta pasar de largo
+  // El de seguridad frena a Jorge si intenta pasar de largo. Después de la recepción, la charla sigue
+  // directo con las preguntas, para que el jugador no se vaya sin enterarse del pedido.
   private async alto() {
     sfx.handle()
-    await say(this, [this.segu(this.announced ? 'Alto ahí, jefe. Sin carnet no pasa nadie.' : 'Alto ahí, jefe. Primero por recepción.')])
+    if (!this.announced) {
+      await say(this, [this.segu('Alto ahí, jefe. Primero por recepción.')])
+      return
+    }
+    if (!this.guardMet) {
+      this.guardMet = true
+      await say(this, [
+        this.segu('Alto ahí, jefe. Sin carnet no pasa nadie.'),
+        this.speak('No lo traje. Pero tengo turno a las 10:30.'),
+        this.segu('No lo dudo, jefe. Pero las reglas son las reglas. No es personal.'),
+        this.segu('Uf… lo que daría por una gaseosa bien fría.'),
+      ])
+    } else {
+      await say(this, [this.segu('Alto ahí, jefe. Sin carnet no pasa nadie.')])
+    }
+    await this.preguntasSeguridad()
   }
 
   private async seguridad() {
@@ -695,6 +711,11 @@ export class Neural extends Phaser.Scene {
         this.segu('Uf… lo que daría por una gaseosa bien fría.'),
       ])
     }
+    await this.preguntasSeguridad()
+  }
+
+  // Preguntas al de seguridad, hasta que Jorge elige "(Irse)" o le da la gaseosa correcta
+  private async preguntasSeguridad() {
     for (;;) {
       const opts: { label: string; run: () => Promise<boolean> }[] = []
       if (this.has('gaseosa')) opts.push({ label: '"Tome, le traje una gaseosa."', run: () => this.darGaseosa() })

@@ -495,7 +495,7 @@ El orden es libre, salvo dos cosas: el de seguridad no charla hasta que Jorge pa
 
 1. Jorge entra al hall. Piensa: _"Así que esto es Neural."_ / _"La recepción debe estar al fondo."_ _(provisorio)_
 2. **Recepción:** avisa quién es y que tiene turno. Le piden el carnet, no lo tiene y lo mandan a su casa a buscarlo.
-3. **Molinetes:** si intenta pasar, el de seguridad lo frena. Hablando con él se entera de que quiere "la de siempre" y no puede dejar su puesto para ir a buscarla. Jorge no sabe cuál es.
+3. **Molinetes:** si intenta pasar, el de seguridad lo frena y le aparecen las preguntas. Hablando con él se entera de que quiere "la de siempre" y no puede dejar su puesto para ir a buscarla. Jorge no sabe cuál es.
 4. **Baño:** abre los cubículos. Desde el que está bloqueado, alguien le pide papel higiénico a cambio de fichas para la máquina. En los otros no hay papel.
 5. **Maestranza:** agarra un rollo de la estantería. (Si no sabe dónde buscar, el joven de la sala de espera le marca la puerta.)
 6. Vuelve al baño y le pasa el rollo por debajo de la puerta. Recibe **fichas**.
@@ -540,9 +540,19 @@ Si examina la salida a la calle después de esto, Jorge piensa: _"Si vuelvo a ca
 #### Seguridad
 
 - Lo trata de "jefe", como a cualquiera que pasa. **No lo reconoce.**
-- Si Jorge intenta pasar de largo: _"Alto ahí, jefe. Sin carnet no pasa nadie."_ (Antes de la recepción: _"Alto ahí, jefe. Primero por recepción."_)
+- Si Jorge intenta pasar de largo antes de la recepción: _"Alto ahí, jefe. Primero por recepción."_
+- Si intenta pasar de largo después de la recepción, el de seguridad lo frena con _"Alto ahí, jefe. Sin carnet no pasa nadie."_ y la charla **sigue sola con las preguntas** (ver abajo), para que el jugador no se vaya sin enterarse del pedido. Si es la primera vez, antes pasa por la presentación:
+
+> **Seguridad:** Alto ahí, jefe. Sin carnet no pasa nadie.
+>
+> **Jorge:** No lo traje. Pero tengo turno a las 10:30.
+>
+> **Seguridad:** No lo dudo, jefe. Pero las reglas son las reglas. No es personal.
+>
+> **Seguridad:** Uf… lo que daría por una gaseosa bien fría.
+
 - Si le habla antes de pasar por la recepción: _"Buen día, jefe. Primero tiene que pasar por recepción."_
-- La primera vez que le habla:
+- La primera vez que le habla (con **E**):
 
 > **Seguridad:** ¿Carnet?
 >
