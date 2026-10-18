@@ -1289,10 +1289,12 @@ _Provisorias, propuestas por el agente._ Como en la primera consulta, las respue
 | Cuando Vela se va al cuarto de inducción | Seguir al doctor Vela |
 | En el cuarto de inducción | Acostarme en la camilla |
 
+**Todas las pre-sesiones empiezan igual:** Jorge en su cuarto y **siempre toca el portero**.
+
 ### Pendiente de definir
 
-- ¿Las próximas pre-sesiones son iguales (cuarto, portero, consulta) o cambian algo cada vez?
 - ¿Quién toca el portero: el remis o María? (Ver "Historia y mundo" → Final.)
+- Además del portero, ¿cambia algo en cada pre-sesión?
 
 ## Sesión 2: El boletín
 

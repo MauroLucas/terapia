@@ -111,7 +111,7 @@ El juego avanza por **sesiones** en Neural. Cada sesión es un sueño lúcido qu
 **Por definir**
 
 - Las sesiones son **siete**, de la infancia hasta hoy (ver "Historia y mundo" → Mapa de sesiones). Falta diseñar de la 2 en adelante.
-- **Las idas a Neural después de la primera son cortas** (ver "Locaciones" → Pre-sesión 2): Jorge se despierta, suena el portero y, al salir del cuarto, aparece directo en la consulta con Vela. No se repiten el viaje, el hall ni el pasillo.
+- **Las idas a Neural después de la primera son cortas** (ver "Locaciones" → Pre-sesión 2): Jorge se despierta, **siempre suena el portero** y, al salir del cuarto, aparece directo en la consulta con Vela. No se repiten el viaje, el hall ni el pasillo.
 
 **La vuelta a casa** quedó definida con la primera (ver "Locaciones" → La primera noche): es **corta y sin puzzle**. Jorge **anota el recuerdo en la pizarra**, encuentra **un objeto** que prueba que el recuerdo fue real, y se va a dormir.
 
