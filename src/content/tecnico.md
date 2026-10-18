@@ -22,6 +22,7 @@ Hay un **prototipo jugable** en este mismo sitio (página **🕹️ Prototipo** 
 |---|---|
 | Qué cubre | Aviso de contenido → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo) → Fundido a negro |
 | Cómo abrirlo | `npm run dev` y entrar a **Prototipo** |
+| Online | Publicado en GitHub Pages: https://maurolucas.github.io/terapia/ (se actualiza solo con cada push a `main`) |
 | Controles | Solo teclado (ver "Mecánicas" → Controles) |
 | Pantalla completa | Botón debajo del juego o tecla **F** |
 | Código | `src/prototype/` (una escena por parte: aviso, departamento, escaleras, auto, Neural, pasillo) |
