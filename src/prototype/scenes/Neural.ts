@@ -2,7 +2,7 @@ import * as Phaser from 'phaser'
 import { addVignette, FONT, GASEOSAS, makeTextures } from '../art'
 import { sfx, startElevator, startRoomTone } from '../audio'
 import { addPista, state } from '../state'
-import { choose, say, text, toast, type Line, type Point } from '../ui'
+import { choose, objective, say, text, toast, type Line, type Point } from '../ui'
 import { openDiary } from './diary'
 
 // Hall del edificio. Jorge llega sin el carnet y tiene que buscar otra forma de entrar:
@@ -100,6 +100,8 @@ export class Neural extends Phaser.Scene {
   private drinkAsked = false // el de seguridad ya pidió "la de siempre"
   private drink = -1 // gaseosa que lleva Jorge (índice en GASEOSAS)
   private lift?: { rows: Phaser.GameObjects.Graphics; scroll: number; speed: number }
+  private goal!: ReturnType<typeof objective>
+  private goalOn = false // se muestra después de la intro y hasta saltar los molinetes
 
   constructor() {
     super('Neural')
@@ -118,6 +120,7 @@ export class Neural extends Phaser.Scene {
     this.drinkAsked = false
     this.drink = -1
     this.lift = undefined
+    this.goalOn = false
     makeTextures(this)
     this.cameras.main.setBackgroundColor('#0b0c10')
     this.drawHall()
@@ -128,6 +131,7 @@ export class Neural extends Phaser.Scene {
     this.player = this.add.image(POS.entrada + 90, FEET, 'jorge0').setDepth(10)
     this.setupItems()
     this.inv = this.add.container(this.scale.width - 30, 30).setScrollFactor(0).setDepth(950)
+    this.goal = objective(this)
     addVignette(this, 0.6)
 
     this.keys = this.input.keyboard!.addKeys('LEFT,RIGHT,A,D,E,SPACE,TAB,ESC') as Record<string, Phaser.Input.Keyboard.Key>
@@ -798,6 +802,8 @@ export class Neural extends Phaser.Scene {
 
   private async saltar() {
     await say(this, [this.think('Sin carnet no gira.'), this.think('Pero ahora no mira nadie…')])
+    this.goalOn = false
+    this.goal.set(null)
     this.leaving = true
     this.facing = 1
     this.player.setFlipX(false).setTexture('jorge1')
@@ -938,6 +944,7 @@ export class Neural extends Phaser.Scene {
     this.cameras.main.fadeIn(1500, 0, 0, 0)
     await this.wait(1600)
     await say(this, [this.think('Así que esto es Neural.'), this.think('La recepción debe estar al fondo.')])
+    this.goalOn = true
     this.busy = false
     const help = text(this, 24, this.scale.height - 34, '← → / A D caminar   ·   E hablar / examinar / usar puertas   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa', 16, '#aab2c4')
       .setScrollFactor(0)
@@ -966,7 +973,21 @@ export class Neural extends Phaser.Scene {
     }
   }
 
+  // Objetivo resumido de la locación: se recalcula según lo que Jorge ya sabe y lo que lleva
+  private currentGoal(): string {
+    if (!this.announced) return 'Anunciarme en la recepción'
+    if (!this.guardAtPost) return 'Saltar los molinetes'
+    if (this.has('gaseosa') && this.drinkAsked) return 'Darle la gaseosa al de seguridad'
+    if (this.drinkAsked && this.has('ficha')) return 'Sacar "la de siempre" de la máquina'
+    if (this.manAsked && !this.fichaGiven) {
+      return this.has('papelHigienico') ? 'Llevarle el papel al del baño' : 'Conseguir papel higiénico'
+    }
+    if (this.drinkAsked) return 'Conseguir fichas para la máquina'
+    return 'Pasar los molinetes sin carnet'
+  }
+
   update(time: number, delta: number) {
+    if (this.goalOn) this.goal.set(this.currentGoal())
     const k = this.keys
     const ePressed = Phaser.Input.Keyboard.JustDown(k.E)
     const tabPressed = Phaser.Input.Keyboard.JustDown(k.TAB)

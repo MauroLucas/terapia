@@ -130,6 +130,15 @@ La lista de lo que Jorge se guardó, con su ícono.
 
 _Las frases de cada objeto son provisorias._
 
+## Objetivo
+
+Arriba a la izquierda hay un cartel chico con el **objetivo actual** de la locación, en pocas palabras (por ejemplo, _"Anunciarme en la recepción"_). Sirve para que el jugador no se pierda, sin decirle cómo resolver nada.
+
+- Se **actualiza solo** según lo que Jorge ya sabe y lo que lleva encima. Cuando cambia, el texto nuevo aparece con un fundido y queda unos segundos en verde.
+- Aparece después de los pensamientos de entrada de la locación y se esconde en las secuencias sin control (por ejemplo, el ascensor).
+- Por ahora está solo en el **Hall del edificio** (ver "Locaciones" → "Objetivo en pantalla"). En la Casa de Jorge y el Consultorio: _por definir_.
+- Textos provisorios, propuestos por el agente.
+
 ## Menús
 
 ### Menú principal

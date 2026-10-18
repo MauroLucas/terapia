@@ -256,4 +256,38 @@ export function toast(scene: Phaser.Scene, msg: string) {
   })
 }
 
+// Objetivo de la locación, arriba a la izquierda. `set` lo cambia con un destello; `null` lo esconde.
+export function objective(scene: Phaser.Scene) {
+  const box = scene.add.container(24, 24).setScrollFactor(0).setDepth(950).setAlpha(0)
+  const bg = scene.add.rectangle(0, 0, 10, 10, 0x000000, 0.45).setOrigin(0, 0).setStrokeStyle(2, 0x6c7385)
+  const label = text(scene, 14, 9, 'OBJETIVO', 12, '#8e97ab', { letterSpacing: 2 })
+  const body = text(scene, 14, 27, '', 18, '#e8e8e8', { fontFamily: HAND_FONT, wordWrap: { width: 380 } })
+  box.add([bg, label, body])
+  let current: string | null = null
+  return {
+    set(msg: string | null) {
+      if (msg === current) return
+      const first = current === null
+      current = msg
+      scene.tweens.killTweensOf([box, body])
+      if (msg === null) {
+        scene.tweens.add({ targets: box, alpha: 0, duration: 300 })
+        return
+      }
+      body.setText(msg)
+      bg.setSize(Math.max(label.width, body.width) + 28, body.y + body.height + 10)
+      box.setAlpha(1)
+      body.setColor('#cfe8cc')
+      if (first) {
+        box.setAlpha(0)
+        scene.tweens.add({ targets: box, alpha: 1, duration: 500 })
+      } else {
+        body.setAlpha(0)
+        scene.tweens.add({ targets: body, alpha: 1, duration: 450 })
+      }
+      scene.time.delayedCall(1800, () => body.setColor('#e8e8e8'))
+    },
+  }
+}
+
 export { onKey, ADVANCE }

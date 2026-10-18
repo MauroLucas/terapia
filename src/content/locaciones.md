@@ -703,6 +703,22 @@ _¿Por qué seis? Con menos se puede adivinar probando; con más, la lista se ha
 | Darle la gaseosa al de seguridad | Molinetes | El de seguridad se va a tomarla |
 | Saltar los molinetes | Molinetes | Empieza la secuencia del ascensor |
 
+### Objetivo en pantalla
+
+_Textos provisorios, propuestos por el agente._ Se muestra el primero que se cumpla, de arriba hacia abajo (ver "Interfaz" → "Objetivo"):
+
+| Cuándo | Objetivo |
+|---|---|
+| Todavía no pasó por la recepción | Anunciarme en la recepción |
+| El de seguridad se fue a tomar la gaseosa | Saltar los molinetes |
+| Lleva una gaseosa y ya sabe del pedido | Darle la gaseosa al de seguridad |
+| Sabe del pedido y tiene fichas | Sacar "la de siempre" de la máquina |
+| El del baño le pidió papel y todavía no se lo dio | Conseguir papel higiénico / Llevarle el papel al del baño |
+| Sabe del pedido pero no tiene fichas | Conseguir fichas para la máquina |
+| Cualquier otro caso | Pasar los molinetes sin carnet |
+
+Desaparece al saltar los molinetes.
+
 ### Pistas del diario
 
 | Pista | Cuándo se anota |
