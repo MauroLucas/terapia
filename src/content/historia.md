@@ -84,11 +84,13 @@ En orden:
 
 **La culpa.** La pelea le dejó a Jorge **mucha culpa**, y es uno de los temas centrales del juego: **la culpa se tiene que sentir, y bastante**. Se reencontraron en el viaje, pero ella murió poco después: lo que se dijeron en la pelea es algo que él ya no puede arreglar.
 
-**Por qué discutieron** _(la idea la eligió el usuario; las frases son provisorias)_: cuando Jorge se está yendo de la casa, enojado y sin hablar, su mamá intenta hablarle de su papá. Él se cierra. Ella insiste y le dice que **se está pareciendo a él**: _"Vas a terminar como tu padre."_ En ese momento, Jorge la empuja. Lo confirma justo cuando lo niega.
+**Por qué discutieron** _(la idea la eligió el usuario; las frases son provisorias)_: cuando Jorge se está yendo de la casa, enojado y sin hablar, su mamá le quiere dar **un número para que llame a su papá**. Jorge no quiere. Ella **insiste**, y él se cierra. Al final ella le dice que **se está pareciendo a él**: _"Vas a terminar como tu padre."_ En ese momento, Jorge la empuja. Lo confirma justo cuando lo niega.
+
+**Ese día ya venía mal.** Jorge no estaba enojado solo por el papá: le venían pasando una serie de cosas, y todo explotó con lo del número. _Por definir: qué cosas le pasaron ese día._
 
 Por eso la culpa es doble: **lastimó a su mamá** y **se convirtió en lo que más odiaba**. La frase de la mamá puede volver en los sueños.
 
-_Por definir: qué le quería decir ella del papá, cómo se muestra el empujón (con cuidado, sin regodearse), cómo se hace sentir la culpa en el juego, a dónde viajaron y en qué año._
+_Por definir: por qué la mamá quería que lo llamara, cómo se muestra el empujón (con cuidado, sin regodearse), cómo se hace sentir la culpa en el juego, a dónde viajaron y en qué año._
 
 **Un recuerdo de la infancia (Sesión 1):** una noche, de chico, Jorge fue a una feria con su mamá y se perdió. Al entrar, ella le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Él se quedó quieto, y ella lo encontró. _Detalles provisorios, propuestos por el agente._
 
