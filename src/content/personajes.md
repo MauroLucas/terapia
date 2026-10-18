@@ -55,11 +55,12 @@
 
 | Campo | Valor |
 |---|---|
-| Primera aparición | _Por definir_ (en el mapa, la Sesión 2: la adolescencia) |
+| Primera aparición | En los recuerdos, la Sesión 2 (la adolescencia), _por definir_. **En persona, recién en el epílogo:** después de la revelación, Jorge decide llamarlo e ir a verlo |
 | Relación con Jorge | **Padre ausente.** No sabía comunicar sus problemas y los resolvía con **violencia** |
 | Qué dejó en Jorge | Jorge creció así y es disfuncional: en la pelea con su mamá repitió lo que vio de chico |
 | Cuando Jorge tenía ~20 | **Estaba mal.** La mamá quería que Jorge lo llamara y le dio su número. Jorge guardó el papelito y **nunca llamó** |
-| Por definir | ¿Qué le pasaba? ¿Qué fue de él? ¿Vivía con ellos o se fue? ¿Aparece en algún sueño? |
+| Hoy | Está vivo. Jorge no lo ve desde hace años |
+| Por definir | ¿Qué le pasaba cuando Jorge tenía ~20? ¿Vivía con ellos o se fue? ¿Cómo es el encuentro del epílogo? |
 
 ### María, la ex novia de Jorge
 

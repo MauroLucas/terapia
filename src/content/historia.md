@@ -53,6 +53,16 @@ Por eso, en la Casa de Jorge, la puerta del baño está "bloqueada desde adentro
 - Final **esperanzador**: alguien vino a buscarlo, y él elige abrir.
 - Que era la ex novia quien tocaba el portero **se descubre recién en el final**. En la Casa de Jorge es el chofer.
 
+### Epílogo: el papá
+
+Después de la revelación (Jorge en el baño, a punto de quitarse la vida, y María que viene a verlo), **Jorge decide llamar a su papá e ir a verlo**. Es la primera vez que aparece el papá.
+
+Cierra lo que dejó abierta la pelea: lo que la mamá le pedía esa noche (que no viviera con rencor ni con culpa) es lo que Jorge elige hacer al final.
+
+_Propuesta del agente, sin confirmar:_ que llame con **el papelito** que guardó desde los 20 y nunca usó.
+
+_Por definir: cómo es el encuentro, qué se dicen, y cuánto se muestra (una escena, solo la llamada, la imagen de Jorge llegando)._
+
 _Descartado:_ que todo fuera una sesión real en Neural (antes "Opción A"), y la idea de que Jorge fuera una copia digital.
 
 ## Lore
@@ -139,6 +149,7 @@ Son **siete sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 | 5 | Adultez | **El viaje del 12/08** | El primer ACV de su mamá y el viaje juntos: se reencuentran como madre e hijo | Idea |
 | 6 | La pérdida | **La muerte de su mamá** | El segundo ACV. Es lo que está tachado en el informe | Idea |
 | 7 | Hoy | **El baño** | La puerta que no se abre, se abre. El portero: es ella. Jorge elige abrir | Idea |
+| — | Epílogo | **El papá** | Jorge lo llama y va a verlo | Idea |
 
 - **Entre sesión y sesión**, Jorge vuelve a su casa (una noche) y a la mañana siguiente vuelve a Neural. La pizarra se va llenando de vuelta en vuelta.
 - La 4 la sumó el usuario como "una secuencia a los 30". _Por definir: si es una sesión completa o una secuencia más corta._
