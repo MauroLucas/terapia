@@ -256,6 +256,32 @@ export function toast(scene: Phaser.Scene, msg: string) {
   })
 }
 
+// Párpados: dos franjas negras que tapan la pantalla desde arriba y desde abajo (se le cierran o se le abren los ojos a Jorge).
+// `open`: 0 = ojos cerrados, 1 = abiertos.
+export function eyelids(scene: Phaser.Scene, open = 1) {
+  const { width, height } = scene.scale
+  const half = height / 2
+  const top = scene.add.rectangle(0, 0, width, half + 2, 0x000000).setOrigin(0).setScrollFactor(0).setDepth(UI_DEPTH + 100)
+  const bottom = scene.add.rectangle(0, 0, width, half + 2, 0x000000).setOrigin(0).setScrollFactor(0).setDepth(UI_DEPTH + 100)
+  const state = { v: open }
+  const place = () => {
+    top.y = -half * state.v - 2
+    bottom.y = half + half * state.v
+  }
+  place()
+  return {
+    to(o: number, duration: number) {
+      return new Promise<void>((resolve) => {
+        scene.tweens.add({ targets: state, v: o, duration, ease: 'Sine.InOut', onUpdate: place, onComplete: () => resolve() })
+      })
+    },
+    destroy() {
+      top.destroy()
+      bottom.destroy()
+    },
+  }
+}
+
 // Objetivo de la locación, arriba a la izquierda. `set` lo cambia con un destello; `null` lo esconde.
 export function objective(scene: Phaser.Scene) {
   const box = scene.add.container(24, 24).setScrollFactor(0).setDepth(950).setAlpha(0)

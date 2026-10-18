@@ -9,6 +9,7 @@
 | Motivación | Reconstruir su pasado _(por confirmar)_ |
 | Tratamiento | Paciente de Neural. Lleva **11 sesiones**, pero no recuerda haber ido |
 | Habilidades | Caminar, explorar e interactuar con objetos |
+| De chico | En la Sesión 1 (la feria) aparece de chico, de unos 7 años _(provisorio)_: el mismo suéter verde, pantalón corto azul y zapatillas blancas |
 
 #### Apariencia
 
@@ -42,6 +43,7 @@
 | Relación con Jorge | Es su madre |
 | Detalle clave | Jorge no la reconoce: al ver la foto pregunta "¿Quién es esta señora?". Pero en el cajón con candado dejó una nota con su letra: "Te extraño, mamá" |
 | Qué pasó con ella _(spoiler)_ | Tuvo un **primer ACV** y el médico le recomendó estar más tranquila. Por eso hizo un **viaje con Jorge**, en el que se reencontraron como madre e hijo y volvieron a tener una relación cercana. Poco después murió de un **segundo ACV**, terminal. La foto de la billetera es de ese viaje, y "12/08" es su fecha. Ver "Historia y mundo" → Lore |
+| En el sueño | En la Sesión 1 (la feria) aparece en el recuerdo de cuando Jorge se perdió de chico: le compra algodón de azúcar, lo mira desde el banco de la calesita y, al final, lo encuentra. **No tiene cara**: una luz se la tapa. Le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Aspecto en el prototipo: pelo largo castaño, tapado terracota (provisorio) |
 | Por definir | ¿A dónde viajaron? ¿En qué año? ¿Por qué estaban distanciados? |
 
 ### Primera novia de Jorge _(sin nombre)_
@@ -114,7 +116,16 @@
 | Trato | Cálido y tranquilo. No se lleva bien con la tecnología (_"Estas cosas de la tecnología no son lo mío"_), lo que contrasta con la máquina que usa _(provisorio)_ |
 | Qué hace | Le hace preguntas sobre cómo está, si mejoró y si toma la medicación. Después lo lleva al cuarto de inducción, le explica el tratamiento y lo hace acostar en la máquina. No se da cuenta cuando Jorge le miente |
 | Aspecto | En el prototipo: guardapolvo blanco sobre camisa celeste, pelo canoso y anteojos (provisorio) |
-| Por definir | Nombre de pila. ¿Qué sabe de verdad sobre Jorge? ¿Las mentiras de Jorge tienen consecuencias con él? |
+| En el sueño | Es una **llama de vela** que flota al lado de Jorge y lo acompaña. Habla por la máquina. No ve la puerta que no se abre |
+| Por definir | Nombre de pila. ¿Qué sabe de verdad sobre Jorge? |
+
+### Gente de la feria _(sin nombre)_
+
+| Campo | Valor |
+|---|---|
+| Primera aparición | Sesión 1: La feria |
+| Qué son | Siluetas grises, **sin cara**, repartidas por la feria. No son parte del recuerdo: la luz no las ilumina |
+| Qué dicen | Casi nada: _"¿Y tu mamá, nene?"_, o algo que no se entiende |
 
 ## Aliados
 

@@ -119,6 +119,20 @@ _En el prototipo se reutilizan los sonidos de las otras locaciones (provisorio).
 
 _Provisorio. Lo único nuevo es el zumbido de la máquina._
 
+### Sesión 1: La feria
+
+| Sonido | Cuándo | Notas |
+|---|---|---|
+| **Música de la calesita** | Todo el sueño | **Nuevo.** Un vals de calesita, **lejos y apagado** (como escuchado a través de una pared) y un poco desafinado. Al final, cuando aparece la mamá, se escucha **nítido** |
+| Aparece la llama | Cuando aparece el doctor Vela, en forma de llama | **Nuevo.** Un soplido y dos notas suaves |
+| Algo toma color | Cuando la luz ilumina un objeto del recuerdo | **Nuevo.** Dos notas agudas, muy suaves |
+| Voz de Vela | Cada vez que habla | El chasquido del portero eléctrico: habla "por la máquina" |
+| Pasos | Al caminar | Más cortos que de grande |
+| Sortija | Al sacarla | El mismo sonido de agarrar un objeto |
+| Puerta | Al tocar la puerta que no se abre | El picaporte de las otras puertas, y la imagen tiembla un poco |
+
+_Provisorio._
+
 ## Interfaz
 
 | Sonido | Notas |

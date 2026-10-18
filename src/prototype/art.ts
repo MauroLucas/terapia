@@ -136,6 +136,63 @@ function drawVela(g: Phaser.GameObjects.Graphics, pose: Legs | 'sit') {
   g.fillStyle(C.ink).fillCircle(40, 25 + dy, 1.6)
 }
 
+// Jorge de chico (primera sesión: la feria). Mismo suéter verde, cabeza más grande, pantalón corto y zapatillas
+function drawKid(g: Phaser.GameObjects.Graphics, legs: Legs) {
+  const feet: [number, number][] =
+    legs === 'stand' ? [[17, 100], [27, 100]] : legs === 'walkA' ? [[9, 100], [35, 100]] : [[15, 100], [29, 100]]
+  g.lineStyle(6, C.skin)
+  g.lineBetween(17, 74, feet[0][0], feet[0][1] - 3)
+  g.lineBetween(27, 74, feet[1][0], feet[1][1] - 3)
+  g.fillStyle(0xf1efe8)
+  for (const [fx, fy] of feet) g.fillRoundedRect(fx - 5, fy - 4, 13, 6, 3)
+  g.fillStyle(0x2b3a5c).fillRect(11, 64, 22, 12)
+  g.fillStyle(C.sweater).fillRoundedRect(10, 36, 24, 32, 7)
+  const armX = legs === 'walkA' ? 15 : legs === 'walkB' ? 20 : 18
+  g.fillStyle(C.sweaterDark).fillRoundedRect(armX, 40, 9, 26, 4)
+  g.fillStyle(C.skin).fillCircle(armX + 4.5, 67, 4)
+  g.fillStyle(C.skin).fillRect(18, 30, 8, 8).fillCircle(22, 20, 13).fillTriangle(33, 18, 37, 23, 33, 24)
+  g.fillStyle(C.skinDark).fillCircle(18, 23, 2.5)
+  g.fillStyle(C.hair)
+  g.slice(21, 18, 14, Math.PI, Math.PI * 2, false)
+  g.fillPath()
+  g.fillRect(8, 15, 7, 11)
+  g.fillStyle(C.ink).fillCircle(29, 20, 2)
+}
+
+// La mamá de Jorge en el sueño: pelo largo, tapado terracota. Sin cara: en el juego, una luz le tapa la cabeza
+function drawMama(g: Phaser.GameObjects.Graphics, crouch: boolean) {
+  const dy = crouch ? 36 : 0
+  const skin = 0xe2b98f
+  if (crouch) {
+    g.lineStyle(10, 0x2a2420)
+    g.lineBetween(26, 112, 52, 118)
+    g.lineBetween(52, 118, 52, 144)
+    g.fillStyle(C.shoes).fillRoundedRect(47, 143, 16, 7, 3)
+  } else {
+    g.lineStyle(10, 0x2a2420)
+    g.lineBetween(25, 110, 24, 144)
+    g.lineBetween(35, 110, 36, 144)
+    g.fillStyle(C.shoes).fillRoundedRect(17, 143, 15, 7, 3).fillRoundedRect(31, 143, 15, 7, 3)
+  }
+  g.fillStyle(0xb5562f).fillRoundedRect(12, 44 + dy, 36, crouch ? 46 : 70, 10)
+  g.fillStyle(0x9a4626).fillRoundedRect(26, 52 + dy, 12, 40, 6)
+  g.fillStyle(skin).fillCircle(32, 94 + dy, 5)
+  g.fillStyle(0xe6d3a8).fillRect(18, 42 + dy, 26, 7)
+  g.fillStyle(skin).fillRect(26, 34 + dy, 10, 10).fillCircle(31, 23 + dy, 14)
+  g.fillStyle(0x4a2e1f)
+  g.slice(30, 21 + dy, 15, Math.PI, Math.PI * 2, false)
+  g.fillPath()
+  g.fillRoundedRect(13, 16 + dy, 11, 38, 5)
+}
+
+// Gente de la feria: siluetas grises, sin cara
+function drawSombra(g: Phaser.GameObjects.Graphics) {
+  g.fillStyle(0x4d5363)
+  g.fillRect(19, 104, 9, 42).fillRect(31, 104, 9, 42)
+  g.fillRoundedRect(11, 42, 36, 68, 10)
+  g.fillRect(25, 32, 10, 12).fillCircle(30, 22, 15)
+}
+
 export function makeTextures(scene: Phaser.Scene) {
   if (scene.textures.exists('jorge0')) return
   const g = scene.make.graphics({}, false)
@@ -261,6 +318,28 @@ export function makeTextures(scene: Phaser.Scene) {
     drawVela(g, pose)
     g.generateTexture(key, w, 140)
   }
+
+  // Sesión 1, la feria: Jorge de chico, su mamá, la gente sin cara y la llama del doctor Vela
+  const kid: [string, Legs][] = [['chico0', 'stand'], ['chico1', 'walkA'], ['chico2', 'walkB']]
+  for (const [key, legs] of kid) {
+    g.clear()
+    drawKid(g, legs)
+    g.generateTexture(key, 44, 104)
+  }
+  g.clear()
+  drawMama(g, false)
+  g.generateTexture('mama', 64, 150)
+  g.clear()
+  drawMama(g, true)
+  g.generateTexture('mamaAgachada', 64, 150)
+  g.clear()
+  drawSombra(g)
+  g.generateTexture('sombra', 60, 150)
+  g.clear()
+  g.fillStyle(0xf2a33a).fillEllipse(12, 26, 20, 30).fillTriangle(3, 22, 21, 22, 12, 0)
+  g.fillStyle(0xffd27a).fillEllipse(12, 28, 12, 20).fillTriangle(7, 26, 17, 26, 12, 8)
+  g.fillStyle(0xfff6dc).fillEllipse(12, 32, 6, 10)
+  g.generateTexture('llama', 24, 42)
 
   g.destroy()
 }

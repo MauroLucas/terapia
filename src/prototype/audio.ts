@@ -102,6 +102,10 @@ export const sfx = {
   },
   // Ascensor: campanita al llegar al piso
   ding() { tone(1318.5, 0.9, 'sine', 0.1); tone(1046.5, 1.2, 'sine', 0.08, 0.35) },
+  // Sueño: algo se ilumina y toma color
+  reveal() { tone(1568, 0.7, 'sine', 0.035); tone(2093, 0.9, 'sine', 0.025, 0.12) },
+  // Aparece la llama del doctor Vela
+  flame() { noiseBurst(0.7, 900, 0.06); tone(523.3, 1.4, 'sine', 0.05, 0.1); tone(784, 1.6, 'sine', 0.03, 0.3) },
 }
 
 // Música y ambientes en loop
@@ -209,6 +213,48 @@ export function startMachine(): Loop {
   lfo.start(t)
   nodes.push(lfo)
   return { stop: (fade = 2) => fadeOutAndStop(g, nodes, fade) }
+}
+
+// Sueño de la feria: la música de la calesita, lejos y apagada, un poco desafinada.
+// `clear` abre el filtro: la música se escucha nítida (cuando aparece la mamá).
+export function startFeria(): Loop & { clear: () => void } {
+  const a = out()
+  if (!a) return { stop() {}, clear() {} }
+  const t = a.c.currentTime
+  const g = a.c.createGain()
+  g.gain.setValueAtTime(0, t)
+  g.gain.linearRampToValueAtTime(0.7, t + 4)
+  g.connect(a.m)
+  const f = a.c.createBiquadFilter()
+  f.type = 'lowpass'
+  f.frequency.value = 650
+  f.connect(g)
+  // Vals de calesita (provisorio)
+  const melody = [392, 523.3, 659.3, 523.3, 587.3, 698.5, 587.3, 493.9, 392, 493.9, 587.3, 784, 659.3, 523.3, 392, 0, 440, 523.3, 659.3, 587.3, 523.3, 493.9, 440, 392]
+  const bass = [130.8, 98, 110, 98, 130.8, 98, 87.3, 98]
+  let i = 0
+  let alive = true
+  const step = () => {
+    if (!alive) return
+    const n = melody[i % melody.length]
+    const wobble = 1 + Math.sin(i * 0.37) * 0.014
+    if (n) {
+      tone(n * wobble, 0.32, 'triangle', 0.1, 0, f)
+      tone(n * 2 * wobble, 0.18, 'sine', 0.025, 0, f)
+    }
+    if (i % 3 === 0) tone(bass[Math.floor(i / 3) % bass.length] * wobble, 0.5, 'sine', 0.09, 0, f)
+    else tone(bass[Math.floor(i / 3) % bass.length] * 2 * wobble, 0.15, 'triangle', 0.03, 0, f)
+    i++
+    setTimeout(step, 330)
+  }
+  step()
+  return {
+    stop: (fade = 2) => {
+      alive = false
+      fadeOutAndStop(g, [], fade)
+    },
+    clear: () => f.frequency.setTargetAtTime(3500, a.c.currentTime, 1.2),
+  }
 }
 
 // Ascensor: zumbido del motor y aire en el hueco

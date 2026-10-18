@@ -10,6 +10,8 @@ export const state = {
   radio: false,
   // Respuestas de Jorge en el consultorio: si dijo la verdad o mintió (qué consecuencias tiene, por definir)
   consulta: [] as { pregunta: string; verdad: boolean }[],
+  // Tramos de la vida de Jorge recuperados en las sesiones (la línea de tiempo)
+  lineaDeTiempo: [] as string[],
 }
 
 export function resetState() {
@@ -17,6 +19,7 @@ export function resetState() {
   state.inventario = []
   state.radio = false
   state.consulta = []
+  state.lineaDeTiempo = []
 }
 
 export function addPista(titulo: string, texto: string): boolean {

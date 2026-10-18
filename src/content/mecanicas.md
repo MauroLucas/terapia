@@ -20,6 +20,8 @@ El juego es una **aventura narrativa 2D de vista lateral**. Minuto a minuto, el 
 | Bajar / subir escaleras | → / ↓ bajar · ← / ↑ volver | Stick | Joystick virtual |
 | Avanzar diálogo | Espacio / E / Enter | A / ✕ | Tocar la pantalla |
 | Elegir opción de diálogo | ↑ / ↓ + Enter | Cruceta + A / ✕ | Tocar la opción |
+| Sueño: mirarse las manos, agarrar la sortija | E | A / ✕ | Tocar la pantalla |
+| Sueño: quedarse quieto | No tocar nada | No tocar nada | No tocar nada |
 | Diario (pistas y objetos) | TAB | Select / Touchpad | Botón en pantalla |
 | Diario: cambiar pestaña | ← / → | Cruceta | Tocar la pestaña |
 | Diario: elegir objeto / recorrer pistas | ↑ / ↓ | Cruceta | Deslizar |
@@ -108,9 +110,22 @@ El juego avanza por **sesiones** en Neural. Cada sesión es un sueño lúcido qu
 
 **Por definir**
 
-- ¿Cuántas sesiones son y qué etapa de la vida cubre cada una?
-- ¿Qué hace el jugador dentro de una sesión? (qué tipo de puzzles)
+- ¿Cuántas sesiones son y qué etapa de la vida cubre cada una? (La primera es la infancia: ver "Locaciones" → Sesión 1: La feria.)
 - ¿Qué se juega en cada vuelta a la casa y a Neural? _Propuesta del agente:_ que la vuelta sea corta (mirar la pizarra, algún objeto nuevo) y que la cadena de favores del Hall no se repita.
+
+### Sueño lúcido
+
+Adentro de una sesión, las reglas cambian. Esto es lo que se definió con la primera (ver "Locaciones" → Sesión 1: La feria):
+
+- **Jorge tiene la edad del recuerdo.** En la feria es un chico.
+- **El doctor Vela es una llama** que flota al lado de Jorge y lo sigue. Su voz sale de ahí, con el globo dentado del portero eléctrico.
+- **Recordar es iluminar.** El sueño está a oscuras; lo que la llama ilumina un rato pasa de gris a color, y recién ahí se puede examinar.
+- **Los recuerdos se ven como figuras transparentes** que repiten lo que pasó y se desvanecen. Cada recuerdo se anota como pista en el diario.
+- **Mirarse las manos** es la prueba de que se está soñando: en el sueño, las manos salen mal (un dedo de más).
+- **Lógica de sueño:** lugares que se repiten (la feria vuelve a empezar), una puerta sola sin pared, gente sin cara.
+- **Hay una puerta que no se abre** en cada sueño, igual a la del baño. Vela no la ve.
+- **No se puede perder.** Los puzzles ayudan si el jugador se traba (la sortija se agranda, Vela da pistas).
+- Al terminar, Jorge **despierta en la camilla** y se suma un tramo a la línea de tiempo.
 
 ### Combate
 

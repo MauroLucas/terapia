@@ -2,6 +2,7 @@ import * as Phaser from 'phaser'
 import { Apartment } from './scenes/Apartment'
 import { Car } from './scenes/Car'
 import { Corridor } from './scenes/Corridor'
+import { Dream } from './scenes/Dream'
 import { LevelEnd } from './scenes/LevelEnd'
 import { Neural } from './scenes/Neural'
 import { Office } from './scenes/Office'
@@ -42,7 +43,7 @@ const matter: Phaser.Types.Core.PhysicsConfig = { default: 'matter', matter: { g
 // Prototipo: el juego completo, todas las locaciones de corrido. Cada locación nueva se suma acá.
 export function createGame(parent: HTMLElement) {
   resetState()
-  return fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Stairs, Car, Neural, Corridor, Office, LevelEnd] }))
+  return fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Stairs, Car, Neural, Corridor, Office, Dream, LevelEnd] }))
 }
 
 // Las locaciones sueltas marcan `solo` en el registro: al terminar muestran su cierre en vez de seguir a la locación siguiente.
@@ -70,6 +71,15 @@ export function createLevel3Game(parent: HTMLElement) {
   resetState()
   const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), scene: [Warning, Corridor, Office, LevelEnd] }))
   game.registry.set('start', 'Corridor')
+  game.registry.set('solo', true)
+  return game
+}
+
+// Sesión 1 sola (la feria): el sueño y el despertar en la camilla
+export function createLevel4Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), scene: [Warning, Dream, Office, LevelEnd] }))
+  game.registry.set('start', 'Dream')
   game.registry.set('solo', true)
   return game
 }

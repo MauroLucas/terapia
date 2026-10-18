@@ -10,6 +10,7 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | — | Secuencia de títulos y auto | Escaleras del edificio y viaje a Neural | Bajar hasta la planta baja mientras aparecen los títulos; charla con el chofer | En el prototipo |
 | 2 | **Hall del edificio** | Hall de entrada de Neural | Entrar sin el carnet: lograr que el de seguridad deje los molinetes. Termina con el ascensor | En el prototipo |
 | 3 | **Consultorio** | Pasillo de los consultorios, consultorio del doctor Vela y cuarto de inducción al sueño | Encontrar el consultorio, charlar con el doctor y acostarse en la máquina de los sueños | En el prototipo |
+| 4 | **Sesión 1: La feria** | Sueño lúcido: una feria de noche, en la infancia de Jorge | Recordar el día que Jorge se perdió de chico y quedarse quieto para que su mamá lo encuentre | En el prototipo |
 
 ## Casa de Jorge
 
@@ -868,7 +869,7 @@ Hay que tener en cuenta que **Jorge no recuerda nada de su vida**. Por eso decir
 
 _Las tres fijas son del usuario; las cuatro al azar y todas las respuestas las propuso el agente._ Algunas respuestas verdaderas retoman lo que pasó en la Casa de Jorge (se despertó vestido, lo vino a buscar un chofer).
 
-**Vela nunca se da cuenta de que Jorge miente**: responde con calma en los dos casos. El juego guarda qué contestó Jorge en cada pregunta, pero por ahora **no cambia nada**. _Por definir: ¿mentir o decir la verdad tiene consecuencias? Por ejemplo, que en el sueño aparezca lo que Jorge negó, o que Vela lo confronte en otra sesión._
+**Vela nunca se da cuenta de que Jorge miente**: responde con calma en los dos casos. **Las respuestas no tienen consecuencias**: la elección está para darle al jugador la ilusión de control. El prototipo guarda qué contestó Jorge, pero no se usa en ningún lado.
 
 ### El cuarto de inducción al sueño
 
@@ -924,14 +925,177 @@ En el pasillo, durante las preguntas y al acostarse, el cartel no aparece.
 
 ### Final de la locación
 
-Termina cuando a Jorge **se le cierran los ojos** en la camilla. En el prototipo completo es el fin del prototipo. _Por definir: lo que sigue es la primera sesión, dentro del sueño lúcido._
+Termina cuando a Jorge **se le cierran los ojos** en la camilla. Sigue en **Sesión 1: La feria**, adentro del sueño lúcido.
 
 ### Pendiente de definir
 
-- ¿Mentir o decir la verdad tiene consecuencias? ¿Cuáles?
 - ¿Cómo es el doctor Vela? (En el prototipo: guardapolvo blanco, pelo canoso y anteojos. Provisorio.)
 - ¿Qué medicación toma Jorge, y por qué? (Vela la nombra, Jorge no sabe de qué se trata.)
-- ¿Cómo se ve la primera sesión, al cerrarse los ojos? ¿Se ve la pantalla del consultorio desde adentro del sueño?
 - ¿En qué piso están los consultorios?
 - ¿Se escucha o se ve algo detrás de las otras puertas del pasillo?
 - ¿El pasillo es tan tranquilo como parece, o hay algo raro en la ciudad que se ve por las ventanas?
+
+## Sesión 1: La feria
+
+### Resumen
+
+Es el **primer sueño lúcido** y la primera sesión: un recuerdo de la **infancia** de Jorge. Una noche, de chico, fue a una **feria** con su mamá y **se perdió**.
+
+Jorge aparece **de chico**. La feria está **a oscuras**, y el doctor Vela lo acompaña como una **llama** que flota a su lado: lo que ilumina toma forma y color. Hay que recordar **tres momentos** de esa noche y, al final, hacer lo que le había dicho su mamá: **quedarse quieto** para que ella lo encuentre.
+
+_La idea (perderse de chico, Jorge de chico, Vela como llama, una puerta que no se abre) es del usuario. Los detalles del recuerdo, los diálogos y los puzzles los propuso el agente y son provisorios._
+
+**Por qué este recuerdo:** es un comienzo suave, con la mamá presente pero sin cara, porque Jorge todavía no la reconoce (como en la foto de la billetera). Y deja una idea que vuelve al final del juego: **alguien viene a buscarlo**.
+
+### Cómo es el sueño
+
+| Regla | Qué pasa |
+|---|---|
+| **Oscuridad** | Todo está a oscuras, menos un círculo de luz alrededor de la llama |
+| **La llama es Vela** | Sigue a Jorge con un poco de atraso, flotando. La voz del doctor sale de ahí, con el globo dentado del portero eléctrico (habla "por la máquina") |
+| **Recordar es iluminar** | Lo que no se recuerda se ve **gris**. Si la luz lo toca un rato, toma color con un brillo suave. Recién ahí se puede examinar |
+| **Recuerdos** | Al examinar algo importante, el recuerdo aparece como **figuras transparentes y cálidas** (la mamá y Jorge chico) que dicen lo que dijeron esa noche y se desvanecen |
+| **La mamá no tiene cara** | Una luz blanca le tapa la cabeza, siempre |
+| **La gente no tiene cara** | Siluetas grises que no se iluminan nunca: no son parte del recuerdo |
+| **La feria no termina** | Pasando la puerta, la feria vuelve a empezar desde la entrada |
+| **No se puede perder** | No hay tiempo límite ni forma de trabarse |
+
+### La feria
+
+Se recorre de izquierda a derecha. Jorge aparece **al lado de la calesita**, donde se perdió.
+
+| Lugar | Qué hay |
+|---|---|
+| Entrada | Un arco rojo con lamparitas y el cartel **FERIA**: la "E" se apaga y se prende. Afuera no hay nada, todo negro. Acá está el recuerdo de **lo que le dijo la mamá** |
+| Algodón de azúcar | Un carrito con toldo rosa y blanco y algodones en palitos. Recuerdo del **algodón** |
+| Banco | Al lado de la calesita. Ahí lo esperaba la mamá |
+| Calesita | Techo a gajos rojos y blancos, cuatro caballitos que suben y bajan, el palo de la **sortija** a la derecha. Recuerdo de la **calesita** |
+| Vuelta al mundo | Atrás de todo, con un banco abajo. Decorado |
+| **La puerta** | Una puerta sola, sin pared, en el medio de la feria. Se ve aunque esté oscuro y por debajo sale una rayita de luz fría. Es igual a la del baño de la Casa de Jorge |
+| Gente | Cinco siluetas sin cara repartidas por la feria. Dos se pueden "hablar" |
+| Guirnaldas | Lamparitas de colores colgadas arriba, a lo largo de toda la feria |
+
+### Secuencia
+
+1. **Se le abren los ojos**, despacio (los mismos párpados del cuarto de inducción, al revés). Casi no se ve nada.
+2. Jorge piensa: _"¿Dónde estoy?"_ / _"Hay música… lejos."_ Se escucha la calesita, apagada.
+3. La voz de Vela: _"Jorge, ¿me escuchás? Soy el doctor Vela."_ / _"Estás soñando. Mirate las manos."_
+4. **Mirarse las manos** (**E**): la pantalla se oscurece y se ven sus manos de cerca. _"Son chiquitas."_ / _"Son manos de chico."_ Después le aparece **un sexto dedo**: _"…¿Seis dedos?"_ Vela: _"En los sueños las manos nunca salen bien. Así te das cuenta de que estás soñando."_ Es la prueba de realidad de los sueños lúcidos, y le enseña al jugador que acá las reglas cambian.
+5. **Aparece la llama** desde arriba y la luz se abre. Vela: _"Esa luz soy yo. Voy a estar con vos todo el tiempo."_ / _"Esto es un recuerdo tuyo, de cuando eras chico. Lo que ilumine, lo vas a poder recordar."_
+6. **Explorar y recordar** los tres momentos, en cualquier orden (ver abajo). Cada tanto se escucha a la mamá, lejos: _"¡Jorge…!"_. La primera vez, Jorge piensa _"Alguien me llama."_ / _"Es una voz de mujer."_ y Vela le dice _"¿La escuchás? Tu sueño la está recordando. Seguí la luz."_
+7. Con los tres recordados, Vela: _"Ya lo tenés, Jorge."_ / _"¿Qué te dijo tu mamá?"_ Jorge piensa: _"Que me quede quieto…"_ / _"…donde estoy."_
+8. **Quedarse quieto** (ver "El final"). Llega la mamá.
+9. Vela: _"Muy bien, Jorge. Ya está."_ / _"Ahora vas a despertar."_ La imagen **funde a blanco**.
+10. **Despertar** en la camilla (ver "El despertar").
+
+### Los tres recuerdos
+
+Lo que dice Jorge al final de cada uno cambia según si ya sabe que la mujer es su mamá (eso se descubre en la entrada).
+
+| Recuerdo | Dónde | Cómo se destraba | Qué se ve | Qué piensa Jorge |
+|---|---|---|---|---|
+| **El algodón de azúcar** | Carrito de algodón | Examinarlo con **E** | La mamá: _"Uno chiquito, ¿eh? Que después no cenás."_ Jorge chico: _"¡El rosa!"_ | _"Vine con alguien. Una mujer."_ / _"No le puedo ver la cara."_ (o, si ya sabe: _"Mamá me compró algodón de azúcar."_) |
+| **La calesita** | Calesita | Subirse (**E**) y **sacar la sortija** (ver abajo) | Desde el banco, la mamá lo saluda: _"¡Muy bien, Jorge! ¡Te ganaste otra vuelta!"_ La calesita para y Jorge se baja **del otro lado** | _"Me bajé del otro lado."_ / _"Di la vuelta y ella ya no estaba en el banco."_ |
+| **Lo que le dijo la mamá** | Arco de la entrada | Examinarlo con **E** | La mamá, agachada a su altura: _"Jorge, mirame."_ / _"Si te perdés, no salgas a buscarme."_ / _"Quedate quieto donde estás, que yo te encuentro. ¿Sí?"_ Jorge chico: _"Sí, mamá."_ | _"Mamá…"_ / _"La mujer de la feria era mi mamá."_ (o _"Vine a la feria con mi mamá."_, si es el primero) |
+
+Después de cada uno, Vela comenta: _"Eso que viste es un recuerdo, Jorge. Lo veo en la pantalla."_ / _"Seguí buscando."_ (el primero) y _"Vas muy bien. Falta poco."_ (el segundo).
+
+### La sortija
+
+Jorge se sube a un caballito, que sube y baja. Abajo aparece una barra con un **anillo que va y viene** y una franja dorada en el medio: hay que apretar **E** cuando el anillo pasa por la franja.
+
+- Si falla, no pasa nada: piensa _"Casi…"_ y sigue intentando.
+- **El sueño ayuda:** después de tres intentos fallidos, la franja se agranda.
+- Al sacarla, la sortija sale volando del palo.
+
+### La puerta que no se abre
+
+> **Jorge (piensa):** Una puerta sola. Sin pared.
+>
+> **Jorge (piensa):** No abre.
+>
+> **Jorge (piensa):** Es igual a la puerta del baño de casa.
+>
+> **Vela:** ¿Qué puerta, Jorge? En la pantalla no veo ninguna puerta.
+
+Las veces siguientes, solo: _"No abre."_
+
+**Es un hilo para todas las sesiones:** en cada sueño hay una puerta así, que no se abre y que Vela no puede ver. Prepara la revelación (el Jorge real está del otro lado de la puerta del baño) sin decir nada. _Por definir: dónde está en cada sesión, si cambia y cuándo se abre._
+
+### La gente sin cara
+
+| Dónde | Qué dice | Qué piensa Jorge |
+|---|---|---|
+| Entre el algodón y la calesita | _"¿Y tu mamá, nene?"_ | _"No tiene cara."_ |
+| Pasando la calesita | _"…"_ | _"Hablan, pero no se les entiende nada."_ |
+
+### El final: quedarse quieto
+
+Es el **último puzzle** y la solución es **no hacer nada**: después de los tres recuerdos, el jugador tiene que **soltar las teclas y esperar** unos segundos, donde sea. Mientras está quieto, la llama brilla cada vez más.
+
+- Si camina, el tiempo vuelve a cero. Correr hacia la voz de la mamá no sirve: la feria vuelve a empezar.
+- Si camina mucho rato, Vela lo ayuda: _"Jorge, pará un segundo."_ / _"Acordate de lo que te dijo tu mamá."_
+
+Cuando lo logra:
+
+1. Se escucha _"¡Jorge!"_, cerca.
+2. **Se hace la luz:** la oscuridad se abre, todo el recuerdo toma color y la música de la calesita se escucha nítida.
+3. La mamá entra caminando y se agacha frente a él. La cara sigue tapada por la luz.
+
+> **Mamá:** ¡Acá estás!
+>
+> **Mamá:** ¿Viste? Te quedaste quieto y te encontré.
+>
+> **Jorge chico:** Mamá.
+
+Jorge chico la abraza.
+
+> **Mamá:** Vamos a casa.
+>
+> **Jorge (piensa):** No le puedo ver la cara.
+>
+> **Jorge (piensa):** Pero sé que es ella.
+
+### El despertar
+
+Jorge abre los ojos en la camilla del cuarto de inducción. La pantalla grande brilla en tonos cálidos, como la feria.
+
+> **Vela:** Despacio. Ya estás acá.
+>
+> **Vela:** Lo vi todo en la pantalla: la feria, la calesita… tu mamá.
+>
+> **Jorge (piensa):** Mi mamá.
+>
+> **Jorge (piensa):** No le pude ver la cara.
+>
+> **Vela:** Es normal. Los recuerdos vuelven de a poco.
+
+El casco sube y se anota el primer tramo de la **línea de tiempo**: _"Infancia · La feria"_. Vela cierra: _"Por hoy alcanza, Jorge."_ / _"La semana que viene seguimos."_
+
+### Objetivo en pantalla
+
+| Cuándo | Objetivo |
+|---|---|
+| Después de que aparece la llama | Seguir la luz y recordar qué pasó (0/3), y el número sube con cada recuerdo |
+| Con los tres recuerdos | Quedarme quieto donde estoy |
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| El algodón de azúcar: "Fui a la feria con una mujer. Me compró algodón de azúcar. No le puedo ver la cara." (o "con mamá", si ya lo sabe) | Al recordar el algodón |
+| La calesita: "Saqué la sortija. Ella me saludaba desde el banco. Me bajé del otro lado de la calesita y no la vi más." | Al recordar la calesita |
+| Lo que me dijo mamá: "Al entrar a la feria, mamá me dijo: «Si te perdés, quedate quieto donde estás, que yo te encuentro»." | Al recordar la entrada |
+| Una puerta: "En el medio de la feria hay una puerta sola, sin pared. No abre. Es igual a la del baño de casa. El doctor Vela no la ve en su pantalla." | Al tocar la puerta |
+
+### Final de la locación
+
+Termina en el despertar, cuando Vela cierra la sesión. _Por definir: lo que sigue es la vuelta a la Casa de Jorge, con la pizarra actualizada (ver "Mecánicas" → Progresión)._
+
+### Pendiente de definir
+
+- ¿Cuántos años tiene Jorge en este recuerdo? (En el prototipo parece de unos 7.)
+- ¿Dónde era la feria? ¿Tiene nombre?
+- ¿La mamá le dice "Jorge" o tiene un apodo para él?
+- ¿Qué pasa con la puerta en las próximas sesiones? ¿Cuándo se abre?
+- ¿Vela sabe más de lo que dice sobre la puerta?

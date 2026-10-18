@@ -6,6 +6,7 @@ import { PrototypePage } from './components/PrototypePage'
 import { Level1Page } from './components/Level1Page'
 import { Level2Page } from './components/Level2Page'
 import { Level3Page } from './components/Level3Page'
+import { Level4Page } from './components/Level4Page'
 import { sections } from './sections'
 
 export default function App() {
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/casa-de-jorge" element={<Level1Page />} />
           <Route path="/hall" element={<Level2Page />} />
           <Route path="/consultorio" element={<Level3Page />} />
+          <Route path="/sesion-1" element={<Level4Page />} />
           <Route path="/:id" element={<SectionPage />} />
         </Routes>
       </main>

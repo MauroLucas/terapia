@@ -2,14 +2,15 @@ import * as Phaser from 'phaser'
 import { addVignette, FONT, makeTextures } from '../art'
 import { sfx, startMachine, startRoomTone } from '../audio'
 import { addPista, state } from '../state'
-import { choose, objective, say, toast, type Line, type Point } from '../ui'
+import { choose, eyelids, objective, say, toast, type Line, type Point } from '../ui'
 import { openDiary } from './diary'
 
 // Consultorio (locación 3), segunda parte: adentro del consultorio del doctor Vela.
 //   Consultorio: [puerta al pasillo] [biblioteca] [ventana] [sillón de Jorge | escritorio | silla de Vela] [puerta a inducción]
 //   Cuarto de inducción: [puerta] [pantalla grande] [camilla con casco] [consola]
 // Vela recibe a Jorge, le hace preguntas (Jorge puede decir la verdad o mentir), lo lleva al cuarto de inducción,
-// le explica el tratamiento y Jorge se acuesta en la camilla. Se le cierran los ojos y termina la locación.
+// le explica el tratamiento y Jorge se acuesta en la camilla. Se le cierran los ojos y sigue en Dream (la primera sesión).
+// Con `{ despertar: true }` arranca en la camilla, después del sueño: Jorge abre los ojos y Vela cierra la sesión.
 // No usa física: todo se mueve con `delta`, igual a cualquier FPS.
 
 const FLOOR = 600
@@ -136,12 +137,13 @@ export class Office extends Phaser.Scene {
     super('Office')
   }
 
-  create() {
+  create(data: { despertar?: boolean } = {}) {
+    const despertar = !!data.despertar
     this.busy = true
     this.leaving = false
     this.facing = 1
     this.phase = 'llegada'
-    state.consulta = []
+    if (!despertar) state.consulta = []
     makeTextures(this)
     this.cameras.main.setBackgroundColor('#0b0c10')
     this.drawConsultorio()
@@ -171,8 +173,12 @@ export class Office extends Phaser.Scene {
       this.tone?.stop(0.5)
       this.machine?.stop(0.5)
     })
-    cam.fadeIn(1500, 0, 0, 0)
-    void this.run(() => this.llegada())
+    if (despertar) {
+      void this.run(() => this.despertar())
+    } else {
+      cam.fadeIn(1500, 0, 0, 0)
+      void this.run(() => this.llegada())
+    }
     // Solo en desarrollo: acceso para pruebas automáticas
     if (import.meta.env.DEV) (window as unknown as { __office?: Office }).__office = this
   }
@@ -457,28 +463,63 @@ export class Office extends Phaser.Scene {
     this.tone?.stop(2)
     this.machine?.stop(3)
     await this.wait(1500)
-    this.scene.start('LevelEnd', { titulo: this.registry.get('solo') ? 'Fin de la locación' : 'Fin del prototipo', locacion: 'Consultorio' })
+    // Jugando el Consultorio suelto, termina acá; en el prototipo completo sigue en el sueño
+    if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'Consultorio' })
+    else this.scene.start('Dream')
+  }
+
+  // Después de la primera sesión: Jorge abre los ojos en la camilla
+  private async despertar() {
+    this.phase = 'fin'
+    this.leaving = true
+    this.goal.set(null)
+    const cam = this.cameras.main
+    this.setCameraRoom('induccion')
+    cam.stopFollow()
+    cam.centerOn(POS.camilla + 120, 360)
+    this.player.setTexture('jorge0').setFlipX(false).setAngle(-90).setPosition(POS.camilla - 40, 455 - 26)
+    this.helmet.setY(HELMET.down)
+    this.drawCable()
+    this.vela.setTexture('vela0').setPosition(POS.consola - 90, FEET).setFlipX(true)
+    this.machine = startMachine()
+    this.screenGlow.setFillStyle(0xffc48a, 0.3)
+    this.tweens.add({ targets: this.screenGlow, fillAlpha: 0.08, duration: 3000, yoyo: true, repeat: -1, ease: 'Sine.InOut' })
+    const lids = eyelids(this, 0)
+    await this.wait(1500)
+    await lids.to(0.3, 2400)
+    await lids.to(0.1, 1200)
+    await lids.to(1, 2600)
+    lids.destroy()
+    await say(this, [
+      this.doc('Despacio. Ya estás acá.'),
+      this.doc('Lo vi todo en la pantalla: la feria, la calesita… tu mamá.'),
+      this.think('Mi mamá.'),
+      this.think('No le pude ver la cara.'),
+      this.doc('Es normal. Los recuerdos vuelven de a poco.'),
+    ])
+    this.machine.stop(1.5)
+    sfx.handle()
+    await this.tween({ targets: this.helmet, y: HELMET.up, duration: 2000, ease: 'Sine.InOut', onUpdate: () => this.drawCable() })
+    sfx.click()
+    toast(this, '✎ Línea de tiempo: Infancia · La feria')
+    await this.wait(800)
+    await say(this, [this.doc('Por hoy alcanza, Jorge.'), this.doc('La semana que viene seguimos.')])
+    cam.fadeOut(2000, 0, 0, 0)
+    this.tone?.stop(2)
+    await new Promise((r) => cam.once('camerafadeoutcomplete', r))
+    await this.wait(600)
+    this.scene.start('LevelEnd', { titulo: this.registry.get('solo') ? 'Fin de la locación' : 'Fin del prototipo', locacion: 'Sesión 1: La feria' })
   }
 
   // Se le cierran los ojos muy despacio: dos párpados que bajan y suben, cada vez más pesados
   private async closeEyes() {
-    const { width, height } = this.scale
-    const half = height / 2
-    const top = this.add.rectangle(0, -half, width, half, 0x000000).setOrigin(0).setScrollFactor(0).setDepth(1100)
-    const bottom = this.add.rectangle(0, height, width, half, 0x000000).setOrigin(0).setScrollFactor(0).setDepth(1100)
-    const lid = async (open: number, duration: number) => {
-      // open: 0 = ojos cerrados, 1 = abiertos
-      await Promise.all([
-        this.tween({ targets: top, y: -half * open, duration, ease: 'Sine.InOut' }),
-        this.tween({ targets: bottom, y: half + half * open, duration, ease: 'Sine.InOut' }),
-      ])
-    }
+    const lids = eyelids(this, 1)
     await this.wait(800)
-    await lid(0.55, 2600)
-    await lid(0.8, 1400)
-    await lid(0.3, 2600)
-    await lid(0.5, 1500)
-    await lid(0, 3200)
+    await lids.to(0.55, 2600)
+    await lids.to(0.8, 1400)
+    await lids.to(0.3, 2600)
+    await lids.to(0.5, 1500)
+    await lids.to(0, 3200)
   }
 
   // ---------- Movimiento y ambientes ----------

@@ -19,6 +19,8 @@ En Neural, una inteligencia artificial permite que el **doctor Vela** vea en pan
 | Pasillo de los consultorios | Arriba, al salir del ascensor: un pasillo largo con ventanales a la ciudad y una puerta por doctor, cada una con su placa. La del doctor Vela es la última. Es la primera parte de la locación **Consultorio** |
 | Consultorio del doctor Vela | Al final del pasillo: un cuarto cálido, con biblioteca y escritorio, donde Vela charla con Jorge antes de cada sesión. Es la segunda parte de la locación **Consultorio** |
 | Cuarto de inducción al sueño | Al lado del consultorio. Tiene la **máquina de los sueños**: una camilla con un casco que lee las ondas del cerebro, una pantalla grande donde se ven los sueños y una consola |
+| La feria _(sueño)_ | Primera sesión: una feria de noche, en la infancia de Jorge, con calesita, algodón de azúcar y vuelta al mundo. Ahí se perdió de chico y su mamá lo encontró. Es la locación **Sesión 1: La feria** |
+| La puerta que no se abre | En cada sueño hay una puerta sola, igual a la del baño del departamento. No se abre y Vela no la ve |
 | Carnet de Neural | Credencial que los pacientes presentan en la recepción. Jorge no lo lleva encima |
 | Sueño lúcido | Estado al que el doctor induce a Jorge para que explore sus recuerdos de forma consciente. Se induce con **ondas electromagnéticas**, y como Vela ve el sueño **en tiempo real**, puede hablarle e interactuar con él adentro |
 
@@ -36,6 +38,7 @@ Por eso, en la Casa de Jorge, la puerta del baño está "bloqueada desde adentro
 
 - **Neural es real.** El centro y la terapia existen en la realidad del juego.
 - **La revelación llega al final del sueño.**
+- **La puerta que no se abre** (ver "Lugares y conceptos clave") es el hilo que la prepara: aparece en cada sesión, igual a la del baño, y nadie más la ve.
 
 _Por definir: si Neural es real, ¿qué relación tiene el sueño con la terapia? ¿Este sueño es una sesión en Neural? (De momento no es prioridad)._
 
@@ -97,6 +100,8 @@ En orden:
 
 _Por definir: a dónde viajaron, en qué año, y por qué estaban distanciados antes del viaje._
 
+**Un recuerdo de la infancia (Sesión 1):** una noche, de chico, Jorge fue a una feria con su mamá y se perdió. Al entrar, ella le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Él se quedó quieto, y ella lo encontró. _Detalles provisorios, propuestos por el agente._
+
 ## Estructura: las sesiones
 
 Después de la introducción (Casa de Jorge, Hall del edificio y el pasillo), el juego avanza por **sesiones** en el consultorio del doctor Vela.
@@ -110,5 +115,7 @@ Después de la introducción (Casa de Jorge, Hall del edificio y el pasillo), el
 ```
 Casa de Jorge (pizarra) → Neural → Sesión (una parte de su vida) → Casa de Jorge (pizarra actualizada) → …
 ```
+
+**Primera sesión: la infancia.** El recuerdo de la feria (ver "Locaciones" → Sesión 1: La feria).
 
 _Por definir: cuántas sesiones son y qué etapa cubre cada una. Ver "Mecánicas" → Progresión._

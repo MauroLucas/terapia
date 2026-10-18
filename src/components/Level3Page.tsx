@@ -26,7 +26,7 @@ export function Level3Page() {
       </header>
       <p>
         Solo el Consultorio: arranca al salir del ascensor. El pasillo de los consultorios, la charla con el doctor Vela y
-        el cuarto de inducción al sueño; termina cuando Jorge se acuesta en la camilla. Ver "Locaciones" → Consultorio.
+        el cuarto de inducción al sueño; termina cuando a Jorge se le cierran los ojos en la camilla. Ver "Locaciones" → Consultorio.
       </p>
       <div className="game-frame" ref={ref} />
       <div className="game-actions">
