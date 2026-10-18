@@ -563,7 +563,7 @@ export class Neural extends Phaser.Scene {
     }
   }
 
-  // Sala de espera: la señora conoce a Jorge de cruzarlo en cada turno
+  // Sala de espera: la señora conoce a Jorge de cruzarlo en cada turno. Es la única del hall que lo reconoce
   private async hablarSenora() {
     if (!this.senoraMet) {
       this.senoraMet = true
@@ -623,7 +623,7 @@ export class Neural extends Phaser.Scene {
     }
   }
 
-  // El joven viene por primera vez: es el único del hall que no conoce a Jorge. Si Jorge ya busca papel, le marca la puerta de maestranza.
+  // El joven viene por primera vez. Si Jorge ya busca papel, le marca la puerta de maestranza.
   private async hablarJoven() {
     const first = !this.jovenMet
     if (first) {
@@ -652,32 +652,29 @@ export class Neural extends Phaser.Scene {
 
   private async recepcion() {
     if (this.announced) {
-      await say(this, [this.recep('Sin el carnet el sistema no me deja anunciarlo, Jorge. Lo siento.'), this.think('Tengo que buscar otra forma de ingresar.')])
+      await say(this, [this.recep('Sin el carnet el sistema no me deja anunciarlo, señor. Lo siento.'), this.think('Tengo que buscar otra forma de ingresar.')])
       return
     }
     await say(this, [
       this.speak('Buen día. Soy Jorge, tengo turno para hoy a las…'),
-      this.recep('Buen día, Jorge. El doctor Vela lo espera a las diez y media, como siempre.'),
-      this.think('Sabe mi nombre. Y mi turno.'),
+      this.recep('Buen día. A ver… Jorge, sí: tiene turno con el doctor Vela a las diez y media.'),
       this.think('El doctor Vela…'),
       this.recep('¿Me permite su carnet?'),
       this.think('¿Carnet? …No lo tengo encima.'),
       this.speak('No lo traje.'),
-      this.recep('Otra vez, Jorge…'),
       this.recep('Sin el carnet el sistema no me deja anunciarlo. Va a tener que volver a su casa a buscarlo.'),
-      this.think('¿"Otra vez"?'),
       this.think('Fueron veinte minutos de viaje. Si vuelvo a casa, pierdo el turno.'),
       this.think('Tengo que buscar otra forma de ingresar.'),
     ])
     this.announced = true
     addPista('El doctor Vela', 'Tengo turno con él a las 10:30. Me espera en su consultorio.')
-    this.pista('Recepción de Neural', 'Me conoce: sabe mi nombre y mi turno, y dice que no es la primera vez que vengo sin el carnet. Sin el carnet no me dejan pasar. Si vuelvo a casa a buscarlo, pierdo el turno: tengo que entrar de otra forma.')
+    this.pista('Recepción de Neural', 'Tengo turno, pero sin el carnet no me dejan pasar. Si vuelvo a casa a buscarlo, pierdo el turno: tengo que entrar de otra forma.')
   }
 
   // El de seguridad frena a Jorge si intenta pasar de largo
   private async alto() {
     sfx.handle()
-    await say(this, [this.segu(this.announced ? 'Alto ahí, jefe. Sin carnet no pasa nadie.' : 'Alto ahí, jefe. Primero por recepción, ya sabe.')])
+    await say(this, [this.segu(this.announced ? 'Alto ahí, jefe. Sin carnet no pasa nadie.' : 'Alto ahí, jefe. Primero por recepción.')])
   }
 
   private async seguridad() {
@@ -686,16 +683,15 @@ export class Neural extends Phaser.Scene {
       return
     }
     if (!this.announced) {
-      await say(this, [this.segu('Buen día, jefe. Primero por recepción, como siempre.')])
+      await say(this, [this.segu('Buen día, jefe. Primero tiene que pasar por recepción.')])
       return
     }
     if (!this.guardMet) {
       this.guardMet = true
       await say(this, [
-        this.segu('Déjeme adivinar: se olvidó el carnet.'),
-        this.think('¿Cómo sabe?'),
+        this.segu('¿Carnet?'),
         this.speak('No lo traje. Pero tengo turno a las 10:30.'),
-        this.segu('Ya sé que tiene turno, jefe. Pero sin carnet no pasa nadie. No es personal.'),
+        this.segu('No lo dudo, jefe. Pero sin carnet no pasa nadie. No es personal.'),
         this.segu('Uf… lo que daría por una gaseosa bien fría.'),
       ])
     }
@@ -711,7 +707,7 @@ export class Neural extends Phaser.Scene {
               this.segu('La máquina está en la otra punta y yo de acá no me puedo mover.'),
               this.segu('Si alguien me alcanzara la de siempre, me escapo dos minutos a tomarla tranquilo.'),
               this.speak('¿Cuál es la de siempre?'),
-              this.segu('Usted sabe, jefe. Me la trajo mil veces.'),
+              this.segu('Ah, eso no se lo voy a decir, jefe. Si mira un poco, se da cuenta.'),
               this.think('No tengo idea de cuál es.'),
               this.think('Pero si se la llevo, deja los molinetes solos…'),
             ])
@@ -723,7 +719,7 @@ export class Neural extends Phaser.Scene {
         {
           label: '"¿Hace mucho que trabaja acá?"',
           run: async () => {
-            await say(this, [this.speak('¿Hace mucho que trabaja acá?'), this.segu('Tanto que ya ni cuento. Acá adentro los días son todos iguales.'), this.segu('Usted me lo pregunta seguido, jefe.'), this.think('No me acuerdo de habérselo preguntado nunca.')])
+            await say(this, [this.speak('¿Hace mucho que trabaja acá?'), this.segu('Tanto que ya ni cuento. Acá adentro los días son todos iguales.')])
             return false
           },
         },
@@ -737,7 +733,7 @@ export class Neural extends Phaser.Scene {
         {
           label: '"¿No me deja pasar? Es un minuto."',
           run: async () => {
-            await say(this, [this.speak('¿No me deja pasar? Es un minuto.'), this.segu('Si lo dejo pasar a usted, tengo que dejar pasar a todos. Y mire que lo conozco.')])
+            await say(this, [this.speak('¿No me deja pasar? Es un minuto.'), this.segu('Si lo dejo pasar a usted, tengo que dejar pasar a todos. Y la cámara me mira a mí.')])
             return false
           },
         },
@@ -754,14 +750,14 @@ export class Neural extends Phaser.Scene {
       await say(this, [
         this.speak('Tome, le traje una gaseosa.'),
         this.segu(`¿${GASEOSAS[this.drink].nombre}? Esa no es la mía, jefe.`),
-        this.segu(this.drink === 0 ? 'Casi. Pero el médico me tiene a dieta.' : 'La de siempre. Usted sabe.'),
+        this.segu(this.drink === 0 ? 'Casi. Pero el médico me tiene a dieta.' : 'La de siempre, jefe. Fíjese bien.'),
         this.think('No era esa. Tengo que fijarme mejor cuál toma.'),
       ])
       return false
     }
     await say(this, [
       this.speak('Tome, le traje una gaseosa.'),
-      this.segu('Esa es. Usted sí que me conoce, jefe.'),
+      this.segu('Esa es. Usted sí que es observador, jefe.'),
       this.segu('Acá no puedo: está la cámara.'),
       this.segu('Dos minutos. Usted no vio nada.'),
     ])
@@ -883,12 +879,12 @@ export class Neural extends Phaser.Scene {
   // El cubículo trabado: adentro hay alguien que necesita papel
   private async ocupado() {
     if (this.fichaGiven) {
-      await say(this, [this.voz('Gracias de nuevo, Jorge. Ahora… ¿me dejás solo?')])
+      await say(this, [this.voz('Gracias de nuevo, eh. Ahora… ¿me dejás solo?')])
     } else if (this.has('papelHigienico')) {
       await say(this, [this.speak('Acá tiene. Se lo paso por abajo.')])
       sfx.paper()
       this.setInventory('papelHigienico', false)
-      await say(this, [this.voz('¡Me salvaste otra vez! Tomá, lo prometido.'), this.voz('Llevate varias: tengo los bolsillos llenos.')])
+      await say(this, [this.voz('¡Me salvaste! Tomá, lo prometido.'), this.voz('Llevate varias: tengo los bolsillos llenos.')])
       const ficha = this.add.image(STALLS[STALL_LOCKED], FLOOR - 8, 'ficha').setDepth(7)
       sfx.pickup()
       await this.tween({ targets: ficha, y: ficha.y - 60, alpha: 0, duration: 500 })
@@ -903,13 +899,12 @@ export class Neural extends Phaser.Scene {
         this.think('Está cerrada por dentro.'),
         this.voz('¡Ocupado!'),
         this.speak('Perdón.'),
-        this.voz('Pará… ¿Jorge? ¿Sos vos? Te conozco la voz.'),
-        this.voz('Menos mal. Acá no hay papel, para variar. Si me conseguís un rollo, te regalo una ficha para la máquina de bebidas.'),
-        this.think('Otro que sabe quién soy.'),
+        this.voz('Pará, pará. ¿Me hacés un favor?'),
+        this.voz('Acá no hay papel, para variar. Si me conseguís un rollo, te regalo una ficha para la máquina de bebidas.'),
         this.think('Una ficha… Puede servir.'),
       ])
       this.manAsked = true
-      this.pista('Alguien en el baño', 'Está encerrado en un cubículo, sin papel higiénico. Me reconoció por la voz. Si le consigo un rollo, me da una ficha para la máquina de bebidas.')
+      this.pista('Alguien en el baño', 'Está encerrado en un cubículo, sin papel higiénico. Si le consigo un rollo, me da una ficha para la máquina de bebidas.')
     } else {
       await say(this, [this.voz('¿Y? ¿Conseguiste papel?'), this.think('En los cubículos no hay. Tiene que haber en algún otro lado.')])
     }

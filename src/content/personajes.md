@@ -58,8 +58,8 @@
 |---|---|
 | Primera aparición | Hall del edificio: en el mostrador del hall de Neural |
 | Rol | Recibe a los pacientes. Sin el carnet el sistema no la deja anunciar a nadie: manda a Jorge a su casa a buscarlo |
-| Relación con Jorge | **Lo conoce**: sabe su nombre y su turno, y no es la primera vez que lo ve llegar sin el carnet. Jorge no la recuerda |
-| Trato | Amable y formal, lo trata de "usted" y por el nombre _(provisorio)_ |
+| Relación con Jorge | **No lo reconoce**: lo busca en el sistema por el nombre que él le da, como a cualquier paciente |
+| Trato | Amable y formal, lo trata de "usted" _(provisorio)_ |
 
 ### Seguridad de Neural _(sin nombre)_
 
@@ -68,8 +68,8 @@
 | Primera aparición | Hall del edificio: parado adelante de los molinetes |
 | Rol | No deja pasar a nadie sin carnet. Si Jorge intenta pasar, lo frena |
 | Qué quiere | Una gaseosa: "la de siempre" (una Cola light; el médico lo tiene a dieta). No puede dejar su puesto para ir a la máquina. Si Jorge se la lleva, se va un rato a tomarla lejos de la cámara |
-| Relación con Jorge | **Lo conoce**: le dice "jefe" y adivina que se olvidó el carnet. Jorge no lo recuerda |
-| Trato | Seco pero no hostil, con confianza de todos los días; se le puede preguntar cosas _(diálogos provisorios)_ |
+| Relación con Jorge | **No lo reconoce**: le dice "jefe" como a cualquiera que pasa |
+| Trato | Seco pero no hostil; se le puede preguntar cosas _(diálogos provisorios)_ |
 | Aspecto | En el prototipo: uniforme azul oscuro y gorra (provisorio) |
 
 ### Persona del baño _(sin nombre)_
@@ -78,16 +78,16 @@
 |---|---|
 | Primera aparición | Hall del edificio: encerrada en un cubículo del baño de Neural. **No se la ve**, solo se la escucha |
 | Rol | Le pide a Jorge papel higiénico y a cambio le regala fichas para la máquina de bebidas |
-| Relación con Jorge | **Lo conoce**: lo reconoce por la voz y lo llama por el nombre. Jorge no sabe quién es |
+| Relación con Jorge | **No lo conoce**: le pide el favor al primero que pasa |
 | Trato | Informal, lo tutea _(provisorio)_ |
-| Por definir | ¿Quién es? ¿De dónde conoce a Jorge? ¿Vuelve a aparecer? |
+| Por definir | ¿Quién es? ¿Vuelve a aparecer? |
 
 ### Señora de la sala de espera _(sin nombre)_
 
 | Campo | Valor |
 |---|---|
 | Primera aparición | Hall del edificio: sentada en un sillón del hall de Neural |
-| Rol | Paciente. **Conoce a Jorge**: se lo cruza siempre en la sala de espera, porque tiene el turno siguiente al de él. Jorge no la recuerda |
+| Rol | Paciente. **Conoce a Jorge**: se lo cruza siempre en la sala de espera, porque tiene el turno siguiente al de él. Es la **única** del hall que lo reconoce. Jorge no la recuerda |
 | Trato | Cálida y charlatana; lo tutea y le dice "querido" _(provisorio)_ |
 | Aspecto | En el prototipo: pelo gris con rodete, saco lila y el carnet colgado del cuello (provisorio) |
 | Por definir | ¿Tiene nombre? ¿Vuelve a aparecer? ¿Qué sabe de Jorge? |
@@ -97,7 +97,7 @@
 | Campo | Valor |
 |---|---|
 | Primera aparición | Hall del edificio: sentado en un sillón del hall de Neural |
-| Rol | Paciente que viene por primera vez: es **el único del hall que no conoce a Jorge**. Le indica a Jorge dónde conseguir papel higiénico: en el cuarto de maestranza |
+| Rol | Paciente que viene por primera vez. Le indica a Jorge dónde conseguir papel higiénico: en el cuarto de maestranza |
 | Trato | Nervioso, de pocas palabras _(provisorio)_ |
 | Aspecto | En el prototipo: buzo naranja y pelo oscuro (provisorio) |
 | Por definir | ¿Vuelve a aparecer? |

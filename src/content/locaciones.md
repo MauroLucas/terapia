@@ -436,7 +436,7 @@ El objetivo es **pasar los molinetes**. Para eso hay que sacar de su puesto al d
 
 A diferencia de la Casa de Jorge, acá Jorge **habla con otros personajes**.
 
-**Todos lo conocen, menos él.** La recepcionista, el de seguridad, el del baño y la señora de la sala de espera tratan a Jorge como a alguien que ven siempre, y dan a entender que lo del carnet ya pasó otras veces. Jorge no recuerda a ninguno. El único que no lo conoce es el **joven**, que viene por primera vez. Así, la cadena de favores no es solo un trámite: muestra que Jorge repite una rutina que no recuerda, y prepara lo que piensa en el ascensor (_"estoy actuando por inercia"_).
+**Solo la señora lo reconoce.** La recepcionista, el de seguridad, el del baño y el joven lo tratan como a cualquier paciente: nadie más da a entender que lo conoce. La única que lo reconoce es la **señora de la sala de espera**, que se lo cruza siempre en su turno y sabe que lo del carnet ya pasó otras veces. Jorge no la recuerda. Así, el reconocimiento pesa más: es un solo encuentro, y opcional. Lo que prepara lo que piensa en el ascensor (_"estoy actuando por inercia"_) son los gestos de Jorge, como ir directo al estante de maestranza, más que lo que le dicen los demás.
 
 **En esta locación no se puede perder.** Es la introducción: no hay tiempo límite ni forma de trabarse, y el de seguridad no vuelve a su puesto. La idea es llevar al jugador de la mano hasta el doctor.
 
@@ -486,8 +486,8 @@ En los sillones del centro del hall hay dos pacientes. Se les habla con **E**. N
 
 | Paciente | Para qué sirve |
 |---|---|
-| Señora mayor | **Conoce a Jorge**: se lo cruza siempre en la sala de espera. Tiene una lista de preguntas |
-| Joven | Es su primera vez y está nervioso: **no conoce a Jorge**. Si Jorge ya está buscando papel, le **marca la puerta de maestranza** |
+| Señora mayor | **Conoce a Jorge**: se lo cruza siempre en la sala de espera. Es la **única** del hall que lo reconoce. Tiene una lista de preguntas |
+| Joven | Es su primera vez y está nervioso. Si Jorge ya está buscando papel, le **marca la puerta de maestranza** |
 
 ### Secuencia
 
@@ -507,15 +507,13 @@ El orden es libre, salvo dos cosas: el de seguridad no charla hasta que Jorge pa
 
 ### Diálogos
 
-_Todos los textos son provisorios, se pueden reescribir. Los propuso el agente, sobre la idea original de la recepción y con el criterio de que todos reconocen a Jorge._
+_Todos los textos son provisorios, se pueden reescribir. Los propuso el agente, sobre la idea original de la recepción y con el criterio de que **solo la señora reconoce a Jorge**: el resto lo trata como a un paciente más._
 
 #### Recepción
 
 > **Jorge:** Buen día. Soy Jorge, tengo turno para hoy a las…
 >
-> **Recepcionista:** Buen día, Jorge. El doctor Vela lo espera a las diez y media, como siempre.
->
-> **Jorge (piensa):** Sabe mi nombre. Y mi turno.
+> **Recepcionista:** Buen día. A ver… Jorge, sí: tiene turno con el doctor Vela a las diez y media.
 >
 > **Jorge (piensa):** El doctor Vela…
 >
@@ -525,38 +523,32 @@ _Todos los textos son provisorios, se pueden reescribir. Los propuso el agente, 
 >
 > **Jorge:** No lo traje.
 >
-> **Recepcionista:** Otra vez, Jorge…
->
 > **Recepcionista:** Sin el carnet el sistema no me deja anunciarlo. Va a tener que volver a su casa a buscarlo.
->
-> **Jorge (piensa):** ¿"Otra vez"?
 >
 > **Jorge (piensa):** Fueron veinte minutos de viaje. Si vuelvo a casa, pierdo el turno.
 >
 > **Jorge (piensa):** Tengo que buscar otra forma de ingresar.
 
-Si vuelve a hablarle: _"Sin el carnet el sistema no me deja anunciarlo, Jorge. Lo siento."_
+Si vuelve a hablarle: _"Sin el carnet el sistema no me deja anunciarlo, señor. Lo siento."_
 
 **Acá se nombra por primera vez al doctor Vela.** El dato importa: es a quien Jorge va a buscar al subir (ver "Secuencia del ascensor").
 
-La recepcionista lo conoce, pero no puede saltearse el sistema: por eso lo manda a buscar el carnet aunque sepa que tiene turno.
+La recepcionista **no lo reconoce**: lo busca en el sistema por el nombre. Ve que tiene turno, pero no puede saltearse el carnet.
 
 Si examina la salida a la calle después de esto, Jorge piensa: _"Si vuelvo a casa, pierdo el turno. Tengo que buscar otra forma de ingresar."_
 
 #### Seguridad
 
-- Lo trata de "jefe", con confianza de todos los días.
-- Si Jorge intenta pasar de largo: _"Alto ahí, jefe. Sin carnet no pasa nadie."_ (Antes de la recepción: _"Alto ahí, jefe. Primero por recepción, ya sabe."_)
-- Si le habla antes de pasar por la recepción: _"Buen día, jefe. Primero por recepción, como siempre."_
+- Lo trata de "jefe", como a cualquiera que pasa. **No lo reconoce.**
+- Si Jorge intenta pasar de largo: _"Alto ahí, jefe. Sin carnet no pasa nadie."_ (Antes de la recepción: _"Alto ahí, jefe. Primero por recepción."_)
+- Si le habla antes de pasar por la recepción: _"Buen día, jefe. Primero tiene que pasar por recepción."_
 - La primera vez que le habla:
 
-> **Seguridad:** Déjeme adivinar: se olvidó el carnet.
->
-> **Jorge (piensa):** ¿Cómo sabe?
+> **Seguridad:** ¿Carnet?
 >
 > **Jorge:** No lo traje. Pero tengo turno a las 10:30.
 >
-> **Seguridad:** Ya sé que tiene turno, jefe. Pero sin carnet no pasa nadie. No es personal.
+> **Seguridad:** No lo dudo, jefe. Pero sin carnet no pasa nadie. No es personal.
 >
 > **Seguridad:** Uf… lo que daría por una gaseosa bien fría.
 
@@ -564,11 +556,11 @@ Después aparecen las **preguntas**. Se pueden hacer todas, en cualquier orden, 
 
 | Pregunta de Jorge | Respuesta |
 |---|---|
-| "¿Y por qué no se toma una gaseosa?" | "La máquina está en la otra punta y yo de acá no me puedo mover." / "Si alguien me alcanzara la de siempre, me escapo dos minutos a tomarla tranquilo." Jorge: "¿Cuál es la de siempre?" / "Usted sabe, jefe. Me la trajo mil veces." Jorge piensa: _"No tengo idea de cuál es."_ / _"Pero si se la llevo, deja los molinetes solos…"_ |
-| "¿Hace mucho que trabaja acá?" | "Tanto que ya ni cuento. Acá adentro los días son todos iguales." / "Usted me lo pregunta seguido, jefe." Jorge piensa: _"No me acuerdo de habérselo preguntado nunca."_ |
+| "¿Y por qué no se toma una gaseosa?" | "La máquina está en la otra punta y yo de acá no me puedo mover." / "Si alguien me alcanzara la de siempre, me escapo dos minutos a tomarla tranquilo." Jorge: "¿Cuál es la de siempre?" / "Ah, eso no se lo voy a decir, jefe. Si mira un poco, se da cuenta." Jorge piensa: _"No tengo idea de cuál es."_ / _"Pero si se la llevo, deja los molinetes solos…"_ |
+| "¿Hace mucho que trabaja acá?" | "Tanto que ya ni cuento. Acá adentro los días son todos iguales." |
 | "¿Qué hay del otro lado?" | "Consultorios, pasillos, más puertas. Yo nunca pasé de acá: lo mío es este molinete." |
-| "¿No me deja pasar? Es un minuto." | "Si lo dejo pasar a usted, tengo que dejar pasar a todos. Y mire que lo conozco." |
-| "Tome, le traje una gaseosa." _(solo si Jorge lleva una lata)_ | **Si es la correcta:** "Esa es. Usted sí que me conoce, jefe." / "Acá no puedo: está la cámara." / "Dos minutos. Usted no vio nada." Se va a la otra punta del hall. Jorge piensa: _"Se fue. Es ahora."_ **Si no:** ver "La gaseosa de siempre" |
+| "¿No me deja pasar? Es un minuto." | "Si lo dejo pasar a usted, tengo que dejar pasar a todos. Y la cámara me mira a mí." |
+| "Tome, le traje una gaseosa." _(solo si Jorge lleva una lata)_ | **Si es la correcta:** "Esa es. Usted sí que es observador, jefe." / "Acá no puedo: está la cámara." / "Dos minutos. Usted no vio nada." Se va a la otra punta del hall. Jorge piensa: _"Se fue. Es ahora."_ **Si no:** ver "La gaseosa de siempre" |
 
 Si Jorge le habla cuando ya está en la máquina: _"Usted no vio nada."_
 
@@ -580,11 +572,9 @@ Si Jorge le habla cuando ya está en la máquina: _"Usted no vio nada."_
 >
 > **Jorge:** Perdón.
 >
-> **Voz:** Pará… ¿Jorge? ¿Sos vos? Te conozco la voz.
+> **Voz:** Pará, pará. ¿Me hacés un favor?
 >
-> **Voz:** Menos mal. Acá no hay papel, para variar. Si me conseguís un rollo, te regalo una ficha para la máquina de bebidas.
->
-> **Jorge (piensa):** Otro que sabe quién soy.
+> **Voz:** Acá no hay papel, para variar. Si me conseguís un rollo, te regalo una ficha para la máquina de bebidas.
 >
 > **Jorge (piensa):** Una ficha… Puede servir.
 
@@ -592,15 +582,15 @@ Al llevarle el rollo:
 
 > **Jorge:** Acá tiene. Se lo paso por abajo.
 >
-> **Voz:** ¡Me salvaste otra vez! Tomá, lo prometido.
+> **Voz:** ¡Me salvaste! Tomá, lo prometido.
 
-Y agrega: _"Llevate varias: tengo los bolsillos llenos."_ Las fichas salen por debajo de la puerta. Después: _"Gracias de nuevo, Jorge. Ahora… ¿me dejás solo?"_
+Y agrega: _"Llevate varias: tengo los bolsillos llenos."_ Las fichas salen por debajo de la puerta. Después: _"Gracias de nuevo, eh. Ahora… ¿me dejás solo?"_
 
 Si Jorge vuelve sin el rollo: _"¿Y? ¿Conseguiste papel?"_ y Jorge piensa: _"En los cubículos no hay. Tiene que haber en algún otro lado."_
 
 #### La señora de la sala de espera
 
-_Provisorio, propuesto por el agente. Que la señora conozca a Jorge sale de lo ya definido: él viene seguido a Neural y no lo recuerda._
+_Provisorio, propuesto por el agente. Que la señora conozca a Jorge sale de lo ya definido: él viene seguido a Neural y no lo recuerda. Es **la única del hall que lo reconoce**._
 
 > **Señora:** ¡Jorge! Buen día, querido.
 >
@@ -622,7 +612,7 @@ Después aparecen las **preguntas**, hasta elegir "(Irse)". Si vuelve a hablarle
 
 #### El joven de la sala de espera
 
-_Provisorio, propuesto por el agente. Es el único personaje del hall que **no conoce a Jorge**._
+_Provisorio, propuesto por el agente. Viene por primera vez._
 
 > **Jorge:** ¿Estás bien?
 >
@@ -669,7 +659,7 @@ Cualquier otra vez: _"Perdoná, estoy nervioso. Prefiero esperar callado."_
 
 ### La gaseosa de siempre
 
-Es el **puzzle de deducción** de la locación. El de seguridad no dice qué gaseosa quiere: da por hecho que Jorge lo sabe, porque se la llevó muchas veces. Como Jorge no lo recuerda, tiene que **averiguarlo mirando**.
+Es el **puzzle de deducción** de la locación. El de seguridad no dice qué gaseosa quiere: pide "la de siempre" y le deja a Jorge que se dé cuenta solo. Jorge tiene que **averiguarlo mirando**.
 
 La máquina tiene **seis gaseosas** _(nombres y colores provisorios, sin marcas)_:
 
@@ -684,7 +674,7 @@ La máquina tiene **seis gaseosas** _(nombres y colores provisorios, sin marcas)
 
 - **La pista** está en el **tacho** al lado de su puesto: desborda de latas vacías, casi todas rojas con una franja plateada. Hay un par de otras gaseosas mezcladas, para que no sea automático.
 - **La trampa** es la Cola común: es roja igual, pero sin la franja. Castiga al que mira el tacho por arriba.
-- **Si Jorge se equivoca**, el de seguridad no la acepta: _"¿[Gaseosa]? Esa no es la mía, jefe."_ / _"La de siempre. Usted sabe."_ Con la Cola común da una ayuda: _"Casi. Pero el médico me tiene a dieta."_ Jorge piensa: _"No era esa. Tengo que fijarme mejor cuál toma."_
+- **Si Jorge se equivoca**, el de seguridad no la acepta: _"¿[Gaseosa]? Esa no es la mía, jefe."_ / _"La de siempre, jefe. Fíjese bien."_ Con la Cola común da una ayuda: _"Casi. Pero el médico me tiene a dieta."_ Jorge piensa: _"No era esa. Tengo que fijarme mejor cuál toma."_
 - **No se pierde nada:** el del baño le dio varias fichas, así que puede volver a la máquina y sacar otra. El único costo de equivocarse es cruzar el hall de nuevo.
 - **Ayuda opcional:** después del pedido, la señora de la sala de espera tiene una pregunta más: "¿Sabe qué gaseosa toma el de seguridad?" → "Ay, ni idea, querido. Yo tomo té." / "Pero fijate en el tacho que tiene al lado: ese hombre vive tirando latas."
 
@@ -707,14 +697,14 @@ _¿Por qué seis? Con menos se puede adivinar probando; con más, la lista se ha
 
 | Pista | Cuándo se anota |
 |---|---|
-| Recepción de Neural: "Me conoce: sabe mi nombre y mi turno, y dice que no es la primera vez que vengo sin el carnet. Sin el carnet no me dejan pasar. Si vuelvo a casa a buscarlo, pierdo el turno: tengo que entrar de otra forma." | Al hablar con la recepcionista |
+| Recepción de Neural: "Tengo turno, pero sin el carnet no me dejan pasar. Si vuelvo a casa a buscarlo, pierdo el turno: tengo que entrar de otra forma." | Al hablar con la recepcionista |
 | El doctor Vela: "Tengo turno con él a las 10:30. Me espera en su consultorio." | Al hablar con la recepcionista |
 | El de seguridad: "Quiere una gaseosa: 'la de siempre'. No sé cuál es. La máquina anda con fichas. Si se la llevo, se va un rato." | Al preguntarle por la gaseosa |
 | El tacho de seguridad: "Está lleno de latas vacías, casi todas iguales: rojas, con una franja plateada. Alguien toma siempre la misma." | Al examinar el tacho |
-| Alguien en el baño: "Está encerrado en un cubículo, sin papel higiénico. Me reconoció por la voz. Si le consigo un rollo, me da una ficha para la máquina de bebidas." | Al tocar el cubículo bloqueado |
+| Alguien en el baño: "Está encerrado en un cubículo, sin papel higiénico. Si le consigo un rollo, me da una ficha para la máquina de bebidas." | Al tocar el cubículo bloqueado |
 | La señora de la sala de espera: "Me conoce: dice que nos cruzamos siempre acá, que tengo el turno de las 10:30. Yo no me acuerdo de ella." | Al hablar con la señora |
 
-_En esta locación el diario funciona como **lista de tareas**, pero varias pistas anotan además lo mismo sobre Jorge: acá todos lo conocen y él no recuerda a nadie._
+_En esta locación el diario funciona como **lista de tareas**. La pista de la señora es la única que anota que alguien conoce a Jorge y él no la recuerda._
 
 ### Secuencia del ascensor
 
