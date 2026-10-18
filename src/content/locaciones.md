@@ -12,6 +12,7 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 3 | **Consultorio** | Pasillo de los consultorios, consultorio del doctor Vela y cuarto de inducción al sueño | Encontrar el consultorio, charlar con el doctor y acostarse en la máquina de los sueños | En el prototipo |
 | 4 | **Sesión 1: La feria** | Sueño lúcido: una feria de noche, en la infancia de Jorge | Recordar el día que Jorge se perdió de chico y quedarse quieto para que su mamá lo encuentre | En el prototipo |
 | 5 | **La primera noche** | Casa de Jorge, de noche, después de la Sesión 1 | Anotar el recuerdo en la pizarra y dormir. Alguien toca el portero | En el prototipo |
+| — | **Sesión 3: La pelea** | El departamento (vacío, a los 20) y la casa de la mamá | La visita con María, el corte, la pelea con la mamá | Idea |
 
 ## Casa de Jorge
 
@@ -1236,3 +1237,29 @@ Termina cuando Jorge **se duerme**: se le cierran los ojos. _Por definir: lo que
 - ¿Quién guardó la sortija en la caja: la mamá, Jorge?
 - ¿Cómo es la próxima mañana? ¿Vuelve el chofer, se repite algo del primer día?
 - ¿La casa cambia un poco cada vez que Jorge vuelve?
+
+## Sesión 3: La pelea _(idea)_
+
+_Todavía no está diseñada. Esto es lo que ya se decidió y algunas propuestas._
+
+### Lo decidido
+
+- Jorge tiene **unos 20 años**. Todo pasa **el mismo día** (ver "Historia y mundo" → La mamá de Jorge).
+- **Introducción:** Jorge y **María** van a **ver el departamento** con **un inmobiliario**. Hay **secuencias de ellos recorriéndolo**. Es el mismo departamento de la Casa de Jorge, el que iban a alquilar juntos y donde Jorge vive hoy.
+- A la tarde, María le dice que se va a **estudiar a Córdoba** por cinco años, y cortan.
+- A la noche, en la casa de su mamá, mientras arma el bolso, ella le da **el número del papá**. Insiste, él explota y la empuja. **El jugador no hace el empujón:** el recuerdo se corta y lo siguiente es ella en el piso.
+
+### Propuestas del agente _(sin confirmar)_
+
+- **El departamento, al revés que hoy:** vacío, con luz de día y las ventanas abiertas. El jugador ya lo conoce oscuro y desordenado; acá lo ve lleno de planes.
+- **María imagina cómo va a ser:** _"Acá va la cama."_ / _"En la cómoda ponemos una foto de los dos."_ (el portarretratos que hoy está vacío).
+- **La puerta del baño está abierta.** Es la única vez que el jugador la ve abierta, y adentro no hay nada raro: un baño vacío, con luz. El contraste lo hace pesado sin decir nada.
+- **El inmobiliario** habla de más, como cualquier inmobiliario: _"Es luminoso, ideal para una pareja que arranca."_
+- **Dónde corta María:** en el mismo departamento, al terminar la visita, cuando el inmobiliario los deja solos. El lugar que iba a ser de los dos es donde se termina.
+
+### Por definir
+
+- ¿Firman el alquiler ese día? ¿Jorge lo alquila solo después?
+- ¿Cómo es el inmobiliario?
+- ¿Qué se juega en cada parte (la visita, el corte con María, la noche en lo de la mamá)?
+- ¿Cómo se ve la casa de la mamá?
