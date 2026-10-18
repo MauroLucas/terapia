@@ -13,6 +13,8 @@ import { openDiary } from './diary'
 // Cada ambiente ocupa su propio tramo del mundo; la cámara se limita al ambiente actual.
 // Con `{ noche: true }` es La primera noche: Jorge vuelve de la Sesión 1, anota el recuerdo en la pizarra,
 // encuentra la sortija, alguien toca el portero (no habla nadie) y se va a dormir.
+// Con `{ manana: true }` es la Pre-sesión 2: una semana después, Jorge se despierta, suena el portero (el remis),
+// puede repasar la pizarra y, al salir del cuarto, sigue directo en el consultorio (Office, sesión 2).
 
 const FLOOR = 600
 const CEIL = 110
@@ -88,6 +90,7 @@ export class Apartment extends Phaser.Scene {
   private inv!: Phaser.GameObjects.Container
   // La primera noche
   private noche = false
+  private manana = false
   private goal?: ReturnType<typeof objective>
   private pizarraHecha = false
   private cajaVista = false
@@ -101,8 +104,9 @@ export class Apartment extends Phaser.Scene {
     super('Apartment')
   }
 
-  create(data: { noche?: boolean } = {}) {
+  create(data: { noche?: boolean; manana?: boolean } = {}) {
     this.noche = !!data.noche
+    this.manana = !!data.manana
     this.pizarraHecha = this.cajaVista = false
     this.timbreNoche = 'no'
     this.goal = undefined
@@ -120,6 +124,7 @@ export class Apartment extends Phaser.Scene {
     this.setupItems()
     this.setupHud()
     if (this.noche) this.setupNoche()
+    if (this.manana) this.setupManana()
     addVignette(this, 0.8)
 
     this.keys = this.input.keyboard!.addKeys('LEFT,RIGHT,A,D,E,SPACE,TAB,ESC') as Record<string, Phaser.Input.Keyboard.Key>
@@ -130,7 +135,7 @@ export class Apartment extends Phaser.Scene {
       this.roomTone?.stop(0.5)
       this.clock?.stop()
     })
-    void (this.noche ? this.introNoche() : this.intro())
+    void (this.noche ? this.introNoche() : this.manana ? this.introManana() : this.intro())
     // Solo en desarrollo: acceso para pruebas automáticas
     if (import.meta.env.DEV) (window as unknown as { __apt?: Apartment }).__apt = this
   }
@@ -330,7 +335,7 @@ export class Apartment extends Phaser.Scene {
     // Basura mínima: un objeto suelto en el cuarto y otro en la cocina
     spawn('bollo', 900, FLOOR - 9, 'papel')
     spawn('lata', K + 560, FLOOR - 7, 'lata')
-    if (this.noche) {
+    if (this.noche || this.manana) {
       // De noche, la basura de la mesa sigue en el piso, donde quedó a la mañana
       spawn('delivery', TABLE.left - 70, FLOOR - 15, 'caja')
       spawn('papel', TABLE.right + 60, FLOOR - 3, 'papel')
@@ -465,6 +470,7 @@ export class Apartment extends Phaser.Scene {
     ]
 
     if (this.noche) this.items = this.itemsNoche()
+    if (this.manana) this.items = this.itemsManana()
 
     const box = this.add.graphics()
     box.fillStyle(0xf6f3ea).fillRoundedRect(-16, -16, 32, 32, 7)
@@ -992,9 +998,100 @@ export class Apartment extends Phaser.Scene {
     this.roomTone?.stop(2)
     this.clock?.stop()
     await new Promise((r) => this.time.delayedCall(1500, r))
-    // Suelta termina acá; en el prototipo completo sigue la Sesión 2 (la mañana y la vuelta a Neural todavía no están)
+    // Suelta termina acá; en el prototipo completo sigue la Pre-sesión 2 (la mañana, una semana después)
     if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'La primera noche' })
-    else this.scene.start('Dream2', { semana: true })
+    else this.scene.start('Apartment', { manana: true })
+  }
+
+  // ---------- Pre-sesión 2: la mañana, una semana después ----------
+
+  private setupManana() {
+    this.answered = true
+    this.fridgeNotes?.destroy()
+    this.drawerNote?.destroy()
+    this.bannerStrip?.destroy()
+    // La caja de cosas de chico, ya abierta, y la marca de la feria en la pizarra
+    const g = this.add.graphics().setDepth(4)
+    g.fillStyle(0x9a7a4e).fillRect(270, 562, 96, 38)
+    g.fillStyle(0xb08d5c).fillRect(372, 590, 104, 10)
+    this.add.text(318, 584, 'JORGE', { fontFamily: HAND_FONT, fontSize: '12px', color: '#4a3622', resolution: 2 }).setOrigin(0.5).setDepth(4)
+    const mark = this.add.graphics().setDepth(5)
+    mark.lineStyle(5, 0x3e7d3c, 0.5).lineBetween(900, 312, 935, 312)
+    mark.fillStyle(0x3e7d3c).fillCircle(924, 312, 4)
+    mark.lineStyle(1.5, 0x3e7d3c).lineBetween(924, 308, 924, 286)
+    this.goal = objective(this)
+  }
+
+  private itemsManana(): Interactable[] {
+    return [
+      { id: 'pizarra', name: 'Pizarra', room: 'cuarto', x: 970, y: 300, action: () => this.repasarPizarra() },
+      { id: 'caja', name: 'Caja', room: 'cuarto', x: 318, y: 530, action: async () => say(this, [this.think('Cosas de cuando era chico.'), this.think('La sortija de la calesita. Fue real.')]) },
+      { id: 'portarretratos', name: 'Portarretratos', room: 'cuarto', x: 718, y: 430, action: async () => say(this, [this.think('Sigue vacío.')]) },
+      { id: 'cama', name: 'Cama', room: 'cuarto', x: 190, y: 470, action: async () => say(this, [this.think('No. Me están esperando.')]) },
+      { id: 'aPasillo', name: 'Puerta al pasillo', room: 'cuarto', x: DOORS.cuartoAPasillo, y: 400, door: true, action: () => this.salirManana() },
+    ]
+  }
+
+  private async introManana() {
+    // Una semana después
+    const card = text(this, 640, 360, 'Una semana después', 30, '#e8e8e8').setOrigin(0.5).setScrollFactor(0).setDepth(1300).setAlpha(0)
+    const bg = this.add.rectangle(0, 0, 1280, 720, 0x000000).setOrigin(0).setScrollFactor(0).setDepth(1290)
+    await new Promise<void>((r) => this.tweens.add({ targets: card, alpha: 1, duration: 900, onComplete: () => r() }))
+    await new Promise((r) => this.time.delayedCall(1600, r))
+    await new Promise<void>((r) => this.tweens.add({ targets: card, alpha: 0, duration: 700, onComplete: () => r() }))
+    bg.destroy()
+    card.destroy()
+    // Duerme, igual que la primera mañana, hasta que suena el portero
+    const lying = this.add.image(250, 488, 'jorge0').setAngle(-90).setDepth(5)
+    this.cameras.main.startFollow(this.player, true, 0.08, 0.08)
+    this.cameras.main.centerOn(640, 360)
+    this.cameras.main.fadeIn(2000, 0, 0, 0)
+    let n = 0
+    const zzz = this.time.addEvent({
+      delay: 650,
+      loop: true,
+      callback: () => {
+        const z = text(this, 196, 462, n % 3 === 2 ? 'Z' : 'z', 20 + (n % 3) * 7, '#cfd6e6', { fontStyle: 'bold' }).setOrigin(0.5).setDepth(20).setAlpha(0)
+        n++
+        this.tweens.add({ targets: z, x: z.x + 46, y: z.y - 80, duration: 1900, ease: 'Sine.Out', onComplete: () => z.destroy() })
+        this.tweens.add({ targets: z, alpha: 0.9, duration: 350, yoyo: true, hold: 900 })
+      },
+    })
+    await new Promise((r) => this.time.delayedCall(3200, r))
+    zzz.remove()
+    sfx.buzz()
+    this.cameras.main.shake(300, 0.003)
+    await new Promise((r) => this.time.delayedCall(1200, r))
+    const enCama = (t: string): Line => ({ kind: 'thought', text: t, anchor: () => ({ x: 250, y: 470 }) })
+    await say(this, [enCama('El portero.'), enCama('Debe ser el remis.')])
+    this.tweens.add({ targets: lying, angle: 0, x: 430, y: FLOOR - 70, duration: 600, ease: 'Sine.InOut' })
+    await new Promise((r) => this.time.delayedCall(650, r))
+    lying.destroy()
+    this.player.setVisible(true)
+    this.lastX = this.player.x
+    await say(this, [this.think('Quizás pueda repasar un poco mis recuerdos de la pizarra.')])
+    this.goal?.set('Salir: me espera el remis')
+    // El portero sigue sonando cada tanto
+    this.ring?.remove()
+    this.ring = this.time.addEvent({ delay: 11000, loop: true, callback: () => { sfx.buzz(); this.cameras.main.shake(200, 0.002) } })
+    this.busy = false
+  }
+
+  private async repasarPizarra() {
+    await this.pizarraOverlay(true)
+    await say(this, [this.think('"La feria con mamá." Me perdí y ella me encontró.'), this.think('Todavía está. No me lo olvidé.')])
+  }
+
+  // Al salir del cuarto, sigue directo en la sesión con el doctor Vela
+  private async salirManana() {
+    this.ring?.remove()
+    this.goal?.set(null)
+    this.leaving = true
+    sfx.door()
+    const cam = this.cameras.main
+    cam.fadeOut(1500, 0, 0, 0)
+    await new Promise((r) => cam.once('camerafadeoutcomplete', r))
+    this.scene.start('Office', { sesion: 2 })
   }
 
   // ---------- HUD: inventario y ayuda ----------

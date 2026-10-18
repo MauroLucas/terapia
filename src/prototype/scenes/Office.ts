@@ -100,6 +100,22 @@ const EXTRAS: Pregunta[] = [
     mentira: { dice: 'Algo… no mucho.', vela: ['Bueno. Hoy lo vamos a ver juntos.'] },
   },
 ]
+// Preguntas de la consulta antes de la Sesión 2 (provisorias)
+const SEGUNDA: Pregunta[] = [
+  {
+    id: 's2-semana',
+    q: '¿Cómo estuviste esta semana?',
+    verdad: { dice: 'Raro. Me acuerdo de la feria, pero de casi nada más.', vela: ['Es un comienzo, Jorge.'] },
+    mentira: { dice: 'Bien. Tranquilo.', vela: ['Me alegra.'] },
+  },
+  {
+    id: 's2-pizarra',
+    q: '¿Pudiste anotar algo de lo que viste?',
+    verdad: { dice: 'Sí. En la pizarra de mi cuarto: la feria con mi mamá.', vela: ['Muy bien. Eso es tuyo: ya no se pierde.'] },
+    mentira: { dice: 'No, nada.', vela: ['No importa. Lo vamos a ir armando juntos.'] },
+  },
+]
+
 const ULTIMA: Pregunta = {
   id: 'medicacion',
   q: '¿Estás tomando la medicación?',
@@ -178,6 +194,8 @@ export class Office extends Phaser.Scene {
     })
     if (despertar) {
       void this.run(() => this.despertar())
+    } else if (this.sesion === 2) {
+      void this.run(() => this.llegada2())
     } else {
       cam.fadeIn(1500, 0, 0, 0)
       void this.run(() => this.llegada())
@@ -371,6 +389,25 @@ export class Office extends Phaser.Scene {
     this.goal.set('Sentarme frente al doctor Vela')
   }
 
+  // Pre-sesión 2: Jorge ya está sentado frente a Vela
+  private async llegada2() {
+    this.phase = 'preguntas'
+    this.goal.set(null)
+    this.facing = 1
+    this.player.setFlipX(false).setTexture('jorgeSentado').setOrigin(0.5, 1).setPosition(POS.sillon - 8, FLOOR)
+    this.vela.setTexture('velaSentado').setFlipX(true).setOrigin(0.5, 1).setPosition(POS.sillaVela + 8, FLOOR)
+    const cam = this.cameras.main
+    cam.stopFollow()
+    cam.centerOn((POS.sillon + POS.sillaVela) / 2, 360)
+    cam.fadeIn(1500, 0, 0, 0)
+    await this.wait(1600)
+    await say(this, [this.doc('Hola, Jorge. Pasó una semana.')])
+    for (const p of SEGUNDA) await this.preguntar(p)
+    await say(this, [this.doc('Bien.'), this.doc('Hoy vamos a ir un poco más adelante en tu vida.'), this.doc('Acompañame.')])
+    cam.startFollow(this.player, true, 0.08, 0.08)
+    await this.irseVela()
+  }
+
   private async salirAlPasillo() {
     await say(this, [this.think('No vine hasta acá para irme ahora.')])
   }
@@ -392,7 +429,11 @@ export class Office extends Phaser.Scene {
     for (const p of [...PRIMERAS, ...extras, ULTIMA]) await this.preguntar(p)
 
     await say(this, [this.doc('Bien. Gracias, Jorge.'), this.doc('Acompañame al cuarto de inducción al sueño.')])
-    // Vela se levanta y se va por la puerta del fondo
+    await this.irseVela()
+  }
+
+  // Vela se levanta y se va por la puerta del fondo; Jorge lo tiene que seguir
+  private async irseVela() {
     this.vela.setTexture('vela0').setOrigin(0.5).setY(FEET).setFlipX(false)
     await this.wait(300)
     this.player.setTexture('jorge0').setOrigin(0.5).setPosition(POS.sillon, FEET)
@@ -424,6 +465,12 @@ export class Office extends Phaser.Scene {
     this.vela.setVisible(true).setAlpha(1).setTexture('vela0').setPosition(POS.consola - 90, FEET).setFlipX(true)
     this.goal.set(null)
     await this.wait(400)
+    if (this.sesion === 2) {
+      await say(this, [this.doc('Ya sabés cómo es.'), this.doc('Hoy vas a ser un poco más grande. Yo voy a estar con vos.'), this.doc('Acostate, Jorge.')])
+      this.phase = 'camilla'
+      this.goal.set('Acostarme en la camilla')
+      return
+    }
     await say(this, [
       this.doc('Bueno. Como siempre, te repaso cómo funciona, así vas tranquilo.'),
       this.doc('Esta máquina lee las ondas de tu cerebro mientras dormís.'),
@@ -467,6 +514,12 @@ export class Office extends Phaser.Scene {
     this.machine?.stop(3)
     await this.wait(1500)
     // Jugando el Consultorio suelto, termina acá; en el prototipo completo sigue en el sueño
+    if (this.sesion === 2) {
+      // Pre-sesión 2: suelta termina acá; en el prototipo completo sigue el sueño de la Sesión 2
+      if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'Pre-sesión 2' })
+      else this.scene.start('Dream2')
+      return
+    }
     if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'Consultorio' })
     else this.scene.start('Dream')
   }

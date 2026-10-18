@@ -12,7 +12,8 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 3 | **Consultorio** | Pasillo de los consultorios, consultorio del doctor Vela y cuarto de inducción al sueño | Encontrar el consultorio, charlar con el doctor y acostarse en la máquina de los sueños | En el prototipo |
 | 4 | **Sesión 1: La feria** | Sueño lúcido: una feria de noche, en la infancia de Jorge | Recordar el día que Jorge se perdió de chico y quedarse quieto para que su mamá lo encuentre | En el prototipo |
 | 5 | **La primera noche** | Casa de Jorge, de noche, después de la Sesión 1 | Anotar el recuerdo en la pizarra y dormir. Alguien toca el portero | En el prototipo |
-| 6 | **Sesión 2: El boletín** | Sueño lúcido: la casa de la mamá y el barrio, a los 15 | Conseguir que el papá firme el boletín. Conoce a María | En el prototipo |
+| 6 | **Pre-sesión 2** | Casa de Jorge (la mañana, una semana después) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
+| 7 | **Sesión 2: El boletín** | Sueño lúcido: la casa de la mamá y el barrio, a los 15 | Conseguir que el papá firme el boletín. Conoce a María | En el prototipo |
 | — | **Sesión 3: La pelea** | El departamento (vacío, a los 20) y la casa de la mamá | La visita con María, el corte, la pelea con la mamá | Idea |
 
 ## Casa de Jorge
@@ -1239,6 +1240,60 @@ Termina cuando Jorge **se duerme**: se le cierran los ojos. _Por definir: lo que
 - ¿Cómo es la próxima mañana? ¿Vuelve el chofer, se repite algo del primer día?
 - ¿La casa cambia un poco cada vez que Jorge vuelve?
 
+## Pre-sesión 2
+
+### Resumen
+
+Una semana después de la Sesión 1. Jorge se despierta en su cuarto, suena el portero y, al salir del cuarto, **aparece directamente en la sesión con el doctor Vela**: ya no se repite el viaje, el hall ni el pasillo. Es corta: lleva al jugador de la casa a la camilla.
+
+_La idea (el cuarto, el portero, "debe ser el remis", repasar la pizarra y pasar directo a la sesión) es del usuario. El nombre "Pre-sesión 2" también. Lo que dice Vela lo propuso el agente y es provisorio._
+
+### Secuencia
+
+1. Cartel: _"Una semana después"_.
+2. Jorge duerme en su cama (las "z" suben de su cabeza) hasta que **suena el portero**.
+3. Desde la cama: _"El portero."_ / _"Debe ser el remis."_ Se levanta.
+4. _"Quizás pueda repasar un poco mis recuerdos de la pizarra."_ Objetivo: **Salir: me espera el remis**. El portero sigue sonando cada tanto.
+5. **La pizarra** (opcional): la línea de tiempo con _"La feria con mamá"_. _"Me perdí y ella me encontró."_ / _"Todavía está. No me lo olvidé."_
+6. **Al salir del cuarto**, funde a negro y Jorge aparece **sentado en el consultorio, frente a Vela**.
+7. **La consulta**, corta: _"Hola, Jorge. Pasó una semana."_ y dos preguntas, con verdad o mentira, como en la primera (ver abajo).
+8. Vela: _"Bien."_ / _"Hoy vamos a ir un poco más adelante en tu vida."_ / _"Acompañame."_ Se va por la puerta del cuarto de inducción y el jugador lo sigue.
+9. En el cuarto de inducción: _"Ya sabés cómo es."_ / _"Hoy vas a ser un poco más grande. Yo voy a estar con vos."_ / _"Acostate, Jorge."_
+10. Jorge se acuesta, baja el casco, se le cierran los ojos y sigue la **Sesión 2: El boletín**.
+
+### En el cuarto
+
+Es el mismo cuarto de la Casa de Jorge, de día. La caja de cosas de chico quedó abierta debajo de la cama, y la pizarra tiene la marca de la feria. Solo se usa el cuarto: al salir, sigue la sesión.
+
+| Objeto | Qué piensa Jorge |
+|---|---|
+| Pizarra | Repasa la línea de tiempo (ver arriba) |
+| Caja | _"Cosas de cuando era chico."_ / _"La sortija de la calesita. Fue real."_ |
+| Portarretratos | _"Sigue vacío."_ |
+| Cama | _"No. Me están esperando."_ |
+
+### Las preguntas
+
+_Provisorias, propuestas por el agente._ Como en la primera consulta, las respuestas no tienen consecuencias.
+
+| Pregunta | La verdad | La mentira |
+|---|---|---|
+| ¿Cómo estuviste esta semana? | "Raro. Me acuerdo de la feria, pero de casi nada más." → _"Es un comienzo, Jorge."_ | "Bien. Tranquilo." → _"Me alegra."_ |
+| ¿Pudiste anotar algo de lo que viste? | "Sí. En la pizarra de mi cuarto: la feria con mi mamá." → _"Muy bien. Eso es tuyo: ya no se pierde."_ | "No, nada." → _"No importa. Lo vamos a ir armando juntos."_ |
+
+### Objetivo en pantalla
+
+| Cuándo | Objetivo |
+|---|---|
+| Al levantarse | Salir: me espera el remis |
+| Cuando Vela se va al cuarto de inducción | Seguir al doctor Vela |
+| En el cuarto de inducción | Acostarme en la camilla |
+
+### Pendiente de definir
+
+- ¿Las próximas pre-sesiones son iguales (cuarto, portero, consulta) o cambian algo cada vez?
+- ¿Quién toca el portero: el remis o María? (Ver "Historia y mundo" → Final.)
+
 ## Sesión 2: El boletín
 
 ### Resumen
@@ -1401,14 +1456,13 @@ Se suma a la línea de tiempo: _"Adolescencia · El boletín"_.
 
 ### En el prototipo
 
-- En el prototipo completo, después de **La primera noche** aparece un cartel (_"Una semana después · Sesión 2"_) y sigue directo con este sueño: **la mañana siguiente y la segunda ida a Neural todavía no están diseñadas**.
+- Viene después de la **Pre-sesión 2**.
 - Después del despertar termina el prototipo: la segunda noche en casa todavía no está.
 
 ### Pendiente de definir
 
 - ¿Cuántos años tiene Jorge exactamente? (En el prototipo: "quince, dieciséis".)
 - ¿El papá vivía con ellos o aparecía y desaparecía?
-- ¿Cómo es la mañana siguiente y la segunda ida a Neural?
 - ¿Qué hace Jorge con el boletín en la segunda noche en casa? ¿Aparece algo en la casa (el papelito, otra cosa)?
 
 ## Sesión 3: La pelea _(idea)_

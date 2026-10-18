@@ -71,6 +71,14 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
           La primera noche
         </NavLink>
         <NavLink
+          to="/pre-sesion-2"
+          onClick={onNavigate}
+          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+        >
+          <span className="nav-icon">☀️</span>
+          Pre-sesión 2
+        </NavLink>
+        <NavLink
           to="/sesion-2"
           onClick={onNavigate}
           className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}

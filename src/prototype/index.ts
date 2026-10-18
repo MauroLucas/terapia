@@ -86,6 +86,16 @@ export function createLevel5Game(parent: HTMLElement) {
   return game
 }
 
+// Pre-sesión 2 sola: la mañana, una semana después, y la consulta con Vela antes del sueño
+export function createLevel7Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Office, LevelEnd] }))
+  game.registry.set('start', 'Apartment')
+  game.registry.set('startData', { manana: true })
+  game.registry.set('solo', true)
+  return game
+}
+
 // Sesión 2 sola (el boletín): el sueño y el despertar en la camilla
 export function createLevel6Game(parent: HTMLElement) {
   resetState()

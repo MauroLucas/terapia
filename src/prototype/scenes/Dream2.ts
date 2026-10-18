@@ -111,7 +111,7 @@ export class Dream2 extends Phaser.Scene {
     super('Dream2')
   }
 
-  create(data: { semana?: boolean } = {}) {
+  create() {
     this.busy = true
     this.leaving = false
     this.phase = 'intro'
@@ -157,7 +157,7 @@ export class Dream2 extends Phaser.Scene {
       this.birds?.stop()
       this.voces?.stop(0.3)
     })
-    void this.run(() => this.intro(!!data.semana))
+    void this.run(() => this.intro())
     // Solo en desarrollo: acceso para pruebas automáticas
     if (import.meta.env.DEV) (window as unknown as { __dream2?: Dream2 }).__dream2 = this
   }
@@ -409,17 +409,7 @@ export class Dream2 extends Phaser.Scene {
 
   // ---------- Secuencia ----------
 
-  private async intro(semana: boolean) {
-    if (semana) {
-      // En el prototipo completo, la mañana siguiente y la vuelta a Neural todavía no están: un cartel las saltea
-      const t = text(this, 640, 360, 'Una semana después · Sesión 2', 30, '#e8e8e8').setOrigin(0.5).setScrollFactor(0).setDepth(1300).setAlpha(0)
-      const bg = this.add.rectangle(0, 0, 1280, 720, 0x000000).setOrigin(0).setScrollFactor(0).setDepth(1290)
-      await this.tween({ targets: t, alpha: 1, duration: 900 })
-      await this.wait(1800)
-      await this.tween({ targets: t, alpha: 0, duration: 700 })
-      bg.destroy()
-      t.destroy()
-    }
+  private async intro() {
     const lids = eyelids(this, 0)
     await this.wait(900)
     await lids.to(0.35, 2000)
