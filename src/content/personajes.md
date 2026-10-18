@@ -48,13 +48,14 @@
 | En el sueño | En la Sesión 1 (la feria) aparece en el recuerdo de cuando Jorge se perdió de chico: le compra algodón de azúcar, lo mira desde el banco de la calesita y, al final, lo encuentra. **No tiene cara**: una luz se la tapa. Le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Aspecto en el prototipo: pelo largo castaño, tapado terracota (provisorio) |
 | Distancia | De grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte**: Jorge la empujó, ella se cayó y se lastimó. Dejaron de hablarse hasta el viaje. A Jorge le dejó **mucha culpa** |
 | Su muerte _(spoiler)_ | Es lo que llevó a Jorge a la crisis del baño |
-| Por definir | ¿Por qué discutieron? ¿A dónde viajaron? ¿En qué año? |
+| La pelea | Ella intentó hablarle de su papá y le dijo que se estaba pareciendo a él (_"Vas a terminar como tu padre"_, provisorio). Ahí Jorge la empujó |
+| Por definir | ¿Qué le quería decir del papá? ¿A dónde viajaron? ¿En qué año? |
 
 ### Papá de Jorge _(sin nombre)_
 
 | Campo | Valor |
 |---|---|
-| Primera aparición | _Por definir_ |
+| Primera aparición | _Por definir_ (en el mapa, la Sesión 2: la adolescencia) |
 | Relación con Jorge | **Padre ausente.** No sabía comunicar sus problemas y los resolvía con **violencia** |
 | Qué dejó en Jorge | Jorge creció así y es disfuncional: en la pelea con su mamá repitió lo que vio de chico |
 | Por definir | ¿Sigue vivo? ¿Vivía con ellos o se fue? ¿Aparece en algún sueño? |

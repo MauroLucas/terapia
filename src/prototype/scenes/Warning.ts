@@ -16,7 +16,7 @@ export class Warning extends Phaser.Scene {
     this.cameras.main.setBackgroundColor('#000000')
     text(this, width / 2, height / 2 - 140, 'AVISO DE CONTENIDO', 28, '#e8e8e8', { fontStyle: 'bold' }).setOrigin(0.5)
     text(this, width / 2, height / 2 - 50,
-      'Este juego trata temas de salud mental,\npérdida de memoria e ideación suicida.', 22, '#c9ced8', { align: 'center' }).setOrigin(0.5)
+      'Este juego trata temas de salud mental, pérdida de memoria,\nviolencia familiar e ideación suicida.', 22, '#c9ced8', { align: 'center' }).setOrigin(0.5)
     text(this, width / 2, height / 2 + 30,
       'Si estás pasando por un momento difícil, no estás solo: buscá ayuda.', 18, '#9aa3b5', { align: 'center' }).setOrigin(0.5)
     const start = text(this, width / 2, height / 2 + 150, 'PROTOTIPO · Presioná cualquier tecla para empezar', 18, '#6f7889').setOrigin(0.5)

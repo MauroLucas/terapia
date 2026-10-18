@@ -178,5 +178,5 @@ Aviso de contenido → Menú principal → Casa de Jorge → Escaleras (títulos
                           └──── Menú de pausa (Diario / Opciones)
 ```
 
-- **Aviso de contenido:** antes del menú principal, avisa que el juego trata temas de salud mental. Ver "Resumen" → Temas sensibles.
+- **Aviso de contenido:** antes del menú principal, avisa que el juego trata temas de salud mental, pérdida de memoria, violencia familiar e ideación suicida. Ver "Resumen" → Temas sensibles.
 

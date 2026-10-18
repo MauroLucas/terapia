@@ -72,7 +72,7 @@ Dónde va cada cosa en el GDD:
 
 ### 3. Temas sensibles
 
-El juego trata salud mental, pérdida de memoria e ideación suicida. Tratarlo con cuidado: sin glorificarlo ni usarlo como golpe de efecto. El aviso de contenido del inicio no se saca.
+El juego trata salud mental, pérdida de memoria, violencia familiar e ideación suicida. Tratarlo con cuidado: sin glorificarlo ni usarlo como golpe de efecto. El aviso de contenido del inicio no se saca.
 
 ### 4. Prototipo
 
