@@ -27,7 +27,7 @@ _Pendiente: probar 2 o 3 con el mismo personaje (Jorge) y comparar._
 
 ### Jorge
 
-Hombre de unos 30 años, 1,75 m, pelo negro, sin barba, expresión neutral. Suéter verde escote en V sobre remera negra, pantalón negro y zapatos negros. Ver "Personajes" → Jorge.
+Hombre de unos 40 años, 1,75 m, pelo negro, sin barba, expresión neutral. Suéter verde escote en V sobre remera negra, pantalón negro y zapatos negros. Ver "Personajes" → Jorge.
 
 El **suéter verde** es el único color fuerte de su ropa: puede funcionar como su color identificatorio, sobre todo si los escenarios son oscuros o apagados.
 

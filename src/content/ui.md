@@ -68,7 +68,7 @@ _Propuestas del agente, sin confirmar:_
 Jorge tiene la misma línea de tiempo en una **pizarra en su cuarto**. El jugador la puede mirar con **E**, y **se actualiza cada vez que Jorge vuelve** a su casa después de una sesión.
 
 - Se abre en primer plano, como los documentos.
-- Al empezar el juego solo tiene el título "MI VIDA", las dos puntas ("Nací" y "HOY") y marcas cada diez años _(presentación provisoria)_.
+- Al empezar el juego solo tiene el título "MI VIDA", las dos puntas ("Nací" y "HOY", a los 40) y marcas cada diez años _(presentación provisoria)_.
 - Está escrita **con la letra de Jorge**, igual que las notas y el diario.
 
 _En el prototipo, la pizarra está vacía a la mañana y se actualiza en **La primera noche**._

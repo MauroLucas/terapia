@@ -110,7 +110,7 @@ El juego avanza por **sesiones** en Neural. Cada sesión es un sueño lúcido qu
 
 **Por definir**
 
-- ¿Cuántas sesiones son y qué etapa de la vida cubre cada una? (La primera es la infancia: ver "Locaciones" → Sesión 1: La feria.)
+- Las sesiones son **siete**, de la infancia hasta hoy (ver "Historia y mundo" → Mapa de sesiones). Falta diseñar de la 2 en adelante.
 - ¿Qué se juega en cada ida a Neural después de la primera? _Propuesta del agente:_ que la cadena de favores del Hall no se repita.
 
 **La vuelta a casa** quedó definida con la primera (ver "Locaciones" → La primera noche): es **corta y sin puzzle**. Jorge **anota el recuerdo en la pizarra**, encuentra **un objeto** que prueba que el recuerdo fue real, y se va a dormir.

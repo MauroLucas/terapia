@@ -4,7 +4,7 @@
 
 | Campo | Valor |
 |---|---|
-| Edad | ~30 años |
+| Edad | ~40 años |
 | Rasgo principal | Tiene problemas para recordar su vida _(dentro del sueño: en realidad es disociación, ver "Historia y mundo" → Lore)_ |
 | Motivación | Reconstruir su pasado _(por confirmar)_ |
 | Tratamiento | Paciente de Neural. Lleva **11 sesiones**, pero no recuerda haber ido |
@@ -34,6 +34,7 @@
 | Rol | Conductor que tiene que llevar a Jorge a Neural |
 | Dónde está | Esperando en la calle, con el auto |
 | Relación con Jorge | Ninguna: es simplemente un conductor |
+| En el final _(spoiler)_ | No existe: es la forma en que la mente de Jorge disfraza a su ex novia, que toca el portero de verdad |
 
 ### Mamá de Jorge _(sin nombre)_
 
@@ -44,15 +45,19 @@
 | Detalle clave | Jorge no la reconoce: al ver la foto pregunta "¿Quién es esta señora?". Pero en el cajón con candado dejó una nota con su letra: "Te extraño, mamá" |
 | Qué pasó con ella _(spoiler)_ | Tuvo un **primer ACV** y el médico le recomendó estar más tranquila. Por eso hizo un **viaje con Jorge**, en el que se reencontraron como madre e hijo y volvieron a tener una relación cercana. Poco después murió de un **segundo ACV**, terminal. La foto de la billetera es de ese viaje, y "12/08" es su fecha. Ver "Historia y mundo" → Lore |
 | En el sueño | En la Sesión 1 (la feria) aparece en el recuerdo de cuando Jorge se perdió de chico: le compra algodón de azúcar, lo mira desde el banco de la calesita y, al final, lo encuentra. **No tiene cara**: una luz se la tapa. Le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Aspecto en el prototipo: pelo largo castaño, tapado terracota (provisorio) |
-| Por definir | ¿A dónde viajaron? ¿En qué año? ¿Por qué estaban distanciados? |
+| Distancia | De grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte** y dejaron de hablarse hasta el viaje |
+| Su muerte _(spoiler)_ | Es lo que llevó a Jorge a la crisis del baño |
+| Por definir | ¿A dónde viajaron? ¿En qué año? ¿Qué se dijeron en la pelea? |
 
-### Primera novia de Jorge _(sin nombre)_
+### Ex novia de Jorge _(sin nombre)_
 
 | Campo | Valor |
 |---|---|
 | Primera aparición | Casa de Jorge: de forma indirecta. Su foto es la que falta en el portarretratos de la cómoda |
-| Relación con Jorge | Fue su primera novia |
-| Por definir | ¿Por qué Jorge sacó su foto? ¿Qué pasó entre ellos? |
+| Relación con Jorge | Fue su **primera novia**. Se separaron **a los 20**, pero **nunca dejaron de hablarse** |
+| A los 30 | Se reencuentran: ella ya está casada; él sigue soltero |
+| En el final _(spoiler)_ | Es quien toca el portero. En el sueño, la mente de Jorge la cambia por el chofer. Ver "Historia y mundo" → Final |
+| Por definir | Nombre. ¿Por qué Jorge sacó su foto? ¿Qué pasó en el reencuentro? ¿Por qué viene justo esa noche? |
 
 ### Recepcionista de Neural _(sin nombre)_
 
@@ -117,7 +122,8 @@
 | Qué hace | Le hace preguntas sobre cómo está, si mejoró y si toma la medicación. Después lo lleva al cuarto de inducción, le explica el tratamiento y lo hace acostar en la máquina. No se da cuenta cuando Jorge le miente |
 | Aspecto | En el prototipo: guardapolvo blanco sobre camisa celeste, pelo canoso y anteojos (provisorio) |
 | En el sueño | Es una **llama de vela** que flota al lado de Jorge y lo acompaña. Habla por la máquina. No ve la puerta que no se abre |
-| Por definir | Nombre de pila. ¿Qué sabe de verdad sobre Jorge? |
+| Qué es _(spoiler)_ | Como todo Neural, **lo inventa la mente de Jorge** |
+| Por definir | Nombre de pila. ¿Representa a alguien o a algo de Jorge? |
 
 ### Gente de la feria _(sin nombre)_
 

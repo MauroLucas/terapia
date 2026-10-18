@@ -508,8 +508,8 @@ export class Apartment extends Phaser.Scene {
       const x0 = -w / 2 + 90
       const x1 = w / 2 - 90
       const g = this.add.graphics().lineStyle(4, 0x2b3140).lineBetween(x0, 0, x1, 0)
-      for (let age = 0; age <= 30; age += 10) {
-        const x = x0 + ((x1 - x0) * age) / 30
+      for (let age = 0; age <= 40; age += 10) {
+        const x = x0 + ((x1 - x0) * age) / 40
         g.lineBetween(x, -12, x, 12)
         c.add(text(this, x, 22, String(age), 16, '#7a8090', { fontFamily: HAND_FONT }).setOrigin(0.5, 0))
       }
@@ -847,15 +847,15 @@ export class Apartment extends Phaser.Scene {
       const x0 = -w / 2 + 90
       const x1 = w / 2 - 90
       const g = this.add.graphics().lineStyle(4, 0x2b3140).lineBetween(x0, 0, x1, 0)
-      for (let age = 0; age <= 30; age += 10) {
-        const x = x0 + ((x1 - x0) * age) / 30
+      for (let age = 0; age <= 40; age += 10) {
+        const x = x0 + ((x1 - x0) * age) / 40
         g.lineBetween(x, -12, x, 12)
         c.add(text(this, x, 22, String(age), 16, '#7a8090', { fontFamily: HAND_FONT }).setOrigin(0.5, 0))
       }
       if (feria) {
         // Primer tramo: la infancia, con la feria marcada cerca de los 7 años
-        const xa = x0 + ((x1 - x0) * 7) / 30
-        g.lineStyle(10, 0x3e7d3c, 0.35).lineBetween(x0, 0, x0 + (x1 - x0) / 3, 0)
+        const xa = x0 + ((x1 - x0) * 7) / 40
+        g.lineStyle(10, 0x3e7d3c, 0.35).lineBetween(x0, 0, x0 + (x1 - x0) / 4, 0)
         g.fillStyle(0x3e7d3c).fillCircle(xa, 0, 9)
         g.lineStyle(2, 0x3e7d3c).lineBetween(xa, -10, xa, -62)
         c.add(text(this, xa, -66, 'La feria con mamá', 22, '#2e5f2c', { fontFamily: HAND_FONT }).setOrigin(0.5, 1))
@@ -876,7 +876,7 @@ export class Apartment extends Phaser.Scene {
     await this.pizarraOverlay(false)
     await say(this, [this.think('¿Dónde va lo de la feria?')])
     for (;;) {
-      const i = await choose(this, ['Entre los 0 y los 10 años', 'Entre los 10 y los 20', 'Entre los 20 y los 30'], { x: 640, y: 560 })
+      const i = await choose(this, ['Entre los 0 y los 10 años', 'Entre los 10 y los 20', 'Entre los 20 y los 30', 'Entre los 30 y los 40'], { x: 640, y: 600 })
       if (i === 0) break
       await say(this, [this.think('No… Era chico. Tenía las manos chiquitas.')])
     }
@@ -886,9 +886,9 @@ export class Apartment extends Phaser.Scene {
     this.pizarraHecha = true
     // En la pizarra de la pared también aparece la marca
     const mark = this.add.graphics().setDepth(5)
-    mark.lineStyle(5, 0x3e7d3c, 0.5).lineBetween(900, 312, 947, 312)
-    mark.fillStyle(0x3e7d3c).fillCircle(933, 312, 4)
-    mark.lineStyle(1.5, 0x3e7d3c).lineBetween(933, 308, 933, 286)
+    mark.lineStyle(5, 0x3e7d3c, 0.5).lineBetween(900, 312, 935, 312)
+    mark.fillStyle(0x3e7d3c).fillCircle(924, 312, 4)
+    mark.lineStyle(1.5, 0x3e7d3c).lineBetween(924, 308, 924, 286)
     if (!state.lineaDeTiempo.includes('Infancia: la feria')) state.lineaDeTiempo.push('Infancia: la feria')
     this.pista('Pizarra', 'Anoté mi primer recuerdo: la feria con mamá, cuando era chico.')
     this.nextGoal()

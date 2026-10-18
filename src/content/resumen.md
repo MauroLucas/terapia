@@ -1,6 +1,6 @@
 ## Concepto en una frase
 
-> Jorge, un hombre de unos 30 años que no recuerda su vida, se somete a una terapia en **Neural**, un centro de rehabilitación de la memoria donde una inteligencia artificial permite ver sus sueños e inducirlo a sueños lúcidos para recuperar sus recuerdos.
+> Jorge, un hombre de unos 40 años que no recuerda su vida, se somete a una terapia en **Neural**, un centro de rehabilitación de la memoria donde una inteligencia artificial permite ver sus sueños e inducirlo a sueños lúcidos para recuperar sus recuerdos.
 
 ## Ficha técnica
 

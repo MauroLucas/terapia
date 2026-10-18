@@ -218,7 +218,7 @@ _Los textos de Jorge son provisorios._
 > **Informe de seguimiento**
 >
 > **Paciente:** Jorge _[apellido por definir]_
-> **Edad:** 30 años
+> **Edad:** 40 años
 > **Sesiones realizadas:** 11
 >
 > **Observaciones:**
@@ -1135,12 +1135,12 @@ El orden es libre, salvo dos cosas: no se puede dormir sin anotar el recuerdo (_
 
 ### La pizarra
 
-Se abre la línea de tiempo, todavía vacía: "MI VIDA", de "Nací" a "HOY", con marcas cada diez años. Jorge piensa _"¿Dónde va lo de la feria?"_ y aparecen tres opciones:
+Se abre la línea de tiempo, todavía vacía: "MI VIDA", de "Nací" a "HOY" (los 40), con marcas cada diez años. Jorge piensa _"¿Dónde va lo de la feria?"_ y aparecen cuatro opciones:
 
 | Opción | Qué pasa |
 |---|---|
 | **Entre los 0 y los 10 años** | Es la correcta. Se marca la infancia en verde y, cerca de los 7 años, Jorge escribe con su letra **"La feria con mamá"** y abajo _"me perdí y ella me encontró"_ |
-| Entre los 10 y los 20 / Entre los 20 y los 30 | _"No… Era chico. Tenía las manos chiquitas."_ y vuelve a elegir |
+| Entre los 10 y los 20 / Entre los 20 y los 30 / Entre los 30 y los 40 | _"No… Era chico. Tenía las manos chiquitas."_ y vuelve a elegir |
 
 Al anotarlo: _"«La feria con mamá.»"_ / _"Es lo primero que anoto."_ La marca también aparece en la pizarra de la pared. Si la vuelve a mirar: _"Es lo único que hay. Pero ya no está vacía."_
 
@@ -1190,7 +1190,7 @@ Más estática, y se corta.
 
 Después, si vuelve al portero: _"No volvió a sonar."_
 
-_**Por definir:** ¿quién toca el portero de noche? (Ver "Historia y mundo" → Final, opción B: el portero que suena es real.)_
+_¿Quién toca? Encaja con el final (ver "Historia y mundo" → Final): sería la ex novia, tocando de verdad. Propuesta del agente, sin confirmar._
 
 ### Otros pensamientos
 
@@ -1231,7 +1231,7 @@ Termina cuando Jorge **se duerme**: se le cierran los ojos. _Por definir: lo que
 
 ### Pendiente de definir
 
-- ¿Quién toca el portero de noche? ¿Vuelve a pasar?
+- ¿Quién toca el portero de noche: es la ex novia? ¿Vuelve a pasar?
 - ¿Quién guardó la sortija en la caja: la mamá, Jorge?
 - ¿Cómo es la próxima mañana? ¿Vuelve el chofer, se repite algo del primer día?
 - ¿La casa cambia un poco cada vez que Jorge vuelve?

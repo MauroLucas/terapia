@@ -1,6 +1,6 @@
 ## Sinopsis
 
-Jorge es un hombre de unos 30 años que tiene problemas para recordar su vida. El juego comienza cuando el timbre de su departamento lo despierta: alguien lo viene a buscar porque se tienen que ir a **Neural**. Pero Jorge no puede salir porque no encuentra la llave, así que recorre el departamento y descubre objetos que dan pistas sobre quién es. Al encontrar la llave descubre qué es Neural: un centro para recuperar la memoria.
+Jorge es un hombre de unos 40 años que tiene problemas para recordar su vida. El juego comienza cuando el timbre de su departamento lo despierta: alguien lo viene a buscar porque se tienen que ir a **Neural**. Pero Jorge no puede salir porque no encuentra la llave, así que recorre el departamento y descubre objetos que dan pistas sobre quién es. Al encontrar la llave descubre qué es Neural: un centro para recuperar la memoria.
 
 En Neural, una inteligencia artificial permite que el **doctor Vela** vea en pantalla lo que Jorge sueña y lo induzca a sueños lúcidos. A través de esos sueños, el doctor lo ayuda a recuperar sus recuerdos.
 
@@ -14,7 +14,7 @@ En Neural, una inteligencia artificial permite que el **doctor Vela** vea en pan
 | Nombre | Qué es |
 |---|---|
 | Departamento de Jorge | 2 ambientes: cuarto, pasillo, cocina y baño. Es la locación **Casa de Jorge** |
-| Neural | Centro de rehabilitación de la memoria. Usa inteligencia artificial para interactuar con los sueños de los pacientes |
+| Neural | Centro de rehabilitación de la memoria. Usa inteligencia artificial para interactuar con los sueños de los pacientes. **No existe:** lo inventa la mente de Jorge (ver "Revelación") |
 | Hall de Neural | Entrada del edificio: hall grande con recepción, sala de espera, baños, cuarto de maestranza, máquina de bebidas y molinetes con seguridad. Sin carnet no se pasa. Pasando los molinetes, un ascensor sube a los consultorios. Es la locación **Hall del edificio** |
 | Pasillo de los consultorios | Arriba, al salir del ascensor: un pasillo largo con ventanales a la ciudad y una puerta por doctor, cada una con su placa. La del doctor Vela es la última. Es la primera parte de la locación **Consultorio** |
 | Consultorio del doctor Vela | Al final del pasillo: un cuarto cálido, con biblioteca y escritorio, donde Vela charla con Jorge antes de cada sesión. Es la segunda parte de la locación **Consultorio** |
@@ -36,44 +36,21 @@ Por eso, en la Casa de Jorge, la puerta del baño está "bloqueada desde adentro
 | Jorge | Se despierta desorientado y busca la llave para ir a Neural | Está en crisis, pensando en quitarse la vida |
 | Memoria | No recuerda su vida, ni a su mamá | No perdió la memoria: su mente está en un trance disociativo y simula todo. Ver "Lore" |
 
-- **Neural es real.** El centro y la terapia existen en la realidad del juego.
+- **Neural no existe.** Lo **inventa su mente**: el centro, el doctor Vela, la máquina de los sueños y las sesiones son parte de la simulación. Es la forma en que su mente se da permiso para mirar sus recuerdos.
 - **La revelación llega al final del sueño.**
 - **La puerta que no se abre** (ver "Lugares y conceptos clave") es el hilo que la prepara: aparece en cada sesión, igual a la del baño, y nadie más la ve.
 
-_Por definir: si Neural es real, ¿qué relación tiene el sueño con la terapia? ¿Este sueño es una sesión en Neural? (De momento no es prioridad)._
+## Final
 
-### Idea en evaluación: Jorge es una copia digital
-
-_Idea, todavía no confirmada._
-
-El Jorge que maneja el jugador **no es el Jorge real**: es una **copia digital** de él. Lo descubre **cerca del final**.
-
-- Al descubrirlo, **todo se distorsiona**: el mundo del juego empieza a deformarse.
-- **El conflicto:** ahora la copia **quiere vivir**, pero no es real. Mientras tanto, el Jorge real, en el baño, está pensando en quitarse la vida.
-- Así quedan dos Jorge enfrentados: el real, que no quiere seguir, y la copia, que quiere vivir y no puede.
-
-_Por definir: cómo y por qué existe la copia, cómo lo descubre, cómo se ve la distorsión y qué pasa después._
-
-## Final: ideas en evaluación
-
-_Todavía no está decidido. Estas son las opciones que se están considerando._
-
-_Nota: que todo sea una simulación de su mente mientras está en el baño (ver "Lore") encaja con la **Opción B**. Falta confirmar si eso descarta la Opción A._
-
-### Opción A: todo es una sesión en Neural
-
-Jorge ya está en tratamiento y la Casa de Jorge era el primer sueño inducido. El doctor lo lleva de a poco hasta el recuerdo bloqueado: la noche en el piso del baño. Al abrir esa puerta, Jorge lo enfrenta y despierta en Neural, recordando.
-
-### Opción B: todo pasa en su cabeza, en el baño
-
-Jorge está ahora mismo sentado en el piso del baño. Todo el juego pasa dentro de su mente. **El portero que suena al inicio es real**, pero **quien toca no es el chofer: es su ex novia**.
+**Todo pasa en su cabeza, en el baño** (antes "Opción B"). Jorge está ahora mismo sentado en el piso del baño. Todo el juego pasa dentro de su mente. **El portero que suena al inicio es real**, pero **quien toca no es el chofer: es su ex novia** (ver "Personajes" → Ex novia de Jorge).
 
 - En el sueño, su mente **reemplaza a la ex novia por un chofer desconocido**: alguien neutro, sin relación con él. Es una forma de no enfrentarla.
 - Encaja con el **portarretratos vacío**: Jorge sacó su foto.
 - _Idea para el final:_ en el último momento, la voz del portero ya no es la del chofer sino la de ella. Jorge se levanta, abre la puerta del baño y atiende.
 - Final **esperanzador**: alguien vino a buscarlo, y él elige abrir.
-
 - Que era la ex novia quien tocaba el portero **se descubre recién en el final**. En la Casa de Jorge es el chofer.
+
+_Descartado:_ que todo fuera una sesión real en Neural (antes "Opción A"), y la idea de que Jorge fuera una copia digital.
 
 ## Lore
 
@@ -85,7 +62,7 @@ Jorge está ahora mismo sentado en el piso del baño. Todo el juego pasa dentro 
 - Por eso el sueño se siente raro desde el principio: el departamento no le resulta familiar, se despierta vestido y no reconoce a su mamá.
 - Lo que Jorge "no puede recordar" es justamente lo que su mente evita mirar. Por ejemplo, la foto que falta en el portarretratos o la causa tachada en el informe.
 
-_Por definir: qué lo llevó a esta crisis._
+**Qué lo llevó a esta crisis: la muerte de su mamá** (ver abajo). Se habían reencontrado en el viaje, después de años sin hablarse, y poco después ella murió. Es lo que está tachado en el informe y lo que su mente evita mirar.
 
 ### La mamá de Jorge (spoiler)
 
@@ -98,9 +75,20 @@ En orden:
 - La **foto de la billetera** (Casa de Jorge) es de ese viaje, y **"12/08"**, escrito atrás, es **la fecha del viaje**.
 - Por eso Jorge la lleva encima, y por eso dejó la nota "Te extraño, mamá" en el cajón que se abre con esa fecha.
 
-_Por definir: a dónde viajaron, en qué año, y por qué estaban distanciados antes del viaje._
+**Por qué estaban distanciados:** de grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte**. Se dijeron cosas y **dejaron de hablarse** hasta el viaje.
+
+_Por definir: a dónde viajaron, en qué año, y qué se dijeron en la pelea._
 
 **Un recuerdo de la infancia (Sesión 1):** una noche, de chico, Jorge fue a una feria con su mamá y se perdió. Al entrar, ella le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Él se quedó quieto, y ella lo encontró. _Detalles provisorios, propuestos por el agente._
+
+### La ex novia de Jorge (spoiler)
+
+- Fue su **primera novia**. Se separaron **a los 20**, pero **nunca dejaron de hablarse**.
+- **A los 30 se reencuentran:** ella ya está casada; él sigue soltero.
+- En la realidad, **es quien toca el portero** esa noche (ver "Final"). En el sueño, la mente de Jorge la cambia por el chofer.
+- Su foto es la que falta en el portarretratos del cuarto.
+
+_Por definir: su nombre, qué pasó en el reencuentro de los 30, por qué Jorge sacó su foto y por qué viene justo esa noche._
 
 ## Estructura: las sesiones
 
@@ -116,6 +104,22 @@ Después de la introducción (Casa de Jorge, Hall del edificio y el pasillo), el
 Casa de Jorge (pizarra) → Neural → Sesión (una parte de su vida) → Casa de Jorge (pizarra actualizada) → …
 ```
 
-**Primera sesión: la infancia.** El recuerdo de la feria (ver "Locaciones" → Sesión 1: La feria).
+### Mapa de sesiones
 
-_Por definir: cuántas sesiones son y qué etapa cubre cada una. Ver "Mecánicas" → Progresión._
+Son **siete sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
+
+| # | Etapa | Recuerdo | Qué se sabe | Estado |
+|---|---|---|---|---|
+| 1 | Infancia | **La feria** | Se perdió de chico y su mamá lo encontró | En el prototipo |
+| 2 | Adolescencia | **La distancia con su mamá** | La pelea fuerte cuando se fue de la casa: dejan de hablarse | Idea |
+| 3 | Juventud | **La novia** | Su primera novia. Se separan a los 20, pero siguen hablando | Idea |
+| 4 | Los 30 | **El reencuentro** | Se vuelve a ver con la ex novia: ella está casada; él, soltero | Idea |
+| 5 | Adultez | **El viaje del 12/08** | El primer ACV de su mamá y el viaje juntos: se reencuentran como madre e hijo | Idea |
+| 6 | La pérdida | **La muerte de su mamá** | El segundo ACV. Es lo que está tachado en el informe | Idea |
+| 7 | Hoy | **El baño** | La puerta que no se abre, se abre. El portero: es ella. Jorge elige abrir | Idea |
+
+- **Entre sesión y sesión**, Jorge vuelve a su casa (una noche) y a la mañana siguiente vuelve a Neural. La pizarra se va llenando de vuelta en vuelta.
+- La 4 la sumó el usuario como "una secuencia a los 30". _Por definir: si es una sesión completa o una secuencia más corta._
+- _Por definir: la edad exacta de cada recuerdo, salvo los que ya están (la feria cerca de los 7, la separación a los 20, el reencuentro a los 30, hoy a los 40)._
+
+_El mapa lo propuso el agente con lo que ya estaba en el GDD, y el usuario lo aprobó como base. Se ajusta sesión por sesión._

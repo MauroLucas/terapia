@@ -126,7 +126,7 @@ export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: P
           }
           add('NEURAL — Centro de Rehabilitación de la Memoria', 18, '#2f5fb8', { fontStyle: 'bold' }, 2)
           add('Informe de seguimiento', 26, '#222', { fontStyle: 'bold' }, 20)
-          add('Paciente: Jorge\nEdad: 30 años\nSesiones realizadas: 11', 18, '#333', {}, 20)
+          add('Paciente: Jorge\nEdad: 40 años\nSesiones realizadas: 11', 18, '#333', {}, 20)
           add('Observaciones:', 18, '#222', { fontStyle: 'bold' }, 4)
           const obs = add('El paciente presenta pérdida de memoria autobiográfica de origen a determinar. Responde bien a la inducción de sueño lúcido. Recupera con facilidad recuerdos neutros, pero muestra fuerte resistencia ante recuerdos vinculados a', 18, '#333', {}, 6)
           // La causa está tachada con marcador
