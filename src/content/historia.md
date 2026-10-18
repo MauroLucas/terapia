@@ -17,8 +17,10 @@ En Neural, una inteligencia artificial permite que el **doctor Vela** vea en pan
 | Neural | Centro de rehabilitación de la memoria. Usa inteligencia artificial para interactuar con los sueños de los pacientes |
 | Hall de Neural | Entrada del edificio: hall grande con recepción, sala de espera, baños, cuarto de maestranza, máquina de bebidas y molinetes con seguridad. Sin carnet no se pasa. Pasando los molinetes, un ascensor sube a los consultorios. Es la locación **Hall del edificio** |
 | Pasillo de los consultorios | Arriba, al salir del ascensor: un pasillo largo con ventanales a la ciudad y una puerta por doctor, cada una con su placa. La del doctor Vela es la última. Es la primera parte de la locación **Consultorio** |
+| Consultorio del doctor Vela | Al final del pasillo: un cuarto cálido, con biblioteca y escritorio, donde Vela charla con Jorge antes de cada sesión. Es la segunda parte de la locación **Consultorio** |
+| Cuarto de inducción al sueño | Al lado del consultorio. Tiene la **máquina de los sueños**: una camilla con un casco que lee las ondas del cerebro, una pantalla grande donde se ven los sueños y una consola |
 | Carnet de Neural | Credencial que los pacientes presentan en la recepción. Jorge no lo lleva encima |
-| Sueño lúcido | Estado al que el doctor induce a Jorge para que explore sus recuerdos de forma consciente |
+| Sueño lúcido | Estado al que el doctor induce a Jorge para que explore sus recuerdos de forma consciente. Se induce con **ondas electromagnéticas**, y como Vela ve el sueño **en tiempo real**, puede hablarle e interactuar con él adentro |
 
 ## Revelación (spoiler)
 

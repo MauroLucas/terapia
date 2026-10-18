@@ -73,6 +73,69 @@ function drawJorge(g: Phaser.GameObjects.Graphics, legs: Legs) {
   g.lineBetween(36, 20, 42, 20)
 }
 
+// Jorge sentado, de perfil mirando a la derecha (consultorio del doctor Vela)
+function drawJorgeSitting(g: Phaser.GameObjects.Graphics) {
+  // Muslo horizontal a la altura del asiento, pierna hacia abajo y zapato
+  g.lineStyle(11, C.pants)
+  g.lineBetween(24, 100, 54, 100)
+  g.lineBetween(54, 100, 54, 128)
+  g.fillStyle(C.shoes).fillRoundedRect(49, 127, 18, 8, 3)
+  // Torso, brazo apoyado sobre la pierna, cuello y cabeza (como parado, 4 px más abajo)
+  const dy = 4
+  g.fillStyle(C.ink).fillRect(15, 88 + dy, 30, 9)
+  g.fillStyle(C.sweater).fillRoundedRect(14, 44 + dy, 32, 48, 9)
+  g.fillStyle(C.ink).fillTriangle(31, 44 + dy, 42, 44 + dy, 37, 57 + dy)
+  g.fillStyle(C.sweaterDark).fillRoundedRect(30, 52 + dy, 12, 36, 6)
+  g.fillStyle(C.skin).fillCircle(44, 92, 5)
+  g.fillStyle(C.skin).fillRect(26, 36 + dy, 10, 10).fillCircle(31, 25 + dy, 15).fillTriangle(44, 24 + dy, 49, 30 + dy, 44, 31 + dy)
+  g.fillStyle(C.skinDark).fillCircle(27, 28 + dy, 3)
+  g.fillStyle(C.hair)
+  g.slice(30, 23 + dy, 16, Math.PI, Math.PI * 2, false)
+  g.fillPath()
+  g.fillRect(14, 20 + dy, 8, 13)
+  g.fillStyle(C.ink).fillCircle(39, 25 + dy, 2)
+  g.lineStyle(2, C.ink).lineBetween(36, 20 + dy, 42, 20 + dy)
+}
+
+// Doctor Vela: guardapolvo blanco, pelo canoso y anteojos (provisorio). Parado, caminando o sentado.
+function drawVela(g: Phaser.GameObjects.Graphics, pose: Legs | 'sit') {
+  const dy = pose === 'sit' ? 4 : 0
+  const skin = 0xdcb48e
+  if (pose === 'sit') {
+    g.lineStyle(11, 0x3a3f4b)
+    g.lineBetween(24, 100, 54, 100)
+    g.lineBetween(54, 100, 54, 128)
+    g.fillStyle(C.shoes).fillRoundedRect(49, 127, 18, 8, 3)
+  } else {
+    g.lineStyle(11, 0x3a3f4b)
+    const feet: [number, number][] =
+      pose === 'stand' ? [[24, 132], [34, 132]] : pose === 'walkA' ? [[14, 132], [44, 132]] : [[22, 132], [38, 132]]
+    g.lineBetween(24, 100, feet[0][0], feet[0][1] - 4)
+    g.lineBetween(34, 100, feet[1][0], feet[1][1] - 4)
+    g.fillStyle(C.shoes)
+    for (const [fx, fy] of feet) g.fillRoundedRect(fx - 7, fy - 5, 17, 8, 3)
+  }
+  // Camisa celeste y guardapolvo blanco, largo
+  g.fillStyle(0x9fb9d6).fillRoundedRect(15, 44 + dy, 30, 40, 8)
+  g.fillStyle(0xeceef1).fillRoundedRect(12, 44 + dy, 36, pose === 'sit' ? 50 : 64, 9)
+  g.fillStyle(0x9fb9d6).fillTriangle(30, 44 + dy, 42, 44 + dy, 36, 60 + dy)
+  g.lineStyle(1, 0xb9bec7).lineBetween(36, 60 + dy, 36, (pose === 'sit' ? 94 : 106) + dy)
+  // Brazo
+  const armX = pose === 'walkA' ? 23 : pose === 'walkB' ? 29 : 26
+  g.fillStyle(0xdde0e5).fillRoundedRect(armX, 50 + dy, 12, 42, 6)
+  g.fillStyle(skin).fillCircle(armX + 6, 94 + dy, 5)
+  // Cuello y cabeza
+  g.fillStyle(skin).fillRect(26, 36 + dy, 10, 10).fillCircle(31, 25 + dy, 15).fillTriangle(44, 24 + dy, 49, 30 + dy, 44, 31 + dy)
+  // Pelo canoso, con entradas
+  g.fillStyle(0xb9bcc4)
+  g.slice(29, 23 + dy, 16, Math.PI * 1.05, Math.PI * 1.75, false)
+  g.fillPath()
+  g.fillRect(14, 18 + dy, 7, 16)
+  // Anteojos y ojo
+  g.lineStyle(2, 0x2a2d33).strokeCircle(39, 25 + dy, 5).lineBetween(34, 24 + dy, 22, 22 + dy)
+  g.fillStyle(C.ink).fillCircle(40, 25 + dy, 1.6)
+}
+
 export function makeTextures(scene: Phaser.Scene) {
   if (scene.textures.exists('jorge0')) return
   const g = scene.make.graphics({}, false)
@@ -187,6 +250,17 @@ export function makeTextures(scene: Phaser.Scene) {
   g.fillStyle(0x1b2233).fillRect(15, 8, 32, 11).fillRect(40, 16, 14, 4)
   g.fillStyle(C.ink).fillCircle(39, 25, 2)
   g.generateTexture('guardia', 56, 140)
+
+  // Consultorio: Jorge sentado y el doctor Vela
+  g.clear()
+  drawJorgeSitting(g)
+  g.generateTexture('jorgeSentado', 72, 140)
+  const vela: [string, Legs | 'sit', number][] = [['vela0', 'stand', 56], ['vela1', 'walkA', 56], ['vela2', 'walkB', 56], ['velaSentado', 'sit', 72]]
+  for (const [key, pose, w] of vela) {
+    g.clear()
+    drawVela(g, pose)
+    g.generateTexture(key, w, 140)
+  }
 
   g.destroy()
 }

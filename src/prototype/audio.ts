@@ -181,6 +181,36 @@ export function startRoomTone(): Loop {
   return { stop: (fade = 1) => fadeOutAndStop(g, [o], fade) }
 }
 
+// Máquina de inducción al sueño: un zumbido suave que sube de a poco y ondula lento
+export function startMachine(): Loop {
+  const a = out()
+  if (!a) return { stop() {} }
+  const t = a.c.currentTime
+  const g = a.c.createGain()
+  g.gain.setValueAtTime(0, t)
+  g.gain.linearRampToValueAtTime(0.06, t + 3)
+  g.connect(a.m)
+  const nodes: (OscillatorNode)[] = []
+  for (const f of [110, 165, 220.5]) {
+    const o = a.c.createOscillator()
+    o.type = 'sine'
+    o.frequency.value = f
+    o.connect(g)
+    o.start(t)
+    nodes.push(o)
+  }
+  // Ondulación lenta del volumen
+  const lfo = a.c.createOscillator()
+  lfo.frequency.value = 0.25
+  const depth = a.c.createGain()
+  depth.gain.value = 0.02
+  lfo.connect(depth)
+  depth.connect(g.gain)
+  lfo.start(t)
+  nodes.push(lfo)
+  return { stop: (fade = 2) => fadeOutAndStop(g, nodes, fade) }
+}
+
 // Ascensor: zumbido del motor y aire en el hueco
 export function startElevator(): Loop {
   const a = out()

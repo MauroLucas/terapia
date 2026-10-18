@@ -7,7 +7,7 @@ import { openDiary } from './diary'
 // Consultorio (locación 3), primera parte: el pasillo de los consultorios.
 //   [ascensor] [1] ▢▢ [2] ▢▢ [3] ▢▢ [4] ▢▢ [5: Dr. Vela]
 // Un pasillo largo con ventanales a la ciudad. Cada puerta tiene su placa y hay que encontrar la del doctor Vela,
-// que es la última. Jorge no dice nada hasta llegar. Al entrar funde a negro: el consultorio todavía no está diseñado.
+// que es la última. Jorge no dice nada hasta llegar. Al entrar funde a negro y sigue en Office (adentro del consultorio).
 // No usa física: todo se mueve con `delta`, igual a cualquier FPS.
 
 const W = 4500
@@ -174,9 +174,7 @@ export class Corridor extends Phaser.Scene {
     sfx.door()
     const cam = this.cameras.main
     cam.fadeOut(1800, 0, 0, 0)
-    cam.once('camerafadeoutcomplete', () =>
-      this.scene.start('LevelEnd', { titulo: this.registry.get('solo') ? 'Fin de la locación' : 'Fin del prototipo', locacion: 'Consultorio' }),
-    )
+    cam.once('camerafadeoutcomplete', () => this.scene.start('Office'))
   }
 
   private async run(fn: () => Promise<void>) {

@@ -25,8 +25,8 @@ export function Level3Page() {
         <h1>Prototipo: Consultorio</h1>
       </header>
       <p>
-        Solo el Consultorio: arranca al salir del ascensor. Por ahora es el pasillo de los consultorios; al entrar al del
-        doctor Vela funde a negro. Ver "Locaciones" → Consultorio.
+        Solo el Consultorio: arranca al salir del ascensor. El pasillo de los consultorios, la charla con el doctor Vela y
+        el cuarto de inducción al sueño; termina cuando Jorge se acuesta en la camilla. Ver "Locaciones" → Consultorio.
       </p>
       <div className="game-frame" ref={ref} />
       <div className="game-actions">
@@ -36,8 +36,9 @@ export function Level3Page() {
       <table>
         <tbody>
           <tr><td>Caminar</td><td>← → o A D</td></tr>
-          <tr><td>Usar puertas</td><td>E</td></tr>
+          <tr><td>Hablar / sentarse / usar puertas</td><td>E</td></tr>
           <tr><td>Avanzar texto</td><td>Espacio, E o Enter</td></tr>
+          <tr><td>Elegir una respuesta</td><td>↑ ↓ y Enter</td></tr>
           <tr><td>Diario de pistas</td><td>TAB</td></tr>
           <tr><td>Cerrar un panel (candado, diario, documentos)</td><td>Q</td></tr>
           <tr><td>Pantalla completa</td><td>F</td></tr>

@@ -136,7 +136,7 @@ Arriba a la izquierda hay un cartel chico con el **objetivo actual** de la locac
 
 - Se **actualiza solo** según lo que Jorge ya sabe y lo que lleva encima. Cuando cambia, el texto nuevo aparece con un fundido y queda unos segundos en verde.
 - Aparece después de los pensamientos de entrada de la locación y se esconde en las secuencias sin control (por ejemplo, el ascensor).
-- Por ahora está solo en el **Hall del edificio** (ver "Locaciones" → "Objetivo en pantalla"). En la Casa de Jorge y el Consultorio: _por definir_.
+- Por ahora está en el **Hall del edificio** y en el **consultorio** del doctor Vela (ver "Locaciones" → "Objetivo en pantalla" de cada una). En la Casa de Jorge y el pasillo de los consultorios: _por definir_.
 - Textos provisorios, propuestos por el agente.
 
 ## Menús
@@ -169,7 +169,7 @@ _Propuesta:_ de fondo, el cuarto de Jorge a oscuras con él durmiendo.
 ## Flujo de pantallas
 
 ```
-Aviso de contenido → Menú principal → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo) → Fundido a negro
+Aviso de contenido → Menú principal → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio y cuarto de inducción) → Se le cierran los ojos
                           ↑                    ↓
                           └──── Menú de pausa (Diario / Opciones)
 ```

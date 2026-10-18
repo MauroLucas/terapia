@@ -20,12 +20,12 @@ Hay un **prototipo jugable** en este mismo sitio (página **🕹️ Prototipo** 
 
 | Campo | Valor |
 |---|---|
-| Qué cubre | Aviso de contenido → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo) → Fundido a negro |
+| Qué cubre | Aviso de contenido → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción) → Se le cierran los ojos |
 | Cómo abrirlo | `npm run dev` y entrar a **Prototipo** |
 | Online | Publicado en GitHub Pages: https://maurolucas.github.io/terapia/ (se actualiza solo con cada push a `main`) |
 | Controles | Solo teclado (ver "Mecánicas" → Controles) |
 | Pantalla completa | Botón debajo del juego o tecla **F** |
-| Código | `src/prototype/` (una escena por parte: aviso, departamento, escaleras, auto, Neural, pasillo) |
+| Código | `src/prototype/` (una escena por parte: aviso, departamento, escaleras, auto, Neural, pasillo, consultorio) |
 
 **Es provisorio:** los gráficos y los sonidos están hechos por código (sin archivos de arte ni audio). Sirve para probar ritmo, puzzles y diálogos, no el aspecto final.
 
@@ -37,7 +37,7 @@ Para no tener que jugar todo desde el principio, **cada locación tiene su propi
 |---|---|---|
 | **🛏️ Casa de Jorge** | Aviso de contenido → Departamento → Escaleras (títulos) → Cinemática del auto → "Fin de la locación" | `Apartment.ts`, `Stairs.ts` y `Car.ts`, en `src/prototype/scenes/` |
 | **🏥 Hall del edificio** | Aviso de contenido → Hall de Neural → Ascensor → "Fin de la locación" | `src/prototype/scenes/Neural.ts` |
-| **🩺 Consultorio** | Aviso de contenido → Pasillo de los consultorios → "Fin de la locación" | `src/prototype/scenes/Corridor.ts` |
+| **🩺 Consultorio** | Aviso de contenido → Pasillo de los consultorios → Consultorio del doctor Vela → Cuarto de inducción → "Fin de la locación" | `Corridor.ts` y `Office.ts`, en `src/prototype/scenes/` |
 
 _El prototipo y este documento se mantienen sincronizados: cada cambio de diseño en uno se refleja en el otro._
 

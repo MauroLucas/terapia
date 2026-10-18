@@ -9,7 +9,7 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 1 | **Casa de Jorge** | Departamento de Jorge | Encontrar la llave y salir. Descubrir pistas sobre quién es Jorge | En el prototipo |
 | — | Secuencia de títulos y auto | Escaleras del edificio y viaje a Neural | Bajar hasta la planta baja mientras aparecen los títulos; charla con el chofer | En el prototipo |
 | 2 | **Hall del edificio** | Hall de entrada de Neural | Entrar sin el carnet: lograr que el de seguridad deje los molinetes. Termina con el ascensor | En el prototipo |
-| 3 | **Consultorio** | Pasillo de los consultorios y consultorio del doctor Vela | Encontrar el consultorio del doctor Vela y entrar. _Lo que pasa adentro está por diseñar_ | Pasillo: en el prototipo. Consultorio: idea |
+| 3 | **Consultorio** | Pasillo de los consultorios, consultorio del doctor Vela y cuarto de inducción al sueño | Encontrar el consultorio, charlar con el doctor y acostarse en la máquina de los sueños | En el prototipo |
 
 ## Casa de Jorge
 
@@ -768,9 +768,13 @@ La locación termina cuando Jorge sale del ascensor y la imagen **funde a negro*
 
 ### Resumen
 
-Jorge sale del ascensor y tiene que **encontrar el consultorio del doctor Vela**. Esta locación empieza con un **pasillo largo** y termina cuando Jorge entra al consultorio.
+Jorge sale del ascensor y tiene que **encontrar el consultorio del doctor Vela**. La locación tiene tres partes:
 
-Por ahora solo está diseñado **el pasillo**. De adentro del consultorio está definida la **estructura**: el juego sigue por **sesiones**, cada una es una parte de la vida de Jorge, van en orden fijo y lo recuperado se suma a una **línea de tiempo** (ver "Historia y mundo" → Estructura, y "UI" → Línea de tiempo). _El contenido (cómo es el doctor, qué pasa en cada sesión, qué hace el jugador dentro del sueño lúcido) todavía no se diseña._
+1. **El pasillo:** largo y en silencio. Hay que leer las placas hasta encontrar la puerta de Vela.
+2. **El consultorio:** Vela lo recibe y le hace **preguntas**. Jorge puede **decir la verdad o mentir**: lo elige el jugador.
+3. **El cuarto de inducción al sueño:** Vela le explica el tratamiento y Jorge se acuesta en la **máquina de los sueños**. Se le cierran los ojos y termina la locación.
+
+Después de esto empiezan las **sesiones**: cada una es una parte de la vida de Jorge, van en orden fijo y lo recuperado se suma a una **línea de tiempo** (ver "Historia y mundo" → Estructura, y "UI" → Línea de tiempo). _Qué pasa en cada sesión y qué hace el jugador dentro del sueño lúcido todavía no se diseña._
 
 ### El pasillo
 
@@ -798,23 +802,136 @@ No hay cartel que diga dónde atiende Vela: el jugador tiene que **leer las plac
 
 _Los nombres de los otros doctores los propuso el agente y no significan nada: son relleno. Si alguno llega a importar para la historia, hay que definirlo._
 
-### Secuencia
+### Secuencia del pasillo
 
 1. La imagen aparece desde negro. Jorge está parado al lado del ascensor.
 2. El jugador camina por el pasillo. **Jorge no dice nada**: ni al mirar la ciudad, ni al probar una puerta equivocada. Viene de pensar mucho en el ascensor; acá hay silencio.
 3. Al llegar a la puerta del doctor Vela y usar **E**, Jorge piensa: _"Bueno, acá estoy…"_
 4. Entra, y la imagen **funde a negro**.
 
-En esta locación no hay diario nuevo ni inventario: no se anotan pistas ni se junta nada.
+En el pasillo no hay diario nuevo ni inventario: no se anotan pistas ni se junta nada.
+
+### El consultorio
+
+Es el primer lugar **cálido** de Neural: paredes en tonos marrones, piso de madera, una lámpara de escritorio encendida. Contrasta con el hall y el pasillo, que son fríos. _(Presentación provisoria.)_
+
+| Elemento | Dónde | Qué hay |
+|---|---|---|
+| Puerta al pasillo | Izquierda | Por acá entra Jorge. Si intenta irse: _"No vine hasta acá para irme ahora."_ |
+| Biblioteca y ventana con persiana | Pared del fondo | Decorado |
+| Sillón del paciente | Frente al escritorio, del lado de Jorge | Acá se sienta Jorge (**E**: "Sentarse") |
+| Escritorio | Centro | Lámpara y papeles. Decorado |
+| Silla del doctor | Detrás del escritorio | Acá se sienta Vela. Arriba, su diploma |
+| Puerta "Inducción al sueño" | Derecha | Lleva al cuarto de inducción. Solo se usa después de las preguntas |
+
+### Secuencia del consultorio
+
+_Diálogos provisorios: la idea y las frases principales son del usuario; el resto lo propuso el agente._
+
+1. La imagen aparece desde negro. Vela está parado cerca de la puerta, esperándolo, y lo recibe con calidez:
+
+> **Vela:** ¡Jorge! Te estaba esperando.
+>
+> **Vela:** Según el sistema, nunca ingresaste. Qué raro…
+>
+> **Vela:** Estas cosas de la tecnología no son lo mío.
+>
+> **Jorge (piensa):** Nunca ingresé… porque salté los molinetes.
+>
+> **Vela:** Vení, pasá.
+
+2. Vela vuelve a su silla y se sienta. El **objetivo** pasa a _"Sentarme frente al doctor Vela"_. Si Jorge le habla antes de sentarse: _"Sentate, Jorge. Ponete cómodo."_
+3. Jorge se sienta en el sillón. Vela: _"Bueno, contame."_ Empiezan las **preguntas** (ver abajo).
+4. Al terminar: _"Bien. Gracias, Jorge."_ / _"Acompañame al cuarto de inducción al sueño."_ Vela se levanta y sale por la puerta del fondo.
+5. Jorge queda parado. El objetivo pasa a _"Seguir al doctor Vela"_: el jugador tiene que **caminar hasta esa puerta** y entrar.
+
+**El "nunca ingresaste"** cierra lo del hall: Jorge saltó los molinetes sin carnet, así que para el sistema no entró. Vela no sospecha nada y le echa la culpa a la tecnología.
+
+### Las preguntas del doctor
+
+Vela le hace **cinco preguntas**. Para cada una aparecen **dos respuestas**: una dice **la verdad** y la otra **miente**. El orden de las dos cambia cada vez, para que la verdad no esté siempre en el mismo lugar.
+
+Hay que tener en cuenta que **Jorge no recuerda nada de su vida**. Por eso decir la verdad casi siempre es admitir que no se acuerda, y mentir es seguirle la corriente al doctor, como si todo estuviera bien.
+
+- Siempre van primero **"¿Cómo te sentís hoy?"** y **"¿Sentís alguna mejoría desde la última sesión?"**, y al final **"¿Estás tomando la medicación?"**.
+- En el medio van **dos preguntas al azar**, de una lista de cuatro. Así cada partida es un poco distinta.
+
+| Pregunta | La verdad | La mentira |
+|---|---|---|
+| ¿Cómo te sentís hoy? | "Perdido. No me acuerdo de nada." → _"Gracias por decírmelo. Para eso estamos."_ | "Bien. Como siempre." → _"Me alegra. Igual vamos a ver qué dicen tus sueños."_ |
+| ¿Sentís alguna mejoría desde la última sesión? | "No sabría decirle. No me acuerdo de la última sesión." → _"Mm. Lo anoto."_ | "Sí, creo que sí. Un poco." → _"Bien. De a poquito."_ |
+| ¿Cómo venís durmiendo? _(al azar)_ | "Hoy me desperté vestido. No sabía dónde estaba." → _"¿Vestido? Bueno… eso también lo vamos a mirar."_ | "Bien. De corrido." → _"Qué bueno. El descanso ayuda mucho."_ |
+| ¿Hablaste con alguien esta semana? _(al azar)_ | "No que me acuerde. Hoy me vino a buscar un chofer, nada más." → _"Un chofer… Está bien."_ | "Sí, con unos amigos." → _"Bien. Te hace bien estar acompañado."_ |
+| ¿Pudiste salir a caminar, como habíamos hablado? _(al azar)_ | "No me acuerdo de que lo hayamos hablado." → _"No pasa nada. Te lo vuelvo a pedir: un ratito por día."_ | "Sí, un par de veces." → _"Muy bien. Seguí así."_ |
+| ¿Te acordás de qué soñaste anoche? _(al azar)_ | "No. No me acuerdo ni de anoche." → _"Tranquilo. Hoy lo vamos a ver juntos."_ | "Algo… no mucho." → _"Bueno. Hoy lo vamos a ver juntos."_ |
+| ¿Estás tomando la medicación? | "No sé. No me acuerdo de estar tomando nada." Jorge piensa: _"¿Qué medicación?"_ → _"¿No te acordás? Bueno, después lo vemos con calma."_ / _"Pero no la dejes, ¿eh?"_ | "Sí, todos los días." Jorge piensa: _"¿Qué medicación?"_ → _"Bien. No la dejes, ¿eh?"_ |
+
+_Las tres fijas son del usuario; las cuatro al azar y todas las respuestas las propuso el agente._ Algunas respuestas verdaderas retoman lo que pasó en la Casa de Jorge (se despertó vestido, lo vino a buscar un chofer).
+
+**Vela nunca se da cuenta de que Jorge miente**: responde con calma en los dos casos. El juego guarda qué contestó Jorge en cada pregunta, pero por ahora **no cambia nada**. _Por definir: ¿mentir o decir la verdad tiene consecuencias? Por ejemplo, que en el sueño aparezca lo que Jorge negó, o que Vela lo confronte en otra sesión._
+
+### El cuarto de inducción al sueño
+
+Un cuarto **frío y en penumbra**, de tonos azules. _(Presentación provisoria.)_
+
+| Elemento | Dónde | Qué hay |
+|---|---|---|
+| Puerta | Izquierda | Por acá entra Jorge |
+| Pantalla grande | Pared del fondo | Apagada. Es donde Vela ve los sueños. Cuando arranca la máquina, se ilumina de a poco |
+| **Máquina de los sueños** | Centro | Una **camilla** con un **casco** colgado de un brazo que baja desde el techo (**E**: "Acostarse") |
+| Consola | Derecha | Monitor con ondas, luces y el logo de Neural. Vela se para al lado |
+
+### Secuencia del cuarto de inducción
+
+1. Jorge entra. Vela ya está al lado de la consola y le recuerda en qué consiste el tratamiento:
+
+> **Vela:** Bueno. Como siempre, te repaso cómo funciona, así vas tranquilo.
+>
+> **Vela:** Esta máquina lee las ondas de tu cerebro mientras dormís.
+>
+> **Vela:** Lo que soñás aparece en esa pantalla, como si fuera una película.
+>
+> **Vela:** Además, con unas ondas electromagnéticas te induzco un sueño lúcido: vas a saber que estás soñando.
+>
+> **Vela:** Y como veo todo en tiempo real, puedo hablarte e interactuar con vos ahí adentro.
+>
+> **Jorge (piensa):** ¿Y qué va a ver en los míos?
+>
+> **Vela:** Dale, acostate en la camilla.
+
+2. Se anota la pista **"El tratamiento"** en el diario. El objetivo pasa a _"Acostarme en la camilla"_. Si Jorge le habla a Vela: _"En la camilla, Jorge. Yo me ocupo del resto."_
+3. Jorge se acuesta. Vela: _"Así. Quedate quieto."_ El **casco baja** hasta su cabeza, la máquina arranca con un zumbido suave y la pantalla se ilumina.
+4. Vela: _"Vos relajate."_
+5. **Se le cierran los ojos, muy despacio:** la imagen se va tapando desde arriba y desde abajo, como párpados. Se abren un poco, vuelven a pesar, y al final se cierran del todo. Termina la locación.
+
+_"¿Y qué va a ver en los míos?"_ hace eco de lo que dice el joven en la sala de espera del hall (_"No sé si quiero que alguien vea los míos"_).
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| El tratamiento: "Una máquina lee las ondas de mi cerebro y muestra mis sueños en una pantalla, como una película. Con ondas electromagnéticas me inducen un sueño lúcido, y el doctor Vela puede hablarme ahí adentro, en tiempo real." | Al terminar la explicación de Vela |
+
+### Objetivo en pantalla
+
+| Cuándo | Objetivo |
+|---|---|
+| Vela se sentó | Sentarme frente al doctor Vela |
+| Vela se fue al cuarto de inducción | Seguir al doctor Vela |
+| Terminó la explicación del tratamiento | Acostarme en la camilla |
+
+En el pasillo, durante las preguntas y al acostarse, el cartel no aparece.
 
 ### Final de la locación
 
-_Por definir._ En el prototipo termina al entrar al consultorio.
+Termina cuando a Jorge **se le cierran los ojos** en la camilla. En el prototipo completo es el fin del prototipo. _Por definir: lo que sigue es la primera sesión, dentro del sueño lúcido._
 
 ### Pendiente de definir
 
-- ¿Qué hay adentro del consultorio? ¿Cómo es el doctor Vela?
-- ¿Cómo recibe Vela a Jorge, que llegó sin ser anunciado por la recepción?
+- ¿Mentir o decir la verdad tiene consecuencias? ¿Cuáles?
+- ¿Cómo es el doctor Vela? (En el prototipo: guardapolvo blanco, pelo canoso y anteojos. Provisorio.)
+- ¿Qué medicación toma Jorge, y por qué? (Vela la nombra, Jorge no sabe de qué se trata.)
+- ¿Cómo se ve la primera sesión, al cerrarse los ojos? ¿Se ve la pantalla del consultorio desde adentro del sueño?
 - ¿En qué piso están los consultorios?
-- ¿Se escucha o se ve algo detrás de las otras puertas?
+- ¿Se escucha o se ve algo detrás de las otras puertas del pasillo?
 - ¿El pasillo es tan tranquilo como parece, o hay algo raro en la ciudad que se ve por las ventanas?

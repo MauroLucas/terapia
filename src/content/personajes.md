@@ -109,7 +109,12 @@
 | Nombre | **Vela** (apellido; nombre de pila _por definir_). "Estar en vela" es estar despierto mientras otro duerme, y "velar por alguien" es cuidarlo: es lo que hace con los sueños de Jorge |
 | Lugar | Neural |
 | Rol | Ve en pantalla lo que Jorge sueña, lo induce a sueños lúcidos y lo ayuda a recuperar la memoria |
-| Primera aparición | _Por definir._ Se lo **nombra** por primera vez en el Hall del edificio: la recepcionista dice que espera a Jorge a las 10:30, y Jorge sube en el ascensor a buscar su consultorio |
+| Primera aparición | Consultorio: recibe a Jorge en su consultorio. Antes se lo **nombra** en el Hall del edificio: la recepcionista dice que Jorge tiene turno con él a las 10:30 |
+| Relación con Jorge | **Lo conoce**: es su paciente. Lo trata con calidez y lo tutea |
+| Trato | Cálido y tranquilo. No se lleva bien con la tecnología (_"Estas cosas de la tecnología no son lo mío"_), lo que contrasta con la máquina que usa _(provisorio)_ |
+| Qué hace | Le hace preguntas sobre cómo está, si mejoró y si toma la medicación. Después lo lleva al cuarto de inducción, le explica el tratamiento y lo hace acostar en la máquina. No se da cuenta cuando Jorge le miente |
+| Aspecto | En el prototipo: guardapolvo blanco sobre camisa celeste, pelo canoso y anteojos (provisorio) |
+| Por definir | Nombre de pila. ¿Qué sabe de verdad sobre Jorge? ¿Las mentiras de Jorge tienen consecuencias con él? |
 
 ## Aliados
 

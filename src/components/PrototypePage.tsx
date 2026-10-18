@@ -25,7 +25,7 @@ export function PrototypePage() {
         <h1>Prototipo: juego completo</h1>
       </header>
       <p>
-        El juego entero, de corrido: Casa de Jorge (departamento, escaleras y auto), Hall del edificio (Neural y ascensor) y Consultorio (por ahora, el pasillo). Cada locación
+        El juego entero, de corrido: Casa de Jorge (departamento, escaleras y auto), Hall del edificio (Neural y ascensor) y Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción). Cada locación
         nueva se suma acá. Para probar una locación suelta, entrá a <strong>Casa de Jorge</strong>, <strong>Hall del edificio</strong> o <strong>Consultorio</strong> en el
         menú.
       </p>

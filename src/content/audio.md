@@ -108,6 +108,17 @@ _En el prototipo se reutilizan los sonidos de la Casa de Jorge (provisorio). Los
 
 _En el prototipo se reutilizan los sonidos de las otras locaciones (provisorio)._
 
+### Consultorio: el consultorio y el cuarto de inducción
+
+| Sonido | Cuándo | Notas |
+|---|---|---|
+| Ambiente | Todo el consultorio | El mismo zumbido bajo del edificio. Sin música |
+| Puerta | Cuando Vela sale al cuarto de inducción y cuando Jorge entra | La misma puerta de las otras locaciones |
+| Brazo del casco | Mientras el casco baja hasta la cabeza de Jorge | Un clic mecánico al empezar y otro al llegar |
+| **Máquina de los sueños** | Desde que el casco toca la cabeza hasta el final | **Nuevo.** Zumbido suave y agudo, en tres notas, que sube de a poco y ondula lento. Se apaga junto con el ambiente cuando se cierran los ojos |
+
+_Provisorio. Lo único nuevo es el zumbido de la máquina._
+
 ## Interfaz
 
 | Sonido | Notas |

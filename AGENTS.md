@@ -28,9 +28,10 @@ Antes de dar un cambio por terminado: `npm run build` y `npm run lint` sin error
 | `src/game.ts` | Nombre y versión del juego |
 | `src/components/` | Sidebar, página de sección, página del prototipo (juego completo) y una página por locación |
 | `src/prototype/` | Prototipo en Phaser |
-| `src/prototype/scenes/` | `Warning` (aviso) → `Apartment` (Casa de Jorge) → `Stairs` (títulos) → `Car` (cinemática) → `Neural` (Hall del edificio) → `Corridor` (Consultorio: el pasillo) → `LevelEnd` (cierre) |
+| `src/prototype/scenes/` | `Warning` (aviso) → `Apartment` (Casa de Jorge) → `Stairs` (títulos) → `Car` (cinemática) → `Neural` (Hall del edificio) → `Corridor` (Consultorio: el pasillo) → `Office` (Consultorio: consultorio del doctor Vela y cuarto de inducción) → `LevelEnd` (cierre) |
 | `src/prototype/index.ts` | Un juego por página: `createGame` (prototipo completo), `createLevel1Game`, `createLevel2Game`, `createLevel3Game` (locaciones sueltas, marcan `solo` en el registro y terminan en su cierre) |
 | `src/prototype/scenes/Neural.ts` | Hall del edificio: hall, baño, maestranza y la secuencia del ascensor. También se abre directo en `#/hall` (`createLevel2Game`: aviso → Hall del edificio). Sin física; en desarrollo expone `window.__neural` |
+| `src/prototype/scenes/Office.ts` | Consultorio, segunda parte: consultorio del doctor Vela (preguntas con verdad o mentira, guardadas en `state.consulta`) y cuarto de inducción. Sigue a `Corridor`. Sin física; en desarrollo expone `window.__office` |
 | `src/prototype/ui.ts` | Globos de diálogo, lectura de documentos, opciones |
 | `src/prototype/audio.ts` | Sonidos sintetizados con Web Audio (no hay archivos de audio) |
 | `src/prototype/art.ts` | Texturas dibujadas por código (Jorge, objetos) |
@@ -82,4 +83,4 @@ El juego trata salud mental, pérdida de memoria e ideación suicida. Tratarlo c
 ### 5. Fuera de alcance
 
 - No armar la sección **Roadmap**: el usuario dijo que no hace falta.
-- De Neural está diseñado el **hall** (Hall del edificio), la **secuencia del ascensor** y el **pasillo de los consultorios** (primera parte de Consultorio). De **adentro del consultorio** está definida solo la estructura: sesiones lineales, cada una una parte de la vida de Jorge, que completan una línea de tiempo. El contenido (el doctor Vela, qué pasa en cada sesión, qué hace el jugador en el sueño lúcido) todavía no se diseña.
+- De Neural está diseñado el **hall** (Hall del edificio), la **secuencia del ascensor** y toda la locación **Consultorio**: el pasillo, la charla con el doctor Vela y el cuarto de inducción, hasta que a Jorge se le cierran los ojos. De las **sesiones** está definida solo la estructura: lineales, cada una una parte de la vida de Jorge, que completan una línea de tiempo. Qué pasa en cada sesión y qué hace el jugador en el sueño lúcido todavía no se diseña.
