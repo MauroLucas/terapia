@@ -263,6 +263,61 @@ export function startFeria(): Loop & { clear: () => void } {
   }
 }
 
+// Sesión 2: pajaritos en la plaza, a la tarde
+export function startPajaros(): Loop {
+  let alive = true
+  const chirp = () => {
+    if (!alive) return
+    const base = 2400 + Math.random() * 1400
+    const n = 2 + Math.floor(Math.random() * 3)
+    for (let i = 0; i < n; i++) tone(base + Math.random() * 300, 0.06, 'sine', 0.025, i * 0.09)
+    setTimeout(chirp, 900 + Math.random() * 2600)
+  }
+  chirp()
+  return { stop: () => { alive = false } }
+}
+
+// Sesión 2: lo que se escucha del otro lado de la puerta. Voces que no se entienden y golpes sordos
+export function startDetrasDeLaPuerta(): Loop {
+  const a = out()
+  if (!a) return { stop() {} }
+  const g = a.c.createGain()
+  g.gain.value = 1
+  g.connect(a.m)
+  const f = a.c.createBiquadFilter()
+  f.type = 'lowpass'
+  f.frequency.value = 420
+  f.connect(g)
+  let alive = true
+  const voz = () => {
+    if (!alive) return
+    const t = a.c.currentTime
+    const src = noise(a.c)
+    const vg = a.c.createGain()
+    const dur = 0.4 + Math.random() * 1.1
+    vg.gain.setValueAtTime(0, t)
+    vg.gain.linearRampToValueAtTime(0.12 + Math.random() * 0.08, t + 0.08)
+    vg.gain.setValueAtTime(0.1, t + dur - 0.1)
+    vg.gain.linearRampToValueAtTime(0, t + dur)
+    const bp = a.c.createBiquadFilter()
+    bp.type = 'bandpass'
+    bp.frequency.value = 220 + Math.random() * 260
+    bp.Q.value = 3
+    src.connect(bp).connect(vg).connect(f)
+    src.start(t, Math.random())
+    src.stop(t + dur + 0.05)
+    if (Math.random() < 0.22) tone(58, 0.35, 'sine', 0.22, dur * 0.6, f)
+    setTimeout(voz, (dur + 0.2 + Math.random() * 0.9) * 1000)
+  }
+  voz()
+  return {
+    stop: (fade = 1.5) => {
+      alive = false
+      fadeOutAndStop(g, [], fade)
+    },
+  }
+}
+
 // Ascensor: zumbido del motor y aire en el hueco
 export function startElevator(): Loop {
   const a = out()

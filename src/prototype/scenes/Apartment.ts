@@ -992,7 +992,9 @@ export class Apartment extends Phaser.Scene {
     this.roomTone?.stop(2)
     this.clock?.stop()
     await new Promise((r) => this.time.delayedCall(1500, r))
-    this.scene.start('LevelEnd', { titulo: this.registry.get('solo') ? 'Fin de la locación' : 'Fin del prototipo', locacion: 'La primera noche' })
+    // Suelta termina acá; en el prototipo completo sigue la Sesión 2 (la mañana y la vuelta a Neural todavía no están)
+    if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'La primera noche' })
+    else this.scene.start('Dream2', { semana: true })
   }
 
   // ---------- HUD: inventario y ayuda ----------

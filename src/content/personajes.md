@@ -45,6 +45,7 @@
 | Relación con Jorge | Es su madre |
 | Detalle clave | Jorge no la reconoce: al ver la foto pregunta "¿Quién es esta señora?". Pero en el cajón con candado dejó una nota con su letra: "Te extraño, mamá" |
 | Qué pasó con ella _(spoiler)_ | Tuvo un **primer ACV** y el médico le recomendó estar más tranquila. Por eso hizo un **viaje con Jorge**, en el que se reencontraron como madre e hijo y volvieron a tener una relación cercana. Poco después murió de un **segundo ACV**, terminal. La foto de la billetera es de ese viaje, y "12/08" es su fecha. Ver "Historia y mundo" → Lore |
+| En la Sesión 2 | En la casa del barrio: se ofrece a firmar el boletín, le pide que se lo dé al papá "cuando esté tranquilo", y a la noche se lo pasa firmado por debajo de la puerta. Sigue sin cara |
 | En el sueño | En la Sesión 1 (la feria) aparece en el recuerdo de cuando Jorge se perdió de chico: le compra algodón de azúcar, lo mira desde el banco de la calesita y, al final, lo encuentra. **No tiene cara**: una luz se la tapa. Le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Aspecto en el prototipo: pelo largo castaño, tapado terracota (provisorio) |
 | Distancia | De grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte**: Jorge la empujó, ella se cayó y se lastimó. Dejaron de hablarse hasta el viaje. A Jorge le dejó **mucha culpa** |
 | Su muerte _(spoiler)_ | Es lo que llevó a Jorge a la crisis del baño |
@@ -55,8 +56,8 @@
 
 | Campo | Valor |
 |---|---|
-| Primera aparición | En los recuerdos, la Sesión 2 (la adolescencia), _por definir_. **En persona, recién en el epílogo:** después de la revelación, Jorge decide llamarlo e ir a verlo |
-| Relación con Jorge | **Padre ausente.** No sabía comunicar sus problemas y los resolvía con **violencia** |
+| Primera aparición | **Sesión 2: El boletín**, como una silueta oscura y sin cara, más grande que las demás. Cerca de él (y de sus cosas) la llama de Vela se achica. **En persona, recién en el epílogo:** después de la revelación, Jorge decide llamarlo e ir a verlo |
+| Relación con Jorge | **Padre ausente.** No sabía comunicar sus problemas y los resolvía con **violencia**, **contra la mamá y contra Jorge** |
 | Qué dejó en Jorge | Jorge creció así y es disfuncional: en la pelea con su mamá repitió lo que vio de chico |
 | Cuando Jorge tenía ~20 | **Estaba mal.** La mamá quería que Jorge lo llamara y le dio su número. Jorge guardó el papelito y **nunca llamó** |
 | Hoy | Está vivo. Jorge no lo ve desde hace años. En el epílogo lo llama con el papelito que guardó veinte años |
@@ -69,6 +70,7 @@
 | Nombre | **María** |
 | Primera aparición | Casa de Jorge: de forma indirecta. Su foto es la que falta en el portarretratos de la cómoda |
 | Relación con Jorge | Fue su **primera novia**. Iban a alquilar juntos el departamento donde Jorge vive hoy. Se separaron **a los 20**: ella se fue a **estudiar a Córdoba** por cinco años. Pero **nunca dejaron de hablarse** |
+| A los 15 | **Se conocen en la plaza del barrio** (Sesión 2): ella se acababa de mudar a la vuelta y se ofrece a ayudarlo con matemática. Aspecto en el prototipo: pelo largo oscuro con flequillo, campera de jean y remera blanca (provisorio). **Tiene cara** |
 | A los 30 | Se reencuentran **en un bar**: ella ya está casada; él sigue soltero |
 | En el final _(spoiler)_ | Es quien toca el portero. En el sueño, la mente de Jorge la cambia por el chofer. Ver "Historia y mundo" → Final |
 | Por definir | ¿Por qué Jorge sacó su foto? ¿Qué pasó en el reencuentro? ¿Por qué viene justo esa noche? |
@@ -146,6 +148,14 @@
 | Primera aparición | Sesión 1: La feria |
 | Qué son | Siluetas grises, **sin cara**, repartidas por la feria. No son parte del recuerdo: la luz no las ilumina |
 | Qué dicen | Casi nada: _"¿Y tu mamá, nene?"_, o algo que no se entiende |
+
+### Gente del barrio _(sin nombre)_
+
+| Campo | Valor |
+|---|---|
+| Primera aparición | Sesión 2: El boletín |
+| Quiénes | **El almacenero** (vio al papá ir para el bar) y **la vecina** (_"Decile a tu mamá que cualquier cosa, me golpea la pared"_) |
+| Cómo son | Siluetas sin cara, como la gente de la feria. Saben lo que pasa en la casa y no dicen nada |
 
 ## Aliados
 

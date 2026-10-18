@@ -137,8 +137,11 @@ export class Office extends Phaser.Scene {
     super('Office')
   }
 
-  create(data: { despertar?: boolean } = {}) {
+  private sesion = 1
+
+  create(data: { despertar?: boolean; sesion?: number } = {}) {
     const despertar = !!data.despertar
+    this.sesion = data.sesion ?? 1
     this.busy = true
     this.leaving = false
     this.facing = 1
@@ -490,24 +493,40 @@ export class Office extends Phaser.Scene {
     await lids.to(0.1, 1200)
     await lids.to(1, 2600)
     lids.destroy()
-    await say(this, [
-      this.doc('Despacio. Ya estás acá.'),
-      this.doc('Lo vi todo en la pantalla: la feria, la calesita… tu mamá.'),
-      this.think('Mi mamá.'),
-      this.think('No le pude ver la cara.'),
-      this.doc('Es normal. Los recuerdos vuelven de a poco.'),
-    ])
+    if (this.sesion === 2) {
+      await say(this, [
+        this.doc('Despacio. Ya estás acá.'),
+        this.doc('Lo vi en la pantalla, Jorge. Tu papá.'),
+        this.think('No quiero hablar de eso.'),
+        this.doc('No hace falta. Hoy no.'),
+        this.doc('Pero también la vi a ella. A María.'),
+        this.think('María…'),
+      ])
+    } else {
+      await say(this, [
+        this.doc('Despacio. Ya estás acá.'),
+        this.doc('Lo vi todo en la pantalla: la feria, la calesita… tu mamá.'),
+        this.think('Mi mamá.'),
+        this.think('No le pude ver la cara.'),
+        this.doc('Es normal. Los recuerdos vuelven de a poco.'),
+      ])
+    }
     this.machine.stop(1.5)
     sfx.handle()
     await this.tween({ targets: this.helmet, y: HELMET.up, duration: 2000, ease: 'Sine.InOut', onUpdate: () => this.drawCable() })
     sfx.click()
-    toast(this, '✎ Línea de tiempo: Infancia · La feria')
+    toast(this, this.sesion === 2 ? '✎ Línea de tiempo: Adolescencia · El boletín' : '✎ Línea de tiempo: Infancia · La feria')
     await this.wait(800)
     await say(this, [this.doc('Por hoy alcanza, Jorge.'), this.doc('La semana que viene seguimos.')])
     cam.fadeOut(2000, 0, 0, 0)
     this.tone?.stop(2)
     await new Promise((r) => cam.once('camerafadeoutcomplete', r))
     await this.wait(600)
+    // Después de la Sesión 2 termina el prototipo (la segunda noche todavía no está diseñada)
+    if (this.sesion === 2) {
+      this.scene.start('LevelEnd', { titulo: this.registry.get('solo') ? 'Fin de la locación' : 'Fin del prototipo', locacion: 'Sesión 2: El boletín' })
+      return
+    }
     // Jugando la Sesión 1 suelta, termina acá; en el prototipo completo Jorge vuelve a su casa
     if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'Sesión 1: La feria' })
     else this.scene.start('Apartment', { noche: true })

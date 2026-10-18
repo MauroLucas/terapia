@@ -12,6 +12,7 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 3 | **Consultorio** | Pasillo de los consultorios, consultorio del doctor Vela y cuarto de inducción al sueño | Encontrar el consultorio, charlar con el doctor y acostarse en la máquina de los sueños | En el prototipo |
 | 4 | **Sesión 1: La feria** | Sueño lúcido: una feria de noche, en la infancia de Jorge | Recordar el día que Jorge se perdió de chico y quedarse quieto para que su mamá lo encuentre | En el prototipo |
 | 5 | **La primera noche** | Casa de Jorge, de noche, después de la Sesión 1 | Anotar el recuerdo en la pizarra y dormir. Alguien toca el portero | En el prototipo |
+| 6 | **Sesión 2: El boletín** | Sueño lúcido: la casa de la mamá y el barrio, a los 15 | Conseguir que el papá firme el boletín. Conoce a María | En el prototipo |
 | — | **Sesión 3: La pelea** | El departamento (vacío, a los 20) y la casa de la mamá | La visita con María, el corte, la pelea con la mamá | Idea |
 
 ## Casa de Jorge
@@ -1237,6 +1238,178 @@ Termina cuando Jorge **se duerme**: se le cierran los ojos. _Por definir: lo que
 - ¿Quién guardó la sortija en la caja: la mamá, Jorge?
 - ¿Cómo es la próxima mañana? ¿Vuelve el chofer, se repite algo del primer día?
 - ¿La casa cambia un poco cada vez que Jorge vuelve?
+
+## Sesión 2: El boletín
+
+### Resumen
+
+Es la segunda sesión: la **adolescencia**. Jorge tiene **unos 15 años** y está en **la casa de su mamá**, donde creció, y en **el barrio**. Necesita que **su papá firme el boletín**, y el papá no está en todo el día.
+
+Es la sesión del **papá**: un padre ausente que resolvía todo con violencia. Casi no se lo ve, pero se nota en todos lados. También es el día en que Jorge **conoce a María**.
+
+_Decidido por el usuario: el boletín, que la violencia del papá era contra la mamá y contra Jorge, el eco de la puerta (Jorge trabándola con la espalda) y que María y Jorge se conocen acá. Los diálogos, los vecinos y los detalles los propuso el agente y son provisorios._
+
+**La casa vuelve en la Sesión 3:** es donde pasa la pelea con la mamá. El jugador la conoce acá.
+
+### Cómo es este sueño
+
+Siguen las reglas de la Sesión 1 (ver "Mecánicas" → Sueño lúcido): Vela es una llama, y lo que ilumina pasa de gris a color. Esta vez es **de día**, así que no hay oscuridad hasta la noche. Hay dos reglas nuevas:
+
+| Regla | Qué pasa |
+|---|---|
+| **El frío del papá** | Cerca de sus cosas (la campera, su silla, el bar) **la llama se achica** y la imagen se pone **fría y azulada**. Cuando el papá está, casi se apaga |
+| **El calor de María** | Cerca de María, **la llama crece** |
+| **El papá no tiene cara** | Es una silueta oscura, más grande que las demás. No se lo ve de frente |
+| **La mamá tampoco** | Una luz le tapa la cabeza, como en la feria |
+| **María sí tiene cara** | Está viva. _(Propuesta del agente: los que no tienen cara son los que Jorge evita mirar.)_ |
+| **No se puede cambiar el recuerdo** | Si el jugador elige algo que no pasó (firmar él el boletín), la tinta se borra: _"No fue así, Jorge. Es un recuerdo: no se puede cambiar."_ |
+
+### Los lugares
+
+| Lugar | Qué hay |
+|---|---|
+| Cuarto de Jorge | Cama, escritorio con **el boletín**, un póster de una banda (inventada, "Los Vagos"), una ventana. La puerta del cuarto |
+| Pasillo | **La puerta que no se abre**, más cerca que en la feria: adentro de la casa |
+| Comedor | El perchero con **la campera del papá**, la mesa, **su silla en la cabecera** (con un cenicero), la tele |
+| Cocina | **La mamá**, en la mesada. La puerta a la calle |
+| Frente de la casa | Casa baja, techo de tejas |
+| Almacén | Toldo verde y blanco. **El almacenero**, sin cara |
+| Casa de la vecina | **La vecina**, sin cara, en la puerta |
+| El bar | Ventana iluminada. Adentro, siluetas en la barra: **una es el papá**, de espaldas |
+| Esquina | Un farol |
+| Plaza | Árbol, hamacas rojas, un banco. **María**, al lado de las hamacas |
+
+### Secuencia
+
+1. **Se le abren los ojos** en su cuarto. _"Mi cuarto."_ / _"En la casa de mamá."_ / _"Soy más grande. Tengo… quince, dieciséis."_
+2. Aparece la llama. Vela: _"Acá estoy, Jorge. Estás soñando otra vez."_ / _"Ya sabés cómo es: lo que ilumine, lo vas a poder recordar."_
+3. **El boletín** (escritorio): un **tres en matemática**, y una nota: la preceptora quiere hablar con el padre. _"Lo tiene que firmar mi papá."_ / _"Y lo tengo que llevar mañana."_ Objetivo: **Conseguir que papá firme el boletín**.
+4. **Buscarlo**, en cualquier orden: la mamá, las cosas del papá en el comedor, el almacenero, la vecina. Todos dan una pista de dónde está y de cómo es.
+5. **El bar:** ahí está, en la barra. Jorge no se anima a entrar: _"No. Mejor espero a que vuelva a casa."_ Objetivo: **Hacer tiempo hasta que papá vuelva**.
+6. **La plaza: María** (ver abajo).
+7. Con el bar y María, Vela: _"Se está haciendo de noche, Jorge."_ / _"Tenés que volver a tu casa."_ Se hace de noche: oscuridad alrededor de la llama, los faroles se prenden. Objetivo: **Volver a casa**.
+8. **La cena:** la mamá pone la mesa (_"Lavate las manos, que tu papá ya llega."_). Pasan las luces de un auto por la ventana. **Entra el papá**, oscuro y grande, y se sienta en su silla. La mamá lo saluda; él no contesta. Objetivo: **Darle el boletín a papá**.
+9. **El boletín, otra vez:** Jorge se lo da. _"A ver."_ / _"¿Un tres?"_ / Jorge: _"La preceptora quiere hablar con vos."_ / _"¿Conmigo?"_ / _"Mirame cuando te hablo."_
+10. **El recuerdo se corta.** Negro y silencio. No se muestra lo que pasó.
+11. **En el cuarto** (ver abajo).
+12. Vela: _"Ya pasó, Jorge."_ / _"Vas a despertar."_ Funde a negro y Jorge despierta en la camilla.
+
+### Los que saben
+
+| Quién | Qué dice | Qué piensa Jorge |
+|---|---|---|
+| Mamá | _"No sé, hijo. Ya va a venir."_ Se ofrece a firmarlo ella; Jorge le dice que tiene que ser él. _"…Bueno. Pero dáselo cuando esté tranquilo."_ | _"¿Y cuándo está tranquilo?"_ |
+| Almacenero | _"¿Tu viejo? Pasó temprano. Compró cigarrillos y siguió para el bar."_ | _"El bar."_ |
+| Vecina | _"Hola, Jorgito. ¿Tu mamá está bien?"_ / _"Por nada. Decile que cualquier cosa, me golpea la pared."_ | _"Todos saben. Nadie dice nada."_ |
+
+Y las cosas del papá: la campera (_"Huele a cigarrillo. Si está colgada acá, él no está."_), su silla (_"Nadie se sienta ahí. Ni cuando él no está."_) y la tele (_"Cuando él está, está siempre prendida. Para no hablar."_).
+
+### María
+
+Está al lado de las hamacas. Es lo único luminoso del día: cerca de ella, la llama crece.
+
+> **María:** ¿Estás bien? Hace un rato que das vueltas.
+>
+> **Jorge:** Estoy esperando a mi viejo.
+>
+> **María:** ¿Acá?
+>
+> **Jorge:** No. Que vuelva a casa.
+
+Jorge le muestra el boletín.
+
+> **María:** ¿Un tres en matemática? Yo tengo un dos.
+>
+> **María:** Soy María. Me mudé a la vuelta.
+>
+> **Jorge:** Jorge.
+>
+> **María:** ¿Y por qué no lo firmás vos? Mi hermano lo hace siempre.
+
+Aparecen dos opciones: **"Lo firmo yo."** o **"No. Tiene que ser él."** Si elige firmarlo, Jorge empieza a escribir y **la tinta se borra**: Vela le recuerda que es un recuerdo y no se puede cambiar. Como en la consulta, la elección no cambia nada: es la ilusión de control.
+
+> **María:** Si querés, te ayudo a estudiar. Los martes estoy acá.
+>
+> **Jorge (piensa):** María.
+>
+> **Jorge (piensa):** Es la primera vez en todo el día que me olvido de mi casa.
+
+### En el cuarto
+
+Después del corte, Jorge está **sentado en el piso de su cuarto, con la espalda contra la puerta, trabándola**. Es la misma posición en la que está hoy en el baño: el jugador todavía no lo sabe, pero cuando llegue la revelación lo va a entender.
+
+- La imagen está fría y la llama, chiquita, a su lado.
+- Del otro lado de la puerta **se escucha**, apagado: voces que no se entienden, golpes sordos y la mamá: _"¡Basta!"_. **No se ve nada.** La violencia era contra los dos: contra Jorge en la mesa, y contra la mamá después.
+- Jorge: _"Que se termine."_ / _"Que se termine, por favor."_ Vela: _"Estoy acá, Jorge."_ / _"No estás solo."_
+- Se escucha el auto que se va. Silencio. Golpean la puerta, despacio: _"Jorge… soy mamá."_ / _"Ya se fue. Abrime, hijo."_
+- Opciones: **"Abrir la puerta"** o **"Quedarme acá"**. Ninguna abre: _"Quiero abrir."_ / _"Pero esa noche no le abrí."_ (o _"No puedo."_).
+- La mamá: _"Está bien. Te lo dejo acá."_ y **le pasa el boletín firmado por debajo de la puerta**.
+- _"Lo firmó ella."_ / _"Como siempre."_ / _"Me quedé así toda la noche. Sentado en el piso, trabando la puerta."_
+
+**Que esa noche Jorge no le abre a su mamá** prepara el final: en el baño, cuando María toque, va a elegir abrir.
+
+### La puerta que no se abre
+
+En el pasillo de la casa. _"Otra vez esta puerta."_ / _"Está más cerca que en la feria. Adentro de la casa."_ Vela: _"¿Qué puerta, Jorge? Ahí hay una pared."_ Cada sesión, la puerta está **más cerca** de Jorge.
+
+### Objetivo en pantalla
+
+| Cuándo | Objetivo |
+|---|---|
+| Al despertar en el cuarto | Ver qué hay en el escritorio |
+| Después del boletín | Conseguir que papá firme el boletín |
+| Después del bar | Hacer tiempo hasta que papá vuelva |
+| Después de María, si todavía no fue al bar | Encontrar a papá |
+| De noche | Volver a casa |
+| Cuando llega el papá | Darle el boletín a papá |
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| El boletín | Al ver el boletín |
+| La puerta, otra vez | Al tocar la puerta del pasillo |
+| La silla de papá | Al mirar su silla |
+| Mamá | Al hablar con ella del boletín |
+| El almacenero | Al hablarle |
+| La vecina | Al hablarle |
+| El bar | Al mirar por la ventana del bar |
+| María | Al hablar con ella |
+| La firma: "Esa noche mamá firmó el boletín y me lo pasó por debajo de la puerta. No le abrí…" | En el cuarto, al final |
+
+### Objetos
+
+| Objeto | Qué es |
+|---|---|
+| Boletín ✓ | Su boletín de tercer año: un tres en matemática. Al final, firmado por la mamá (un garabato). Se puede volver a ver desde el diario |
+
+### El despertar
+
+> **Vela:** Despacio. Ya estás acá.
+>
+> **Vela:** Lo vi en la pantalla, Jorge. Tu papá.
+>
+> **Jorge (piensa):** No quiero hablar de eso.
+>
+> **Vela:** No hace falta. Hoy no.
+>
+> **Vela:** Pero también la vi a ella. A María.
+>
+> **Jorge (piensa):** María…
+
+Se suma a la línea de tiempo: _"Adolescencia · El boletín"_.
+
+### En el prototipo
+
+- En el prototipo completo, después de **La primera noche** aparece un cartel (_"Una semana después · Sesión 2"_) y sigue directo con este sueño: **la mañana siguiente y la segunda ida a Neural todavía no están diseñadas**.
+- Después del despertar termina el prototipo: la segunda noche en casa todavía no está.
+
+### Pendiente de definir
+
+- ¿Cuántos años tiene Jorge exactamente? (En el prototipo: "quince, dieciséis".)
+- ¿El papá vivía con ellos o aparecía y desaparecía?
+- ¿Cómo es la mañana siguiente y la segunda ida a Neural?
+- ¿Qué hace Jorge con el boletín en la segunda noche en casa? ¿Aparece algo en la casa (el papelito, otra cosa)?
 
 ## Sesión 3: La pelea _(idea)_
 

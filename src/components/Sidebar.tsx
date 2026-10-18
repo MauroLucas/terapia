@@ -70,6 +70,14 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
           <span className="nav-icon">🌙</span>
           La primera noche
         </NavLink>
+        <NavLink
+          to="/sesion-2"
+          onClick={onNavigate}
+          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+        >
+          <span className="nav-icon">📄</span>
+          Sesión 2: El boletín
+        </NavLink>
       </nav>
     </aside>
   )

@@ -125,7 +125,9 @@ Adentro de una sesión, las reglas cambian. Esto es lo que se definió con la pr
 - **Los recuerdos se ven como figuras transparentes** que repiten lo que pasó y se desvanecen. Cada recuerdo se anota como pista en el diario.
 - **Mirarse las manos** es la prueba de que se está soñando: en el sueño, las manos salen mal (un dedo de más).
 - **Lógica de sueño:** lugares que se repiten (la feria vuelve a empezar), una puerta sola sin pared, gente sin cara.
-- **Hay una puerta que no se abre** en cada sueño, igual a la del baño. Vela no la ve.
+- **Hay una puerta que no se abre** en cada sueño, igual a la del baño. Vela no la ve. **Cada sesión está más cerca** (en la Sesión 2, adentro de la casa).
+- **La llama cambia según lo que hay cerca** (desde la Sesión 2): cerca de lo que lastima a Jorge (el papá y sus cosas) se achica y hace frío; cerca de lo que lo cuida (María) crece.
+- **El recuerdo no se puede cambiar.** Si el jugador elige algo que no pasó, el sueño no lo deja (en la Sesión 2, la tinta de la firma se borra). La elección está para dar ilusión de control.
 - **No se puede perder.** Los puzzles ayudan si el jugador se traba (la sortija se agranda, Vela da pistas).
 - **Los momentos violentos no los hace el jugador.** El recuerdo se corta justo antes, como si la mente de Jorge no quisiera mirarlo, y sigue con lo que quedó (por ejemplo, en la pelea con su mamá: ella en el piso).
 - Al terminar, Jorge **despierta en la camilla** y se suma un tramo a la línea de tiempo.

@@ -20,7 +20,7 @@ Hay un **prototipo jugable** en este mismo sitio (página **🕹️ Prototipo** 
 
 | Campo | Valor |
 |---|---|
-| Qué cubre | Aviso de contenido → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción) → Sesión 1: La feria (sueño y despertar) → La primera noche |
+| Qué cubre | Aviso de contenido → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción) → Sesión 1: La feria (sueño y despertar) → La primera noche → Sesión 2: El boletín (sueño y despertar) |
 | Cómo abrirlo | `npm run dev` y entrar a **Prototipo** |
 | Online | Publicado en GitHub Pages: https://maurolucas.github.io/terapia/ (se actualiza solo con cada push a `main`) |
 | Controles | Solo teclado (ver "Mecánicas" → Controles) |
@@ -40,6 +40,7 @@ Para no tener que jugar todo desde el principio, **cada locación tiene su propi
 | **🩺 Consultorio** | Aviso de contenido → Pasillo de los consultorios → Consultorio del doctor Vela → Cuarto de inducción → "Fin de la locación" | `Corridor.ts` y `Office.ts`, en `src/prototype/scenes/` |
 | **🎠 Sesión 1: La feria** | Aviso de contenido → Sueño de la feria → Despertar en la camilla → "Fin de la locación" | `Dream.ts` y `Office.ts` (modo despertar), en `src/prototype/scenes/` |
 | **🌙 La primera noche** | Aviso de contenido → Casa de Jorge de noche → "Fin de la locación" | `Apartment.ts` (modo noche), en `src/prototype/scenes/` |
+| **📄 Sesión 2: El boletín** | Aviso de contenido → Sueño de la casa de la mamá y el barrio → Despertar en la camilla → "Fin de la locación" | `Dream2.ts` y `Office.ts` (despertar de la sesión 2), en `src/prototype/scenes/` |
 
 _El prototipo y este documento se mantienen sincronizados: cada cambio de diseño en uno se refleja en el otro._
 

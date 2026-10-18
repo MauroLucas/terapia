@@ -12,6 +12,8 @@ export const state = {
   consulta: [] as { pregunta: string; verdad: boolean }[],
   // Tramos de la vida de Jorge recuperados en las sesiones (la línea de tiempo)
   lineaDeTiempo: [] as string[],
+  // Si Jorge intentó firmar el boletín él mismo en la Sesión 2 (no cambia nada: los recuerdos no mienten)
+  intentoFirmar: false,
 }
 
 export function resetState() {
@@ -20,6 +22,7 @@ export function resetState() {
   state.radio = false
   state.consulta = []
   state.lineaDeTiempo = []
+  state.intentoFirmar = false
 }
 
 export function addPista(titulo: string, texto: string): boolean {

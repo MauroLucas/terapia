@@ -10,7 +10,42 @@ interface Page {
   opts: { w?: number; h?: number; paper?: number }
 }
 
-export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija'
+export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin'
+
+// Boletín de la Sesión 2. Firmado: la firma de la mamá, un garabato
+function boletinPage(firmado: boolean): Page {
+  return {
+    opts: { w: 560, h: 520, paper: 0xe8e2cf },
+    build: (scene, c) => {
+      const ink = '#2b3140'
+      c.add(text(scene, 0, -220, 'BOLETÍN DE CALIFICACIONES', 22, ink, { fontStyle: 'bold' }).setOrigin(0.5))
+      c.add(text(scene, 0, -190, '3.er año · Jorge', 17, '#4a5060').setOrigin(0.5))
+      const notas: [string, string, string][] = [
+        ['Lengua', '7', ink],
+        ['Historia', '6', ink],
+        ['Matemática', '3', '#b11'],
+        ['Biología', '6', ink],
+        ['Inglés', '5', ink],
+      ]
+      notas.forEach(([m, n, col], i) => {
+        c.add(text(scene, -200, -140 + i * 38, m, 19, ink))
+        c.add(text(scene, 180, -140 + i * 38, n, 22, col, { fontStyle: 'bold' }).setOrigin(1, 0))
+      })
+      c.add(scene.add.rectangle(0, 72, 440, 2, 0x8a8f99))
+      c.add(text(scene, 0, 104, 'La preceptora quiere hablar con el padre.', 17, '#b11', { fontFamily: HAND_FONT }).setOrigin(0.5))
+      c.add(text(scene, -200, 170, 'Firma del padre:', 18, ink))
+      c.add(scene.add.rectangle(80, 192, 220, 2, 0x2b3140))
+      if (firmado) {
+        const g = scene.add.graphics().lineStyle(2.5, 0x22305a)
+        g.beginPath()
+        g.moveTo(-10, 186)
+        for (let x = 0; x <= 170; x += 6) g.lineTo(-10 + x, 180 + Math.sin(x / 9) * 9 - (x > 120 ? (x - 120) * 0.25 : 0))
+        g.strokePath()
+        c.add(g)
+      }
+    },
+  }
+}
 
 export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: Page[] }> = {
   foto: {
@@ -146,6 +181,11 @@ export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: P
     nombre: 'Papel higiénico',
     texto: 'Un rollo entero. Estaba en un cubículo del baño de Neural.',
     pages: [],
+  },
+  boletin: {
+    nombre: 'Boletín',
+    texto: 'Mi boletín de tercer año. Lo tenía que firmar mi papá. Lo firmó mamá.',
+    pages: [boletinPage(false), boletinPage(true)],
   },
   sortija: {
     nombre: 'Sortija',

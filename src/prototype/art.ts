@@ -185,6 +185,32 @@ function drawMama(g: Phaser.GameObjects.Graphics, crouch: boolean) {
   g.fillRoundedRect(13, 16 + dy, 11, 38, 5)
 }
 
+// María a los 15 (Sesión 2): pelo largo oscuro con flequillo, campera de jean, remera blanca. Tiene cara: está viva
+function drawMaria(g: Phaser.GameObjects.Graphics, legs: Legs) {
+  const skin = 0xe9c6a4
+  g.lineStyle(9, 0x2f3a52)
+  const feet: [number, number][] =
+    legs === 'stand' ? [[24, 132], [34, 132]] : legs === 'walkA' ? [[15, 132], [43, 132]] : [[22, 132], [37, 132]]
+  g.lineBetween(25, 98, feet[0][0], feet[0][1] - 4)
+  g.lineBetween(33, 98, feet[1][0], feet[1][1] - 4)
+  g.fillStyle(0xf1efe8)
+  for (const [fx, fy] of feet) g.fillRoundedRect(fx - 6, fy - 5, 15, 7, 3)
+  g.fillStyle(0xf1efe8).fillRoundedRect(17, 50, 26, 44, 7)
+  g.fillStyle(0x5b7fae).fillRoundedRect(13, 48, 10, 46, 5).fillRoundedRect(37, 48, 10, 46, 5).fillRect(13, 48, 34, 8)
+  const armX = legs === 'walkA' ? 22 : legs === 'walkB' ? 28 : 25
+  g.fillStyle(0x4f6f9a).fillRoundedRect(armX, 54, 10, 38, 5)
+  g.fillStyle(skin).fillCircle(armX + 5, 94, 4.5)
+  // Pelo largo por detrás
+  g.fillStyle(0x2a1d16).fillRoundedRect(14, 20, 30, 42, 10)
+  g.fillStyle(skin).fillRect(26, 38, 9, 10).fillCircle(31, 27, 14).fillTriangle(43, 26, 47, 31, 43, 32)
+  g.fillStyle(0x2a1d16)
+  g.slice(30, 24, 15, Math.PI, Math.PI * 2, false)
+  g.fillPath()
+  g.fillRect(30, 13, 15, 9)
+  g.fillStyle(C.ink).fillCircle(38, 28, 2)
+  g.lineStyle(1.5, 0xb5655a).beginPath().arc(39, 33, 4, 0.2, 1.2).strokePath()
+}
+
 // Gente de la feria: siluetas grises, sin cara
 function drawSombra(g: Phaser.GameObjects.Graphics) {
   g.fillStyle(0x4d5363)
@@ -346,6 +372,20 @@ export function makeTextures(scene: Phaser.Scene) {
   g.fillStyle(0xffd27a).fillEllipse(12, 28, 12, 20).fillTriangle(7, 26, 17, 26, 12, 8)
   g.fillStyle(0xfff6dc).fillEllipse(12, 32, 6, 10)
   g.generateTexture('llama', 24, 42)
+
+  // Sesión 2: María a los 15 y el boletín
+  const maria: [string, Legs][] = [['maria0', 'stand'], ['maria1', 'walkA'], ['maria2', 'walkB']]
+  for (const [key, legs] of maria) {
+    g.clear()
+    drawMaria(g, legs)
+    g.generateTexture(key, 56, 140)
+  }
+  g.clear()
+  g.fillStyle(0xe8e2cf).fillRect(0, 0, 22, 28)
+  g.fillStyle(0x6f8fc0).fillRect(0, 0, 22, 5)
+  g.lineStyle(1, 0x8a8f99)
+  for (let y = 9; y < 26; y += 4) g.lineBetween(3, y, 19, y)
+  g.generateTexture('boletin', 22, 28)
 
   g.destroy()
 }
