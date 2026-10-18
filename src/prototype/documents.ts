@@ -10,7 +10,7 @@ interface Page {
   opts: { w?: number; h?: number; paper?: number }
 }
 
-export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin'
+export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin' | 'cuaderno'
 
 // Boletín de la Sesión 2. Firmado: la firma de la mamá, un garabato
 function boletinPage(firmado: boolean): Page {
@@ -186,6 +186,36 @@ export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: P
     nombre: 'Boletín',
     texto: 'Mi boletín de tercer año. Lo tenía que firmar mi papá. Lo firmó mamá.',
     pages: [boletinPage(false), boletinPage(true)],
+  },
+  cuaderno: {
+    nombre: 'Cuaderno de matemática',
+    texto: 'Mi cuaderno de cuando tenía quince. En los márgenes, la letra de María.',
+    pages: [
+      {
+        opts: { w: 600, h: 520, paper: 0xf4f1e6 },
+        build: (scene, c) => {
+          const g = scene.add.graphics()
+          g.lineStyle(1, 0x9fb4c8, 0.7)
+          for (let y = -220; y <= 230; y += 26) g.lineBetween(-280, y, 280, y)
+          g.lineStyle(2, 0xd98080, 0.7).lineBetween(-200, -250, -200, 250)
+          c.add(g)
+          const mine = '#2b3140'
+          c.add(text(scene, -180, -210, 'Ecuaciones', 24, mine, { fontFamily: HAND_FONT }))
+          c.add(text(scene, -180, -160, '2x + 3 = 11', 22, mine, { fontFamily: HAND_FONT }))
+          c.add(text(scene, -180, -132, '2x = 11 + 3   ✗', 22, '#9a4040', { fontFamily: HAND_FONT }))
+          c.add(text(scene, -180, -80, '2x = 11 − 3', 22, mine, { fontFamily: HAND_FONT }))
+          c.add(text(scene, -180, -54, 'x = 4', 22, mine, { fontFamily: HAND_FONT }))
+          // La letra de María, en otro color
+          const hers = '#7a3b8a'
+          c.add(text(scene, 40, -150, '¡Restás, no sumás!', 20, hers, { fontFamily: HAND_FONT }).setAngle(-4))
+          c.add(text(scene, 60, -64, '¡Bien, Jorge!\nVes que podés.', 20, hers, { fontFamily: HAND_FONT }).setAngle(-3))
+          c.add(text(scene, -150, 60, 'Martes, 18 hs, en la plaza. — M.', 20, hers, { fontFamily: HAND_FONT }).setAngle(-2))
+          c.add(text(scene, -180, 140, 'x + 5 = 12', 22, mine, { fontFamily: HAND_FONT }))
+          c.add(text(scene, -180, 166, 'x = 7', 22, mine, { fontFamily: HAND_FONT }))
+          c.add(text(scene, 70, 166, '✓', 30, hers, { fontFamily: HAND_FONT }))
+        },
+      },
+    ],
   },
   sortija: {
     nombre: 'Sortija',

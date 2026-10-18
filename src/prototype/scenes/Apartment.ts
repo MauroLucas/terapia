@@ -13,6 +13,8 @@ import { openDiary } from './diary'
 // Cada ambiente ocupa su propio tramo del mundo; la cámara se limita al ambiente actual.
 // Con `{ noche: true }` es La primera noche: Jorge vuelve de la Sesión 1, anota el recuerdo en la pizarra,
 // encuentra la sortija, alguien toca el portero (no habla nadie) y se va a dormir.
+// Con `{ noche: true, vuelta: 2 }` es La segunda noche: anota el boletín, encuentra el cuaderno de matemática con
+// la letra de María y en el portero, entre la estática, una voz de mujer dice "¿Jorge?".
 // Con `{ manana: true }` es la Pre-sesión 2: una semana después, Jorge se despierta, suena el portero (el remis),
 // puede repasar la pizarra y, al salir del cuarto, sigue directo en el consultorio (Office, sesión 2).
 
@@ -91,6 +93,7 @@ export class Apartment extends Phaser.Scene {
   // La primera noche
   private noche = false
   private manana = false
+  private vuelta = 1 // qué noche es: 1 (después de la Sesión 1) o 2 (después de la Sesión 2)
   private goal?: ReturnType<typeof objective>
   private pizarraHecha = false
   private cajaVista = false
@@ -104,9 +107,10 @@ export class Apartment extends Phaser.Scene {
     super('Apartment')
   }
 
-  create(data: { noche?: boolean; manana?: boolean } = {}) {
+  create(data: { noche?: boolean; manana?: boolean; vuelta?: number } = {}) {
     this.noche = !!data.noche
     this.manana = !!data.manana
+    this.vuelta = data.vuelta ?? 1
     this.pizarraHecha = this.cajaVista = false
     this.timbreNoche = 'no'
     this.goal = undefined
@@ -780,7 +784,21 @@ export class Apartment extends Phaser.Scene {
     this.caja.fillStyle(0xb08d5c).fillRect(266, 556, 104, 10)
     this.caja.lineStyle(2, 0x6b5232).lineBetween(318, 556, 318, 566)
     this.add.text(318, 584, 'JORGE', { fontFamily: HAND_FONT, fontSize: '12px', color: '#4a3622', resolution: 2 }).setOrigin(0.5).setDepth(4)
+    if (this.vuelta === 2) {
+      // La tapa de la caja quedó al costado, y la feria ya está en la pizarra
+      this.caja.fillStyle(0xb08d5c).fillRect(372, 590, 104, 10)
+      this.wallMark(7)
+    }
     this.goal = objective(this)
+  }
+
+  // Marca de un recuerdo en la pizarra de la pared (la línea va de 0 a 40 años, de x 900 a 1040)
+  private wallMark(age: number) {
+    const x = 900 + (140 * age) / 40
+    const m = this.add.graphics().setDepth(5)
+    m.lineStyle(5, 0x3e7d3c, 0.5).lineBetween(900 + (140 * Math.floor(age / 10) * 10) / 40, 312, 900 + (140 * (Math.floor(age / 10) + 1) * 10) / 40, 312)
+    m.fillStyle(0x3e7d3c).fillCircle(x, 312, 4)
+    m.lineStyle(1.5, 0x3e7d3c).lineBetween(x, 308, x, age < 10 ? 286 : 280)
   }
 
   private itemsNoche(): Interactable[] {
@@ -809,7 +827,7 @@ export class Apartment extends Phaser.Scene {
       { id: 'salida', name: 'Salida', room: 'pasillo', x: DOORS.salida, y: 390, door: true, action: async () => say(this, [this.think('Ya es de noche. No tengo a dónde ir.')]) },
       // Cocina
       { id: 'cocinaAPasillo', name: 'Pasillo', room: 'cocina', x: DOORS.cocinaAPasillo, y: 400, door: true, action: () => this.goTo('pasillo', DOORS.pasilloACocina) },
-      { id: 'calendario', name: 'Calendario', room: 'cocina', x: K + 692, y: 290, action: async () => say(this, [this.think('Hoy fui a Neural.'), this.think('La próxima cruz la pongo mañana.')]) },
+      { id: 'calendario', name: 'Calendario', room: 'cocina', x: K + 692, y: 290, action: async () => say(this, this.vuelta === 2 ? [this.think('Otra semana. Otra vez Neural.')] : [this.think('Hoy fui a Neural.'), this.think('La próxima cruz la pongo mañana.')]) },
       { id: 'heladera', name: 'Heladera', room: 'cocina', x: K + 270, y: 380, action: lejos },
       { id: 'cajon', name: 'Cajón', room: 'cocina', x: K + 1220, y: 460, action: async () => say(this, [this.think('El cajón quedó abierto. Está vacío.')]) },
     ]
@@ -826,11 +844,9 @@ export class Apartment extends Phaser.Scene {
     this.cameras.main.fadeIn(2000, 0, 0, 0)
     sfx.door()
     await new Promise((r) => this.time.delayedCall(1800, r))
-    await say(this, [
-      this.think('Ya está. Volví a casa.'),
-      this.think('Mi mamá. La feria. La calesita.'),
-      this.think('Tengo que anotarlo antes de que se me olvide.'),
-    ])
+    await say(this, this.vuelta === 2
+      ? [this.think('Volví.'), this.think('Mi papá. El boletín. Esa noche, en el piso de mi cuarto.'), this.think('Y María.'), this.think('Tengo que anotarlo.')]
+      : [this.think('Ya está. Volví a casa.'), this.think('Mi mamá. La feria. La calesita.'), this.think('Tengo que anotarlo antes de que se me olvide.')])
     this.goal?.set('Anotar lo que recordé en la pizarra')
     this.busy = false
     const help = text(this, 24, this.scale.height - 34, '← → / A D caminar   ·   E examinar / usar puertas   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa', 16, '#aab2c4')
@@ -846,7 +862,7 @@ export class Apartment extends Phaser.Scene {
   }
 
   // La pizarra: el jugador elige en qué parte de la línea va el recuerdo
-  private pizarraOverlay(feria: boolean) {
+  private pizarraOverlay(feria: boolean, boletin = false) {
     return overlay(this, (c, w) => {
       const ink = '#2b3140'
       c.add(text(this, 0, -150, 'MI VIDA', 30, ink, { fontFamily: HAND_FONT, fontStyle: 'bold' }).setOrigin(0.5))
@@ -867,6 +883,15 @@ export class Apartment extends Phaser.Scene {
         c.add(text(this, xa, -66, 'La feria con mamá', 22, '#2e5f2c', { fontFamily: HAND_FONT }).setOrigin(0.5, 1))
         c.add(text(this, xa, 58, 'me perdí y\nella me encontró', 16, '#4a5060', { fontFamily: HAND_FONT, align: 'center' }).setOrigin(0.5, 0))
       }
+      if (boletin) {
+        // Segundo tramo: la adolescencia, con el boletín cerca de los 15 años
+        const xb = x0 + ((x1 - x0) * 15) / 40
+        g.lineStyle(10, 0x3e7d3c, 0.35).lineBetween(x0 + (x1 - x0) / 4, 0, x0 + (x1 - x0) / 2, 0)
+        g.fillStyle(0x3e7d3c).fillCircle(xb, 0, 9)
+        g.lineStyle(2, 0x3e7d3c).lineBetween(xb, -10, xb, -108)
+        c.add(text(this, xb, -112, 'El boletín', 22, '#2e5f2c', { fontFamily: HAND_FONT }).setOrigin(0.5, 1))
+        c.add(text(this, xb, 104, 'papá. Esa noche no\nle abrí a mamá.\nConocí a María', 16, '#4a5060', { fontFamily: HAND_FONT, align: 'center' }).setOrigin(0.5, 0))
+      }
       c.add(g)
       c.add(text(this, x0, -24, 'Nací', 22, ink, { fontFamily: HAND_FONT }).setOrigin(0.5, 1))
       c.add(text(this, x1, -24, 'HOY', 22, '#b11', { fontFamily: HAND_FONT, fontStyle: 'bold' }).setOrigin(0.5, 1))
@@ -874,6 +899,7 @@ export class Apartment extends Phaser.Scene {
   }
 
   private async pizarraNoche() {
+    if (this.vuelta === 2) return this.pizarraNoche2()
     if (this.pizarraHecha) {
       await this.pizarraOverlay(true)
       await say(this, [this.think('Es lo único que hay. Pero ya no está vacía.')])
@@ -900,6 +926,30 @@ export class Apartment extends Phaser.Scene {
     this.nextGoal()
   }
 
+  // Segunda noche: el boletín va en la adolescencia
+  private async pizarraNoche2() {
+    if (this.pizarraHecha) {
+      await this.pizarraOverlay(true, true)
+      await say(this, [this.think('Dos cosas. Ya es algo.')])
+      return
+    }
+    await this.pizarraOverlay(true)
+    await say(this, [this.think('¿Dónde va lo del boletín?')])
+    for (;;) {
+      const i = await choose(this, ['Entre los 0 y los 10 años', 'Entre los 10 y los 20', 'Entre los 20 y los 30', 'Entre los 30 y los 40'], { x: 640, y: 600 })
+      if (i === 1) break
+      await say(this, [this.think(i === 0 ? 'No. Ya no era tan chico. Iba a la secundaria.' : 'No… Era más chico. Tenía quince, dieciséis.')])
+    }
+    sfx.paper()
+    await this.pizarraOverlay(true, true)
+    await say(this, [this.think('"El boletín."'), this.think('No quiero escribir más que eso.')])
+    this.pizarraHecha = true
+    this.wallMark(15)
+    if (!state.lineaDeTiempo.includes('Adolescencia: el boletín')) state.lineaDeTiempo.push('Adolescencia: el boletín')
+    this.pista('Pizarra', 'Anoté el segundo recuerdo: el boletín, cuando tenía quince. Mi papá. Y María.')
+    this.nextGoal()
+  }
+
   private async fotoNoche() {
     await showPage(this, 'foto', 0)
     await say(this, [
@@ -913,6 +963,7 @@ export class Apartment extends Phaser.Scene {
   }
 
   private async cajaNoche() {
+    if (this.vuelta === 2) return this.cuaderno()
     if (this.cajaVista) {
       await say(this, [this.think('Cosas de cuando era chico.')])
       return
@@ -928,6 +979,26 @@ export class Apartment extends Phaser.Scene {
     await showObjeto(this, 'sortija')
     await say(this, [this.think('La sortija de la calesita.'), this.think('Fue real.'), this.think('Alguien la guardó todos estos años.')])
     this.pista('La sortija', 'En una caja de cosas de chico estaba la sortija de la calesita. El recuerdo fue real.')
+  }
+
+  // Segunda noche: abajo de todo en la caja, el cuaderno de matemática con la letra de María
+  private async cuaderno() {
+    if (this.cajaVista) {
+      await say(this, [this.think('Mi cuaderno. Y la letra de María.')])
+      return
+    }
+    this.cajaVista = true
+    sfx.paper()
+    await say(this, [this.think('La caja de cosas de chico.'), this.think('Abajo de todo hay algo más. Un cuaderno.')])
+    this.addInventory('cuaderno')
+    await showObjeto(this, 'cuaderno')
+    await say(this, [
+      this.think('Mi cuaderno de matemática.'),
+      this.think('Esta letra no es mía.'),
+      this.think('María. Los martes, en la plaza.'),
+      this.think('Fue real.'),
+    ])
+    this.pista('El cuaderno', 'En la caja estaba mi cuaderno de matemática de cuando tenía quince. En los márgenes, la letra de María.')
   }
 
   // Después de la pizarra, al salir del cuarto, suena el portero
@@ -962,6 +1033,17 @@ export class Apartment extends Phaser.Scene {
     this.timbreNoche = 'atendido'
     await say(this, [this.speak('¿Hola?')])
     sfx.estatica()
+    if (this.vuelta === 2) {
+      // Esta vez, entre la estática, se escucha una voz de mujer
+      await say(this, [this.intercom('…¿Jorge…?')])
+      sfx.estatica()
+      await say(this, [this.speak('¿Hola? ¿Quién habla?')])
+      await new Promise((r) => this.time.delayedCall(1500, r))
+      await say(this, [this.think('Se cortó.'), this.think('Era una voz de mujer.'), this.think('La conozco. No sé de dónde.')])
+      this.pista('El portero, otra noche', 'Otra vez tocaron el portero de noche. Entre la estática, una voz de mujer dijo mi nombre. La conozco y no sé de dónde.')
+      this.nextGoal()
+      return
+    }
     await say(this, [this.intercom('…'), this.speak('¿Quién es?')])
     sfx.estatica()
     await new Promise((r) => this.time.delayedCall(1500, r))
@@ -980,12 +1062,14 @@ export class Apartment extends Phaser.Scene {
       return
     }
     if (!this.cajaVista) {
-      await say(this, [this.think('Hay algo debajo de la cama.')])
+      await say(this, [this.think(this.vuelta === 2 ? 'La caja de abajo de la cama… ¿habrá algo más?' : 'Hay algo debajo de la cama.')])
       await this.cajaNoche()
     }
     this.goal?.set(null)
     this.leaving = true
-    await say(this, [this.think('Mañana capaz me olvido de todo.'), this.think('Pero está en la pizarra.')])
+    await say(this, this.vuelta === 2
+      ? [this.think('Esa noche me quedé trabando la puerta.'), this.think('Hoy no hay nadie del otro lado.'), this.think('¿O sí?')]
+      : [this.think('Mañana capaz me olvido de todo.'), this.think('Pero está en la pizarra.')])
     // Se acuesta
     this.player.setVisible(false)
     this.add.image(250, 488, 'jorge0').setAngle(-90).setDepth(5)
@@ -998,6 +1082,11 @@ export class Apartment extends Phaser.Scene {
     this.roomTone?.stop(2)
     this.clock?.stop()
     await new Promise((r) => this.time.delayedCall(1500, r))
+    if (this.vuelta === 2) {
+      // Después de la segunda noche termina el prototipo (la Pre-sesión 3 todavía no está)
+      this.scene.start('LevelEnd', { titulo: this.registry.get('solo') ? 'Fin de la locación' : 'Fin del prototipo', locacion: 'La segunda noche' })
+      return
+    }
     // Suelta termina acá; en el prototipo completo sigue la Pre-sesión 2 (la mañana, una semana después)
     if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'La primera noche' })
     else this.scene.start('Apartment', { manana: true })

@@ -14,6 +14,7 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 5 | **La primera noche** | Casa de Jorge, de noche, después de la Sesión 1 | Anotar el recuerdo en la pizarra y dormir. Alguien toca el portero | En el prototipo |
 | 6 | **Pre-sesión 2** | Casa de Jorge (la mañana, una semana después) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
 | 7 | **Sesión 2: El boletín** | Sueño lúcido: la casa de la mamá y el barrio, a los 15 | Conseguir que el papá firme el boletín. Conoce a María | En el prototipo |
+| 8 | **La segunda noche** | Casa de Jorge, de noche, después de la Sesión 2 | Anotar el boletín en la pizarra y dormir. En la caja, el cuaderno con la letra de María. Una voz de mujer en el portero | En el prototipo |
 | — | **Sesión 3: La pelea** | El departamento (vacío, a los 20) y la casa de la mamá | La visita con María, el corte, la pelea con la mamá | Idea |
 
 ## Casa de Jorge
@@ -1459,13 +1460,119 @@ Se suma a la línea de tiempo: _"Adolescencia · El boletín"_.
 ### En el prototipo
 
 - Viene después de la **Pre-sesión 2**.
-- Después del despertar termina el prototipo: la segunda noche en casa todavía no está.
+- Después del despertar sigue **La segunda noche**.
 
 ### Pendiente de definir
 
 - ¿Cuántos años tiene Jorge exactamente? (En el prototipo: "quince, dieciséis".)
 - ¿El papá vivía con ellos o aparecía y desaparecía?
-- ¿Qué hace Jorge con el boletín en la segunda noche en casa? ¿Aparece algo en la casa (el papelito, otra cosa)?
+
+## La segunda noche
+
+### Resumen
+
+Jorge **vuelve a su casa** después de la Sesión 2. Es la misma casa de La primera noche, con la misma estructura: anotar el recuerdo en la pizarra, la caja de abajo de la cama, el portero y dormir. Lo que cambia es **lo que encuentra**.
+
+Esta vez el recuerdo duele: Jorge no quiere escribir más que _"El boletín"_. Pero en la caja aparece **algo bueno** de esa misma época: el cuaderno de matemática con la letra de María. Y en el portero, por primera vez, **habla alguien**.
+
+_Lo decidió el usuario: el objeto es el cuaderno de matemática con la letra de María, la puerta del baño queda igual y en el portero una voz de mujer dice "¿Jorge?" entre la estática y se corta. Los diálogos los propuso el agente y son provisorios._
+
+### Qué cambió en la casa
+
+| Lugar | La segunda noche |
+|---|---|
+| Todo el departamento | Igual que La primera noche: oscuro, con luz azulada y la lámpara de la mesita prendida |
+| Pizarra de la pared | Ya tiene la marca de la feria (cerca de los 7 años). Al anotar el boletín se suma otra cerca de los 15 |
+| Caja | La tapa quedó al costado, como la dejó Jorge la primera noche |
+| Puerta del baño | **Igual**: trabada desde adentro |
+| Calendario | _"Otra semana. Otra vez Neural."_ |
+
+### Secuencia
+
+1. La imagen aparece desde negro, en el pasillo. Jorge piensa: _"Volví."_ / _"Mi papá. El boletín. Esa noche, en el piso de mi cuarto."_ / _"Y María."_ / _"Tengo que anotarlo."_ Objetivo: **Anotar lo que recordé en la pizarra**.
+2. **La pizarra** (ver abajo).
+3. **El portero:** al salir del cuarto después de la pizarra suena el timbre, igual que la primera noche.
+4. **La caja:** si la abre (o si se va a dormir sin abrirla: _"La caja de abajo de la cama… ¿habrá algo más?"_), encuentra el cuaderno.
+5. **Dormir:** _"Esa noche me quedé trabando la puerta."_ / _"Hoy no hay nadie del otro lado."_ / _"¿O sí?"_ Se le cierran los ojos.
+
+Las reglas son las de La primera noche: no se puede dormir sin anotar el recuerdo ni con el portero sonando.
+
+### La pizarra
+
+Ya tiene la feria. Jorge piensa _"¿Dónde va lo del boletín?"_:
+
+| Opción | Qué pasa |
+|---|---|
+| Entre los 0 y los 10 años | _"No. Ya no era tan chico. Iba a la secundaria."_ |
+| **Entre los 10 y los 20** | Es la correcta. Se marca la adolescencia y, cerca de los 15, Jorge escribe **"El boletín"**. Abajo, más chico: _"papá. Esa noche no le abrí a mamá. Conocí a María"_ |
+| Entre los 20 y los 30 / Entre los 30 y los 40 | _"No… Era más chico. Tenía quince, dieciséis."_ |
+
+Al anotarlo: _"«El boletín.»"_ / _"No quiero escribir más que eso."_ Si la vuelve a mirar: _"Dos cosas. Ya es algo."_
+
+### La caja: el cuaderno
+
+> **Jorge (piensa):** La caja de cosas de chico.
+>
+> **Jorge (piensa):** Abajo de todo hay algo más. Un cuaderno.
+
+Se abre el cuaderno como documento: hoja rayada con las cuentas de Jorge y, en los márgenes, **la letra de María** en violeta: _"¡Restás, no sumás!"_, _"¡Bien, Jorge! Ves que podés."_ y _"Martes, 18 hs, en la plaza. — M."_ _(textos provisorios)_. Se guarda en el inventario.
+
+> **Jorge (piensa):** Mi cuaderno de matemática.
+>
+> **Jorge (piensa):** Esta letra no es mía.
+>
+> **Jorge (piensa):** María. Los martes, en la plaza.
+>
+> **Jorge (piensa):** Fue real.
+
+Hace de contrapeso: del recuerdo del papá queda también algo que lo cuidó.
+
+### El portero
+
+> **Jorge:** ¿Hola?
+
+Estática. Entre la estática, una voz de mujer:
+
+> **Portero:** …¿Jorge…?
+>
+> **Jorge:** ¿Hola? ¿Quién habla?
+
+Se corta.
+
+> **Jorge (piensa):** Se cortó.
+>
+> **Jorge (piensa):** Era una voz de mujer.
+>
+> **Jorge (piensa):** La conozco. No sé de dónde.
+
+_Encaja con el final (es María, tocando de verdad), pero en el juego todavía no se dice._
+
+### Objetivo en pantalla
+
+Los mismos de La primera noche: **Anotar lo que recordé en la pizarra** → **Atender el portero** → **Irme a dormir**.
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| Pizarra: "Anoté el segundo recuerdo: el boletín, cuando tenía quince. Mi papá. Y María." | Al anotar el recuerdo |
+| El cuaderno: "En la caja estaba mi cuaderno de matemática de cuando tenía quince. En los márgenes, la letra de María." | Al abrir la caja |
+| El portero, otra noche: "Otra vez tocaron el portero de noche. Entre la estática, una voz de mujer dijo mi nombre. La conozco y no sé de dónde." | Al atender el portero |
+
+### Objetos
+
+| Objeto | Dónde | Qué es |
+|---|---|---|
+| Cuaderno ✓ | Cuarto: abajo de todo en la caja | El cuaderno de matemática de Jorge a los 15, con notas de María en los márgenes. Se puede volver a ver desde el diario |
+
+### Final de la locación
+
+Termina cuando Jorge **se duerme**. En el prototipo completo es el **fin del prototipo**: la Pre-sesión 3 y la Sesión 3 todavía no están.
+
+### Pendiente de definir
+
+- ¿La voz del portero vuelve a hablar en las próximas noches? ¿Dice algo más cada vez?
+- ¿Quién guardó el cuaderno en la caja?
 
 ## Sesión 3: La pelea _(idea)_
 

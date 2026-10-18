@@ -86,6 +86,16 @@ export function createLevel5Game(parent: HTMLElement) {
   return game
 }
 
+// La segunda noche sola: la vuelta a casa después de la Sesión 2
+export function createLevel8Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, LevelEnd] }))
+  game.registry.set('start', 'Apartment')
+  game.registry.set('startData', { noche: true, vuelta: 2 })
+  game.registry.set('solo', true)
+  return game
+}
+
 // Pre-sesión 2 sola: la mañana, una semana después, y la consulta con Vela antes del sueño
 export function createLevel7Game(parent: HTMLElement) {
   resetState()

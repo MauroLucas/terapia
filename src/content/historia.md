@@ -143,7 +143,7 @@ Son **siete sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 | # | Etapa | Recuerdo | Qué se sabe | Estado |
 |---|---|---|---|---|
 | 1 | Infancia | **La feria** | Se perdió de chico y su mamá lo encontró | En el prototipo |
-| 2 | Adolescencia (~15) | **El boletín** | El papá: un padre ausente que resolvía todo con violencia, contra la mamá y contra Jorge. Jorge termina en el piso de su cuarto, trabando la puerta. Ese día conoce a María | En el prototipo |
+| 2 | Adolescencia (~15) | **El boletín** | El papá: un padre ausente que resolvía todo con violencia, contra la mamá y contra Jorge. Jorge termina en el piso de su cuarto, trabando la puerta. Ese día conoce a María | En el prototipo (con La segunda noche) |
 | 3 | Juventud (~20) | **La pelea** | Empieza con Jorge y María **visitando el departamento con un inmobiliario**. El mismo día: María se va a Córdoba y cortan; a la noche, la mamá le da el número del papá, insiste y él la empuja. Dejan de hablarse. Le deja mucha culpa | Idea |
 | 4 | Los 30 | **El reencuentro** | Se vuelve a ver con María **en un bar**: ella está casada; él, soltero | Idea |
 | 5 | Adultez | **El viaje del 12/08** | El primer ACV de su mamá y el viaje juntos: se reencuentran como madre e hijo | Idea |

@@ -386,6 +386,11 @@ export function makeTextures(scene: Phaser.Scene) {
   g.lineStyle(1, 0x8a8f99)
   for (let y = 9; y < 26; y += 4) g.lineBetween(3, y, 19, y)
   g.generateTexture('boletin', 22, 28)
+  g.clear()
+  g.fillStyle(0x3a5a8a).fillRoundedRect(0, 0, 22, 28, 2)
+  g.fillStyle(0xf4f1e6).fillRect(4, 6, 14, 10)
+  g.lineStyle(1, 0x2b3140).lineBetween(6, 9, 16, 9).lineBetween(6, 12, 14, 12)
+  g.generateTexture('cuaderno', 22, 28)
 
   g.destroy()
 }

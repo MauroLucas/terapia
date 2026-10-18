@@ -145,6 +145,10 @@ _Provisorio._
 
 _Provisorio. Lo único nuevo es la estática._
 
+### La segunda noche
+
+Los mismos sonidos que La primera noche. Lo único distinto: en el portero, entre dos ráfagas de estática, se escucha **una voz de mujer** que dice _"¿Jorge?"_. En el prototipo se muestra como texto del portero, sin voz grabada. _Provisorio._
+
 ### Sesión 2: El boletín
 
 | Sonido | Cuándo | Notas |

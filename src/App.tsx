@@ -10,6 +10,7 @@ import { Level4Page } from './components/Level4Page'
 import { Level5Page } from './components/Level5Page'
 import { Level6Page } from './components/Level6Page'
 import { Level7Page } from './components/Level7Page'
+import { Level8Page } from './components/Level8Page'
 import { sections } from './sections'
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
           <Route path="/primera-noche" element={<Level5Page />} />
           <Route path="/pre-sesion-2" element={<Level7Page />} />
           <Route path="/sesion-2" element={<Level6Page />} />
+          <Route path="/segunda-noche" element={<Level8Page />} />
           <Route path="/:id" element={<SectionPage />} />
         </Routes>
       </main>
