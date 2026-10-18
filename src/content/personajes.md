@@ -59,7 +59,7 @@
 | Relación con Jorge | **Padre ausente.** No sabía comunicar sus problemas y los resolvía con **violencia** |
 | Qué dejó en Jorge | Jorge creció así y es disfuncional: en la pelea con su mamá repitió lo que vio de chico |
 | Cuando Jorge tenía ~20 | **Estaba mal.** La mamá quería que Jorge lo llamara y le dio su número. Jorge guardó el papelito y **nunca llamó** |
-| Hoy | Está vivo. Jorge no lo ve desde hace años |
+| Hoy | Está vivo. Jorge no lo ve desde hace años. En el epílogo lo llama con el papelito que guardó veinte años |
 | Por definir | ¿Qué le pasaba cuando Jorge tenía ~20? ¿Vivía con ellos o se fue? ¿Cómo es el encuentro del epílogo? |
 
 ### María, la ex novia de Jorge

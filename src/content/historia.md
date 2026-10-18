@@ -59,7 +59,7 @@ Después de la revelación (Jorge en el baño, a punto de quitarse la vida, y Ma
 
 Cierra lo que dejó abierta la pelea: lo que la mamá le pedía esa noche (que no viviera con rencor ni con culpa) es lo que Jorge elige hacer al final.
 
-_Propuesta del agente, sin confirmar:_ que llame con **el papelito** que guardó desde los 20 y nunca usó.
+Lo llama con **el papelito** que su mamá le dio la noche de la pelea: lo guardó **veinte años** y nunca lo había usado.
 
 _Por definir: cómo es el encuentro, qué se dicen, y cuánto se muestra (una escena, solo la llamada, la imagen de Jorge llegando)._
 
