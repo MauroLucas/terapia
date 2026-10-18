@@ -434,6 +434,24 @@ export class Dream extends Phaser.Scene {
       mama.setFlipX(chicoX < mamaX)
       chico.setFlipX(chicoX > mamaX)
     }
+    // Si Jorge está parado donde aparece el recuerdo, se corre a un costado para mirarlo
+    const left = Math.min(mamaX, chicoX ?? mamaX) - 55
+    const right = Math.max(mamaX, chicoX ?? mamaX) + 45
+    if (this.player.x > left && this.player.x < right) {
+      const to = left - 20 > 170 ? left - 20 : right + 20
+      this.facing = to < this.player.x ? -1 : 1
+      this.player.setFlipX(this.facing < 0)
+      const from = this.player.x
+      await this.tween({
+        targets: this.player,
+        x: to,
+        duration: (Math.abs(to - from) / WALK) * 1000,
+        onUpdate: () => this.player.setTexture(Math.floor(Math.abs(this.player.x - from) / 16) % 2 === 0 ? 'chico1' : 'chico2'),
+      })
+      this.player.setTexture('chico0')
+    }
+    this.facing = mamaX > this.player.x ? 1 : -1
+    this.player.setFlipX(this.facing < 0)
     sfx.reveal()
     await this.tween({ targets: [mama, chico], alpha: 0.7, duration: 800 })
     this.tweens.add({ targets: glow, fillAlpha: 0.6, duration: 600 })
@@ -736,7 +754,7 @@ export class Dream extends Phaser.Scene {
       const k = 1 - Math.exp(-dt / 260)
       this.flame.x += (tx - this.flame.x) * k
       if (!this.tweens.isTweening(this.flame)) this.flame.y += (ty - this.flame.y) * k
-      this.flameGlow.setRadius(60 + Math.sin(time / 180) * 4 + (this.phase === 'quieto' ? (this.stillMs / STILL_MS) * 40 : 0))
+      this.flameGlow.setRadius(60 + Math.sin(time / 180) * 4 + (this.phase === 'quieto' ? (this.stillMs / STILL_MS) * 24 : 0))
       this.dark.setPosition(this.flame.x, this.flame.y)
       // Lo que la luz toca un rato, se recuerda
       for (const o of this.objs) {
