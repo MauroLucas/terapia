@@ -287,7 +287,7 @@ export class Dream2 extends Phaser.Scene {
     const g = this.add.graphics()
     // Cielo de la tarde, vereda y calle
     g.fillStyle(0xe8c79a).fillRect(X, 0, Wd, 260)
-    g.fillStyle(0xd9a87a).fillRect(X, 260, Wd, 200)
+    g.fillStyle(0xd9a87a).fillRect(X, 260, Wd, FLOOR - 260)
     g.fillStyle(0x8a8f99).fillRect(X, FLOOR, Wd, 30)
     g.fillStyle(0x4a4f59).fillRect(X, FLOOR + 30, Wd, 90)
     g.lineStyle(1, 0x6f7480)
@@ -308,7 +308,7 @@ export class Dream2 extends Phaser.Scene {
       gg.fillStyle(k(0x2b2b2b)).fillRect(3620, 440, 120, 160)
       gg.fillStyle(k(0x8fb3d9)).fillRect(3520, 440, 80, 80).fillRect(3760, 440, 80, 80)
     })
-    this.label(3680, 340, 'ALMACÉN', 22, '#4a3a2a')
+    this.label(3680, 358, 'ALMACÉN', 22, '#4a3a2a')
     // Casa de la vecina
     this.reveal(POS.vecina, (gg, k) => {
       gg.fillStyle(k(0xc9d6e0)).fillRect(4000, 320, 340, 280)
@@ -519,7 +519,12 @@ export class Dream2 extends Phaser.Scene {
 
   private async entrar() {
     await this.goTo('casa', POS.puertaCalle - 70)
-    if (this.phase === 'noche') await this.llegaPapa()
+    if (this.phase === 'noche') {
+      // Adentro, de noche, las luces de la casa están prendidas: se ve un poco más
+      this.dusk.setFillStyle(0x1a1030, 0.2)
+      this.dark.setAlpha(0.6)
+      await this.llegaPapa()
+    }
   }
 
   private async almacen() {
