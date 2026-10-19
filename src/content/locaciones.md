@@ -33,6 +33,8 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 24 | **Pre-sesión 8** | Casa de Jorge (la mañana) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
 | 25 | **Sesión 8: El velorio** | Sueño lúcido: la sala velatoria y la vereda, de noche, a los 38 | Atravesar el velorio, ir hasta el cajón, salir a tomar aire. María, preocupada; Jorge, distante | En el prototipo |
 | 26 | **La octava noche** | Casa de Jorge, de noche, después de la Sesión 8 | Anotar el velorio y dormir. En el saco negro, el número nuevo de María | En el prototipo |
+| 27 | **Pre-sesión 9** | Casa de Jorge (la mañana) y el consultorio | La última consulta: preguntas y **juegos de memoria** con Vela | En el prototipo |
+| 28 | **Sesión 9: El baño** | Sueño lúcido: su casa, hoy. Después, la realidad: el baño, el pasillo y, unos días después, la cocina | El sueño se desarma. Despertarse en el baño, levantarse, abrir la puerta y atender a María. Epílogo: llamar al papá | En el prototipo |
 
 ## Casa de Jorge
 
@@ -3010,4 +3012,240 @@ Al anotarlo: _"«El velorio. María.»"_ / _"No escribo lo que le dije."_ Si la 
 
 ### Final de la locación
 
-Termina cuando Jorge **se duerme**. En el prototipo completo es el **fin del prototipo**: la Sesión 9 (El baño, el final) todavía no está.
+Termina cuando Jorge **se duerme**. En el prototipo completo sigue la **Pre-sesión 9**.
+
+## Pre-sesión 9
+
+### Resumen
+
+Una semana después de La octava noche: **la última consulta**. Igual que las otras (el portero, la pizarra, Vela), pero antes de ir al cuarto de inducción, **Vela le hace a Jorge unos juegos para ver cómo está de memoria** _(pedido por el usuario)_.
+
+### Qué cambia
+
+| Lugar | Pre-sesión 9 |
+|---|---|
+| Pizarra | _"Está todo."_ / _"Menos hoy."_ |
+| La consulta | Las preguntas, **los juegos de memoria** y, al final: _"Hoy no vamos al pasado, Jorge."_ |
+| Cuarto de inducción | _"Es la última, Jorge."_ / _"Hoy vamos a hoy."_ / _"Acostate. Yo voy con vos."_ |
+
+### Las preguntas
+
+_Provisorias, propuestas por el agente._
+
+| Pregunta | La verdad | La mentira |
+|---|---|---|
+| ¿La llamaste a María? | "No. Tengo su número en la billetera, al lado del de papá." → _"Dos números que no llamás."_ | "Sí. Hablamos." → _"¿Seguro, Jorge?"_ / _"Hoy vamos a ver."_ |
+| ¿Pudiste abrir la puerta del baño? | "No. Sigue trabada desde adentro." → _"Hoy la vamos a abrir."_ | "Sí. No había nada." → _"Mmm."_ / _"Hoy la vamos a abrir igual."_ |
+
+### Los juegos de memoria
+
+Vela: _"Antes de entrar, quiero hacerte unos juegos."_ / _"Para ver cómo está esa memoria."_ Jorge piensa: _"¿Juegos?"_ Son tres, cortos, con lo que Jorge recuperó en las sesiones. **No tienen consecuencias**: equivocarse no cambia nada, Vela corrige y sigue. _(Los juegos los propuso el agente y son provisorios.)_
+
+| Juego | Cómo es | Respuesta |
+|---|---|---|
+| **¿Qué vino antes?** | Vela nombra dos recuerdos y Jorge elige cuál pasó primero. Tres rondas: la fiesta o el boletín, el viaje o el reencuentro, la pelea o la fiesta | El boletín, el reencuentro, la fiesta. Si se equivoca: _"No. Fue al revés."_ |
+| **Las cosas** | _"¿Qué te dio tu mamá la noche de la pelea?"_ (el papelito, una foto, la llave del departamento) y _"¿Qué fecha está escrita atrás de la foto de la billetera?"_ (12/08, 27/08, 28/08) | El papelito y 12/08. Las otras fechas son las de la muerte y el velorio: si elige una, Jorge piensa _"El día que murió."_ o _"El velorio."_ |
+| **La secuencia** | En un cartel aparecen cuatro cosas, una por una: la sortija, el boletín, la foto de la fiesta y los boletos. Después Jorge elige en qué orden aparecieron (entre tres) | El mismo orden en que las recordó en las sesiones |
+
+Al final, según cuántas acertó (de seis): _"Te acordás de casi todo, Jorge."_ / _"Te acordás de bastante, Jorge."_ / _"Está bien, Jorge. Para eso vinimos."_ Y siempre: _"De todo, menos de hoy."_ Jorge piensa: _"¿De hoy?"_
+
+Después sigue la **Sesión 9: El baño**.
+
+## Sesión 9: El baño
+
+### Resumen
+
+Es la última sesión: **hoy**. Jorge tiene 40 años. En el sueño vuelve a su casa, esta noche. Mira la pizarra llena (_"Falta hoy."_) y **suena el portero**, como el primer día: primero se oye la voz del chofer y después **la de María**. Ahí **Vela le dice la verdad**: no es un doctor, Neural no existe, es una parte de Jorge. **El sueño se desarma** y solo queda prendida **la puerta del baño**, trabada desde adentro, porque Jorge está ahí, en el piso. Le mandó un mensaje a María y por eso vino. Con la voz de ella **vuelve el recuerdo del hospital**, y esta vez lo que dijo su mamá se lee: **_"No vivas con rencor, hijo."_** Jorge **se despierta en el piso del baño**, se levanta, destraba la puerta y **atiende el portero**: es María, y le abre.
+
+**Epílogo:** unos días después, Jorge saca el papelito de la billetera y **llama a su papá**. Se corta en el _"¿Hola?"_. Después, el cierre del juego.
+
+_Decidido por el usuario: que la última sesión sea hoy y termine con Jorge despertándose en el baño; que el sueño se desarme con la revelación de Vela; que María venga porque recibió un mensaje raro de Jorge; que las últimas palabras se revelen con el recuerdo sin tachar ("No vivas con rencor, hijo"); y que el epílogo sea solo la llamada al papá. Los diálogos, el baño, el celular, levantarse en tres intentos y el cierre los propuso el agente y son provisorios._
+
+### Cuidado con el tema
+
+Es la escena más delicada del juego. Jorge está en el baño, a punto de quitarse la vida.
+
+- **No se muestra nada de lo que Jorge iba a hacer**: ni cómo, ni con qué. Solo se lo ve sentado en el piso, a oscuras.
+- **El mensaje que le mandó a María no se lee nunca.** Jorge no se acuerda de qué le puso y no lo quiere leer de nuevo.
+- El foco está en **levantarse y abrir**, no en la crisis. El final es esperanzador sin ser mágico: cuando María pregunta si está bien, Jorge contesta la verdad (_"…No."_ / _"Pero abrí."_).
+- Al terminar, **el cierre** muestra a quién llamar (ver "El cierre").
+
+### Cómo es este sueño
+
+| Regla | Qué pasa |
+|---|---|
+| **El sueño es hoy** | Su casa, en gris, como todos los sueños: se ilumina con la llama |
+| **El sueño se desarma** | Cuando Vela dice la verdad, todo se apaga (con un sonido grave que se apaga) y solo queda prendida la puerta del baño, con luz por abajo |
+| **El recuerdo vuelve** | La habitación del hospital, cálida. Primero el globo de la mamá aparece tachado, como en la Sesión 7, y después se lee |
+| **La realidad no tiene llama** | El baño, el pasillo y la cocina son reales: colores normales, sin gris y sin Vela |
+
+### Los lugares
+
+| Lugar | Qué hay |
+|---|---|
+| **Su casa, en el sueño** | El cuarto (la cama y la pizarra llena, con las ocho marcas) y el pasillo (la puerta del baño, el portero y la salida) |
+| **El recuerdo** | La habitación del hospital de la Sesión 7, en tonos cálidos: la cama con la mamá, la silla con Jorge |
+| **El baño, de verdad** | A oscuras. Azulejos, la bañadera, el lavatorio y el espejo. Jorge, en el piso, con las rodillas contra el pecho. **El celular** en el piso, prendido. La puerta, trabada desde adentro, con la luz del pasillo que entra por abajo |
+| **El pasillo, de verdad** | La puerta del baño, abierta. El portero |
+| **La cocina, unos días después** | De día, con sol. La mesa con la billetera, el teléfono de pared y, en la ventana, **una planta** (como en la servilleta de María) |
+
+### Secuencia
+
+1. Cartel: _"Hoy · La última sesión"_. **Se le abren los ojos** en su cuarto. _"Mi casa."_ / _"Es de noche."_ / _"Es hoy."_ Vela: _"Llegamos, Jorge."_ / _"Es la última."_ Objetivo: **Mirar la pizarra**.
+2. **La pizarra:** _"La pizarra está llena."_ / _"La feria. El boletín. La fiesta. La pelea."_ / _"María en el bar. El viaje. Mamá. El velorio."_ / _"Falta hoy."_ Vela: _"Hoy es lo que más te costó mirar."_ Objetivo: **Ir al pasillo**.
+3. Al entrar al pasillo **suena el portero**: _"El portero."_ / _"Como el primer día."_ Objetivo: **Atender el portero**.
+4. **El portero** y **la verdad** (ver abajo). El sueño se desarma. Objetivo: **Ir hasta la puerta del baño**.
+5. **La puerta del baño** (ver abajo). Por el portero: _"Jorge, por favor."_
+6. **El recuerdo** (ver abajo). Vela: _"Ahora despertate, Jorge."_ / _"Ella te está esperando."_ La llama crece y todo se pone blanco.
+7. **El baño** (ver abajo). Objetivo: **Levantarme** → **Abrir la puerta** → **Atender el portero**.
+8. **María** (ver abajo). Fundido a negro.
+9. **El epílogo** (ver abajo) y **el cierre**.
+
+### El portero y la verdad
+
+> **Jorge:** ¿Hola?
+>
+> **Portero:** ¿Jorge? El remis para Neural. Lo espero abajo.
+
+Estática.
+
+> **Portero:** …Jorge… soy María.
+>
+> **Portero:** Abrime, por favor.
+>
+> **Jorge:** ¿María?
+>
+> **Jorge (piensa):** El chofer…
+>
+> **Jorge (piensa):** Siempre fue ella.
+
+La llama se acerca más que nunca.
+
+> **Vela:** Jorge. Tengo que decirte algo.
+>
+> **Vela:** Yo no soy un doctor.
+>
+> **Vela:** Neural no existe. No hay máquina, ni consultorio, ni sesiones.
+>
+> **Vela:** Soy vos, Jorge. La parte de vos que quiere seguir.
+>
+> **Jorge:** ¿Y dónde estoy?
+>
+> **Vela:** Mirá la puerta del baño.
+
+**El sueño se desarma.** _"Se apaga todo."_ / _"Menos la puerta del baño."_
+
+### La puerta del baño
+
+> **Jorge (piensa):** Está trabada desde adentro.
+>
+> **Vela:** Porque estás adentro, Jorge.
+>
+> **Vela:** En el piso. Hace horas.
+>
+> **Vela:** Le mandaste un mensaje a María. Por eso vino.
+>
+> **Jorge:** No me acuerdo de qué le puse.
+>
+> **Vela:** Ella sí.
+
+### El recuerdo
+
+> **Jorge (piensa):** La habitación.
+>
+> **Jorge (piensa):** La mano de mamá.
+>
+> **Mamá:** Hijo…
+>
+> **Mamá:** ████ ██ ██████ ███ █████
+>
+> **Mamá:** No vivas con rencor, hijo.
+>
+> **Jorge (piensa):** Eso me dijo.
+>
+> **Jorge (piensa):** No vivas con rencor.
+>
+> **Jorge (piensa):** Lo mismo que esa noche, con el papelito.
+>
+> **Vela:** Ni con tu papá, Jorge. Ni con vos.
+
+### El baño
+
+Jorge abre los ojos en el piso. Afuera, el portero sigue sonando, apagado.
+
+> **Jorge (piensa):** El baño.
+>
+> **Jorge (piensa):** Estoy en el piso.
+>
+> **Jorge (piensa):** La puerta la trabé yo.
+
+**El celular** (se ve primero): _"El celular."_ / _"Seis llamadas perdidas de María."_ / _"Y el mensaje que le mandé."_ / _"No lo quiero leer de nuevo."_
+
+**Levantarse** cuesta: hay que intentarlo **tres veces** (E tres veces).
+
+| Intento | Qué piensa |
+|---|---|
+| 1 | _"Me pesa todo el cuerpo."_ |
+| 2 | _"«Si te perdés, quedate quieto donde estás, que yo te encuentro.»"_ (lo que le dijo su mamá en la feria, Sesión 1) |
+| 3 | _"Me quedé quieto mucho tiempo."_ / _"Esta vez me vinieron a buscar."_ Y se levanta |
+
+**La puerta:** Jorge la destraba y la abre. Entra la luz del pasillo.
+
+### María
+
+> **Jorge:** ¿María?
+>
+> **María (portero):** ¡Jorge! ¿Estás bien?
+>
+> **Jorge:** …No.
+>
+> **Jorge:** Pero abrí.
+>
+> **María:** Ya subo. Quedate ahí, que ya subo.
+
+Suena el portón. _"Le abrí."_ / _"No sé qué le voy a decir."_ / _"Pero le abrí."_
+
+### El epílogo
+
+Cartel: _"Unos días después"_. La cocina, de día. _"La cocina."_ / _"María me trajo una planta."_ Objetivo: **Buscar el papelito** → **Llamar a papá**.
+
+- **La billetera:** _"La foto de mamá. Y atrás, el papelito."_ Se ve el papelito. _"El número de papá."_ / _"Veinte años en la billetera."_
+- **El teléfono:** se oyen las teclas y el tono de llamada, tres veces. Del otro lado: _"¿Hola?"_ **Corte a negro.**
+
+### El cierre
+
+Sobre negro: **"Terapia"**, y abajo:
+
+> Si estás pasando por un momento difícil, no estás solo. Hablalo con alguien.
+>
+> En Argentina, el Centro de Asistencia al Suicida atiende en el 135 (CABA y GBA) y en el (011) 5275-1135 o el 0800 345 1435 (todo el país).
+
+Después, la pantalla de fin (_"Fin"_ / _"Gracias por jugar"_).
+
+_Los números son los que publica el Centro de Asistencia al Suicida (Buenos Aires). Hay que volver a confirmarlos antes de publicar el juego, y sumar líneas de otros países si se traduce._
+
+### Objetivo en pantalla
+
+| Cuándo | Objetivo |
+|---|---|
+| En el sueño | Mirar la pizarra → Ir al pasillo → Atender el portero → Ir hasta la puerta del baño |
+| En el baño | Levantarme → Abrir la puerta → Atender el portero |
+| En el epílogo | Buscar el papelito → Llamar a papá |
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| La voz del portero: "La voz del portero no era la del chofer. Siempre fue María." | En el portero del sueño |
+| Vela: "Vela no es un doctor y Neural no existe. Vela es una parte mía: la que quiere seguir." | Cuando Vela dice la verdad |
+| La puerta del baño: "La puerta del baño está trabada desde adentro porque yo estoy ahí, en el piso. Le mandé un mensaje a María y por eso vino." | En la puerta |
+| Lo que me dijo mamá: "Ahora me acuerdo de lo último que me dijo mamá, en el hospital: «No vivas con rencor, hijo». Lo mismo que quería la noche de la pelea." | En el recuerdo |
+| El celular: "En el piso del baño, el celular: seis llamadas perdidas de María." | Al mirar el celular |
+| El portero: "Me levanté, abrí la puerta del baño y atendí el portero. Era María. Le abrí." | Al atender |
+| Papá: "Llamé a papá, con el número del papelito." | En el epílogo |
+
+### Pendiente de definir
+
+- ¿Se muestra el encuentro con María cuando sube? (En el prototipo termina en el portero.)
+- ¿Se muestra el encuentro con el papá más adelante?
+- ¿Qué dice el papá, además de "¿Hola?"?

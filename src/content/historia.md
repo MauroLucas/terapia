@@ -51,9 +51,17 @@ Por eso, en la Casa de Jorge, la puerta del baño está "bloqueada desde adentro
 
 - En el sueño, su mente **reemplaza a la ex novia por un chofer desconocido**: alguien neutro, sin relación con él. Es una forma de no enfrentarla.
 - Encaja con el **portarretratos vacío**: Jorge sacó su foto.
-- _Idea para el final:_ en el último momento, la voz del portero ya no es la del chofer sino la de ella. Jorge se levanta, abre la puerta del baño y atiende.
+- En el último momento (Sesión 9), la voz del portero ya no es la del chofer sino la de ella. Jorge se levanta, abre la puerta del baño y atiende.
+- **Por qué viene esa noche** _(decidido por el usuario)_: **recibió un mensaje raro de Jorge**, que la asustó, y salió corriendo para su casa. _En el juego el texto del mensaje no se muestra nunca (decisión del agente, por cuidado): Jorge dice que no se acuerda de qué le puso, y que no lo quiere leer de nuevo._
 - Final **esperanzador**: alguien vino a buscarlo, y él elige abrir.
 - Que era la ex novia quien tocaba el portero **se descubre recién en el final**. En la Casa de Jorge es el chofer.
+
+### La Sesión 9: cómo se cuenta el final _(decidido por el usuario; los diálogos son provisorios)_
+
+1. **El sueño es hoy:** Jorge vuelve a su casa, esta noche. Suena el portero: primero la voz del chofer y después la de María.
+2. **Vela le dice la verdad:** no es un doctor, Neural no existe, es una parte de Jorge (_"la parte de vos que quiere seguir"_). **El sueño se desarma**: se apaga todo menos la puerta del baño.
+3. **Las últimas palabras de la mamá:** con la voz de María vuelve el recuerdo del hospital, y esta vez lo que dijo ya no está tachado: **_"No vivas con rencor, hijo."_**
+4. **Jorge se despierta en el piso del baño.** Se levanta, destraba la puerta y atiende el portero. Es María.
 
 ### Epílogo: el papá
 
@@ -63,7 +71,9 @@ Cierra lo que dejó abierta la pelea: lo que la mamá le pedía esa noche (que n
 
 Lo llama con **el papelito** que su mamá le dio la noche de la pelea: lo guardó **veinte años** y nunca lo había usado.
 
-_Por definir: cómo es el encuentro, qué se dicen, y cuánto se muestra (una escena, solo la llamada, la imagen de Jorge llegando)._
+**Cuánto se muestra** _(decidido por el usuario)_: **solo la llamada.** Unos días después, en la cocina, Jorge saca el papelito de la billetera y llama. Se corta en el _"¿Hola?"_ del otro lado.
+
+_Por definir: si más adelante se muestra el encuentro con el papá._
 
 _Descartado:_ que todo fuera una sesión real en Neural (antes "Opción A"), y la idea de que Jorge fuera una copia digital.
 
@@ -86,7 +96,7 @@ En orden:
 1. La mamá de Jorge tiene un **primer ACV**. El médico le recomienda **estar más tranquila**.
 2. Por esa recomendación, ella y Jorge hacen **un viaje juntos a San Rafael, Mendoza** _(decidido por el usuario)_. En ese viaje **se reencuentran como madre e hijo** y pueden volver a tener una relación más cercana. Jorge intenta pedirle perdón por la pelea, pero **no le salen las palabras**; ella le dice que ya sabe.
 3. **Quince días después del viaje** _(decidido por el usuario)_, ella tiene un **segundo ACV**, que es terminal, y muere. **Jorge está con ella cuando muere** _(decidido por el usuario)_. En la Sesión 7 le da en su casa, un domingo, mientras Jorge pone la mesa, y muere esa noche en el hospital _(detalles provisorios, propuestos por el agente)_.
-4. **Sus últimas palabras** quedan en misterio: Jorge las escuchó, pero su mente las tapa (en el sueño aparecen tachadas, como la causa del informe). Se revelan **en el final, después de que María va a buscarlo** _(decidido por el usuario)_. La idea del usuario, todavía tentativa, es que le haya pedido **que no viva con rencor**: lo mismo que le pedía la noche de la pelea, y lo que Jorge elige hacer en el epílogo, cuando llama a su papá.
+4. **Sus últimas palabras** quedan en misterio: Jorge las escuchó, pero su mente las tapa (en el sueño aparecen tachadas, como la causa del informe). Se revelan **en el final, cuando María va a buscarlo**: vuelve el recuerdo del hospital sin tachar _(decidido por el usuario)_. Le dijo **_"No vivas con rencor, hijo"_**: lo mismo que le pedía la noche de la pelea, y lo que Jorge elige hacer en el epílogo, cuando llama a su papá.
 
 - La **foto de la billetera** (Casa de Jorge) es de ese viaje, y **"12/08"**, escrito atrás, es **la fecha del viaje**.
 - Por eso Jorge la lleva encima, y por eso dejó la nota "Te extraño, mamá" en el cajón que se abre con esa fecha.
@@ -114,7 +124,7 @@ Nada de eso fue culpa de ella: fue la que estaba ahí cuando todo explotó. Y ju
 
 Por eso la culpa es doble: **lastimó a su mamá** y **se convirtió en lo que más odiaba**. La frase de la mamá puede volver en los sueños.
 
-_Por definir: qué le pasaba al papá y qué fue de él, cómo se hace sentir la culpa en el resto del juego, en qué año fue el viaje, y la frase exacta de las últimas palabras de la mamá._
+_Por definir: qué le pasaba al papá y qué fue de él, cómo se hace sentir la culpa en el resto del juego, y en qué año fue el viaje._
 
 **Un recuerdo de la infancia (Sesión 1):** una noche, de chico, Jorge fue a una feria con su mamá y se perdió. Al entrar, ella le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Él se quedó quieto, y ella lo encontró. _Detalles provisorios, propuestos por el agente._
 
@@ -125,7 +135,7 @@ _Por definir: qué le pasaba al papá y qué fue de él, cómo se hace sentir la
 - En la realidad, **es quien toca el portero** esa noche (ver "Final"). En el sueño, la mente de Jorge la cambia por el chofer.
 - Su foto es la que falta en el portarretratos del cuarto.
 
-_Por definir: qué pasó en el reencuentro de los 30 (ese nivel se piensa más adelante), por qué Jorge sacó su foto y por qué viene justo esa noche._
+_Resuelto: el reencuentro de los 30 (Sesión 5) y por qué viene esa noche (recibió un mensaje raro de Jorge). Por definir: por qué Jorge sacó su foto del portarretratos._
 
 ## Estructura: las sesiones
 
@@ -155,8 +165,8 @@ Son **nueve sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 | 6 | Adultez (~38) | **El viaje del 12/08** | Lo llaman del hospital a la oficina: el primer ACV de su mamá. Viajan juntos a **San Rafael, Mendoza**. Frente al río, Jorge intenta pedirle perdón y no le salen las palabras; ella le dice "ya sé, hijo" y **por primera vez se le ve la cara**. Ahí se sacan la foto de la billetera | En el prototipo (con La sexta noche) |
 | 7 | La pérdida (~38) | **La muerte de su mamá** | Quince días después del viaje, el segundo ACV. Jorge está con ella cuando muere y le agarra la mano. Sus últimas palabras quedan tachadas: se revelan en el final. Es lo que estaba tachado en el informe | En el prototipo (con La séptima noche) |
 | 8 | La pérdida (~38) | **El velorio** | Al otro día. Jorge, distante con todos. En la vereda vuelve a hablar con María, que está preocupada por él y le da su número. Lo último que él le dice: _"Supongo que no hay forma de reparar un corazón roto"_ | En el prototipo (con La octava noche) |
-| 9 | Hoy | **El baño** | La puerta del baño se abre. El portero: es ella. Jorge elige abrir | Idea |
-| — | Epílogo | **El papá** | Jorge lo llama y va a verlo | Idea |
+| 9 | Hoy (40) | **El baño** | El sueño es hoy. Vela le dice que es parte de él y el sueño se desarma. Vuelve el recuerdo del hospital sin tachar: "No vivas con rencor, hijo". Jorge se despierta en el piso del baño, abre la puerta y atiende el portero: es María | En el prototipo |
+| — | Epílogo | **El papá** | Unos días después, Jorge lo llama con el papelito. Se corta en el "¿Hola?" | En el prototipo (al final de la Sesión 9) |
 
 - **Entre sesión y sesión**, Jorge vuelve a su casa (una noche) y a la mañana siguiente vuelve a Neural. La pizarra se va llenando de vuelta en vuelta.
 - La 3 (la fiesta) la sumó el usuario para profundizar la relación con María antes de la pelea: así la separación duele más.

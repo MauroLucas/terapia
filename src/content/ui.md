@@ -92,6 +92,10 @@ _En el prototipo, la pizarra está vacía a la mañana y se actualiza en **La pr
 
 **Octavo tramo:** _"La pérdida · El velorio"_. En **La octava noche** Jorge lo escribe arriba de todo, al lado de "Mamá", **en gris**: _"El velorio. María"_. No escribe lo que le dijo a María.
 
+**Noveno tramo:** _"Hoy: el baño"_. Se suma al final de la Sesión 9; no hay noche después para anotarlo en la pizarra.
+
+**El cierre del juego:** sobre negro, el título y un mensaje con a quién llamar si uno está pasando por algo parecido (ver "Locaciones" → Sesión 9 → El cierre). Después, la pantalla de fin: _"Fin"_ / _"Gracias por jugar"_.
+
 **Por definir**
 
 - ¿Qué datos anota cada tramo (fechas, personas, lugares, objetos)?
@@ -155,7 +159,7 @@ Arriba a la izquierda hay un cartel chico con el **objetivo actual** de la locac
 
 - Se **actualiza solo** según lo que Jorge ya sabe y lo que lleva encima. Cuando cambia, el texto nuevo aparece con un fundido y queda unos segundos en verde.
 - Aparece después de los pensamientos de entrada de la locación y se esconde en las secuencias sin control (por ejemplo, el ascensor).
-- Por ahora está en el **Hall del edificio**, en el **consultorio** del doctor Vela, en la **Sesión 1**, en **La primera noche**, en la **Pre-sesión 2**, en la **Sesión 2**, en **La segunda noche**, en la **Pre-sesión 3**, en la **Sesión 3**, en **La tercera noche**, en la **Pre-sesión 4**, en la **Sesión 4**, en **La cuarta noche**, en la **Pre-sesión 5**, en la **Sesión 5**, en **La quinta noche**, en la **Pre-sesión 6**, en la **Sesión 6**, en **La sexta noche**, en la **Pre-sesión 7**, en la **Sesión 7**, en **La séptima noche**, en la **Pre-sesión 8**, en la **Sesión 8** y en **La octava noche** (ver "Locaciones" → "Objetivo en pantalla" de cada una). En la Casa de Jorge y el pasillo de los consultorios: _por definir_.
+- Por ahora está en el **Hall del edificio**, en el **consultorio** del doctor Vela, en la **Sesión 1**, en **La primera noche**, en la **Pre-sesión 2**, en la **Sesión 2**, en **La segunda noche**, en la **Pre-sesión 3**, en la **Sesión 3**, en **La tercera noche**, en la **Pre-sesión 4**, en la **Sesión 4**, en **La cuarta noche**, en la **Pre-sesión 5**, en la **Sesión 5**, en **La quinta noche**, en la **Pre-sesión 6**, en la **Sesión 6**, en **La sexta noche**, en la **Pre-sesión 7**, en la **Sesión 7**, en **La séptima noche**, en la **Pre-sesión 8**, en la **Sesión 8**, en **La octava noche**, en la **Pre-sesión 9** y en la **Sesión 9** (ver "Locaciones" → "Objetivo en pantalla" de cada una). En la Casa de Jorge y el pasillo de los consultorios: _por definir_.
 - Textos provisorios, propuestos por el agente.
 
 ## Controles táctiles
@@ -192,7 +196,7 @@ _Propuesta:_ de fondo, el cuarto de Jorge a oscuras con él durmiendo.
 ## Flujo de pantallas
 
 ```
-Aviso de contenido → Menú principal → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio y cuarto de inducción) → Sesión 1: La feria → Despertar → La primera noche → Pre-sesión 2 → Sesión 2: El boletín → Despertar → La segunda noche → Pre-sesión 3 → Sesión 3: La fiesta → Despertar → La tercera noche → Pre-sesión 4 → Sesión 4: La pelea → Despertar → La cuarta noche → Pre-sesión 5 → Sesión 5: El reencuentro → Despertar → La quinta noche → Pre-sesión 6 → Sesión 6: El viaje del 12/08 → Despertar → La sexta noche → Pre-sesión 7 → Sesión 7: La muerte de su mamá → Despertar → La séptima noche → Pre-sesión 8 → Sesión 8: El velorio → Despertar → La octava noche
+Aviso de contenido → Menú principal → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio y cuarto de inducción) → Sesión 1: La feria → Despertar → La primera noche → Pre-sesión 2 → Sesión 2: El boletín → Despertar → La segunda noche → Pre-sesión 3 → Sesión 3: La fiesta → Despertar → La tercera noche → Pre-sesión 4 → Sesión 4: La pelea → Despertar → La cuarta noche → Pre-sesión 5 → Sesión 5: El reencuentro → Despertar → La quinta noche → Pre-sesión 6 → Sesión 6: El viaje del 12/08 → Despertar → La sexta noche → Pre-sesión 7 → Sesión 7: La muerte de su mamá → Despertar → La séptima noche → Pre-sesión 8 → Sesión 8: El velorio → Despertar → La octava noche → Pre-sesión 9 → Sesión 9: El baño → Epílogo → Cierre
                           ↑                    ↓
                           └──── Menú de pausa (Diario / Opciones)
 ```

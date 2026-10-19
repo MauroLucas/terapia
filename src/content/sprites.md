@@ -34,13 +34,13 @@ _Para las partes del sueño, agregar: `dark atmospheric, desaturated, soft glow,
 
 ### Jorge
 
-![Jorge parado](sprites/jorge0.png) ![Jorge caminando A](sprites/jorge1.png) ![Jorge caminando B](sprites/jorge2.png) ![Jorge sentado](sprites/jorgeSentado.png)
+![Jorge parado](sprites/jorge0.png) ![Jorge caminando A](sprites/jorge1.png) ![Jorge caminando B](sprites/jorge2.png) ![Jorge sentado](sprites/jorgeSentado.png) ![Jorge en el piso](sprites/jorgePiso.png)
 
 | Campo | Valor |
 |---|---|
-| Claves | `jorge0` (parado) · `jorge1`, `jorge2` (pasos de la caminata) · `jorgeSentado` |
-| Tamaño en pantalla | 56 × 140 px (sentado: 72 × 140) |
-| Dónde | En todas las locaciones de grande. Sentado: el sillón del consultorio de Vela. Acostado: hoy es `jorge0` girado 90° (la cama, la camilla de inducción) |
+| Claves | `jorge0` (parado) · `jorge1`, `jorge2` (pasos de la caminata) · `jorgeSentado` · `jorgePiso` |
+| Tamaño en pantalla | 56 × 140 px (sentado y en el piso: 72 × 140) |
+| Dónde | En todas las locaciones de grande. Sentado: el sillón del consultorio de Vela. Acostado: hoy es `jorge0` girado 90° (la cama, la camilla de inducción). En el piso (`jorgePiso`): sentado en el piso del baño, con las rodillas contra el pecho, abrazándolas, la cabeza baja y los ojos cerrados (Sesión 9) |
 | Descripción | Hombre de unos 40 años, 1,75 m, pelo negro corto, sin barba, expresión neutral, un poco cansado. Suéter verde con escote en V sobre remera negra, pantalón negro y zapatos negros |
 
 ```
@@ -523,6 +523,24 @@ Uno por ambiente. Las capturas son del prototipo sin la interfaz (a veces se ve 
 ![La vereda](sprites/fondos/vereda-velatorio.png)
 
 **La vereda, de noche** (1600 px). La fachada de la sala velatoria con su cartel, la puerta con luz amarilla, un farol y edificios con pocas ventanas prendidas. Frío y vacío.
+
+### Sesión 9: El baño
+
+![Su casa, en el sueño](sprites/fondos/casa-hoy.png)
+
+**Su casa, en el sueño** (2600 px). El cuarto y el pasillo de la Casa de Jorge, de noche y en gris, con la pizarra llena (ocho marcas de colores) y la puerta del baño.
+
+![El recuerdo del hospital](sprites/fondos/recuerdo-hospital.png)
+
+**El recuerdo** (1280 px). La habitación del hospital de la Sesión 7, en tonos cálidos y claros, casi blancos.
+
+![El baño](sprites/fondos/bano-real.png)
+
+**El baño, de verdad** (1280 px). A oscuras: azulejos azul grisáceo, una bañadera, el lavatorio y el espejo, el celular prendido en el piso y la puerta trabada, con una línea de luz cálida por abajo. Jorge en el piso. Sin nada más: no se muestra ningún objeto que sugiera lo que iba a hacer.
+
+![La cocina, unos días después](sprites/fondos/cocina-epilogo.png)
+
+**La cocina, unos días después** (1280 px). De día, clara: una ventana con sol, una planta en una maceta, la mesa con la billetera y el teléfono de pared.
 
 ## Cómo se regeneran las imágenes
 

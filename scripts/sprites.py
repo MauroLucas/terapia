@@ -74,6 +74,10 @@ FONDOS = [
     ('sala-velatoria', 'Dream8', {}, "FREEZE; REVEAL; s.player.setPosition(1500, 530)", 1100),
     ('sala-velatoria-cajon', 'Dream8', {}, "FREEZE; REVEAL; s.player.setPosition(700, 530)", 120),
     ('vereda-velatorio', 'Dream8', {}, "FREEZE; REVEAL; s.setArea('vereda'); s.player.setPosition(3400, 530); s.maria.setVisible(true).setPosition(3720, 530)", 3000),
+    ('casa-hoy', 'Dream9', {}, "FREEZE; REVEAL; s.player.setPosition(900, 530)", 300),
+    ('recuerdo-hospital', 'Dream9', {}, "FREEZE; s.setArea('recuerdo'); s.player.setTexture('jorgeSentado').setOrigin(0.5, 1).setPosition(3400, 598)", 3200),
+    ('bano-real', 'Dream9', {}, "FREEZE; s.setArea('bano'); s.player.setTexture('jorgePiso').setOrigin(0.5, 1).setPosition(5520, 602)", 5200),
+    ('cocina-epilogo', 'Dream9', {}, "FREEZE; s.setArea('cocina'); s.player.setPosition(8900, 530)", 8600),
 ]
 
 # Personajes dibujados en la escena: (archivo, fondo del que se recorta, recorte x, y, ancho, alto en pantalla)

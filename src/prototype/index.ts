@@ -10,6 +10,7 @@ import { Dream5 } from './scenes/Dream5'
 import { Dream6 } from './scenes/Dream6'
 import { Dream7 } from './scenes/Dream7'
 import { Dream8 } from './scenes/Dream8'
+import { Dream9 } from './scenes/Dream9'
 import { LevelEnd } from './scenes/LevelEnd'
 import { Neural } from './scenes/Neural'
 import { Office } from './scenes/Office'
@@ -64,7 +65,7 @@ const matter: Phaser.Types.Core.PhysicsConfig = { default: 'matter', matter: { g
 // Prototipo: el juego completo, todas las locaciones de corrido. Cada locación nueva se suma acá.
 export function createGame(parent: HTMLElement) {
   resetState()
-  return fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Stairs, Car, Neural, Corridor, Office, Dream, Dream2, Dream3, Dream4, Dream5, Dream6, Dream7, Dream8, LevelEnd] }))
+  return fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Stairs, Car, Neural, Corridor, Office, Dream, Dream2, Dream3, Dream4, Dream5, Dream6, Dream7, Dream8, Dream9, LevelEnd] }))
 }
 
 // Las locaciones sueltas marcan `solo` en el registro: al terminar muestran su cierre en vez de seguir a la locación siguiente.
@@ -314,6 +315,25 @@ export function createLevel26Game(parent: HTMLElement) {
   const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, LevelEnd] }))
   game.registry.set('start', 'Apartment')
   game.registry.set('startData', { noche: true, vuelta: 8 })
+  game.registry.set('solo', true)
+  return game
+}
+
+// Pre-sesión 9 sola: la mañana después de La octava noche y la última consulta con Vela
+export function createLevel27Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Office, LevelEnd] }))
+  game.registry.set('start', 'Apartment')
+  game.registry.set('startData', { manana: true, vuelta: 8 })
+  game.registry.set('solo', true)
+  return game
+}
+
+// Sesión 9 sola (el baño, el final): el sueño, el despertar en el baño y el epílogo
+export function createLevel28Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), scene: [Warning, Dream9, LevelEnd] }))
+  game.registry.set('start', 'Dream9')
   game.registry.set('solo', true)
   return game
 }

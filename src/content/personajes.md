@@ -12,11 +12,12 @@ _Las imágenes son los sprites provisorios del prototipo. La lista completa, con
 | Lo que carga _(spoiler)_ | **Culpa** por la pelea con su mamá, que murió poco después de que se reencontraran |
 | Tratamiento | Paciente de Neural. Lleva **11 sesiones**, pero no recuerda haber ido |
 | Habilidades | Caminar, explorar e interactuar con objetos |
+| En el final _(spoiler)_ | **Sesión 9: El baño.** Se despierta en el piso del baño, con las rodillas contra el pecho. Se levanta (cuesta tres intentos), destraba la puerta y atiende a María. Cuando ella le pregunta si está bien: _"…No."_ / _"Pero abrí."_ (provisorio). En el epílogo llama a su papá |
 | De chico | En la Sesión 1 (la feria) aparece de chico, de unos 7 años _(provisorio)_: el mismo suéter verde, pantalón corto azul y zapatillas blancas |
 
 #### Apariencia
 
-![Jorge](sprites/jorge0.png) ![Jorge caminando](sprites/jorge1.png) ![Jorge sentado](sprites/jorgeSentado.png) ![Jorge de chico](sprites/chico0.png)
+![Jorge](sprites/jorge0.png) ![Jorge caminando](sprites/jorge1.png) ![Jorge sentado](sprites/jorgeSentado.png) ![Jorge en el piso del baño](sprites/jorgePiso.png) ![Jorge de chico](sprites/chico0.png)
 
 _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesión 1). Ver "Sprites"._
 
@@ -44,7 +45,7 @@ _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesi�
 | Rol | Conductor que tiene que llevar a Jorge a Neural |
 | Dónde está | Esperando en la calle, con el auto |
 | Relación con Jorge | Ninguna: es simplemente un conductor |
-| En el final _(spoiler)_ | No existe: es la forma en que la mente de Jorge disfraza a María, su ex novia, que toca el portero de verdad |
+| En el final _(spoiler)_ | En la Sesión 9 su voz en el portero se convierte en la de María. No existe: es la forma en que la mente de Jorge disfraza a María, su ex novia, que toca el portero de verdad |
 
 ### Mamá de Jorge _(sin nombre)_
 
@@ -75,8 +76,8 @@ _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesi�
 | Relación con Jorge | **Padre ausente.** No sabía comunicar sus problemas y los resolvía con **violencia**, **contra la mamá y contra Jorge** |
 | Qué dejó en Jorge | Jorge creció así y es disfuncional: en la pelea con su mamá repitió lo que vio de chico |
 | Cuando Jorge tenía ~20 | **Estaba mal.** La mamá quería que Jorge lo llamara y le dio su número. Jorge guardó el papelito y **nunca llamó** |
-| Hoy | Está vivo. Jorge no lo ve desde hace años. En el epílogo lo llama con el papelito que guardó veinte años |
-| Por definir | ¿Qué le pasaba cuando Jorge tenía ~20? ¿Vivía con ellos o se fue? ¿Cómo es el encuentro del epílogo? |
+| Hoy | Está vivo. Jorge no lo ve desde hace años. En el epílogo (al final de la Sesión 9) lo llama con el papelito que guardó veinte años. Solo se oye su voz: _"¿Hola?"_, y ahí se corta |
+| Por definir | ¿Qué le pasaba cuando Jorge tenía ~20? ¿Vivía con ellos o se fue? ¿Se muestra el encuentro, más adelante? |
 
 ### María, la ex novia de Jorge
 
@@ -91,7 +92,7 @@ _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesi�
 | A los 17 | **Sesión 3: La fiesta.** Los martes en la plaza ya no estudian: ella quiere irse de su casa a un depto chiquito con un balcón lleno de plantas. Bailan en la fiesta de egresados, se sacan **la foto** y esa noche, en la casa de ella, se dan **el primer beso**. Cuando Jorge no quiere volver a su casa, ella lo lleva a la suya. Aspecto en la fiesta: vestido bordó y pelo suelto (provisorio) |
 | A los 30 | **Sesión 5: El reencuentro.** Se cruzan de casualidad en una esquina y siguen en **un bar**: ella ya está casada; él sigue soltero. Le pregunta por su mamá (_"Llamala, Jorge"_) y le dibuja en una servilleta la ventana de la cocina con plantas. Llueve, la acompaña a la parada y se besan casi por inercia. Jorge se va: ella lo dejó una vez y no le cree. Aspecto en el prototipo: pelo recogido, tapado mostaza, anillo, paraguas rojo (provisorio) |
 | A los 38 | **Sesión 8: El velorio.** Va al velorio de la mamá de Jorge (_"Me enteré hoy. Vine apenas pude"_). Está **preocupada** por él: le pregunta cómo está, si comió, le da su número nuevo (_"Llamame. A la hora que sea"_) y le dice que no tiene que pasar por esto solo. Jorge está distante; lo último que le dice es _"Supongo que no hay forma de reparar un corazón roto"_ y vuelve adentro (decidido por el usuario; los demás diálogos y el número, provisorios). Aspecto en el prototipo: el mismo de los 30 |
-| En el final _(spoiler)_ | Es quien toca el portero. En el sueño, la mente de Jorge la cambia por el chofer. Ver "Historia y mundo" → Final |
+| En el final _(spoiler)_ | Es quien toca el portero. En el sueño, la mente de Jorge la cambia por el chofer. Vino porque **recibió un mensaje raro de Jorge** (decidido por el usuario; el mensaje no se muestra). Por el portero: _"¡Jorge! ¿Estás bien?"_ / _"Ya subo. Quedate ahí, que ya subo."_ (provisorio). Ver "Historia y mundo" → Final |
 | Por definir | ¿Por qué Jorge sacó su foto? ¿Qué pasó en el reencuentro? ¿Por qué viene justo esa noche? |
 
 ### La familia de María _(sin nombre)_
@@ -182,6 +183,7 @@ _Personajes propuestos por el agente para la idea del usuario de "María como re
 | Aspecto | En el prototipo: guardapolvo blanco sobre camisa celeste, pelo canoso y anteojos (provisorio) |
 | En el sueño | Es una **llama de vela** que flota al lado de Jorge y lo acompaña. Habla por la máquina. En la pelea de la Sesión 4 trata de hablarle, pero Jorge está nublado por el odio: su voz llega rota y la llama casi se apaga |
 | Qué es _(spoiler)_ | **Un personaje del subconsciente de Jorge** que trata de ayudarlo a seguir adelante. Como todo Neural, lo inventa su mente |
+| La revelación | **Sesión 9.** Se lo dice a Jorge: _"Yo no soy un doctor."_ / _"Neural no existe."_ / _"Soy vos, Jorge. La parte de vos que quiere seguir."_ (provisorio). En la Pre-sesión 9, antes de la última sesión, le hace **juegos de memoria** |
 | Por definir | Nombre de pila |
 
 ### Gente de la feria _(sin nombre)_

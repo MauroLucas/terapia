@@ -36,6 +36,7 @@ import { controlsHelp } from '../touch'
 // Con `{ manana: true, vuelta: 7 }` es la Pre-sesión 8 (Office, sesión 8).
 // Con `{ noche: true, vuelta: 8 }` es La octava noche: anota el velorio y, en el bolsillo del saco negro, encuentra
 // el número nuevo de María. En el portero, la voz suena preocupada.
+// Con `{ manana: true, vuelta: 8 }` es la Pre-sesión 9 (Office, sesión 9: la última).
 
 const FLOOR = 600
 const CEIL = 110
@@ -857,6 +858,7 @@ export class Apartment extends Phaser.Scene {
     if (recuerdos >= 5) this.wallMark(30, 0x3a5a8a)
     if (recuerdos >= 6) this.wallMark(38, 0xc9952e)
     if (recuerdos >= 7) this.wallMark(39, 0x2b2b2b)
+    if (recuerdos >= 8) this.wallMark(39.5, 0x6a7080)
   }
 
   private drawFotoPortarretratos() {
@@ -1646,8 +1648,9 @@ export class Apartment extends Phaser.Scene {
     this.clock?.stop()
     await new Promise((r) => this.time.delayedCall(1500, r))
     if (this.vuelta === 8) {
-      // Después de la octava noche termina el prototipo (la Sesión 9, el baño, todavía no está)
-      this.scene.start('LevelEnd', { titulo: this.registry.get('solo') ? 'Fin de la locación' : 'Fin del prototipo', locacion: 'La octava noche' })
+      // Suelta termina acá; en el prototipo completo sigue la Pre-sesión 9
+      if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'La octava noche' })
+      else this.scene.start('Apartment', { manana: true, vuelta: 8 })
       return
     }
     if (this.vuelta === 7) {
@@ -1764,7 +1767,9 @@ export class Apartment extends Phaser.Scene {
 
   private async repasarPizarra() {
     await this.pizarraOverlay(this.vuelta)
-    await say(this, this.vuelta >= 7
+    await say(this, this.vuelta >= 8
+      ? [this.think('Está todo.'), this.think('Menos hoy.')]
+      : this.vuelta >= 7
       ? [this.think('El viaje. Y quince días después, mamá.'), this.think('Lo que vino después todavía no lo anoté.')]
       : this.vuelta >= 6
       ? [this.think('El viaje. Le vi la cara.'), this.think('Después del viaje hay un espacio vacío.'), this.think('No quiero mirarlo.')]

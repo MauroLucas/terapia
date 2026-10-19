@@ -238,6 +238,22 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
           <span className="nav-icon">🌖</span>
           La octava noche
         </NavLink>
+        <NavLink
+          to="/pre-sesion-9"
+          onClick={onNavigate}
+          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+        >
+          <span className="nav-icon">🌅</span>
+          Pre-sesión 9
+        </NavLink>
+        <NavLink
+          to="/sesion-9"
+          onClick={onNavigate}
+          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+        >
+          <span className="nav-icon">🚪</span>
+          Sesión 9: El baño
+        </NavLink>
       </nav>
     </aside>
   )

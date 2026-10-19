@@ -251,6 +251,18 @@ Casi sin sonidos nuevos: el ambiente de la sala, los pasos, la puerta y el papel
 ### La octava noche
 
 Los mismos sonidos que las otras noches. En el portero, la voz pregunta si Jorge está bien. _Provisorio._
+
+### Sesión 9: El baño
+
+| Sonido | Cuándo | Notas |
+|---|---|---|
+| Portero | En el sueño y, apagado, desde el baño | El zumbido de siempre. En el baño suena cada pocos segundos hasta que Jorge abre |
+| **El sueño se desarma** | Cuando Vela dice la verdad | **Nuevo.** Un soplido grave y dos notas largas que bajan |
+| Destrabar y abrir | La puerta del baño | El cerrojo y la puerta de siempre |
+| **Teclas del teléfono** | El epílogo | **Nuevo.** Ocho tonos dobles, como los de un teléfono de verdad |
+| **Tono de llamada** | El epílogo | **Nuevo.** Tres tonos largos, y el "¿Hola?" |
+
+_Provisorio._ El ambiente del sueño se apaga cuando Jorge se despierta: en el baño se oye solo el portero.
 ## Interfaz
 
 | Sonido | Notas |

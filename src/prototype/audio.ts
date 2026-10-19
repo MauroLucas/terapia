@@ -127,6 +127,10 @@ export const sfx = {
   taza() { noiseBurst(0.22, 3200, 0.14, 'highpass'); tone(1900, 0.18, 'triangle', 0.04, 0.02); tone(1400, 0.2, 'triangle', 0.03, 0.08) },
   latido() { tone(58, 0.35, 'sine', 0.2); tone(52, 0.3, 'sine', 0.14, 0.24) },
   sirena() { for (let i = 0; i < 4; i++) { tone(660, 0.45, 'sine', 0.025, i * 0.9); tone(880, 0.45, 'sine', 0.025, i * 0.9 + 0.45) } },
+  // Sesión 9: el sueño que se desarma, las teclas del teléfono y el tono de llamada
+  disolver() { noiseBurst(2.4, 700, 0.07); tone(392, 2.6, 'sine', 0.04); tone(261.6, 3.2, 'sine', 0.035, 0.6) },
+  tecla() { const [a, b] = [[697, 1209], [770, 1336], [852, 1477], [941, 1336]][Math.floor(Math.random() * 4)]; tone(a, 0.12, 'sine', 0.03); tone(b, 0.12, 'sine', 0.03) },
+  llamando() { tone(425, 1.0, 'sine', 0.045) },
 }
 
 // Música y ambientes en loop

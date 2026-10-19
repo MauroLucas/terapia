@@ -97,6 +97,32 @@ function drawJorgeSitting(g: Phaser.GameObjects.Graphics) {
   g.lineStyle(2, C.ink).lineBetween(36, 20 + dy, 42, 20 + dy)
 }
 
+// Jorge sentado en el piso, con las rodillas contra el pecho y la cabeza baja (Sesión 9: el baño)
+function drawJorgeFloor(g: Phaser.GameObjects.Graphics) {
+  const dy = 38
+  // Piernas dobladas: muslo hacia la rodilla, pierna hacia el piso
+  g.lineStyle(11, C.pants)
+  g.lineBetween(26, 128, 48, 104)
+  g.lineBetween(48, 104, 52, 130)
+  g.fillStyle(C.shoes).fillRoundedRect(47, 129, 18, 8, 3)
+  // Torso, un poco encorvado
+  g.fillStyle(C.ink).fillRect(15, 120, 26, 9)
+  g.fillStyle(C.sweater).fillRoundedRect(12, 46 + dy, 32, 46, 9)
+  g.fillStyle(C.ink).fillTriangle(29, 46 + dy, 40, 46 + dy, 35, 58 + dy)
+  // Brazo abrazando las rodillas
+  g.lineStyle(12, C.sweaterDark).lineBetween(28, 92, 46, 106)
+  g.fillStyle(C.skin).fillCircle(48, 106, 5)
+  // Cuello y cabeza, inclinada hacia abajo
+  g.fillStyle(C.skin).fillRect(24, 36 + dy, 10, 10).fillCircle(31, 27 + dy, 15).fillTriangle(43, 30 + dy, 47, 36 + dy, 42, 37 + dy)
+  g.fillStyle(C.skinDark).fillCircle(26, 30 + dy, 3)
+  g.fillStyle(C.hair)
+  g.slice(30, 25 + dy, 16, Math.PI * 0.95, Math.PI * 1.95, false)
+  g.fillPath()
+  g.fillRect(14, 22 + dy, 8, 13)
+  // Ojos cerrados
+  g.lineStyle(2, C.ink).lineBetween(36, 30 + dy, 41, 31 + dy)
+}
+
 // Doctor Vela: guardapolvo blanco, pelo canoso y anteojos (provisorio). Parado, caminando o sentado.
 function drawVela(g: Phaser.GameObjects.Graphics, pose: Legs | 'sit') {
   const dy = pose === 'sit' ? 4 : 0
@@ -477,6 +503,9 @@ export function makeTextures(scene: Phaser.Scene) {
   g.clear()
   drawJorgeSitting(g)
   g.generateTexture('jorgeSentado', 72, 140)
+  g.clear()
+  drawJorgeFloor(g)
+  g.generateTexture('jorgePiso', 72, 140)
   const vela: [string, Legs | 'sit', number][] = [['vela0', 'stand', 56], ['vela1', 'walkA', 56], ['vela2', 'walkB', 56], ['velaSentado', 'sit', 72]]
   for (const [key, pose, w] of vela) {
     g.clear()
