@@ -150,7 +150,19 @@ Adentro de una sesión, las reglas cambian. Esto es lo que se definió con la pr
 - **Cinemáticas:** algunos recuerdos se ven como cinemáticas sin control, con bandas negras arriba y abajo (en la Sesión 5, los recuerdos de cuando Jorge y María eran chicos, en sepia).
 - **Las caras.** La mamá tiene una luz que le tapa la cara en todos los recuerdos, hasta la Sesión 6: cuando Jorge le pide perdón (aunque no le salgan las palabras), la luz se apaga y se le ve por primera vez. En la Sesión 7 se le sigue viendo.
 - **Las palabras tachadas.** Lo que la mente de Jorge todavía no puede mirar aparece **tachado** (█████), como la causa del informe de Neural. En la Sesión 7, las últimas palabras de la mamá se ven así en su globo: Jorge las escuchó, pero no se acuerda. Se revelan en el final.
-- **Juegos de memoria (Pre-sesión 9).** Antes de la última sesión, Vela le hace a Jorge tres juegos cortos con lo que recuperó: elegir qué recuerdo vino antes, contestar sobre objetos (el papelito, la fecha de la foto) y repetir el orden de cuatro cosas que aparecen una por una. No tienen consecuencias.
+- **Tests de memoria (en cada consulta).** Pedido del usuario: cada vez que Jorge va al consultorio, Vela le hace un test de memoria simple. Se contestan con las mismas opciones de los diálogos, y algunos muestran cosas en un cartel en el medio de la pantalla. No tienen consecuencias (el resultado se guarda en la consulta), pero ponen a prueba al jugador, no solo a Jorge: el de la Pre-sesión 2 le pide las palabras que escuchó una semana antes. Los tests son provisorios:
+
+| Consulta | Test |
+|---|---|
+| Consultorio (la primera) | **Tres palabras** (mate, colectivo, paraguas): las dice al empezar y las pide al final |
+| Pre-sesión 2 | Las **tres palabras de la semana pasada** |
+| Pre-sesión 3 | **Números:** cuatro cifras, de a una; repetirlas en orden |
+| Pre-sesión 4 | **Las cosas:** cuatro objetos, de a uno; cuál no estaba |
+| Pre-sesión 5 | **Números al revés** |
+| Pre-sesión 6 | **Lo que recordó:** qué le dibujó María en la servilleta |
+| Pre-sesión 7 | **Dónde estaba:** tres objetos juntos; dónde estaba uno |
+| Pre-sesión 8 | **Tres palabras otra vez** (río, álamo, banco: San Rafael), más suave |
+| Pre-sesión 9 | **Los juegos de memoria**, los más largos: qué recuerdo vino antes, preguntas sobre objetos (el papelito, la fecha de la foto) y el orden de cuatro cosas. Al final: _"De todo, menos de hoy."_ |
 - **El sueño que se desarma (Sesión 9).** Cuando Vela le dice la verdad, todo lo recordado se apaga y solo queda prendida la puerta del baño. Lo que viene después es la realidad: sin gris y sin llama.
 - **La distancia (Sesión 8).** En el velorio, Jorge no deja que nadie se le acerque: la llama de Vela lo sigue de lejos, más chica, y las cosas toman color solo cuando Jorge pasa cerca. Cuando alguien le habla, todas las respuestas que puede elegir el jugador son cortantes.
 - **Lo que pasó no se arregla.** Después de algo malo, el jugador puede elegir intentar repararlo (ayudar a la mamá, pedirle perdón), pero el recuerdo no cambia: _"Quise… Pero esa noche no hice nada."_

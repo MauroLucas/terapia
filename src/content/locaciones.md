@@ -33,7 +33,7 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 24 | **Pre-sesión 8** | Casa de Jorge (la mañana) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
 | 25 | **Sesión 8: El velorio** | Sueño lúcido: la sala velatoria y la vereda, de noche, a los 38 | Atravesar el velorio, ir hasta el cajón, salir a tomar aire. María, preocupada; Jorge, distante | En el prototipo |
 | 26 | **La octava noche** | Casa de Jorge, de noche, después de la Sesión 8 | Anotar el velorio y dormir. En el saco negro, el número nuevo de María | En el prototipo |
-| 27 | **Pre-sesión 9** | Casa de Jorge (la mañana) y el consultorio | La última consulta: preguntas y **juegos de memoria** con Vela | En el prototipo |
+| 27 | **Pre-sesión 9** | Casa de Jorge (la mañana) y el consultorio | La última consulta: preguntas y **juegos de memoria** con Vela (los más largos: en las consultas anteriores hay un test por vez) | En el prototipo |
 | 28 | **Sesión 9: El baño** | Sueño lúcido: su casa, hoy. Después, la realidad: el baño, el pasillo y, unos días después, la cocina | El sueño se desarma. Despertarse en el baño, levantarse, abrir la puerta y atender a María. Epílogo: llamar al papá | En el prototipo |
 
 ## Casa de Jorge
@@ -872,8 +872,8 @@ _Diálogos provisorios: la idea y las frases principales son del usuario; el res
 > **Vela:** Vení, pasá.
 
 2. Vela vuelve a su silla y se sienta. El **objetivo** pasa a _"Sentarme frente al doctor Vela"_. Si Jorge le habla antes de sentarse: _"Sentate, Jorge. Ponete cómodo."_
-3. Jorge se sienta en el sillón. Vela: _"Bueno, contame."_ Empiezan las **preguntas** (ver abajo).
-4. Al terminar: _"Bien. Gracias, Jorge."_ / _"Acompañame al cuarto de inducción al sueño."_ Vela se levanta y sale por la puerta del fondo.
+3. Jorge se sienta en el sillón. Vela le dice **tres palabras** para recordar (ver "El test de memoria") y: _"Bueno, contame."_ Empiezan las **preguntas** (ver abajo).
+4. Al terminar, le pide las tres palabras. Después: _"Bien. Gracias, Jorge."_ / _"Acompañame al cuarto de inducción al sueño."_ Vela se levanta y sale por la puerta del fondo.
 5. Jorge queda parado. El objetivo pasa a _"Seguir al doctor Vela"_: el jugador tiene que **caminar hasta esa puerta** y entrar.
 
 **El "nunca ingresaste"** cierra lo del hall: Jorge saltó los molinetes sin carnet, así que para el sistema no entró. Vela no sospecha nada y le echa la culpa a la tecnología.
@@ -900,6 +900,14 @@ Hay que tener en cuenta que **Jorge no recuerda nada de su vida**. Por eso decir
 _Las tres fijas son del usuario; las cuatro al azar y todas las respuestas las propuso el agente._ Algunas respuestas verdaderas retoman lo que pasó en la Casa de Jorge (se despertó vestido, lo vino a buscar un chofer).
 
 **Vela nunca se da cuenta de que Jorge miente**: responde con calma en los dos casos. **Las respuestas no tienen consecuencias**: la elección está para darle al jugador la ilusión de control. El prototipo guarda qué contestó Jorge, pero no se usa en ningún lado.
+
+### El test de memoria
+
+_Pedido del usuario: en cada consulta, Vela le hace a Jorge un test de memoria simple. Los tests y los diálogos los propuso el agente y son provisorios. No tienen consecuencias: el resultado se guarda, nada más._
+
+**Las tres palabras.** Al sentarse, antes de las preguntas: _"Antes de empezar, un ejercicio. Es parte del tratamiento."_ / _"Te voy a decir tres palabras. Acordátelas, que después te las pido."_ / _"Mate. Colectivo. Paraguas."_
+
+Después de las preguntas: _"Antes de irnos: ¿cuáles eran las tres palabras?"_ Tres opciones (_"Mate, colectivo, paraguas"_ · _"Mate, colectivo, ventana"_ · _"Café, colectivo, paraguas"_). Si acierta: _"Muy bien."_ Si no: _"Casi. Eran mate, colectivo y paraguas."_ Y siempre: _"Acordátelas, eh. La semana que viene te las vuelvo a pedir."_
 
 ### El cuarto de inducción al sueño
 
@@ -1289,6 +1297,14 @@ _Provisorias, propuestas por el agente._ Como en la primera consulta, las respue
 | ¿Cómo estuviste esta semana? | "Raro. Me acuerdo de la feria, pero de casi nada más." → _"Es un comienzo, Jorge."_ | "Bien. Tranquilo." → _"Me alegra."_ |
 | ¿Pudiste anotar algo de lo que viste? | "Sí. En la pizarra de mi cuarto: la feria con mi mamá." → _"Muy bien. Eso es tuyo: ya no se pierde."_ | "No, nada." → _"No importa. Lo vamos a ir armando juntos."_ |
 
+### El test de memoria
+
+_Provisorio (ver "Consultorio" → El test de memoria)._ Al empezar, Vela le pide **las tres palabras de la semana pasada**: _"¿Te acordás de las tres palabras que te dije la semana pasada?"_ Es una prueba para el jugador también: tiene que acordarse de lo que escuchó en la primera consulta.
+
+| Opciones | Si acierta | Si no |
+|---|---|---|
+| "Mate, colectivo, paraguas" · "Mate, tren, paraguas" · "Café, colectivo, sombrero" | _"Muy bien. Una semana entera, y te acordaste."_ | _"Eran mate, colectivo y paraguas."_ Jorge: _"Me las había olvidado. Como todo."_ Vela: _"No pasa nada. Para eso estamos."_ |
+
 ### Objetivo en pantalla
 
 | Cuándo | Objetivo |
@@ -1654,6 +1670,10 @@ Después sigue la **Sesión 3: La fiesta**.
 
 ## Sesión 3: La fiesta
 
+### El test de memoria
+
+_Provisorio._ **Números:** _"Hoy, números. Te muestro unos y después me los repetís."_ En un cartel aparecen, de a uno, **4, 9, 2, 7**. _"¿Cuáles eran, en orden?"_ Opciones: "4, 9, 2, 7" · "4, 2, 9, 7" · "4, 9, 7, 2". Si acierta: _"Perfecto."_ Si no: _"Casi. Eran cuatro, nueve, dos, siete."_
+
 ### Resumen
 
 Es la tercera sesión, otra vez en la **adolescencia**: Jorge tiene **unos 17 años**. Es la sesión de **María**, y es una **sesión de respiro**: no aparece el papá, no hay frío y la llama de Vela está más grande que nunca.
@@ -1920,6 +1940,10 @@ _Provisorias, propuestas por el agente._ Las respuestas no tienen consecuencias.
 Después sigue la **Sesión 4: La pelea**.
 
 ## Sesión 4: La pelea
+
+### El test de memoria
+
+_Provisorio._ **Las cosas:** _"Hoy, cosas. Te muestro cuatro. Mirá bien."_ Aparecen de a una, con su nombre: **la sortija, el cuaderno, la foto y la llave**. _"¿Cuál de estas no te mostré?"_ Opciones: "La llave" · "El boletín" · "La sortija". Si elige el boletín: _"Bien. El boletín no estaba."_ Si no: _"Esa sí estaba. La que faltaba era el boletín."_
 
 ### Resumen
 
@@ -2213,6 +2237,10 @@ Después sigue la **Sesión 5: El reencuentro**.
 
 ## Sesión 5: El reencuentro
 
+### El test de memoria
+
+_Provisorio._ **Números al revés:** _"Números otra vez."_ / _"Pero ahora me los decís al revés: del último al primero."_ Aparecen **3, 8, 1, 6**. Opciones: "6, 1, 8, 3" · "6, 8, 1, 3" · "3, 8, 1, 6" (al derecho, la trampa). Si acierta: _"Muy bien. Eso cuesta."_ Si no: _"No. Era seis, uno, ocho, tres."_ y Jorge: _"Me cuesta pensar al revés."_
+
 ### Resumen
 
 Es la quinta sesión: **los 30**. Jorge vuelve del trabajo y se cruza a **María de casualidad**, en una esquina del centro. Siguen la charla en un bar. Se hace tarde y **llueve**: la acompaña hasta la parada del colectivo. Ahí **se acuerdan de cuando eran chicos** y, de vuelta en el presente, **se besan casi por inercia**. Pero Jorge **se arrepiente y se va**: ella lo dejó una vez, y no le cree.
@@ -2425,6 +2453,10 @@ _Provisorias, propuestas por el agente._ Las respuestas no tienen consecuencias.
 Después sigue la **Sesión 6: El viaje del 12/08**.
 
 ## Sesión 6: El viaje del 12/08
+
+### El test de memoria
+
+_Provisorio._ **Lo que recordó:** _"Hoy te pregunto por algo que recordaste."_ / _"¿Qué te dibujó María en la servilleta?"_ Opciones: "Una ventana con plantas" · "Un balcón con plantas" · "Un corazón". Si acierta: _"Bien. La ventana de la cocina."_ Si no: _"No. Era una ventana. La de la cocina, con plantas."_ Si eligió el balcón, Jorge: _"El balcón era lo que quería a los diecisiete."_
 
 ### Resumen
 
@@ -2648,6 +2680,10 @@ _Provisorias, propuestas por el agente._ Las respuestas no tienen consecuencias.
 Después sigue la **Sesión 7: La muerte de su mamá**.
 
 ## Sesión 7: La muerte de su mamá
+
+### El test de memoria
+
+_Provisorio._ **Dónde estaba:** _"Te muestro tres cosas juntas. Fijate dónde está cada una."_ Aparecen las tres a la vez, unos segundos: **el papelito** (izquierda), **la servilleta** (medio) y **los boletos** (derecha). _"¿Dónde estaba la servilleta?"_ Opciones, siempre en este orden: "A la izquierda" · "En el medio" · "A la derecha". Si acierta: _"Bien."_ Si no: _"En el medio, Jorge."_
 
 ### Resumen
 
@@ -2902,6 +2938,12 @@ _Provisorias, propuestas por el agente._ Las respuestas no tienen consecuencias.
 Después sigue la **Sesión 8: El velorio**.
 
 ## Sesión 8: El velorio
+
+### El test de memoria
+
+_Provisorio._ **Tres palabras, otra vez**, como en la primera consulta, pero más suave: _"Hoy no te voy a pedir mucho."_ / _"Tres palabras, como la primera vez. Después te las pido."_ / _"Río. Álamo. Banco."_ Son cosas de San Rafael.
+
+Después de las preguntas: _"Las tres palabras, Jorge."_ Opciones: "Río, álamo, banco" · "Río, viñedo, banco" · "Mar, álamo, banco". Si acierta: _"Bien, Jorge."_ Si no: _"Río, álamo y banco."_ Y siempre Jorge: _"San Rafael."_
 
 ### Resumen
 

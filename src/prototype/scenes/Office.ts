@@ -514,8 +514,10 @@ export class Office extends Phaser.Scene {
     cam.fadeIn(1500, 0, 0, 0)
     await this.wait(1600)
     await say(this, [this.doc('Hola, Jorge. Pasó una semana.')])
+    await this.testAntes()
     const preguntas = this.sesion === 9 ? NOVENA : this.sesion === 8 ? OCTAVA : this.sesion === 7 ? SEPTIMA : this.sesion === 6 ? SEXTA : this.sesion === 5 ? QUINTA : this.sesion === 4 ? CUARTA : this.sesion === 3 ? TERCERA : SEGUNDA
     for (const p of preguntas) await this.preguntar(p)
+    await this.testDespues()
     // Antes de la última sesión, Vela le hace unos juegos de memoria
     if (this.sesion === 9) await this.juegosMemoria()
     await say(this, this.sesion === 9
@@ -527,6 +529,113 @@ export class Office extends Phaser.Scene {
       : [this.doc('Bien.'), this.doc('Hoy vamos a ir un poco más adelante en tu vida.'), this.doc('Acompañame.')])
     cam.startFollow(this.player, true, 0.08, 0.08)
     await this.irseVela()
+  }
+
+  // ---------- Tests de memoria: uno corto en cada consulta (provisorios) ----------
+  // No tienen consecuencias en la historia: el resultado se guarda en `state.consulta` (`sN-test`).
+
+  // Una pregunta con opciones. `ok` es el índice de la correcta en `opciones`; se mezclan salvo que `fijas`
+  private async testPregunta(id: string, q: string, opciones: string[], ok: number, bien: Line[], mal: Line[], fijas = false) {
+    await say(this, [this.doc(q)])
+    const opts = opciones.map((t, k) => ({ t, ok: k === ok }))
+    if (!fijas) Phaser.Utils.Array.Shuffle(opts)
+    const i = await choose(this, opts.map((o) => `"${o.t}"`), { x: 560, y: 700 })
+    state.consulta.push({ pregunta: id, verdad: opts[i].ok })
+    await say(this, [this.speak(`${opts[i].t}.`), ...(opts[i].ok ? bien : mal)])
+    return opts[i].ok
+  }
+
+  // Muestra cosas en un cartel, de a una (`juntos` = false) o las tres juntas. Sin `key`, muestra el texto en grande
+  private async cartel(items: { key?: string; label: string }[], juntos = false) {
+    const W = this.scale.width
+    const panel = this.add.rectangle(W / 2, 300, juntos ? Math.min(620, W - 20) : 260, 220, 0xf6f3ea).setScrollFactor(0).setDepth(1050).setStrokeStyle(3, 0x2b3140).setAlpha(0)
+    await this.tween({ targets: panel, alpha: 1, duration: 200 })
+    const crear = (it: { key?: string; label: string }, x: number) => {
+      const objs: Phaser.GameObjects.GameObject[] = []
+      if (it.key) {
+        objs.push(this.add.image(x, 280, it.key).setScrollFactor(0).setDepth(1051).setScale(3).setAlpha(0))
+        objs.push(text(this, x, 370, it.label, 20, '#2b3140').setOrigin(0.5).setScrollFactor(0).setDepth(1051).setAlpha(0))
+      } else objs.push(text(this, x, 300, it.label, 72, '#2b3140', { fontStyle: 'bold' }).setOrigin(0.5).setScrollFactor(0).setDepth(1051).setAlpha(0))
+      return objs
+    }
+    if (juntos) {
+      const paso = Math.min(200, (W - 80) / 3)
+      const todos = items.flatMap((it, k) => crear(it, W / 2 + (k - 1) * paso))
+      sfx.click()
+      await this.tween({ targets: todos, alpha: 1, duration: 250 })
+      await this.wait(2600)
+      await this.tween({ targets: todos, alpha: 0, duration: 250 })
+      for (const o of todos) o.destroy()
+    } else {
+      for (const it of items) {
+        const objs = crear(it, W / 2)
+        sfx.click()
+        await this.tween({ targets: objs, alpha: 1, duration: 250 })
+        await this.wait(900)
+        await this.tween({ targets: objs, alpha: 0, duration: 250 })
+        for (const o of objs) o.destroy()
+      }
+    }
+    await this.tween({ targets: panel, alpha: 0, duration: 200 })
+    panel.destroy()
+  }
+
+  // Al empezar la consulta
+  private async testAntes() {
+    const n = this.sesion
+    const doc = (...t: string[]) => say(this, t.map((x) => this.doc(x)))
+    if (n === 1) {
+      // Las tres palabras: se las pide al final de la consulta, y otra vez la semana que viene
+      await doc('Antes de empezar, un ejercicio. Es parte del tratamiento.', 'Te voy a decir tres palabras. Acordátelas, que después te las pido.', 'Mate. Colectivo. Paraguas.')
+      await say(this, [this.think('Mate, colectivo, paraguas.')])
+    } else if (n === 2) {
+      await doc('¿Te acordás de las tres palabras que te dije la semana pasada?')
+      await say(this, [this.think('Las palabras…')])
+      await this.testPregunta('s2-test', '¿Cuáles eran?', ['Mate, colectivo, paraguas', 'Mate, tren, paraguas', 'Café, colectivo, sombrero'], 0,
+        [this.doc('Muy bien. Una semana entera, y te acordaste.')],
+        [this.doc('Eran mate, colectivo y paraguas.'), this.think('Me las había olvidado. Como todo.'), this.doc('No pasa nada. Para eso estamos.')])
+    } else if (n === 3) {
+      await doc('Hoy, números. Te muestro unos y después me los repetís.')
+      await this.cartel(['4', '9', '2', '7'].map((label) => ({ label })))
+      await this.testPregunta('s3-test', '¿Cuáles eran, en orden?', ['4, 9, 2, 7', '4, 2, 9, 7', '4, 9, 7, 2'], 0,
+        [this.doc('Perfecto.')], [this.doc('Casi. Eran cuatro, nueve, dos, siete.')])
+    } else if (n === 4) {
+      await doc('Hoy, cosas. Te muestro cuatro. Mirá bien.')
+      await this.cartel([{ key: 'sortija', label: 'La sortija' }, { key: 'cuaderno', label: 'El cuaderno' }, { key: 'fotoFiesta', label: 'La foto' }, { key: 'llave', label: 'La llave' }])
+      await this.testPregunta('s4-test', '¿Cuál de estas no te mostré?', ['La llave', 'El boletín', 'La sortija'], 1,
+        [this.doc('Bien. El boletín no estaba.')], [this.doc('Esa sí estaba. La que faltaba era el boletín.')])
+    } else if (n === 5) {
+      await doc('Números otra vez.', 'Pero ahora me los decís al revés: del último al primero.')
+      await this.cartel(['3', '8', '1', '6'].map((label) => ({ label })))
+      const ok = await this.testPregunta('s5-test', 'Al revés.', ['6, 1, 8, 3', '6, 8, 1, 3', '3, 8, 1, 6'], 0,
+        [this.doc('Muy bien. Eso cuesta.')], [this.doc('No. Era seis, uno, ocho, tres.')])
+      if (!ok) await say(this, [this.think('Me cuesta pensar al revés.')])
+    } else if (n === 6) {
+      await doc('Hoy te pregunto por algo que recordaste.')
+      await this.testPregunta('s6-test', '¿Qué te dibujó María en la servilleta?', ['Una ventana con plantas', 'Un balcón con plantas', 'Un corazón'], 0,
+        [this.doc('Bien. La ventana de la cocina.')], [this.doc('No. Era una ventana. La de la cocina, con plantas.'), this.think('El balcón era lo que quería a los diecisiete.')])
+    } else if (n === 7) {
+      await doc('Te muestro tres cosas juntas. Fijate dónde está cada una.')
+      await this.cartel([{ key: 'papelito', label: 'El papelito' }, { key: 'servilleta', label: 'La servilleta' }, { key: 'boleto', label: 'Los boletos' }], true)
+      await this.testPregunta('s7-test', '¿Dónde estaba la servilleta?', ['A la izquierda', 'En el medio', 'A la derecha'], 1,
+        [this.doc('Bien.')], [this.doc('En el medio, Jorge.')], true)
+    } else if (n === 8) {
+      await doc('Hoy no te voy a pedir mucho.', 'Tres palabras, como la primera vez. Después te las pido.', 'Río. Álamo. Banco.')
+      await say(this, [this.think('Río, álamo, banco.')])
+    }
+  }
+
+  // Al final de la consulta (solo las que piden recordar algo de antes)
+  private async testDespues() {
+    if (this.sesion === 1) {
+      await this.testPregunta('s1-test', 'Antes de irnos: ¿cuáles eran las tres palabras?', ['Mate, colectivo, paraguas', 'Mate, colectivo, ventana', 'Café, colectivo, paraguas'], 0,
+        [this.doc('Muy bien.')], [this.doc('Casi. Eran mate, colectivo y paraguas.')])
+      await say(this, [this.doc('Acordátelas, eh. La semana que viene te las vuelvo a pedir.')])
+    } else if (this.sesion === 8) {
+      await this.testPregunta('s8-test', 'Las tres palabras, Jorge.', ['Río, álamo, banco', 'Río, viñedo, banco', 'Mar, álamo, banco'], 0,
+        [this.doc('Bien, Jorge.')], [this.doc('Río, álamo y banco.')])
+      await say(this, [this.think('San Rafael.')])
+    }
   }
 
   // Pre-sesión 9: tres juegos cortos para ver cómo está la memoria de Jorge. No tienen consecuencias (provisorio)
@@ -601,10 +710,12 @@ export class Office extends Phaser.Scene {
     this.player.setFlipX(false).setTexture('jorgeSentado').setOrigin(0.5, 1).setPosition(POS.sillon - 8, FLOOR)
     sfx.kick('caja', 0.4)
     await this.wait(600)
+    await this.testAntes()
     await say(this, [this.doc('Bueno, contame.')])
 
     const extras = Phaser.Utils.Array.Shuffle([...EXTRAS]).slice(0, 2)
     for (const p of [...PRIMERAS, ...extras, ULTIMA]) await this.preguntar(p)
+    await this.testDespues()
 
     await say(this, [this.doc('Bien. Gracias, Jorge.'), this.doc('Acompañame al cuarto de inducción al sueño.')])
     await this.irseVela()

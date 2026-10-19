@@ -26,6 +26,10 @@
 - Si Jorge tiene un objeto para darle al personaje, esa opción aparece **primera**.
 - Recordatorio: las opciones **no cambian la historia** (ver "Mecánicas" → Diálogos con opciones).
 
+### El cartel de los tests de memoria
+
+En los tests de memoria de cada consulta (ver "Mecánicas" → Tests de memoria), lo que Jorge tiene que recordar aparece en **un cartel claro en el medio de la pantalla**, con borde oscuro: los números en grande, de a uno, o los objetos con su nombre abajo (de a uno, o tres juntos cuando importa dónde está cada uno). Cada cosa dura menos de un segundo, con un clic suave al aparecer. Después se contesta con las opciones de siempre. _Provisorio._
+
 ## Interacción con objetos
 
 - Cuando Jorge está **cerca de un objeto** que se puede examinar, aparece un **ícono** sobre el objeto con el botón correspondiente.
