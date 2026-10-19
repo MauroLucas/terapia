@@ -18,6 +18,7 @@ import { Stairs } from './scenes/Stairs'
 import { Warning } from './scenes/Warning'
 import { resetState } from './state'
 import { gameWidth, mountFrame, mountTouch, toggleFull } from './touch'
+import './game.css'
 
 // El marco de la página (`parent`) tiene adentro la pantalla del juego y, en el celular, los controles táctiles
 function baseConfig(parent: HTMLElement): Phaser.Types.Core.GameConfig {

@@ -22,6 +22,11 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
           </NavLink>
         ))}
         <div className="nav-sep" />
+        {/* El juego solo, sin el GDD: otra página (juego/index.html), en otra pestaña */}
+        <a className="nav-link" href="./juego/" target="_blank" rel="noopener" onClick={onNavigate}>
+          <span className="nav-icon">🎮</span>
+          Jugar (versión final) ↗
+        </a>
         <NavLink
           to="/prototipo"
           onClick={onNavigate}

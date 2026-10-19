@@ -18,7 +18,7 @@ Phaser es un motor web: para Steam, el juego se **empaqueta como app de escritor
 
 | Pendiente | Qué es |
 |---|---|
-| **Separar el juego del sitio** | Hoy el prototipo vive dentro de la página del GDD. El juego necesita su propia entrada, solo el juego |
+| ~~Separar el juego del sitio~~ ✓ | **Hecho:** el juego tiene su propia página, sin el GDD (ver "Prototipo" → El juego solo) |
 | **Empaquetar para escritorio** | Con **Electron** (u otra herramienta parecida, como NW.js o Tauri) |
 | **Steamworks** | Logros, guardado en la nube y la pantalla de Steam encima del juego (por ejemplo, con la librería steamworks.js) |
 | **Joystick** | En Steam, y sobre todo en Steam Deck, se espera que se pueda jugar con control. Hoy es teclado y táctil |
@@ -32,6 +32,19 @@ Las consolas (Switch, PlayStation, Xbox) no corren juegos web con facilidad. Si 
 ## Prototipo
 
 Hay un **prototipo jugable** en este mismo sitio (página **🕹️ Prototipo** del menú), hecho con **Phaser 3**. El prototipo es **el juego completo**: todas las locaciones hechas hasta ahora, de corrido. Cada locación nueva se suma al final.
+
+### El juego solo
+
+Además, el juego tiene **su propia página, sin el GDD alrededor**, para verlo como se va a ver en la versión final: **[juego/](./juego/)** (en el sitio publicado: `https://maurolucas.github.io/terapia/juego/`). En el menú del GDD está como **🎮 Jugar (versión final)**, y se abre en otra pestaña.
+
+| | Página "Prototipo" del GDD | El juego solo (`juego/`) |
+|---|---|---|
+| Qué es | El juego completo, dentro de la página del GDD, con la descripción y los controles | El mismo juego completo, a pantalla completa, fondo negro y nada más |
+| Aviso de inicio | "PROTOTIPO · Presioná cualquier tecla para empezar" | "Presioná cualquier tecla para empezar", sin la palabra "PROTOTIPO" |
+| En el celular | Controles táctiles, dentro de la página | Controles táctiles, ocupando toda la pantalla |
+| Locaciones sueltas | Cada una tiene su página en el menú | No: siempre arranca desde el principio |
+
+Es el mismo código: `juego/index.html` y `src/juego.ts` arrancan el juego completo (`createGame`). Lo que se cambie en el juego se ve en las dos páginas. Es también la base para empaquetarlo para Steam.
 
 | Campo | Valor |
 |---|---|

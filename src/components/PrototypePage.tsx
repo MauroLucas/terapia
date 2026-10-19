@@ -29,6 +29,13 @@ export function PrototypePage() {
         nueva se suma acá. Para probar una locación suelta, entrá a <strong>Casa de Jorge</strong>, <strong>Hall del edificio</strong>, <strong>Consultorio</strong>, <strong>Sesión 1</strong>, <strong>La primera noche</strong>, <strong>Pre-sesión 2</strong>, <strong>Sesión 2</strong>, <strong>La segunda noche</strong>, <strong>Pre-sesión 3</strong>, <strong>Sesión 3</strong>, <strong>La tercera noche</strong>, <strong>Pre-sesión 4</strong>, <strong>Sesión 4</strong>, <strong>La cuarta noche</strong>, <strong>Pre-sesión 5</strong>, <strong>Sesión 5</strong>, <strong>La quinta noche</strong>, <strong>Pre-sesión 6</strong>, <strong>Sesión 6</strong>, <strong>La sexta noche</strong>, <strong>Pre-sesión 7</strong>, <strong>Sesión 7</strong>, <strong>La séptima noche</strong>, <strong>Pre-sesión 8</strong>, <strong>Sesión 8</strong>, <strong>La octava noche</strong>, <strong>Pre-sesión 9</strong> o <strong>Sesión 9</strong> en el
         menú.
       </p>
+      <p>
+        Para jugarlo como se va a ver en la versión final, a pantalla completa y sin el GDD alrededor:{' '}
+        <a href="./juego/" target="_blank" rel="noopener">
+          <strong>Jugar (versión final) ↗</strong>
+        </a>
+        .
+      </p>
       <div className="game-frame" ref={ref} />
       <div className="game-actions">
         <button onClick={() => gameRef.current?.scale.toggleFullscreen()}>⛶ Pantalla completa</button>

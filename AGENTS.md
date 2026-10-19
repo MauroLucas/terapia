@@ -7,6 +7,7 @@ Guía para agentes de IA que trabajen en este proyecto.
 **Terapia**: el Game Design Document (GDD) web de un juego 2D narrativo de vista lateral, creado por Mauro Pereyra. Incluye un **prototipo jugable** hecho con Phaser: el juego completo (`#/prototipo`) y cada locación por separado (`#/casa-de-jorge`, `#/hall`, `#/consultorio`, `#/sesion-1`, `#/primera-noche`, `#/pre-sesion-2`, `#/sesion-2`, `#/segunda-noche`, `#/pre-sesion-3`, `#/sesion-3`, `#/tercera-noche`, `#/pre-sesion-4`, `#/sesion-4`, `#/cuarta-noche`, `#/pre-sesion-5`, `#/sesion-5`, `#/quinta-noche`, `#/pre-sesion-6`, `#/sesion-6`, `#/sexta-noche`, `#/pre-sesion-7`, `#/sesion-7`, `#/septima-noche`, `#/pre-sesion-8`, `#/sesion-8`, `#/octava-noche`, `#/pre-sesion-9`, `#/sesion-9`).
 
 - Sitio: React 19 + TypeScript + Vite, con `HashRouter`.
+- **El juego solo**, sin el GDD: `juego/index.html` + `src/juego.ts` (otra página de Vite, ver `vite.config.ts`). Arranca el juego completo (`createGame`) a pantalla completa y sin la etiqueta "PROTOTIPO" (`registry.final`). Publicado en `…/terapia/juego/`. El CSS del marco del juego está en `src/prototype/game.css`.
 - Prototipo: Phaser 3.90 con física Matter. Se carga solo al entrar a `#/prototipo`.
 - **El motor del juego final también es Phaser** (decidido por el usuario, para simplificar). Para Steam se empaqueta como app de escritorio (Electron o similar); ver "Aspectos técnicos" → Cómo llega a Steam.
 

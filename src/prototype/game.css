@@ -1,0 +1,49 @@
+/* El marco del juego: lo usan las páginas del GDD (src/components) y la versión para jugar (juego/index.html).
+   Se importa desde src/prototype/index.ts, así viaja con el juego. */
+.game-frame { width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 8px; overflow: hidden; }
+.game-frame canvas { display: block; }
+.game-frame:fullscreen { width: 100vw; height: 100vh; border-radius: 0; aspect-ratio: auto; }
+
+/* Pantalla del juego (adentro del marco) y controles táctiles del celular. Ver src/prototype/touch.ts */
+.game-frame { position: relative; }
+.game-screen { width: 100%; height: 100%; }
+.game-frame.pseudo-full { position: fixed; inset: 0; z-index: 2000; width: 100vw; height: 100dvh; border-radius: 0; aspect-ratio: auto; }
+body.no-scroll { overflow: hidden; }
+.touch-pad { display: flex; justify-content: space-between; align-items: flex-end; padding: 10px 14px; gap: 12px; user-select: none; -webkit-user-select: none; touch-action: none; }
+.tp-btn { font: 600 15px system-ui, sans-serif; color: #e8ebf2; background: rgba(40, 46, 60, 0.85); border: 2px solid rgba(160, 170, 190, 0.5); border-radius: 12px; touch-action: none; -webkit-tap-highlight-color: transparent; }
+.tp-btn.on { background: #3e7d3c; border-color: #9ee07a; }
+.tp-dpad { display: grid; grid-template-columns: repeat(3, 58px); grid-template-rows: repeat(3, 50px); gap: 4px; }
+.tp-dpad .tp-btn { font-size: 20px; }
+.tp-dpad .up { grid-column: 2; grid-row: 1; }
+.tp-dpad .left { grid-column: 1; grid-row: 2; }
+.tp-dpad .right { grid-column: 3; grid-row: 2; }
+.tp-dpad .down { grid-column: 2; grid-row: 3; }
+.tp-actions { display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+.tp-small { display: flex; gap: 6px; }
+.tp-mini { padding: 8px 10px; font-size: 13px; }
+.tp-e { width: 84px; height: 84px; border-radius: 50%; font-size: 30px; }
+/* Vertical: el juego arriba (640 × 720) y los controles abajo, en su propio espacio */
+.game-frame.has-touch.portrait { aspect-ratio: auto; display: flex; flex-direction: column; border-radius: 8px; }
+.game-frame.has-touch.portrait .game-screen { aspect-ratio: 640 / 720; height: auto; flex: none; }
+.game-frame.has-touch.portrait .touch-pad { background: #0b0d12; flex: 1; padding: 14px 14px 18px; align-items: center; }
+.game-frame.has-touch.portrait .tp-dpad { grid-template-columns: repeat(3, 50px); grid-template-rows: repeat(3, 48px); }
+.game-frame.has-touch.portrait .tp-actions { flex-direction: row; align-items: center; gap: 8px; }
+.game-frame.has-touch.portrait .tp-small { flex-direction: column; }
+.game-frame.has-touch.portrait .tp-e { width: 78px; height: 78px; }
+.game-frame.has-touch.portrait.pseudo-full .game-screen,
+.game-frame.has-touch.portrait:fullscreen .game-screen { flex: 1; aspect-ratio: auto; min-height: 0; }
+.game-frame.has-touch.portrait.pseudo-full .touch-pad,
+.game-frame.has-touch.portrait:fullscreen .touch-pad { flex: none; }
+/* Apaisado: los botones van sobre el juego, en las esquinas de abajo */
+.game-frame.has-touch.landscape .touch-pad { position: absolute; left: 0; right: 0; bottom: 0; pointer-events: none; }
+.game-frame.has-touch.landscape .tp-btn { pointer-events: auto; background: rgba(20, 24, 32, 0.45); }
+.game-frame.has-touch.landscape .touch-pad { padding: 6px 10px; }
+.game-frame.has-touch.landscape .tp-dpad { grid-template-columns: repeat(3, 42px); grid-template-rows: repeat(3, 36px); gap: 3px; }
+.game-frame.has-touch.landscape .tp-dpad .tp-btn { font-size: 15px; }
+.game-frame.has-touch.landscape .tp-e { width: 60px; height: 60px; font-size: 24px; }
+.game-frame.has-touch.landscape .tp-mini { padding: 5px 8px; font-size: 12px; }
+.game-frame.has-touch.landscape.pseudo-full .tp-dpad,
+.game-frame.has-touch.landscape:fullscreen .tp-dpad { grid-template-columns: repeat(3, 54px); grid-template-rows: repeat(3, 46px); }
+.game-frame.has-touch.landscape.pseudo-full .tp-e,
+.game-frame.has-touch.landscape:fullscreen .tp-e { width: 76px; height: 76px; }
+.game-frame.has-touch.landscape .tp-btn.on { background: rgba(62, 125, 60, 0.75); }

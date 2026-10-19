@@ -1,0 +1,11 @@
+/* La página del juego solo: negro, sin márgenes, el juego ocupa toda la ventana */
+html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+body.juego { overscroll-behavior: none; }
+body.juego .game-frame { position: fixed; inset: 0; width: 100vw; height: 100dvh; border-radius: 0; aspect-ratio: auto; }
+/* En el celular, en vertical: el juego arriba y los controles abajo, ocupando toda la pantalla */
+body.juego .game-frame.has-touch.portrait { border-radius: 0; }
+body.juego .game-frame.has-touch.portrait .game-screen { flex: 1; aspect-ratio: auto; min-height: 0; }
+body.juego .game-frame.has-touch.portrait .touch-pad { flex: none; padding-bottom: max(18px, env(safe-area-inset-bottom)); }
+/* En apaisado, los botones un poco más grandes, como en pantalla completa */
+body.juego .game-frame.has-touch.landscape .tp-dpad { grid-template-columns: repeat(3, 54px); grid-template-rows: repeat(3, 46px); }
+body.juego .game-frame.has-touch.landscape .tp-e { width: 76px; height: 76px; }
