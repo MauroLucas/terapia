@@ -131,6 +131,23 @@ teenage girl around 15, long dark hair with bangs, denim jacket over a white t-s
 dark blue jeans, white sneakers, small friendly smile
 ```
 
+### El Japo
+
+![El Japo parado](sprites/japo0.png) ![El Japo caminando A](sprites/japo1.png) ![El Japo caminando B](sprites/japo2.png)
+
+| Campo | Valor |
+|---|---|
+| Claves | `japo0` (parado) · `japo1`, `japo2` (caminata y carrera) |
+| Tamaño en pantalla | 56 × 140 px (a los 15 se usa un poco más chico, como Jorge) |
+| Dónde | Sesión 2: El boletín (el aula) y Sesión 3: La fiesta (con la cámara descartable) |
+| Descripción | El Japo, el mejor amigo de Jorge en el secundario. Pelo negro lacio con flequillo recto, buzo azul marino del colegio con una franja blanca, jean y zapatillas blancas. **Tiene cara**: sonrisa de oreja a oreja. Cuando se cae, el sprite se rota y queda de espaldas en el piso |
+
+```
+teenage boy around 15, straight black hair with blunt bangs, navy blue school sweatshirt
+with a white stripe across the chest and sleeves, jeans, white sneakers, big cheeky grin,
+class clown energy
+```
+
 #### María en la fiesta (17 años)
 
 ![María en la fiesta](sprites/mariaFiesta0.png) ![María en la fiesta caminando A](sprites/mariaFiesta1.png) ![María en la fiesta caminando B](sprites/mariaFiesta2.png)
@@ -225,7 +242,7 @@ security guard, dark navy uniform, peaked cap, small golden badge on the chest, 
 |---|---|
 | Clave | `sombra` |
 | Tamaño en pantalla | 60 × 150 px (en el barrio y el bar se usa más chica y más oscura) |
-| Dónde | La feria (Sesión 1), el barrio: el almacenero, la vecina y la gente del bar (Sesión 2), la gente que baila en la fiesta (Sesión 3) y el inmobiliario (Sesión 4: más claro, con una carpeta azul) |
+| Dónde | La feria (Sesión 1), el aula y el barrio: la preceptora, los compañeros, el almacenero, la vecina y la gente del bar (Sesión 2), la gente que baila en la fiesta (Sesión 3) y el inmobiliario (Sesión 4: más claro, con una carpeta azul) |
 | Descripción | Siluetas grises, lisas, **sin cara**. No son parte del recuerdo: la luz no las ilumina |
 
 ```
@@ -431,6 +448,19 @@ Uno por ambiente. Las capturas son del prototipo sin la interfaz (a veces se ve 
 **La feria** (4400 px). Noche, guirnaldas de luces, el puesto de algodón de azúcar, la calesita, bancos y la vuelta al mundo. Todo empieza gris y toma color cuando lo ilumina la llama.
 
 ### Sesión 2: El boletín
+
+![El aula](sprites/fondos/aula.png)
+
+![El aula: los bancos](sprites/fondos/aula-bancos.png)
+
+**El aula** (1600 px). El colegio de Jorge, a la mañana del día de entrega de boletines: paredes verde agua con zócalo, piso de baldosas grises, un reloj, la bandera y dos ventanas. El pizarrón (_"Entrega de boletines"_ y una ecuación), el escritorio de la preceptora con la pila de boletines, los bancos con compañeros sin cara y la mochila de Jorge colgada de su silla. La grieta del pizarrón y la pizarra de hoy se dibujan encima durante la escena.
+
+```
+2D side-view secondary school classroom in Buenos Aires in the late 90s, pale green walls
+with a darker wainscot, grey tiled floor, green chalkboard with chalk writing, teacher's
+wooden desk with a stack of report cards, rows of old wooden desks with metal legs, wall clock,
+small Argentine flag, morning light through tall windows, muted dreamlike palette, flat shapes
+```
 
 ![Casa de la mamá](sprites/fondos/casa-mama.png)
 

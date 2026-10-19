@@ -133,6 +133,19 @@ export const sfx = {
   llamando() { tone(425, 1.0, 'sine', 0.045) },
   // La cuarta noche: patas de cucaracha contra el techo, un repiqueteo seco
   patitas() { for (let i = 0; i < 16; i++) tone(2600 + Math.random() * 1800, 0.018, 'square', 0.018, i * 0.035 + Math.random() * 0.02) },
+  // Sesión 2: el Japo contra el pizarrón, la grieta, el aula que se ríe y el timbre del colegio
+  golpe() { tone(70, 0.4, 'sine', 0.3); noiseBurst(0.35, 500, 0.3); tone(140, 0.15, 'square', 0.04) },
+  grieta() { for (let i = 0; i < 5; i++) tone(3000 + Math.random() * 2000, 0.03, 'square', 0.02, i * 0.07 + Math.random() * 0.03); noiseBurst(0.3, 4000, 0.05, 'highpass') },
+  risas() {
+    // Varias voces que se ríen a destiempo: "ja, ja, ja"
+    for (let v = 0; v < 6; v++) {
+      const base = 180 + Math.random() * 260
+      const start = v * 0.12 + Math.random() * 0.2
+      const n = 5 + Math.floor(Math.random() * 5)
+      for (let i = 0; i < n; i++) tone(base * (1 - i * 0.025), 0.1, 'triangle', 0.022, start + i * (0.15 + Math.random() * 0.04))
+    }
+  },
+  timbreColegio() { for (let i = 0; i < 26; i++) tone(i % 2 ? 1180 : 1040, 0.06, 'square', 0.018, i * 0.06) },
 }
 
 // Música y ambientes en loop

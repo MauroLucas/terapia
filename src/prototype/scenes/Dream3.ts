@@ -9,10 +9,10 @@ import { controlsHelp } from '../touch'
 
 // Sesión 3: la fiesta. Jorge tiene unos 17 años. Es una sesión de respiro: no está el papá y no hace frío.
 //   Plaza (de tarde):   [hamacas] [árbol] [banco: María] [kiosco]
-//   Club (la fiesta):   [entrada] [mesa del ponche] [pista de baile: María] [el amigo con la cámara] [salida]
+//   Club (la fiesta):   [entrada] [mesa del ponche] [pista de baile: María] [el Japo con la cámara] [salida]
 //   Casa de María:      [puerta] [cocina: su mamá] [mesa] [teléfono] [living: su papá] [sillón]
 // Los martes en la plaza ya no son para estudiar: fantasean con un depto propio. El sábado, en la fiesta de egresados,
-// bailan y un amigo les saca la foto que hoy falta en el portarretratos. Jorge no quiere volver a su casa y María lo
+// bailan y el Japo les saca la foto que hoy falta en el portarretratos. Jorge no quiere volver a su casa y María lo
 // lleva a la suya. Llama a su mamá, se queda a dormir en el sillón y ahí se dan el primer beso.
 // Lo que ilumina la llama de Vela se recuerda (pasa de gris a color); cerca de María, la llama crece.
 // Sigue en Office (despertar de la Sesión 3). No usa física: todo se mueve con `delta`, igual a cualquier FPS.
@@ -270,8 +270,8 @@ export class Dream3 extends Phaser.Scene {
       this.bailarines.push(b)
       this.tweens.add({ targets: b, y: b.y - 6, duration: 420, yoyo: true, repeat: -1, ease: 'Sine.InOut', delay: (sx % 7) * 60 })
     }
-    // El amigo con la cámara descartable
-    this.add.image(POS.amigo, FLOOR - 75, 'sombra').setAlpha(0.9).setDepth(7).setFlipX(true)
+    // El Japo, con la cámara descartable. Tiene cara: es su amigo
+    this.add.image(POS.amigo, FEET, 'japo0').setScale(SCALE).setDepth(7).setFlipX(true)
     g.fillStyle(0x2f6fa0).fillRect(POS.amigo - 30, 470, 22, 14)
     g.fillStyle(0xf2e35a).fillRect(POS.amigo - 28, 472, 6, 4)
     g.setDepth(1)
@@ -365,7 +365,7 @@ export class Dream3 extends Phaser.Scene {
       { area: 'plaza', x: POS.kiosco, label: 'Kiosco', when: plaza, action: () => say(this, [this.think('Los alfajores de siempre.'), this.think('Ella siempre parte uno a la mitad.')]) },
       { area: 'club', x: POS.ponche, label: 'Ponche', when: fiesta, action: () => say(this, [this.think('Ponche.'), this.think('Seguro alguien le puso algo.')]) },
       { area: 'club', x: POS.pista, label: 'María', when: () => fiesta() && !this.f.baile, action: () => this.bailar() },
-      { area: 'club', x: POS.amigo, label: 'Amigo', when: () => fiesta() && !this.f.baile, action: () => say(this, [this.at(POS.amigo, 450, '¡Jorge! ¿Y María?'), this.at(POS.amigo, 450, 'Después les saco una, que me quedan fotos.')]) },
+      { area: 'club', x: POS.amigo, label: 'Japo', when: () => fiesta() && !this.f.baile, action: () => say(this, [this.at(POS.amigo, 450, '¡Jorge! ¿Y María?'), this.at(POS.amigo, 450, 'Andá a bailar, cagón. Después les saco una, que me quedan fotos.'), this.think('El Japo. Siempre con esa cámara.')]) },
       { area: 'club', x: POS.salidaClub, label: 'Salir', when: fiesta, action: () => this.salirClub() },
       { area: 'casa', x: POS.mamaMaria, label: 'Mamá de María', when: casa, action: () => this.hablarMama() },
       { area: 'casa', x: POS.mesa, label: 'Mesa', when: casa, action: () => say(this, [this.think('Fotos de vacaciones. Dibujos de cuando María era chica.'), this.think('En esta casa nadie levanta la voz.')]) },
@@ -496,7 +496,7 @@ export class Dream3 extends Phaser.Scene {
     await this.foto()
   }
 
-  // Un amigo les saca la foto: la que hoy falta en el portarretratos
+  // El Japo les saca la foto: la que hoy falta en el portarretratos
   private async foto() {
     const amigo = (t: string) => this.at(POS.pista + 220, 450, t)
     await say(this, [amigo('¡Eh, ustedes dos! ¡Miren acá!')])
@@ -513,7 +513,7 @@ export class Dream3 extends Phaser.Scene {
       this.think('Esta foto la conozco.'),
       this.vela('Qué lindo recuerdo, Jorge.'),
     ])
-    this.pista('La foto', 'En la fiesta de egresados, un amigo nos sacó una foto a María y a mí. Esa foto la conozco.')
+    this.pista('La foto', 'En la fiesta de egresados, el Japo nos sacó una foto a María y a mí. Esa foto la conozco.')
     await this.wait(600)
     // Se prenden las luces: se termina la fiesta
     this.music?.stop(3)
@@ -753,7 +753,7 @@ export class Dream3 extends Phaser.Scene {
     const spot = this.spots.find((s) => s.area === this.area && s.when() && Math.abs(this.player.x - s.x) < 75)
     if (spot) {
       // Los objetos del recuerdo se examinan recién cuando la luz los ilumina (las personas y las puertas, siempre)
-      const people = ['María', 'Amigo', 'Mamá de María', 'Papá de María', 'Salir', 'Puerta']
+      const people = ['María', 'Japo', 'Mamá de María', 'Papá de María', 'Salir', 'Puerta']
       const lit = people.includes(spot.label) || !this.objs.some((o) => o.x === spot.x) || this.isRevealed(spot.x)
       this.prompt.setVisible(true).setPosition(spot.x, 300)
       this.promptLabel.setText(spot.label)

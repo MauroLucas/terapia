@@ -13,7 +13,7 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 4 | **Sesión 1: La feria** | Sueño lúcido: una feria de noche, en la infancia de Jorge | Recordar el día que Jorge se perdió de chico y quedarse quieto para que su mamá lo encuentre | En el prototipo |
 | 5 | **La primera noche** | Casa de Jorge, de noche, después de la Sesión 1 | Anotar el recuerdo en la pizarra y dormir. Alguien toca el portero | En el prototipo |
 | 6 | **Pre-sesión 2** | Casa de Jorge (la mañana, una semana después) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
-| 7 | **Sesión 2: El boletín** | Sueño lúcido: la casa de la mamá y el barrio, a los 15 | Conseguir que el papá firme el boletín. Conoce a María | En el prototipo |
+| 7 | **Sesión 2: El boletín** | Sueño lúcido: el aula, la casa de la mamá y el barrio, a los 15 | El Japo y el pizarrón. Conseguir que el papá firme el boletín. Conoce a María | En el prototipo |
 | 8 | **La segunda noche** | Casa de Jorge, de noche, después de la Sesión 2 | Anotar el boletín en la pizarra y dormir. En la caja, el cuaderno con la letra de María. Una voz de mujer en el portero | En el prototipo |
 | 9 | **Pre-sesión 3** | Casa de Jorge (la mañana) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
 | 10 | **Sesión 3: La fiesta** | Sueño lúcido: la plaza, el club del barrio y la casa de María, a los 17 | Ver a María, bailar en la fiesta de egresados, quedarse en su casa. El primer beso | En el prototipo |
@@ -1310,9 +1310,11 @@ _Provisorias, propuestas por el agente._ Como en la primera consulta, las respue
 
 Es la segunda sesión: la **adolescencia**. Jorge tiene **unos 15 años** y está en **la casa de su mamá**, donde creció, y en **el barrio**. Necesita que **su papá firme el boletín**, y el papá no está en todo el día.
 
+Empieza esa mañana **en el colegio**, con **el Japo**, su mejor amigo del secundario (ver "El aula").
+
 Es la sesión del **papá**: un padre ausente que resolvía todo con violencia. Casi no se lo ve, pero se nota en todos lados. También es el día en que Jorge **conoce a María**.
 
-_Decidido por el usuario: el boletín, que la violencia del papá era contra la mamá y contra Jorge, el eco de la puerta (Jorge trabándola con la espalda) y que María y Jorge se conocen acá. Los diálogos, los vecinos y los detalles los propuso el agente y son provisorios._
+_Decidido por el usuario: el boletín, que la violencia del papá era contra la mamá y contra Jorge, el eco de la puerta (Jorge trabándola con la espalda) y que María y Jorge se conocen acá. **El Japo** y su carrera contra el pizarrón salen de la vida del usuario (ver "Historia y mundo" → Ideas para personajes y escenas). Los diálogos, los vecinos y los detalles los propuso el agente y son provisorios._
 
 **La casa vuelve en la Sesión 4:** es donde pasa la pelea con la mamá. El jugador la conoce acá.
 
@@ -1327,12 +1329,14 @@ Siguen las reglas de la Sesión 1 (ver "Mecánicas" → Sueño lúcido): Vela es
 | **El papá no tiene cara** | Es una silueta oscura, más grande que las demás. No se lo ve de frente |
 | **La mamá tampoco** | Una luz le tapa la cabeza, como en la feria |
 | **María sí tiene cara** | Está viva. _(Propuesta del agente: los que no tienen cara son los que Jorge evita mirar.)_ |
+| **El Japo también tiene cara** | Es alguien que le importó. Cuando lo hace reír, **la llama crece**, como con María |
 | **No se puede cambiar el recuerdo** | Si el jugador elige algo que no pasó (firmar él el boletín), la tinta se borra: _"No fue así, Jorge. Es un recuerdo: no se puede cambiar."_ |
 
 ### Los lugares
 
 | Lugar | Qué hay |
 |---|---|
+| **El aula**, a la mañana | Paredes verde agua con zócalo, piso de baldosas, un reloj, la bandera, dos ventanas. **El pizarrón** (_"Entrega de boletines"_ y una ecuación), el escritorio de **la preceptora** (sin cara) con la pila de boletines, los bancos con compañeros sin cara, el banco de Jorge (con la mochila colgada) y, al fondo, **el Japo** |
 | Cuarto de Jorge | Cama, escritorio con **el boletín**, un póster de una banda (inventada, "Los Vagos"), una ventana. La puerta del cuarto |
 | Comedor | El perchero con **la campera del papá**, la mesa, **su silla en la cabecera** (con un cenicero), la tele |
 | Cocina | **La mamá**, en la mesada. La puerta a la calle |
@@ -1345,18 +1349,61 @@ Siguen las reglas de la Sesión 1 (ver "Mecánicas" → Sueño lúcido): Vela es
 
 ### Secuencia
 
-1. **Se le abren los ojos** en su cuarto. _"Mi cuarto."_ / _"En la casa de mamá."_ / _"Soy más grande. Tengo… quince, dieciséis."_
-2. Aparece la llama. Vela: _"Acá estoy, Jorge. Estás soñando otra vez."_ / _"Ya sabés cómo es: lo que ilumine, lo vas a poder recordar."_
-3. **El boletín** (escritorio): un **tres en matemática**, y una nota: la preceptora quiere hablar con el padre. _"Lo tiene que firmar mi papá."_ / _"Y lo tengo que llevar mañana."_ Objetivo: **Conseguir que papá firme el boletín**.
-4. **Buscarlo**, en cualquier orden: la mamá, las cosas del papá en el comedor, el almacenero, la vecina. Todos dan una pista de dónde está y de cómo es.
-5. **El bar:** ahí está, en la barra. Jorge no se anima a entrar: _"No. Mejor espero a que vuelva a casa."_ Objetivo: **Hacer tiempo hasta que papá vuelva**.
-6. **La plaza: María** (ver abajo).
-7. Con el bar y María, Vela: _"Se está haciendo de noche, Jorge."_ / _"Tenés que volver a tu casa."_ Se hace de noche: oscuridad alrededor de la llama, los faroles se prenden. Objetivo: **Volver a casa**.
-8. **La cena:** la mamá pone la mesa (_"Lavate las manos, que tu papá ya llega."_). Pasan las luces de un auto por la ventana. **Entra el papá**, oscuro y grande, y se sienta en su silla. La mamá lo saluda; él no contesta. Objetivo: **Darle el boletín a papá**.
-9. **El boletín, otra vez:** Jorge se lo da. _"A ver."_ / _"¿Un tres?"_ / Jorge: _"La preceptora quiere hablar con vos."_ / _"¿Conmigo?"_ / _"Mirame cuando te hablo."_
-10. **El recuerdo se corta.** Negro y silencio. No se muestra lo que pasó.
-11. **En el cuarto** (ver abajo).
-12. Vela: _"Ya pasó, Jorge."_ / _"Vas a despertar."_ Funde a negro y Jorge despierta en la camilla.
+1. **Se le abren los ojos** en un aula. _"Un aula."_ / _"Mi colegio. El secundario."_ / _"Soy más grande. Tengo… quince, dieciséis."_
+2. Aparece la llama. Vela: _"Acá estoy, Jorge. Estás soñando otra vez."_ / _"Ya sabés cómo es: lo que ilumine, lo vas a poder recordar."_ Objetivo: **Buscar el boletín**.
+3. **El aula** (ver abajo): la preceptora le da el boletín, que Jorge no abre, y el Japo lo hace reír. Suena el timbre. Vela: _"Seguí, Jorge. Ese día no terminó en el colegio."_
+4. **En su cuarto, esa tarde.** _"Mi cuarto."_ / _"En la casa de mamá."_
+5. **El boletín** (escritorio): _"Lo dejé acá cuando volví del colegio."_ / _"Allá no lo quise abrir."_ Un **tres en matemática**, y una nota: la preceptora quiere hablar con el padre. _"Lo tiene que firmar mi papá."_ / _"Y lo tengo que llevar mañana."_ Objetivo: **Conseguir que papá firme el boletín**.
+6. **Buscarlo**, en cualquier orden: la mamá, las cosas del papá en el comedor, el almacenero, la vecina. Todos dan una pista de dónde está y de cómo es.
+7. **El bar:** ahí está, en la barra. Jorge no se anima a entrar: _"No. Mejor espero a que vuelva a casa."_ Objetivo: **Hacer tiempo hasta que papá vuelva**.
+8. **La plaza: María** (ver abajo).
+9. Con el bar y María, Vela: _"Se está haciendo de noche, Jorge."_ / _"Tenés que volver a tu casa."_ Se hace de noche: oscuridad alrededor de la llama, los faroles se prenden. Objetivo: **Volver a casa**.
+10. **La cena:** la mamá pone la mesa (_"Lavate las manos, que tu papá ya llega."_). Pasan las luces de un auto por la ventana. **Entra el papá**, oscuro y grande, y se sienta en su silla. La mamá lo saluda; él no contesta. Objetivo: **Darle el boletín a papá**.
+11. **El boletín, otra vez:** Jorge se lo da. _"A ver."_ / _"¿Un tres?"_ / Jorge: _"La preceptora quiere hablar con vos."_ / _"¿Conmigo?"_ / _"Mirame cuando te hablo."_
+12. **El recuerdo se corta.** Negro y silencio. No se muestra lo que pasó.
+13. **En el cuarto** (ver abajo).
+14. Vela: _"Ya pasó, Jorge."_ / _"Vas a despertar."_ Funde a negro y Jorge despierta en la camilla.
+
+### El aula
+
+_Escena provisoria: la carrera contra el pizarrón es del usuario; los diálogos los propuso el agente._
+
+Es el día de **entrega de boletines**. Los compañeros, sin cara, están parados al lado de los bancos.
+
+- **La preceptora**, en su escritorio: _"Jorge. Tu boletín."_ / _"Que lo firme tu papá, ¿eh? Necesito hablar con él."_ / _"Lo traés mañana."_ Jorge lo guarda **sin abrirlo**: _"No lo abro."_ / _"Si no lo abro, todavía no pasó nada."_
+- **El pizarrón**, cuando la llama lo ilumina: _"'Entrega de boletines.'"_ / _"Y abajo, una ecuación que nunca entendí."_
+- **Su banco**: _"Lleno de cosas escritas con birome. Casi todas del Japo."_
+- **El Japo**, antes del boletín: _"¡Jorge! Te está buscando la preceptora."_ / _"Yo ya tengo el mío. Me llevo cuatro. Mi vieja me cuelga del ventilador."_
+
+Con el boletín, el Japo:
+
+> **Japo:** ¿Y? ¿Cuánto te sacaste?
+>
+> **Jorge:** No lo abrí.
+>
+> **Japo:** Uh. Esa cara la conozco.
+>
+> **Japo:** Pará, pará. Correte, que tomo carrera.
+>
+> **Jorge (piensa):** El Japo. / Me había olvidado de él.
+
+**La carrera** (cinemática): Jorge se corre hasta adelante. El Japo va hasta el fondo del aula (_"¡Miren todos!"_), sale corriendo, **se estrella contra el pizarrón** (golpe, la cámara tiembla, el pizarrón se sacude) y se cae para atrás, despacio, de espaldas en el piso.
+
+- **El pizarrón se agrieta** donde pegó.
+- Un segundo de silencio (_"…"_). Después **el aula entera se ríe**, y Jorge también: _"¡Jajaja! ¡Estás loco, Japo!"_ La llama crece.
+- El Japo, desde el piso: _"…Diez puntos. ¿No?"_ Jorge: _"Me estoy riendo."_ / _"Con el boletín en la mochila, y me estoy riendo."_
+
+**El pizarrón de hoy:** por la grieta, el pizarrón se vuelve por un momento **la pizarra de la casa de Jorge**, la de ahora: blanca, con la línea de 0 a 40, la feria a los 5, un "?" a los 15 y _"¿Quién soy?"_ arriba. _"El pizarrón…"_ / _"Es el de casa. El mío. El de ahora."_ Vela: _"Es el sueño, Jorge. A veces se mezcla con lo de hoy."_ Se apaga y vuelve el pizarrón del aula.
+
+El Japo se levanta. **Suena el timbre.** _"¡Y que te lo firme tu viejo, eh! Si no, la preceptora te come."_ La llama vuelve a su tamaño.
+
+> **Jorge (piensa):** Mi viejo.
+>
+> **Jorge (piensa):** El Japo. ¿Qué habrá sido de él?
+>
+> **Jorge (piensa):** En algún momento nos dejamos de ver. No me acuerdo cuándo.
+
+Funde a negro y sigue en el cuarto de Jorge, esa tarde.
 
 ### Los que saben
 
@@ -1416,7 +1463,9 @@ Después del corte, Jorge está **sentado en el piso de su cuarto, con la espald
 
 | Cuándo | Objetivo |
 |---|---|
-| Al despertar en el cuarto | Ver qué hay en el escritorio |
+| En el aula | Buscar el boletín |
+| Con el boletín | Volver con el Japo |
+| En el cuarto | Ver qué hay en el escritorio |
 | Después del boletín | Conseguir que papá firme el boletín |
 | Después del bar | Hacer tiempo hasta que papá vuelva |
 | Después de María, si todavía no fue al bar | Encontrar a papá |
@@ -1427,6 +1476,7 @@ Después del corte, Jorge está **sentado en el piso de su cuarto, con la espald
 
 | Pista | Cuándo se anota |
 |---|---|
+| El Japo: "El Japo, mi amigo del secundario. El día del boletín corrió desde el fondo del aula y se estrelló contra el pizarrón. Era la única forma de que me riera ese día. Con los años nos dejamos de ver." | En el aula, después de la carrera |
 | El boletín | Al ver el boletín |
 | La silla de papá | Al mirar su silla |
 | Mamá | Al hablar con ella del boletín |
@@ -1440,7 +1490,7 @@ Después del corte, Jorge está **sentado en el piso de su cuarto, con la espald
 
 | Objeto | Qué es |
 |---|---|
-| Boletín ✓ | Su boletín de tercer año: un tres en matemática. Al final, firmado por la mamá (un garabato). Se puede volver a ver desde el diario |
+| Boletín ✓ | Su boletín de tercer año: un tres en matemática. Se lo da la preceptora en el aula, pero Jorge lo lee recién en su cuarto. Al final, firmado por la mamá (un garabato). Se puede volver a ver desde el diario |
 
 ### El despertar
 
@@ -1467,6 +1517,7 @@ Se suma a la línea de tiempo: _"Adolescencia · El boletín"_.
 
 - ¿Cuántos años tiene Jorge exactamente? (En el prototipo: "quince, dieciséis".)
 - ¿El papá vivía con ellos o aparecía y desaparecía?
+- ¿Por qué se distanciaron Jorge y el Japo? ¿Vuelve a aparecer de grande?
 
 ## La segunda noche
 
@@ -1627,7 +1678,7 @@ Siguen las reglas de siempre (ver "Mecánicas" → Sueño lúcido): Vela es una 
 | Lugar | Qué hay |
 |---|---|
 | **La plaza**, de tarde | La misma de la Sesión 2, dos años después: las hamacas donde se conocieron, un árbol con un corazón tallado (no es de ellos, _"todavía"_), el banco donde estudiaban (con el cuaderno, cerrado) y un kiosco. **María** espera en el banco |
-| **El club del barrio**, de noche | La fiesta de egresados: guirnaldas de colores, bola de espejos, la mesa del ponche, la pista de baile con siluetas bailando, **María** con vestido bordó y **un amigo** con una cámara descartable |
+| **El club del barrio**, de noche | La fiesta de egresados: guirnaldas de colores, bola de espejos, la mesa del ponche, la pista de baile con siluetas bailando, **María** con vestido bordó y **el Japo** con una cámara descartable |
 | **La casa de María**, de noche | Cálida, con luz amarilla: la cocina con **la mamá de María**, la mesa servida con fotos y dibujos en la pared, el teléfono de la pared, el living con **el papá de María** mirando la tele, y el sillón donde Jorge va a dormir |
 
 ### Secuencia
@@ -1677,7 +1728,7 @@ Aparece **← → bailar**: el jugador aprieta izquierda y derecha, alternando, 
 
 ### La foto
 
-Un amigo se acerca: _"¡Eh, ustedes dos! ¡Miren acá!"_ Flash, y se ve **la foto**: María y Jorge abrazados, con las guirnaldas atrás y "J y M" escrito en el borde con la letra de María.
+El Japo se acerca: _"¡Eh, ustedes dos! ¡Miren acá!"_ Flash, y se ve **la foto**: María y Jorge abrazados, con las guirnaldas atrás y "J y M" escrito en el borde con la letra de María.
 
 > **Jorge (piensa):** La foto.
 >
@@ -1723,7 +1774,7 @@ En el sillón. María: _"Mi mamá te dejó una frazada."_ / _"Buenas noches, Jor
 | Pista | Cuándo se anota |
 |---|---|
 | Los martes: "Los martes con María ya no estudiamos: hablamos. Ella quiere un depto chiquito con un balcón lleno de plantas. Algún día." | Después de la plaza |
-| La foto: "En la fiesta de egresados, un amigo nos sacó una foto a María y a mí. Esa foto la conozco." | Después de la foto |
+| La foto: "En la fiesta de egresados, el Japo nos sacó una foto a María y a mí. Esa foto la conozco." | Después de la foto |
 | La mamá de María: "La mamá de María me recibió como si fuera de la casa." | Al hablar con ella |
 | Mamá, por teléfono: "Llamé a mamá desde la casa de María. Le dije que estaba bien. Hacía mucho que no se lo decía." | Después del llamado |
 | El primer beso: "Esa noche, en la casa de María, nos dimos el primer beso. Dormí en el sillón. Dormí tranquilo." | Al final |
@@ -1751,7 +1802,6 @@ Se suma a la línea de tiempo: _"Adolescencia · La fiesta"_.
 ### Pendiente de definir
 
 - ¿Cómo se llaman los papás de María? ¿Tiene hermanos? (En la Sesión 2 dice que su hermano firma los boletines.)
-- ¿El amigo de la cámara es alguien que vuelve a aparecer?
 - ¿Se ponen de novios ese día, o ya lo eran?
 
 ## La tercera noche

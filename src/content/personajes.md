@@ -109,6 +109,22 @@ _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesi�
 
 _Personajes propuestos por el agente para la idea del usuario de "María como refugio". Provisorios._
 
+### El Japo, el amigo del secundario
+
+![El Japo](sprites/japo0.png) ![El Japo caminando](sprites/japo1.png)
+
+| Campo | Valor |
+|---|---|
+| Nombre | **"El Japo"**, de "japonés" (apodo decidido por el usuario). Su nombre real, _por definir_ |
+| Primera aparición | **Sesión 2: El boletín**, en el aula |
+| Relación con Jorge | Su **mejor amigo del secundario**: inseparables, hacían sus locuras juntos. **Con los años se distanciaron** (no murió). Hoy Jorge no sabe qué fue de él (decidido por el usuario) |
+| A los 15 | El día de entrega de boletines, para hacerlo reír, **corre desde el fondo del aula y se estrella contra el pizarrón**, y se cae al piso (sale de la vida del usuario). En el sueño, el pizarrón se agrieta y por un momento es la pizarra de Jorge hoy |
+| A los 17 | **Sesión 3: La fiesta.** Es el de la cámara descartable: les saca **la foto** a Jorge y a María, la que hoy falta en el portarretratos |
+| Cómo es | **Tiene cara**: es alguien que le importó, y cuando lo hace reír la llama crece. Aspecto en el prototipo: pelo negro lacio con flequillo recto, buzo azul del colegio con una franja blanca, jean y zapatillas blancas, siempre sonriendo (provisorio) |
+| Por definir | Por qué se distanciaron. Si vuelve a aparecer de grande (¿en el velorio?) |
+
+_Los diálogos del Japo son provisorios._
+
 ### Recepcionista de Neural _(sin nombre)_
 
 ![Recepcionista](sprites/escena/recepcionista.png)
@@ -225,15 +241,14 @@ _Personajes propuestos por el agente para la idea del usuario de "María como re
 | Campo | Valor |
 |---|---|
 | Primera aparición | Sesión 3: La fiesta |
-| Quiénes | Siluetas sin cara que bailan, y **un amigo** con una cámara descartable que les saca la foto a Jorge y María |
-| Por definir | ¿El amigo tiene nombre? ¿Vuelve a aparecer? |
+| Quiénes | Siluetas sin cara que bailan. El de la cámara descartable que les saca la foto es **el Japo** (ver arriba) |
 
 ### Gente del barrio _(sin nombre)_
 
 | Campo | Valor |
 |---|---|
 | Primera aparición | Sesión 2: El boletín |
-| Quiénes | **El almacenero** (vio al papá ir para el bar) y **la vecina** (_"Decile a tu mamá que cualquier cosa, me golpea la pared"_) |
+| Quiénes | **La preceptora** y los compañeros del aula (_"Que lo firme tu papá, ¿eh? Necesito hablar con él"_), **el almacenero** (vio al papá ir para el bar) y **la vecina** (_"Decile a tu mamá que cualquier cosa, me golpea la pared"_) |
 | Cómo son | Siluetas sin cara, como la gente de la feria. Saben lo que pasa en la casa y no dicen nada |
 
 ## Aliados

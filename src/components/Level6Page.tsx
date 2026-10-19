@@ -25,7 +25,7 @@ export function Level6Page() {
         <h1>Prototipo: Sesión 2, el boletín</h1>
       </header>
       <p>
-        Solo la segunda sesión: Jorge a los 15, en la casa de su mamá y en el barrio. Necesita que su papá firme el
+        Solo la segunda sesión: Jorge a los 15, en el colegio (con el Japo), en la casa de su mamá y en el barrio. Necesita que su papá firme el
         boletín. Termina con el despertar en la camilla. Ver "Locaciones" → Sesión 2: El boletín.
       </p>
       <div className="game-frame" ref={ref} />

@@ -370,6 +370,36 @@ function drawMamaMayor(g: Phaser.GameObjects.Graphics, pose: Legs | 'sit') {
   g.lineStyle(1.8, 0x9a5a4a).beginPath().arc(38, 30 + dy, 5, 0.2, 1.3).strokePath()
 }
 
+// El Japo a los 15 (Sesión 2) y a los 17 (Sesión 3): el amigo del secundario. Pelo negro lacio con flequillo recto,
+// buzo azul del colegio con una franja blanca, jean y zapatillas blancas. Tiene cara: es alguien que le importó
+function drawJapo(g: Phaser.GameObjects.Graphics, legs: Legs) {
+  const skin = 0xe2bd94
+  g.lineStyle(10, 0x34445e)
+  const feet: [number, number][] =
+    legs === 'stand' ? [[24, 132], [34, 132]] : legs === 'walkA' ? [[12, 132], [46, 132]] : [[21, 132], [39, 132]]
+  g.lineBetween(25, 96, feet[0][0], feet[0][1] - 4)
+  g.lineBetween(33, 96, feet[1][0], feet[1][1] - 4)
+  g.fillStyle(0xf1efe8)
+  for (const [fx, fy] of feet) g.fillRoundedRect(fx - 7, fy - 5, 17, 8, 3)
+  // Buzo azul con franja blanca
+  g.fillStyle(0x24346a).fillRoundedRect(14, 44, 32, 52, 9)
+  g.fillStyle(0xf1efe8).fillRect(14, 64, 32, 4)
+  const armX = legs === 'walkA' ? 20 : legs === 'walkB' ? 30 : 26
+  g.fillStyle(0x1c2a58).fillRoundedRect(armX, 50, 12, 42, 6)
+  g.fillStyle(0xf1efe8).fillRect(armX, 64, 12, 4)
+  g.fillStyle(skin).fillCircle(armX + 6, 94, 5)
+  // Cuello y cabeza
+  g.fillStyle(skin).fillRect(26, 36, 10, 10).fillCircle(31, 25, 15).fillTriangle(44, 24, 48, 30, 44, 31)
+  // Pelo lacio con flequillo recto
+  g.fillStyle(C.hair)
+  g.slice(30, 23, 16, Math.PI, Math.PI * 2, false)
+  g.fillPath()
+  g.fillRect(14, 18, 10, 18).fillRect(28, 12, 18, 8)
+  // Ojo y sonrisa de oreja a oreja
+  g.fillStyle(C.ink).fillCircle(39, 25, 2)
+  g.lineStyle(1.8, 0x9a5a4a).beginPath().arc(38, 31, 5, 0.1, 1.5).strokePath()
+}
+
 // Gente de la feria: siluetas grises, sin cara
 function drawSombra(g: Phaser.GameObjects.Graphics) {
   g.fillStyle(0x4d5363)
@@ -592,6 +622,14 @@ export function makeTextures(scene: Phaser.Scene) {
   g.fillStyle(0xf4f1e6).fillRect(4, 6, 14, 10)
   g.lineStyle(1, 0x2b3140).lineBetween(6, 9, 16, 9).lineBetween(6, 12, 14, 12)
   g.generateTexture('cuaderno', 22, 28)
+
+  // Sesión 2 y 3: el Japo
+  const japo: [string, Legs][] = [['japo0', 'stand'], ['japo1', 'walkA'], ['japo2', 'walkB']]
+  for (const [key, legs] of japo) {
+    g.clear()
+    drawJapo(g, legs)
+    g.generateTexture(key, 56, 140)
+  }
 
   // Sesión 3: María en la fiesta, la familia de María y la foto de la fiesta
   const mariaFiesta: [string, Legs][] = [['mariaFiesta0', 'stand'], ['mariaFiesta1', 'walkA'], ['mariaFiesta2', 'walkB']]

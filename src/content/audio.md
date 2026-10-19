@@ -152,14 +152,18 @@ Los mismos sonidos que La primera noche. Lo único distinto: en el portero, entr
 
 | Sonido | Cuándo | Notas |
 |---|---|---|
-| Ambiente de la casa | Adentro | El zumbido bajo de siempre |
+| Ambiente de la casa | En el aula y adentro de la casa | El zumbido bajo de siempre |
+| **Golpe contra el pizarrón** | Cuando el Japo se estrella | **Nuevo.** Un golpe sordo y grave, con un poco de ruido de madera |
+| **La grieta** | Cuando el pizarrón se agrieta | **Nuevo.** Chasquidos agudos y cortos, como algo que se raja |
+| **Risas del aula** | Después del silencio | **Nuevo.** Varias voces que se ríen a destiempo ("ja, ja, ja"), cada una en su tono |
+| **Timbre del colegio** | Cuando el Japo se levanta | **Nuevo.** El timbre eléctrico de recreo, un par de segundos |
 | **Pajaritos** | En el barrio, de tarde | **Nuevo.** Pios cortos, de a dos o tres, cada tanto. Se van cuando se hace de noche |
 | El auto del papá | Cuando llega a la noche y cuando se va | El ruido de la calle del auto de la Casa de Jorge |
 | **Detrás de la puerta** | En el cuarto, después del corte | **Nuevo.** Voces apagadas que no se entienden y golpes sordos, como escuchados a través de una pared. No se escucha nada explícito |
 | Golpes en la puerta | La mamá, al final | Dos golpes suaves |
 | Papel | El boletín, y cuando la mamá lo pasa por debajo de la puerta | El mismo de los documentos |
 
-_Provisorio. Lo nuevo son los pajaritos y lo que se escucha detrás de la puerta._
+_Provisorio. Lo nuevo son los sonidos del aula, los pajaritos y lo que se escucha detrás de la puerta._
 
 ### Sesión 3: La fiesta
 

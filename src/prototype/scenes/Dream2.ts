@@ -7,9 +7,12 @@ import { choose, eyelids, objective, say, text, toast, type Line, type Point } f
 import { openDiary } from './diary'
 import { controlsHelp } from '../touch'
 
-// Sesión 2: el boletín. Jorge tiene unos 15 años, en la casa de su mamá y en el barrio.
+// Sesión 2: el boletín. Jorge tiene unos 15 años: en el colegio, en la casa de su mamá y en el barrio.
+//   Aula:   [pizarrón] [escritorio: preceptora] [bancos] [banco de Jorge] [banco del Japo]
 //   Casa:   [cuarto de Jorge] [pasillo] [comedor: silla y campera del papá] [cocina: mamá | puerta a la calle]
 //   Barrio: [frente de la casa] [almacén] [vecina] [bar: el papá] [esquina] [plaza: María]
+// Empieza en el aula: la preceptora le da el boletín (Jorge no lo abre) y el Japo, su amigo, corre desde el fondo y
+// se estrella contra el pizarrón para hacerlo reír. El pizarrón se agrieta y por un segundo es la pizarra de Jorge hoy.
 // Jorge necesita que su papá firme el boletín, y el papá no está. Lo que ilumina la llama de Vela se recuerda (pasa de
 // gris a color). Cerca de las cosas del papá hace frío y la llama se achica; cerca de María, crece.
 // A la noche el papá vuelve. La violencia no se ve: el recuerdo se corta, y Jorge termina en el piso de su cuarto,
@@ -22,10 +25,11 @@ const FEET = FLOOR - 70 * TEEN
 const WALK = 190
 const REVEAL = 240
 
-type Area = 'casa' | 'barrio'
+type Area = 'casa' | 'barrio' | 'aula'
 const AREAS: Record<Area, { x: number; w: number }> = {
   casa: { x: 0, w: 2400 },
   barrio: { x: 3000, w: 3600 },
+  aula: { x: 7200, w: 1600 },
 }
 const POS = {
   cama: 250,
@@ -46,11 +50,18 @@ const POS = {
   hamacas: 5800,
   maria: 5900,
   banco: 6250,
+  pizarron: 7480,
+  preceptora: 7810,
+  bancoJorge: 8150,
+  japo: 8610,
 }
+// El aula: bancos (x del pupitre) y compañeros sin cara parados al lado
+const BANCOS = [7990, POS.bancoJorge - 70, 8360, POS.japo - 80]
+const COMPANEROS = [8060, 8430, 7660]
 // Cosas del papá: cerca de ellas hace frío
 const FRIO = [POS.campera, POS.sillaPapa, POS.bar]
 
-type Phase = 'intro' | 'tarde' | 'noche' | 'cena' | 'cuarto' | 'fin'
+type Phase = 'intro' | 'aula' | 'tarde' | 'noche' | 'cena' | 'cuarto' | 'fin'
 type Paint = (c: number) => number
 interface Reveal {
   x: number
@@ -86,6 +97,9 @@ export class Dream2 extends Phaser.Scene {
   private mama!: Phaser.GameObjects.Image
   private mamaGlow!: Phaser.GameObjects.Arc
   private maria!: Phaser.GameObjects.Image
+  private japo!: Phaser.GameObjects.Image
+  private companeros: Phaser.GameObjects.Image[] = []
+  private risa = false // el Japo lo hace reír: la llama crece
   private keys!: Record<string, Phaser.Input.Keyboard.Key>
   private prompt!: Phaser.GameObjects.Container
   private promptLabel!: Phaser.GameObjects.Text
@@ -102,7 +116,7 @@ export class Dream2 extends Phaser.Scene {
   private walkDist = 0
   private stepDist = 0
   private flameScale = 1
-  private f = { boletin: false, mama: false, almacen: false, vecina: false, bar: false, maria: false }
+  private f = { recibido: false, japo: false, boletin: false, mama: false, almacen: false, vecina: false, bar: false, maria: false }
   private tone?: { stop: (fade?: number) => void }
   private birds?: { stop: (fade?: number) => void }
   private voces?: { stop: (fade?: number) => void }
@@ -119,17 +133,21 @@ export class Dream2 extends Phaser.Scene {
     this.flameScale = 1
     this.objs = []
     this.lamps = []
-    this.f = { boletin: false, mama: false, almacen: false, vecina: false, bar: false, maria: false }
+    this.f = { recibido: false, japo: false, boletin: false, mama: false, almacen: false, vecina: false, bar: false, maria: false }
+    this.companeros = []
+    this.risa = false
     this.papa = undefined
     makeTextures(this)
     this.cameras.main.setBackgroundColor('#0b0c10')
     this.drawCasa()
     this.drawBarrio()
+    this.drawAula()
 
     this.mama = this.add.image(POS.mama, FLOOR - 75, 'mama').setDepth(8).setFlipX(true)
     this.mamaGlow = this.add.circle(POS.mama - 2, this.mama.getTopCenter().y + 23, 22, 0xfff3d6, 0.6).setDepth(8).setBlendMode(Phaser.BlendModes.ADD)
     this.maria = this.add.image(POS.maria, FLOOR - 70, 'maria0').setDepth(8).setFlipX(true)
-    this.player = this.add.image(POS.cama + 120, FEET, 'jorge0').setScale(TEEN).setDepth(10)
+    this.japo = this.add.image(POS.japo, FEET, 'japo0').setScale(TEEN).setDepth(8).setFlipX(true)
+    this.player = this.add.image(POS.bancoJorge, FEET, 'jorge0').setScale(TEEN).setDepth(10)
 
     this.flameGlow = this.add.circle(0, 0, 60, 0xffc56b, 0.18).setBlendMode(Phaser.BlendModes.ADD)
     this.flame = this.add.container(this.player.x + 70, FEET - 110, [this.flameGlow, this.add.image(0, 0, 'llama')]).setDepth(790).setAlpha(0)
@@ -148,7 +166,7 @@ export class Dream2 extends Phaser.Scene {
     this.setupSpots()
 
     this.keys = this.input.keyboard!.addKeys('LEFT,RIGHT,A,D,E,SPACE,TAB,ESC') as Record<string, Phaser.Input.Keyboard.Key>
-    this.setArea('casa')
+    this.setArea('aula')
     this.cameras.main.startFollow(this.player, true, 0.08, 0.08)
     this.cameras.main.centerOn(this.player.x, 360)
     this.tone = startRoomTone()
@@ -345,6 +363,63 @@ export class Dream2 extends Phaser.Scene {
     this.lamps.push(this.add.circle(6480, 306, 70, 0xffe2a8, 0).setDepth(781).setBlendMode(Phaser.BlendModes.ADD))
   }
 
+  private drawAula() {
+    const { x: X, w: Wd } = AREAS.aula
+    const g = this.add.graphics()
+    // Paredes verde agua con zócalo, piso de baldosas grises, la pared del fondo a la izquierda
+    g.fillStyle(0x7f9079).fillRect(X, 0, Wd, FLOOR)
+    g.fillStyle(0x5d6f59).fillRect(X, FLOOR - 110, Wd, 110)
+    g.fillStyle(0x4c5d49).fillRect(X, FLOOR - 114, Wd, 6)
+    g.fillStyle(0x5f636a).fillRect(X, FLOOR, Wd, 120)
+    for (let lx = X; lx < X + Wd; lx += 60) g.fillStyle(lx % 120 === 0 ? 0x676b72 : 0x5f636a).fillRect(lx, FLOOR, 60, 120)
+    g.fillStyle(0x6a7a65).fillRect(X, 0, 30, FLOOR)
+    // Ventanas con sol de la mañana
+    for (const wx of [8250, 8560]) {
+      g.fillStyle(0xd6e2ea).fillRect(wx - 70, 190, 140, 170)
+      g.lineStyle(5, 0xb9bfc8).strokeRect(wx - 70, 190, 140, 170).lineBetween(wx, 190, wx, 360).lineBetween(wx - 70, 275, wx + 70, 275)
+    }
+    // Reloj y bandera
+    g.fillStyle(0xf1efe8).fillCircle(7900, 210, 24)
+    g.lineStyle(3, 0x2b2b2b).strokeCircle(7900, 210, 24).lineBetween(7900, 210, 7900, 194).lineBetween(7900, 210, 7912, 214)
+    g.fillStyle(0x74acdf).fillRect(8000, 160, 60, 14).fillRect(8000, 188, 60, 14)
+    g.fillStyle(0xf1efe8).fillRect(8000, 174, 60, 14)
+    g.fillStyle(0xf2c14e).fillCircle(8030, 181, 4)
+    // El pizarrón
+    this.reveal(POS.pizarron, (gg, k) => {
+      gg.fillStyle(k(0x6b4a2e)).fillRect(7250, 290, 460, 210)
+      gg.fillStyle(k(0x2f4a3a)).fillRect(7260, 300, 440, 190)
+      gg.fillStyle(k(0x6b4a2e)).fillRect(7246, 492, 468, 10)
+      gg.fillStyle(k(0xf1efe8)).fillRect(7600, 486, 24, 6).fillRect(7640, 487, 14, 5)
+      gg.fillStyle(k(0x3a3f4d)).fillRect(7300, 482, 40, 10)
+    })
+    this.label(POS.pizarron, 340, 'Entrega de boletines', 22, '#c9d3c4').setFontStyle('italic')
+    this.label(7340, 400, '3x + 5 = 20', 16, '#aab6a6').setFontStyle('italic')
+    // El escritorio de la preceptora, con la pila de boletines
+    this.reveal(POS.preceptora, (gg, k) => {
+      gg.fillStyle(k(0x7a5a3a)).fillRect(POS.preceptora - 80, 486, 160, 14)
+      gg.fillStyle(k(0x5a3e26)).fillRect(POS.preceptora - 74, 500, 148, 60).fillRect(POS.preceptora - 74, 560, 12, 40).fillRect(POS.preceptora + 62, 560, 12, 40)
+      for (let i = 0; i < 6; i++) {
+        gg.fillStyle(k(0xe8e2cf)).fillRect(POS.preceptora - 40 + (i % 2) * 2, 480 - i * 4, 40, 4)
+        gg.fillStyle(k(0x6f8fc0)).fillRect(POS.preceptora - 40 + (i % 2) * 2, 480 - i * 4, 6, 4)
+      }
+    }, 9)
+    this.add.image(POS.preceptora + 20, FLOOR - 75, 'sombra').setAlpha(0.9).setDepth(7).setFlipX(true)
+    // Los bancos: pupitre y silla, mirando al pizarrón
+    for (const bx of BANCOS) {
+      this.reveal(bx, (gg, k) => {
+        gg.fillStyle(k(0x8a6a45)).fillRect(bx - 50, 488, 100, 10)
+        gg.fillStyle(k(0x3a3f4d)).fillRect(bx - 44, 498, 6, 102).fillRect(bx + 38, 498, 6, 102)
+        gg.fillStyle(k(0x8a6a45)).fillRect(bx + 56, 528, 44, 8).fillRect(bx + 94, 460, 8, 70)
+        gg.fillStyle(k(0x3a3f4d)).fillRect(bx + 58, 536, 5, 64).fillRect(bx + 94, 536, 5, 64)
+        if (bx === POS.bancoJorge - 70) {
+          // La mochila de Jorge, colgada de la silla
+          gg.fillStyle(k(0x2f3a52)).fillRoundedRect(bx + 100, 500, 30, 40, 6)
+        }
+      }, 9)
+    }
+    for (const cx of COMPANEROS) this.companeros.push(this.add.image(cx, FLOOR - 75, 'sombra').setAlpha(0.88).setDepth(7).setFlipX(cx % 2 === 0))
+  }
+
   // ---------- Personajes y líneas ----------
 
   private jorgeHead = (): Point => {
@@ -358,6 +433,8 @@ export class Dream2 extends Phaser.Scene {
   private at = (x: number, y: number, t: string): Line => ({ kind: 'speech', text: t, anchor: () => ({ x, y }) })
   private mamaSays = (t: string): Line => ({ kind: 'speech', text: t, anchor: () => ({ x: this.mama.x, y: this.mama.getTopCenter().y }) })
   private mariaSays = (t: string): Line => ({ kind: 'speech', text: t, anchor: () => ({ x: this.maria.x, y: this.maria.getTopCenter().y }) })
+  private japoSays = (t: string): Line => ({ kind: 'speech', text: t, anchor: () => ({ x: this.japo.x, y: this.japo.angle === 0 ? this.japo.getTopCenter().y : this.japo.y - 30 }) })
+  private preceptoraSays = (t: string): Line => this.at(POS.preceptora + 20, 445, t)
   private papaSays = (t: string): Line => ({ kind: 'speech', text: t, anchor: () => ({ x: this.papa!.x, y: this.papa!.getTopCenter().y }) })
 
   private pista(titulo: string, texto: string) {
@@ -366,7 +443,12 @@ export class Dream2 extends Phaser.Scene {
 
   private setupSpots() {
     const tarde = () => this.phase === 'tarde'
+    const aula = () => this.phase === 'aula'
     this.spots = [
+      { area: 'aula', x: POS.pizarron, label: 'Pizarrón', when: aula, action: () => this.pizarron() },
+      { area: 'aula', x: POS.preceptora, label: 'Preceptora', when: aula, action: () => this.preceptora() },
+      { area: 'aula', x: POS.bancoJorge - 70, label: 'Banco', when: aula, action: () => say(this, [this.think('Mi banco.'), this.think('Lleno de cosas escritas con birome. Casi todas del Japo.')]) },
+      { area: 'aula', x: POS.japo, label: 'Japo', when: () => aula() && !this.f.japo, action: () => this.hablarJapo() },
       { area: 'casa', x: POS.escritorio, label: 'Boletín', when: () => tarde() && !this.f.boletin, action: () => this.boletin() },
       { area: 'casa', x: POS.campera, label: 'Campera', when: tarde, action: () => say(this, [this.think('Su campera.'), this.think('Huele a cigarrillo. Si está colgada acá, él no está.')]) },
       { area: 'casa', x: POS.sillaPapa, label: 'Silla', when: tarde, action: () => this.silla() },
@@ -383,7 +465,8 @@ export class Dream2 extends Phaser.Scene {
   }
 
   private updateGoal() {
-    if (this.phase === 'tarde') {
+    if (this.phase === 'aula') this.goal.set(this.f.recibido ? 'Volver con el Japo' : 'Buscar el boletín')
+    else if (this.phase === 'tarde') {
       if (!this.f.boletin) this.goal.set('Ver qué hay en el escritorio')
       else if (!this.f.bar) this.goal.set('Conseguir que papá firme el boletín')
       else if (!this.f.maria) this.goal.set('Hacer tiempo hasta que papá vuelva')
@@ -402,7 +485,7 @@ export class Dream2 extends Phaser.Scene {
     await lids.to(0.2, 900)
     await lids.to(1, 2200)
     lids.destroy()
-    await say(this, [this.think('Mi cuarto.'), this.think('En la casa de mamá.'), this.think('Soy más grande. Tengo… quince, dieciséis.')])
+    await say(this, [this.think('Un aula.'), this.think('Mi colegio. El secundario.'), this.think('Soy más grande. Tengo… quince, dieciséis.')])
     this.flame.setPosition(this.player.x + 70, FEET - 260)
     sfx.flame()
     this.tweens.add({ targets: this.flame, alpha: 1, y: FEET - 110, duration: 1500, ease: 'Sine.Out' })
@@ -411,7 +494,7 @@ export class Dream2 extends Phaser.Scene {
       this.vela('Acá estoy, Jorge. Estás soñando otra vez.'),
       this.vela('Ya sabés cómo es: lo que ilumine, lo vas a poder recordar.'),
     ])
-    this.phase = 'tarde'
+    this.phase = 'aula'
     this.updateGoal()
     const help = text(this, 24, this.scale.height - 34, controlsHelp('← → / A D caminar   ·   E examinar / hablar   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa'), 16, '#aab2c4')
       .setScrollFactor(0)
@@ -419,10 +502,209 @@ export class Dream2 extends Phaser.Scene {
     this.time.delayedCall(12000, () => this.tweens.add({ targets: help, alpha: 0, duration: 1500 }))
   }
 
+  // ---------- El aula ----------
+
+  private async pizarron() {
+    await say(this, [this.think('"Entrega de boletines."'), this.think('Y abajo, una ecuación que nunca entendí.')])
+  }
+
+  private async preceptora() {
+    if (this.f.recibido) {
+      await say(this, [this.preceptoraSays('Mañana lo quiero firmado por tu papá, Jorge.')])
+      return
+    }
+    this.f.recibido = true
+    await say(this, [
+      this.preceptoraSays('Jorge. Tu boletín.'),
+      this.preceptoraSays('Que lo firme tu papá, ¿eh? Necesito hablar con él.'),
+      this.preceptoraSays('Lo traés mañana.'),
+    ])
+    sfx.paper()
+    if (!state.inventario.includes('boletin')) state.inventario.push('boletin')
+    await say(this, [this.think('No lo abro.'), this.think('Si no lo abro, todavía no pasó nada.')])
+    this.updateGoal()
+  }
+
+  private async hablarJapo() {
+    this.japo.setFlipX(this.player.x < this.japo.x)
+    if (!this.f.recibido) {
+      await say(this, [
+        this.japoSays('¡Jorge! Te está buscando la preceptora.'),
+        this.japoSays('Yo ya tengo el mío. Me llevo cuatro. Mi vieja me cuelga del ventilador.'),
+      ])
+      return
+    }
+    this.f.japo = true
+    this.goal.set(null)
+    await say(this, [
+      this.japoSays('¿Y? ¿Cuánto te sacaste?'),
+      this.speak('No lo abrí.'),
+      this.japoSays('Uh. Esa cara la conozco.'),
+      this.japoSays('Pará, pará. Correte, que tomo carrera.'),
+      this.think('El Japo.'),
+      this.think('Me había olvidado de él.'),
+    ])
+    await this.japoCorre()
+  }
+
+  // El Japo corre desde el fondo del aula y se estrella contra el pizarrón. El pizarrón se agrieta: por un segundo es la
+  // pizarra de Jorge, la de su casa de hoy
+  private async japoCorre() {
+    const cam = this.cameras.main
+    cam.stopFollow()
+    // Jorge se corre hacia adelante, para mirar. La llama va con él y alumbra el pizarrón
+    this.facing = -1
+    this.player.setFlipX(true)
+    await this.walk(this.player, 'jorge', 7760, 1.3)
+    this.facing = 1
+    this.player.setFlipX(false)
+    // El Japo va hasta el fondo
+    this.japo.setFlipX(false)
+    await Promise.all([this.walk(this.japo, 'japo', 8700, 1), this.tween({ targets: cam, scrollX: 7520, duration: 1400, ease: 'Sine.InOut' })])
+    this.japo.setFlipX(true)
+    await say(this, [this.japoSays('¡Miren todos!')])
+    this.facing = -1
+    this.player.setFlipX(true)
+    // Carrera hasta el pizarrón
+    await Promise.all([this.walk(this.japo, 'japo', 7330, 3.4), this.tween({ targets: cam, scrollX: 7200, duration: 900, ease: 'Sine.InOut' })])
+    sfx.golpe()
+    cam.shake(220, 0.008)
+    const tabla = this.objs.find((o) => o.x === POS.pizarron)!
+    this.tweens.add({ targets: [tabla.gray, tabla.color], x: 5, duration: 45, yoyo: true, repeat: 3 })
+    this.japo.setTexture('japo0').setScale(TEEN * 0.8, TEEN * 1.04)
+    await this.wait(160)
+    // Se cae para atrás, despacio
+    this.japo.setScale(TEEN)
+    await this.tween({ targets: this.japo, angle: 90, x: 7390, y: FLOOR - 26, duration: 520, ease: 'Quad.In' })
+    sfx.kick('caja', 0.5)
+    // La grieta
+    sfx.grieta()
+    const grieta = this.add.graphics().setDepth(3.5)
+    grieta.lineStyle(2, 0xe8eee4, 0.9)
+    const rayos: [number, number][][] = [
+      [[7300, 450], [7340, 420], [7330, 390], [7380, 350], [7372, 312]],
+      [[7340, 420], [7400, 430], [7450, 404], [7520, 418]],
+      [[7330, 390], [7290, 360], [7268, 330]],
+      [[7400, 430], [7420, 470], [7470, 488]],
+    ]
+    for (const r of rayos) {
+      grieta.beginPath().moveTo(r[0][0], r[0][1])
+      for (const [px, py] of r.slice(1)) grieta.lineTo(px, py)
+      grieta.strokePath()
+    }
+    await this.wait(900)
+    await say(this, [this.think('…')])
+    // Silencio. Y después, el aula entera se ríe
+    sfx.risas()
+    for (const c of this.companeros) this.tweens.add({ targets: c, y: c.y - 5, duration: 160, yoyo: true, repeat: 7, delay: Math.random() * 200 })
+    this.risa = true
+    await this.wait(600)
+    await say(this, [
+      this.speak('¡Jajaja! ¡Estás loco, Japo!'),
+      this.japoSays('…Diez puntos. ¿No?'),
+      this.think('Me estoy riendo.'),
+      this.think('Con el boletín en la mochila, y me estoy riendo.'),
+    ])
+    // El sueño se mezcla con lo de hoy: en el pizarrón, la pizarra de su casa
+    await this.pizarraDeHoy()
+    // El Japo se levanta
+    await this.tween({ targets: this.japo, angle: 0, x: 7420, y: FEET, duration: 700, ease: 'Sine.Out' })
+    grieta.destroy()
+    sfx.timbreColegio()
+    await this.wait(900)
+    await say(this, [this.japoSays('¡Y que te lo firme tu viejo, eh! Si no, la preceptora te come.')])
+    this.risa = false
+    await say(this, [
+      this.think('Mi viejo.'),
+      this.think('El Japo. ¿Qué habrá sido de él?'),
+      this.think('En algún momento nos dejamos de ver. No me acuerdo cuándo.'),
+    ])
+    this.pista(
+      'El Japo',
+      'El Japo, mi amigo del secundario. El día del boletín corrió desde el fondo del aula y se estrelló contra el pizarrón. Era la única forma de que me riera ese día. Con los años nos dejamos de ver.',
+    )
+    await say(this, [this.vela('Seguí, Jorge. Ese día no terminó en el colegio.')])
+    await this.alCuarto()
+  }
+
+  private async pizarraDeHoy() {
+    const X0 = 7290
+    const W = 400
+    const Y = 440
+    const capa = this.add.container(0, 0).setDepth(3.6).setAlpha(0)
+    const g = this.add.graphics()
+    g.fillStyle(0xf4f4f0).fillRect(7262, 302, 436, 186)
+    g.lineStyle(3, 0x2b3140).lineBetween(X0, Y, X0 + W, Y)
+    capa.add(g)
+    for (let a = 0; a <= 40; a += 10) {
+      const lx = X0 + (a / 40) * W
+      g.lineBetween(lx, Y - 8, lx, Y + 8)
+      capa.add(this.add.text(lx, Y + 22, String(a), { fontFamily: FONT, fontSize: '14px', color: '#2b3140', resolution: 2 }).setOrigin(0.5))
+    }
+    const marca = (edad: number, t: string, color: number, css: string) => {
+      const lx = X0 + (edad / 40) * W
+      g.fillStyle(color).fillCircle(lx, Y, 6)
+      capa.add(this.add.text(lx, Y - 40, t, { fontFamily: FONT, fontSize: '14px', color: css, resolution: 2, fontStyle: 'italic' }).setOrigin(0.5))
+    }
+    marca(5, 'La feria', 0x2b6cb0, '#2b6cb0')
+    marca(15, '?', 0xb03a2e, '#b03a2e')
+    capa.add(this.add.text(7480, 330, '¿Quién soy?', { fontFamily: FONT, fontSize: '18px', color: '#2b3140', resolution: 2, fontStyle: 'italic' }).setOrigin(0.5))
+    sfx.flash()
+    await this.tween({ targets: capa, alpha: 1, duration: 500 })
+    await say(this, [
+      this.think('El pizarrón…'),
+      this.think('Es el de casa. El mío. El de ahora.'),
+      this.vela('Es el sueño, Jorge. A veces se mezcla con lo de hoy.'),
+    ])
+    await this.tween({ targets: capa, alpha: 0, duration: 900 })
+    capa.destroy()
+  }
+
+  // Después del colegio: Jorge en su cuarto, a la tarde
+  private async alCuarto() {
+    const cam = this.cameras.main
+    cam.fadeOut(1400, 0, 0, 0)
+    await new Promise((r) => cam.once('camerafadeoutcomplete', r))
+    this.japo.setVisible(false)
+    this.player.setTexture('jorge0').setPosition(POS.cama + 120, FEET)
+    this.facing = 1
+    this.player.setFlipX(false)
+    this.flame.setPosition(this.player.x + 70, FEET - 110)
+    this.setArea('casa')
+    cam.startFollow(this.player, true, 0.08, 0.08)
+    cam.centerOn(this.player.x, 360)
+    await this.wait(600)
+    cam.fadeIn(1400, 0, 0, 0)
+    await this.wait(1200)
+    await say(this, [this.think('Mi cuarto.'), this.think('En la casa de mamá.')])
+    this.phase = 'tarde'
+    this.updateGoal()
+  }
+
+  // Camina a un personaje hasta `x` (con `rapido` > 1 corre)
+  private async walk(img: Phaser.GameObjects.Image, base: 'jorge' | 'japo', x: number, rapido: number) {
+    const dist = Math.abs(img.x - x)
+    if (dist < 2) return
+    let paso = 0
+    const ev = this.time.addEvent({
+      delay: rapido > 1 ? 80 : 160,
+      loop: true,
+      callback: () => {
+        paso++
+        img.setTexture(`${base}${paso % 2 ? 1 : 2}`)
+        if (rapido <= 1 || paso % 2 === 0) sfx.step()
+      },
+    })
+    await this.tween({ targets: img, x, duration: (dist / (WALK * rapido)) * 1000 })
+    ev.remove()
+    img.setTexture(`${base}0`)
+  }
+
   private async boletin() {
     this.f.boletin = true
     sfx.paper()
     if (!state.inventario.includes('boletin')) state.inventario.push('boletin')
+    await say(this, [this.think('Lo dejé acá cuando volví del colegio.'), this.think('Allá no lo quise abrir.')])
     await showPage(this, 'boletin', 0)
     await say(this, [
       this.think('El boletín. Un tres en matemática.'),
@@ -758,7 +1040,7 @@ export class Dream2 extends Phaser.Scene {
       const frios = this.papa ? [...FRIO, this.papa.x] : FRIO
       if (this.phase !== 'noche' || this.papa) for (const fx of frios) frio = Math.max(frio, 1 - Math.abs(fx - this.player.x) / 420)
       const calor = this.phase === 'tarde' && this.area === 'barrio' ? Math.max(0, 1 - Math.abs(POS.maria - this.player.x) / 380) : 0
-      const target = Phaser.Math.Clamp(1 - frio * 0.6 + calor * 0.5, 0.35, 1.5)
+      const target = Phaser.Math.Clamp(1 - frio * 0.6 + calor * 0.5 + (this.risa ? 0.5 : 0), 0.35, 1.5)
       this.flameScale += (target - this.flameScale) * k
       this.cold.setFillStyle(0x3a5a8a, Math.max(0, frio) * 0.45)
       // Lo que la luz toca un rato, se recuerda
@@ -810,7 +1092,7 @@ export class Dream2 extends Phaser.Scene {
     const spot = this.spots.find((s) => s.area === this.area && s.when() && Math.abs(this.player.x - s.x) < 75)
     if (spot) {
       // Los objetos del recuerdo se examinan recién cuando la luz los ilumina (las personas y las puertas, siempre)
-      const people = ['Mamá', 'Chica', 'María', 'Papá', 'Salir', 'Casa', 'Puerta']
+      const people = ['Mamá', 'Chica', 'María', 'Papá', 'Salir', 'Casa', 'Puerta', 'Preceptora', 'Japo']
       const lit = people.includes(spot.label) || !this.objs.some((o) => o.x === spot.x) || this.isRevealed(spot.x)
       this.prompt.setVisible(true).setPosition(spot.x, 300)
       this.promptLabel.setText(spot.x === POS.maria ? (this.f.maria ? 'María' : 'Chica') : spot.label)
