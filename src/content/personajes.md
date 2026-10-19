@@ -78,7 +78,7 @@ _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesi�
 
 ### María, la ex novia de Jorge
 
-![María](sprites/maria0.png) ![María caminando](sprites/maria1.png) ![María en la fiesta](sprites/mariaFiesta0.png)
+![María](sprites/maria0.png) ![María caminando](sprites/maria1.png) ![María en la fiesta](sprites/mariaFiesta0.png) ![María a los 30](sprites/maria30_0.png)
 
 | Campo | Valor |
 |---|---|
@@ -87,7 +87,7 @@ _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesi�
 | Relación con Jorge | Fue su **primera novia**. Iban a alquilar juntos el departamento donde Jorge vive hoy. Se separaron **a los 20**: ella se fue a **estudiar a Córdoba** por cinco años. Pero **nunca dejaron de hablarse** |
 | A los 15 | **Se conocen en la plaza del barrio** (Sesión 2): ella se acababa de mudar a la vuelta y se ofrece a ayudarlo con matemática. Aspecto en el prototipo: pelo largo oscuro con flequillo, campera de jean y remera blanca (provisorio). **Tiene cara** |
 | A los 17 | **Sesión 3: La fiesta.** Los martes en la plaza ya no estudian: ella quiere irse de su casa a un depto chiquito con un balcón lleno de plantas. Bailan en la fiesta de egresados, se sacan **la foto** y esa noche, en la casa de ella, se dan **el primer beso**. Cuando Jorge no quiere volver a su casa, ella lo lleva a la suya. Aspecto en la fiesta: vestido bordó y pelo suelto (provisorio) |
-| A los 30 | Se reencuentran **en un bar**: ella ya está casada; él sigue soltero |
+| A los 30 | **Sesión 5: El reencuentro.** Se cruzan de casualidad en una esquina y siguen en **un bar**: ella ya está casada; él sigue soltero. Le pregunta por su mamá (_"Llamala, Jorge"_) y le dibuja en una servilleta la ventana de la cocina con plantas. Llueve, la acompaña a la parada y se besan casi por inercia. Jorge se va: ella lo dejó una vez y no le cree. Aspecto en el prototipo: pelo recogido, tapado mostaza, anillo, paraguas rojo (provisorio) |
 | En el final _(spoiler)_ | Es quien toca el portero. En el sueño, la mente de Jorge la cambia por el chofer. Ver "Historia y mundo" → Final |
 | Por definir | ¿Por qué Jorge sacó su foto? ¿Qué pasó en el reencuentro? ¿Por qué viene justo esa noche? |
 
@@ -199,6 +199,13 @@ _Personajes propuestos por el agente para la idea del usuario de "María como re
 | Rol | Les muestra el departamento a Jorge y María. Habla de más, como cualquier inmobiliario: _"Luminoso, ¿eh? Ideal para una pareja que arranca."_ Los deja solos y ahí María corta |
 | Cómo es | Una silueta sin cara, con una carpeta: no es parte de lo que Jorge recuerda (provisorio) |
 | Por definir | ¿Firman el alquiler ese día? |
+
+### El mozo del bar _(sin nombre)_
+
+| Campo | Valor |
+|---|---|
+| Primera aparición | Sesión 5: El reencuentro |
+| Cómo es | Una silueta sin cara, detrás de la barra. _"Siéntense donde quieran, chicos."_ / _"Chicos, vamos cerrando."_ (provisorio) |
 
 ### Gente de la fiesta _(sin nombre)_
 

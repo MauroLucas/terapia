@@ -10,7 +10,7 @@ interface Page {
   opts: { w?: number; h?: number; paper?: number }
 }
 
-export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin' | 'cuaderno' | 'fotoFiesta' | 'papelito'
+export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin' | 'cuaderno' | 'fotoFiesta' | 'papelito' | 'servilleta'
 
 // Boletín de la Sesión 2. Firmado: la firma de la mamá, un garabato
 function boletinPage(firmado: boolean): Page {
@@ -265,6 +265,31 @@ export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: P
           c.add(g)
           c.add(text(scene, 0, -38, 'Papá', 30, '#2a3a6a', { fontFamily: HAND_FONT }).setOrigin(0.5).setAngle(-3))
           c.add(text(scene, 0, 26, '4555-0142', 40, '#2a3a6a', { fontFamily: HAND_FONT }).setOrigin(0.5).setAngle(-2))
+        },
+      },
+    ],
+  },
+  servilleta: {
+    nombre: 'Servilleta del bar',
+    texto: 'María la dibujó en el bar, la noche que nos reencontramos: la ventana de la cocina, con plantas. Me la guardé.',
+    pages: [
+      {
+        // Una servilleta de papel, un poco mojada, con un dibujo en birome (provisorio)
+        opts: { w: 420, h: 420, paper: 0x2b2018 },
+        build: (scene, c) => {
+          const g = scene.add.graphics()
+          g.fillStyle(0xf4f2ec).fillRect(-160, -160, 320, 320)
+          g.lineStyle(2, 0xd9d4c4).strokeRect(-150, -150, 300, 300)
+          g.fillStyle(0xc9d6e0, 0.35).fillCircle(90, 90, 46).fillCircle(-100, 70, 30)
+          // La ventana de la cocina, con plantas
+          const ink = 0x2a3a6a
+          g.lineStyle(3, ink).strokeRect(-80, -90, 160, 120).lineBetween(0, -90, 0, 30).lineBetween(-95, 30, 95, 30)
+          for (const [px, h] of [[-55, 34], [-15, 46], [30, 28], [60, 40]] as [number, number][]) {
+            g.lineStyle(2, ink).strokeRect(px - 10, 30, 20, 16)
+            g.lineBetween(px, 30, px, 30 - h).lineBetween(px, 30 - h * 0.6, px - 12, 30 - h * 0.8).lineBetween(px, 30 - h * 0.4, px + 12, 30 - h * 0.6)
+          }
+          c.add(g)
+          c.add(text(scene, 0, 96, 'así', 26, '#2a3a6a', { fontFamily: HAND_FONT }).setOrigin(0.5).setAngle(-4))
         },
       },
     ],

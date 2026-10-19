@@ -56,6 +56,11 @@ FONDOS = [
     ('depto-vacio', 'Dream4', {}, 'REVEAL', 0),
     ('depto-vacio-cocina', 'Dream4', {}, "REVEAL; s.player.setX(2000); s.flame.setX(2070); s.maria.setX(2150)", 1180),
     ('casa-pelea', 'Dream4', {}, "REVEAL; s.setArea('casa'); s.dark.setAlpha(0); s.player.setX(3700); s.flame.setX(3770)", 3300),
+    ('esquina', 'Dream5', {}, "REVEAL; s.player.setX(1300); s.flame.setX(1370); s.maria.setVisible(true).setX(1420)", 800),
+    ('bar', 'Dream5', {}, "REVEAL; s.setArea('bar'); s.player.setX(3850); s.flame.setX(3920); s.maria.setVisible(true).setX(4100)", 3330),
+    ('calle-lluvia', 'Dream5', {}, "REVEAL; s.setArea('lluvia'); s.dark.setAlpha(0); s.player.setX(6550); s.flame.setX(6620); s.maria.setVisible(true).setX(6620); s.paraguas.setVisible(true).setPosition(6600, 440)", 6000),
+    ('parada', 'Dream5', {}, "REVEAL; s.setArea('lluvia'); s.dark.setAlpha(0); s.player.setX(7380); s.flame.setX(7450); s.maria.setVisible(true).setX(7460)", 6620),
+    ('recuerdos-sepia', 'Dream5', {}, "s.setArea('recuerdo')", 8400),
 ]
 
 # Personajes dibujados en la escena: (archivo, fondo del que se recorta, recorte x, y, ancho, alto en pantalla)

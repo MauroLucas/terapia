@@ -193,6 +193,20 @@ _Provisorio. Lo nuevo es el vidrio._
 ### La cuarta noche
 
 Los mismos sonidos que las otras noches. En el portero, estática y la voz, pero Jorge no contesta. _Provisorio._
+
+### Sesión 5: El reencuentro
+
+| Sonido | Cuándo | Notas |
+|---|---|---|
+| Ciudad | En la esquina | El ruido de la calle del auto |
+| **Lluvia** | Desde que empieza a llover en el bar | **Nuevo.** Agua (ruido filtrado) y gotas sueltas. Adentro del bar, apagada; en la calle, fuerte; bajo un toldo o el paraguas, más suave. En las cinemáticas, casi no se escucha |
+| Aparece la llama | El beso | El mismo soplido de siempre |
+
+_Provisorio. Lo nuevo es la lluvia._
+
+### La quinta noche
+
+Los mismos sonidos que las otras noches. En el portero, en vez de estática, algo que suena como lluvia. _Provisorio._
 ## Interfaz
 
 | Sonido | Notas |

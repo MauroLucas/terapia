@@ -6,6 +6,7 @@ import { Dream } from './scenes/Dream'
 import { Dream2 } from './scenes/Dream2'
 import { Dream3 } from './scenes/Dream3'
 import { Dream4 } from './scenes/Dream4'
+import { Dream5 } from './scenes/Dream5'
 import { LevelEnd } from './scenes/LevelEnd'
 import { Neural } from './scenes/Neural'
 import { Office } from './scenes/Office'
@@ -60,7 +61,7 @@ const matter: Phaser.Types.Core.PhysicsConfig = { default: 'matter', matter: { g
 // Prototipo: el juego completo, todas las locaciones de corrido. Cada locación nueva se suma acá.
 export function createGame(parent: HTMLElement) {
   resetState()
-  return fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Stairs, Car, Neural, Corridor, Office, Dream, Dream2, Dream3, Dream4, LevelEnd] }))
+  return fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Stairs, Car, Neural, Corridor, Office, Dream, Dream2, Dream3, Dream4, Dream5, LevelEnd] }))
 }
 
 // Las locaciones sueltas marcan `solo` en el registro: al terminar muestran su cierre en vez de seguir a la locación siguiente.
@@ -194,6 +195,35 @@ export function createLevel14Game(parent: HTMLElement) {
   const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, LevelEnd] }))
   game.registry.set('start', 'Apartment')
   game.registry.set('startData', { noche: true, vuelta: 4 })
+  game.registry.set('solo', true)
+  return game
+}
+
+// Pre-sesión 5 sola: la mañana después de La cuarta noche y la consulta con Vela antes del sueño
+export function createLevel15Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Office, LevelEnd] }))
+  game.registry.set('start', 'Apartment')
+  game.registry.set('startData', { manana: true, vuelta: 4 })
+  game.registry.set('solo', true)
+  return game
+}
+
+// Sesión 5 sola (el reencuentro): el sueño y el despertar en la camilla
+export function createLevel16Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), scene: [Warning, Dream5, Office, LevelEnd] }))
+  game.registry.set('start', 'Dream5')
+  game.registry.set('solo', true)
+  return game
+}
+
+// La quinta noche sola: la vuelta a casa después de la Sesión 5
+export function createLevel17Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, LevelEnd] }))
+  game.registry.set('start', 'Apartment')
+  game.registry.set('startData', { noche: true, vuelta: 5 })
   game.registry.set('solo', true)
   return game
 }

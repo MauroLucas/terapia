@@ -273,6 +273,42 @@ function drawPapaMaria(g: Phaser.GameObjects.Graphics) {
   g.fillStyle(C.ink).fillCircle(39, 23, 2)
 }
 
+// María a los 30 (Sesión 5): pelo recogido, tapado mostaza, anillo de casada. Parada, caminando o sentada
+function drawMaria30(g: Phaser.GameObjects.Graphics, pose: Legs | 'sit') {
+  const skin = 0xe9c6a4
+  const sit = pose === 'sit'
+  const dy = sit ? 4 : 0
+  if (sit) {
+    g.lineStyle(9, 0x2f3a52).lineBetween(24, 100, 54, 100).lineBetween(54, 100, 54, 128)
+    g.fillStyle(0x2a1d16).fillRoundedRect(49, 127, 16, 7, 3)
+  } else {
+    g.lineStyle(9, 0x2f3a52)
+    const feet: [number, number][] =
+      pose === 'stand' ? [[24, 132], [34, 132]] : pose === 'walkA' ? [[15, 132], [43, 132]] : [[22, 132], [37, 132]]
+    g.lineBetween(25, 100, feet[0][0], feet[0][1] - 4)
+    g.lineBetween(33, 100, feet[1][0], feet[1][1] - 4)
+    g.fillStyle(0x2a1d16)
+    for (const [fx, fy] of feet) g.fillRoundedRect(fx - 6, fy - 5, 15, 7, 3)
+  }
+  // Tapado mostaza, largo
+  g.fillStyle(0xc9952e).fillRoundedRect(13, 46 + dy, 34, sit ? 52 : 62, 9)
+  g.fillStyle(0xf1efe8).fillTriangle(28, 46 + dy, 38, 46 + dy, 33, 58 + dy)
+  const armX = pose === 'walkA' ? 22 : pose === 'walkB' ? 28 : sit ? 30 : 25
+  g.fillStyle(0xb5832a).fillRoundedRect(armX, 52 + dy, 10, 38, 5)
+  g.fillStyle(skin).fillCircle(armX + 5, 92 + dy, 4.5)
+  // El anillo
+  g.fillStyle(0xe0b04a).fillCircle(armX + 7, 90 + dy, 1.8)
+  // Pelo recogido: rodete atrás
+  g.fillStyle(skin).fillRect(26, 36 + dy, 9, 12).fillCircle(31, 25 + dy, 14).fillTriangle(43, 24 + dy, 47, 29 + dy, 43, 30 + dy)
+  g.fillStyle(0x2a1d16)
+  g.slice(30, 22 + dy, 15, Math.PI, Math.PI * 2, false)
+  g.fillPath()
+  g.fillCircle(17, 22 + dy, 8)
+  g.fillRect(30, 11 + dy, 14, 7)
+  g.fillStyle(C.ink).fillCircle(38, 26 + dy, 2)
+  g.lineStyle(1.5, 0xb5655a).beginPath().arc(39, 31 + dy, 4, 0.2, 1.2).strokePath()
+}
+
 // Gente de la feria: siluetas grises, sin cara
 function drawSombra(g: Phaser.GameObjects.Graphics) {
   g.fillStyle(0x4d5363)
@@ -481,6 +517,26 @@ export function makeTextures(scene: Phaser.Scene) {
   g.fillStyle(0xd9d1b8).fillTriangle(16, 2, 24, 2, 24, 10)
   g.lineStyle(1, 0x2a3a6a).lineBetween(3, 9, 15, 9).lineBetween(3, 13, 18, 13)
   g.generateTexture('papelito', 24, 20)
+
+  // Sesión 5: María a los 30, el paraguas y la servilleta del bar
+  const maria30: [string, Legs | 'sit', number][] = [['maria30_0', 'stand', 56], ['maria30_1', 'walkA', 56], ['maria30_2', 'walkB', 56], ['maria30Sentada', 'sit', 72]]
+  for (const [key, pose, w] of maria30) {
+    g.clear()
+    drawMaria30(g, pose)
+    g.generateTexture(key, w, 140)
+  }
+  g.clear()
+  g.fillStyle(0xa83232).slice(60, 46, 58, Math.PI, Math.PI * 2, false)
+  g.fillPath()
+  g.fillStyle(0x8a2828).fillTriangle(2, 46, 32, 46, 18, 36).fillTriangle(88, 46, 118, 46, 102, 36)
+  g.lineStyle(3, 0x2b2b2b).lineBetween(60, 0, 60, 120)
+  g.generateTexture('paraguas', 120, 120)
+  g.clear()
+  g.fillStyle(0xf4f2ec).fillRect(0, 0, 26, 26)
+  g.lineStyle(1, 0xd9d4c4).strokeRect(2, 2, 22, 22)
+  g.lineStyle(1.5, 0x3a5a8a).strokeRect(7, 8, 12, 10)
+  g.fillStyle(0x4f9d4a).fillCircle(10, 18, 2).fillCircle(16, 18, 2)
+  g.generateTexture('servilleta', 26, 26)
 
   g.destroy()
 }

@@ -21,6 +21,9 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 12 | **Pre-sesión 4** | Casa de Jorge (la mañana) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
 | 13 | **Sesión 4: La pelea** | Sueño lúcido: el departamento vacío (de día) y la casa de la mamá (de noche), a los 20 | Recorrer el departamento con María, el corte, armar el bolso. La pelea con la mamá: la imagen se rompe | En el prototipo |
 | 14 | **La cuarta noche** | Casa de Jorge, de noche, después de la Sesión 4 | Anotar la pelea y dormir. En la billetera, el papelito con el número del papá. No atiende el portero | En el prototipo |
+| 15 | **Pre-sesión 5** | Casa de Jorge (la mañana) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
+| 16 | **Sesión 5: El reencuentro** | Sueño lúcido: una esquina del centro, un bar y la calle con lluvia, a los 30 | Cruzarse a María, charlar en el bar, acompañarla bajo la lluvia. El beso y la despedida | En el prototipo |
+| 17 | **La quinta noche** | Casa de Jorge, de noche, después de la Sesión 5 | Anotar el reencuentro y dormir. En la campera mojada, la servilleta de María | En el prototipo |
 
 ## Casa de Jorge
 
@@ -2091,8 +2094,221 @@ Los mismos de las otras noches: **Anotar lo que recordé en la pizarra** → **A
 
 ### Final de la locación
 
-Termina cuando Jorge **se duerme**. En el prototipo completo es el **fin del prototipo**: la Pre-sesión 5 y la Sesión 5 (el reencuentro) todavía no están.
+Termina cuando Jorge **se duerme**. En el prototipo completo sigue la **Pre-sesión 5**.
 
 ### Pendiente de definir
 
 - ¿La voz del portero vuelve a hablar? ¿Jorge vuelve a atender?
+
+## Pre-sesión 5
+
+### Resumen
+
+Una semana después de La cuarta noche. Igual que las otras: Jorge se despierta, **suena el portero** (_"Debe ser el remis."_), puede repasar la pizarra y, al salir del cuarto, aparece sentado frente a Vela.
+
+### Qué cambia
+
+| Lugar | Pre-sesión 5 |
+|---|---|
+| Pizarra | Ya tiene la pelea, en rojo. _"La feria. El boletín. La fiesta."_ / _"Y la pelea. No quiero mirarla mucho."_ |
+| Cuarto de inducción | _"Hoy vamos diez años más adelante."_ / _"Ya sos grande, Jorge. Casi como ahora."_ / _"Acostate."_ |
+
+### Las preguntas
+
+_Provisorias, propuestas por el agente._ Las respuestas no tienen consecuencias.
+
+| Pregunta | La verdad | La mentira |
+|---|---|---|
+| ¿Cómo estás después de lo de la semana pasada? | "Mal. Duermo mal. La veo en el piso." → _"Lo sé, Jorge. No te voy a apurar."_ | "Bien. Ya está." → _"Bueno. Si no está, también está bien."_ |
+| ¿Volviste a ver a María alguna vez, de grande? | "No sé. Creo que sí. No me acuerdo." → _"Hoy vamos a averiguarlo."_ | "No. Nunca." → _"¿Seguro? Hoy vamos a ver."_ |
+
+Después sigue la **Sesión 5: El reencuentro**.
+
+## Sesión 5: El reencuentro
+
+### Resumen
+
+Es la quinta sesión: **los 30**. Jorge vuelve del trabajo y se cruza a **María de casualidad**, en una esquina del centro. Siguen la charla en un bar. Se hace tarde y **llueve**: la acompaña hasta la parada del colectivo. Ahí **se acuerdan de cuando eran chicos** y, de vuelta en el presente, **se besan casi por inercia**. Pero Jorge **se arrepiente y se va**: ella lo dejó una vez, y no le cree.
+
+Es una sesión larga y agridulce. Hace eco con la Sesión 3 (el primer beso, de chicos, con todo por delante) y con el patrón de Jorge: **siempre se va o se cierra**. Eso prepara el final, cuando por fin abre.
+
+_Decidido por el usuario: el encuentro por casualidad en una esquina, la charla en el bar, que se haga tarde y llueva, que se acuerden de su amor y se besen, que el beso sea casi por inercia, con cinemáticas de cuando eran chicos que terminan de vuelta en el presente con el beso, y que Jorge se vaya porque ella lo dejó en su momento y no le cree. Por qué María toca el portero en el final queda para más adelante. Los diálogos, la servilleta y los detalles los propuso el agente y son provisorios._
+
+### Cómo es este sueño
+
+| Regla | Qué pasa |
+|---|---|
+| **La lluvia apaga la llama** | Bajo la lluvia, la llama de Vela se achica y todo se ve más oscuro. Bajo un toldo, en la parada o **bajo el paraguas de María**, crece. La primera vez: _"La lluvia me apaga, Jorge."_ / _"Quedate cerca de ella."_ |
+| **María camina al lado** | En la calle y hasta el bar, María lo sigue. En la lluvia, con el paraguas: quedarse cerca de ella es quedarse a cubierto |
+| **Cinemáticas en sepia** | En la parada, el recuerdo se va a la plaza (15), la fiesta (17) y el sillón (17), con bandas negras arriba y abajo y todo en sepia |
+| **El último recuerdo, en frío** | Después del beso aparece el departamento vacío, en azul: _"Me salió la beca. En Córdoba."_ / _"Son cinco años."_ Es lo que lo hace apartarse |
+| **El recuerdo no se puede cambiar** | Al irse, aunque el jugador elija darse vuelta, Jorge no se da vuelta |
+
+### Los lugares
+
+| Lugar | Qué hay |
+|---|---|
+| **La esquina**, al atardecer | Una esquina del centro: edificios con ventanas prendidas, un kiosco, un semáforo, gente sin cara que pasa |
+| **El bar** | Un bar de los de antes: madera, luz cálida, la barra con botellas, **el mozo** (una silueta sin cara) y **la mesa junto a la ventana**. Mientras charlan, empieza a llover del otro lado del vidrio |
+| **La calle**, de noche, con lluvia | Edificios oscuros, vereda mojada con reflejos, faroles, dos **toldos** a rayas y **la parada del colectivo**, con techo |
+| **Los recuerdos** (cinemáticas) | La plaza (15), la fiesta (17) y el sillón de la casa de María (17), en sepia. El departamento vacío (20), en azul |
+
+### Secuencia
+
+1. **Se le abren los ojos** en la esquina. _"Una esquina del centro."_ / _"Vuelvo del trabajo, como todos los días."_ / _"Tengo… treinta."_
+2. Aparece la llama. Vela: _"Hola, Jorge."_ / _"Hoy vamos diez años más adelante. Caminá."_ Objetivo: **Volver a casa**.
+3. **El encuentro:** al llegar a la esquina, María aparece desde el otro lado (ver "Diálogos"). Objetivo: **Ir al bar con María**.
+4. **El bar:** _"Esa mesa, la de la ventana."_ Objetivo: **Sentarme con María**.
+5. **La charla** (ver abajo). Al final, la servilleta, y afuera empieza a llover.
+6. El mozo: _"Chicos, vamos cerrando."_ María: _"Tengo paraguas. ¿Me acompañás hasta la parada?"_ Objetivo: **Acompañar a María a la parada**.
+7. **La lluvia:** caminan juntos bajo el paraguas, de toldo en toldo.
+8. **La parada:** _"Acá es."_ / _"Me hizo bien verte."_ / Jorge: _"A mí también."_ / _"¿Te acordás de la plaza?"_
+9. **Las cinemáticas:** la plaza (_"¿Un tres en matemática? Yo tengo un dos."_), la fiesta (_"¿Ves? No era tan difícil."_), el sillón (_"Buenas noches, Jorge."_).
+10. **El beso**, de vuelta en el presente, casi sin querer: se acercan, la llama crece y todo se pone cálido. Jorge piensa: _"…"_
+11. **El último recuerdo**, en frío: Córdoba. Jorge se aparta (ver "El final").
+12. **Irse:** Objetivo: **Irme**. Jorge camina solo bajo la lluvia. María lo llama: _"¡Jorge!"_
+13. Vela: _"Jorge… te estás mojando."_ / _"Vamos. Vas a despertar."_
+
+### Diálogos
+
+**La esquina:**
+
+> **María:** ¿Jorge?
+>
+> **Jorge (piensa):** Esa voz.
+>
+> **Jorge:** ¿María?
+>
+> **María:** ¡No lo puedo creer! ¿Cuánto hace?
+>
+> **Jorge:** Diez años.
+>
+> **Jorge (piensa):** Diez años y dos meses.
+>
+> **María:** ¿Tenés un rato? Hay un bar acá a la vuelta.
+
+El jugador elige _"Dale."_ o _"Tengo que irme…"_. Si elige irse: _"Quise decirle que tenía que irme."_ / _"…Dale. Un rato."_
+
+**La charla en el bar:**
+
+| Tema | Cómo aparece | Qué se dicen |
+|---|---|---|
+| Córdoba | El jugador elige en qué orden pregunta | _"Bien. Me recibí. Me quedé allá un tiempo más… y después volví."_ Jorge piensa: _"Cinco años, dijo. Fueron siete."_ |
+| ¿Estás casada? | Jorge le ve el anillo | _"Sí. Hace dos años."_ / _"Es un buen tipo."_ / Jorge: _"Me alegro."_ / _"No me alegro."_ |
+| La mamá | Pregunta ella | _"¿Y tu mamá? ¿Cómo está?"_ El jugador elige _"Bien, supongo."_ o _"No sé. No hablamos mucho."_ María: _"Llamala, Jorge."_ Jorge piensa: _"Todos me dicen lo mismo."_ |
+| El departamento | Pregunta ella | _"¿Seguís en el departamento?"_ / _"Sí. Lo alquilé igual. Solo."_ / _"¿Y pusiste plantas en la ventana?"_ / _"No."_ / _"Así, mirá."_ (dibuja la servilleta) |
+
+### La servilleta
+
+María dibuja en una servilleta la **ventana de la cocina del departamento, con plantas**, y escribe _"así"_. Se ve de cerca. _"La ventana de la cocina. Con plantas."_ / _"Me la guardo."_ Es el balcón con plantas de la Sesión 3 y la ventana de la Sesión 4.
+
+### El final
+
+> **Jorge:** No, María.
+>
+> **María:** Jorge…
+>
+> **Jorge:** Vos ya te fuiste una vez.
+>
+> **Jorge (piensa):** No le creo. No puedo.
+>
+> **María:** Eso fue hace diez años.
+>
+> **Jorge:** Para mí, no.
+
+Jorge camina solo bajo la lluvia. Al llegar a la esquina, María lo llama: _"¡Jorge!"_ El jugador elige _"Darme vuelta"_ o _"Seguir caminando"_. En los dos casos: _"No me di vuelta."_ La llama, casi apagada por la lluvia.
+
+### Objetivo en pantalla
+
+| Cuándo | Objetivo |
+|---|---|
+| Al empezar | Volver a casa |
+| Después del encuentro | Ir al bar con María |
+| En el bar | Sentarme con María |
+| Al cerrar el bar y en la lluvia | Acompañar a María a la parada |
+| Después del beso | Irme |
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| La esquina: "Me crucé a María de casualidad, en una esquina del centro. Diez años sin verla." | Después del encuentro |
+| La servilleta: "En el bar, María dibujó en una servilleta la ventana de la cocina del departamento, con plantas. Me la guardé." | En la charla |
+| El beso: "En la parada nos acordamos de cuando éramos chicos y nos besamos, casi sin querer. Pero ella ya se fue una vez. No le creo. Me fui." | Después del beso |
+
+### Objetos
+
+| Objeto | Qué es |
+|---|---|
+| Servilleta ✓ | El dibujo de María: la ventana de la cocina con plantas. Aparece en La quinta noche, en la campera mojada |
+
+### El despertar
+
+> **Vela:** Despacio. Ya estás acá.
+>
+> **Vela:** Estás empapado, Jorge. En el sueño, digo.
+>
+> **Jorge (piensa):** Ella se fue una vez.
+>
+> **Jorge (piensa):** Esa noche, el que se fue fui yo.
+>
+> **Vela:** ¿Y si esa vez no se fue de vos?
+
+Se suma a la línea de tiempo: _"Los 30 · El reencuentro"_.
+
+### Pendiente de definir
+
+- ¿Quién es el marido de María? ¿Aparece alguna vez?
+- ¿Qué hace María después de esa noche? ¿Lo busca?
+- ¿Por qué María toca el portero en el final? (Queda para más adelante.)
+
+## La quinta noche
+
+### Resumen
+
+Jorge vuelve **empapado** después de la Sesión 5. En la campera mojada encuentra **la servilleta** que dibujó María: la ventana de la cocina con plantas. Su cocina no tiene ninguna. En el portero, esta vez, no hay estática: **suena como lluvia**, aunque afuera no llueve.
+
+_Lo propuso el agente y es provisorio._
+
+### Secuencia
+
+1. Desde negro, en el pasillo: _"Volví."_ / _"Estoy empapado."_ / _"María. El bar. La lluvia."_ / _"Y me fui."_
+2. **La pizarra** (ver abajo).
+3. **El portero:** suena al salir del cuarto. Del otro lado: _"No es estática."_ / _"Suena como lluvia."_ / _"Afuera no llueve."_
+4. **La campera**, tirada sobre la cama: en el bolsillo, la servilleta. _"La servilleta del bar."_ / _"La ventana de la cocina, con plantas."_ / _"La cocina no tiene ninguna."_ Si se va a dormir sin mirarla: _"La campera está mojando la cama."_ y la mira antes.
+5. **Dormir:** _"Ella se fue una vez."_ / _"Y esa noche, el que se fue fui yo."_
+
+### La pizarra
+
+Ya tiene la feria, el boletín, la fiesta y la pelea. _"¿Dónde va lo de María, en el bar?"_
+
+| Opción | Qué pasa |
+|---|---|
+| Entre los 0 y los 10 / Entre los 10 y los 20 | _"No. Ya era grande. Tenía treinta."_ |
+| Entre los 20 y los 30 | _"No… Ya habían pasado diez años de Córdoba. Tenía treinta."_ |
+| **Entre los 30 y los 40** | Es la correcta. A los 30 escribe **"El reencuentro"**, en azul, y abajo: _"María, en un bar. La lluvia. Me fui."_ |
+
+Al anotarlo: _"«El reencuentro.»"_ / _"«Me fui.»"_ Si la vuelve a mirar: _"Ya casi llego a hoy."_
+
+### Otros pensamientos
+
+| Dónde | Pensamiento |
+|---|---|
+| Portarretratos | _"María a los diecisiete."_ / _"Hoy la vi a los treinta. Tiene la misma risa."_ |
+| Billetera | _"La foto de mamá. Y atrás, el papelito."_ / _"«Llamala, Jorge», me dijo María."_ |
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| El reencuentro en la pizarra: "Anoté el quinto recuerdo: el reencuentro con María, a los treinta. La lluvia. El beso. Me fui." | Al anotar el recuerdo |
+| La servilleta, en la campera: "En la campera mojada estaba la servilleta que dibujó María… Mi cocina no tiene ninguna." | Al mirar la campera |
+| El portero, la quinta noche: "Atendí el portero. Del otro lado se escuchaba algo como lluvia. Afuera no llovía." | Al atender el portero |
+
+### Final de la locación
+
+Termina cuando Jorge **se duerme**. En el prototipo completo es el **fin del prototipo**: la Pre-sesión 6 y la Sesión 6 (el viaje del 12/08) todavía no están.
+
+### Pendiente de definir
+
+- ¿Jorge pone plantas en la ventana alguna vez?

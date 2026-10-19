@@ -146,6 +146,8 @@ Adentro de una sesión, las reglas cambian. Esto es lo que se definió con la pr
 - **No se puede perder.** Los puzzles ayudan si el jugador se traba (la sortija se agranda, Vela da pistas).
 - **Los momentos violentos no los hace el jugador.** El recuerdo se corta justo antes, como si la mente de Jorge no quisiera mirarlo, y sigue con lo que quedó. En la Sesión 2 el corte es a negro; en la pelea de la Sesión 4, **la imagen se rompe como un vidrio** y lo siguiente es la mamá en el piso.
 - **El odio nubla** (Sesión 4): cuando Jorge se enoja, la pantalla se tiñe de rojo, la llama se achica y se pone roja, y **la voz de Vela llega rota**, con letras que faltan. Jorge no la escucha hasta que sale de la casa.
+- **La lluvia** (Sesión 5): bajo la lluvia la llama se achica y se ve menos; bajo un toldo o el paraguas de María, crece.
+- **Cinemáticas:** algunos recuerdos se ven como cinemáticas sin control, con bandas negras arriba y abajo (en la Sesión 5, los recuerdos de cuando Jorge y María eran chicos, en sepia).
 - **Lo que pasó no se arregla.** Después de algo malo, el jugador puede elegir intentar repararlo (ayudar a la mamá, pedirle perdón), pero el recuerdo no cambia: _"Quise… Pero esa noche no hice nada."_
 - Al terminar, Jorge **despierta en la camilla** y se suma un tramo a la línea de tiempo.
 

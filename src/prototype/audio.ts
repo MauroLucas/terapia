@@ -472,3 +472,38 @@ export function startFiesta(): Loop & { setVolume: (v: number) => void } {
     },
   }
 }
+
+// Sesión 5: la lluvia. Ruido filtrado (el agua) y, cada tanto, gotas más fuertes. `setVolume(0..1)`: bajo un toldo suena más apagada
+export function startLluvia(): Loop & { setVolume: (v: number) => void } {
+  const a = out()
+  if (!a) return { stop() {}, setVolume() {} }
+  const t = a.c.currentTime
+  const src = noise(a.c)
+  src.loop = true
+  const f = a.c.createBiquadFilter()
+  f.type = 'bandpass'
+  f.frequency.value = 1800
+  f.Q.value = 0.6
+  const g = a.c.createGain()
+  g.gain.setValueAtTime(0, t)
+  g.gain.linearRampToValueAtTime(0.32, t + 3)
+  src.connect(f).connect(g).connect(a.m)
+  src.start(t)
+  let alive = true
+  const gota = () => {
+    if (!alive) return
+    noiseBurst(0.04, 3500 + Math.random() * 2000, 0.03, 'highpass')
+    setTimeout(gota, 120 + Math.random() * 400)
+  }
+  gota()
+  return {
+    stop: (fade = 2) => {
+      alive = false
+      fadeOutAndStop(g, [src], fade)
+    },
+    setVolume: (v: number) => {
+      g.gain.setTargetAtTime(0.32 * v, a.c.currentTime, 0.3)
+      f.frequency.setTargetAtTime(900 + 900 * v, a.c.currentTime, 0.3)
+    },
+  }
+}

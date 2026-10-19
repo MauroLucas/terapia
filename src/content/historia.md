@@ -150,7 +150,7 @@ Son **ocho sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 | 2 | Adolescencia (~15) | **El boletín** | El papá: un padre ausente que resolvía todo con violencia, contra la mamá y contra Jorge. Jorge termina en el piso de su cuarto, trabando la puerta. Ese día conoce a María | En el prototipo (con La segunda noche) |
 | 3 | Adolescencia (~17) | **La fiesta** | **Sesión de respiro:** sin el papá, todo calor. Los martes en la plaza con María (ya no estudian: fantasean con un depto propio), la fiesta de egresados (bailan y un amigo les saca **la foto que hoy falta en el portarretratos**), la noche en la casa de la familia de María y **el primer beso** | En el prototipo (con La tercera noche) |
 | 4 | Juventud (~20) | **La pelea** | Empieza con Jorge y María **visitando el departamento con un inmobiliario**. El mismo día: María se va a Córdoba y cortan; a la noche, la mamá le da el número del papá, insiste y él la empuja: la imagen se rompe. Después se ven poco y nunca hablan de eso. Le deja mucha culpa | En el prototipo (con La cuarta noche) |
-| 5 | Los 30 | **El reencuentro** | Se vuelve a ver con María **en un bar**: ella está casada; él, soltero | Idea |
+| 5 | Los 30 | **El reencuentro** | Se cruzan de casualidad en una esquina y siguen en un bar: ella está casada; él, soltero. Llueve; en la parada se acuerdan de cuando eran chicos y se besan casi por inercia. Jorge se va: ella lo dejó una vez y no le cree | En el prototipo (con La quinta noche) |
 | 6 | Adultez | **El viaje del 12/08** | El primer ACV de su mamá y el viaje juntos: se reencuentran como madre e hijo | Idea |
 | 7 | La pérdida | **La muerte de su mamá** | El segundo ACV. Es lo que está tachado en el informe | Idea |
 | 8 | Hoy | **El baño** | La puerta del baño se abre. El portero: es ella. Jorge elige abrir | Idea |
@@ -158,7 +158,7 @@ Son **ocho sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 
 - **Entre sesión y sesión**, Jorge vuelve a su casa (una noche) y a la mañana siguiente vuelve a Neural. La pizarra se va llenando de vuelta en vuelta.
 - La 3 (la fiesta) la sumó el usuario para profundizar la relación con María antes de la pelea: así la separación duele más.
-- La 5 la sumó el usuario como "una secuencia a los 30". _Por definir: si es una sesión completa o una secuencia más corta._
+- La 5 la sumó el usuario como "una secuencia a los 30". Después decidió que es **una sesión larga**.
 - _Por definir: la edad exacta de cada recuerdo, salvo los que ya están (la feria cerca de los 7, el boletín a los 15, la fiesta a los 17, la separación a los 20, el reencuentro a los 30, hoy a los 40)._
 
 _El mapa lo propuso el agente con lo que ya estaba en el GDD, y el usuario lo aprobó como base. Se ajusta sesión por sesión._

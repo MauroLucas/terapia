@@ -133,6 +133,22 @@ dark flat shoes, small happy smile, school graduation party
 
 _Por definir: María a los 20 y a los 30 (sesiones siguientes)._
 
+#### María a los 30
+
+![María a los 30](sprites/maria30_0.png) ![María a los 30 caminando A](sprites/maria30_1.png) ![María a los 30 caminando B](sprites/maria30_2.png) ![María a los 30 sentada](sprites/maria30Sentada.png) ![Paraguas](sprites/paraguas.png)
+
+| Campo | Valor |
+|---|---|
+| Claves | `maria30_0` (parada) · `maria30_1`, `maria30_2` (caminata) · `maria30Sentada` · `paraguas` |
+| Tamaño en pantalla | 56 × 140 px (sentada: 72 × 140) · paraguas 120 × 120 |
+| Dónde | Sesión 5: El reencuentro (la esquina, el bar, la lluvia) |
+| Descripción | María a los 30: pelo largo oscuro recogido en un rodete, con flequillo; tapado mostaza largo sobre una blusa clara; pantalón oscuro; **anillo de casada**. Sonrisa chica, un poco cansada. Lleva un **paraguas rojo** |
+
+```
+woman around 30, long dark hair in a low bun with bangs, long mustard wool coat over a light blouse,
+dark trousers, thin gold wedding ring, small tired smile, holding a red umbrella
+```
+
 ### Familia de María
 
 ![Mamá de María](sprites/mamaMaria.png) ![Papá de María](sprites/papaMaria.png)
@@ -257,6 +273,7 @@ El prototipo usa solo poses sueltas. Con el arte final harían falta, como míni
 | ![](sprites/boletin.png) | `boletin` | 22 × 28 | Boletín de calificaciones (ícono) | Sesión 2: El boletín |
 | ![](sprites/cuaderno.png) | `cuaderno` | 22 × 28 | Cuaderno de tapa azul (ícono) | La segunda noche: la caja |
 | ![](sprites/papelito.png) | `papelito` | 24 × 20 | Papelito doblado con el número del papá (ícono) | Sesión 4 (en el piso, después de la pelea) y La cuarta noche (en la billetera) |
+| ![](sprites/servilleta.png) | `servilleta` | 26 × 26 | Servilleta de bar con un dibujo (ícono) | Sesión 5 (el bar) y La quinta noche (la campera) |
 | ![](sprites/fotoFiesta.png) | `fotoFiesta` | 34 × 26 | Foto de la fiesta: Jorge y María, fondo oscuro con flash (ícono) | Sesión 3 (se saca) y La tercera noche (la caja y el portarretratos) |
 
 _Las marcas de gaseosa son genéricas y provisorias. Los objetos del inventario se ven chicos en el juego, pero de cerca se muestran como documentos (ver abajo)._
@@ -290,7 +307,7 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 
 ![Cuaderno de matemática](sprites/documentos/cuaderno-1.png) ![Sortija](sprites/documentos/sortija-1.png)
 
-![Foto de la fiesta](sprites/documentos/fotoFiesta-1.png) ![Papelito](sprites/documentos/papelito-1.png)
+![Foto de la fiesta](sprites/documentos/fotoFiesta-1.png) ![Papelito](sprites/documentos/papelito-1.png) ![Servilleta](sprites/documentos/servilleta-1.png)
 
 | Documento | Descripción para el arte |
 |---|---|
@@ -302,6 +319,7 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 | Boletín | Boletín de secundaria, papel crema; un 3 en rojo en Matemática; la firma de la mamá en la segunda versión |
 | Cuaderno | Hoja rayada de cuaderno escolar con las cuentas de Jorge y notas en violeta con la letra de María |
 | Papelito | Un papel arrancado de una libreta, con renglones, y con la letra de la mamá: "Papá" y un número de teléfono (inventado). Doblado en cuatro, gastado de estar veinte años en una billetera |
+| Servilleta | Servilleta de papel de bar, un poco mojada, con un dibujo en birome: la ventana de una cocina con macetas y plantas, y "así" con la letra de María |
 | Foto de la fiesta | Foto de papel con flash, de una fiesta de egresados: Jorge (suéter verde) y María (vestido bordó) abrazados, guirnaldas de colores atrás. En el borde blanco, "J y M" con la letra de María. Es la foto del portarretratos |
 | Sortija | La sortija de cerca, sobre un fondo oscuro |
 
@@ -420,6 +438,26 @@ Uno por ambiente. Las capturas son del prototipo sin la interfaz (a veces se ve 
 **La casa de la mamá, de noche** (2200 px). El cuarto de Jorge a medio vaciar: la cama con el bolso, el placard, el escritorio con la foto de la fiesta y la caja "JORGE" debajo de la cama. Luz de una lámpara, todo en penumbra. En la pelea se tiñe de rojo.
 
 **Efecto: la imagen se rompe.** Grietas blancas que salen de un punto, como un vidrio, en tres golpes, y después todo a negro. Para el arte final puede ser una animación de la pantalla partiéndose en pedazos.
+
+### Sesión 5: El reencuentro
+
+![La esquina](sprites/fondos/esquina.png)
+
+**La esquina** (2200 px). Una esquina del centro al atardecer: cielo naranja y violeta, edificios con ventanas prendidas, un kiosco, un semáforo y gente sin cara que pasa.
+
+![El bar](sprites/fondos/bar.png)
+
+**El bar** (1800 px). Un bar de los de antes: paredes de madera, lámparas colgantes, la barra con botellas, el mozo y la mesa junto a la ventana. Afuera, la lluvia.
+
+![La calle con lluvia](sprites/fondos/calle-lluvia.png)
+
+![La parada del colectivo](sprites/fondos/parada.png)
+
+**La calle con lluvia** (2700 px). De noche: edificios oscuros, vereda mojada con reflejos, faroles, dos toldos a rayas y la parada del colectivo con techo. La lluvia cae en diagonal por encima de todo.
+
+![Los recuerdos, en sepia](sprites/fondos/recuerdos-sepia.png)
+
+**Las cinemáticas** (1300 px cada una). La plaza, la fiesta y el sillón de la casa de María, en sepia, con bandas negras arriba y abajo. El último, el departamento vacío, en azul frío.
 
 ## Cómo se regeneran las imágenes
 
