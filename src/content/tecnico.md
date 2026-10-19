@@ -2,17 +2,32 @@
 
 | Campo | Valor |
 |---|---|
-| Motor | _Por definir_ |
+| Motor | **Phaser 3** _(decidido por el usuario, para simplificar: es el mismo motor del prototipo)_ |
+| Lenguaje | TypeScript |
 | Animación | Esqueleto 2D (huesos) sobre arte generado/dibujado. Ver "Arte y estilo" |
 
-### Candidatos de motor
+### Por qué Phaser
 
-| Motor | A favor | En contra |
-|---|---|---|
-| **Godot** | Gratis y open source. Muy bueno para 2D. Animación por esqueleto incluida. Exporta a PC, celular y web | Para consolas hace falta un servicio de port externo |
-| **Unity** | Muy usado, mucha documentación. Soporte oficial para consolas, celular y web | Licencia con costos según ingresos. Más pesado |
+- El prototipo ya está hecho en Phaser: el juego final sale de ahí, sin reescribir.
+- Para un juego narrativo 2D, sin mucha exigencia gráfica, alcanza de sobra.
+- Se juega en el navegador (web, celular) y se puede empaquetar para PC.
 
-_Como el juego apunta también a consolas, conviene decidir el motor teniendo eso en cuenta._
+### Cómo llega a Steam
+
+Phaser es un motor web: para Steam, el juego se **empaqueta como app de escritorio** (Windows, Mac, Linux y Steam Deck). Antes de publicarlo hay que:
+
+| Pendiente | Qué es |
+|---|---|
+| **Separar el juego del sitio** | Hoy el prototipo vive dentro de la página del GDD. El juego necesita su propia entrada, solo el juego |
+| **Empaquetar para escritorio** | Con **Electron** (u otra herramienta parecida, como NW.js o Tauri) |
+| **Steamworks** | Logros, guardado en la nube y la pantalla de Steam encima del juego (por ejemplo, con la librería steamworks.js) |
+| **Joystick** | En Steam, y sobre todo en Steam Deck, se espera que se pueda jugar con control. Hoy es teclado y táctil |
+| **Guardado y menú** | Guardar la partida, menú de opciones (volumen, idioma, pantalla). Hoy se juega de un tirón |
+| **Arte y sonido finales** | Ver "Arte y estilo", "Sprites" y "Audio" |
+
+### El límite: las consolas
+
+Las consolas (Switch, PlayStation, Xbox) no corren juegos web con facilidad. Si más adelante el juego tiene que salir en consolas, habría que portarlo a otro motor (por ejemplo, Godot o Unity): el diseño, los textos y el arte se aprovechan, pero el código se rehace. _Pasó con Vampire Survivors, que salió en Steam hecho en Phaser y después se pasó a Unity._
 
 ## Prototipo
 
@@ -72,9 +87,9 @@ _El prototipo y este documento se mantienen sincronizados: cada cambio de diseñ
 
 | Plataforma | Notas |
 |---|---|
-| PC (Steam) | Plataforma principal _(por confirmar)_ |
+| PC (Steam) | Plataforma principal _(por confirmar)_. Con Phaser, empaquetado como app de escritorio (ver "Cómo llega a Steam") |
 | Celular (Android / iOS) | El prototipo web ya se juega con controles táctiles, en vertical y en apaisado. Ver "Mecánicas" → Controles → En el celular. Código: `src/prototype/touch.ts` |
-| Consolas | Switch, PlayStation, Xbox. Requieren kits de desarrollo y aprobación de cada fabricante |
+| Consolas | Switch, PlayStation, Xbox. Requieren kits de desarrollo y aprobación de cada fabricante. Con Phaser, solo con un port a otro motor (ver "Motor y herramientas" → El límite) |
 | Web | Versión para navegador (por ejemplo, demo en itch.io) |
 
 _Sugerencia: empezar por PC y web (más fácil de publicar y probar) y portar al resto después._

@@ -15,7 +15,7 @@
 | Duración estimada | Más de 6 horas |
 | Público objetivo | Adultos de 30 años en adelante (+30) |
 | Modo de juego | Single player |
-| Motor | _Por definir_ |
+| Motor | **Phaser 3** (el del prototipo) |
 
 ## Premisa
 

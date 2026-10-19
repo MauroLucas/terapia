@@ -8,6 +8,7 @@ Guía para agentes de IA que trabajen en este proyecto.
 
 - Sitio: React 19 + TypeScript + Vite, con `HashRouter`.
 - Prototipo: Phaser 3.90 con física Matter. Se carga solo al entrar a `#/prototipo`.
+- **El motor del juego final también es Phaser** (decidido por el usuario, para simplificar). Para Steam se empaqueta como app de escritorio (Electron o similar); ver "Aspectos técnicos" → Cómo llega a Steam.
 
 ## Comandos
 
