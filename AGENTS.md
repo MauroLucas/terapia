@@ -85,6 +85,10 @@ Dónde va cada cosa en el GDD:
 - Los textos que invente el agente (diálogos, carteles, informes) se marcan como **provisorios** en el GDD.
 - Lo que el usuario no definió queda como _por definir_. No inventar decisiones de historia sin preguntar.
 
+### 2 bis. Identidad argentina
+
+El juego pasa en **Buenos Aires** y tiene que sentirse argentino (pedido del usuario): Neural está en el **microcentro**, el chofer va por la **9 de Julio**, se ve el Obelisco. Al inventar lugares, objetos o comidas, preferir los de acá (colectivos, kioscos, mate, ñoquis del 29, Mar del Plata). Las ideas que salen de la vida del usuario están en "Historia y mundo" → Ideas para personajes y escenas.
+
 ### 3. Temas sensibles
 
 El juego trata salud mental, pérdida de memoria, violencia familiar e ideación suicida. Tratarlo con cuidado: sin glorificarlo ni usarlo como golpe de efecto. El aviso de contenido del inicio no se saca.

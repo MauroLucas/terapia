@@ -6,6 +6,7 @@ import { choose, say, text, type Line } from '../ui'
 
 // Cinemática del auto con diálogo de opciones. Las respuestas no cambian la historia:
 // solo la última decide si suena la radio o viajan en silencio.
+// Es Buenos Aires: van por la 9 de Julio (el cartel verde, los carriles, un colectivo, el Obelisco) hasta el microcentro.
 
 const CAR_X = 560
 const CAR_Y = 560
@@ -39,6 +40,9 @@ export class Car extends Phaser.Scene {
   private layers: { objs: Phaser.GameObjects.GameObject[]; factor: number }[] = []
   private wheels: Phaser.GameObjects.Graphics[] = []
   private neural?: Phaser.GameObjects.Container
+  // Lo que pasa una sola vez (no da la vuelta como los edificios): el cartel, el Obelisco, el colectivo
+  private once: { o: Phaser.GameObjects.Components.Transform; factor: number; extra: number }[] = []
+  private obelisco?: Phaser.GameObjects.Graphics
   private arriving = false
 
   constructor() {
@@ -50,6 +54,7 @@ export class Car extends Phaser.Scene {
     this.arriving = false
     this.layers = []
     this.wheels = []
+    this.once = []
     this.cameras.main.setBackgroundColor('#141824')
     this.drawCity()
     this.drawCar()
@@ -71,7 +76,11 @@ export class Car extends Phaser.Scene {
 
     void (async () => {
       await this.wait(2200)
-      for (const step of DIALOGO) {
+      for (const [n, step] of DIALOGO.entries()) {
+        if (n === 1) {
+          await say(this, [this.chofer('Agarro por la 9 de Julio, que a esta hora está tranquila.')])
+          await this.wait(400)
+        }
         await say(this, [this.chofer(step.pregunta)])
         const i = await choose(this, step.opciones.map((o) => o.label), { x: 840, y: 700 })
         const o = step.opciones[i]
@@ -87,7 +96,10 @@ export class Car extends Phaser.Scene {
         await this.wait(400)
         radio = startRadio()
       }
-      await this.wait(5000)
+      // Cuando el Obelisco pasa por la ventanilla
+      for (let t = 0; t < 40 && (this.obelisco?.x ?? 0) > 820; t++) await this.wait(250)
+      await say(this, [this.jorgeThink('El Obelisco.'), this.chofer('Ya estamos. Neural está acá, en el microcentro.')])
+      await this.wait(2500)
       this.arrive()
       await this.wait(7000)
       radio?.stop()
@@ -107,6 +119,7 @@ export class Car extends Phaser.Scene {
 
   private chofer = (t: string): Line => ({ kind: 'speech', text: t, anchor: () => ({ x: CAR_X + 120, y: CAR_Y - 120 }) })
   private jorge = (t: string): Line => ({ kind: 'speech', text: t, anchor: () => ({ x: CAR_X - 50, y: CAR_Y - 118 }) })
+  private jorgeThink = (t: string): Line => ({ kind: 'thought', text: t, anchor: () => ({ x: CAR_X - 50, y: CAR_Y - 118 }) })
 
   private drawCity() {
     // Cielo nublado de mañana
@@ -121,7 +134,7 @@ export class Car extends Phaser.Scene {
     }
     for (let x = 0; x < 1280 + 400; x += 230) {
       const h = Phaser.Math.Between(220, 380)
-      const b = this.add.container(x, 520)
+      const b = this.add.container(x, 520).setDepth(1)
       b.add(this.add.rectangle(0, 0, 200, h, 0x1c212d).setOrigin(0, 1))
       for (let wy = -h + 20; wy < -30; wy += 40) {
         for (let wx = 20; wx < 180; wx += 40) {
@@ -133,12 +146,39 @@ export class Car extends Phaser.Scene {
     }
     this.layers.push({ objs: far, factor: 0.2 }, { objs: near, factor: 0.55 })
 
-    // Calle con líneas que pasan
-    this.add.rectangle(0, 520, 1280, 200, 0x22252c).setOrigin(0)
-    this.add.rectangle(0, 520, 1280, 8, 0x3a3e48).setOrigin(0)
+    // El Obelisco, lejos: pasa una sola vez, a mitad de camino
+    const obelisco = this.add.graphics({ x: 1500, y: 470 }).setDepth(0.5)
+    obelisco.fillStyle(0xd9d6cc).fillTriangle(-16, -330, 16, -330, 0, -372).fillRect(-16, -330, 32, 330)
+    obelisco.fillStyle(0xb9b6ac).fillRect(4, -330, 12, 330)
+    obelisco.fillStyle(0x2a2f3a).fillRect(-3, -40, 6, 26)
+    this.once.push({ o: obelisco, factor: 0.22, extra: 0 })
+    this.obelisco = obelisco
+
+    // La 9 de Julio: ancha, con muchos carriles, y un cantero en el medio
+    this.add.rectangle(0, 470, 1280, 50, 0x2a2e36).setOrigin(0).setDepth(1)
+    this.add.rectangle(0, 488, 1280, 10, 0x3e5a3a).setOrigin(0).setDepth(1)
+    this.add.rectangle(0, 520, 1280, 200, 0x22252c).setOrigin(0).setDepth(1)
+    this.add.rectangle(0, 520, 1280, 8, 0x3a3e48).setOrigin(0).setDepth(1)
     const lines: Phaser.GameObjects.GameObject[] = []
-    for (let x = 0; x < 1280 + 200; x += 160) lines.push(this.add.rectangle(x, 650, 80, 6, 0xcfc9a8, 0.7).setOrigin(0))
+    for (let x = 0; x < 1280 + 200; x += 160) {
+      lines.push(this.add.rectangle(x, 650, 80, 6, 0xcfc9a8, 0.7).setOrigin(0).setDepth(1))
+      lines.push(this.add.rectangle(x + 70, 600, 60, 4, 0xcfc9a8, 0.5).setOrigin(0).setDepth(1))
+    }
     this.layers.push({ objs: lines, factor: 1 })
+    // Un colectivo por el carril de atrás, más lento que el auto
+    const bondi = this.add.container(1700, 515).setDepth(1.5)
+    bondi.add(this.add.rectangle(0, 0, 230, 70, 0xe0b04a).setOrigin(0, 1))
+    bondi.add(this.add.rectangle(0, -70, 230, 10, 0xc0392b).setOrigin(0, 0))
+    for (let wx = 14; wx < 210; wx += 38) bondi.add(this.add.rectangle(wx, -60, 30, 22, 0x2a3140).setOrigin(0))
+    bondi.add(this.add.circle(40, 0, 12, 0x111111)).add(this.add.circle(190, 0, 12, 0x111111))
+    bondi.add(text(this, 200, -64, '60', 13, '#ffffff', { fontStyle: 'bold' }).setOrigin(0.5, 0))
+    this.once.push({ o: bondi, factor: 0.45, extra: 0 })
+    // El cartel verde de la avenida, al costado, al arrancar
+    const cartel = this.add.container(1500, 520).setDepth(4)
+    cartel.add(this.add.rectangle(0, 0, 8, 210, 0x5a606c).setOrigin(0.5, 1))
+    cartel.add(this.add.rectangle(0, -210, 200, 48, 0x1f6b3a).setOrigin(0.5, 0.5).setStrokeStyle(3, 0xf1efe8))
+    cartel.add(text(this, 0, -210, 'AV. 9 DE JULIO', 20, '#f1efe8', { fontStyle: 'bold' }).setOrigin(0.5))
+    this.once.push({ o: cartel, factor: 1, extra: 0 })
   }
 
   private drawCar() {
@@ -204,6 +244,15 @@ export class Car extends Phaser.Scene {
     b.add(this.add.rectangle(160, 0, 100, 70, 0x4c7bd1, 0.6).setOrigin(0, 1))
     const sign = text(this, 210, -440, 'NEURAL', 46, '#4c7bd1', { fontStyle: 'bold' }).setOrigin(0.5, 1)
     b.add(sign)
+    // Al lado, un edificio viejo del microcentro, con balcones, y el cartel de la esquina
+    b.add(this.add.rectangle(-260, 0, 240, 360, 0x6b5a48).setOrigin(0, 1))
+    for (let wy = -330; wy < -40; wy += 56) for (let wx = -240; wx < -40; wx += 60) {
+      b.add(this.add.rectangle(wx, wy, 34, 40, 0x2a2420).setOrigin(0))
+      b.add(this.add.rectangle(wx - 4, wy + 40, 42, 5, 0x3a322a).setOrigin(0))
+    }
+    b.add(this.add.rectangle(-20, -150, 6, 150, 0x5a606c).setOrigin(0.5, 0))
+    b.add(this.add.rectangle(-20, -160, 120, 30, 0x1f2a3a).setOrigin(0.5, 0.5))
+    b.add(text(this, -20, -160, 'MICROCENTRO', 13, '#f1efe8', { fontStyle: 'bold' }).setOrigin(0.5))
     this.tweens.add({ targets: sign, alpha: 0.6, yoyo: true, repeat: -1, duration: 1200 })
     this.neural = b
   }
@@ -221,6 +270,7 @@ export class Car extends Phaser.Scene {
         if (go.x < -260) go.x += 1280 + 400
       }
     }
+    for (const it of this.once) it.o.x -= this.speed * it.factor * f
     for (const w of this.wheels) w.rotation += this.speed * 0.02 * f
   }
 }

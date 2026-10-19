@@ -204,6 +204,10 @@ Los mismos sonidos que las otras noches. En el portero, estática y la voz, pero
 
 _Provisorio. Lo nuevo es la lluvia._
 
+### La cuarta noche: el techo
+
+Cuando aparece la cucaracha: **patas contra el techo**, un repiqueteo seco y rápido. **Nuevo.** _Provisorio._
+
 ### La quinta noche
 
 Los mismos sonidos que las otras noches. En el portero, en vez de estática, algo que suena como lluvia. _Provisorio._

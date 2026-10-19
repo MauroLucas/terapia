@@ -414,7 +414,8 @@ _Se pueden sumar más créditos (música, arte, etc.) si hace falta._
 ### Cinemática final: el auto
 
 - El **chofer** está esperando a Jorge **en la calle**.
-- Jorge sube al auto y viajan hacia Neural.
+- Jorge sube al auto y viajan hacia Neural, que está **en el microcentro de Buenos Aires** _(decidido por el usuario)_.
+- **El camino es por la 9 de Julio** _(decidido por el usuario)_: se ve el cartel verde de la avenida, los carriles, el cantero del medio, un colectivo (el 60) y, a mitad de camino, **el Obelisco** pasando por la ventanilla. Al llegar, Neural está al lado de un edificio viejo del microcentro, con balcones, y el cartel de la esquina dice **MICROCENTRO**. _(Los detalles los propuso el agente.)_
 - Durante el viaje hay un **diálogo con opciones**. Las respuestas **no cambian la historia**: solo le dan al jugador sensación de control (ver "Mecánicas" → Diálogos).
 
 #### Diálogo en el auto
@@ -428,6 +429,8 @@ _Texto provisorio, se puede reescribir._
 | "Perdón, no encontraba la llave." | "Le pasa a cualquiera. Vamos, que llegamos justo." |
 | "Sí, todo bien." | "Me alegro. Vamos, que llegamos justo." |
 | _(Quedarse callado)_ | "Bueno… vamos, que llegamos justo." |
+
+Después de la primera pregunta, el chofer avisa: _"Agarro por la 9 de Julio, que a esta hora está tranquila."_
 
 **2.** **Chofer:** ¿Es la primera vez que va a Neural?
 
@@ -443,6 +446,8 @@ _Texto provisorio, se puede reescribir._
 |---|---|
 | "Dale, poné." | Suena música tranquila en la radio |
 | "Prefiero silencio." | Viajan en silencio, solo se escucha la ciudad |
+
+**Llegando:** cuando el Obelisco pasa por la ventanilla, Jorge piensa _"El Obelisco."_ y el chofer: _"Ya estamos. Neural está acá, en el microcentro."_
 
 _Las ramas siempre vuelven al mismo punto. La única diferencia es estética (música o silencio)._
 
@@ -2050,6 +2055,27 @@ _Decidido por el usuario: después de la pelea, la mamá lo buscaba y él la esq
 3. **El portero:** suena al salir del cuarto, como siempre.
 4. **La billetera:** el papelito. Si se va a dormir sin mirarla: _"La billetera… La foto de mamá."_ y la mira antes.
 5. **Dormir:** _"La empujé."_ / _"Y después, cada vez que me buscó, la esquivé."_ / _"Nos veíamos tres veces por año. Nunca hablamos de esa noche."_
+6. **El techo** (ver abajo).
+
+### El techo: la cucaracha
+
+_Idea del usuario, de algo que le pasó: con mucho estrés, le pareció ver una cucaracha gigante en el techo, casi del tamaño del cuarto. La escena y los textos los propuso el agente y son provisorios._
+
+Ya acostado, Jorge mira para arriba: _"…"_ / _"Hay algo en el techo."_ Aparece despacio **una cucaracha enorme**, casi del tamaño del cuarto, pegada al techo. Se escuchan las patas contra el techo. Se mueve un poco, de costado, y mueve las antenas.
+
+> **Jorge (piensa):** Una cucaracha.
+>
+> **Jorge (piensa):** Del tamaño del cuarto.
+>
+> **Jorge (piensa):** No me puedo mover.
+
+Se mueve otra vez. **Jorge parpadea**, y ya no está.
+
+> **Jorge (piensa):** No hay nada.
+>
+> **Jorge (piensa):** Estoy muy cansado. Nada más.
+
+No se explica: queda la duda de si fue real. Va en esta noche porque es la de más culpa y más estrés (acaba de revivir que empujó a su mamá).
 
 ### La pizarra
 
@@ -2101,6 +2127,7 @@ Los mismos de las otras noches: **Anotar lo que recordé en la pizarra** → **A
 | La pelea en la pizarra: "Anoté el cuarto recuerdo: la pelea, a los veinte. No pude escribir nada más." | Al anotar el recuerdo |
 | El papelito, en la billetera: "Atrás de la foto de mamá, en la billetera, estaba el papelito con el número de papá. Lo llevo encima hace veinte años y nunca lo llamé." | Al mirar la billetera |
 | El portero, la cuarta noche: "Sonó el portero y la voz dijo mi nombre. No contesté. Como hacía con mamá cuando me llamaba." | Al atender el portero |
+| El techo: "La noche que recordé la pelea vi una cucaracha gigante en el techo, casi del tamaño del cuarto. Parpadeé y no estaba." | Después de la cucaracha |
 
 ### Final de la locación
 

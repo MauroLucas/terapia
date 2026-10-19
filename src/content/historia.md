@@ -8,7 +8,8 @@ En Neural, una inteligencia artificial permite que el **doctor Vela** vea en pan
 
 - **Punto de partida:** el departamento de 2 ambientes de Jorge.
 - **Época:** los años 2000 _(tentativo)_. Es el "hoy" de Jorge, a los 40: su infancia queda entre fines de los 60 y los 70.
-- **Lugar:** Argentina (María se va a estudiar a Córdoba). _La ciudad donde vive Jorge, por definir._
+- **Lugar:** **Buenos Aires, Argentina** _(decidido por el usuario: el juego tiene que tener identidad argentina)_. **Neural está en el microcentro**, y el chofer va por **la 9 de Julio**. María se va a estudiar a Córdoba. _El barrio donde vive Jorge, por definir._
+- **Identidad argentina** _(pedido del usuario)_: lugares, cosas y forma de hablar de acá. Ya están: la 9 de Julio, el Obelisco, el microcentro, el colectivo, los ñoquis del 29, el mate, el kiosco, San Rafael (Mendoza). _Ideas para sumar: los veranos en Mar del Plata (ver "Ideas para personajes y escenas")._
 
 ## Lugares y conceptos clave
 
@@ -175,3 +176,13 @@ Son **nueve sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 - _Por definir: la edad exacta de cada recuerdo, salvo los que ya están (la feria cerca de los 7, el boletín a los 15, la fiesta a los 17, la separación a los 20, el reencuentro a los 30, hoy a los 40)._
 
 _El mapa lo propuso el agente con lo que ya estaba en el GDD, y el usuario lo aprobó como base. Se ajusta sesión por sesión._
+
+## Ideas para personajes y escenas
+
+_Salieron de preguntas al usuario sobre su vida. Están para armarse más adelante; los detalles concretos se deciden con él._
+
+| Idea | De dónde sale | Dónde podría ir | Estado |
+|---|---|---|---|
+| **El amigo del secundario** | Un amigo inseparable con el que hacían locuras. Lo más gracioso: salía corriendo desde el fondo del aula, se estrellaba contra el pizarrón y caía al piso | En la adolescencia (Sesión 2 o 3). Podría ser el amigo de la cámara descartable que les saca la foto en la fiesta. Escena propuesta: en el aula, choca contra el pizarrón y, en el sueño, el pizarrón se raja y deja ver la línea de tiempo de la pizarra de Jorge | Idea. **Decidido por el usuario:** con los años **se distanciaron** (no murió). Por definir: nombre o apodo |
+| **Los veranos en Mar del Plata** | Un departamento en Mar del Plata, varios veranos de la infancia, y el mar | Una sesión de respiro en la infancia: un verano **con la mamá** (decidido por el usuario: iban los dos), el departamento y el mar. O el mar como imagen que vuelve en los sueños | Idea |
+| **La cucaracha en el techo** | Una vez, muy estresado, le pareció ver una cucaracha gigante en el techo, casi del tamaño del cuarto | La cuarta noche | **En el prototipo** (ver "Locaciones" → La cuarta noche) |

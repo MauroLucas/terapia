@@ -131,6 +131,8 @@ export const sfx = {
   disolver() { noiseBurst(2.4, 700, 0.07); tone(392, 2.6, 'sine', 0.04); tone(261.6, 3.2, 'sine', 0.035, 0.6) },
   tecla() { const [a, b] = [[697, 1209], [770, 1336], [852, 1477], [941, 1336]][Math.floor(Math.random() * 4)]; tone(a, 0.12, 'sine', 0.03); tone(b, 0.12, 'sine', 0.03) },
   llamando() { tone(425, 1.0, 'sine', 0.045) },
+  // La cuarta noche: patas de cucaracha contra el techo, un repiqueteo seco
+  patitas() { for (let i = 0; i < 16; i++) tone(2600 + Math.random() * 1800, 0.018, 'square', 0.018, i * 0.035 + Math.random() * 0.02) },
 }
 
 // Música y ambientes en loop

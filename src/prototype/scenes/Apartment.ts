@@ -1640,6 +1640,8 @@ export class Apartment extends Phaser.Scene {
     this.add.image(250, 488, 'jorge0').setAngle(-90).setDepth(5)
     this.cameras.main.pan(400, 360, 1200, 'Sine.easeInOut')
     await new Promise((r) => this.time.delayedCall(1500, r))
+    // La cuarta noche, después de revivir la pelea: algo enorme en el techo
+    if (this.vuelta === 4) await this.cucaracha()
     const lids = eyelids(this, 1)
     await lids.to(0.5, 2200)
     await lids.to(0.7, 1200)
@@ -1692,6 +1694,39 @@ export class Apartment extends Phaser.Scene {
     // Suelta termina acá; en el prototipo completo sigue la Pre-sesión 2 (la mañana, una semana después)
     if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'La primera noche' })
     else this.scene.start('Apartment', { manana: true })
+  }
+
+  // La cuarta noche: con el estrés, Jorge ve una cucaracha gigante en el techo, casi del tamaño del cuarto.
+  // Parpadea y no está. Idea del usuario (algo que le pasó); la escena es provisoria
+  private async cucaracha() {
+    const enCama = (t: string): Line => ({ kind: 'thought', text: t, anchor: () => ({ x: 250, y: 470 }) })
+    await new Promise((r) => this.time.delayedCall(1200, r))
+    await say(this, [enCama('…'), enCama('Hay algo en el techo.')])
+    const bicho = this.add.image(560, 235, 'cucaracha0').setDepth(32).setAlpha(0).setScale(0.85)
+    sfx.patitas()
+    await new Promise<void>((r) => this.tweens.add({ targets: bicho, alpha: 0.95, duration: 1400, onComplete: () => r() }))
+    // Se mueve: las patas, un poco de costado, las antenas
+    let paso = 0
+    const patas = this.time.addEvent({ delay: 140, loop: true, callback: () => bicho.setTexture(`cucaracha${(paso = 1 - paso)}`) })
+    sfx.patitas()
+    this.tweens.add({ targets: bicho, x: 610, duration: 900, ease: 'Sine.InOut' })
+    await new Promise((r) => this.time.delayedCall(900, r))
+    patas.paused = true
+    await say(this, [enCama('Una cucaracha.'), enCama('Del tamaño del cuarto.'), enCama('No me puedo mover.')])
+    patas.paused = false
+    sfx.patitas()
+    this.tweens.add({ targets: bicho, x: 520, angle: -6, duration: 700, ease: 'Sine.InOut' })
+    await new Promise((r) => this.time.delayedCall(700, r))
+    patas.remove()
+    // Parpadea, y ya no está
+    const blink = eyelids(this, 1)
+    await blink.to(0, 160)
+    bicho.destroy()
+    await new Promise((r) => this.time.delayedCall(400, r))
+    await blink.to(1, 500)
+    blink.destroy()
+    await say(this, [enCama('No hay nada.'), enCama('Estoy muy cansado. Nada más.')])
+    this.pista('El techo', 'La noche que recordé la pelea vi una cucaracha gigante en el techo, casi del tamaño del cuarto. Parpadeé y no estaba.')
   }
 
   // ---------- Pre-sesión 2: la mañana, una semana después ----------

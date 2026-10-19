@@ -378,6 +378,40 @@ function drawSombra(g: Phaser.GameObjects.Graphics) {
   g.fillRect(25, 32, 10, 12).fillCircle(30, 22, 15)
 }
 
+// La cuarta noche: una cucaracha gigante en el techo, vista desde abajo, con la cabeza a la derecha. `paso` mueve las patas
+function drawCucaracha(g: Phaser.GameObjects.Graphics, paso: 0 | 1) {
+  const cx = 360
+  const cy = 130
+  // Patas: tres de cada lado, con una articulación, en zigzag
+  g.lineStyle(7, 0x24150a)
+  for (let i = 0; i < 3; i++) {
+    const bx = cx - 90 + i * 95
+    const d = (i + paso) % 2 === 0 ? 1 : -1
+    for (const side of [-1, 1]) {
+      const kx = bx + d * 40
+      const ky = cy + side * 70
+      g.lineBetween(bx, cy + side * 22, kx, ky)
+      g.lineBetween(kx, ky, kx + d * 30 - 40, cy + side * 120)
+      g.lineStyle(3, 0x24150a).lineBetween(kx + d * 30 - 40, cy + side * 120, kx + d * 30 - 62, cy + side * 126)
+      g.lineStyle(7, 0x24150a)
+    }
+  }
+  // Antenas largas, para la derecha
+  g.lineStyle(3, 0x2e1b0d)
+  g.lineBetween(cx + 250, cy - 10, cx + 340, cy - 70 - paso * 10).lineBetween(cx + 340, cy - 70 - paso * 10, cx + 352, cy - 112)
+  g.lineBetween(cx + 250, cy + 10, cx + 345, cy + 60 + paso * 8).lineBetween(cx + 345, cy + 60 + paso * 8, cx + 356, cy + 100)
+  // Abdomen con segmentos y alas encima
+  g.fillStyle(0x3b2414).fillEllipse(cx - 40, cy, 330, 150)
+  g.lineStyle(2, 0x2a170b)
+  for (let sx = cx - 170; sx < cx + 90; sx += 32) g.lineBetween(sx, cy - 62, sx + 6, cy + 62)
+  g.fillStyle(0x5a3a1e, 0.85).fillEllipse(cx - 30, cy - 26, 280, 60).fillEllipse(cx - 30, cy + 26, 280, 60)
+  g.lineStyle(2, 0x7a5230, 0.6).lineBetween(cx - 160, cy, cx + 100, cy)
+  // El escudo y la cabeza
+  g.fillStyle(0x4a2d16).fillEllipse(cx + 170, cy, 120, 110)
+  g.fillStyle(0x6a4424, 0.5).fillEllipse(cx + 180, cy - 10, 70, 40)
+  g.fillStyle(0x2e1b0d).fillEllipse(cx + 240, cy, 44, 52)
+}
+
 export function makeTextures(scene: Phaser.Scene) {
   if (scene.textures.exists('jorge0')) return
   const g = scene.make.graphics({}, false)
@@ -529,6 +563,11 @@ export function makeTextures(scene: Phaser.Scene) {
   g.clear()
   drawSombra(g)
   g.generateTexture('sombra', 60, 150)
+  for (const paso of [0, 1] as const) {
+    g.clear()
+    drawCucaracha(g, paso)
+    g.generateTexture(`cucaracha${paso}`, 720, 260)
+  }
   g.clear()
   g.fillStyle(0xf2a33a).fillEllipse(12, 26, 20, 30).fillTriangle(3, 22, 21, 22, 12, 0)
   g.fillStyle(0xffd27a).fillEllipse(12, 28, 12, 20).fillTriangle(7, 26, 17, 26, 12, 8)

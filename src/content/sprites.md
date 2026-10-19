@@ -311,6 +311,22 @@ _Las marcas de gaseosa son genéricas y provisorias. Los objetos del inventario 
 small floating candle flame, warm orange outer glow, pale yellow-white core, soft light, no candle
 ```
 
+### La cucaracha del techo
+
+![La cucaracha](sprites/cucaracha0.png)
+
+| Campo | Valor |
+|---|---|
+| Claves | `cucaracha0`, `cucaracha1` (dos posiciones de patas) |
+| Tamaño en pantalla | 720 × 260 px, a ×0,85: casi del ancho del cuarto |
+| Dónde | La cuarta noche: en el techo del cuarto, cuando Jorge se acuesta |
+| Descripción | Una cucaracha enorme vista desde abajo, pegada al techo, con la cabeza a la derecha: marrón oscuro brillante, alas con un reflejo más claro, seis patas con espinas y antenas muy largas. Realista, no de dibujo animado: tiene que dar asco y miedo |
+
+```
+giant cockroach seen from below on a bedroom ceiling, dark glossy brown, long antennae,
+spiky legs, realistic, unsettling, 2D side-scroller game, night, dim light
+```
+
 ## Documentos (primer plano)
 
 Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y la letra de Jorge y de María se escriben encima, por código.
