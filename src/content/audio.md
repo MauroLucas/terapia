@@ -129,11 +129,6 @@ _Provisorio. Lo único nuevo es el zumbido de la máquina._
 | Voz de Vela | Cada vez que habla | El chasquido del portero eléctrico: habla "por la máquina" |
 | Pasos | Al caminar | Más cortos que de grande |
 | Sortija | Al sacarla | El mismo sonido de agarrar un objeto |
-| **Todo se congela** | El final, cuando Vela no termina la frase | **Nuevo.** Como una cinta que se frena: dos tonos que bajan hasta apagarse. La música de la calesita se corta |
-| Estática | La voz de Vela, cortada | La del portero de noche, cada tanto durante la huida |
-| **El grito** | La transformación de la gente sin cara | **Nuevo.** Ruido áspero y un tono que sube y baja, con la pantalla temblando. Uno más corto cuando se despierta el ser agachado |
-| **Latido** | Cuando un ser está cerca | El de la Sesión 7, más rápido cuanto más cerca |
-| **Te agarran** | Cuando un ser alcanza a Jorge | **Nuevo.** Un golpe grave y un tono que cae |
 
 _Provisorio._
 

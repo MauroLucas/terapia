@@ -968,8 +968,6 @@ Es el **primer sueño lúcido** y la primera sesión: un recuerdo de la **infanc
 
 Jorge aparece **de chico**. La feria está **a oscuras**, y el doctor Vela lo acompaña como una **llama** que flota a su lado: lo que ilumina toma forma y color. Hay que recordar **tres momentos** de esa noche y, al final, hacer lo que le había dicho su mamá: **quedarse quieto** para que ella lo encuentre.
 
-**Y después, todo se descontrola** _(idea del usuario)_: el recuerdo **se congela**, se corta la comunicación con Vela y **la gente sin cara se vuelve violenta**. Se pone negra, crece, se le parte la cabeza al medio, llena de dientes, y **grita al cielo**. Jorge tiene que **huir** entrando por distintas carpas hasta encontrar la salida para despertar (ver "El final se descontrola").
-
 _La idea (perderse de chico, Jorge de chico, Vela como llama) es del usuario. Los detalles del recuerdo, los diálogos y los puzzles los propuso el agente y son provisorios._
 
 **Por qué este recuerdo:** es un comienzo suave, con la mamá presente pero sin cara, porque Jorge todavía no la reconoce (como en la foto de la billetera). Y deja una idea que vuelve al final del juego: **alguien viene a buscarlo**.
@@ -985,7 +983,7 @@ _La idea (perderse de chico, Jorge de chico, Vela como llama) es del usuario. Lo
 | **La mamá no tiene cara** | Una luz blanca le tapa la cabeza. Se le ve la cara recién en la Sesión 6, cuando Jorge le pide perdón |
 | **La gente no tiene cara** | Siluetas grises que no se iluminan nunca: no son parte del recuerdo |
 | **La feria no termina** | Pasando la vuelta al mundo, la feria vuelve a empezar desde la entrada |
-| **No se puede perder** | En el recuerdo no hay tiempo límite ni forma de trabarse. En la huida del final, si un ser lo agarra, Jorge vuelve a la primera puerta |
+| **No se puede perder** | No hay tiempo límite ni forma de trabarse |
 
 ### La feria
 
@@ -1011,9 +1009,8 @@ Se recorre de izquierda a derecha. Jorge aparece **al lado de la calesita**, don
 6. **Explorar y recordar** los tres momentos, en cualquier orden (ver abajo). Cada tanto se escucha a la mamá, lejos: _"¡Jorge…!"_. La primera vez, Jorge piensa _"Alguien me llama."_ / _"Es una voz de mujer."_ y Vela le dice _"¿La escuchás? Tu sueño la está recordando. Seguí la luz."_
 7. Con los tres recordados, Vela: _"Ya lo tenés, Jorge."_ / _"¿Qué te dijo tu mamá?"_ Jorge piensa: _"Que me quede quieto…"_ / _"…donde estoy."_
 8. **Quedarse quieto** (ver "El final"). Llega la mamá.
-9. Vela: _"Muy bien, Jorge. Ya está."_ / _"Ahora vas a desp—"_ Y **todo se congela** (ver "El final se descontrola").
-10. **La huida** por las carpas, hasta la sortija.
-11. **Despertar** en la camilla (ver "El despertar").
+9. Vela: _"Muy bien, Jorge. Ya está."_ / _"Ahora vas a despertar."_ La imagen **funde a blanco**.
+10. **Despertar** en la camilla (ver "El despertar").
 
 ### Los tres recuerdos
 
@@ -1069,56 +1066,13 @@ Jorge chico la abraza.
 >
 > **Jorge (piensa):** Pero sé que es ella.
 
-### El final se descontrola
-
-_Idea del usuario: que al final de las sesiones todo se descontrole, que la gente sin cara se vuelva violenta (negra, más grande, con la cabeza partida al medio y dientes grandes, gritando al cielo), que se pierda la comunicación con Vela y que Jorge tenga que encontrar la salida entrando por distintos cuartos. Si lo agarran, vuelve a la primera puerta. Por ahora está solo en la Sesión 1. Los cuartos, los diálogos y la regla de quedarse quieto los propuso el agente y son provisorios._
-
-**1. Todo se congela.** Vela no termina la frase (_"Ahora vas a desp—"_). La música de la calesita se frena como una cinta, los caballitos se quedan quietos, la mamá también, el color se va y vuelve la oscuridad. _"¿Mamá?"_ / _"No se mueve."_ / _"Nadie se mueve."_ La llama tiembla y la voz de Vela se rompe: _"Jor… ¿me escu…?"_ / _"…ge… no te…"_
-
-**2. Jorge camina solo.** El jugador pierde el control: _"Mis piernas caminan solas."_ Jorge camina hasta una de las personas sin cara (la que tenga más adelante). Las demás se apagan.
-
-**3. La transformación** (cinemática). La cámara se acerca. _"Esa persona…"_ / _"Me está mirando. Sin cara."_ La silueta parpadea y **se pone negra**, **crece** y **se le parte la cabeza al medio**: adentro está rojo oscuro y los dos bordes tienen **dientes grandes**. Levanta los brazos y **grita al cielo**: la pantalla tiembla y late en rojo. La llama de Vela se apaga.
-
-**4. La huida.** Detrás de Jorge aparece **una carpa que antes no estaba** (_"Tengo que salir de acá."_ / _"Esa carpa… antes no estaba."_). Objetivo: **Escapar**. El ser lo persigue. La carpa es **la primera puerta**: lleva al **callejón de carpas**.
-
-| Lugar | Qué hay |
-|---|---|
-| **El callejón** | La feria, pero roja y torcida: guirnaldas rotas y cinco carpas a rayas. La primera es por donde entró (_"No. Atrás está eso."_). Las otras cuatro son cuartos. La de la salida tiene un **brillo dorado** apenas, en la entrada |
-| **Los espejos** | Espejos con reflejos de Jorge chico, estirados o achatados. _"Espejos."_ / _"No hay salida."_ |
-| **Los caballitos** | Los caballitos de la calesita, colgados y quietos. _"Quietos."_ / _"La sortija era dorada…"_ (es la pista de la salida) |
-| **La carpa de atrás** | Larga y vacía. Al fondo hay **otro ser, agachado**: cuando Jorge llega a la mitad, se despierta, grita y lo persigue |
-| **La salida** | Al fondo, **la sortija**, colgada y dorada, con una luz blanca detrás. _"Una luz dorada."_ / _"La sortija."_ El ser del callejón **lo sigue adentro** |
-
-**5. Despertar.** Al agarrar la sortija, la llama vuelve: _"¡Jorge! Te encontré."_ / _"Agarrala. Despertate."_ Un destello blanco y Jorge se despierta.
-
-### La persecución (reglas)
-
-| Regla | Qué pasa |
-|---|---|
-| **Correr** | En la huida, Jorge corre solo (más rápido que caminando). Los seres arrancan despacio y aceleran hasta casi su velocidad |
-| **Quedarse quieto: no te ven** | Si Jorge no se mueve un momento, el ser lo pierde: se frena, se aleja buscándolo y mira para los dos lados. Si Jorge se mueve cerca, lo vuelve a ver. Es lo que le dijo su mamá: _"Quedate quieto donde estás"_ |
-| **Te siguen por las puertas** | El primer ser entra al callejón un poco después que Jorge, y también a la carpa de la salida. A los otros cuartos no entra: se queda esperando afuera, cerca de la carpa |
-| **Si te agarran** | La imagen se pone roja y tiembla, se funde a negro y Jorge vuelve a **la primera puerta** (la entrada del callejón). Los seres vuelven a su lugar. _"Otra vez en la entrada."_ No hay muerte ni "game over" |
-| **El corazón** | Cuando un ser está cerca, se escucha un latido que se acelera y la pantalla se tiñe de rojo |
-| **Vela, cortado** | Cada tanto se escucha un pedazo de su voz entre la estática: _"…Jor… ge…"_, _"…¿me escu… chás?…"_, _"…quieto… quedate…"_ |
-
 ### El despertar
 
 Jorge abre los ojos en la camilla del cuarto de inducción. La pantalla grande brilla en tonos cálidos, como la feria.
 
-> **Vela:** Jorge. Jorge, ¿me escuchás?
->
 > **Vela:** Despacio. Ya estás acá.
 >
-> **Vela:** Al final te perdí. La pantalla se puso negra.
->
-> **Jorge (piensa):** Había gente… con la cabeza partida al medio.
->
-> **Jorge (piensa):** Me perseguían.
->
-> **Vela:** Hay partes tuyas que no quieren que sigas buscando, Jorge.
->
-> **Vela:** Pero lo que viste antes sí lo vi: la feria, la calesita… tu mamá.
+> **Vela:** Lo vi todo en la pantalla: la feria, la calesita… tu mamá.
 >
 > **Jorge (piensa):** Mi mamá.
 >
@@ -1134,8 +1088,6 @@ El casco sube y se anota el primer tramo de la **línea de tiempo**: _"Infancia 
 |---|---|
 | Después de que aparece la llama | Seguir la luz y recordar qué pasó (0/3), y el número sube con cada recuerdo |
 | Con los tres recuerdos | Quedarme quieto donde estoy |
-| Después de la transformación | Escapar |
-| En el callejón y los cuartos | Encontrar la salida |
 
 ### Pistas del diario
 
@@ -1144,7 +1096,6 @@ El casco sube y se anota el primer tramo de la **línea de tiempo**: _"Infancia 
 | El algodón de azúcar: "Fui a la feria con una mujer. Me compró algodón de azúcar. No le puedo ver la cara." (o "con mamá", si ya lo sabe) | Al recordar el algodón |
 | La calesita: "Saqué la sortija. Ella me saludaba desde el banco. Me bajé del otro lado de la calesita y no la vi más." | Al recordar la calesita |
 | Lo que me dijo mamá: "Al entrar a la feria, mamá me dijo: «Si te perdés, quedate quieto donde estás, que yo te encuentro»." | Al recordar la entrada |
-| Los seres: "Al final de la feria todo se congeló y la gente sin cara se volvió negra, enorme, con la cabeza partida y llena de dientes. Me perseguían. Escapé por las carpas hasta la sortija." | Al agarrar la sortija |
 
 ### Final de la locación
 
@@ -1155,8 +1106,7 @@ Termina en el despertar, cuando Vela cierra la sesión. Sigue en **La primera no
 - ¿Cuántos años tiene Jorge en este recuerdo? (En el prototipo parece de unos 7.)
 - ¿Dónde era la feria? ¿Tiene nombre?
 - ¿La mamá le dice "Jorge" o tiene un apodo para él?
-- ¿Las persecuciones van también en las otras sesiones? (Por ahora, solo en esta.)
-- ¿Los seres tienen nombre? ¿Cambian en cada sesión?
+- _Idea a implementar más adelante:_ que al final de la sesión el sueño se descontrole y haya una persecución (ver "Mecánicas" → Ideas a implementar).
 
 ## La primera noche
 

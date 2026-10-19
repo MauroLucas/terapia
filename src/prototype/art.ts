@@ -378,50 +378,6 @@ function drawSombra(g: Phaser.GameObjects.Graphics) {
   g.fillRect(25, 32, 10, 12).fillCircle(30, 22, 15)
 }
 
-// Los seres del subconsciente: la gente sin cara, negra, más grande y con la cabeza partida al medio, llena de dientes.
-// 'grito': parado, los brazos para atrás y la cabeza abierta hacia el cielo. 'a' y 'b': corriendo, encorvado, hacia la derecha
-function drawSer(g: Phaser.GameObjects.Graphics, pose: 'grito' | 'a' | 'b') {
-  const body = 0x060608
-  const run = pose !== 'grito'
-  const hx = run ? 54 : 45 // centro de la cabeza
-  const top = run ? 14 : 6
-  const open = pose === 'grito' ? 14 : 9 // cuánto se abre la cabeza
-  g.fillStyle(body)
-  g.lineStyle(10, body)
-  // Piernas
-  if (pose === 'grito') g.lineBetween(36, 150, 30, 216).lineBetween(54, 150, 60, 216)
-  else if (pose === 'a') g.lineBetween(38, 150, 18, 214).lineBetween(58, 150, 76, 214)
-  else g.lineBetween(42, 150, 50, 214).lineBetween(56, 150, 38, 214)
-  // Torso
-  if (run) g.fillPoints([new Phaser.Math.Vector2(22, 84), new Phaser.Math.Vector2(64, 74), new Phaser.Math.Vector2(70, 152), new Phaser.Math.Vector2(30, 158)], true)
-  else g.fillRoundedRect(22, 72, 46, 88, 12)
-  // Brazos largos
-  g.lineStyle(8, body)
-  if (pose === 'grito') g.lineBetween(26, 82, 6, 30).lineBetween(64, 82, 84, 30)
-  else g.lineBetween(62, 86, 88, 132).lineBetween(28, 90, 8, 150)
-  // Cuello
-  g.fillRect(hx - 5, top + 48, 10, 22)
-  // La cabeza partida: dos mitades que se abren desde el cuello
-  const base = top + 56
-  const L = [[hx - 1, base], [hx - 20, top + 34], [hx - 22, top + 12], [hx - 10, top], [hx - open, top + 10]]
-  const R = L.map(([x, y]) => [2 * hx - x, y])
-  g.fillPoints(L.map(([x, y]) => new Phaser.Math.Vector2(x, y)), true)
-  g.fillPoints(R.map(([x, y]) => new Phaser.Math.Vector2(x, y)), true)
-  // Adentro, rojo oscuro
-  g.fillStyle(0x5a0a14)
-  g.fillPoints([new Phaser.Math.Vector2(hx - open, top + 10), new Phaser.Math.Vector2(hx + open, top + 10), new Phaser.Math.Vector2(hx + 1, base - 2), new Phaser.Math.Vector2(hx - 1, base - 2)], true)
-  // Dientes grandes en los dos bordes
-  g.fillStyle(0xf1ece0)
-  for (let i = 0; i < 5; i++) {
-    const y = top + 12 + i * 8.5
-    const k = 1 - (y - top - 10) / (base - top - 10)
-    const xl = hx - 1 - (open - 1) * k
-    const xr = hx + 1 + (open - 1) * k
-    g.fillTriangle(xl, y, xl, y + 7, xl + 6 + open * 0.3, y + 3.5)
-    g.fillTriangle(xr, y + 3, xr, y + 10, xr - 6 - open * 0.3, y + 6.5)
-  }
-}
-
 export function makeTextures(scene: Phaser.Scene) {
   if (scene.textures.exists('jorge0')) return
   const g = scene.make.graphics({}, false)
@@ -573,11 +529,6 @@ export function makeTextures(scene: Phaser.Scene) {
   g.clear()
   drawSombra(g)
   g.generateTexture('sombra', 60, 150)
-  for (const [key, pose] of [['serGrito', 'grito'], ['serCorre1', 'a'], ['serCorre2', 'b']] as const) {
-    g.clear()
-    drawSer(g, pose)
-    g.generateTexture(key, 92, 220)
-  }
   g.clear()
   g.fillStyle(0xf2a33a).fillEllipse(12, 26, 20, 30).fillTriangle(3, 22, 21, 22, 12, 0)
   g.fillStyle(0xffd27a).fillEllipse(12, 28, 12, 20).fillTriangle(7, 26, 17, 26, 12, 8)

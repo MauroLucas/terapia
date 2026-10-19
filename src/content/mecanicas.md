@@ -144,12 +144,6 @@ Adentro de una sesión, las reglas cambian. Esto es lo que se definió con la pr
 - **Momentos sin forma de fallar:** algunos recuerdos piden una acción simple, como bailar con María en la Sesión 3 (apretar ← → alternando). No hay ritmo que seguir ni forma de hacerlo mal.
 - **El recuerdo no se puede cambiar.** Si el jugador elige algo que no pasó, el sueño no lo deja (en la Sesión 2, la tinta de la firma se borra). La elección está para dar ilusión de control.
 - **No se puede perder.** Los puzzles ayudan si el jugador se traba (la sortija se agranda, Vela da pistas).
-- **El final se descontrola** _(idea del usuario; por ahora solo en la Sesión 1)_. Al terminar el recuerdo, todo se congela, se corta la comunicación con Vela y **la gente sin cara se vuelve violenta**: se pone negra, crece, se le parte la cabeza al medio, llena de dientes, y grita. Son partes del subconsciente de Jorge que **no quieren que siga buscando**. Jorge tiene que **huir** entrando por distintos cuartos hasta encontrar la salida para despertar:
-  - **Correr:** en la huida Jorge corre solo; los seres arrancan despacio y aceleran.
-  - **Quedarse quieto:** si Jorge no se mueve, no lo ven; se frenan y se alejan buscándolo. Si se mueve cerca, lo vuelven a ver.
-  - **Si te agarran:** la imagen se pone roja y Jorge vuelve a **la primera puerta**. No hay muerte ni "game over".
-  - **Puertas:** cada carpa es un cuarto. Algunos no tienen salida; en otro espera un ser agachado. La salida tiene algo de esa sesión (en la feria, la sortija dorada).
-  - Ver "Locaciones" → Sesión 1 → El final se descontrola.
 - **Los momentos violentos no los hace el jugador.** El recuerdo se corta justo antes, como si la mente de Jorge no quisiera mirarlo, y sigue con lo que quedó. En la Sesión 2 el corte es a negro; en la pelea de la Sesión 4, **la imagen se rompe como un vidrio** y lo siguiente es la mamá en el piso.
 - **El odio nubla** (Sesión 4): cuando Jorge se enoja, la pantalla se tiñe de rojo, la llama se achica y se pone roja, y **la voz de Vela llega rota**, con letras que faltan. Jorge no la escucha hasta que sale de la casa.
 - **La lluvia** (Sesión 5): bajo la lluvia la llama se achica y se ve menos; bajo un toldo o el paraguas de María, crece.
@@ -162,8 +156,23 @@ Adentro de una sesión, las reglas cambian. Esto es lo que se definió con la pr
 - **Lo que pasó no se arregla.** Después de algo malo, el jugador puede elegir intentar repararlo (ayudar a la mamá, pedirle perdón), pero el recuerdo no cambia: _"Quise… Pero esa noche no hice nada."_
 - Al terminar, Jorge **despierta en la camilla** y se suma un tramo a la línea de tiempo.
 
+### Ideas a implementar
+
+#### El final se descontrola: los seres y las persecuciones
+
+_Idea del usuario. Se probó en la Sesión 1 y se sacó del prototipo porque no convenció cómo quedó: queda como posibilidad para más adelante._
+
+- **Qué es:** al final de una sesión, el sueño **se descontrola**. Todo se congela, se pierde la comunicación con Vela y **la gente sin cara se vuelve violenta**: se pone negra, crece, se le parte la cabeza al medio con dientes grandes y **grita al cielo** (con una cinemática). Son **personajes del subconsciente de Jorge que no quieren que siga buscando**.
+- **La persecución:** Jorge tiene que buscar la forma de despertar **entrando por distintos cuartos** hasta encontrar la salida.
+- **Si lo agarran,** vuelve a **la primera puerta**.
+- **En la feria (Sesión 1):** todo se congela y Jorge empieza a caminar solo hasta una parte del mapa donde aparece el primero.
+
+**Lo que se probó** (para retomar): una carpa que aparece detrás de Jorge como primera puerta; un callejón de carpas rojo con cuartos (espejos, los caballitos colgados, una carpa con un ser agachado y la salida con la sortija); correr; quedarse quieto para que no lo vean (lo que le dijo su mamá en la feria); un latido y un tinte rojo cuando están cerca; pedazos de la voz de Vela entre la estática.
+
+_Por definir, si se retoma: qué no funcionó y qué cambiar (el ritmo, el arte de los seres, el largo, la dificultad), en qué sesiones va y si convive con el tono de las sesiones tiernas._
+
 ### Combate
 
-No hay combate. En las persecuciones (ver "Sueño lúcido" → El final se descontrola) Jorge solo puede huir o quedarse quieto.
+No hay combate.
 
 ### Economía
