@@ -309,6 +309,41 @@ function drawMaria30(g: Phaser.GameObjects.Graphics, pose: Legs | 'sit') {
   g.lineStyle(1.5, 0xb5655a).beginPath().arc(39, 31 + dy, 4, 0.2, 1.2).strokePath()
 }
 
+// La mamá de Jorge, de grande (Sesión 6): pelo gris corto, saco lila (el de la foto de la billetera). Con cara
+// (la primera vez que se le ve) y, para antes de que se le vea, la misma figura con la luz en la cabeza
+function drawMamaMayor(g: Phaser.GameObjects.Graphics, pose: Legs | 'sit') {
+  const skin = 0xe2b996
+  const sit = pose === 'sit'
+  const dy = sit ? 4 : 0
+  if (sit) {
+    g.lineStyle(10, 0x4a4458).lineBetween(24, 102, 54, 102).lineBetween(54, 102, 54, 128)
+    g.fillStyle(C.shoes).fillRoundedRect(49, 127, 16, 7, 3)
+  } else {
+    g.lineStyle(10, 0x4a4458)
+    const feet: [number, number][] =
+      pose === 'stand' ? [[24, 132], [34, 132]] : pose === 'walkA' ? [[17, 132], [41, 132]] : [[22, 132], [37, 132]]
+    g.lineBetween(25, 102, feet[0][0], feet[0][1] - 4)
+    g.lineBetween(33, 102, feet[1][0], feet[1][1] - 4)
+    g.fillStyle(C.shoes)
+    for (const [fx, fy] of feet) g.fillRoundedRect(fx - 6, fy - 5, 15, 7, 3)
+  }
+  g.fillStyle(0x8a5a7a).fillRoundedRect(13, 46 + dy, 34, sit ? 54 : 60, 10)
+  g.fillStyle(0xe6d3a8).fillRect(20, 44 + dy, 22, 6)
+  const armX = pose === 'walkA' ? 22 : pose === 'walkB' ? 28 : sit ? 30 : 25
+  g.fillStyle(0x7a4a6a).fillRoundedRect(armX, 52 + dy, 11, 38, 5)
+  g.fillStyle(skin).fillCircle(armX + 5, 92 + dy, 5)
+  g.fillStyle(skin).fillRect(26, 36 + dy, 10, 10).fillCircle(31, 25 + dy, 14).fillTriangle(43, 24 + dy, 47, 29 + dy, 43, 30 + dy)
+  // Pelo gris, corto
+  g.fillStyle(0xa9acb3)
+  g.slice(30, 22 + dy, 15, Math.PI, Math.PI * 2, false)
+  g.fillPath()
+  g.fillRoundedRect(15, 14 + dy, 12, 22, 5)
+  // La cara: ojo, arruguitas y una sonrisa
+  g.fillStyle(C.ink).fillCircle(38, 25 + dy, 2)
+  g.lineStyle(1, 0xb08a6a).lineBetween(41, 21 + dy, 44, 20 + dy).lineBetween(41, 28 + dy, 44, 29 + dy)
+  g.lineStyle(1.8, 0x9a5a4a).beginPath().arc(38, 30 + dy, 5, 0.2, 1.3).strokePath()
+}
+
 // Gente de la feria: siluetas grises, sin cara
 function drawSombra(g: Phaser.GameObjects.Graphics) {
   g.fillStyle(0x4d5363)
@@ -537,6 +572,20 @@ export function makeTextures(scene: Phaser.Scene) {
   g.lineStyle(1.5, 0x3a5a8a).strokeRect(7, 8, 12, 10)
   g.fillStyle(0x4f9d4a).fillCircle(10, 18, 2).fillCircle(16, 18, 2)
   g.generateTexture('servilleta', 26, 26)
+
+  // Sesión 6: la mamá de grande y el boleto del micro a San Rafael
+  const mamaMayor: [string, Legs | 'sit', number][] = [['mamaMayor0', 'stand', 56], ['mamaMayor1', 'walkA', 56], ['mamaMayor2', 'walkB', 56], ['mamaMayorSentada', 'sit', 72]]
+  for (const [key, pose, w] of mamaMayor) {
+    g.clear()
+    drawMamaMayor(g, pose)
+    g.generateTexture(key, w, 140)
+  }
+  g.clear()
+  g.fillStyle(0xf2ecd8).fillRect(0, 4, 32, 18)
+  g.fillStyle(0x2f6fa0).fillRect(0, 4, 32, 5)
+  g.lineStyle(1, 0x8a8f99).lineBetween(4, 14, 22, 14).lineBetween(4, 18, 16, 18)
+  g.lineStyle(1, 0x8a8f99).lineBetween(25, 9, 25, 22)
+  g.generateTexture('boleto', 32, 26)
 
   g.destroy()
 }

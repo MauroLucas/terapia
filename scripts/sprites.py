@@ -61,6 +61,11 @@ FONDOS = [
     ('calle-lluvia', 'Dream5', {}, "REVEAL; s.setArea('lluvia'); s.dark.setAlpha(0); s.player.setX(6550); s.flame.setX(6620); s.maria.setVisible(true).setX(6620); s.paraguas.setVisible(true).setPosition(6600, 440)", 6000),
     ('parada', 'Dream5', {}, "REVEAL; s.setArea('lluvia'); s.dark.setAlpha(0); s.player.setX(7380); s.flame.setX(7450); s.maria.setVisible(true).setX(7460)", 6620),
     ('recuerdos-sepia', 'Dream5', {}, "s.setArea('recuerdo')", 8400),
+    ('oficina', 'Dream6', {}, 'REVEAL', 0),
+    ('hospital', 'Dream6', {}, "REVEAL; s.setArea('hospital'); s.player.setTexture('jorge0').setOrigin(0.5).setPosition(2700, 530); s.flame.setX(2770)", 2200),
+    ('hospital-habitacion', 'Dream6', {}, "REVEAL; s.setArea('hospital'); s.player.setTexture('jorge0').setOrigin(0.5).setPosition(3500, 530); s.flame.setX(3570); s.mama.setVisible(true); s.mamaGlow.setVisible(true)", 2920),
+    ('san-rafael', 'Dream6', {}, "REVEAL; s.setArea('sanrafael'); s.player.setTexture('jorge0').setOrigin(0.5).setPosition(5500, 530); s.flame.setX(5570); s.mama.setVisible(true).setAngle(0).setPosition(5580, 530)", 4900),
+    ('san-rafael-rio', 'Dream6', {}, "REVEAL; s.setArea('sanrafael'); s.player.setTexture('jorge0').setOrigin(0.5).setPosition(7100, 530); s.flame.setX(7170); s.mama.setVisible(true).setAngle(0).setPosition(7200, 530)", 6420),
 ]
 
 # Personajes dibujados en la escena: (archivo, fondo del que se recorta, recorte x, y, ancho, alto en pantalla)

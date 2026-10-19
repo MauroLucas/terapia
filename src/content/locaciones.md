@@ -24,6 +24,9 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 15 | **Pre-sesión 5** | Casa de Jorge (la mañana) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
 | 16 | **Sesión 5: El reencuentro** | Sueño lúcido: una esquina del centro, un bar y la calle con lluvia, a los 30 | Cruzarse a María, charlar en el bar, acompañarla bajo la lluvia. El beso y la despedida | En el prototipo |
 | 17 | **La quinta noche** | Casa de Jorge, de noche, después de la Sesión 5 | Anotar el reencuentro y dormir. En la campera mojada, la servilleta de María | En el prototipo |
+| 18 | **Pre-sesión 6** | Casa de Jorge (la mañana) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
+| 19 | **Sesión 6: El viaje del 12/08** | Sueño lúcido: la oficina, el hospital y San Rafael (Mendoza), a los 38 | Atender la llamada, ver a mamá en el hospital, pasear con ella. El perdón que no sale y su cara | En el prototipo |
+| 20 | **La sexta noche** | Casa de Jorge, de noche, después de la Sesión 6 | Anotar el viaje y dormir. En la cómoda, los boletos del micro | En el prototipo |
 
 ## Casa de Jorge
 
@@ -969,7 +972,7 @@ _La idea (perderse de chico, Jorge de chico, Vela como llama) es del usuario. Lo
 | **La llama es Vela** | Sigue a Jorge con un poco de atraso, flotando. La voz del doctor sale de ahí, con el globo dentado del portero eléctrico (habla "por la máquina") |
 | **Recordar es iluminar** | Lo que no se recuerda se ve **gris**. Si la luz lo toca un rato, toma color con un brillo suave. Recién ahí se puede examinar |
 | **Recuerdos** | Al examinar algo importante, el recuerdo aparece como **figuras transparentes y cálidas** (la mamá y Jorge chico) que dicen lo que dijeron esa noche y se desvanecen |
-| **La mamá no tiene cara** | Una luz blanca le tapa la cabeza, siempre |
+| **La mamá no tiene cara** | Una luz blanca le tapa la cabeza. Se le ve la cara recién en la Sesión 6, cuando Jorge le pide perdón |
 | **La gente no tiene cara** | Siluetas grises que no se iluminan nunca: no son parte del recuerdo |
 | **La feria no termina** | Pasando la vuelta al mundo, la feria vuelve a empezar desde la entrada |
 | **No se puede perder** | No hay tiempo límite ni forma de trabarse |
@@ -2307,8 +2310,230 @@ Al anotarlo: _"«El reencuentro.»"_ / _"«Me fui.»"_ Si la vuelve a mirar: _"Y
 
 ### Final de la locación
 
-Termina cuando Jorge **se duerme**. En el prototipo completo es el **fin del prototipo**: la Pre-sesión 6 y la Sesión 6 (el viaje del 12/08) todavía no están.
+Termina cuando Jorge **se duerme**. En el prototipo completo sigue la **Pre-sesión 6**.
 
 ### Pendiente de definir
 
 - ¿Jorge pone plantas en la ventana alguna vez?
+
+## Pre-sesión 6
+
+### Resumen
+
+Una semana después de La quinta noche. Igual que las otras: Jorge se despierta, **suena el portero** (_"Debe ser el remis."_), puede repasar la pizarra y, al salir del cuarto, aparece sentado frente a Vela.
+
+### Qué cambia
+
+| Lugar | Pre-sesión 6 |
+|---|---|
+| Pizarra | Ya tiene el reencuentro. _"Ya casi llego a hoy."_ / _"El reencuentro. Me fui."_ |
+| Cuarto de inducción | _"Hoy vas a ver a tu mamá, Jorge."_ / _"Mirala bien."_ / _"Acostate."_ |
+
+### Las preguntas
+
+_Provisorias, propuestas por el agente._ Las respuestas no tienen consecuencias.
+
+| Pregunta | La verdad | La mentira |
+|---|---|---|
+| ¿Seguís pensando en María? | "Sí. En la parada. En que me fui." → _"Ya vamos a volver a eso."_ | "No. Ya fue." → _"Bueno."_ |
+| ¿Tenés alguna foto de tu mamá? | "Una. En la billetera. Atrás dice 12/08." → _"Hoy vamos ahí, Jorge."_ | "No. Ninguna." → _"¿Seguro? Fijate en la billetera."_ / _"Hoy vamos ahí."_ |
+
+Después sigue la **Sesión 6: El viaje del 12/08**.
+
+## Sesión 6: El viaje del 12/08
+
+### Resumen
+
+Es la sexta sesión: la **adultez**. Jorge tiene **unos 38 años** _(provisorio)_. Está trabajando en su oficina cuando **lo llaman del hospital**: su mamá tuvo un **ACV**. El médico dice que tiene que estar tranquila, y ella le pide algo que siempre quiso: **ir juntos a San Rafael, Mendoza**. En el viaje caminan entre viñedos y álamos, y en un banco frente al río **Jorge intenta pedirle perdón por la pelea, pero no le salen las palabras**. Ella le dice que ya sabe. Y la luz que siempre le tapó la cara **se apaga: por primera vez se le ve**. Después alguien que pasa les saca **la foto de la billetera**.
+
+Es la sesión del **reencuentro con la mamá**, y la última vez que la ve bien. Lo que viene después (la Sesión 7) es su muerte.
+
+_Decidido por el usuario: el viaje a San Rafael (Mendoza), que empiece con Jorge en su oficina recibiendo la llamada del hospital, que intente pedirle perdón y no le salgan las palabras, y que por primera vez se le vea la cara. Los diálogos, el médico y los detalles (los álamos, el abuelo, el turista de la foto) los propuso el agente y son provisorios._
+
+### Cómo es este sueño
+
+| Regla | Qué pasa |
+|---|---|
+| **El calor de la mamá** | Cerca de ella, la llama crece. No hay frío |
+| **La mamá camina al lado** | En San Rafael, la mamá acompaña a Jorge |
+| **La cara** | Hasta el banco, la mamá tiene la luz que le tapa la cara (también en el hospital). Cuando ella le dice _"Ya sé, hijo"_, la cámara se acerca, la luz se apaga despacio y **se le ve la cara**: pelo gris, ojos, arruguitas, una sonrisa. Es la primera vez en todo el juego |
+
+### Los lugares
+
+| Lugar | Qué hay |
+|---|---|
+| **La oficina** | Luz de tubo, escritorios, un monitor de los gordos, el teléfono y compañeros sin cara. Jorge empieza sentado, trabajando |
+| **El hospital** | El pasillo de guardia, blanco y verde agua, con sillas de espera y **el médico** (una silueta de guardapolvo). La **habitación 12**: la cama, el monitor con su bip, la ventana. **La mamá**, acostada |
+| **San Rafael**, al atardecer | Cielo naranja, la cordillera con nieve, **los viñedos**, **los álamos**, **el mirador del río Atuel** y **un banco** frente al río |
+
+### Secuencia
+
+1. **Se le abren los ojos** en la oficina, sentado. _"Mi oficina."_ / _"Planillas, mails, el café frío."_ / _"Tengo… treinta y ocho."_
+2. Aparece la llama. Vela: _"Hola, Jorge."_ / _"Hoy es un día importante. Quedate cerca."_ **Suena el teléfono**, y sigue sonando. Objetivo: **Atender el teléfono**.
+3. **La llamada** (ver "Diálogos"). Objetivo: **Ir al hospital**.
+4. **El hospital:** _"Hace cuánto no la veo… ¿Un año?"_ El médico. Objetivo: **Encontrar a mamá** → **Ver a mamá**.
+5. **La habitación:** _"Está tan chiquita."_ / _"Sigo sin poder verle la cara."_ Ella le pide el viaje.
+6. Vela: _"Eso fue lo que ella pidió, Jorge."_ Cartel: _"12 de agosto · San Rafael, Mendoza"_.
+7. **El paseo:** _"¡Mirá eso, Jorge! La montaña tiene nieve."_ / _"Hacía años que no la escuchaba así."_ Objetivo: **Pasear con mamá**. Hay que ver dos de los tres lugares (ver abajo).
+8. **El banco**, frente al río. Objetivo: **Sentarnos en el banco, frente al río**.
+9. **El perdón que no sale** y **la cara** (ver abajo).
+10. **La foto** (ver abajo).
+11. Mamá: _"Me hiciste muy feliz con este viaje, Jorge."_ Vela: _"Quedate un rato acá, Jorge. Todo el que quieras."_ / _"Vas a despertar."_ La imagen funde a un blanco cálido.
+
+### Diálogos
+
+**La llamada**, en la oficina:
+
+> **Jorge:** ¿Hola?
+>
+> **Hospital:** ¿Jorge? Lo llamamos del hospital.
+>
+> **Hospital:** Su mamá tuvo un ACV. Está estable.
+>
+> **Hospital:** Lo nombró a usted. Es el único contacto que tenemos.
+>
+> **Jorge (piensa):** El único contacto.
+
+**El médico:** _"¿Usted es el hijo?"_ / _"Tuvo suerte. Llegó a tiempo."_ / _"Pero a partir de ahora tiene que estar tranquila. Nada de disgustos."_ / _"Está en la doce. Lo está esperando."_
+
+**La habitación:**
+
+> **Mamá:** Viniste.
+>
+> **Jorge:** Claro que vine, ma.
+>
+> **Mamá:** El médico dice que tengo que estar tranquila.
+>
+> **Mamá:** Yo siempre quise ir a San Rafael. Al río, a ver los álamos…
+>
+> **Mamá:** ¿Me acompañás?
+
+El jugador elige _"Sí, ma."_ o _"No sé si puedo, con el trabajo…"_. Con la segunda: _"Ya sé que estás ocupado."_ / _"Me miró. Ya no me pidió nada más."_ / _"…Vamos. Sí. Vamos."_
+
+**El paseo:**
+
+| Lugar | Qué dice la mamá |
+|---|---|
+| Viñedos | _"Tu abuelo decía que algún día íbamos a tener una viña."_ / _"Nunca tuvimos ni una planta."_ Jorge piensa: _"Se ríe. Me había olvidado de cómo se ríe."_ |
+| Álamos | _"Los álamos. Parecen soldaditos, ¿no?"_ / _"Vos de chico les tenías miedo a los árboles altos."_ / _"Me agarrabas la mano y no me soltabas."_ |
+| Mirador | _"El Atuel."_ / _"Qué lindo es esto, hijo. Gracias por traerme."_ Jorge piensa: _"No me agradezcas."_ |
+
+### El perdón que no sale
+
+Sentados en el banco. Mamá: _"Qué silencio que hay acá."_ Jorge piensa: _"Tengo que decírselo. Ahora."_ Aparece una sola opción: **Pedirle perdón**. Cada intento es más corto:
+
+> **Jorge:** Ma… lo de esa noche…
+>
+> **Jorge:** Cuando me fui de casa… yo…
+>
+> **Jorge:** Yo te…
+>
+> **Jorge (piensa):** No me sale.
+>
+> **Jorge (piensa):** Veinte años y no me sale.
+>
+> **Mamá:** Ya sé, hijo.
+>
+> **Mamá:** Ya sé.
+
+### La cara
+
+La cámara se acerca a ella. La luz que le tapaba la cabeza se apaga despacio y la llama crece. **Se le ve la cara por primera vez.**
+
+> **Jorge (piensa):** Mamá.
+>
+> **Jorge (piensa):** Le veo la cara.
+>
+> **Jorge (piensa):** Se está riendo.
+>
+> **Vela:** Ahí está, Jorge.
+
+### La foto
+
+Alguien que pasa (una silueta sin cara): _"¿Les saco una foto?"_ Mamá: _"¡Sí! Dale, Jorge, acercate."_ Flash, y se ve **la foto de la billetera**, de frente y de dorso (_"12/08"_). _"La foto de la billetera."_ / _"12/08."_ / _"Por eso la llevo siempre encima."_ Cierra lo que empezó en la Casa de Jorge, cuando no sabía quién era la señora de la foto.
+
+### Objetivo en pantalla
+
+| Cuándo | Objetivo |
+|---|---|
+| En la oficina | Atender el teléfono → Ir al hospital |
+| En el hospital | Encontrar a mamá → Ver a mamá → Hablar con mamá |
+| En San Rafael | Pasear con mamá → Sentarnos en el banco, frente al río |
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| El llamado: "Me llamaron del hospital a la oficina: mamá tuvo un ACV. Está estable. Yo era su único contacto." | Después de la llamada |
+| El hospital: "Después del ACV, el médico dijo que mamá tenía que estar tranquila. Ella me pidió que la acompañara a San Rafael. Le dije que sí." | En la habitación |
+| El banco, frente al río: "…quise pedirle perdón a mamá por esa noche. No me salieron las palabras. Ella me dijo «ya sé, hijo». Y por primera vez le vi la cara." | Después de la cara |
+| La foto del 12/08: "La foto de la billetera es de San Rafael. Nos la sacó alguien que pasaba, en el banco frente al río. Atrás, mamá escribió la fecha: 12/08." | Después de la foto |
+
+### El despertar
+
+> **Vela:** Despacio. Ya estás acá.
+>
+> **Vela:** La viste, Jorge. Le viste la cara.
+>
+> **Jorge (piensa):** Se reía.
+>
+> **Vela:** Fue un buen viaje.
+>
+> **Jorge (piensa):** Fue el último.
+
+Se suma a la línea de tiempo: _"Adultez · El viaje del 12/08"_.
+
+### Pendiente de definir
+
+- ¿Cuántos años tiene Jorge exactamente? (En el prototipo: treinta y ocho.)
+- ¿Cuánto tiempo pasa entre el viaje y el segundo ACV?
+- ¿Sigue viéndose la cara de la mamá en las sesiones que siguen?
+
+## La sexta noche
+
+### Resumen
+
+Jorge vuelve a su casa después de la Sesión 6. Es una noche tranquila y triste a la vez: anota el viaje, encuentra en la cómoda **los boletos del micro a San Rafael**, y cuando suena el portero, **por un segundo cree que es su mamá**.
+
+_Lo propuso el agente y es provisorio._
+
+### Secuencia
+
+1. Desde negro, en el pasillo: _"Volví."_ / _"San Rafael. El río. Los álamos."_ / _"Le vi la cara a mamá."_ / _"Tengo que anotarlo."_
+2. **La pizarra** (ver abajo).
+3. **El portero:** la voz dice _"…Jorge…"_. Jorge: _"¿Mamá?"_ / _"No."_ / _"Por un segundo pensé que era ella."_ / _"Se cortó."_
+4. **El cajón de la cómoda:** los boletos del micro. _"Los boletos del micro a San Rafael."_ / _"Los de la vuelta no los guardé. Estos sí."_ Si se va a dormir sin mirarlo: _"La cómoda… Ahí guardé algo del viaje."_ y lo mira antes.
+5. **Dormir:** _"Le vi la cara."_ / _"Se reía."_ / _"No quiero pensar en lo que vino después."_
+
+### La pizarra
+
+| Opción | Qué pasa |
+|---|---|
+| Entre los 0 y los 30 años | _"No. Fue hace poco. Tenía treinta y ocho."_ |
+| **Entre los 30 y los 40** | Es la correcta. Cerca de los 38 escribe **"El viaje"**, en dorado, y abajo: _"San Rafael, con mamá. 12/08. Le vi la cara."_ |
+
+Al anotarlo: _"«El viaje.»"_ / _"«Le vi la cara.»"_ Si la vuelve a mirar: _"Lo último es lo más cerca de hoy."_ / _"Y después del viaje…"_ / _"No. Hoy no."_
+
+### Otros pensamientos
+
+| Dónde | Pensamiento |
+|---|---|
+| Portarretratos | _"María a los diecisiete."_ / _"Y en la billetera, mamá a los sesenta y pico. Riéndose."_ |
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| El viaje en la pizarra: "Anoté el sexto recuerdo: el viaje a San Rafael con mamá, a los treinta y ocho. 12/08. Le vi la cara." | Al anotar el recuerdo |
+| Los boletos: "En el cajón de la cómoda estaban los boletos del micro a San Rafael, el del viaje con mamá. Los guardé." | Al abrir el cajón |
+| El portero, la sexta noche: "Sonó el portero y una voz dijo mi nombre. Por un segundo pensé que era mamá." | Al atender el portero |
+
+### Objetos
+
+| Objeto | Dónde | Qué es |
+|---|---|---|
+| Boletos del micro ✓ | Cuarto: cajón de la cómoda | Los dos boletos de ida a San Rafael (11/08, asientos 23 y 24) |
+
+### Final de la locación
+
+Termina cuando Jorge **se duerme**. En el prototipo completo es el **fin del prototipo**: la Pre-sesión 7 y la Sesión 7 (la muerte de su mamá) todavía no están.

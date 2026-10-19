@@ -207,6 +207,22 @@ _Provisorio. Lo nuevo es la lluvia._
 ### La quinta noche
 
 Los mismos sonidos que las otras noches. En el portero, en vez de estática, algo que suena como lluvia. _Provisorio._
+
+### Sesión 6: El viaje del 12/08
+
+| Sonido | Cuándo | Notas |
+|---|---|---|
+| Teléfono | En la oficina, hasta que lo atiende | El mismo de la casa de María (Sesión 3), cada dos o tres segundos |
+| **Monitor** | En la habitación del hospital | **Nuevo.** Un bip suave cada segundo |
+| Pajaritos | En San Rafael | Los de la Sesión 2 |
+| Aparece la llama | Cuando se le ve la cara a la mamá | El soplido de siempre |
+| Flash | La foto | El de la Sesión 3 |
+
+_Provisorio. Lo nuevo es el monitor._
+
+### La sexta noche
+
+Los mismos sonidos que las otras noches. En el portero, la voz dice el nombre de Jorge. _Provisorio._
 ## Interfaz
 
 | Sonido | Notas |

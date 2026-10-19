@@ -114,6 +114,8 @@ export const sfx = {
   flame() { noiseBurst(0.7, 900, 0.06); tone(523.3, 1.4, 'sine', 0.05, 0.1); tone(784, 1.6, 'sine', 0.03, 0.3) },
   // Sesión 3: el flash de la cámara (carga y disparo) y el teléfono de la casa de María
   flash() { tone(2600, 0.25, 'sine', 0.02); tone(3400, 0.2, 'sine', 0.015, 0.12); noiseBurst(0.08, 5000, 0.08, 'highpass') },
+  // Sesión 6: el monitor del hospital
+  bip() { tone(1046.5, 0.09, 'sine', 0.035) },
   // Sesión 4: la imagen se rompe como un vidrio
   vidrio() {
     noiseBurst(0.35, 6000, 0.22, 'highpass')

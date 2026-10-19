@@ -99,6 +99,22 @@ woman in her mid 30s, long dark brown hair, terracotta long coat with a cream sc
 dark trousers, face hidden by a soft warm light (no visible facial features)
 ```
 
+#### Mamá de grande, con cara
+
+![Mamá de grande](sprites/mamaMayor0.png) ![Mamá de grande caminando A](sprites/mamaMayor1.png) ![Mamá de grande caminando B](sprites/mamaMayor2.png) ![Mamá de grande sentada](sprites/mamaMayorSentada.png)
+
+| Campo | Valor |
+|---|---|
+| Claves | `mamaMayor0` (parada) · `mamaMayor1`, `mamaMayor2` (caminata) · `mamaMayorSentada` |
+| Tamaño en pantalla | 56 × 140 px (sentada: 72 × 140) |
+| Dónde | Sesión 6: El viaje del 12/08 (el hospital, acostada; San Rafael). Hasta el banco lleva la luz que le tapa la cara; ahí **se le ve por primera vez** |
+| Descripción | La mamá de Jorge a los sesenta y pico _(provisorio)_: pelo gris corto, saco lila con bufanda clara (el de la foto de la billetera), pantalón gris oscuro. **Tiene cara**: ojos vivos, arruguitas, una sonrisa cálida. Es el personaje más importante en verse por primera vez: tiene que transmitir ternura |
+
+```
+woman in her mid 60s, short grey hair, lilac cardigan with a cream scarf, dark grey trousers,
+warm kind face with smile lines, gentle smile, soft evening light
+```
+
 ### María
 
 ![María parada](sprites/maria0.png) ![María caminando A](sprites/maria1.png) ![María caminando B](sprites/maria2.png)
@@ -274,6 +290,7 @@ El prototipo usa solo poses sueltas. Con el arte final harían falta, como míni
 | ![](sprites/cuaderno.png) | `cuaderno` | 22 × 28 | Cuaderno de tapa azul (ícono) | La segunda noche: la caja |
 | ![](sprites/papelito.png) | `papelito` | 24 × 20 | Papelito doblado con el número del papá (ícono) | Sesión 4 (en el piso, después de la pelea) y La cuarta noche (en la billetera) |
 | ![](sprites/servilleta.png) | `servilleta` | 26 × 26 | Servilleta de bar con un dibujo (ícono) | Sesión 5 (el bar) y La quinta noche (la campera) |
+| ![](sprites/boleto.png) | `boleto` | 32 × 26 | Boleto de micro de larga distancia (ícono) | La sexta noche: cajón de la cómoda |
 | ![](sprites/fotoFiesta.png) | `fotoFiesta` | 34 × 26 | Foto de la fiesta: Jorge y María, fondo oscuro con flash (ícono) | Sesión 3 (se saca) y La tercera noche (la caja y el portarretratos) |
 
 _Las marcas de gaseosa son genéricas y provisorias. Los objetos del inventario se ven chicos en el juego, pero de cerca se muestran como documentos (ver abajo)._
@@ -307,7 +324,7 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 
 ![Cuaderno de matemática](sprites/documentos/cuaderno-1.png) ![Sortija](sprites/documentos/sortija-1.png)
 
-![Foto de la fiesta](sprites/documentos/fotoFiesta-1.png) ![Papelito](sprites/documentos/papelito-1.png) ![Servilleta](sprites/documentos/servilleta-1.png)
+![Foto de la fiesta](sprites/documentos/fotoFiesta-1.png) ![Papelito](sprites/documentos/papelito-1.png) ![Servilleta](sprites/documentos/servilleta-1.png) ![Boletos](sprites/documentos/boleto-1.png)
 
 | Documento | Descripción para el arte |
 |---|---|
@@ -320,6 +337,7 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 | Cuaderno | Hoja rayada de cuaderno escolar con las cuentas de Jorge y notas en violeta con la letra de María |
 | Papelito | Un papel arrancado de una libreta, con renglones, y con la letra de la mamá: "Papá" y un número de teléfono (inventado). Doblado en cuatro, gastado de estar veinte años en una billetera |
 | Servilleta | Servilleta de papel de bar, un poco mojada, con un dibujo en birome: la ventana de una cocina con macetas y plantas, y "así" con la letra de María |
+| Boletos del micro | Dos boletos de micro de larga distancia, Buenos Aires → San Rafael, salida 11/08, asientos 23 y 24 |
 | Foto de la fiesta | Foto de papel con flash, de una fiesta de egresados: Jorge (suéter verde) y María (vestido bordó) abrazados, guirnaldas de colores atrás. En el borde blanco, "J y M" con la letra de María. Es la foto del portarretratos |
 | Sortija | La sortija de cerca, sobre un fondo oscuro |
 
@@ -458,6 +476,24 @@ Uno por ambiente. Las capturas son del prototipo sin la interfaz (a veces se ve 
 ![Los recuerdos, en sepia](sprites/fondos/recuerdos-sepia.png)
 
 **Las cinemáticas** (1300 px cada una). La plaza, la fiesta y el sillón de la casa de María, en sepia, con bandas negras arriba y abajo. El último, el departamento vacío, en azul frío.
+
+### Sesión 6: El viaje del 12/08
+
+![La oficina](sprites/fondos/oficina.png)
+
+**La oficina** (1600 px). Paredes grises, tubos de luz, un escritorio con un monitor de los gordos y el teléfono, una ventana y compañeros sin cara.
+
+![El hospital](sprites/fondos/hospital.png)
+
+![La habitación 12](sprites/fondos/hospital-habitacion.png)
+
+**El hospital** (2000 px). El pasillo de guardia, blanco y verde agua, con sillas de espera; la puerta de la habitación 12; adentro, la cama, el monitor y una ventana.
+
+![San Rafael](sprites/fondos/san-rafael.png)
+
+![El río Atuel](sprites/fondos/san-rafael-rio.png)
+
+**San Rafael, Mendoza** (2900 px). Al atardecer: cielo naranja, la cordillera con nieve, viñedos, álamos dorados y verdes, el mirador del río Atuel con su baranda y un banco frente al río. Cálido y luminoso: es el último recuerdo lindo con la mamá.
 
 ## Cómo se regeneran las imágenes
 

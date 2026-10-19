@@ -10,7 +10,7 @@ interface Page {
   opts: { w?: number; h?: number; paper?: number }
 }
 
-export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin' | 'cuaderno' | 'fotoFiesta' | 'papelito' | 'servilleta'
+export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin' | 'cuaderno' | 'fotoFiesta' | 'papelito' | 'servilleta' | 'boleto'
 
 // Boletín de la Sesión 2. Firmado: la firma de la mamá, un garabato
 function boletinPage(firmado: boolean): Page {
@@ -290,6 +290,31 @@ export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: P
           }
           c.add(g)
           c.add(text(scene, 0, 96, 'así', 26, '#2a3a6a', { fontFamily: HAND_FONT }).setOrigin(0.5).setAngle(-4))
+        },
+      },
+    ],
+  },
+  boleto: {
+    nombre: 'Boletos del micro',
+    texto: 'Los dos boletos del micro a San Rafael, el del viaje con mamá. Los guardé en la cómoda.',
+    pages: [
+      {
+        // Dos boletos de micro de larga distancia, uno arriba del otro (provisorio)
+        opts: { w: 560, h: 420, paper: 0x2b2018 },
+        build: (scene, c) => {
+          for (const [dy, asiento] of [[-80, '23'], [70, '24']] as [number, string][]) {
+            const g = scene.add.graphics()
+            g.fillStyle(0xf2ecd8).fillRect(-230, dy - 60, 460, 120)
+            g.fillStyle(0x2f6fa0).fillRect(-230, dy - 60, 460, 26)
+            g.lineStyle(2, 0xc9bfa0).lineBetween(130, dy - 60, 130, dy + 60)
+            c.add(g)
+            c.add(text(scene, -215, dy - 56, 'MICRO · LARGA DISTANCIA', 15, '#f2ecd8', { fontStyle: 'bold' }))
+            c.add(text(scene, -215, dy - 22, 'Buenos Aires → San Rafael (Mza.)', 19, '#2b3140'))
+            c.add(text(scene, -215, dy + 10, 'Salida: 11/08 · 21:30 hs', 17, '#4a5060'))
+            c.add(text(scene, 145, dy - 22, 'Asiento', 14, '#4a5060'))
+            c.add(text(scene, 145, dy, asiento, 30, '#2b3140', { fontStyle: 'bold' }))
+          }
+          c.add(text(scene, 0, 175, 'Llegada: 12/08', 18, '#e8dcc0', { fontFamily: HAND_FONT }).setOrigin(0.5))
         },
       },
     ],

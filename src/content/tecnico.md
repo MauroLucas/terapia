@@ -20,7 +20,7 @@ Hay un **prototipo jugable** en este mismo sitio (página **🕹️ Prototipo** 
 
 | Campo | Valor |
 |---|---|
-| Qué cubre | Aviso de contenido → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción) → Sesión 1: La feria (sueño y despertar) → La primera noche → Pre-sesión 2 (la mañana y la consulta) → Sesión 2: El boletín (sueño y despertar) → La segunda noche → Pre-sesión 3 → Sesión 3: La fiesta (sueño y despertar) → La tercera noche → Pre-sesión 4 → Sesión 4: La pelea (sueño y despertar) → La cuarta noche → Pre-sesión 5 → Sesión 5: El reencuentro (sueño y despertar) → La quinta noche |
+| Qué cubre | Aviso de contenido → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción) → Sesión 1: La feria (sueño y despertar) → La primera noche → Pre-sesión 2 (la mañana y la consulta) → Sesión 2: El boletín (sueño y despertar) → La segunda noche → Pre-sesión 3 → Sesión 3: La fiesta (sueño y despertar) → La tercera noche → Pre-sesión 4 → Sesión 4: La pelea (sueño y despertar) → La cuarta noche → Pre-sesión 5 → Sesión 5: El reencuentro (sueño y despertar) → La quinta noche → Pre-sesión 6 → Sesión 6: El viaje del 12/08 (sueño y despertar) → La sexta noche |
 | Cómo abrirlo | `npm run dev` y entrar a **Prototipo** |
 | Online | Publicado en GitHub Pages: https://maurolucas.github.io/terapia/ (se actualiza solo con cada push a `main`) |
 | Controles | Solo teclado (ver "Mecánicas" → Controles) |
@@ -52,6 +52,9 @@ Para no tener que jugar todo desde el principio, **cada locación tiene su propi
 | **⛅ Pre-sesión 5** | Aviso de contenido → Casa de Jorge, la mañana → Consulta con Vela → Cuarto de inducción → "Fin de la locación" | `Apartment.ts` (modo mañana, `vuelta: 4`) y `Office.ts` (sesión 5), en `src/prototype/scenes/` |
 | **☔ Sesión 5: El reencuentro** | Aviso de contenido → La esquina, el bar y la calle con lluvia → Despertar en la camilla → "Fin de la locación" | `Dream5.ts` y `Office.ts` (despertar de la sesión 5), en `src/prototype/scenes/` |
 | **🌒 La quinta noche** | Aviso de contenido → Casa de Jorge, la quinta noche → "Fin de la locación" | `Apartment.ts` (modo noche, `vuelta: 5`), en `src/prototype/scenes/` |
+| **🌤️ Pre-sesión 6** | Aviso de contenido → Casa de Jorge, la mañana → Consulta con Vela → Cuarto de inducción → "Fin de la locación" | `Apartment.ts` (modo mañana, `vuelta: 5`) y `Office.ts` (sesión 6), en `src/prototype/scenes/` |
+| **🏔️ Sesión 6: El viaje del 12/08** | Aviso de contenido → La oficina, el hospital y San Rafael → Despertar en la camilla → "Fin de la locación" | `Dream6.ts` y `Office.ts` (despertar de la sesión 6), en `src/prototype/scenes/` |
+| **🌘 La sexta noche** | Aviso de contenido → Casa de Jorge, la sexta noche → "Fin de la locación" | `Apartment.ts` (modo noche, `vuelta: 6`), en `src/prototype/scenes/` |
 
 _El prototipo y este documento se mantienen sincronizados: cada cambio de diseño en uno se refleja en el otro._
 

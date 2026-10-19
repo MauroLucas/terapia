@@ -166,6 +166,30 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
           <span className="nav-icon">🌒</span>
           La quinta noche
         </NavLink>
+        <NavLink
+          to="/pre-sesion-6"
+          onClick={onNavigate}
+          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+        >
+          <span className="nav-icon">🌤️</span>
+          Pre-sesión 6
+        </NavLink>
+        <NavLink
+          to="/sesion-6"
+          onClick={onNavigate}
+          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+        >
+          <span className="nav-icon">🏔️</span>
+          Sesión 6: El viaje del 12/08
+        </NavLink>
+        <NavLink
+          to="/sexta-noche"
+          onClick={onNavigate}
+          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+        >
+          <span className="nav-icon">🌘</span>
+          La sexta noche
+        </NavLink>
       </nav>
     </aside>
   )

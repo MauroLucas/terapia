@@ -48,7 +48,7 @@ _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesi�
 
 ### Mamá de Jorge _(sin nombre)_
 
-![Mamá](sprites/mama.png) ![Mamá agachada](sprites/mamaAgachada.png)
+![Mamá](sprites/mama.png) ![Mamá agachada](sprites/mamaAgachada.png) ![Mamá, de grande](sprites/mamaMayor0.png) ![Mamá, de grande, sentada](sprites/mamaMayorSentada.png)
 
 | Campo | Valor |
 |---|---|
@@ -61,7 +61,8 @@ _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesi�
 | Distancia | De grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte**: Jorge la empujó, ella se cayó y se lastimó. Después ella lo buscaba y él la esquivaba: se veían poco (como mucho tres veces por año), todo cortante, y **nunca hablaron de esa noche**. Así hasta el viaje. A Jorge le dejó **mucha culpa** |
 | Su muerte _(spoiler)_ | Es lo que llevó a Jorge a la crisis del baño |
 | La pelea | Le quería dar un número para que llamara a su papá, que estaba mal: no quería que su hijo viviera con rencor ni con culpa. Jorge no quería y ella insistió. Le dijo que se estaba pareciendo a él (_"Vas a terminar como tu padre"_, provisorio) y ahí Jorge la empujó. Esa misma tarde, María había cortado con él. Se juega en la **Sesión 4: La pelea** |
-| Por definir | ¿A dónde viajaron? ¿En qué año? |
+| En la Sesión 6 | **El viaje a San Rafael, Mendoza.** Después del primer ACV, desde el hospital, le pide a Jorge que la acompañe. En un banco frente al río, él intenta pedirle perdón y no le salen las palabras: _"Ya sé, hijo."_ **Ahí se le ve la cara por primera vez.** Aspecto en el prototipo, de grande: pelo gris corto, saco lila (el de la foto), una sonrisa (provisorio) |
+| Por definir | ¿En qué año fue el viaje? ¿Cómo se llama? |
 
 ### Papá de Jorge _(sin nombre)_
 
@@ -199,6 +200,13 @@ _Personajes propuestos por el agente para la idea del usuario de "María como re
 | Rol | Les muestra el departamento a Jorge y María. Habla de más, como cualquier inmobiliario: _"Luminoso, ¿eh? Ideal para una pareja que arranca."_ Los deja solos y ahí María corta |
 | Cómo es | Una silueta sin cara, con una carpeta: no es parte de lo que Jorge recuerda (provisorio) |
 | Por definir | ¿Firman el alquiler ese día? |
+
+### El médico del hospital _(sin nombre)_
+
+| Campo | Valor |
+|---|---|
+| Primera aparición | Sesión 6: El viaje del 12/08, en el pasillo de guardia |
+| Cómo es | Una silueta sin cara, de guardapolvo. _"Tuvo suerte. Llegó a tiempo."_ / _"A partir de ahora tiene que estar tranquila. Nada de disgustos."_ (provisorio) |
 
 ### El mozo del bar _(sin nombre)_
 
