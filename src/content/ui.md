@@ -22,6 +22,7 @@
 
 - Aparecen como **2 o 3 globos chicos** al lado de Jorge, uno debajo del otro. Con las **preguntas a un personaje** pueden ser hasta 6 (ver "Mecánicas" → Hablar con personajes).
 - La opción seleccionada se resalta.
+- En el celular se eligen **tocándolas**. En una pantalla angosta se corren para que entren enteras.
 - Si Jorge tiene un objeto para darle al personaje, esa opción aparece **primera**.
 - Recordatorio: las opciones **no cambian la historia** (ver "Mecánicas" → Diálogos con opciones).
 
@@ -146,6 +147,10 @@ Arriba a la izquierda hay un cartel chico con el **objetivo actual** de la locac
 - Aparece después de los pensamientos de entrada de la locación y se esconde en las secuencias sin control (por ejemplo, el ascensor).
 - Por ahora está en el **Hall del edificio**, en el **consultorio** del doctor Vela, en la **Sesión 1**, en **La primera noche**, en la **Pre-sesión 2**, en la **Sesión 2**, en **La segunda noche**, en la **Pre-sesión 3**, en la **Sesión 3** y en **La tercera noche** (ver "Locaciones" → "Objetivo en pantalla" de cada una). En la Casa de Jorge y el pasillo de los consultorios: _por definir_.
 - Textos provisorios, propuestos por el agente.
+
+## Controles táctiles
+
+En pantallas táctiles aparecen botones en pantalla: cruceta a la izquierda, botón **E** grande a la derecha y tres chicos (**Diario**, **Cerrar**, **⛶**). En vertical van debajo del juego; en apaisado, encima y semitransparentes. Los textos de ayuda de abajo y del inicio cambian: _"Tocá la pantalla para empezar"_, _"tocá la pantalla para avanzar"_, _"Tocá para cerrar"_. Ver "Mecánicas" → Controles → En el celular.
 
 ## Menús
 

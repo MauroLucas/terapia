@@ -56,7 +56,7 @@ _El prototipo y este documento se mantienen sincronizados: cada cambio de diseñ
 | Plataforma | Notas |
 |---|---|
 | PC (Steam) | Plataforma principal _(por confirmar)_ |
-| Celular (Android / iOS) | Requiere controles táctiles. Ver "Mecánicas" → Controles |
+| Celular (Android / iOS) | El prototipo web ya se juega con controles táctiles, en vertical y en apaisado. Ver "Mecánicas" → Controles → En el celular. Código: `src/prototype/touch.ts` |
 | Consolas | Switch, PlayStation, Xbox. Requieren kits de desarrollo y aprobación de cada fabricante |
 | Web | Versión para navegador (por ejemplo, demo en itch.io) |
 

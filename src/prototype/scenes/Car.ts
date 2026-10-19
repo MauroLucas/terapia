@@ -64,6 +64,8 @@ export class Car extends Phaser.Scene {
       radio?.stop()
     })
 
+    // En una pantalla angosta (el celular en vertical), la cámara se centra en el auto
+    if (this.scale.width < 1280) this.cameras.main.centerOn(CAR_X, 360)
     this.cameras.main.fadeIn(1500, 0, 0, 0)
     sfx.door()
 

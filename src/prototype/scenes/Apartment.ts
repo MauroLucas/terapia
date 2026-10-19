@@ -5,6 +5,7 @@ import { addPista, state } from '../state'
 import { choose, eyelids, objective, onKey, overlay, say, text, toast, type Line, type Point } from '../ui'
 import { showObjeto, showPage } from '../documents'
 import { openDiary } from './diary'
+import { controlsHelp } from '../touch'
 
 // Casa de Jorge. El departamento se divide en ambientes unidos por puertas:
 //   Cuarto  →  Pasillo: [puerta cuarto] … [puerta cocina] [puerta baño] … [portero | salida]
@@ -856,7 +857,7 @@ export class Apartment extends Phaser.Scene {
       : [this.think('Ya está. Volví a casa.'), this.think('Mi mamá. La feria. La calesita.'), this.think('Tengo que anotarlo antes de que se me olvide.')])
     this.goal?.set('Anotar lo que recordé en la pizarra')
     this.busy = false
-    const help = text(this, 24, this.scale.height - 34, '← → / A D caminar   ·   E examinar / usar puertas   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa', 16, '#aab2c4')
+    const help = text(this, 24, this.scale.height - 34, controlsHelp('← → / A D caminar   ·   E examinar / usar puertas   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa'), 16, '#aab2c4')
       .setScrollFactor(0)
       .setDepth(950)
     this.time.delayedCall(12000, () => this.tweens.add({ targets: help, alpha: 0, duration: 1500 }))
@@ -1233,7 +1234,7 @@ export class Apartment extends Phaser.Scene {
 
   private async introManana() {
     // Una semana después
-    const card = text(this, 640, 360, 'Una semana después', 30, '#e8e8e8').setOrigin(0.5).setScrollFactor(0).setDepth(1300).setAlpha(0)
+    const card = text(this, this.scale.width / 2, 360, 'Una semana después', 30, '#e8e8e8').setOrigin(0.5).setScrollFactor(0).setDepth(1300).setAlpha(0)
     const bg = this.add.rectangle(0, 0, 1280, 720, 0x000000).setOrigin(0).setScrollFactor(0).setDepth(1290)
     await new Promise<void>((r) => this.tweens.add({ targets: card, alpha: 1, duration: 900, onComplete: () => r() }))
     await new Promise((r) => this.time.delayedCall(1600, r))
@@ -1347,7 +1348,7 @@ export class Apartment extends Phaser.Scene {
 
     this.startRing()
 
-    const help = text(this, 24, this.scale.height - 34, '← → / A D caminar   ·   E examinar / usar puertas   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa', 16, '#aab2c4')
+    const help = text(this, 24, this.scale.height - 34, controlsHelp('← → / A D caminar   ·   E examinar / usar puertas   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa'), 16, '#aab2c4')
       .setScrollFactor(0)
       .setDepth(950)
     this.time.delayedCall(12000, () => this.tweens.add({ targets: help, alpha: 0, duration: 1500 }))

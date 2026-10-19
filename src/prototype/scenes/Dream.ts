@@ -4,6 +4,7 @@ import { sfx, startFeria } from '../audio'
 import { addPista, state } from '../state'
 import { eyelids, objective, onKey, say, text, toast, type Line, type Point } from '../ui'
 import { openDiary } from './diary'
+import { controlsHelp } from '../touch'
 
 // Sesión 1: la feria. Primer sueño lúcido: un recuerdo de cuando Jorge, de chico, se perdió en una feria.
 //   [entrada] … [algodón de azúcar] … [calesita] … [vuelta al mundo] →(vuelve a la entrada)
@@ -346,7 +347,7 @@ export class Dream extends Phaser.Scene {
     this.phase = 'explorar'
     this.lastCall = this.time.now - 9000
     this.updateGoal()
-    const help = text(this, 24, this.scale.height - 34, '← → / A D caminar   ·   E examinar   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa', 16, '#aab2c4')
+    const help = text(this, 24, this.scale.height - 34, controlsHelp('← → / A D caminar   ·   E examinar   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa'), 16, '#aab2c4')
       .setScrollFactor(0)
       .setDepth(950)
     this.time.delayedCall(12000, () => this.tweens.add({ targets: help, alpha: 0, duration: 1500 }))

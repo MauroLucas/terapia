@@ -5,6 +5,7 @@ import { showPage } from '../documents'
 import { addPista, state } from '../state'
 import { choose, eyelids, objective, say, text, toast, type Line, type Point } from '../ui'
 import { openDiary } from './diary'
+import { controlsHelp } from '../touch'
 
 // Sesión 2: el boletín. Jorge tiene unos 15 años, en la casa de su mamá y en el barrio.
 //   Casa:   [cuarto de Jorge] [pasillo] [comedor: silla y campera del papá] [cocina: mamá | puerta a la calle]
@@ -412,7 +413,7 @@ export class Dream2 extends Phaser.Scene {
     ])
     this.phase = 'tarde'
     this.updateGoal()
-    const help = text(this, 24, this.scale.height - 34, '← → / A D caminar   ·   E examinar / hablar   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa', 16, '#aab2c4')
+    const help = text(this, 24, this.scale.height - 34, controlsHelp('← → / A D caminar   ·   E examinar / hablar   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa'), 16, '#aab2c4')
       .setScrollFactor(0)
       .setDepth(950)
     this.time.delayedCall(12000, () => this.tweens.add({ targets: help, alpha: 0, duration: 1500 }))

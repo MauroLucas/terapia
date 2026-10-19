@@ -4,6 +4,7 @@ import { sfx, startElevator, startRoomTone } from '../audio'
 import { addPista, state } from '../state'
 import { choose, objective, say, text, toast, type Line, type Point } from '../ui'
 import { openDiary } from './diary'
+import { controlsHelp } from '../touch'
 
 // Hall del edificio. Jorge llega sin el carnet y tiene que buscar otra forma de entrar:
 //   Hall: [entrada] [baño] [maestranza] [máquina de bebidas] [espera] … [recepción] … [seguridad | molinetes]
@@ -946,7 +947,7 @@ export class Neural extends Phaser.Scene {
     await say(this, [this.think('Así que esto es Neural.'), this.think('La recepción debe estar al fondo.')])
     this.goalOn = true
     this.busy = false
-    const help = text(this, 24, this.scale.height - 34, '← → / A D caminar   ·   E hablar / examinar / usar puertas   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa', 16, '#aab2c4')
+    const help = text(this, 24, this.scale.height - 34, controlsHelp('← → / A D caminar   ·   E hablar / examinar / usar puertas   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa'), 16, '#aab2c4')
       .setScrollFactor(0)
       .setDepth(950)
     this.time.delayedCall(12000, () => this.tweens.add({ targets: help, alpha: 0, duration: 1500 }))

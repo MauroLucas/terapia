@@ -1,6 +1,7 @@
 import * as Phaser from 'phaser'
 import { sfx } from './audio'
 import { FONT, HAND_FONT } from './art'
+import { isTouch, waitTap } from './touch'
 
 // Globos de cómic, lectura de documentos y opciones de diálogo.
 
@@ -25,6 +26,19 @@ function onKey(scene: Phaser.Scene, handler: (code: string) => void) {
   const h = (e: KeyboardEvent) => handler(e.code)
   kb.on('keydown', h)
   return () => kb.off('keydown', h)
+}
+
+// Mientras un globo o un documento espera, tocar la pantalla avanza. Se suelta al avanzar o si la escena se cierra
+function holdTap(scene: Phaser.Scene) {
+  let held = true
+  waitTap(true)
+  const release = () => {
+    if (!held) return
+    held = false
+    waitTap(false)
+  }
+  scene.events.once('shutdown', release)
+  return release
 }
 
 function jagged(g: Phaser.GameObjects.Graphics, w: number, h: number) {
@@ -143,10 +157,12 @@ export function bubble(scene: Phaser.Scene, line: Line): Promise<void> {
       more.setVisible(true)
       scene.tweens.add({ targets: more, y: more.y + 3, yoyo: true, repeat: -1, duration: 400 })
     }
+    const release = holdTap(scene)
     const off = onKey(scene, (code) => {
       if (!ADVANCE.includes(code)) return
       if (!done) return finish()
       off()
+      release()
       box.destroy()
       resolve()
     })
@@ -176,15 +192,19 @@ export function overlay(
       c.add(panel)
     }
     build(c, w, h)
-    const hint = text(scene, width / 2, height - 22, 'E / Espacio para cerrar', 15, '#9aa3b5').setOrigin(0.5)
+    // En una pantalla angosta (el celular en vertical), el documento se achica para que entre entero
+    c.setScale(Math.min(1, (width - 24) / (w + 8), (height - 56) / (h + 10)))
+    const hint = text(scene, width / 2, height - 22, isTouch() ? 'Tocá para cerrar' : 'E / Espacio para cerrar', 15, '#9aa3b5').setOrigin(0.5)
     const root = scene.add.container(0, 0, [dim, c, hint]).setScrollFactor(0).setDepth(UI_DEPTH + 10)
     root.setAlpha(0)
     scene.tweens.add({ targets: root, alpha: 1, duration: 180 })
     sfx.paper()
     const keys = opts.closeKeys ?? [...ADVANCE, 'KeyQ', 'Escape']
+    const release = holdTap(scene)
     const off = onKey(scene, (code) => {
       if (!keys.includes(code)) return
       off()
+      release()
       scene.tweens.add({ targets: root, alpha: 0, duration: 150, onComplete: () => root.destroy() })
       resolve()
     })
@@ -202,7 +222,11 @@ export function choose(scene: Phaser.Scene, options: string[], at: Point): Promi
     })
     const gap = 10
     const total = items.reduce((s, it) => s + it.h + gap, -gap)
-    const c = scene.add.container(at.x, at.y - total).setScrollFactor(0).setDepth(UI_DEPTH)
+    // Las posiciones vienen pensadas para 1280 de ancho: en una pantalla más angosta se corren para que entren
+    const { width } = scene.scale
+    const maxW = Math.max(...items.map((it) => it.w))
+    const x = Phaser.Math.Clamp(Math.round((at.x * width) / 1280), 16, Math.max(16, width - maxW - 16))
+    const c = scene.add.container(x, at.y - total).setScrollFactor(0).setDepth(UI_DEPTH)
     let y = 0
     for (const it of items) {
       it.g.y = y
@@ -222,6 +246,19 @@ export function choose(scene: Phaser.Scene, options: string[], at: Point): Promi
       })
     }
     draw()
+    // Con el dedo: tocar una opción la elige
+    items.forEach((it, i) => {
+      // El toque se calcula con el scrollFactor del objeto, no del contenedor: tiene que ser 0, como el resto de la interfaz
+      it.g.setScrollFactor(0).setInteractive(new Phaser.Geom.Rectangle(0, 0, it.w, it.h), Phaser.Geom.Rectangle.Contains)
+      it.g.on('pointerdown', () => {
+        if (!c.active) return
+        sel = i
+        off()
+        sfx.click()
+        c.destroy()
+        resolve(sel)
+      })
+    })
     const off = onKey(scene, (code) => {
       if (code === 'ArrowUp' || code === 'KeyW') sel = (sel + options.length - 1) % options.length
       else if (code === 'ArrowDown' || code === 'KeyS') sel = (sel + 1) % options.length

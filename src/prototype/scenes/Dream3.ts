@@ -5,6 +5,7 @@ import { showPage } from '../documents'
 import { addPista, state } from '../state'
 import { choose, eyelids, objective, say, text, toast, type Line, type Point } from '../ui'
 import { openDiary } from './diary'
+import { controlsHelp } from '../touch'
 
 // Sesión 3: la fiesta. Jorge tiene unos 17 años. Es una sesión de respiro: no está el papá y no hace frío.
 //   Plaza (de tarde):   [hamacas] [árbol] [banco: María] [kiosco]
@@ -399,7 +400,7 @@ export class Dream3 extends Phaser.Scene {
     await say(this, [this.vela('Hola, Jorge.'), this.vela('Hoy no hay nada que buscar. Mirá alrededor.')])
     this.phase = 'plaza'
     this.updateGoal()
-    const help = text(this, 24, this.scale.height - 34, '← → / A D caminar   ·   E examinar / hablar   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa', 16, '#aab2c4')
+    const help = text(this, 24, this.scale.height - 34, controlsHelp('← → / A D caminar   ·   E examinar / hablar   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa'), 16, '#aab2c4')
       .setScrollFactor(0)
       .setDepth(950)
     this.time.delayedCall(12000, () => this.tweens.add({ targets: help, alpha: 0, duration: 1500 }))
@@ -467,7 +468,7 @@ export class Dream3 extends Phaser.Scene {
     this.facing = 1
     this.player.setFlipX(false)
     this.music?.setVolume(1)
-    const hint = text(this, 640, this.scale.height - 90, '← →  bailar', 24, '#f1efe8', { stroke: '#000', strokeThickness: 4 }).setOrigin(0.5).setScrollFactor(0).setDepth(960)
+    const hint = text(this, this.scale.width / 2, this.scale.height - 90, '← →  bailar', 24, '#f1efe8', { stroke: '#000', strokeThickness: 4 }).setOrigin(0.5).setScrollFactor(0).setDepth(960)
     this.tweens.add({ targets: hint, alpha: 0.5, duration: 600, yoyo: true, repeat: -1 })
     await new Promise<void>((resolve) => {
       let n = 0

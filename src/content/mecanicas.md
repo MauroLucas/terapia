@@ -14,25 +14,40 @@ El juego es una **aventura narrativa 2D de vista lateral**. Minuto a minuto, el 
 
 | Acción | Teclado | Gamepad | Celular |
 |---|---|---|---|
-| Caminar | A / D o ← / → | Stick izq. / cruceta | Tocar el lado de la pantalla o joystick virtual |
-| Interactuar / examinar / hablar con un personaje | E | A (Xbox) / ✕ (PS) | Tocar el objeto |
-| Usar una puerta (pasar de ambiente) | E | A (Xbox) / ✕ (PS) | Tocar la puerta |
-| Bajar / subir escaleras | → / ↓ bajar · ← / ↑ volver | Stick | Joystick virtual |
+| Caminar | A / D o ← / → | Stick izq. / cruceta | Cruceta en pantalla (◀ ▶) |
+| Interactuar / examinar / hablar con un personaje | E | A (Xbox) / ✕ (PS) | Botón **E** en pantalla |
+| Usar una puerta (pasar de ambiente) | E | A (Xbox) / ✕ (PS) | Botón **E** |
+| Bajar / subir escaleras | → / ↓ bajar · ← / ↑ volver | Stick | Cruceta en pantalla |
 | Avanzar diálogo | Espacio / E / Enter | A / ✕ | Tocar la pantalla |
 | Elegir opción de diálogo | ↑ / ↓ + Enter | Cruceta + A / ✕ | Tocar la opción |
-| Sueño: mirarse las manos, agarrar la sortija | E | A / ✕ | Tocar la pantalla |
+| Sueño: mirarse las manos, agarrar la sortija | E | A / ✕ | Botón **E** |
+| Sueño: bailar (Sesión 3) | ← / → alternando | Cruceta | ◀ ▶ alternando |
 | Sueño: quedarse quieto | No tocar nada | No tocar nada | No tocar nada |
-| Diario (pistas y objetos) | TAB | Select / Touchpad | Botón en pantalla |
-| Diario: cambiar pestaña | ← / → | Cruceta | Tocar la pestaña |
-| Diario: elegir objeto / recorrer pistas | ↑ / ↓ | Cruceta | Deslizar |
-| Diario: ver un objeto de cerca | E / Enter | A / ✕ | Tocar el objeto |
-| Cerrar un panel (candado, diario, documento) | Q (el diario también con TAB) | B (Xbox) / ○ (PS) | Botón en pantalla |
-| Pantalla completa | F | — | — |
+| Diario (pistas y objetos) | TAB | Select / Touchpad | Botón **Diario** |
+| Diario: cambiar pestaña | ← / → | Cruceta | Cruceta en pantalla |
+| Diario: elegir objeto / recorrer pistas | ↑ / ↓ | Cruceta | Cruceta en pantalla |
+| Diario: ver un objeto de cerca | E / Enter | A / ✕ | Botón **E** |
+| Cerrar un panel (candado, diario, documento) | Q (el diario también con TAB) | B (Xbox) / ○ (PS) | Botón **Cerrar** (los documentos, también tocando la pantalla) |
+| Pantalla completa | F | — | Botón ⛶ |
 | Pausa | Esc | Start | Botón en pantalla |
 
 **Esc no se usa para cerrar paneles.** En un navegador, Esc saca de la pantalla completa antes de que el juego lo reciba; por eso el candado, el diario y los documentos se cierran con **Q**. En el prototipo, Esc también los cierra, pero solo sirve fuera de pantalla completa (o en Chrome y Edge, donde el juego puede pedirle esa tecla al navegador y para salir de pantalla completa hay que mantenerla apretada). _Por definir: qué tecla abre la pausa en la versión web._
 
 _Las puertas se usan con el mismo botón que examinar (E): un botón menos, más fácil de adaptar a celular. Así funciona en el prototipo._
+
+### En el celular
+
+El prototipo **se puede jugar en el celular**, en vertical o en apaisado. En una pantalla táctil aparecen botones: una **cruceta** (◀ ▶ ▲ ▼) a la izquierda y, a la derecha, el botón **E** (examinar, hablar, usar puertas, avanzar) y tres chicos: **Diario**, **Cerrar** y **⛶** (pantalla completa). Funcionan igual que las teclas.
+
+| Cómo se tiene | Cómo se ve |
+|---|---|
+| **Vertical** | El juego va arriba, **más angosto** (640 × 720 en vez de 1280 × 720: se ve menos a los costados, pero todo se lee más grande), y los botones abajo, en su propio espacio, como en una consola portátil. Los documentos y el diario se achican para entrar |
+| **Apaisado** | El juego ocupa todo el ancho y los botones van encima, semitransparentes, en las esquinas de abajo. Conviene usar ⛶ |
+
+- **Tocar la pantalla** avanza los diálogos y cierra los documentos. Las opciones de diálogo se eligen **tocándolas**.
+- El ancho del juego se elige **al empezar**, según cómo esté el teléfono. Si se gira en el medio, el juego se acomoda con bandas negras.
+- En el iPhone, Safari no deja usar la pantalla completa de verdad: el botón ⛶ hace que el juego ocupe toda la página.
+- En la compu no cambia nada: los botones aparecen solo en pantallas táctiles.
 
 ## Sistemas
 

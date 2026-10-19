@@ -11,25 +11,39 @@ import { Office } from './scenes/Office'
 import { Stairs } from './scenes/Stairs'
 import { Warning } from './scenes/Warning'
 import { resetState } from './state'
+import { gameWidth, mountFrame, mountTouch, toggleFull } from './touch'
 
+// El marco de la página (`parent`) tiene adentro la pantalla del juego y, en el celular, los controles táctiles
 function baseConfig(parent: HTMLElement): Phaser.Types.Core.GameConfig {
+  const screen = mountFrame(parent)
   return {
     type: Phaser.AUTO,
-    parent,
-    width: 1280,
+    parent: screen,
+    width: gameWidth(),
     height: 720,
     backgroundColor: '#000000',
     scale: { mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH, fullscreenTarget: parent },
   }
 }
 
-// F: pantalla completa (el navegador lo permite porque viene de una tecla)
+// F: pantalla completa (el navegador lo permite porque viene de una tecla). En el celular, también los controles táctiles
 function fullscreenKey(game: Phaser.Game) {
+  const screen = game.config.parent as HTMLElement
+  const frame = screen.parentElement as HTMLElement
+  const real = game.scale.toggleFullscreen.bind(game.scale)
+  const toggle = () => toggleFull(frame, () => real(), () => game.scale.refresh())
+  // Los botones de pantalla completa de las páginas usan esto: así también funciona donde el navegador no la deja (iPhone)
+  game.scale.toggleFullscreen = toggle
+  const offTouch = mountTouch(frame, screen, toggle, () => game.scale.refresh())
   const onKey = (e: KeyboardEvent) => {
-    if (e.code === 'KeyF' && !e.repeat) game.scale.toggleFullscreen()
+    if (e.code === 'KeyF' && !e.repeat) toggle()
   }
   window.addEventListener('keydown', onKey)
-  game.events.once(Phaser.Core.Events.DESTROY, () => window.removeEventListener('keydown', onKey))
+  game.events.once(Phaser.Core.Events.DESTROY, () => {
+    window.removeEventListener('keydown', onKey)
+    offTouch()
+    frame.classList.remove('pseudo-full', 'has-touch', 'portrait', 'landscape')
+  })
   // En pantalla completa, Esc es del navegador: sale de la pantalla completa y el juego no lo recibe.
   // Donde el navegador lo permite (Chrome, Edge), se lo pedimos: Esc llega al juego y para salir hay que mantenerlo apretado.
   // En los demás no se puede, por eso todos los paneles se cierran también con Q.

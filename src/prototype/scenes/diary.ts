@@ -27,6 +27,8 @@ export function openDiary(scene: Phaser.Scene): Promise<void> {
     const page = scene.add.container(width / 2, height / 2)
     const hint = text(scene, width / 2, height - 22, '', 15, '#9aa3b5').setOrigin(0.5)
     const root = scene.add.container(0, 0, [dim, page, hint]).setScrollFactor(0).setDepth(1010)
+    // En una pantalla angosta (el celular en vertical), el diario se achica para que entre entero
+    page.setScale(Math.min(1, (width - 24) / (W + 8), (height - 56) / (H + 10)))
 
     const draw = () => {
       page.removeAll(true)
