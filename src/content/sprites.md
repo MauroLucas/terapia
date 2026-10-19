@@ -318,7 +318,7 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 
 ![Notas de la heladera](sprites/documentos/notas-1.png) ![Nota del cajón](sprites/documentos/notaCajon-1.png)
 
-![Banner de Neural](sprites/documentos/banner-1.png) ![Informe de Neural](sprites/documentos/informe-1.png)
+![Banner de Neural](sprites/documentos/banner-1.png) ![Informe de Neural](sprites/documentos/informe-1.png) ![Informe de Neural, la séptima noche](sprites/documentos/informeClaro-1.png)
 
 ![Boletín sin firmar](sprites/documentos/boletin-1.png) ![Boletín firmado](sprites/documentos/boletin-2.png)
 
@@ -333,6 +333,7 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 | Nota del cajón | Nota amarilla: "Te extraño, mamá" |
 | Banner de Neural | Folleto institucional de Neural, azul y blanco |
 | Informe de Neural | Hoja clínica con una línea tachada en negro |
+| Informe de Neural, la séptima noche | La misma hoja, pero la tachadura está gastada y se lee lo de abajo: "la muerte de su madre." |
 | Boletín | Boletín de secundaria, papel crema; un 3 en rojo en Matemática; la firma de la mamá en la segunda versión |
 | Cuaderno | Hoja rayada de cuaderno escolar con las cuentas de Jorge y notas en violeta con la letra de María |
 | Papelito | Un papel arrancado de una libreta, con renglones, y con la letra de la mamá: "Papá" y un número de teléfono (inventado). Doblado en cuatro, gastado de estar veinte años en una billetera |
@@ -494,6 +495,20 @@ Uno por ambiente. Las capturas son del prototipo sin la interfaz (a veces se ve 
 ![El río Atuel](sprites/fondos/san-rafael-rio.png)
 
 **San Rafael, Mendoza** (2900 px). Al atardecer: cielo naranja, la cordillera con nieve, viñedos, álamos dorados y verdes, el mirador del río Atuel con su baranda y un banco frente al río. Cálido y luminoso: es el último recuerdo lindo con la mamá.
+
+### Sesión 7: La muerte de su mamá
+
+![La casa de la mamá, el domingo](sprites/fondos/casa-mama-domingo.png)
+
+![La cocina](sprites/fondos/casa-mama-domingo-cocina.png)
+
+**La casa de la mamá, un domingo** (2400 px). La misma casa de la Sesión 2 (empapelado, baldosas), pero al mediodía y con sol por la ventana. El comedor con la mesa de siempre y la tele; la cocina con la heladera (la foto de San Rafael con un imán), una silla, la mesada con la olla y el teléfono de pared.
+
+![Terapia intensiva](sprites/fondos/terapia-intensiva.png)
+
+![La habitación 4](sprites/fondos/terapia-intensiva-habitacion.png)
+
+**El hospital, de noche** (2000 px). El hospital de la Sesión 6, pero oscurecido: el pasillo de terapia intensiva con un ventanal negro y sillas, y la habitación 4 con la cama, una silla al lado y el monitor. Al final, el pasillo con la luz del amanecer entrando por el ventanal.
 
 ## Cómo se regeneran las imágenes
 

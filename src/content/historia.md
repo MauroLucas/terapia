@@ -85,7 +85,8 @@ En orden:
 
 1. La mamá de Jorge tiene un **primer ACV**. El médico le recomienda **estar más tranquila**.
 2. Por esa recomendación, ella y Jorge hacen **un viaje juntos a San Rafael, Mendoza** _(decidido por el usuario)_. En ese viaje **se reencuentran como madre e hijo** y pueden volver a tener una relación más cercana. Jorge intenta pedirle perdón por la pelea, pero **no le salen las palabras**; ella le dice que ya sabe.
-3. **Poco tiempo después**, ella tiene un **segundo ACV**, que es terminal, y muere.
+3. **Quince días después del viaje** _(decidido por el usuario)_, ella tiene un **segundo ACV**, que es terminal, y muere. **Jorge está con ella cuando muere** _(decidido por el usuario)_. En la Sesión 7 le da en su casa, un domingo, mientras Jorge pone la mesa, y muere esa noche en el hospital _(detalles provisorios, propuestos por el agente)_.
+4. **Sus últimas palabras** quedan en misterio: Jorge las escuchó, pero su mente las tapa (en el sueño aparecen tachadas, como la causa del informe). Se revelan **en el final, después de que María va a buscarlo** _(decidido por el usuario)_. La idea del usuario, todavía tentativa, es que le haya pedido **que no viva con rencor**: lo mismo que le pedía la noche de la pelea, y lo que Jorge elige hacer en el epílogo, cuando llama a su papá.
 
 - La **foto de la billetera** (Casa de Jorge) es de ese viaje, y **"12/08"**, escrito atrás, es **la fecha del viaje**.
 - Por eso Jorge la lleva encima, y por eso dejó la nota "Te extraño, mamá" en el cajón que se abre con esa fecha.
@@ -113,7 +114,7 @@ Nada de eso fue culpa de ella: fue la que estaba ahí cuando todo explotó. Y ju
 
 Por eso la culpa es doble: **lastimó a su mamá** y **se convirtió en lo que más odiaba**. La frase de la mamá puede volver en los sueños.
 
-_Por definir: qué le pasaba al papá y qué fue de él, cómo se hace sentir la culpa en el resto del juego, a dónde viajaron y en qué año._
+_Por definir: qué le pasaba al papá y qué fue de él, cómo se hace sentir la culpa en el resto del juego, en qué año fue el viaje, y la frase exacta de las últimas palabras de la mamá._
 
 **Un recuerdo de la infancia (Sesión 1):** una noche, de chico, Jorge fue a una feria con su mamá y se perdió. Al entrar, ella le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Él se quedó quieto, y ella lo encontró. _Detalles provisorios, propuestos por el agente._
 
@@ -152,7 +153,7 @@ Son **ocho sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 | 4 | Juventud (~20) | **La pelea** | Empieza con Jorge y María **visitando el departamento con un inmobiliario**. El mismo día: María se va a Córdoba y cortan; a la noche, la mamá le da el número del papá, insiste y él la empuja: la imagen se rompe. Después se ven poco y nunca hablan de eso. Le deja mucha culpa | En el prototipo (con La cuarta noche) |
 | 5 | Los 30 | **El reencuentro** | Se cruzan de casualidad en una esquina y siguen en un bar: ella está casada; él, soltero. Llueve; en la parada se acuerdan de cuando eran chicos y se besan casi por inercia. Jorge se va: ella lo dejó una vez y no le cree | En el prototipo (con La quinta noche) |
 | 6 | Adultez (~38) | **El viaje del 12/08** | Lo llaman del hospital a la oficina: el primer ACV de su mamá. Viajan juntos a **San Rafael, Mendoza**. Frente al río, Jorge intenta pedirle perdón y no le salen las palabras; ella le dice "ya sé, hijo" y **por primera vez se le ve la cara**. Ahí se sacan la foto de la billetera | En el prototipo (con La sexta noche) |
-| 7 | La pérdida | **La muerte de su mamá** | El segundo ACV. Es lo que está tachado en el informe | Idea |
+| 7 | La pérdida (~38) | **La muerte de su mamá** | Quince días después del viaje, el segundo ACV. Jorge está con ella cuando muere y le agarra la mano. Sus últimas palabras quedan tachadas: se revelan en el final. Es lo que estaba tachado en el informe | En el prototipo (con La séptima noche) |
 | 8 | Hoy | **El baño** | La puerta del baño se abre. El portero: es ella. Jorge elige abrir | Idea |
 | — | Epílogo | **El papá** | Jorge lo llama y va a verlo | Idea |
 

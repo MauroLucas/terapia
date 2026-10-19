@@ -66,6 +66,11 @@ FONDOS = [
     ('hospital-habitacion', 'Dream6', {}, "REVEAL; s.setArea('hospital'); s.player.setTexture('jorge0').setOrigin(0.5).setPosition(3500, 530); s.flame.setX(3570); s.mama.setVisible(true); s.mamaGlow.setVisible(true)", 2920),
     ('san-rafael', 'Dream6', {}, "REVEAL; s.setArea('sanrafael'); s.player.setTexture('jorge0').setOrigin(0.5).setPosition(5500, 530); s.flame.setX(5570); s.mama.setVisible(true).setAngle(0).setPosition(5580, 530)", 4900),
     ('san-rafael-rio', 'Dream6', {}, "REVEAL; s.setArea('sanrafael'); s.player.setTexture('jorge0').setOrigin(0.5).setPosition(7100, 530); s.flame.setX(7170); s.mama.setVisible(true).setAngle(0).setPosition(7200, 530)", 6420),
+    # La Sesión 7 arranca con un cartel y los párpados: se frena la intro para que no tapen la captura
+    ('casa-mama-domingo', 'Dream7', {}, 'FREEZE; REVEAL', 300),
+    ('casa-mama-domingo-cocina', 'Dream7', {}, "FREEZE; REVEAL; s.player.setX(1900); s.flame.setX(1970)", 1100),
+    ('terapia-intensiva', 'Dream7', {}, "FREEZE; REVEAL; s.setArea('hospital'); s.player.setPosition(3500, 530); s.flame.setX(3570)", 3000),
+    ('terapia-intensiva-habitacion', 'Dream7', {}, "FREEZE; REVEAL; s.setArea('hospital'); s.player.setPosition(4300, 530); s.flame.setX(4370); s.mama.setTexture('mamaMayor0').setAngle(-90).setPosition(4620, 470).setFlipX(false)", 3720),
 ]
 
 # Personajes dibujados en la escena: (archivo, fondo del que se recorta, recorte x, y, ancho, alto en pantalla)
@@ -131,7 +136,7 @@ async def main():
                 [escena, data],
             )
             await pg.wait_for_timeout(6000)
-            js = prep.replace('REVEAL', REVEAL_JS)
+            js = prep.replace('FREEZE', 's.time.removeAllEvents(); s.tweens.killAll()').replace('REVEAL', REVEAL_JS)
             await pg.evaluate(
                 f"""() => {{
                   const s = window.__apt.game.scene.getScene('{escena}');

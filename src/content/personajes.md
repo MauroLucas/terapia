@@ -55,13 +55,14 @@ _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesi�
 | Primera aparición | Casa de Jorge: en una foto con Jorge, dentro de su billetera |
 | Relación con Jorge | Es su madre |
 | Detalle clave | Jorge no la reconoce: al ver la foto pregunta "¿Quién es esta señora?". Pero en el cajón con candado dejó una nota con su letra: "Te extraño, mamá" |
-| Qué pasó con ella _(spoiler)_ | Tuvo un **primer ACV** y el médico le recomendó estar más tranquila. Por eso hizo un **viaje con Jorge**, en el que se reencontraron como madre e hijo y volvieron a tener una relación cercana. Poco después murió de un **segundo ACV**, terminal. La foto de la billetera es de ese viaje, y "12/08" es su fecha. Ver "Historia y mundo" → Lore |
+| Qué pasó con ella _(spoiler)_ | Tuvo un **primer ACV** y el médico le recomendó estar más tranquila. Por eso hizo un **viaje con Jorge**, en el que se reencontraron como madre e hijo y volvieron a tener una relación cercana. **Quince días después** murió de un **segundo ACV**, terminal, con Jorge al lado. La foto de la billetera es de ese viaje, y "12/08" es su fecha. Ver "Historia y mundo" → Lore |
 | En la Sesión 2 | En la casa del barrio: se ofrece a firmar el boletín, le pide que se lo dé al papá "cuando esté tranquilo", y a la noche se lo pasa firmado por debajo de la puerta. Sigue sin cara |
 | En el sueño | En la Sesión 1 (la feria) aparece en el recuerdo de cuando Jorge se perdió de chico: le compra algodón de azúcar, lo mira desde el banco de la calesita y, al final, lo encuentra. **No tiene cara**: una luz se la tapa. Le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Aspecto en el prototipo: pelo largo castaño, tapado terracota (provisorio) |
 | Distancia | De grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte**: Jorge la empujó, ella se cayó y se lastimó. Después ella lo buscaba y él la esquivaba: se veían poco (como mucho tres veces por año), todo cortante, y **nunca hablaron de esa noche**. Así hasta el viaje. A Jorge le dejó **mucha culpa** |
 | Su muerte _(spoiler)_ | Es lo que llevó a Jorge a la crisis del baño |
 | La pelea | Le quería dar un número para que llamara a su papá, que estaba mal: no quería que su hijo viviera con rencor ni con culpa. Jorge no quería y ella insistió. Le dijo que se estaba pareciendo a él (_"Vas a terminar como tu padre"_, provisorio) y ahí Jorge la empujó. Esa misma tarde, María había cortado con él. Se juega en la **Sesión 4: La pelea** |
 | En la Sesión 6 | **El viaje a San Rafael, Mendoza.** Después del primer ACV, desde el hospital, le pide a Jorge que la acompañe. En un banco frente al río, él intenta pedirle perdón y no le salen las palabras: _"Ya sé, hijo."_ **Ahí se le ve la cara por primera vez.** Aspecto en el prototipo, de grande: pelo gris corto, saco lila (el de la foto), una sonrisa (provisorio) |
+| En la Sesión 7 | **Su muerte.** Quince días después del viaje, un domingo en su casa, mientras Jorge pone la mesa, le da el segundo ACV. Esa noche, en el hospital, Jorge le agarra la mano y ella le dice algo, lo último: en el recuerdo aparece **tachado**, y se revela recién en el final. Se le sigue viendo la cara (provisorio, salvo lo que decidió el usuario: los quince días, que Jorge esté con ella y el misterio de las últimas palabras) |
 | Por definir | ¿En qué año fue el viaje? ¿Cómo se llama? |
 
 ### Papá de Jorge _(sin nombre)_
@@ -207,6 +208,7 @@ _Personajes propuestos por el agente para la idea del usuario de "María como re
 |---|---|
 | Primera aparición | Sesión 6: El viaje del 12/08, en el pasillo de guardia |
 | Cómo es | Una silueta sin cara, de guardapolvo. _"Tuvo suerte. Llegó a tiempo."_ / _"A partir de ahora tiene que estar tranquila. Nada de disgustos."_ (provisorio) |
+| En la Sesión 7 | En terapia intensiva, de noche: _"Fue un segundo ACV. Mucho más grande que el primero."_ / _"No le voy a mentir: puede ser esta noche."_ / _"Quédese con ella. Aunque no hable, lo escucha."_ (provisorio) |
 
 ### El mozo del bar _(sin nombre)_
 

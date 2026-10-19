@@ -27,6 +27,9 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 18 | **Pre-sesión 6** | Casa de Jorge (la mañana) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
 | 19 | **Sesión 6: El viaje del 12/08** | Sueño lúcido: la oficina, el hospital y San Rafael (Mendoza), a los 38 | Atender la llamada, ver a mamá en el hospital, pasear con ella. El perdón que no sale y su cara | En el prototipo |
 | 20 | **La sexta noche** | Casa de Jorge, de noche, después de la Sesión 6 | Anotar el viaje y dormir. En la cómoda, los boletos del micro | En el prototipo |
+| 21 | **Pre-sesión 7** | Casa de Jorge (la mañana) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
+| 22 | **Sesión 7: La muerte de su mamá** | Sueño lúcido: la casa de la mamá (de día) y el hospital (de noche), a los 38 | Poner la mesa, ayudarla, llamar a la ambulancia. Estar con ella hasta el final | En el prototipo |
+| 23 | **La séptima noche** | Casa de Jorge, de noche, después de la Sesión 7 | Anotar la muerte de su mamá y dormir. El informe de Neural, que ahora se lee | En el prototipo |
 
 ## Casa de Jorge
 
@@ -2486,8 +2489,8 @@ Se suma a la línea de tiempo: _"Adultez · El viaje del 12/08"_.
 ### Pendiente de definir
 
 - ¿Cuántos años tiene Jorge exactamente? (En el prototipo: treinta y ocho.)
-- ¿Cuánto tiempo pasa entre el viaje y el segundo ACV?
-- ¿Sigue viéndose la cara de la mamá en las sesiones que siguen?
+- _Resuelto por el usuario: entre el viaje y el segundo ACV pasan quince días (ver Sesión 7)._
+- _En la Sesión 7 la cara de la mamá se sigue viendo._
 
 ## La sexta noche
 
@@ -2536,4 +2539,258 @@ Al anotarlo: _"«El viaje.»"_ / _"«Le vi la cara.»"_ Si la vuelve a mirar: _"
 
 ### Final de la locación
 
-Termina cuando Jorge **se duerme**. En el prototipo completo es el **fin del prototipo**: la Pre-sesión 7 y la Sesión 7 (la muerte de su mamá) todavía no están.
+Termina cuando Jorge **se duerme**. En el prototipo completo sigue la **Pre-sesión 7**.
+
+## Pre-sesión 7
+
+### Resumen
+
+Una semana después de La sexta noche. Igual que las otras: Jorge se despierta, **suena el portero** (_"Debe ser el remis."_), puede repasar la pizarra y, al salir del cuarto, aparece sentado frente a Vela.
+
+### Qué cambia
+
+| Lugar | Pre-sesión 7 |
+|---|---|
+| Pizarra | Ya tiene el viaje. _"El viaje. Le vi la cara."_ / _"Después del viaje hay un espacio vacío."_ / _"No quiero mirarlo."_ |
+| La consulta | Al final, Vela: _"Hoy vamos a ir a lo que estaba tachado."_ |
+| Cuarto de inducción | _"Esta es la más difícil, Jorge."_ / _"No vas a tener que hacer nada. Solo estar."_ / _"Yo voy a estar con vos. Acostate."_ |
+
+### Las preguntas
+
+_Provisorias, propuestas por el agente._ Las respuestas no tienen consecuencias.
+
+| Pregunta | La verdad | La mentira |
+|---|---|---|
+| ¿Qué pasó después del viaje, Jorge? | "No sé. Hay un espacio vacío. No quiero mirarlo." → _"Lo sé."_ / _"Hoy vamos a mirarlo juntos."_ | "Nada. Volví a la oficina." → _"¿Seguro?"_ / _"Hoy vamos a ver."_ |
+| ¿Te acordás del informe que trajiste el primer día? Lo que estaba tachado. | "Sí. Me da miedo saber qué es." → _"Es normal tener miedo."_ | "No me importa." → _"Bueno."_ / _"Hoy lo vamos a leer igual."_ |
+
+Después sigue la **Sesión 7: La muerte de su mamá**.
+
+## Sesión 7: La muerte de su mamá
+
+### Resumen
+
+Es la séptima sesión: **la pérdida**. Pasaron **quince días desde el viaje** a San Rafael. Desde entonces Jorge visita a su mamá los domingos. Mientras pone la mesa, a ella le da **el segundo ACV**. Jorge la sienta, llama a la ambulancia y se queda con ella. Esa noche, en el hospital, el médico le dice que puede ser esa misma noche. Jorge se sienta al lado de la cama y **le agarra la mano**. Ella le dice algo, lo último, y **Jorge no se acuerda de qué**: en el recuerdo, las palabras aparecen **tachadas**, como la causa del informe de Neural. El monitor se va espaciando hasta callarse. **Jorge está con ella cuando muere.**
+
+Es lo que estaba tachado en el informe: _"fuerte resistencia ante recuerdos vinculados a la muerte de su madre"_.
+
+_Decidido por el usuario: que pasen quince días entre el viaje y la muerte, que Jorge esté con ella cuando muere, y que sus últimas palabras queden en misterio hasta el final (ver "Las últimas palabras"). La casa, el domingo, los ñoquis, la ambulancia, el médico y los diálogos los propuso el agente y son provisorios._
+
+### Cómo es este sueño
+
+| Regla | Qué pasa |
+|---|---|
+| **Sin búsqueda** | Vela lo dice al empezar: _"Hoy no te voy a pedir que busques nada. Solo quedate con ella."_ Cada paso es algo chiquito y concreto (poner la mesa, sentarla, llamar, quedarse). No hay puzzles |
+| **La cara** | Desde la Sesión 6, a la mamá se le ve la cara. En esta sesión también |
+| **La llama** | Cuando la mamá se va, la llama de Vela se achica casi hasta apagarse y la habitación se oscurece. A la mañana vuelve, de a poco |
+| **Las palabras tachadas** | Lo último que dice la mamá aparece en su globo como una tachadura (█████), igual que en el informe. Jorge lo escuchó, pero su mente lo tapa |
+| **Nada de golpes de efecto** | El ACV no se muestra con una caída: a ella se le cae la taza, se le traba la voz y se tambalea. La muerte tampoco tiene un pitido largo: el monitor se va espaciando y se calla |
+
+### Los lugares
+
+| Lugar | Qué hay |
+|---|---|
+| **La casa de la mamá**, un domingo al mediodía | La misma casa de siempre, con sol por la ventana. El **comedor** con la mesa de siempre y la tele. La **cocina**: la heladera con **la foto de San Rafael** (ella se hizo una copia), una silla, la mesada con la olla de los ñoquis y el **teléfono de pared** |
+| **El hospital**, de noche | **Terapia intensiva**: el pasillo con sillas y un ventanal oscuro, **el médico** (el mismo de la Sesión 6) y la **habitación 4**, con la cama, una silla al lado y el monitor |
+| **El pasillo, al amanecer** | El mismo pasillo. Por el ventanal entra luz naranja. Jorge, solo, sentado en una de las sillas |
+
+### Secuencia
+
+1. Cartel: _"27 de agosto · Quince días después del viaje"_. **Se le abren los ojos** en la puerta de la casa de su mamá. _"La casa de mamá."_ / _"Desde el viaje vengo todos los domingos."_ / _"Hoy es el segundo."_
+2. Aparece la llama. Vela: _"Hola, Jorge."_ / _"Hoy no te voy a pedir que busques nada."_ / _"Solo quedate con ella."_ Objetivo: **Ir a la cocina con mamá**.
+3. _Opcional:_ **la heladera.** _"La foto de San Rafael."_ / _"Se hizo una copia para ella."_ / _"La puso en la heladera, con un imán."_
+4. **Mamá, en la cocina:** _"¡Llegaste! Hice ñoquis."_ / Jorge: _"¿Ñoquis? Si no es 29."_ / _"Ya sé. Pero tenía ganas."_ / _"Poné la mesa, ¿querés? Como cuando eras chico."_ Objetivo: **Poner la mesa**.
+5. **La mesa:** aparecen dos platos y dos vasos. _"Dos platos. Dos vasos."_ / _"Hacía veinte años que no ponía esta mesa."_ Objetivo: **Avisarle a mamá que está la mesa**.
+6. **El segundo ACV** (ver abajo). Objetivo: **Ayudarla a sentarse** → **Llamar a una ambulancia** → **Quedarme con ella**.
+7. Suena la sirena, lejos. Cartel: _"Esa noche"_. **El hospital:** _"El mismo hospital."_ / _"Hace quince días estaba acá y me pedía ir a San Rafael."_ Objetivo: **Hablar con el médico** → **Ir con mamá**.
+8. **La habitación:** _"Está dormida."_ / _"Le veo la cara. Desde el viaje se la veo."_ Objetivo: **Sentarme al lado de mamá**.
+9. **La mano** y **las últimas palabras** (ver abajo).
+10. **El amanecer**, en el pasillo (ver abajo). La imagen funde a negro.
+
+### El segundo ACV
+
+> **Jorge:** Ma, ya está la mesa.
+>
+> **Mamá:** Ya v…
+
+Se le cae la taza. Ella se tambalea.
+
+> **Mamá:** Jorge… no me… sien…
+>
+> **Jorge:** ¿Ma? ¿Qué te pasa?
+>
+> **Jorge (piensa):** No le sale la voz.
+>
+> **Jorge (piensa):** Como la otra vez.
+>
+> **Vela:** Jorge. Ayudala a sentarse.
+
+Se oye un latido grave, que sigue hasta que Jorge se queda con ella. Jorge la lleva hasta la silla: _"Despacio, ma. Acá. Sentate."_ / _"Ya está."_ Vela: _"Ahora llamá, Jorge."_
+
+**El teléfono:** _"¡Necesito una ambulancia!"_ / _"Mi mamá. Tuvo un ACV hace dos semanas. Creo que es otro."_ Del otro lado: _"Ya sale una unidad."_ / _"No la deje sola. Quédese con ella."_
+
+**Con ella:** _"Ya vienen, ma."_ / _"Ya vienen."_ / _"Me agarró la mano."_ / _"Fuerte. Como en la feria."_
+
+### El médico
+
+> **Médico:** Fue un segundo ACV. Mucho más grande que el primero.
+>
+> **Médico:** No le voy a mentir: puede ser esta noche.
+>
+> **Jorge:** …
+>
+> **Médico:** Quédese con ella. Aunque no hable, lo escucha.
+
+### La mano y las últimas palabras
+
+Jorge se sienta al lado de la cama. Aparece una sola opción: **Agarrarle la mano**.
+
+> **Mamá:** …Jorge.
+>
+> **Jorge:** Acá estoy, ma.
+>
+> **Mamá:** Hijo…
+>
+> **Mamá:** ████ ██ ██████ ███ █████
+>
+> **Jorge (piensa):** Me dijo algo.
+>
+> **Jorge (piensa):** La escuché. Sé que la escuché.
+>
+> **Jorge (piensa):** Pero no me acuerdo qué.
+
+El bip del monitor se va espaciando: cuatro bips, cada vez más separados, y silencio. La llama se achica y la habitación se oscurece.
+
+> **Jorge:** Ma…
+>
+> **Jorge (piensa):** Se fue.
+>
+> **Jorge (piensa):** Yo estaba ahí.
+>
+> **Jorge (piensa):** Le estaba agarrando la mano.
+>
+> **Vela:** Estabas ahí, Jorge.
+
+### Las últimas palabras
+
+**Lo que le dijo la mamá queda en misterio** _(decidido por el usuario)_. Se revela **en el final del juego, después de que María va a buscar a Jorge**. La idea del usuario, todavía tentativa, es que le haya pedido **que no viva con rencor**: lo mismo que quería esa noche de la pelea, cuando le dio el papelito con el número del papá. Eso conecta con el epílogo, cuando Jorge llama a su papá.
+
+_Por definir: la frase exacta, y cómo se revela (¿Jorge se acuerda solo? ¿María se la dice, porque él se la contó? ¿Vuelve el recuerdo de la habitación, ahora sin tachar?)._
+
+### El amanecer
+
+Jorge, sentado en el pasillo. Por el ventanal entra la luz del amanecer.
+
+> **Jorge (piensa):** Me quedé hasta que amaneció.
+>
+> **Jorge (piensa):** No sabía a dónde ir.
+>
+> **Vela:** Esto es lo que estaba tachado, Jorge.
+>
+> **Jorge (piensa):** La muerte de mamá.
+>
+> **Vela:** No tenías que verlo solo. Por eso estoy acá.
+>
+> **Vela:** Vas a despertar.
+
+### Objetivo en pantalla
+
+| Cuándo | Objetivo |
+|---|---|
+| En la casa | Ir a la cocina con mamá → Poner la mesa → Avisarle a mamá que está la mesa |
+| El ACV | Ayudarla a sentarse → Llamar a una ambulancia → Quedarme con ella |
+| En el hospital | Hablar con el médico → Ir con mamá → Sentarme al lado de mamá |
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| La foto en la heladera: "En la heladera de mamá estaba la foto de San Rafael. Se había hecho una copia para ella." | Opcional, al mirar la heladera |
+| El segundo ACV: "Quince días después del viaje, en su casa, mientras yo ponía la mesa, a mamá le dio otro ACV. La senté, llamé a la ambulancia y me quedé con ella." | Antes de la ambulancia |
+| Sus últimas palabras: "Esa noche, en el hospital, le agarré la mano a mamá. Me dijo algo antes de irse. Sé que lo escuché, pero no me acuerdo qué fue." | Después de que ella muere |
+
+### El despertar
+
+> **Vela:** Despacio, Jorge. Ya estás acá.
+>
+> **Vela:** Estuviste con ella. Hasta el final.
+>
+> **Jorge (piensa):** Me dijo algo.
+>
+> **Jorge (piensa):** Y no me acuerdo qué.
+>
+> **Vela:** Te vas a acordar. Cuando puedas.
+
+Se suma a la línea de tiempo: _"La pérdida · La muerte de mamá"_. Al despedirlo, Vela no dice "la semana que viene seguimos" sino _"Andá a tu casa. Descansá."_
+
+### Pendiente de definir
+
+- Las últimas palabras de la mamá y cómo se revelan (ver arriba).
+- ¿Hay velorio o entierro? En el prototipo no se muestra.
+- ¿A quién le avisa Jorge? (En La séptima noche piensa que no llamó a nadie: _provisorio_.)
+
+## La séptima noche
+
+### Resumen
+
+Jorge vuelve a su casa después de la Sesión 7. Es la noche más callada: anota la muerte de su mamá, vuelve a leer **el informe de Neural** (ahora, debajo de la tachadura, se lee **"la muerte de su madre"**) y en el portero **una voz de mujer se corta antes de decir su nombre**.
+
+_Lo propuso el agente y es provisorio._
+
+### Secuencia
+
+1. Desde negro, en el pasillo: _"Volví."_ / _"La casa está muy callada."_ / _"Mamá se murió. Quince días después del viaje."_ / _"Yo estaba con ella."_ / _"Tengo que anotarlo."_
+2. **La pizarra** (ver abajo).
+3. **El portero:** _"…Jorge… soy…"_. Jorge: _"¿Quién? No te escucho."_ / _"Se cortó antes de que dijera el nombre."_ / _"Esa voz la conozco."_
+4. **El informe**, sobre la cómoda (ver abajo). Si se va a dormir sin leerlo: _"El informe, sobre la cómoda. Quiero leerlo otra vez."_ y lo lee antes.
+5. **Dormir:** _"Me dijo algo antes de irse."_ / _"Ojalá me acuerde."_
+
+### La pizarra
+
+Esta vez no pregunta en qué década va, sino **cuánto después del viaje**.
+
+| Opción | Qué pasa |
+|---|---|
+| Un año, seis meses o un mes después | _"No. Fue enseguida. Quince días."_ |
+| **Quince días después** | Es la correcta. Al lado del viaje escribe **"Mamá"**, en negro, más arriba, y abajo: _"Quince días después. Estaba con ella."_ |
+
+Al anotarlo: _"«Mamá.»"_ / _"«Estaba con ella.»"_ Si la vuelve a mirar: _"No me salió escribir más."_
+
+### El informe
+
+El mismo informe que Jorge sacó del cajón con candado el primer día. La tachadura ahora está gastada y se lee lo de abajo: _"…muestra fuerte resistencia ante recuerdos vinculados a **la muerte de su madre**."_
+
+> **Jorge (piensa):** Ahora se lee.
+>
+> **Jorge (piensa):** "Fuerte resistencia ante recuerdos vinculados a la muerte de su madre."
+>
+> **Jorge (piensa):** Nadie lo tachó.
+>
+> **Jorge (piensa):** Era yo el que no lo quería leer.
+
+Cierra el misterio que se abrió en la Casa de Jorge (_"¿Resistencia a qué? ¿Quién tachó esto… yo?"_).
+
+### Otros pensamientos
+
+| Dónde | Pensamiento |
+|---|---|
+| Billetera | _"San Rafael. 12/08."_ / _"Quince días después ya no estaba."_ |
+| Portarretratos | _"María a los diecisiete."_ / _"No la llamé cuando murió mamá."_ / _"No llamé a nadie."_ |
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| Mamá, en la pizarra: "Anoté el séptimo recuerdo: la muerte de mamá, quince días después del viaje. Yo estaba con ella." | Al anotar el recuerdo |
+| Lo que estaba tachado: "Volví a leer el informe de Neural. Debajo de la tachadura ahora se lee: «la muerte de su madre»." | Al leer el informe |
+| El portero, la séptima noche: "Sonó el portero. Una voz de mujer dijo «Jorge, soy…» y se cortó antes del nombre. La conozco." | Al atender el portero |
+
+### Objetos
+
+| Objeto | Dónde | Qué es |
+|---|---|---|
+| Informe de Neural (otra vez) ✓ | Cuarto: sobre la cómoda | El mismo informe, con la tachadura gastada: se lee "la muerte de su madre" |
+
+### Final de la locación
+
+Termina cuando Jorge **se duerme**. En el prototipo completo es el **fin del prototipo**: la Sesión 8 (El baño, el final) todavía no está.

@@ -123,6 +123,10 @@ export const sfx = {
     tone(70, 0.6, 'sine', 0.2, 0.05)
   },
   telefono() { for (let i = 0; i < 2; i++) { tone(440, 0.4, 'square', 0.03, i * 0.5); tone(480, 0.4, 'square', 0.03, i * 0.5) } },
+  // Sesión 7: la taza que se cae, un latido solo y la sirena de la ambulancia, lejos
+  taza() { noiseBurst(0.22, 3200, 0.14, 'highpass'); tone(1900, 0.18, 'triangle', 0.04, 0.02); tone(1400, 0.2, 'triangle', 0.03, 0.08) },
+  latido() { tone(58, 0.35, 'sine', 0.2); tone(52, 0.3, 'sine', 0.14, 0.24) },
+  sirena() { for (let i = 0; i < 4; i++) { tone(660, 0.45, 'sine', 0.025, i * 0.9); tone(880, 0.45, 'sine', 0.025, i * 0.9 + 0.45) } },
 }
 
 // Música y ambientes en loop

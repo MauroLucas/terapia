@@ -10,7 +10,7 @@ interface Page {
   opts: { w?: number; h?: number; paper?: number }
 }
 
-export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin' | 'cuaderno' | 'fotoFiesta' | 'papelito' | 'servilleta' | 'boleto'
+export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin' | 'cuaderno' | 'fotoFiesta' | 'papelito' | 'servilleta' | 'boleto' | 'informeClaro'
 
 // Boletín de la Sesión 2. Firmado: la firma de la mamá, un garabato
 function boletinPage(firmado: boolean): Page {
@@ -166,6 +166,34 @@ export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: P
           const obs = add('El paciente presenta pérdida de memoria autobiográfica de origen a determinar. Responde bien a la inducción de sueño lúcido. Recupera con facilidad recuerdos neutros, pero muestra fuerte resistencia ante recuerdos vinculados a', 18, '#333', {}, 6)
           // La causa está tachada con marcador
           c.add(scene.add.rectangle(-w / 2 + 50, obs.y + obs.height + 4, 280, 24, 0x111111).setOrigin(0, 0).setAngle(-1))
+          y += 40
+          add('Recomendación: continuar con las sesiones. No interrumpir el tratamiento.', 18, '#333', { fontStyle: 'bold' })
+        },
+      },
+    ],
+  },
+  informeClaro: {
+    nombre: 'Informe de Neural (otra vez)',
+    texto: 'El mismo informe. La parte tachada ahora se lee a través del marcador.',
+    pages: [
+      {
+        opts: { w: 700, h: 560, paper: 0xf7f6f1 },
+        build: (scene, c, w, h) => {
+          let y = -h / 2 + 36
+          const add = (s: string, size: number, color = '#222', extra: Phaser.Types.GameObjects.Text.TextStyle = {}, gap = 8) => {
+            const t = text(scene, -w / 2 + 50, y, s, size, color, { wordWrap: { width: w - 100 }, ...extra })
+            c.add(t)
+            y += t.height + gap
+            return t
+          }
+          add('NEURAL — Centro de Rehabilitación de la Memoria', 18, '#2f5fb8', { fontStyle: 'bold' }, 2)
+          add('Informe de seguimiento', 26, '#222', { fontStyle: 'bold' }, 20)
+          add('Paciente: Jorge\nEdad: 40 años\nSesiones realizadas: 11', 18, '#333', {}, 20)
+          add('Observaciones:', 18, '#222', { fontStyle: 'bold' }, 4)
+          const obs = add('El paciente presenta pérdida de memoria autobiográfica de origen a determinar. Responde bien a la inducción de sueño lúcido. Recupera con facilidad recuerdos neutros, pero muestra fuerte resistencia ante recuerdos vinculados a', 18, '#333', {}, 6)
+          // Después de la Sesión 7, la tachadura se gastó: se lee lo que había abajo
+          c.add(text(scene, -w / 2 + 52, obs.y + obs.height + 4, 'la muerte de su madre.', 18, '#333'))
+          c.add(scene.add.rectangle(-w / 2 + 50, obs.y + obs.height + 4, 280, 24, 0x111111, 0.28).setOrigin(0, 0).setAngle(-1))
           y += 40
           add('Recomendación: continuar con las sesiones. No interrumpir el tratamiento.', 18, '#333', { fontStyle: 'bold' })
         },

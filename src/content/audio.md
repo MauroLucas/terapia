@@ -223,6 +223,22 @@ _Provisorio. Lo nuevo es el monitor._
 ### La sexta noche
 
 Los mismos sonidos que las otras noches. En el portero, la voz dice el nombre de Jorge. _Provisorio._
+
+### Sesión 7: La muerte de su mamá
+
+| Sonido | Cuándo | Notas |
+|---|---|---|
+| **La taza** | Cuando le da el ACV | **Nuevo.** Loza que se rompe contra el piso, corta y seca |
+| **Latido** | Desde el ACV hasta que Jorge se queda con ella | **Nuevo.** Dos golpes graves, cada casi un segundo |
+| Teléfono de pared | La llamada a la ambulancia | El clic de siempre |
+| **Sirena** | Antes de pasar al hospital | **Nueva.** Dos tonos que se alternan, bajito, como lejos |
+| Monitor | En la habitación | El de la Sesión 6, más lento. Cuando ella se va, los bips se espacian (cuatro, cada vez más separados) y se callan. **No hay pitido largo** |
+
+_Provisorio._ Después del último bip, silencio: solo el ambiente de la habitación.
+
+### La séptima noche
+
+Los mismos sonidos que las otras noches. En el portero, la voz de mujer se corta entre la estática antes de decir su nombre. _Provisorio._
 ## Interfaz
 
 | Sonido | Notas |
