@@ -870,8 +870,13 @@ export class Office extends Phaser.Scene {
       ])
     } else {
       await say(this, [
+        this.doc('Jorge. Jorge, ¿me escuchás?'),
         this.doc('Despacio. Ya estás acá.'),
-        this.doc('Lo vi todo en la pantalla: la feria, la calesita… tu mamá.'),
+        this.doc('Al final te perdí. La pantalla se puso negra.'),
+        this.think('Había gente… con la cabeza partida al medio.'),
+        this.think('Me perseguían.'),
+        this.doc('Hay partes tuyas que no quieren que sigas buscando, Jorge.'),
+        this.doc('Pero lo que viste antes sí lo vi: la feria, la calesita… tu mamá.'),
         this.think('Mi mamá.'),
         this.think('No le pude ver la cara.'),
         this.doc('Es normal. Los recuerdos vuelven de a poco.'),

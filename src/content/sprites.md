@@ -232,6 +232,23 @@ security guard, dark navy uniform, peaked cap, small golden badge on the chest, 
 plain grey human silhouette, no face, no details, slightly blurred edges, dreamlike
 ```
 
+### Los seres (la gente sin cara, violenta)
+
+![Ser gritando](sprites/serGrito.png) ![Ser corriendo A](sprites/serCorre1.png) ![Ser corriendo B](sprites/serCorre2.png)
+
+| Campo | Valor |
+|---|---|
+| Claves | `serGrito` (parado, gritando al cielo) · `serCorre1`, `serCorre2` (corriendo) |
+| Tamaño en pantalla | 92 × 220 px, a ×1,2 (más grandes que la gente sin cara) |
+| Dónde | Sesión 1, al final: la transformación y la persecución. El de la carpa de atrás aparece agachado |
+| Descripción | La misma silueta de la gente sin cara, pero **negra**, más alta y flaca, con brazos largos. **La cabeza partida al medio** de arriba a abajo: las dos mitades se abren hacia los costados, adentro está rojo oscuro y los bordes tienen **dientes grandes**, blancos. Gritando, levanta los brazos y la cabeza se abre hacia el cielo. Corriendo, va encorvado hacia adelante. Sin sangre ni gore: tiene que dar miedo por la forma, no por lo explícito |
+
+```
+tall thin pitch-black humanoid silhouette, faceless, head split vertically in two halves opening outward,
+dark red inside, rows of large white teeth along both edges, long arms, screaming at the sky,
+side view, 2D, no gore, no blood, dreamlike horror
+```
+
 ### Personajes dibujados en la escena
 
 Hoy no tienen textura propia: se dibujan directo en el fondo del Hall del edificio y del auto. Para el arte final cada uno necesita su sprite.
@@ -413,6 +430,18 @@ Uno por ambiente. Las capturas son del prototipo sin la interfaz (a veces se ve 
 ![Calesita](sprites/fondos/feria-calesita.png)
 
 **La feria** (4400 px). Noche, guirnaldas de luces, el puesto de algodón de azúcar, la calesita, bancos y la vuelta al mundo. Todo empieza gris y toma color cuando lo ilumina la llama.
+
+### Sesión 1: el final (la huida)
+
+![El callejón de carpas](sprites/fondos/callejon.png)
+
+**El callejón de carpas** (2600 px). La feria, pero roja y torcida: cielo rojo oscuro que se vuelve negro, guirnaldas rotas (casi todas apagadas, alguna roja) y cinco carpas a rayas bordó y negras, cada una un poco torcida. La última tiene un brillo dorado en la entrada.
+
+![Los espejos](sprites/fondos/carpa-espejos.png) ![Los caballitos](sprites/fondos/carpa-caballos.png)
+
+![La salida](sprites/fondos/carpa-salida.png)
+
+**Los cuartos** (adentro de las carpas). Los espejos con reflejos deformados de Jorge chico; los caballitos de la calesita colgados y quietos; la carpa larga y vacía del ser agachado; la salida, con la sortija dorada colgada al fondo y una luz blanca.
 
 ### Sesión 2: El boletín
 

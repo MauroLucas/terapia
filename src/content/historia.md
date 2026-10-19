@@ -43,6 +43,7 @@ Por eso, en la Casa de Jorge, la puerta del baño está "bloqueada desde adentro
 - **El doctor Vela es parte de Jorge:** un personaje de su subconsciente que trata de ayudarlo a seguir adelante. Por eso lo acompaña en cada sueño y lo empuja a recordar.
 - **La revelación llega al final del sueño.**
 - **La puerta del baño** de la Casa de Jorge, trabada desde adentro, es la pista que la prepara.
+- **Los seres** _(idea del usuario)_: la gente sin cara de los sueños son **partes del subconsciente de Jorge que no quieren que siga buscando**. Al final de una sesión el sueño se descontrola, se vuelven violentos y lo persiguen. Vela es la parte que quiere seguir; los seres, la que no quiere mirar. _Por ahora, solo en la Sesión 1._
 - _Antes había, además, una "puerta que no se abre" en cada sueño. El usuario decidió sacarla de todo el juego._
 
 ## Final

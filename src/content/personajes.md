@@ -195,6 +195,11 @@ _Personajes propuestos por el agente para la idea del usuario de "María como re
 | Primera aparición | Sesión 1: La feria |
 | Qué son | Siluetas grises, **sin cara**, repartidas por la feria. No son parte del recuerdo: la luz no las ilumina |
 | Qué dicen | Casi nada: _"¿Y tu mamá, nene?"_, o algo que no se entiende |
+| Al final _(los seres)_ | Cuando el sueño se descontrola, **se vuelven violentos**: se ponen negros, crecen, se les parte la cabeza al medio (rojo oscuro adentro y dientes grandes en los bordes) y gritan al cielo. Persiguen a Jorge (idea del usuario) |
+| Qué son _(spoiler)_ | **Partes del subconsciente de Jorge que no quieren que siga buscando** (idea del usuario). Son lo contrario de Vela, que es la parte que quiere seguir. Son la "fuerte resistencia" del informe de Neural |
+| Por definir | ¿Tienen nombre? ¿Cambian según la sesión? ¿Aparecen en la Sesión 9? |
+
+![Ser gritando](sprites/serGrito.png) ![Ser corriendo](sprites/serCorre1.png) ![Ser corriendo B](sprites/serCorre2.png)
 
 ### El inmobiliario _(sin nombre)_
 

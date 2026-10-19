@@ -10,7 +10,11 @@ import { controlsHelp } from '../touch'
 //   [entrada] … [algodón de azúcar] … [calesita] … [vuelta al mundo] →(vuelve a la entrada)
 // Está todo a oscuras. El doctor Vela es una llama que acompaña a Jorge: lo que ilumina toma forma y color.
 // Hay que recordar tres momentos (el algodón, la calesita y lo que dijo la mamá en la entrada) y, al final,
-// quedarse quieto: así la mamá lo encuentra. Al despertar sigue en Office (modo despertar).
+// quedarse quieto: así la mamá lo encuentra. Después todo se congela, se corta la comunicación con Vela y la gente
+// sin cara se vuelve violenta: se pone negra, crece, se le parte la cabeza llena de dientes y grita. Jorge huye por
+// las carpas de la feria hasta encontrar la salida (la sortija). Si lo agarran, vuelve a la primera puerta.
+//   Huida: [feria: la carpa] → [callejón: entrada, espejos, caballos, la carpa de atrás, salida] → cada carpa es un cuarto
+// Al despertar sigue en Office (modo despertar).
 // No usa física: todo se mueve con `delta`, igual a cualquier FPS.
 
 const W = 4400
@@ -39,7 +43,53 @@ const SOMBRAS: { x: number; flip?: boolean; dice?: string; piensa?: string }[] =
   { x: 3420, flip: true },
 ]
 
-type Phase = 'intro' | 'explorar' | 'quieto' | 'final'
+type Phase = 'intro' | 'explorar' | 'quieto' | 'final' | 'huida'
+
+// La huida: la feria, el callejón de carpas y los cuartos (cada carpa es uno). Cada zona tiene su propio tramo del mundo
+type Area = 'feria' | 'callejon' | 'espejos' | 'caballos' | 'emboscada' | 'salida'
+const AREAS: Record<Area, { x: number; w: number }> = {
+  feria: { x: 0, w: W },
+  callejon: { x: 5200, w: 2600 },
+  espejos: { x: 8400, w: 1280 },
+  caballos: { x: 9900, w: 1280 },
+  emboscada: { x: 11400, w: 1600 },
+  salida: { x: 13300, w: 1800 },
+}
+const CARPA = 2860 // la carpa que aparece en la feria: la primera puerta
+const ENTRADA = 5330 // donde se aparece Jorge en el callejón (y adonde vuelve si lo agarran)
+interface Puerta {
+  area: Area
+  x: number
+  label: string
+  to: Area
+  toX: number
+}
+const PUERTAS: Puerta[] = [
+  { area: 'feria', x: CARPA, label: 'Entrar a la carpa', to: 'callejon', toX: ENTRADA + 90 },
+  { area: 'callejon', x: 5900, label: 'Carpa', to: 'espejos', toX: AREAS.espejos.x + 230 },
+  { area: 'callejon', x: 6500, label: 'Carpa', to: 'caballos', toX: AREAS.caballos.x + 230 },
+  { area: 'callejon', x: 7100, label: 'Carpa', to: 'emboscada', toX: AREAS.emboscada.x + 230 },
+  { area: 'callejon', x: 7620, label: 'Carpa', to: 'salida', toX: AREAS.salida.x + 230 },
+  { area: 'espejos', x: AREAS.espejos.x + 140, label: 'Salir', to: 'callejon', toX: 5900 },
+  { area: 'caballos', x: AREAS.caballos.x + 140, label: 'Salir', to: 'callejon', toX: 6500 },
+  { area: 'emboscada', x: AREAS.emboscada.x + 140, label: 'Salir', to: 'callejon', toX: 7100 },
+  { area: 'salida', x: AREAS.salida.x + 140, label: 'Salir', to: 'callejon', toX: 7620 },
+]
+const SORTIJA = AREAS.salida.x + 1580
+const WALK_HUIDA = 215 // corriendo, con miedo
+const SER_MAX = 178
+const QUIETO_MS = 700 // cuánto tiene que estar quieto Jorge para que los seres lo pierdan
+interface Ser {
+  img: Phaser.GameObjects.Image
+  area: Area | 'fuera' // 'fuera': está cruzando una puerta detrás de Jorge
+  estado: 'dormido' | 'perseguir' | 'buscar'
+  vel: number
+  ms: number
+  dir: number
+  paso: number
+  homeArea: Area
+  homeX: number
+}
 type Paint = (c: number) => number
 interface Reveal {
   x: number
@@ -97,6 +147,15 @@ export class Dream extends Phaser.Scene {
   private stillMs = 0
   private movingMs = 0
   private hinted = false
+  private sombraImgs: { x: number; img: Phaser.GameObjects.Image }[] = []
+  private area: Area = 'feria'
+  private seres: Ser[] = []
+  private quietoMs = 0
+  private atrapadas = 0
+  private glitchAt = 0
+  private entrados = new Set<Area>()
+  private seguir = 0 // para cancelar al ser que sigue a Jorge por una puerta
+  private rojo!: Phaser.GameObjects.Rectangle
 
   constructor() {
     super('Dream')
@@ -116,14 +175,23 @@ export class Dream extends Phaser.Scene {
     this.horses = []
     this.horseTweens = []
     this.archLetters = []
+    this.sombraImgs = []
+    this.seres = []
+    this.area = 'feria'
+    this.quietoMs = this.atrapadas = this.glitchAt = 0
+    this.entrados = new Set()
     makeTextures(this)
     this.cameras.main.setBackgroundColor('#0d1120')
     this.drawFeria()
+    this.drawCallejon()
+    this.drawCuartos()
 
     this.player = this.add.image(POS.inicio, KID, 'chico0').setDepth(10)
     this.flameGlow = this.add.circle(0, 0, 60, 0xffc56b, 0.18).setBlendMode(Phaser.BlendModes.ADD)
     this.flame = this.add.container(POS.inicio + 70, -200, [this.flameGlow, this.add.image(0, 0, 'llama')]).setDepth(790).setVisible(false)
     this.dark = this.add.image(POS.inicio, KID - 40, this.darkness()).setDepth(780).setScale(0.55)
+    // Un rojo que late, por encima de todo, cuando el sueño se descontrola
+    this.rojo = this.add.rectangle(0, 0, 1280, 720, 0x8a0a14, 0).setOrigin(0).setScrollFactor(0).setDepth(777).setBlendMode(Phaser.BlendModes.MULTIPLY)
 
     const box = this.add.graphics()
     box.fillStyle(0xf6f3ea).fillRoundedRect(-16, -16, 32, 32, 7)
@@ -205,7 +273,7 @@ export class Dream extends Phaser.Scene {
     this.reveal(POS.rueda, (g2, k) => this.paintRueda(g2, k, POS.rueda), 1)
     this.reveal(POS.rueda + 20, (g2, k) => this.paintBanco(g2, k, POS.rueda + 20))
 
-    for (const s of SOMBRAS) this.add.image(s.x, FLOOR - 75, 'sombra').setFlipX(!!s.flip).setAlpha(0.85).setDepth(8)
+    for (const s of SOMBRAS) this.sombraImgs.push({ x: s.x, img: this.add.image(s.x, FLOOR - 75, 'sombra').setFlipX(!!s.flip).setAlpha(0.85).setDepth(8) })
   }
 
   private drawArco() {
@@ -668,15 +736,424 @@ export class Dream extends Phaser.Scene {
       this.think('No le puedo ver la cara.'),
       this.think('Pero sé que es ella.'),
       this.vela('Muy bien, Jorge. Ya está.'),
-      this.vela('Ahora vas a despertar.'),
     ])
-    state.lineaDeTiempo.push('Infancia: la feria')
+    if (!state.lineaDeTiempo.includes('Infancia: la feria')) state.lineaDeTiempo.push('Infancia: la feria')
+    await this.congelar(mama, glow)
+  }
+
+  // ---------- El final se descontrola ----------
+
+  // Todo se congela: la música se frena, los caballitos se quedan quietos, la mamá también, y se va el color
+  private async congelar(mama: Phaser.GameObjects.Image, glow: Phaser.GameObjects.Arc) {
+    await say(this, [this.vela('Ahora vas a desp—')])
+    sfx.congelar()
+    this.music?.stop(0.2)
+    this.tweens.killTweensOf(this.dark)
+    this.horseTweens.forEach((t) => t.pause())
+    this.tweens.killTweensOf(this.archLetters)
+    this.cameras.main.shake(400, 0.004)
+    for (const o of this.objs) this.tweens.add({ targets: o.color, alpha: 0.2, duration: 1600 })
+    mama.setTint(0x6f7280)
+    glow.setVisible(false)
+    this.tweens.add({ targets: this.dark, scale: 0.95, alpha: 1, duration: 2500 })
+    await this.wait(1600)
+    await say(this, [this.think('¿Mamá?'), this.think('No se mueve.'), this.think('Nadie se mueve.')])
+    // La llama tiembla y la voz de Vela se rompe
+    this.tweens.add({ targets: this.flame, alpha: 0.25, duration: 90, yoyo: true, repeat: 7 })
+    sfx.estatica()
+    await say(this, [this.vela('Jor… ¿me escu…?'), this.vela('…ge… no te…')])
+    // Jorge empieza a caminar solo, hacia una de las personas sin cara (la que tiene adelante, o si no, la de atrás)
+    const px = this.player.x
+    const adelante = this.sombraImgs.filter((s) => s.x > px + 300).sort((a, b) => a.x - b.x)[0]
+    const atras = this.sombraImgs.filter((s) => s.x < px - 300).sort((a, b) => b.x - a.x)[0]
+    const elegida = adelante ?? atras
+    const ser = elegida.img
+    const lado = adelante ? 1 : -1
+    // La carpa va a aparecer detrás de Jorge, del lado contrario
+    this.carpaX = Phaser.Math.Clamp(ser.x - lado * 560, 300, W - 300)
+    this.carpaFeria.x = this.carpaX - CARPA
+    for (const o of this.sombraImgs) if (o !== elegida) this.tweens.add({ targets: o.img, alpha: 0.25, duration: 1500 })
+    await say(this, [this.think('Mis piernas caminan solas.')])
+    this.player.setFlipX(lado < 0)
+    this.facing = lado
+    this.cameras.main.startFollow(this.player, true, 0.08, 0.08)
+    const destino = ser.x - lado * 190
+    let paso = 0
+    await this.tween({
+      targets: this.player,
+      x: destino,
+      duration: Math.max(800, (Math.abs(destino - this.player.x) / 110) * 1000),
+      onUpdate: () => {
+        paso++
+        this.player.setTexture(Math.floor(paso / 6) % 2 === 0 ? 'chico1' : 'chico2')
+        if (paso % 12 === 0) sfx.step()
+      },
+    })
+    this.player.setTexture('chico0')
+    await this.wait(600)
+    await this.transformacion(ser)
+  }
+
+  // La gente sin cara se vuelve violenta: se pone negra, crece, se le parte la cabeza y grita al cielo
+  private async transformacion(img: Phaser.GameObjects.Image) {
     const cam = this.cameras.main
-    cam.fadeOut(2500, 255, 248, 236)
-    this.music?.stop(2.5)
+    cam.stopFollow()
+    cam.pan(img.x - 60, 330, 900, 'Sine.easeInOut')
+    cam.zoomTo(1.35, 900, 'Sine.easeInOut')
+    await this.wait(1000)
+    await say(this, [this.think('Esa persona…'), this.think('Me está mirando. Sin cara.')])
+    img.setOrigin(0.5, 1).setPosition(img.x, FLOOR).setAlpha(1).setFlipX(img.x > this.player.x)
+    // Se pone negra
+    for (let i = 0; i < 4; i++) {
+      img.setTint(i % 2 ? 0x4d5363 : 0x060608)
+      await this.wait(120)
+    }
+    img.setTint(0x060608)
+    // Crece
+    sfx.throb()
+    await this.tween({ targets: img, scaleX: 1.45, scaleY: 1.7, duration: 1400, ease: 'Cubic.In' })
+    // Se le parte la cabeza y grita al cielo
+    img.clearTint().setTexture('serGrito').setScale(1.35).setFlipX(img.x > this.player.x)
+    sfx.grito()
+    cam.shake(1800, 0.012)
+    this.tweens.add({ targets: this.rojo, fillAlpha: 0.55, duration: 300, yoyo: true, repeat: 2 })
+    this.tweens.add({ targets: this.flame, alpha: 0, scale: 0.2, duration: 1200 })
+    await this.wait(2200)
+    this.flameOn = false
+    this.flame.setVisible(false)
+    cam.zoomTo(1, 700, 'Sine.easeInOut')
+    cam.pan(this.player.x, 360, 700, 'Sine.easeInOut')
+    await this.wait(800)
+    // Detrás de Jorge aparece una carpa que antes no estaba
+    this.tweens.add({ targets: this.carpaFeria, alpha: 1, duration: 900 })
+    await say(this, [this.think('Tengo que salir de acá.'), this.think('Esa carpa… antes no estaba.')])
+    img.setTexture('serCorre1').setScale(1.2)
+    // El primero va adelante en la lista: es el que sigue a Jorge por las puertas
+    this.seres.unshift({ img, area: 'feria', estado: 'perseguir', vel: 30, ms: 0, dir: -1, paso: 0, homeArea: 'callejon', homeX: 7650 })
+    cam.startFollow(this.player, true, 0.1, 0.1)
+    this.phase = 'huida'
+    this.leaving = false // el final de la mamá ya pasó: Jorge vuelve a moverse
+    this.goal.set('Escapar')
+    this.glitchAt = this.time.now + 6000
+    const help = text(this, 24, this.scale.height - 34, controlsHelp('← → correr   ·   E entrar   ·   quedarte quieto: no te ven'), 16, '#e8c0c0').setScrollFactor(0).setDepth(950)
+    this.time.delayedCall(9000, () => this.tweens.add({ targets: help, alpha: 0, duration: 1200 }))
+  }
+
+  private carpaFeria!: Phaser.GameObjects.Graphics
+  private carpaX = CARPA
+
+  // Una carpa de feria, a rayas, con la entrada abierta. `luz`: la de la salida tiene un brillo dorado
+  private carpa(g: Phaser.GameObjects.Graphics, x: number, luz = false, tilt = 0) {
+    const a = 0x5a1a1e
+    const b = 0x16080a
+    for (let i = 0; i < 6; i++) g.fillStyle(i % 2 ? a : b).fillTriangle(x + tilt, 250, x - 120 + i * 40, 360, x - 120 + (i + 1) * 40, 360)
+    for (let i = 0; i < 6; i++) g.fillStyle(i % 2 ? b : a).fillRect(x - 120 + i * 40, 360, 40, FLOOR - 360)
+    g.fillStyle(0x050304).fillTriangle(x - 46, FLOOR, x + 46, FLOOR, x, 420)
+    if (luz) g.lineStyle(2, 0xe0b04a, 0.7).lineBetween(x - 46, FLOOR, x, 420).lineBetween(x, 420, x + 46, FLOOR)
+  }
+
+  // El callejón de carpas: la feria, pero roja y torcida
+  private drawCallejon() {
+    const { x: X, w: Wd } = AREAS.callejon
+    const g = this.add.graphics()
+    g.fillGradientStyle(0x2a0a10, 0x2a0a10, 0x0c0507, 0x0c0507, 1).fillRect(X, 0, Wd, FLOOR)
+    g.fillStyle(0x1a1012).fillRect(X, FLOOR, Wd, 120)
+    // Guirnaldas rotas: casi todas apagadas, alguna roja
+    for (let x0 = X; x0 < X + Wd; x0 += 520) {
+      g.lineStyle(2, 0x2b1a1e)
+      g.beginPath()
+      for (let x = 0; x <= 520; x += 20) g.lineTo(x0 + x, 90 + Math.sin((x / 520) * Math.PI) * 60 + (x0 % 3) * 6)
+      g.strokePath()
+      for (let x = 30; x < 520; x += 70) g.fillStyle((x / 70) % 3 === 0 ? 0xc0392b : 0x2b2224).fillCircle(x0 + x, 94 + Math.sin((x / 520) * Math.PI) * 60, 5)
+    }
+    this.carpa(g, ENTRADA, false, -10)
+    PUERTAS.filter((p) => p.area === 'callejon').forEach((p, i) => this.carpa(g, p.x, p.to === 'salida', (i % 2 ? 1 : -1) * 18))
+    // La salida: un brillo dorado apenas, en la entrada de la última carpa
+    this.add.circle(7620, 520, 46, 0xffd36a, 0.12).setDepth(781).setBlendMode(Phaser.BlendModes.ADD)
+    this.carpaFeria = this.add.graphics().setDepth(5).setAlpha(0)
+    this.carpa(this.carpaFeria, CARPA, false, 12)
+  }
+
+  // Los cuartos: adentro de cada carpa
+  private drawCuartos() {
+    const g = this.add.graphics()
+    const pared = (a: Area, color: number) => {
+      const { x: X, w: Wd } = AREAS[a]
+      g.fillStyle(color).fillRect(X, 0, Wd, FLOOR)
+      g.fillStyle(0x0c0708).fillRect(X, FLOOR, Wd, 120)
+      // La entrada, desde adentro: un triángulo con la luz roja del callejón
+      g.fillStyle(0x3a0c12).fillTriangle(X + 94, FLOOR, X + 186, FLOOR, X + 140, 420)
+    }
+    // Espejos
+    pared('espejos', 0x1a1424)
+    for (let i = 0; i < 5; i++) {
+      const mx = AREAS.espejos.x + 380 + i * 180
+      g.fillStyle(0x8a8f99).fillRect(mx - 56, 300, 112, 280)
+      g.fillStyle(0x1d2333).fillRect(mx - 48, 308, 96, 264)
+      this.add.image(mx, 520, 'chico0').setTint(0x8a90a8).setAlpha(0.45).setFlipX(i % 2 === 1).setScale(i % 2 ? 0.7 : 1.1, i % 2 ? 1.5 : 0.8).setDepth(2)
+    }
+    // Caballitos de la calesita, colgados y quietos
+    pared('caballos', 0x140e18)
+    const dark: Paint = (c) => {
+      const r = ((c >> 16) & 0xff) * 0.45
+      const gg = ((c >> 8) & 0xff) * 0.4
+      const b = (c & 0xff) * 0.45
+      return (r << 16) | (gg << 8) | b
+    }
+    ;[0xf1ece0, 0xb07a4a, 0x9fb4c8, 0xe8a0b4].forEach((c, i) => {
+      const hx = AREAS.caballos.x + 400 + i * 210
+      g.lineStyle(3, 0x4a3a2a).lineBetween(hx, 0, hx, 440 - (i % 2) * 30)
+      const h = this.add.graphics().setDepth(2)
+      this.paintCaballo(h, dark, hx, c)
+      h.y = -40 - (i % 2) * 30
+    })
+    // La carpa de atrás: vacía y larga, con uno agachado al fondo
+    pared('emboscada', 0x120a0c)
+    for (let bx = AREAS.emboscada.x + 300; bx < AREAS.emboscada.x + 1600; bx += 260) g.fillStyle(0x6a1a1e).fillCircle(bx, 110, 5)
+    const agachado = this.add.image(AREAS.emboscada.x + 1380, FLOOR, 'serCorre1').setOrigin(0.5, 1).setScale(1.1, 0.75).setFlipX(true).setDepth(8)
+    this.seres.push({ img: agachado, area: 'emboscada', estado: 'dormido', vel: 0, ms: 0, dir: -1, paso: 0, homeArea: 'emboscada', homeX: AREAS.emboscada.x + 1380 })
+    // La salida: al fondo, la sortija dorada, colgada, con una luz blanca detrás
+    pared('salida', 0x0e0a10)
+    g.lineStyle(3, 0x8a5a3a).lineBetween(SORTIJA, 0, SORTIJA, 330)
+    g.lineStyle(5, 0xe0b04a).strokeCircle(SORTIJA, 344, 13)
+    this.add.circle(SORTIJA, 344, 70, 0xffe08a, 0.22).setDepth(781).setBlendMode(Phaser.BlendModes.ADD)
+    this.add.rectangle(SORTIJA + 120, 450, 120, 300, 0xffffff, 0.1).setDepth(781).setBlendMode(Phaser.BlendModes.ADD)
+  }
+
+  private setArea(a: Area) {
+    this.area = a
+    const r = AREAS[a]
+    this.cameras.main.setBounds(r.x, 0, r.w, 720)
+    for (const s of this.seres) s.img.setVisible(s.area === a)
+  }
+
+  // Entrar o salir por una puerta (una carpa)
+  private async entrar(p: Puerta) {
+    const cam = this.cameras.main
+    const desde = this.area
+    sfx.door()
+    cam.fadeOut(250, 0, 0, 0)
+    await new Promise((r) => cam.once('camerafadeoutcomplete', r))
+    this.setArea(p.to)
+    this.player.setX(p.toX)
+    cam.centerOn(p.toX, 360)
+    const ser0 = this.seres[0]
+    const token = ++this.seguir
+    if (ser0) {
+      if (p.to === 'callejon' && desde === 'feria') {
+        // Lo sigue por la carpa, un poco después
+        ser0.img.setVisible(false)
+        ser0.area = 'fuera'
+        this.time.delayedCall(1900, () => {
+          if (token !== this.seguir || this.area !== 'callejon') return
+          ser0.area = 'callejon'
+          ser0.img.setVisible(true).setX(ENTRADA)
+          ser0.estado = 'perseguir'
+          ser0.vel = 60
+        })
+      } else if (p.to === 'salida' && ser0.area === 'callejon') {
+        // A la salida también lo sigue
+        ser0.area = 'fuera'
+        ser0.img.setVisible(false)
+        this.time.delayedCall(1900, () => {
+          if (token !== this.seguir || this.area !== 'salida') return
+          ser0.area = 'salida'
+          ser0.img.setVisible(true).setX(AREAS.salida.x + 150)
+          ser0.estado = 'perseguir'
+          ser0.vel = 60
+        })
+      } else if (desde === 'callejon' && ser0.area === 'callejon') {
+        // Se queda en el callejón, esperando cerca de la carpa
+        ser0.img.setX(Phaser.Math.Clamp(p.x + (p.x > 6400 ? -360 : 360), AREAS.callejon.x + 80, AREAS.callejon.x + AREAS.callejon.w - 80))
+        ser0.estado = 'buscar'
+        ser0.ms = 0
+      } else if (p.to === 'callejon' && ser0.area === 'fuera') {
+        ser0.area = 'callejon'
+        ser0.img.setX(p.toX > 6400 ? p.toX - 420 : p.toX + 420)
+        ser0.estado = 'buscar'
+        ser0.ms = 2000
+      }
+      ser0.img.setVisible(ser0.area === this.area)
+    }
+    cam.fadeIn(250, 0, 0, 0)
+    this.goal.set('Encontrar la salida')
+    if (!this.entrados.has(p.to)) {
+      this.entrados.add(p.to)
+      const lines: Partial<Record<Area, string[]>> = {
+        callejon: ['Carpas.', 'Ya no es la feria.'],
+        espejos: ['Espejos.', 'No hay salida.'],
+        caballos: ['Los caballitos de la calesita.', 'Quietos.', 'La sortija era dorada…'],
+        salida: ['Una luz dorada.', 'La sortija.'],
+      }
+      const l = lines[p.to]
+      if (l) await say(this, l.map((t) => this.think(t)))
+    }
+  }
+
+  // Si lo agarran: todo se rompe y Jorge vuelve a la primera puerta
+  private async atrapado() {
+    this.atrapadas++
+    const cam = this.cameras.main
+    sfx.atrapado()
+    cam.shake(500, 0.02)
+    this.rojo.setFillStyle(0x8a0a14, 0.85)
+    await this.wait(350)
+    cam.fadeOut(500, 0, 0, 0)
+    await new Promise((r) => cam.once('camerafadeoutcomplete', r))
+    this.rojo.setFillStyle(0x8a0a14, 0)
+    this.seguir++
+    // Todos vuelven a su lugar
+    for (const s of this.seres) {
+      s.area = s.homeArea
+      s.img.setX(s.homeX).setScale(s.homeArea === 'emboscada' ? 1.1 : 1.2, s.homeArea === 'emboscada' ? 0.75 : 1.2).setTexture('serCorre1')
+      s.estado = s.homeArea === 'emboscada' ? 'dormido' : 'buscar'
+      s.ms = 0
+      s.vel = 0
+    }
+    this.setArea('callejon')
+    this.player.setX(ENTRADA + 90).setFlipX(false)
+    this.facing = 1
+    cam.centerOn(this.player.x, 360)
+    await this.wait(400)
+    cam.fadeIn(600, 0, 0, 0)
+    await this.wait(600)
+    await say(this, [this.think(this.atrapadas === 1 ? 'Otra vez en la entrada.' : 'Otra vez.')])
+  }
+
+  // La salida: la sortija. Vela vuelve y Jorge se despierta
+  private async despertar() {
+    this.phase = 'final'
+    this.leaving = true
+    this.goal.set(null)
+    sfx.pickup()
+    this.flame.setVisible(true).setAlpha(0).setScale(1).setPosition(this.player.x + 70, KID - 110)
+    this.tweens.add({ targets: this.flame, alpha: 1, duration: 600 })
+    sfx.flame()
+    await say(this, [this.vela('¡Jorge! Te encontré.'), this.vela('Agarrala. Despertate.')])
+    if (addPista('Los seres', 'Al final de la feria todo se congeló y la gente sin cara se volvió negra, enorme, con la cabeza partida y llena de dientes. Me perseguían. Escapé por las carpas hasta la sortija.')) toast(this, '✎ Nueva pista en el diario (TAB)')
+    const cam = this.cameras.main
+    cam.flash(400, 255, 255, 255)
+    cam.fadeOut(2200, 255, 248, 236)
     await new Promise((r) => cam.once('camerafadeoutcomplete', r))
     await this.wait(600)
     this.scene.start('Office', { despertar: true })
+  }
+
+  // La voz de Vela, cortada, cada tanto: se perdió la comunicación
+  private velaRota() {
+    const frases = ['…Jor… ge…', '…¿me escu… chás?…', '…no te… veo…', '…desper… tate…', '…quieto… quedate…']
+    const t = text(this, this.scale.width / 2 + (Math.random() - 0.5) * 300, 120 + Math.random() * 60, frases[Math.floor(Math.random() * frases.length)], 22, '#c9ced8', { fontStyle: 'italic' })
+      .setOrigin(0.5)
+      .setScrollFactor(0)
+      .setDepth(955)
+      .setAlpha(0)
+    sfx.estatica()
+    this.tweens.add({ targets: t, alpha: 0.8, duration: 120, yoyo: true, repeat: 3, onComplete: () => t.destroy() })
+  }
+
+  // La huida: correr, entrar a las carpas, quedarse quieto para que no te vean
+  private updateHuida(time: number, dt: number) {
+    this.dark.setPosition(this.player.x, this.player.y - 30)
+    const k = this.keys
+    const ePressed = Phaser.Input.Keyboard.JustDown(k.E)
+    if (this.busy || time < this.lockUntil) return
+    if (Phaser.Input.Keyboard.JustDown(k.TAB)) {
+      void this.run(() => openDiary(this))
+      return
+    }
+    if (time > this.glitchAt) {
+      this.glitchAt = time + 9000 + Math.random() * 6000
+      this.velaRota()
+    }
+    const r = AREAS[this.area]
+    const dir = (k.LEFT.isDown || k.A.isDown ? -1 : 0) + (k.RIGHT.isDown || k.D.isDown ? 1 : 0)
+    if (dir !== 0) {
+      this.quietoMs = 0
+      const from = this.player.x
+      this.player.x = Phaser.Math.Clamp(from + dir * WALK_HUIDA * (dt / 1000), r.x + 60, r.x + r.w - 60)
+      this.facing = dir
+      this.player.setFlipX(dir < 0)
+      this.walkDist += Math.abs(this.player.x - from)
+      this.stepDist += Math.abs(this.player.x - from)
+      this.player.setTexture(Math.floor(this.walkDist / 14) % 2 === 0 ? 'chico1' : 'chico2')
+      if (this.stepDist > 30) {
+        this.stepDist = 0
+        sfx.step()
+      }
+    } else {
+      this.quietoMs += dt
+      this.player.setTexture('chico0')
+    }
+    const quieto = this.quietoMs > QUIETO_MS
+    // Los seres
+    let cerca = Infinity
+    for (const s of this.seres) {
+      if (s.area !== this.area) continue
+      const dx = this.player.x - s.img.x
+      const dist = Math.abs(dx)
+      if (s.estado === 'dormido') {
+        if (this.area === 'emboscada' && this.player.x > AREAS.emboscada.x + 650) {
+          s.estado = 'perseguir'
+          s.vel = 40
+          s.img.setScale(1.2).setTexture('serGrito')
+          sfx.grito(false)
+          this.cameras.main.shake(600, 0.008)
+          this.tweens.add({ targets: this.rojo, fillAlpha: 0.4, duration: 250, yoyo: true })
+        }
+        continue
+      }
+      if (s.estado === 'perseguir') {
+        if (quieto) {
+          // No lo ve: se frena y se aleja, buscando
+          s.estado = 'buscar'
+          s.ms = 0
+          s.dir = -Math.sign(dx) || 1
+        } else {
+          s.vel = Math.min(SER_MAX, s.vel + dt * 0.18)
+          s.img.x += Math.sign(dx) * s.vel * (dt / 1000)
+          s.img.setFlipX(dx < 0)
+          s.paso += s.vel * (dt / 1000)
+          s.img.setTexture(Math.floor(s.paso / 26) % 2 === 0 ? 'serCorre1' : 'serCorre2')
+        }
+      } else if (s.estado === 'buscar') {
+        s.ms += dt
+        if (s.ms < 2600) {
+          s.img.x += s.dir * 55 * (dt / 1000)
+          s.img.setFlipX(s.dir < 0)
+          s.paso += 55 * (dt / 1000)
+          s.img.setTexture(Math.floor(s.paso / 26) % 2 === 0 ? 'serCorre1' : 'serCorre2')
+        } else if (Math.floor(s.ms / 900) % 2 === 0) s.img.setFlipX(!s.img.flipX)
+        // Si Jorge se mueve cerca, lo vuelve a ver
+        if (!quieto && this.quietoMs === 0 && (dist < 470 || s.ms > 7000)) {
+          s.estado = 'perseguir'
+          s.vel = 70
+        }
+      }
+      s.img.x = Phaser.Math.Clamp(s.img.x, r.x + 40, r.x + r.w - 40)
+      if (dist < 36) {
+        void this.run(() => this.atrapado())
+        return
+      }
+      cerca = Math.min(cerca, dist)
+    }
+    // El corazón late más fuerte cuando están cerca
+    this.rojo.fillAlpha += ((cerca < 500 ? 0.12 + (1 - cerca / 500) * 0.25 : 0.06) - this.rojo.fillAlpha) * (1 - Math.exp(-dt / 300))
+    if (cerca < 400 && time > this.lastCall) {
+      this.lastCall = time + 350 + (cerca / 400) * 500
+      sfx.latido()
+    }
+    // Puertas y la sortija
+    const p = PUERTAS.map((q) => (q.area === 'feria' ? { ...q, x: this.carpaX } : q)).find((q) => q.area === this.area && Math.abs(this.player.x - q.x) < 70)
+    const enSortija = this.area === 'salida' && Math.abs(this.player.x - SORTIJA) < 90
+    if (p || enSortija) {
+      this.prompt.setVisible(true).setPosition(enSortija ? SORTIJA : p!.x, 300)
+      this.promptLabel.setText(enSortija ? 'Agarrar la sortija' : p!.label)
+      if (ePressed) void this.run(() => (enSortija ? this.despertar() : this.entrar(p!)))
+    } else if (this.area === 'callejon' && Math.abs(this.player.x - ENTRADA) < 70) {
+      this.prompt.setVisible(true).setPosition(ENTRADA, 300)
+      this.promptLabel.setText('Volver')
+      if (ePressed) void this.run(() => say(this, [this.think('No. Atrás está eso.')]))
+    } else this.prompt.setVisible(false)
   }
 
   private revealNow(o: Reveal) {
@@ -711,6 +1188,10 @@ export class Dream extends Phaser.Scene {
 
   update(time: number, delta: number) {
     const dt = Math.min(delta, 100)
+    if (this.phase === 'huida') {
+      this.updateHuida(time, dt)
+      return
+    }
     // La llama sigue a Jorge con un poco de atraso, flotando
     if (this.flameOn && this.phase !== 'final') {
       const tx = this.player.x + 70 * this.facing

@@ -32,6 +32,24 @@ function tone(freq: number, dur: number, type: OscillatorType, gain: number, del
   o.stop(t + dur + 0.05)
 }
 
+// Un tono que cambia de frecuencia (sube o baja) mientras suena
+function sweep(f0: number, f1: number, dur: number, type: OscillatorType, gain: number, delay = 0) {
+  const a = out()
+  if (!a) return
+  const t = a.c.currentTime + delay
+  const o = a.c.createOscillator()
+  const g = a.c.createGain()
+  o.type = type
+  o.frequency.setValueAtTime(f0, t)
+  o.frequency.exponentialRampToValueAtTime(f1, t + dur)
+  g.gain.setValueAtTime(0.0001, t)
+  g.gain.exponentialRampToValueAtTime(gain, t + Math.min(0.08, dur / 4))
+  g.gain.exponentialRampToValueAtTime(0.0001, t + dur)
+  o.connect(g).connect(a.m)
+  o.start(t)
+  o.stop(t + dur + 0.05)
+}
+
 let noiseBuffer: AudioBuffer | null = null
 function noise(c: AudioContext) {
   if (!noiseBuffer) {
@@ -131,6 +149,16 @@ export const sfx = {
   disolver() { noiseBurst(2.4, 700, 0.07); tone(392, 2.6, 'sine', 0.04); tone(261.6, 3.2, 'sine', 0.035, 0.6) },
   tecla() { const [a, b] = [[697, 1209], [770, 1336], [852, 1477], [941, 1336]][Math.floor(Math.random() * 4)]; tone(a, 0.12, 'sine', 0.03); tone(b, 0.12, 'sine', 0.03) },
   llamando() { tone(425, 1.0, 'sine', 0.045) },
+  // Sesión 1, el final: todo se congela (como una cinta que se frena), el grito de los seres y cuando te agarran
+  congelar() { sweep(520, 40, 1.6, 'sawtooth', 0.05); sweep(780, 60, 1.4, 'sine', 0.04) },
+  grito(largo = true) {
+    const d = largo ? 2.2 : 1.1
+    noiseBurst(d, 1600, 0.22, 'bandpass')
+    sweep(180, 620, d * 0.5, 'sawtooth', 0.09)
+    sweep(620, 90, d * 0.5, 'sawtooth', 0.09, d * 0.5)
+    sweep(240, 900, d, 'square', 0.03)
+  },
+  atrapado() { noiseBurst(0.9, 900, 0.3); tone(48, 1.0, 'sine', 0.3); sweep(900, 50, 0.8, 'sawtooth', 0.06) },
 }
 
 // Música y ambientes en loop
