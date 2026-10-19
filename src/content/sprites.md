@@ -193,7 +193,7 @@ security guard, dark navy uniform, peaked cap, small golden badge on the chest, 
 |---|---|
 | Clave | `sombra` |
 | Tamaño en pantalla | 60 × 150 px (en el barrio y el bar se usa más chica y más oscura) |
-| Dónde | La feria (Sesión 1) y el barrio: el almacenero, la vecina y la gente del bar (Sesión 2) |
+| Dónde | La feria (Sesión 1), el barrio: el almacenero, la vecina y la gente del bar (Sesión 2), la gente que baila en la fiesta (Sesión 3) y el inmobiliario (Sesión 4: más claro, con una carpeta azul) |
 | Descripción | Siluetas grises, lisas, **sin cara**. No son parte del recuerdo: la luz no las ilumina |
 
 ```
@@ -256,6 +256,7 @@ El prototipo usa solo poses sueltas. Con el arte final harían falta, como míni
 | ![](sprites/sortija.png) | `sortija` | 22 × 22 | Sortija dorada de la calesita | Sesión 1 (la calesita) y La primera noche (la caja) |
 | ![](sprites/boletin.png) | `boletin` | 22 × 28 | Boletín de calificaciones (ícono) | Sesión 2: El boletín |
 | ![](sprites/cuaderno.png) | `cuaderno` | 22 × 28 | Cuaderno de tapa azul (ícono) | La segunda noche: la caja |
+| ![](sprites/papelito.png) | `papelito` | 24 × 20 | Papelito doblado con el número del papá (ícono) | Sesión 4 (en el piso, después de la pelea) y La cuarta noche (en la billetera) |
 | ![](sprites/fotoFiesta.png) | `fotoFiesta` | 34 × 26 | Foto de la fiesta: Jorge y María, fondo oscuro con flash (ícono) | Sesión 3 (se saca) y La tercera noche (la caja y el portarretratos) |
 
 _Las marcas de gaseosa son genéricas y provisorias. Los objetos del inventario se ven chicos en el juego, pero de cerca se muestran como documentos (ver abajo)._
@@ -289,7 +290,7 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 
 ![Cuaderno de matemática](sprites/documentos/cuaderno-1.png) ![Sortija](sprites/documentos/sortija-1.png)
 
-![Foto de la fiesta](sprites/documentos/fotoFiesta-1.png)
+![Foto de la fiesta](sprites/documentos/fotoFiesta-1.png) ![Papelito](sprites/documentos/papelito-1.png)
 
 | Documento | Descripción para el arte |
 |---|---|
@@ -300,6 +301,7 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 | Informe de Neural | Hoja clínica con una línea tachada en negro |
 | Boletín | Boletín de secundaria, papel crema; un 3 en rojo en Matemática; la firma de la mamá en la segunda versión |
 | Cuaderno | Hoja rayada de cuaderno escolar con las cuentas de Jorge y notas en violeta con la letra de María |
+| Papelito | Un papel arrancado de una libreta, con renglones, y con la letra de la mamá: "Papá" y un número de teléfono (inventado). Doblado en cuatro, gastado de estar veinte años en una billetera |
 | Foto de la fiesta | Foto de papel con flash, de una fiesta de egresados: Jorge (suéter verde) y María (vestido bordó) abrazados, guirnaldas de colores atrás. En el borde blanco, "J y M" con la letra de María. Es la foto del portarretratos |
 | Sortija | La sortija de cerca, sobre un fondo oscuro |
 
@@ -404,6 +406,20 @@ Uno por ambiente. Las capturas son del prototipo sin la interfaz (a veces se ve 
 ![Casa de María: living](sprites/fondos/casa-maria-living.png)
 
 **La casa de María** (2000 px). Cálida, con luz amarilla de lámparas colgantes: la puerta de calle, la cocina, la mesa servida con fotos y dibujos en la pared, el teléfono de la pared, el living con el sillón del papá y la tele, y el sillón largo donde duerme Jorge.
+
+### Sesión 4: La pelea
+
+![El departamento vacío: cuarto](sprites/fondos/depto-vacio.png)
+
+![El departamento vacío: pasillo y cocina](sprites/fondos/depto-vacio-cocina.png)
+
+**El departamento vacío** (2600 px). El mismo de la Casa de Jorge, veinte años antes y sin muebles: paredes claras, piso de madera, sol que entra por las ventanas del cuarto y la cocina. Marcas de lo que todavía no hay. Tiene que reconocerse como la misma casa, pero luminosa y llena de planes.
+
+![La casa de la mamá, la noche de la pelea](sprites/fondos/casa-pelea.png)
+
+**La casa de la mamá, de noche** (2200 px). El cuarto de Jorge a medio vaciar: la cama con el bolso, el placard, el escritorio con la foto de la fiesta y la caja "JORGE" debajo de la cama. Luz de una lámpara, todo en penumbra. En la pelea se tiñe de rojo.
+
+**Efecto: la imagen se rompe.** Grietas blancas que salen de un punto, como un vidrio, en tres golpes, y después todo a negro. Para el arte final puede ser una animación de la pantalla partiéndose en pedazos.
 
 ## Cómo se regeneran las imágenes
 

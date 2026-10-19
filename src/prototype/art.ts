@@ -475,6 +475,13 @@ export function makeTextures(scene: Phaser.Scene) {
   g.fillStyle(0x8a3048).fillRect(18, 9, 6, 11)
   g.generateTexture('fotoFiesta', 34, 26)
 
+  // Sesión 4: el papelito con el número del papá, doblado
+  g.clear()
+  g.fillStyle(0xf2ecd8).fillRect(0, 2, 24, 16)
+  g.fillStyle(0xd9d1b8).fillTriangle(16, 2, 24, 2, 24, 10)
+  g.lineStyle(1, 0x2a3a6a).lineBetween(3, 9, 15, 9).lineBetween(3, 13, 18, 13)
+  g.generateTexture('papelito', 24, 20)
+
   g.destroy()
 }
 

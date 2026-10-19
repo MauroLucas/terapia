@@ -177,6 +177,22 @@ _Provisorio. Lo nuevo es la música de la fiesta, el flash y el teléfono._
 
 Los mismos sonidos que las otras noches. En el portero, la voz de mujer dice otra vez el nombre de Jorge. Al poner la foto en el portarretratos, el sonido de agarrar un objeto. _Provisorio._
 
+
+### Sesión 4: La pelea
+
+| Sonido | Cuándo | Notas |
+|---|---|---|
+| Ambiente | Todo el sueño | El zumbido bajo de siempre |
+| Puerta | El inmobiliario y María, al irse | La misma de las otras puertas |
+| **Tensión** | Desde que entra la mamá | El zumbido grave de la Casa de Jorge (el de la primera mañana), que va subiendo |
+| **La voz rota de Vela** | En la pelea | El chasquido del portero, con letras que faltan en el texto |
+| **Vidrio** | Cuando la imagen se rompe | **Nuevo.** Un estallido agudo de vidrio, astillas que suenan un instante y un golpe grave. Después, silencio |
+
+_Provisorio. Lo nuevo es el vidrio._
+
+### La cuarta noche
+
+Los mismos sonidos que las otras noches. En el portero, estática y la voz, pero Jorge no contesta. _Provisorio._
 ## Interfaz
 
 | Sonido | Notas |

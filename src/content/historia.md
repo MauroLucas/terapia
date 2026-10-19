@@ -90,7 +90,9 @@ En orden:
 - La **foto de la billetera** (Casa de Jorge) es de ese viaje, y **"12/08"**, escrito atrás, es **la fecha del viaje**.
 - Por eso Jorge la lleva encima, y por eso dejó la nota "Te extraño, mamá" en el cajón que se abre con esa fecha.
 
-**Por qué estaban distanciados:** de grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte**. En la discusión, **Jorge la empujó: ella se cayó y se lastimó**. Después **dejaron de hablarse** hasta el viaje.
+**Por qué estaban distanciados:** de grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte**. En la discusión, **Jorge la empujó: ella se cayó y se lastimó**.
+
+**Después de la pelea** _(decidido por el usuario)_: no se dejaron de ver del todo, pero **nunca hablaron bien**. Ella **lo buscaba** (lo llamaba, le tocaba el portero) y él **la esquivaba** o la ignoraba. Se veían **poco, como mucho tres veces por año**, y todo era **cortante**. **Nunca hablaron de esa noche.** Como no hablaron, la distancia se fue haciendo más grande con los años, hasta el primer ACV y el viaje.
 
 **El papá de Jorge** fue un **padre ausente** que no sabía comunicar sus problemas y **los resolvía con violencia**. Jorge creció así: es **disfuncional**, y en la pelea repitió lo que vio de chico.
 
@@ -105,9 +107,9 @@ En orden:
 
 Nada de eso fue culpa de ella: fue la que estaba ahí cuando todo explotó. Y justo lo que ella quería evitar (que Jorge cargara con culpa) es lo que él se lleva de esa noche.
 
-**El papelito:** Jorge se lo guardó y **nunca llamó**. Está en algún lugar de la casa _(idea aprobada; dónde está y cuándo aparece, por definir)_.
+**El papelito:** Jorge se lo guardó y **nunca llamó**. En la Sesión 4 lo levanta del piso; en La cuarta noche aparece **en su billetera, atrás de la foto de su mamá**: lo llevó encima veinte años _(dónde está lo propuso el agente)_.
 
-**En el juego, el empujón no lo hace el jugador.** El recuerdo **se corta justo ahí**, como si la mente de Jorge no quisiera mirarlo, y lo siguiente que se ve es a ella en el piso. No se juega a la violencia: lo que queda es la culpa.
+**En el juego, el empujón no lo hace el jugador.** El recuerdo **se corta justo ahí**: **la imagen se rompe como un vidrio** _(decidido por el usuario)_, como si la mente de Jorge no quisiera mirarlo, y lo siguiente que se ve es a ella en el piso. Vela trata de hablarle durante la pelea, pero Jorge está **nublado por el odio** y no lo escucha. No se juega a la violencia: lo que queda es la culpa.
 
 Por eso la culpa es doble: **lastimó a su mamá** y **se convirtió en lo que más odiaba**. La frase de la mamá puede volver en los sueños.
 
@@ -147,7 +149,7 @@ Son **ocho sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 | 1 | Infancia | **La feria** | Se perdió de chico y su mamá lo encontró | En el prototipo |
 | 2 | Adolescencia (~15) | **El boletín** | El papá: un padre ausente que resolvía todo con violencia, contra la mamá y contra Jorge. Jorge termina en el piso de su cuarto, trabando la puerta. Ese día conoce a María | En el prototipo (con La segunda noche) |
 | 3 | Adolescencia (~17) | **La fiesta** | **Sesión de respiro:** sin el papá, todo calor. Los martes en la plaza con María (ya no estudian: fantasean con un depto propio), la fiesta de egresados (bailan y un amigo les saca **la foto que hoy falta en el portarretratos**), la noche en la casa de la familia de María y **el primer beso** | En el prototipo (con La tercera noche) |
-| 4 | Juventud (~20) | **La pelea** | Empieza con Jorge y María **visitando el departamento con un inmobiliario**. El mismo día: María se va a Córdoba y cortan; a la noche, la mamá le da el número del papá, insiste y él la empuja. Dejan de hablarse. Le deja mucha culpa | Idea |
+| 4 | Juventud (~20) | **La pelea** | Empieza con Jorge y María **visitando el departamento con un inmobiliario**. El mismo día: María se va a Córdoba y cortan; a la noche, la mamá le da el número del papá, insiste y él la empuja: la imagen se rompe. Después se ven poco y nunca hablan de eso. Le deja mucha culpa | En el prototipo (con La cuarta noche) |
 | 5 | Los 30 | **El reencuentro** | Se vuelve a ver con María **en un bar**: ella está casada; él, soltero | Idea |
 | 6 | Adultez | **El viaje del 12/08** | El primer ACV de su mamá y el viaje juntos: se reencuentran como madre e hijo | Idea |
 | 7 | La pérdida | **La muerte de su mamá** | El segundo ACV. Es lo que está tachado en el informe | Idea |

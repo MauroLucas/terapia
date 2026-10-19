@@ -18,7 +18,9 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 9 | **Pre-sesión 3** | Casa de Jorge (la mañana) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
 | 10 | **Sesión 3: La fiesta** | Sueño lúcido: la plaza, el club del barrio y la casa de María, a los 17 | Ver a María, bailar en la fiesta de egresados, quedarse en su casa. El primer beso | En el prototipo |
 | 11 | **La tercera noche** | Casa de Jorge, de noche, después de la Sesión 3 | Anotar la fiesta en la pizarra y dormir. En la caja, la foto del portarretratos | En el prototipo |
-| — | **Sesión 4: La pelea** | El departamento (vacío, a los 20) y la casa de la mamá | La visita con María, el corte, la pelea con la mamá | Idea |
+| 12 | **Pre-sesión 4** | Casa de Jorge (la mañana) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
+| 13 | **Sesión 4: La pelea** | Sueño lúcido: el departamento vacío (de día) y la casa de la mamá (de noche), a los 20 | Recorrer el departamento con María, el corte, armar el bolso. La pelea con la mamá: la imagen se rompe | En el prototipo |
+| 14 | **La cuarta noche** | Casa de Jorge, de noche, después de la Sesión 4 | Anotar la pelea y dormir. En la billetera, el papelito con el número del papá. No atiende el portero | En el prototipo |
 
 ## Casa de Jorge
 
@@ -1779,7 +1781,7 @@ Se ve la foto de la fiesta y se guarda en el inventario.
 >
 > **Jorge (piensa):** La saqué yo. No me acuerdo por qué.
 
-_Por qué la sacó sigue por definir (ver "Personajes" → María)._
+_Por qué la sacó sigue por definir (ver "Personajes" → María). En la Sesión 4 se ve que se la llevó de la casa de su mamá la noche de la pelea._
 
 ### El portarretratos
 
@@ -1816,35 +1818,281 @@ Los mismos de las otras noches: **Anotar lo que recordé en la pizarra** → **A
 
 ### Final de la locación
 
-Termina cuando Jorge **se duerme**. En el prototipo completo es el **fin del prototipo**: la Pre-sesión 4 y la Sesión 4 todavía no están.
+Termina cuando Jorge **se duerme**. En el prototipo completo sigue la **Pre-sesión 4**.
 
 ### Pendiente de definir
 
 - ¿La voz del portero cambia en las noches siguientes?
 - ¿Por qué Jorge sacó la foto del portarretratos?
 
-## Sesión 4: La pelea _(idea)_
+## Pre-sesión 4
 
-_Todavía no está diseñada. Esto es lo que ya se decidió y algunas propuestas._
+### Resumen
 
-### Lo decidido
+Una semana después de La tercera noche. Igual que las otras pre-sesiones: Jorge se despierta, **suena el portero** (_"Debe ser el remis."_), puede repasar la pizarra y, al salir del cuarto, aparece sentado frente a Vela.
 
-- Jorge tiene **unos 20 años**. Todo pasa **el mismo día** (ver "Historia y mundo" → La mamá de Jorge).
-- **Introducción:** Jorge y **María** van a **ver el departamento** con **un inmobiliario**. Hay **secuencias de ellos recorriéndolo**. Es el mismo departamento de la Casa de Jorge, el que iban a alquilar juntos y donde Jorge vive hoy.
-- A la tarde, María le dice que se va a **estudiar a Córdoba** por cinco años, y cortan.
-- A la noche, en la casa de su mamá, mientras arma el bolso, ella le da **el número del papá**. Insiste, él explota y la empuja. **El jugador no hace el empujón:** el recuerdo se corta y lo siguiente es ella en el piso.
+### Qué cambia
 
-### Propuestas del agente _(sin confirmar)_
+| Lugar | Pre-sesión 4 |
+|---|---|
+| Pizarra | La feria, el boletín y la fiesta. _"La feria. El boletín. La fiesta."_ / _"Lo último que anoté es lindo. Ojalá lo que sigue también."_ |
+| Portarretratos | Ya tiene la foto: _"María y yo. Diecisiete años."_ |
+| Caja | _"Mi cuaderno de matemática."_ / _"Y abajo estaba la foto."_ |
+| Cuarto de inducción | _"Hoy va a ser difícil, Jorge."_ / _"Voy a estar con vos todo el tiempo. Aunque no me escuches."_ / _"Acostate."_ |
 
-- **El departamento, al revés que hoy:** vacío, con luz de día y las ventanas abiertas. El jugador ya lo conoce oscuro y desordenado; acá lo ve lleno de planes.
-- **María imagina cómo va a ser:** _"Acá va la cama."_ / _"En la cómoda ponemos la foto de la fiesta."_ (la de la Sesión 3, la que Jorge después saca del portarretratos).
-- **La puerta del baño está abierta.** Es la única vez que el jugador la ve abierta, y adentro no hay nada raro: un baño vacío, con luz. El contraste lo hace pesado sin decir nada.
-- **El inmobiliario** habla de más, como cualquier inmobiliario: _"Es luminoso, ideal para una pareja que arranca."_
-- **Dónde corta María:** en el mismo departamento, al terminar la visita, cuando el inmobiliario los deja solos. El lugar que iba a ser de los dos es donde se termina.
+### Las preguntas
 
-### Por definir
+_Provisorias, propuestas por el agente._ Las respuestas no tienen consecuencias.
+
+| Pregunta | La verdad | La mentira |
+|---|---|---|
+| ¿Encontraste algo más en tu casa? | "Una foto con María. La puse en el portarretratos." → _"Qué bien, Jorge."_ / _"Un lugar menos vacío."_ | "No. Nada." → _"Bueno. Ya va a aparecer."_ |
+| ¿Pensaste en tu mamá esta semana? | "Sí. No me acuerdo de qué pasó después. Pero algo pasó." → _"Hoy vamos a ir ahí."_ | "No mucho." → _"Hoy vamos a ir ahí igual."_ |
+
+Después sigue la **Sesión 4: La pelea**.
+
+## Sesión 4: La pelea
+
+### Resumen
+
+Es la cuarta sesión: la **juventud**. Jorge tiene **unos 20 años** y todo pasa **el mismo día**. A la mañana, él y María van a **ver el departamento** que van a alquilar juntos: el mismo donde Jorge vive hoy. Cuando se quedan solos, María le dice que se va a **estudiar a Córdoba**, y cortan. A la noche, en la casa de su mamá, mientras arma el bolso para mudarse solo, ella le da **el número del papá**. Insiste. Él se cierra. Ella le dice que se está pareciendo a él, y **la imagen se rompe**.
+
+Es la sesión de **la culpa**. Lo que el jugador se lleva no es la violencia (que no se ve) sino lo que queda después: la mamá en el piso, el papelito y Jorge yéndose sin ayudarla.
+
+_Decidido por el usuario: la visita al departamento con María y el inmobiliario, el corte por Córdoba, la pelea por el número del papá, que el empujón no lo haga el jugador y que **la imagen se rompa**, que **el papelito se guarde** (es el del epílogo) y que **Vela trate de hablarle pero Jorge esté nublado por el odio**. Los diálogos, el inmobiliario y los detalles los propuso el agente y son provisorios._
+
+### Cómo es este sueño
+
+| Regla | Qué pasa |
+|---|---|
+| **El calor de María** | En el departamento, cerca de María la llama crece, como en las sesiones anteriores |
+| **El recuerdo no se puede cambiar** | Cuando María dice que se va, el jugador elige qué decirle, pero Jorge dice lo que dijo ese día |
+| **El odio nubla** | En la pelea la pantalla se tiñe de rojo, la llama se achica, titila y se pone roja, y **la voz de Vela llega rota**: se le pierden letras, cada vez más (_"Jorge, mirame. Estoy acá."_ → _"·o··e, ·i···e…"_). Jorge no le contesta |
+| **La imagen se rompe** | En el momento del empujón la pantalla se agrieta como un vidrio, en tres golpes desde el centro, y se va a negro. No se ve el golpe. Lo siguiente es la mamá en el piso |
+| **Vela vuelve al final** | Recién afuera de la casa su voz llega entera: _"Jorge. Jorge, ¿me escuchás?"_ / _"Te estuve hablando todo el tiempo."_ |
+
+### Los lugares
+
+| Lugar | Qué hay |
+|---|---|
+| **El departamento**, de día | El de la Casa de Jorge, veinte años antes: **vacío y luminoso**, con el sol entrando por las ventanas. Cuarto, pasillo con la puerta de entrada y cocina. Marcas en el piso y la pared de lo que todavía no hay. **María** y **el inmobiliario** (una silueta sin cara, con una carpeta) |
+| **La casa de la mamá**, de noche | La misma de la Sesión 2. El cuarto de Jorge a medio vaciar: la cama con **el bolso**, el placard, el escritorio con **la foto de la fiesta** y, debajo de la cama, **la caja con su nombre**. Al lado, el pasillo y la puerta de calle |
+
+### Secuencia
+
+1. **Se le abren los ojos** en el departamento vacío. _"Este departamento…"_ / _"Es mi casa. Pero está vacía."_ / _"Tengo veinte años."_
+2. Aparece la llama. Vela: _"Estoy acá, Jorge."_ / _"Hoy va a ser un día largo. Pase lo que pase, no te suelto."_ María: _"¿Viste la luz que entra? Es perfecto."_ Inmobiliario: _"Luminoso, ¿eh? Ideal para una pareja que arranca."_
+3. **La visita:** María imagina dónde va cada cosa (ver abajo). Objetivo: **Recorrer el departamento con María (0/3)**.
+4. Con tres lugares vistos, el inmobiliario: _"Los dejo solos un minuto, chicos."_ y se va.
+5. **El corte** (ver abajo). María se va.
+6. _"Se fue."_ / _"Y yo me quedé acá. En la casa que iba a ser de los dos."_ Vela: _"Ese mismo día, a la noche, volviste a la casa de tu mamá."_
+7. **El bolso**, en el cuarto de la casa de la mamá: _"Me voy a vivir solo al departamento."_ / _"Solo."_ Objetivo: **Armar el bolso (0/3)**.
+8. Con el bolso listo, **llega la mamá** (ver "La pelea").
+9. **La imagen se rompe.** Negro.
+10. **Después:** la mamá en el piso, el papelito en el piso. _"¿Qué hice?"_ Mamá: _"Ay… mi brazo…"_
+11. **El papelito** (hay que levantarlo para poder irse) y, si quiere, **la mamá** (ver abajo).
+12. **Irse** por la puerta de calle. Si no habló con ella: Mamá: _"Jorge…"_ / _"No me di vuelta."_
+13. Vela, entero otra vez. Fundido a negro y **despertar**.
+
+### La visita
+
+María camina con Jorge y cuenta cómo va a ser. Hay que ver tres de los cuatro lugares:
+
+| Lugar | Qué dice |
+|---|---|
+| Cuarto | _"Acá va la cama. Mirando a la ventana."_ / _"Para que el sol nos despierte."_ |
+| Rincón | _"Y en este rincón, una cómoda."_ / _"Con la foto de la fiesta arriba."_ Jorge piensa: _"La del portarretratos."_ |
+| Cocina | _"Y acá va tu heladera."_ / Jorge: _"La que traigo yo."_ / _"Obvio. Era el trato."_ (la heladera de la Sesión 3) |
+| Ventana | _"No tiene balcón…"_ / _"Las plantas van en la ventana, entonces."_ (el balcón con plantas de la Sesión 3) |
+| Inmobiliario | _"Dos ambientes, expensas bajas, a dos cuadras del colectivo."_ / _"Piénsenlo tranquilos. El lunes me avisan."_ |
+
+### El corte
+
+> **María:** Jorge… tengo que decirte algo.
+>
+> **María:** Me salió la beca. En Córdoba.
+>
+> **María:** Son cinco años.
+>
+> **María:** No quiero que me esperes. No sería justo para vos.
+
+El jugador elige _"No te vayas."_ o _"Andá. Es tu beca."_. **Elija lo que elija**, Jorge piensa lo que quiso decir (_"Quise decirle que no se fuera."_ o _"Quise decirle que estaba orgulloso."_), y dice lo que dijo ese día:
+
+> **Jorge:** Andate, entonces. Total, todos se van.
+>
+> **Vela:** Así fue, Jorge. No se puede cambiar.
+>
+> **María:** No lo digas así… No quiero que terminemos así.
+
+### La pelea
+
+Con el bolso listo, la mamá entra al cuarto:
+
+> **Mamá:** ¿Ya te vas?
+>
+> **Jorge:** Sí.
+>
+> **Mamá:** Jorge… tomá. Es el número de tu papá.
+
+Le extiende **el papelito**. Él no lo agarra.
+
+> **Mamá:** Está mal. Muy mal.
+>
+> **Mamá:** No quiero que vivas con rencor, hijo. Ni con culpa.
+>
+> **Jorge:** No.
+>
+> **Vela** _(un poco rota)_: Jorge, respirá. Escuchala.
+>
+> **Mamá:** Llamalo una vez. Una sola.
+>
+> **Jorge (piensa):** Siempre lo mismo. Siempre él.
+
+La pantalla se empieza a teñir de rojo.
+
+> **Jorge:** ¡Te dije que no!
+>
+> **Vela** _(más rota)_: Jorge, mirame. Estoy acá.
+>
+> **Mamá:** Jorge, por favor…
+>
+> **Vela** _(casi no se entiende)_: No es él. Es tu mamá.
+>
+> **Mamá:** Te estás pareciendo a él.
+>
+> **Mamá:** Vas a terminar como tu padre.
+
+**La imagen se rompe.** No se ve el empujón ni la caída.
+
+### Después
+
+La mamá está en el piso, agarrándose el brazo. El papelito, en el piso. La llama, chiquita y roja.
+
+| Qué | Qué pasa |
+|---|---|
+| **Mamá** (opcional) | El jugador elige _"Ayudarla a levantarse"_ o _"Pedirle perdón"_. En los dos casos: _"Quise…"_ / _"Pero esa noche no hice nada."_ Mamá: _"Andá, Jorge. Andá."_ |
+| **El papelito** (obligatorio) | Se ve de cerca: _"Papá"_ y un número, con la letra de la mamá. _"El número de papá."_ / _"No sé por qué lo agarré."_ Se guarda en el inventario |
+| **Salir** | Por la puerta de calle, recién con el papelito |
+
+_El jugador nunca ejecuta la violencia, y tampoco puede arreglarla: ayudarla o pedirle perdón no cambia el recuerdo. Eso es lo que hace pesada la culpa._
+
+### Objetivo en pantalla
+
+| Cuándo | Objetivo |
+|---|---|
+| En el departamento | Recorrer el departamento con María (0/3) |
+| En el cuarto, a la noche | Armar el bolso (0/3) |
+| Después, con el papelito | Irme |
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| El departamento: "Fuimos a ver el departamento con María… Me dijo que se iba a Córdoba. Le dije «andate, entonces». Cortamos ahí." | Después del corte |
+| La pelea: "Mamá me dio el número de papá. Insistió. Me dijo que iba a terminar como él. La empujé. Se cayó y se lastimó el brazo. No la ayudé. Me fui." | Al hablar con la mamá en el piso |
+| El papelito: "Me guardé el papelito con el número de papá. No lo llamé." | Al levantarlo |
+
+### Objetos
+
+| Objeto | Qué es |
+|---|---|
+| Papelito ✓ | El número del papá, con la letra de la mamá. Jorge lo guarda veinte años y lo usa en el epílogo |
+
+### El despertar
+
+> **Vela:** Jorge. Jorge, mirame.
+>
+> **Vela:** Ya estás acá.
+>
+> **Vela:** Te hablé todo el tiempo. No me escuchabas.
+>
+> **Jorge (piensa):** La empujé.
+>
+> **Jorge (piensa):** Y nunca le pedí perdón.
+>
+> **Vela:** Respirá. Lo que viste ya pasó.
+>
+> **Vela:** Lo que hagas con eso, todavía no.
+
+Se suma a la línea de tiempo: _"Juventud · La pelea"_.
+
+### Pendiente de definir
 
 - ¿Firman el alquiler ese día? ¿Jorge lo alquila solo después?
-- ¿Cómo es el inmobiliario?
-- ¿Qué se juega en cada parte (la visita, el corte con María, la noche en lo de la mamá)?
-- ¿Cómo se ve la casa de la mamá?
+- ¿Cómo es el inmobiliario? (En el prototipo, una silueta sin cara.)
+- ¿Qué tan grave fue la lastimadura? (En el prototipo: el brazo.)
+
+## La cuarta noche
+
+### Resumen
+
+Jorge vuelve a su casa después de la Sesión 4. Es la noche más pesada hasta ahora: anota la pelea sin poder escribir lo que hizo, y encuentra **el papelito** en un lugar que tuvo siempre encima: **la billetera, atrás de la foto de su mamá**. Cuando suena el portero, **no atiende**, como hacía con ella.
+
+_Decidido por el usuario: después de la pelea, la mamá lo buscaba y él la esquivaba; se veían poco (como mucho tres veces por año), todo era cortante y nunca hablaron de esa noche (ver "Historia y mundo"). Dónde está el papelito y que no atienda el portero lo propuso el agente y es provisorio._
+
+### Secuencia
+
+1. Desde negro, en el pasillo: _"Volví."_ / _"El departamento vacío. María yéndose."_ / _"Y mamá en el piso."_ / _"Tengo que anotarlo. Aunque no quiera."_
+2. **La pizarra** (ver abajo).
+3. **El portero:** suena al salir del cuarto, como siempre.
+4. **La billetera:** el papelito. Si se va a dormir sin mirarla: _"La billetera… La foto de mamá."_ y la mira antes.
+5. **Dormir:** _"La empujé."_ / _"Y después, cada vez que me buscó, la esquivé."_ / _"Nos veíamos tres veces por año. Nunca hablamos de esa noche."_
+
+### La pizarra
+
+Ya tiene la feria, el boletín y la fiesta. _"¿Dónde va lo de la pelea?"_
+
+| Opción | Qué pasa |
+|---|---|
+| Entre los 0 y los 10 / Entre los 10 y los 20 | _"No. Ya había terminado el colegio. Tenía veinte."_ |
+| **Entre los 20 y los 30** | Es la correcta. A los 20 escribe **"La pelea"**, en rojo oscuro, y nada más |
+| Entre los 30 y los 40 | _"No… Fue hace mucho. Tenía veinte."_ |
+
+Al anotarlo: _"«La pelea.»"_ / _"No puedo escribir lo que hice."_ Si la vuelve a mirar: _"«La pelea.» Nada más."_ La marca en la pizarra de la pared también es roja.
+
+### La billetera: el papelito
+
+> **Jorge (piensa):** Mamá, en el viaje.
+>
+> **Jorge (piensa):** Atrás de la foto hay algo doblado.
+
+Se ve el papelito y se guarda en el inventario.
+
+> **Jorge (piensa):** El papelito.
+>
+> **Jorge (piensa):** El número de papá, con la letra de mamá.
+>
+> **Jorge (piensa):** Lo guardé veinte años.
+>
+> **Jorge (piensa):** Y nunca lo llamé.
+
+### El portero
+
+Estática y la voz: _"…Jorge… ¿estás?…"_. Esta vez Jorge **no contesta**: _"No contesto."_ / _"Como hacía con mamá cuando me buscaba."_ / _"Dejó de sonar."_
+
+### Otros pensamientos
+
+| Dónde | Pensamiento |
+|---|---|
+| Portarretratos | _"María y yo."_ / _"Esa misma tarde me dijo que se iba a Córdoba."_ |
+| Caja | _"La caja con mi nombre."_ / _"Esa noche me la llevé de la casa de mamá. En el mismo bolso."_ |
+
+### Objetivo en pantalla
+
+Los mismos de las otras noches: **Anotar lo que recordé en la pizarra** → **Atender el portero** → **Irme a dormir**.
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| La pelea en la pizarra: "Anoté el cuarto recuerdo: la pelea, a los veinte. No pude escribir nada más." | Al anotar el recuerdo |
+| El papelito, en la billetera: "Atrás de la foto de mamá, en la billetera, estaba el papelito con el número de papá. Lo llevo encima hace veinte años y nunca lo llamé." | Al mirar la billetera |
+| El portero, la cuarta noche: "Sonó el portero y la voz dijo mi nombre. No contesté. Como hacía con mamá cuando me llamaba." | Al atender el portero |
+
+### Final de la locación
+
+Termina cuando Jorge **se duerme**. En el prototipo completo es el **fin del prototipo**: la Pre-sesión 5 y la Sesión 5 (el reencuentro) todavía no están.
+
+### Pendiente de definir
+
+- ¿La voz del portero vuelve a hablar? ¿Jorge vuelve a atender?

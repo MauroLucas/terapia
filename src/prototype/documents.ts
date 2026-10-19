@@ -10,7 +10,7 @@ interface Page {
   opts: { w?: number; h?: number; paper?: number }
 }
 
-export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin' | 'cuaderno' | 'fotoFiesta'
+export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin' | 'cuaderno' | 'fotoFiesta' | 'papelito'
 
 // Boletín de la Sesión 2. Firmado: la firma de la mamá, un garabato
 function boletinPage(firmado: boolean): Page {
@@ -245,6 +245,26 @@ export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: P
           g.beginPath().arc(36, -40, 10, 0.3, Math.PI - 0.3).strokePath()
           c.add(g)
           c.add(text(scene, 150, 148, 'J y M', 22, '#7a3b8a', { fontFamily: HAND_FONT }).setOrigin(0.5).setAngle(-5))
+        },
+      },
+    ],
+  },
+  papelito: {
+    nombre: 'Papelito',
+    texto: 'El número de papá, con la letra de mamá. Me lo dio la noche de la pelea. Nunca lo llamé.',
+    pages: [
+      {
+        // Un papel arrancado de una libreta, con la letra de la mamá (número inventado, provisorio)
+        opts: { w: 440, h: 300, paper: 0x2b2018 },
+        build: (scene, c) => {
+          const g = scene.add.graphics()
+          g.fillStyle(0xf2ecd8).fillRect(-170, -100, 340, 200)
+          g.lineStyle(1, 0xc9bfa0)
+          for (let y = -60; y <= 80; y += 28) g.lineBetween(-160, y, 160, y)
+          g.lineStyle(2, 0xd9d1b8).lineBetween(-60, -100, -60, 100)
+          c.add(g)
+          c.add(text(scene, 0, -38, 'Papá', 30, '#2a3a6a', { fontFamily: HAND_FONT }).setOrigin(0.5).setAngle(-3))
+          c.add(text(scene, 0, 26, '4555-0142', 40, '#2a3a6a', { fontFamily: HAND_FONT }).setOrigin(0.5).setAngle(-2))
         },
       },
     ],

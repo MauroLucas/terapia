@@ -144,7 +144,9 @@ Adentro de una sesión, las reglas cambian. Esto es lo que se definió con la pr
 - **Momentos sin forma de fallar:** algunos recuerdos piden una acción simple, como bailar con María en la Sesión 3 (apretar ← → alternando). No hay ritmo que seguir ni forma de hacerlo mal.
 - **El recuerdo no se puede cambiar.** Si el jugador elige algo que no pasó, el sueño no lo deja (en la Sesión 2, la tinta de la firma se borra). La elección está para dar ilusión de control.
 - **No se puede perder.** Los puzzles ayudan si el jugador se traba (la sortija se agranda, Vela da pistas).
-- **Los momentos violentos no los hace el jugador.** El recuerdo se corta justo antes, como si la mente de Jorge no quisiera mirarlo, y sigue con lo que quedó (por ejemplo, en la pelea con su mamá: ella en el piso).
+- **Los momentos violentos no los hace el jugador.** El recuerdo se corta justo antes, como si la mente de Jorge no quisiera mirarlo, y sigue con lo que quedó. En la Sesión 2 el corte es a negro; en la pelea de la Sesión 4, **la imagen se rompe como un vidrio** y lo siguiente es la mamá en el piso.
+- **El odio nubla** (Sesión 4): cuando Jorge se enoja, la pantalla se tiñe de rojo, la llama se achica y se pone roja, y **la voz de Vela llega rota**, con letras que faltan. Jorge no la escucha hasta que sale de la casa.
+- **Lo que pasó no se arregla.** Después de algo malo, el jugador puede elegir intentar repararlo (ayudar a la mamá, pedirle perdón), pero el recuerdo no cambia: _"Quise… Pero esa noche no hice nada."_
 - Al terminar, Jorge **despierta en la camilla** y se suma un tramo a la línea de tiempo.
 
 ### Combate

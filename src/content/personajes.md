@@ -58,9 +58,9 @@ _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesi�
 | Qué pasó con ella _(spoiler)_ | Tuvo un **primer ACV** y el médico le recomendó estar más tranquila. Por eso hizo un **viaje con Jorge**, en el que se reencontraron como madre e hijo y volvieron a tener una relación cercana. Poco después murió de un **segundo ACV**, terminal. La foto de la billetera es de ese viaje, y "12/08" es su fecha. Ver "Historia y mundo" → Lore |
 | En la Sesión 2 | En la casa del barrio: se ofrece a firmar el boletín, le pide que se lo dé al papá "cuando esté tranquilo", y a la noche se lo pasa firmado por debajo de la puerta. Sigue sin cara |
 | En el sueño | En la Sesión 1 (la feria) aparece en el recuerdo de cuando Jorge se perdió de chico: le compra algodón de azúcar, lo mira desde el banco de la calesita y, al final, lo encuentra. **No tiene cara**: una luz se la tapa. Le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Aspecto en el prototipo: pelo largo castaño, tapado terracota (provisorio) |
-| Distancia | De grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte**: Jorge la empujó, ella se cayó y se lastimó. Dejaron de hablarse hasta el viaje. A Jorge le dejó **mucha culpa** |
+| Distancia | De grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte**: Jorge la empujó, ella se cayó y se lastimó. Después ella lo buscaba y él la esquivaba: se veían poco (como mucho tres veces por año), todo cortante, y **nunca hablaron de esa noche**. Así hasta el viaje. A Jorge le dejó **mucha culpa** |
 | Su muerte _(spoiler)_ | Es lo que llevó a Jorge a la crisis del baño |
-| La pelea | Le quería dar un número para que llamara a su papá, que estaba mal: no quería que su hijo viviera con rencor ni con culpa. Jorge no quería y ella insistió. Le dijo que se estaba pareciendo a él (_"Vas a terminar como tu padre"_, provisorio) y ahí Jorge la empujó. Esa misma tarde, María había cortado con él |
+| La pelea | Le quería dar un número para que llamara a su papá, que estaba mal: no quería que su hijo viviera con rencor ni con culpa. Jorge no quería y ella insistió. Le dijo que se estaba pareciendo a él (_"Vas a terminar como tu padre"_, provisorio) y ahí Jorge la empujó. Esa misma tarde, María había cortado con él. Se juega en la **Sesión 4: La pelea** |
 | Por definir | ¿A dónde viajaron? ¿En qué año? |
 
 ### Papá de Jorge _(sin nombre)_
@@ -177,7 +177,7 @@ _Personajes propuestos por el agente para la idea del usuario de "María como re
 | Trato | Cálido y tranquilo. No se lleva bien con la tecnología (_"Estas cosas de la tecnología no son lo mío"_), lo que contrasta con la máquina que usa _(provisorio)_ |
 | Qué hace | Le hace preguntas sobre cómo está, si mejoró y si toma la medicación. Después lo lleva al cuarto de inducción, le explica el tratamiento y lo hace acostar en la máquina. No se da cuenta cuando Jorge le miente |
 | Aspecto | En el prototipo: guardapolvo blanco sobre camisa celeste, pelo canoso y anteojos (provisorio) |
-| En el sueño | Es una **llama de vela** que flota al lado de Jorge y lo acompaña. Habla por la máquina |
+| En el sueño | Es una **llama de vela** que flota al lado de Jorge y lo acompaña. Habla por la máquina. En la pelea de la Sesión 4 trata de hablarle, pero Jorge está nublado por el odio: su voz llega rota y la llama casi se apaga |
 | Qué es _(spoiler)_ | **Un personaje del subconsciente de Jorge** que trata de ayudarlo a seguir adelante. Como todo Neural, lo inventa su mente |
 | Por definir | Nombre de pila |
 
@@ -190,6 +190,15 @@ _Personajes propuestos por el agente para la idea del usuario de "María como re
 | Primera aparición | Sesión 1: La feria |
 | Qué son | Siluetas grises, **sin cara**, repartidas por la feria. No son parte del recuerdo: la luz no las ilumina |
 | Qué dicen | Casi nada: _"¿Y tu mamá, nene?"_, o algo que no se entiende |
+
+### El inmobiliario _(sin nombre)_
+
+| Campo | Valor |
+|---|---|
+| Primera aparición | Sesión 4: La pelea, en el departamento vacío |
+| Rol | Les muestra el departamento a Jorge y María. Habla de más, como cualquier inmobiliario: _"Luminoso, ¿eh? Ideal para una pareja que arranca."_ Los deja solos y ahí María corta |
+| Cómo es | Una silueta sin cara, con una carpeta: no es parte de lo que Jorge recuerda (provisorio) |
+| Por definir | ¿Firman el alquiler ese día? |
 
 ### Gente de la fiesta _(sin nombre)_
 

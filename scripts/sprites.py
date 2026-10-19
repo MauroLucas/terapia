@@ -53,6 +53,9 @@ FONDOS = [
     ('club', 'Dream3', {}, "REVEAL; s.setArea('club'); s.player.setX(3300); s.flame.setX(3370); s.maria.setTexture('mariaFiesta0').setPosition(3510, 530)", 2700),
     ('casa-maria', 'Dream3', {}, "REVEAL; s.setArea('casa'); s.player.setX(5700); s.flame.setX(5770); s.maria.setPosition(5880, 530)", 5000),
     ('casa-maria-living', 'Dream3', {}, "REVEAL; s.setArea('casa'); s.player.setX(6300); s.flame.setX(6370); s.maria.setPosition(6700, 530)", 5720),
+    ('depto-vacio', 'Dream4', {}, 'REVEAL', 0),
+    ('depto-vacio-cocina', 'Dream4', {}, "REVEAL; s.player.setX(2000); s.flame.setX(2070); s.maria.setX(2150)", 1180),
+    ('casa-pelea', 'Dream4', {}, "REVEAL; s.setArea('casa'); s.dark.setAlpha(0); s.player.setX(3700); s.flame.setX(3770)", 3300),
 ]
 
 # Personajes dibujados en la escena: (archivo, fondo del que se recorta, recorte x, y, ancho, alto en pantalla)

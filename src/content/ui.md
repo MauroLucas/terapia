@@ -82,6 +82,8 @@ _En el prototipo, la pizarra está vacía a la mañana y se actualiza en **La pr
 
 **Tercer tramo:** _"Adolescencia · La fiesta"_. En **La tercera noche** Jorge lo escribe cerca de los 17, más arriba que el boletín para que no se tapen: _"La fiesta"_, y abajo _"María. La foto. El primer beso"_. Esta vez quiere escribir todo.
 
+**Cuarto tramo:** _"Juventud · La pelea"_. En **La cuarta noche** Jorge lo escribe a los 20, **en rojo oscuro** (en la pizarra y en la marca de la pared): _"La pelea"_, y nada más. _"No puedo escribir lo que hice."_
+
 **Por definir**
 
 - ¿Qué datos anota cada tramo (fechas, personas, lugares, objetos)?
@@ -145,7 +147,7 @@ Arriba a la izquierda hay un cartel chico con el **objetivo actual** de la locac
 
 - Se **actualiza solo** según lo que Jorge ya sabe y lo que lleva encima. Cuando cambia, el texto nuevo aparece con un fundido y queda unos segundos en verde.
 - Aparece después de los pensamientos de entrada de la locación y se esconde en las secuencias sin control (por ejemplo, el ascensor).
-- Por ahora está en el **Hall del edificio**, en el **consultorio** del doctor Vela, en la **Sesión 1**, en **La primera noche**, en la **Pre-sesión 2**, en la **Sesión 2**, en **La segunda noche**, en la **Pre-sesión 3**, en la **Sesión 3** y en **La tercera noche** (ver "Locaciones" → "Objetivo en pantalla" de cada una). En la Casa de Jorge y el pasillo de los consultorios: _por definir_.
+- Por ahora está en el **Hall del edificio**, en el **consultorio** del doctor Vela, en la **Sesión 1**, en **La primera noche**, en la **Pre-sesión 2**, en la **Sesión 2**, en **La segunda noche**, en la **Pre-sesión 3**, en la **Sesión 3**, en **La tercera noche**, en la **Pre-sesión 4**, en la **Sesión 4** y en **La cuarta noche** (ver "Locaciones" → "Objetivo en pantalla" de cada una). En la Casa de Jorge y el pasillo de los consultorios: _por definir_.
 - Textos provisorios, propuestos por el agente.
 
 ## Controles táctiles
@@ -182,7 +184,7 @@ _Propuesta:_ de fondo, el cuarto de Jorge a oscuras con él durmiendo.
 ## Flujo de pantallas
 
 ```
-Aviso de contenido → Menú principal → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio y cuarto de inducción) → Sesión 1: La feria → Despertar → La primera noche → Pre-sesión 2 → Sesión 2: El boletín → Despertar → La segunda noche → Pre-sesión 3 → Sesión 3: La fiesta → Despertar → La tercera noche
+Aviso de contenido → Menú principal → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio y cuarto de inducción) → Sesión 1: La feria → Despertar → La primera noche → Pre-sesión 2 → Sesión 2: El boletín → Despertar → La segunda noche → Pre-sesión 3 → Sesión 3: La fiesta → Despertar → La tercera noche → Pre-sesión 4 → Sesión 4: La pelea → Despertar → La cuarta noche
                           ↑                    ↓
                           └──── Menú de pausa (Diario / Opciones)
 ```

@@ -114,6 +114,12 @@ export const sfx = {
   flame() { noiseBurst(0.7, 900, 0.06); tone(523.3, 1.4, 'sine', 0.05, 0.1); tone(784, 1.6, 'sine', 0.03, 0.3) },
   // Sesión 3: el flash de la cámara (carga y disparo) y el teléfono de la casa de María
   flash() { tone(2600, 0.25, 'sine', 0.02); tone(3400, 0.2, 'sine', 0.015, 0.12); noiseBurst(0.08, 5000, 0.08, 'highpass') },
+  // Sesión 4: la imagen se rompe como un vidrio
+  vidrio() {
+    noiseBurst(0.35, 6000, 0.22, 'highpass')
+    for (let i = 0; i < 6; i++) tone(2400 + Math.random() * 2600, 0.25 + Math.random() * 0.3, 'triangle', 0.035, 0.05 + i * 0.07)
+    tone(70, 0.6, 'sine', 0.2, 0.05)
+  },
   telefono() { for (let i = 0; i < 2; i++) { tone(440, 0.4, 'square', 0.03, i * 0.5); tone(480, 0.4, 'square', 0.03, i * 0.5) } },
 }
 
