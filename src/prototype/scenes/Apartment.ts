@@ -33,6 +33,9 @@ import { controlsHelp } from '../touch'
 // Con `{ manana: true, vuelta: 6 }` es la Pre-sesión 7 (Office, sesión 7).
 // Con `{ noche: true, vuelta: 7 }` es La séptima noche: anota la muerte de su mamá y vuelve a leer el informe de
 // Neural, que ahora se lee debajo de la tachadura. En el portero, una voz de mujer se corta antes de decir su nombre.
+// Con `{ manana: true, vuelta: 7 }` es la Pre-sesión 8 (Office, sesión 8).
+// Con `{ noche: true, vuelta: 8 }` es La octava noche: anota el velorio y, en el bolsillo del saco negro, encuentra
+// el número nuevo de María. En el portero, la voz suena preocupada.
 
 const FLOOR = 600
 const CEIL = 110
@@ -115,6 +118,7 @@ export class Apartment extends Phaser.Scene {
   private servilletaVista = false
   private boletoVisto = false
   private informeLeido = false
+  private numeroVisto = false
   private goal?: ReturnType<typeof objective>
   private pizarraHecha = false
   private cajaVista = false
@@ -132,7 +136,7 @@ export class Apartment extends Phaser.Scene {
     this.noche = !!data.noche
     this.manana = !!data.manana
     this.vuelta = data.vuelta ?? 1
-    this.pizarraHecha = this.cajaVista = this.fotoPuesta = this.papelitoVisto = this.servilletaVista = this.boletoVisto = this.informeLeido = false
+    this.pizarraHecha = this.cajaVista = this.fotoPuesta = this.papelitoVisto = this.servilletaVista = this.boletoVisto = this.informeLeido = this.numeroVisto = false
     this.timbreNoche = 'no'
     this.goal = undefined
     this.room = 'cuarto'
@@ -816,6 +820,12 @@ export class Apartment extends Phaser.Scene {
       c.fillStyle(0x2f3a52).fillRoundedRect(205, 478, 100, 30, 8).fillRoundedRect(292, 482, 40, 16, 6)
       c.fillStyle(0x8fb3d9, 0.5).fillCircle(232, 512, 3).fillCircle(270, 514, 2)
     }
+    if (this.vuelta === 8) {
+      // El saco negro del velorio, tirado sobre la cama
+      const c = this.add.graphics().setDepth(6)
+      c.fillStyle(0x1d1f26).fillRoundedRect(205, 478, 104, 30, 8).fillRoundedRect(296, 482, 40, 16, 6)
+      c.fillStyle(0x2b2e38).fillRect(240, 484, 3, 22)
+    }
     if (this.vuelta === 7) {
       // El informe de Neural, sobre la cómoda
       const inf = this.add.graphics().setDepth(6)
@@ -846,6 +856,7 @@ export class Apartment extends Phaser.Scene {
     if (recuerdos >= 4) this.wallMark(20, 0x8a3a3a)
     if (recuerdos >= 5) this.wallMark(30, 0x3a5a8a)
     if (recuerdos >= 6) this.wallMark(38, 0xc9952e)
+    if (recuerdos >= 7) this.wallMark(39, 0x2b2b2b)
   }
 
   private drawFotoPortarretratos() {
@@ -864,6 +875,7 @@ export class Apartment extends Phaser.Scene {
       { id: 'caja', name: 'Caja', room: 'cuarto', x: 318, y: 530, action: () => this.cajaNoche() },
       ...(this.vuelta === 5 ? [{ id: 'campera', name: 'Campera', room: 'cuarto' as RoomId, x: 254, y: 470, action: () => this.campera() }] : []),
       ...(this.vuelta === 6 ? [{ id: 'cajon', name: 'Cajón de la cómoda', room: 'cuarto' as RoomId, x: 780, y: 520, action: () => this.cajonBoletos() }] : []),
+      ...(this.vuelta === 8 ? [{ id: 'saco', name: 'Saco negro', room: 'cuarto' as RoomId, x: 254, y: 470, action: () => this.sacoNumero() }] : []),
       ...(this.vuelta === 7 ? [{ id: 'informe', name: 'Informe de Neural', room: 'cuarto' as RoomId, x: 780, y: 480, action: () => this.informeNoche() }] : []),
       { id: 'cama', name: 'Dormir', room: 'cuarto', x: 190, y: 470, action: () => this.dormir() },
       { id: 'portarretratos', name: 'Portarretratos', room: 'cuarto', x: 718, y: 430, action: () => this.portarretratosNoche() },
@@ -902,7 +914,9 @@ export class Apartment extends Phaser.Scene {
     this.cameras.main.fadeIn(2000, 0, 0, 0)
     sfx.door()
     await new Promise((r) => this.time.delayedCall(1800, r))
-    await say(this, this.vuelta === 7
+    await say(this, this.vuelta === 8
+      ? [this.think('Volví.'), this.think('Todavía tengo puesto el olor de las flores.'), this.think('El velorio. María en la vereda.'), this.think('Tengo que anotarlo.')]
+      : this.vuelta === 7
       ? [this.think('Volví.'), this.think('La casa está muy callada.'), this.think('Mamá se murió. Quince días después del viaje.'), this.think('Yo estaba con ella.'), this.think('Tengo que anotarlo.')]
       : this.vuelta === 6
       ? [this.think('Volví.'), this.think('San Rafael. El río. Los álamos.'), this.think('Le vi la cara a mamá.'), this.think('Tengo que anotarlo.')]
@@ -963,12 +977,19 @@ export class Apartment extends Phaser.Scene {
         c.add(text(this, xb, -112, 'El boletín', 22, '#2e5f2c', { fontFamily: HAND_FONT }).setOrigin(0.5, 1))
         c.add(text(this, xb, 104, 'papá. Esa noche no\nle abrí a mamá.\nConocí a María', 16, '#4a5060', { fontFamily: HAND_FONT, align: 'center' }).setOrigin(0.5, 0))
       }
+      if (recuerdos >= 8) {
+        // Octavo recuerdo: el velorio, al otro día. En gris, arriba de todo
+        const xh = x0 + ((x1 - x0) * 39.2) / 40
+        g.fillStyle(0x6a7080).fillCircle(xh, 0, 6)
+        g.lineStyle(2, 0x6a7080).lineBetween(xh, -10, xh, -192)
+        c.add(text(this, xh - 6, -192, 'El velorio. María', 18, '#4a5060', { fontFamily: HAND_FONT }).setOrigin(1, 0.5))
+      }
       if (recuerdos >= 7) {
         // Séptimo recuerdo: la muerte de mamá, quince días después del viaje. En negro, más arriba
         const xg = x0 + ((x1 - x0) * 38.6) / 40
         g.fillStyle(0x2b2b2b).fillCircle(xg, 0, 7)
         g.lineStyle(2, 0x2b2b2b).lineBetween(xg, -10, xg, -150)
-        c.add(text(this, xg + 14, -154, 'Mamá', 22, '#2b2b2b', { fontFamily: HAND_FONT }).setOrigin(1, 1))
+        c.add(text(this, recuerdos >= 8 ? xg - 4 : xg + 14, -154, 'Mamá', 22, '#2b2b2b', { fontFamily: HAND_FONT }).setOrigin(1, 1))
         c.add(text(this, xg - 20, 152, 'Quince días después.\nEstaba con ella.', 16, '#2b2b2b', { fontFamily: HAND_FONT, align: 'center' }).setOrigin(0.5, 0))
       }
       if (recuerdos >= 6) {
@@ -1012,6 +1033,7 @@ export class Apartment extends Phaser.Scene {
   }
 
   private async pizarraNoche() {
+    if (this.vuelta === 8) return this.pizarraNoche8()
     if (this.vuelta === 7) return this.pizarraNoche7()
     if (this.vuelta === 6) return this.pizarraNoche6()
     if (this.vuelta === 5) return this.pizarraNoche5()
@@ -1188,6 +1210,50 @@ export class Apartment extends Phaser.Scene {
     this.nextGoal()
   }
 
+  // Octava noche: el velorio, al otro día de la muerte de mamá
+  private async pizarraNoche8() {
+    if (this.pizarraHecha) {
+      await this.pizarraOverlay(8)
+      await say(this, [this.think('"El velorio. María."'), this.think('Ya casi no queda lugar.')])
+      return
+    }
+    await this.pizarraOverlay(7)
+    await say(this, [this.think('¿Cuándo fue el velorio?')])
+    for (;;) {
+      const i = await choose(this, ['Una semana después', 'Al otro día', 'Un mes después', 'No fui'], { x: 640, y: 600 })
+      if (i === 1) break
+      await say(this, [this.think(i === 3 ? 'Fui. Aunque no quería estar ahí.' : 'No. Fue al otro día.')])
+    }
+    sfx.paper()
+    await this.pizarraOverlay(8)
+    await say(this, [this.think('"El velorio. María."'), this.think('No escribo lo que le dije.')])
+    this.pizarraHecha = true
+    this.wallMark(39.5, 0x6a7080)
+    if (!state.lineaDeTiempo.includes('La pérdida: el velorio')) state.lineaDeTiempo.push('La pérdida: el velorio')
+    this.pista('El velorio, en la pizarra', 'Anoté el octavo recuerdo: el velorio de mamá, al otro día. María vino a verme.')
+    this.nextGoal()
+  }
+
+  // Octava noche: en el bolsillo del saco negro, el número nuevo de María
+  private async sacoNumero() {
+    if (this.numeroVisto) {
+      await say(this, [this.think('"Llamame. A la hora que sea."')])
+      return
+    }
+    this.numeroVisto = true
+    sfx.paper()
+    await say(this, [this.think('El saco del velorio.'), this.think('En el bolsillo hay un papel.')])
+    this.addInventory('numeroMaria')
+    await showObjeto(this, 'numeroMaria')
+    await say(this, [
+      this.think('El número de María.'),
+      this.think('Como el papelito de papá.'),
+      this.think('Otro número que guardo y no llamo.'),
+    ])
+    this.pista('El número, en el saco', 'En el bolsillo del saco negro estaba el número nuevo de María. Como el papelito de papá: otro número que guardo y no llamo.')
+    this.nextGoal()
+  }
+
   // Séptima noche: el informe de Neural, otra vez. Debajo de la tachadura ahora se lee
   private async informeNoche() {
     if (this.informeLeido) {
@@ -1249,6 +1315,10 @@ export class Apartment extends Phaser.Scene {
   }
 
   private async fotoNoche() {
+    if (this.vuelta >= 8) {
+      await say(this, [this.think('San Rafael. La misma foto que pusieron arriba del cajón.')])
+      return
+    }
     if (this.vuelta >= 7) {
       await say(this, [this.think('San Rafael. 12/08.'), this.think('Quince días después ya no estaba.')])
       return
@@ -1357,6 +1427,10 @@ export class Apartment extends Phaser.Scene {
 
   // Tercera noche: la foto vuelve al portarretratos
   private async portarretratosNoche() {
+    if (this.vuelta >= 8) {
+      await say(this, [this.think('María a los diecisiete.'), this.think('En la vereda me miraba igual. Preocupada.')])
+      return
+    }
     if (this.vuelta >= 7) {
       await say(this, [this.think('María a los diecisiete.'), this.think('No la llamé cuando murió mamá.'), this.think('No llamé a nadie.')])
       return
@@ -1424,6 +1498,17 @@ export class Apartment extends Phaser.Scene {
     this.timbreNoche = 'atendido'
     await say(this, [this.speak('¿Hola?')])
     sfx.estatica()
+    if (this.vuelta === 8) {
+      // La voz de siempre, pero preocupada
+      sfx.estatica()
+      await say(this, [this.intercom('…Jorge… ¿estás bien?…')])
+      await say(this, [this.think('La misma voz de todas las noches.'), this.think('Hoy suena preocupada.')])
+      await new Promise((r) => this.time.delayedCall(1300, r))
+      await say(this, [this.think('Se cortó.')])
+      this.pista('El portero, la octava noche', 'Sonó el portero. La voz de siempre preguntó si estaba bien. Sonaba preocupada.')
+      this.nextGoal()
+      return
+    }
     if (this.vuelta === 7) {
       // Una voz de mujer, que se corta antes de decir su nombre
       sfx.estatica()
@@ -1508,7 +1593,10 @@ export class Apartment extends Phaser.Scene {
       await say(this, [this.think('Está sonando el portero.')])
       return
     }
-    if (this.vuelta === 7 && !this.informeLeido) {
+    if (this.vuelta === 8 && !this.numeroVisto) {
+      await say(this, [this.think('El saco está sobre la cama. Tiene algo en el bolsillo.')])
+      await this.sacoNumero()
+    } else if (this.vuelta === 7 && !this.informeLeido) {
       await say(this, [this.think('El informe, sobre la cómoda. Quiero leerlo otra vez.')])
       await this.informeNoche()
     } else if (this.vuelta === 6 && !this.boletoVisto) {
@@ -1530,7 +1618,9 @@ export class Apartment extends Phaser.Scene {
     }
     this.goal?.set(null)
     this.leaving = true
-    await say(this, this.vuelta === 7
+    await say(this, this.vuelta === 8
+      ? [this.think('"Supongo que no hay forma de reparar un corazón roto."'), this.think('Eso le dije.'), this.think('Y la dejé sola en la vereda.')]
+      : this.vuelta === 7
       ? [this.think('Me dijo algo antes de irse.'), this.think('Ojalá me acuerde.')]
       : this.vuelta === 6
       ? [this.think('Le vi la cara.'), this.think('Se reía.'), this.think('No quiero pensar en lo que vino después.')]
@@ -1555,9 +1645,15 @@ export class Apartment extends Phaser.Scene {
     this.roomTone?.stop(2)
     this.clock?.stop()
     await new Promise((r) => this.time.delayedCall(1500, r))
+    if (this.vuelta === 8) {
+      // Después de la octava noche termina el prototipo (la Sesión 9, el baño, todavía no está)
+      this.scene.start('LevelEnd', { titulo: this.registry.get('solo') ? 'Fin de la locación' : 'Fin del prototipo', locacion: 'La octava noche' })
+      return
+    }
     if (this.vuelta === 7) {
-      // Después de la séptima noche termina el prototipo (la Sesión 8 todavía no está)
-      this.scene.start('LevelEnd', { titulo: this.registry.get('solo') ? 'Fin de la locación' : 'Fin del prototipo', locacion: 'La séptima noche' })
+      // Suelta termina acá; en el prototipo completo sigue la Pre-sesión 8
+      if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'La séptima noche' })
+      else this.scene.start('Apartment', { manana: true, vuelta: 7 })
       return
     }
     if (this.vuelta === 6) {
@@ -1668,7 +1764,9 @@ export class Apartment extends Phaser.Scene {
 
   private async repasarPizarra() {
     await this.pizarraOverlay(this.vuelta)
-    await say(this, this.vuelta >= 6
+    await say(this, this.vuelta >= 7
+      ? [this.think('El viaje. Y quince días después, mamá.'), this.think('Lo que vino después todavía no lo anoté.')]
+      : this.vuelta >= 6
       ? [this.think('El viaje. Le vi la cara.'), this.think('Después del viaje hay un espacio vacío.'), this.think('No quiero mirarlo.')]
       : this.vuelta >= 5
       ? [this.think('Ya casi llego a hoy.'), this.think('El reencuentro. Me fui.')]

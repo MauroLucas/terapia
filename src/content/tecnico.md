@@ -20,7 +20,7 @@ Hay un **prototipo jugable** en este mismo sitio (página **🕹️ Prototipo** 
 
 | Campo | Valor |
 |---|---|
-| Qué cubre | Aviso de contenido → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción) → Sesión 1: La feria (sueño y despertar) → La primera noche → Pre-sesión 2 (la mañana y la consulta) → Sesión 2: El boletín (sueño y despertar) → La segunda noche → Pre-sesión 3 → Sesión 3: La fiesta (sueño y despertar) → La tercera noche → Pre-sesión 4 → Sesión 4: La pelea (sueño y despertar) → La cuarta noche → Pre-sesión 5 → Sesión 5: El reencuentro (sueño y despertar) → La quinta noche → Pre-sesión 6 → Sesión 6: El viaje del 12/08 (sueño y despertar) → La sexta noche → Pre-sesión 7 → Sesión 7: La muerte de su mamá (sueño y despertar) → La séptima noche |
+| Qué cubre | Aviso de contenido → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción) → Sesión 1: La feria (sueño y despertar) → La primera noche → Pre-sesión 2 (la mañana y la consulta) → Sesión 2: El boletín (sueño y despertar) → La segunda noche → Pre-sesión 3 → Sesión 3: La fiesta (sueño y despertar) → La tercera noche → Pre-sesión 4 → Sesión 4: La pelea (sueño y despertar) → La cuarta noche → Pre-sesión 5 → Sesión 5: El reencuentro (sueño y despertar) → La quinta noche → Pre-sesión 6 → Sesión 6: El viaje del 12/08 (sueño y despertar) → La sexta noche → Pre-sesión 7 → Sesión 7: La muerte de su mamá (sueño y despertar) → La séptima noche → Pre-sesión 8 → Sesión 8: El velorio (sueño y despertar) → La octava noche |
 | Cómo abrirlo | `npm run dev` y entrar a **Prototipo** |
 | Online | Publicado en GitHub Pages: https://maurolucas.github.io/terapia/ (se actualiza solo con cada push a `main`) |
 | Controles | Solo teclado (ver "Mecánicas" → Controles) |
@@ -58,6 +58,9 @@ Para no tener que jugar todo desde el principio, **cada locación tiene su propi
 | **🌄 Pre-sesión 7** | Aviso de contenido → Casa de Jorge, la mañana → Consulta con Vela → Cuarto de inducción → "Fin de la locación" | `Apartment.ts` (modo mañana, `vuelta: 6`) y `Office.ts` (sesión 7), en `src/prototype/scenes/` |
 | **🕯️ Sesión 7: La muerte de su mamá** | Aviso de contenido → La casa de la mamá y el hospital → Despertar en la camilla → "Fin de la locación" | `Dream7.ts` y `Office.ts` (despertar de la sesión 7), en `src/prototype/scenes/` |
 | **🌗 La séptima noche** | Aviso de contenido → Casa de Jorge, la séptima noche → "Fin de la locación" | `Apartment.ts` (modo noche, `vuelta: 7`), en `src/prototype/scenes/` |
+| **🌁 Pre-sesión 8** | Aviso de contenido → Casa de Jorge, la mañana → Consulta con Vela → Cuarto de inducción → "Fin de la locación" | `Apartment.ts` (modo mañana, `vuelta: 7`) y `Office.ts` (sesión 8), en `src/prototype/scenes/` |
+| **🥀 Sesión 8: El velorio** | Aviso de contenido → La sala velatoria y la vereda → Despertar en la camilla → "Fin de la locación" | `Dream8.ts` y `Office.ts` (despertar de la sesión 8), en `src/prototype/scenes/` |
+| **🌖 La octava noche** | Aviso de contenido → Casa de Jorge, la octava noche → "Fin de la locación" | `Apartment.ts` (modo noche, `vuelta: 8`), en `src/prototype/scenes/` |
 
 _El prototipo y este documento se mantienen sincronizados: cada cambio de diseño en uno se refleja en el otro._
 

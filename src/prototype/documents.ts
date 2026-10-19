@@ -10,7 +10,7 @@ interface Page {
   opts: { w?: number; h?: number; paper?: number }
 }
 
-export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin' | 'cuaderno' | 'fotoFiesta' | 'papelito' | 'servilleta' | 'boleto' | 'informeClaro'
+export type ObjetoId = 'foto' | 'notas' | 'notaCajon' | 'banner' | 'informe' | 'llave' | 'papelHigienico' | 'ficha' | 'sortija' | 'boletin' | 'cuaderno' | 'fotoFiesta' | 'papelito' | 'servilleta' | 'boleto' | 'informeClaro' | 'numeroMaria'
 
 // Boletín de la Sesión 2. Firmado: la firma de la mamá, un garabato
 function boletinPage(firmado: boolean): Page {
@@ -318,6 +318,30 @@ export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: P
           }
           c.add(g)
           c.add(text(scene, 0, 96, 'así', 26, '#2a3a6a', { fontFamily: HAND_FONT }).setOrigin(0.5).setAngle(-4))
+        },
+      },
+    ],
+  },
+  numeroMaria: {
+    nombre: 'El número de María',
+    texto: 'María me lo dio en la vereda del velorio de mamá. Su número nuevo. "Llamame."',
+    pages: [
+      {
+        // Una hoja chiquita arrancada de una agenda, con la letra de María en violeta (número inventado, provisorio)
+        opts: { w: 440, h: 300, paper: 0x1d1f2a },
+        build: (scene, c) => {
+          const g = scene.add.graphics()
+          g.fillStyle(0xf7f4ec).fillRect(-160, -96, 320, 192)
+          g.lineStyle(1, 0xd9d4e6)
+          for (let y = -56; y <= 76; y += 26) g.lineBetween(-150, y, 150, y)
+          g.fillStyle(0xd9d4e6).fillCircle(-148, -84, 3).fillCircle(-148, 84, 3)
+          c.add(g)
+          c.add(text(scene, 0, -44, 'María', 30, '#5a3a8a', { fontFamily: HAND_FONT }).setOrigin(0.5).setAngle(-3))
+          c.add(text(scene, 0, 10, '15 4555-0838', 36, '#5a3a8a', { fontFamily: HAND_FONT }).setOrigin(0.5).setAngle(-2))
+          const l = text(scene, 40, 62, 'llamame', 24, '#5a3a8a', { fontFamily: HAND_FONT }).setOrigin(0.5).setAngle(-4)
+          c.add(l)
+          const u = scene.add.graphics().lineStyle(2, 0x5a3a8a).lineBetween(-4, 78, 86, 72)
+          c.add(u)
         },
       },
     ],

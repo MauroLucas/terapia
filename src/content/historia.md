@@ -143,7 +143,7 @@ Casa de Jorge (pizarra) → Neural → Sesión (una parte de su vida) → Casa d
 
 ### Mapa de sesiones
 
-Son **ocho sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
+Son **nueve sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 
 | # | Etapa | Recuerdo | Qué se sabe | Estado |
 |---|---|---|---|---|
@@ -154,12 +154,14 @@ Son **ocho sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 | 5 | Los 30 | **El reencuentro** | Se cruzan de casualidad en una esquina y siguen en un bar: ella está casada; él, soltero. Llueve; en la parada se acuerdan de cuando eran chicos y se besan casi por inercia. Jorge se va: ella lo dejó una vez y no le cree | En el prototipo (con La quinta noche) |
 | 6 | Adultez (~38) | **El viaje del 12/08** | Lo llaman del hospital a la oficina: el primer ACV de su mamá. Viajan juntos a **San Rafael, Mendoza**. Frente al río, Jorge intenta pedirle perdón y no le salen las palabras; ella le dice "ya sé, hijo" y **por primera vez se le ve la cara**. Ahí se sacan la foto de la billetera | En el prototipo (con La sexta noche) |
 | 7 | La pérdida (~38) | **La muerte de su mamá** | Quince días después del viaje, el segundo ACV. Jorge está con ella cuando muere y le agarra la mano. Sus últimas palabras quedan tachadas: se revelan en el final. Es lo que estaba tachado en el informe | En el prototipo (con La séptima noche) |
-| 8 | Hoy | **El baño** | La puerta del baño se abre. El portero: es ella. Jorge elige abrir | Idea |
+| 8 | La pérdida (~38) | **El velorio** | Al otro día. Jorge, distante con todos. En la vereda vuelve a hablar con María, que está preocupada por él y le da su número. Lo último que él le dice: _"Supongo que no hay forma de reparar un corazón roto"_ | En el prototipo (con La octava noche) |
+| 9 | Hoy | **El baño** | La puerta del baño se abre. El portero: es ella. Jorge elige abrir | Idea |
 | — | Epílogo | **El papá** | Jorge lo llama y va a verlo | Idea |
 
 - **Entre sesión y sesión**, Jorge vuelve a su casa (una noche) y a la mañana siguiente vuelve a Neural. La pizarra se va llenando de vuelta en vuelta.
 - La 3 (la fiesta) la sumó el usuario para profundizar la relación con María antes de la pelea: así la separación duele más.
 - La 5 la sumó el usuario como "una secuencia a los 30". Después decidió que es **una sesión larga**.
+- La 8 (el velorio) la sumó el usuario antes del baño, para que Jorge y María vuelvan a hablar: ella preocupada, él distante. Por eso el baño pasó a ser la 9.
 - _Por definir: la edad exacta de cada recuerdo, salvo los que ya están (la feria cerca de los 7, el boletín a los 15, la fiesta a los 17, la separación a los 20, el reencuentro a los 30, hoy a los 40)._
 
 _El mapa lo propuso el agente con lo que ya estaba en el GDD, y el usuario lo aprobó como base. Se ajusta sesión por sesión._

@@ -239,6 +239,18 @@ _Provisorio._ Después del último bip, silencio: solo el ambiente de la habitac
 ### La séptima noche
 
 Los mismos sonidos que las otras noches. En el portero, la voz de mujer se corta entre la estática antes de decir su nombre. _Provisorio._
+
+### Sesión 8: El velorio
+
+Casi sin sonidos nuevos: el ambiente de la sala, los pasos, la puerta y el papel cuando María le da el número. Lo que se siente es el silencio. _Provisorio._
+
+| Sonido | Notas |
+|---|---|
+| _Por definir_ | Un murmullo de gente lejos, en la sala, y la calle vacía en la vereda. En el prototipo todavía no están |
+
+### La octava noche
+
+Los mismos sonidos que las otras noches. En el portero, la voz pregunta si Jorge está bien. _Provisorio._
 ## Interfaz
 
 | Sonido | Notas |

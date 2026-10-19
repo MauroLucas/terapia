@@ -291,6 +291,7 @@ El prototipo usa solo poses sueltas. Con el arte final harían falta, como míni
 | ![](sprites/papelito.png) | `papelito` | 24 × 20 | Papelito doblado con el número del papá (ícono) | Sesión 4 (en el piso, después de la pelea) y La cuarta noche (en la billetera) |
 | ![](sprites/servilleta.png) | `servilleta` | 26 × 26 | Servilleta de bar con un dibujo (ícono) | Sesión 5 (el bar) y La quinta noche (la campera) |
 | ![](sprites/boleto.png) | `boleto` | 32 × 26 | Boleto de micro de larga distancia (ícono) | La sexta noche: cajón de la cómoda |
+| ![](sprites/numeroMaria.png) | `numeroMaria` | 26 × 22 | Hojita de agenda con un número en violeta (ícono) | Sesión 8 (se la da María) y La octava noche: bolsillo del saco |
 | ![](sprites/fotoFiesta.png) | `fotoFiesta` | 34 × 26 | Foto de la fiesta: Jorge y María, fondo oscuro con flash (ícono) | Sesión 3 (se saca) y La tercera noche (la caja y el portarretratos) |
 
 _Las marcas de gaseosa son genéricas y provisorias. Los objetos del inventario se ven chicos en el juego, pero de cerca se muestran como documentos (ver abajo)._
@@ -324,7 +325,7 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 
 ![Cuaderno de matemática](sprites/documentos/cuaderno-1.png) ![Sortija](sprites/documentos/sortija-1.png)
 
-![Foto de la fiesta](sprites/documentos/fotoFiesta-1.png) ![Papelito](sprites/documentos/papelito-1.png) ![Servilleta](sprites/documentos/servilleta-1.png) ![Boletos](sprites/documentos/boleto-1.png)
+![Foto de la fiesta](sprites/documentos/fotoFiesta-1.png) ![Papelito](sprites/documentos/papelito-1.png) ![Servilleta](sprites/documentos/servilleta-1.png) ![Boletos](sprites/documentos/boleto-1.png) ![El número de María](sprites/documentos/numeroMaria-1.png)
 
 | Documento | Descripción para el arte |
 |---|---|
@@ -338,6 +339,7 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 | Cuaderno | Hoja rayada de cuaderno escolar con las cuentas de Jorge y notas en violeta con la letra de María |
 | Papelito | Un papel arrancado de una libreta, con renglones, y con la letra de la mamá: "Papá" y un número de teléfono (inventado). Doblado en cuatro, gastado de estar veinte años en una billetera |
 | Servilleta | Servilleta de papel de bar, un poco mojada, con un dibujo en birome: la ventana de una cocina con macetas y plantas, y "así" con la letra de María |
+| El número de María | Una hojita arrancada de una agenda, con renglones, y la letra de María en violeta: "María", un número de teléfono (inventado) y "llamame" subrayado |
 | Boletos del micro | Dos boletos de micro de larga distancia, Buenos Aires → San Rafael, salida 11/08, asientos 23 y 24 |
 | Foto de la fiesta | Foto de papel con flash, de una fiesta de egresados: Jorge (suéter verde) y María (vestido bordó) abrazados, guirnaldas de colores atrás. En el borde blanco, "J y M" con la letra de María. Es la foto del portarretratos |
 | Sortija | La sortija de cerca, sobre un fondo oscuro |
@@ -509,6 +511,18 @@ Uno por ambiente. Las capturas son del prototipo sin la interfaz (a veces se ve 
 ![La habitación 4](sprites/fondos/terapia-intensiva-habitacion.png)
 
 **El hospital, de noche** (2000 px). El hospital de la Sesión 6, pero oscurecido: el pasillo de terapia intensiva con un ventanal negro y sillas, y la habitación 4 con la cama, una silla al lado y el monitor. Al final, el pasillo con la luz del amanecer entrando por el ventanal.
+
+### Sesión 8: El velorio
+
+![La sala velatoria](sprites/fondos/sala-velatoria.png)
+
+![El cajón](sprites/fondos/sala-velatoria-cajon.png)
+
+**La sala velatoria** (2400 px). Paredes bordó apagado, zócalo oscuro, apliques de luz amarilla, sillas contra la pared y gente sin cara de ropa oscura. El cajón cerrado, de madera, con la foto de San Rafael en un marco y dos coronas de flores. Un rincón con un termo y vasitos. Luz baja, sin contraste.
+
+![La vereda](sprites/fondos/vereda-velatorio.png)
+
+**La vereda, de noche** (1600 px). La fachada de la sala velatoria con su cartel, la puerta con luz amarilla, un farol y edificios con pocas ventanas prendidas. Frío y vacío.
 
 ## Cómo se regeneran las imágenes
 

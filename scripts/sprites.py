@@ -71,6 +71,9 @@ FONDOS = [
     ('casa-mama-domingo-cocina', 'Dream7', {}, "FREEZE; REVEAL; s.player.setX(1900); s.flame.setX(1970)", 1100),
     ('terapia-intensiva', 'Dream7', {}, "FREEZE; REVEAL; s.setArea('hospital'); s.player.setPosition(3500, 530); s.flame.setX(3570)", 3000),
     ('terapia-intensiva-habitacion', 'Dream7', {}, "FREEZE; REVEAL; s.setArea('hospital'); s.player.setPosition(4300, 530); s.flame.setX(4370); s.mama.setTexture('mamaMayor0').setAngle(-90).setPosition(4620, 470).setFlipX(false)", 3720),
+    ('sala-velatoria', 'Dream8', {}, "FREEZE; REVEAL; s.player.setPosition(1500, 530)", 1100),
+    ('sala-velatoria-cajon', 'Dream8', {}, "FREEZE; REVEAL; s.player.setPosition(700, 530)", 120),
+    ('vereda-velatorio', 'Dream8', {}, "FREEZE; REVEAL; s.setArea('vereda'); s.player.setPosition(3400, 530); s.maria.setVisible(true).setPosition(3720, 530)", 3000),
 ]
 
 # Personajes dibujados en la escena: (archivo, fondo del que se recorta, recorte x, y, ancho, alto en pantalla)

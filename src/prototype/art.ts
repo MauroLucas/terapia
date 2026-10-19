@@ -573,6 +573,12 @@ export function makeTextures(scene: Phaser.Scene) {
   g.fillStyle(0x4f9d4a).fillCircle(10, 18, 2).fillCircle(16, 18, 2)
   g.generateTexture('servilleta', 26, 26)
 
+  // Sesión 8: el papel con el número nuevo de María
+  g.clear()
+  g.fillStyle(0xf7f4ec).fillRect(0, 3, 26, 16)
+  g.lineStyle(1, 0x6a4a9a).lineBetween(4, 9, 18, 9).lineBetween(4, 14, 21, 14)
+  g.generateTexture('numeroMaria', 26, 22)
+
   // Sesión 6: la mamá de grande y el boleto del micro a San Rafael
   const mamaMayor: [string, Legs | 'sit', number][] = [['mamaMayor0', 'stand', 56], ['mamaMayor1', 'walkA', 56], ['mamaMayor2', 'walkB', 56], ['mamaMayorSentada', 'sit', 72]]
   for (const [key, pose, w] of mamaMayor) {

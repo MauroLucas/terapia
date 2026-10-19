@@ -30,6 +30,9 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | 21 | **Pre-sesión 7** | Casa de Jorge (la mañana) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
 | 22 | **Sesión 7: La muerte de su mamá** | Sueño lúcido: la casa de la mamá (de día) y el hospital (de noche), a los 38 | Poner la mesa, ayudarla, llamar a la ambulancia. Estar con ella hasta el final | En el prototipo |
 | 23 | **La séptima noche** | Casa de Jorge, de noche, después de la Sesión 7 | Anotar la muerte de su mamá y dormir. El informe de Neural, que ahora se lee | En el prototipo |
+| 24 | **Pre-sesión 8** | Casa de Jorge (la mañana) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
+| 25 | **Sesión 8: El velorio** | Sueño lúcido: la sala velatoria y la vereda, de noche, a los 38 | Atravesar el velorio, ir hasta el cajón, salir a tomar aire. María, preocupada; Jorge, distante | En el prototipo |
+| 26 | **La octava noche** | Casa de Jorge, de noche, después de la Sesión 8 | Anotar el velorio y dormir. En el saco negro, el número nuevo de María | En el prototipo |
 
 ## Casa de Jorge
 
@@ -2793,4 +2796,218 @@ Cierra el misterio que se abrió en la Casa de Jorge (_"¿Resistencia a qué? ¿
 
 ### Final de la locación
 
-Termina cuando Jorge **se duerme**. En el prototipo completo es el **fin del prototipo**: la Sesión 8 (El baño, el final) todavía no está.
+Termina cuando Jorge **se duerme**. En el prototipo completo sigue la **Pre-sesión 8**.
+
+## Pre-sesión 8
+
+### Resumen
+
+Una semana después de La séptima noche. Igual que las otras: Jorge se despierta, **suena el portero** (_"Debe ser el remis."_), puede repasar la pizarra y, al salir del cuarto, aparece sentado frente a Vela.
+
+### Qué cambia
+
+| Lugar | Pre-sesión 8 |
+|---|---|
+| Pizarra | _"El viaje. Y quince días después, mamá."_ / _"Lo que vino después todavía no lo anoté."_ |
+| La consulta | Al final, Vela: _"Hoy vamos al día siguiente."_ |
+| Cuarto de inducción | _"Hoy vas a ver a mucha gente, Jorge."_ / _"Y a alguien que te quiere."_ / _"Intentá escucharme. Acostate."_ |
+
+### Las preguntas
+
+_Provisorias, propuestas por el agente._ Las respuestas no tienen consecuencias.
+
+| Pregunta | La verdad | La mentira |
+|---|---|---|
+| ¿Te acordás del velorio de tu mamá? | "Poco. Mucha gente. Yo no quería estar ahí." → _"Hoy vamos a volver un rato."_ | "No fui." → _"Fuiste, Jorge."_ / _"Hoy lo vas a ver."_ |
+| Ese día, ¿estuviste con alguien? | "Creo que vino María. No me acuerdo bien." → _"Vino, sí."_ | "No. Estuve solo." → _"Mmm."_ / _"No tan solo como te acordás."_ |
+
+Después sigue la **Sesión 8: El velorio**.
+
+## Sesión 8: El velorio
+
+### Resumen
+
+Es la octava sesión, la segunda de **la pérdida**: **el velorio de la mamá**, al otro día de su muerte. Jorge tiene 38 años. Está **distante** con todos: la gente se le acerca a darle el pésame y él contesta lo mínimo; Vela le habla y él no le contesta. Mira el cajón, cerrado, con la foto de San Rafael arriba, y sale a tomar aire. En la vereda **llega María**. Está **preocupada** por él: le pregunta cómo está, si comió, le da su número nuevo y le dice que no tiene que pasar por esto solo. Jorge sigue cerrado, y **lo último que le dice** es:
+
+> **Jorge:** Supongo que no hay forma de reparar un corazón roto.
+
+Y vuelve adentro sin darse vuelta.
+
+_Decidido por el usuario: que haya una sesión del velorio antes de la del baño, que Jorge y María vuelvan a hablar ahí, que ella esté preocupada y él distante, y la última frase de Jorge. La sala, la gente, el café, el número nuevo de María y los demás diálogos los propuso el agente y son provisorios._
+
+### Cómo es este sueño
+
+| Regla | Qué pasa |
+|---|---|
+| **Jorge está distante** | La llama de Vela **no se le acerca**: lo sigue de lejos, por detrás, y más chica que nunca. Vela le habla y Jorge no le contesta (_"Jorge. Estoy acá."_ → _"…"_) |
+| **Recordar sin luz** | Como la llama está lejos, las cosas no se iluminan con ella: toman color **solo cuando Jorge pasa cerca**, y más despacio |
+| **Respuestas cortantes** | Cuando alguien le habla, el jugador puede elegir, pero **todas las opciones son cortantes** ("Gracias." / "Sí."; "Bien." / "No sé."). El jugador no puede hacer que Jorge se abra: es la forma de que se sienta su distancia |
+| **El calor de María** | Cuando llega María, la llama crece un poco. Cuando Jorge le dice la última frase, se achica y se aleja |
+| **La gente no tiene cara** | Siluetas oscuras, de ropa de velorio. Se le acercan solas cuando Jorge pasa |
+
+### Los lugares
+
+| Lugar | Qué hay |
+|---|---|
+| **La sala velatoria** | Paredes bordó apagado, apliques de luz amarilla, sillas contra la pared y gente sin cara. **El cajón, cerrado**, con **la foto de San Rafael** arriba (la copia de la heladera) y dos coronas de flores. Un **rincón del café** con un termo y vasitos. La puerta de **salida** |
+| **La vereda**, de noche | La fachada de la sala (**SALA VELATORIA**), un farol, edificios con algunas ventanas prendidas, la calle vacía |
+
+### Secuencia
+
+1. Cartel: _"28 de agosto · Al otro día"_. **Se le abren los ojos** cerca de la puerta. _"El velorio de mamá."_ / _"No me acuerdo de cómo llegué."_ / _"Hay mucha gente. No conozco a casi nadie."_
+2. Aparece la llama, lejos. Vela: _"Jorge. Estoy acá."_ Jorge: _"…"_ / Vela: _"Jorge, ¿me escuchás?"_ Jorge piensa: _"No quiero hablar con nadie."_ Objetivo: **Ir hasta mamá**.
+3. **El pésame:** en el camino, tres personas se le acercan (ver abajo).
+4. _Opcional:_ **el café.** _"Café de termo. Frío."_ / _"Mamá hubiera hecho mate para todos."_
+5. **El cajón** (ver abajo). Objetivo: **Salir a tomar aire**.
+6. **La vereda:** _"Afuera hace frío."_ / _"Mejor."_ **Llega María**, caminando. _"Jorge."_ / Jorge piensa: _"María."_ Objetivo: **Hablar con María**.
+7. **La charla** (ver abajo). Jorge vuelve adentro sin darse vuelta: _"No me di vuelta."_ / _"Ella se quedó en la vereda."_
+8. Vela: _"Jorge…"_ / _"Vas a despertar."_ La imagen funde a negro.
+
+### El pésame
+
+| Quién | Qué le dice | Qué puede contestar Jorge |
+|---|---|---|
+| Alguien, cerca de la puerta | _"Te acompaño en el sentimiento, Jorge."_ | "Gracias." / "Sí." |
+| Alguien, en las sillas | _"Era una santa tu mamá."_ / _"Siempre hablaba de vos."_ | "Gracias." / "Ya sé." |
+| Alguien, cerca del cajón | _"¿Y vos cómo estás, querido?"_ | "Bien." / "No sé." |
+
+Después de los tres: _"Todos me dicen lo mismo."_ / _"Yo les digo lo mismo a todos."_
+
+### El cajón
+
+> **Jorge (piensa):** Está cerrado.
+>
+> **Jorge (piensa):** Arriba pusieron la foto de la heladera.
+>
+> **Jorge (piensa):** San Rafael.
+>
+> **Jorge (piensa):** "Ya sé, hijo."
+>
+> **Jorge (piensa):** No puedo estar acá.
+>
+> **Vela:** Quedate un poco más, Jorge.
+>
+> **Jorge (piensa):** No.
+
+### La charla con María
+
+> **María:** Me enteré hoy. Vine apenas pude.
+>
+> **María:** Lo siento mucho, Jorge.
+>
+> **María:** ¿Cómo estás?
+
+Jorge: "Bien." o "Acá estoy." → María: _"No tenés que hacerte el fuerte conmigo."_
+
+> **María:** ¿Comiste algo hoy?
+
+Jorge: "No tengo hambre." o "No me acuerdo." → María: _"Estás muy flaco. Me preocupás."_
+
+> **María:** Tomá. Cambié el número.
+>
+> **María:** Llamame. A la hora que sea. De verdad.
+
+Se ve **el papel con su número** (ver "Objetos"). Jorge piensa: _"Otro papelito con un número."_ (como el del papá).
+
+> **María:** No tenés que pasar por esto solo, Jorge.
+
+Aparece **una sola opción**, como el perdón de la Sesión 6:
+
+> **Jorge:** Supongo que no hay forma de reparar un corazón roto.
+>
+> **María:** Jorge…
+
+Jorge vuelve a entrar, sin darse vuelta. María se queda debajo del farol.
+
+### Objetivo en pantalla
+
+| Cuándo | Objetivo |
+|---|---|
+| En la sala | Ir hasta mamá → Salir a tomar aire |
+| En la vereda | Hablar con María |
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| El velorio: "Al otro día fue el velorio de mamá. El cajón estaba cerrado, y arriba pusieron la foto de San Rafael. No pude quedarme ahí." | En el cajón |
+| El número de María: "En la vereda del velorio, María me dio su número nuevo. «Llamame. A la hora que sea.»" | Cuando se lo da |
+| La vereda: "María estaba preocupada por mí. Le dije: «Supongo que no hay forma de reparar un corazón roto». Y me volví adentro sin darme vuelta." | Al final |
+
+### Objetos
+
+| Objeto | Dónde | Qué es |
+|---|---|---|
+| El número de María ✓ | Se lo da María en la vereda | Una hojita de agenda con su letra, en violeta: "María", un número (inventado) y "llamame", subrayado |
+
+### El despertar
+
+> **Vela:** Despacio. Ya estás acá.
+>
+> **Vela:** Ella fue a buscarte, Jorge.
+>
+> **Jorge (piensa):** Y yo la dejé en la vereda.
+>
+> **Vela:** ¿Lo creés? Lo que le dijiste.
+>
+> **Jorge (piensa):** …
+
+Se suma a la línea de tiempo: _"La pérdida · El velorio"_.
+
+### Pendiente de definir
+
+- ¿Cómo se enteró María? (En el prototipo: _"Me enteré hoy"_, sin decir por quién.)
+- ¿Va el papá al velorio? En el prototipo no aparece: según el epílogo, la primera vez que aparece es cuando Jorge lo llama.
+- ¿Qué pasa entre el velorio (a los 38) y hoy (a los 40)? ¿Jorge llamó alguna vez a María?
+
+## La octava noche
+
+### Resumen
+
+Jorge vuelve a su casa después de la Sesión 8. Anota el velorio, encuentra en el bolsillo del saco negro **el número nuevo de María** (otro número que guarda y no llama, como el del papá), y en el portero **la voz de siempre suena preocupada**.
+
+_Lo propuso el agente y es provisorio._
+
+### Secuencia
+
+1. Desde negro, en el pasillo: _"Volví."_ / _"Todavía tengo puesto el olor de las flores."_ / _"El velorio. María en la vereda."_ / _"Tengo que anotarlo."_
+2. **La pizarra** (ver abajo).
+3. **El portero:** _"…Jorge… ¿estás bien?…"_ / _"La misma voz de todas las noches."_ / _"Hoy suena preocupada."_ / _"Se cortó."_
+4. **El saco negro**, tirado sobre la cama: en el bolsillo, el número de María. _"El número de María."_ / _"Como el papelito de papá."_ / _"Otro número que guardo y no llamo."_ Si se va a dormir sin mirarlo: _"El saco está sobre la cama. Tiene algo en el bolsillo."_ y lo mira antes.
+5. **Dormir:** _"«Supongo que no hay forma de reparar un corazón roto.»"_ / _"Eso le dije."_ / _"Y la dejé sola en la vereda."_
+
+### La pizarra
+
+| Opción | Qué pasa |
+|---|---|
+| Una semana o un mes después | _"No. Fue al otro día."_ |
+| No fui | _"Fui. Aunque no quería estar ahí."_ |
+| **Al otro día** | Es la correcta. Arriba de todo, al lado de "Mamá", escribe en gris: **"El velorio. María"** |
+
+Al anotarlo: _"«El velorio. María.»"_ / _"No escribo lo que le dije."_ Si la vuelve a mirar: _"Ya casi no queda lugar."_
+
+### Otros pensamientos
+
+| Dónde | Pensamiento |
+|---|---|
+| Billetera | _"San Rafael. La misma foto que pusieron arriba del cajón."_ |
+| Portarretratos | _"María a los diecisiete."_ / _"En la vereda me miraba igual. Preocupada."_ |
+
+### Pistas del diario
+
+| Pista | Cuándo se anota |
+|---|---|
+| El velorio, en la pizarra: "Anoté el octavo recuerdo: el velorio de mamá, al otro día. María vino a verme." | Al anotar el recuerdo |
+| El número, en el saco: "En el bolsillo del saco negro estaba el número nuevo de María. Como el papelito de papá: otro número que guardo y no llamo." | Al mirar el saco |
+| El portero, la octava noche: "Sonó el portero. La voz de siempre preguntó si estaba bien. Sonaba preocupada." | Al atender el portero |
+
+### Objetos
+
+| Objeto | Dónde | Qué es |
+|---|---|---|
+| Saco negro | Cuarto: sobre la cama | El saco del velorio |
+| El número de María ✓ | En el bolsillo del saco | El que le dio María en la vereda |
+
+### Final de la locación
+
+Termina cuando Jorge **se duerme**. En el prototipo completo es el **fin del prototipo**: la Sesión 9 (El baño, el final) todavía no está.

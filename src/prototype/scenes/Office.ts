@@ -196,6 +196,22 @@ const SEPTIMA: Pregunta[] = [
   },
 ]
 
+// Preguntas de la consulta antes de la Sesión 8 (provisorias)
+const OCTAVA: Pregunta[] = [
+  {
+    id: 's8-velorio',
+    q: '¿Te acordás del velorio de tu mamá?',
+    verdad: { dice: 'Poco. Mucha gente. Yo no quería estar ahí.', vela: ['Hoy vamos a volver un rato.'] },
+    mentira: { dice: 'No fui.', vela: ['Fuiste, Jorge.', 'Hoy lo vas a ver.'] },
+  },
+  {
+    id: 's8-solo',
+    q: 'Ese día, ¿estuviste con alguien?',
+    verdad: { dice: 'Creo que vino María. No me acuerdo bien.', vela: ['Vino, sí.'] },
+    mentira: { dice: 'No. Estuve solo.', vela: ['Mmm.', 'No tan solo como te acordás.'] },
+  },
+]
+
 const ULTIMA: Pregunta = {
   id: 'medicacion',
   q: '¿Estás tomando la medicación?',
@@ -482,8 +498,10 @@ export class Office extends Phaser.Scene {
     cam.fadeIn(1500, 0, 0, 0)
     await this.wait(1600)
     await say(this, [this.doc('Hola, Jorge. Pasó una semana.')])
-    for (const p of this.sesion === 7 ? SEPTIMA : this.sesion === 6 ? SEXTA : this.sesion === 5 ? QUINTA : this.sesion === 4 ? CUARTA : this.sesion === 3 ? TERCERA : SEGUNDA) await this.preguntar(p)
-    await say(this, this.sesion === 7
+    for (const p of this.sesion === 8 ? OCTAVA : this.sesion === 7 ? SEPTIMA : this.sesion === 6 ? SEXTA : this.sesion === 5 ? QUINTA : this.sesion === 4 ? CUARTA : this.sesion === 3 ? TERCERA : SEGUNDA) await this.preguntar(p)
+    await say(this, this.sesion === 8
+      ? [this.doc('Bien.'), this.doc('Hoy vamos al día siguiente.'), this.doc('Acompañame.')]
+      : this.sesion === 7
       ? [this.doc('Bien.'), this.doc('Hoy vamos a ir a lo que estaba tachado.'), this.doc('Acompañame.')]
       : [this.doc('Bien.'), this.doc('Hoy vamos a ir un poco más adelante en tu vida.'), this.doc('Acompañame.')])
     cam.startFollow(this.player, true, 0.08, 0.08)
@@ -547,6 +565,12 @@ export class Office extends Phaser.Scene {
     this.vela.setVisible(true).setAlpha(1).setTexture('vela0').setPosition(POS.consola - 90, FEET).setFlipX(true)
     this.goal.set(null)
     await this.wait(400)
+    if (this.sesion === 8) {
+      await say(this, [this.doc('Hoy vas a ver a mucha gente, Jorge.'), this.doc('Y a alguien que te quiere.'), this.doc('Intentá escucharme. Acostate.')])
+      this.phase = 'camilla'
+      this.goal.set('Acostarme en la camilla')
+      return
+    }
     if (this.sesion === 7) {
       await say(this, [this.doc('Esta es la más difícil, Jorge.'), this.doc('No vas a tener que hacer nada. Solo estar.'), this.doc('Yo voy a estar con vos. Acostate.')])
       this.phase = 'camilla'
@@ -626,6 +650,12 @@ export class Office extends Phaser.Scene {
     this.machine?.stop(3)
     await this.wait(1500)
     // Jugando el Consultorio suelto, termina acá; en el prototipo completo sigue en el sueño
+    if (this.sesion === 8) {
+      // Pre-sesión 8: suelta termina acá; en el prototipo completo sigue el sueño de la Sesión 8
+      if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'Pre-sesión 8' })
+      else this.scene.start('Dream8')
+      return
+    }
     if (this.sesion === 7) {
       // Pre-sesión 7: suelta termina acá; en el prototipo completo sigue el sueño de la Sesión 7
       if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'Pre-sesión 7' })
@@ -688,7 +718,15 @@ export class Office extends Phaser.Scene {
     await lids.to(0.1, 1200)
     await lids.to(1, 2600)
     lids.destroy()
-    if (this.sesion === 7) {
+    if (this.sesion === 8) {
+      await say(this, [
+        this.doc('Despacio. Ya estás acá.'),
+        this.doc('Ella fue a buscarte, Jorge.'),
+        this.think('Y yo la dejé en la vereda.'),
+        this.doc('¿Lo creés? Lo que le dijiste.'),
+        this.think('…'),
+      ])
+    } else if (this.sesion === 7) {
       await say(this, [
         this.doc('Despacio, Jorge. Ya estás acá.'),
         this.doc('Estuviste con ella. Hasta el final.'),
@@ -753,7 +791,7 @@ export class Office extends Phaser.Scene {
     sfx.handle()
     await this.tween({ targets: this.helmet, y: HELMET.up, duration: 2000, ease: 'Sine.InOut', onUpdate: () => this.drawCable() })
     sfx.click()
-    toast(this, ['✎ Línea de tiempo: Infancia · La feria', '✎ Línea de tiempo: Adolescencia · El boletín', '✎ Línea de tiempo: Adolescencia · La fiesta', '✎ Línea de tiempo: Juventud · La pelea', '✎ Línea de tiempo: Los 30 · El reencuentro', '✎ Línea de tiempo: Adultez · El viaje del 12/08', '✎ Línea de tiempo: La pérdida · La muerte de mamá'][this.sesion - 1])
+    toast(this, ['✎ Línea de tiempo: Infancia · La feria', '✎ Línea de tiempo: Adolescencia · El boletín', '✎ Línea de tiempo: Adolescencia · La fiesta', '✎ Línea de tiempo: Juventud · La pelea', '✎ Línea de tiempo: Los 30 · El reencuentro', '✎ Línea de tiempo: Adultez · El viaje del 12/08', '✎ Línea de tiempo: La pérdida · La muerte de mamá', '✎ Línea de tiempo: La pérdida · El velorio'][this.sesion - 1])
     await this.wait(800)
     await say(this, this.sesion === 7
       ? [this.doc('Por hoy alcanza, Jorge.'), this.doc('Andá a tu casa. Descansá.')]
@@ -762,6 +800,12 @@ export class Office extends Phaser.Scene {
     this.tone?.stop(2)
     await new Promise((r) => cam.once('camerafadeoutcomplete', r))
     await this.wait(600)
+    // Después de la Sesión 8: suelta termina acá; en el prototipo completo sigue La octava noche
+    if (this.sesion === 8) {
+      if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'Sesión 8: El velorio' })
+      else this.scene.start('Apartment', { noche: true, vuelta: 8 })
+      return
+    }
     // Después de la Sesión 7: suelta termina acá; en el prototipo completo sigue La séptima noche
     if (this.sesion === 7) {
       if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'Sesión 7: La muerte de su mamá' })

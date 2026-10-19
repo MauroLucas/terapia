@@ -9,6 +9,7 @@ import { Dream4 } from './scenes/Dream4'
 import { Dream5 } from './scenes/Dream5'
 import { Dream6 } from './scenes/Dream6'
 import { Dream7 } from './scenes/Dream7'
+import { Dream8 } from './scenes/Dream8'
 import { LevelEnd } from './scenes/LevelEnd'
 import { Neural } from './scenes/Neural'
 import { Office } from './scenes/Office'
@@ -63,7 +64,7 @@ const matter: Phaser.Types.Core.PhysicsConfig = { default: 'matter', matter: { g
 // Prototipo: el juego completo, todas las locaciones de corrido. Cada locación nueva se suma acá.
 export function createGame(parent: HTMLElement) {
   resetState()
-  return fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Stairs, Car, Neural, Corridor, Office, Dream, Dream2, Dream3, Dream4, Dream5, Dream6, Dream7, LevelEnd] }))
+  return fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Stairs, Car, Neural, Corridor, Office, Dream, Dream2, Dream3, Dream4, Dream5, Dream6, Dream7, Dream8, LevelEnd] }))
 }
 
 // Las locaciones sueltas marcan `solo` en el registro: al terminar muestran su cierre en vez de seguir a la locación siguiente.
@@ -284,6 +285,35 @@ export function createLevel23Game(parent: HTMLElement) {
   const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, LevelEnd] }))
   game.registry.set('start', 'Apartment')
   game.registry.set('startData', { noche: true, vuelta: 7 })
+  game.registry.set('solo', true)
+  return game
+}
+
+// Pre-sesión 8 sola: la mañana después de La séptima noche y la consulta con Vela antes del sueño
+export function createLevel24Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, Office, LevelEnd] }))
+  game.registry.set('start', 'Apartment')
+  game.registry.set('startData', { manana: true, vuelta: 7 })
+  game.registry.set('solo', true)
+  return game
+}
+
+// Sesión 8 sola (el velorio): el sueño y el despertar en la camilla
+export function createLevel25Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), scene: [Warning, Dream8, Office, LevelEnd] }))
+  game.registry.set('start', 'Dream8')
+  game.registry.set('solo', true)
+  return game
+}
+
+// La octava noche sola: la vuelta a casa después de la Sesión 8
+export function createLevel26Game(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), physics: matter, scene: [Warning, Apartment, LevelEnd] }))
+  game.registry.set('start', 'Apartment')
+  game.registry.set('startData', { noche: true, vuelta: 8 })
   game.registry.set('solo', true)
   return game
 }

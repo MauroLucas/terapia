@@ -150,6 +150,7 @@ Adentro de una sesión, las reglas cambian. Esto es lo que se definió con la pr
 - **Cinemáticas:** algunos recuerdos se ven como cinemáticas sin control, con bandas negras arriba y abajo (en la Sesión 5, los recuerdos de cuando Jorge y María eran chicos, en sepia).
 - **Las caras.** La mamá tiene una luz que le tapa la cara en todos los recuerdos, hasta la Sesión 6: cuando Jorge le pide perdón (aunque no le salgan las palabras), la luz se apaga y se le ve por primera vez. En la Sesión 7 se le sigue viendo.
 - **Las palabras tachadas.** Lo que la mente de Jorge todavía no puede mirar aparece **tachado** (█████), como la causa del informe de Neural. En la Sesión 7, las últimas palabras de la mamá se ven así en su globo: Jorge las escuchó, pero no se acuerda. Se revelan en el final.
+- **La distancia (Sesión 8).** En el velorio, Jorge no deja que nadie se le acerque: la llama de Vela lo sigue de lejos, más chica, y las cosas toman color solo cuando Jorge pasa cerca. Cuando alguien le habla, todas las respuestas que puede elegir el jugador son cortantes.
 - **Lo que pasó no se arregla.** Después de algo malo, el jugador puede elegir intentar repararlo (ayudar a la mamá, pedirle perdón), pero el recuerdo no cambia: _"Quise… Pero esa noche no hice nada."_
 - Al terminar, Jorge **despierta en la camilla** y se suma un tramo a la línea de tiempo.
 
