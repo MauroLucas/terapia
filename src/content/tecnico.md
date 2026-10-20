@@ -51,9 +51,9 @@ Es el mismo código: `juego/index.html` y `src/juego.ts` arrancan el juego compl
 | Qué cubre | Aviso de contenido → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio del doctor Vela y cuarto de inducción) → Sesión 1: La feria (sueño y despertar) → La primera noche → Pre-sesión 2 (la mañana y la consulta) → Sesión 2: El boletín (sueño y despertar) → La segunda noche → Pre-sesión 3 → Sesión 3: La fiesta (sueño y despertar) → La tercera noche → Pre-sesión 4 → Sesión 4: La pelea (sueño y despertar) → La cuarta noche → Pre-sesión 5 → Sesión 5: El reencuentro (sueño y despertar) → La quinta noche → Pre-sesión 6 → Sesión 6: El viaje del 12/08 (sueño y despertar) → La sexta noche → Pre-sesión 7 → Sesión 7: La muerte de su mamá (sueño y despertar) → La séptima noche → Pre-sesión 8 → Sesión 8: El velorio (sueño y despertar) → La octava noche → Pre-sesión 9 → Sesión 9: El baño (sueño, despertar en el baño y epílogo) → Cierre |
 | Cómo abrirlo | `npm run dev` y entrar a **Prototipo** |
 | Online | Publicado en GitHub Pages: https://maurolucas.github.io/terapia/ (se actualiza solo con cada push a `main`) |
-| Controles | Solo teclado (ver "Mecánicas" → Controles) |
+| Controles | Teclado, y en el celular botones táctiles en pantalla (ver "Mecánicas" → Controles) |
 | Pantalla completa | Botón debajo del juego o tecla **F** |
-| Código | `src/prototype/` (una escena por parte: aviso, departamento, escaleras, auto, Neural, pasillo, consultorio, sueño; las noches y las pre-sesiones reusan la escena del departamento) |
+| Código | `src/prototype/` (una escena por parte: aviso, departamento, escaleras, auto, Neural, pasillo, consultorio, un sueño por sesión de `Dream` a `Dream9`, cierre; las noches y las pre-sesiones reusan la escena del departamento) |
 
 **Es provisorio:** los gráficos y los sonidos están hechos por código (sin archivos de arte ni audio). Sirve para probar ritmo, puzzles y diálogos, no el aspecto final.
 

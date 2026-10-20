@@ -646,7 +646,7 @@ export class Dream2 extends Phaser.Scene {
       g.fillStyle(color).fillCircle(lx, Y, 6)
       capa.add(this.add.text(lx, Y - 40, t, { fontFamily: FONT, fontSize: '14px', color: css, resolution: 2, fontStyle: 'italic' }).setOrigin(0.5))
     }
-    marca(5, 'La feria', 0x2b6cb0, '#2b6cb0')
+    marca(7, 'La feria', 0x2b6cb0, '#2b6cb0')
     marca(15, '?', 0xb03a2e, '#b03a2e')
     capa.add(this.add.text(7480, 330, '¿Quién soy?', { fontFamily: FONT, fontSize: '18px', color: '#2b3140', resolution: 2, fontStyle: 'italic' }).setOrigin(0.5))
     sfx.flash()

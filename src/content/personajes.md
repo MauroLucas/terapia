@@ -19,7 +19,7 @@ _Las imágenes son los sprites provisorios del prototipo. La lista completa, con
 
 ![Jorge](sprites/jorge0.png) ![Jorge caminando](sprites/jorge1.png) ![Jorge sentado](sprites/jorgeSentado.png) ![Jorge en el piso del baño](sprites/jorgePiso.png) ![Jorge de chico](sprites/chico0.png)
 
-_Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesión 1). Ver "Sprites"._
+_Sprites provisorios del prototipo: parado, caminando, sentado, en el piso del baño (Sesión 9) y de chico (Sesión 1). Ver "Sprites"._
 
 
 | Campo | Valor |
@@ -93,7 +93,7 @@ _Sprites provisorios del prototipo: parado, caminando, sentado y de chico (Sesi�
 | A los 30 | **Sesión 5: El reencuentro.** Se cruzan de casualidad en una esquina y siguen en **un bar**: ella ya está casada; él sigue soltero. Le pregunta por su mamá (_"Llamala, Jorge"_) y le dibuja en una servilleta la ventana de la cocina con plantas. Llueve, la acompaña a la parada y se besan casi por inercia. Jorge se va: ella lo dejó una vez y no le cree. Aspecto en el prototipo: pelo recogido, tapado mostaza, anillo, paraguas rojo (provisorio) |
 | A los 38 | **Sesión 8: El velorio.** Va al velorio de la mamá de Jorge (_"Me enteré hoy. Vine apenas pude"_). Está **preocupada** por él: le pregunta cómo está, si comió, le da su número nuevo (_"Llamame. A la hora que sea"_) y le dice que no tiene que pasar por esto solo. Jorge está distante; lo último que le dice es _"Supongo que no hay forma de reparar un corazón roto"_ y vuelve adentro (decidido por el usuario; los demás diálogos y el número, provisorios). Aspecto en el prototipo: el mismo de los 30 |
 | En el final _(spoiler)_ | Es quien toca el portero. En el sueño, la mente de Jorge la cambia por el chofer. Vino porque **recibió un mensaje raro de Jorge** (decidido por el usuario; el mensaje no se muestra). Por el portero: _"¡Jorge! ¿Estás bien?"_ / _"Ya subo. Quedate ahí, que ya subo."_ (provisorio). Ver "Historia y mundo" → Final |
-| Por definir | ¿Por qué Jorge sacó su foto? ¿Qué pasó en el reencuentro? ¿Por qué viene justo esa noche? |
+| Por definir | ¿Por qué Jorge sacó su foto? |
 
 ### La familia de María _(sin nombre)_
 
@@ -195,11 +195,11 @@ _Los diálogos del Japo son provisorios._
 | Primera aparición | Consultorio: recibe a Jorge en su consultorio. Antes se lo **nombra** en el Hall del edificio: la recepcionista dice que Jorge tiene turno con él a las 10:30 |
 | Relación con Jorge | **Lo conoce**: es su paciente. Lo trata con calidez y lo tutea |
 | Trato | Cálido y tranquilo. No se lleva bien con la tecnología (_"Estas cosas de la tecnología no son lo mío"_), lo que contrasta con la máquina que usa _(provisorio)_ |
-| Qué hace | Le hace preguntas sobre cómo está, si mejoró y si toma la medicación. Después lo lleva al cuarto de inducción, le explica el tratamiento y lo hace acostar en la máquina. No se da cuenta cuando Jorge le miente |
+| Qué hace | Le hace preguntas sobre cómo está, si mejoró y si toma la medicación, y en cada consulta **un test de memoria** corto (ver "Mecánicas" → Tests de memoria). Después lo lleva al cuarto de inducción, le explica el tratamiento y lo hace acostar en la máquina. No se da cuenta cuando Jorge le miente |
 | Aspecto | En el prototipo: guardapolvo blanco sobre camisa celeste, pelo canoso y anteojos (provisorio) |
 | En el sueño | Es una **llama de vela** que flota al lado de Jorge y lo acompaña. Habla por la máquina. En la pelea de la Sesión 4 trata de hablarle, pero Jorge está nublado por el odio: su voz llega rota y la llama casi se apaga |
 | Qué es _(spoiler)_ | **Un personaje del subconsciente de Jorge** que trata de ayudarlo a seguir adelante. Como todo Neural, lo inventa su mente |
-| La revelación | **Sesión 9.** Se lo dice a Jorge: _"Yo no soy un doctor."_ / _"Neural no existe."_ / _"Soy vos, Jorge. La parte de vos que quiere seguir."_ (provisorio). En la Pre-sesión 9, antes de la última sesión, le hace **juegos de memoria** |
+| La revelación | **Sesión 9.** Se lo dice a Jorge: _"Yo no soy un doctor."_ / _"Neural no existe."_ / _"Soy vos, Jorge. La parte de vos que quiere seguir."_ (provisorio). En la Pre-sesión 9, antes de la última sesión, le hace los **juegos de memoria** más largos |
 | Por definir | Nombre de pila |
 
 ### Gente de la feria _(sin nombre)_

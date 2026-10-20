@@ -136,7 +136,7 @@ _Por definir: qué le pasaba al papá y qué fue de él, cómo se hace sentir la
 - En la realidad, **es quien toca el portero** esa noche (ver "Final"). En el sueño, la mente de Jorge la cambia por el chofer.
 - Su foto es la que falta en el portarretratos del cuarto.
 
-_Resuelto: el reencuentro de los 30 (Sesión 5) y por qué viene esa noche (recibió un mensaje raro de Jorge). Por definir: por qué Jorge sacó su foto del portarretratos._
+_Por definir: por qué Jorge sacó su foto del portarretratos._
 
 ## Estructura: las sesiones
 
@@ -173,7 +173,7 @@ Son **nueve sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 - La 3 (la fiesta) la sumó el usuario para profundizar la relación con María antes de la pelea: así la separación duele más.
 - La 5 la sumó el usuario como "una secuencia a los 30". Después decidió que es **una sesión larga**.
 - La 8 (el velorio) la sumó el usuario antes del baño, para que Jorge y María vuelvan a hablar: ella preocupada, él distante. Por eso el baño pasó a ser la 9.
-- _Por definir: la edad exacta de cada recuerdo, salvo los que ya están (la feria cerca de los 7, el boletín a los 15, la fiesta a los 17, la separación a los 20, el reencuentro a los 30, hoy a los 40)._
+- Las edades, como están en la pizarra: la feria cerca de los 7, el boletín a los 15, la fiesta a los 17, la pelea y la separación a los 20, el reencuentro a los 30, el viaje y la muerte de la mamá a los 38, el velorio a los 38 y hoy a los 40. _Son las del prototipo; la mayoría las propuso el agente._
 
 _El mapa lo propuso el agente con lo que ya estaba en el GDD, y el usuario lo aprobó como base. Se ajusta sesión por sesión._
 

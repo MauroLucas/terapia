@@ -64,7 +64,7 @@ boy around 7 years old, short black hair, green sweater, short navy blue shorts,
 white sneakers, big head, curious but lost expression
 ```
 
-_Por definir: cómo se ve Jorge a los 15 en la Sesión 2. Hoy el prototipo usa el sprite de grande._
+_Por definir: cómo se ve Jorge a los 15 y a los 17 (Sesiones 2 y 3). Hoy el prototipo usa el sprite de grande, un poco más chico._
 
 ### Doctor Vela
 
@@ -164,7 +164,7 @@ teenage girl around 17, long dark loose hair with bangs, knee-length burgundy pa
 dark flat shoes, small happy smile, school graduation party
 ```
 
-_Por definir: María a los 20 y a los 30 (sesiones siguientes)._
+_Por definir: María a los 20. En la Sesión 4 se usa el sprite de los 15._
 
 #### María a los 30
 

@@ -56,7 +56,7 @@ Los objetos sueltos del piso (papeles, basura) **no muestran ícono**: se mueven
 
 ## Línea de tiempo
 
-Cuando Jorge está en el **consultorio**, se ve una **línea de tiempo de su vida** que se va **completando con datos** a medida que avanzan las sesiones. La referencia es la bitácora de _Outer Wilds_: el progreso del juego es lo que se sabe, y se ve todo junto en un solo lugar.
+Jorge arma una **línea de tiempo de su vida** en **la pizarra de su cuarto** (ver abajo), y al despertar de cada sesión, en el consultorio, un aviso marca el tramo nuevo. Se va **completando con datos** a medida que avanzan las sesiones. La referencia es la bitácora de _Outer Wilds_: el progreso del juego es lo que se sabe, y se ve todo junto en un solo lugar.
 
 - Empieza casi vacía.
 - Cada sesión completa **un tramo**: la parte de la vida de Jorge que recorrió en ese sueño lúcido.
@@ -64,7 +64,6 @@ Cuando Jorge está en el **consultorio**, se ve una **línea de tiempo de su vid
 
 _Propuestas del agente, sin confirmar:_
 
-- _Que la línea esté en la **pantalla del doctor Vela**, la misma donde ve los sueños de Jorge._
 - _Que al llegar por primera vez ya tenga ubicado lo que el jugador encontró en la Casa de Jorge (la foto, el portarretratos vacío, el informe)._
 - _Que los tramos que Jorge se resiste a recordar se vean **tachados**, como la parte tachada del informe._
 

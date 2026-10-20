@@ -249,7 +249,7 @@ _Los textos de Jorge son provisorios._
 >
 > **Recomendación:** continuar con las sesiones. No interrumpir el tratamiento.
 
-_La parte tachada no se puede leer. Es un misterio que se resuelve más adelante._
+_La parte tachada no se puede leer. Se lee recién en La séptima noche, después de la muerte de la mamá: "la muerte de su madre" (ver La séptima noche)._
 
 > **Jorge (pensando, después de leerlo):** ¿Resistencia a qué? ¿Quién tachó esto… yo?
 
@@ -369,8 +369,6 @@ Los objetos marcados con **✓** se guardan en el inventario al encontrarlos y s
 ### Pendiente de definir
 
 - ¿Por qué Jorge sacó la foto de su primera novia (María)? El departamento es el que iban a alquilar juntos.
-- _Idea aprobada:_ el **papelito con el número del papá**, que Jorge guardó y nunca usó, está en algún lugar de la casa. ¿Dónde está y en qué visita aparece?
-- ¿Cuándo y cómo se revela que todo es un sueño?
 
 ## Secuencia de títulos: las escaleras
 
@@ -789,7 +787,6 @@ La locación termina cuando Jorge sale del ascensor y la imagen **funde a negro*
 
 - ¿Dónde está la máquina de bebidas? (En el prototipo: cerca de la entrada, para que el de seguridad se aleje bastante.)
 - ¿El de seguridad se da cuenta de que Jorge pasó? (No vuelve a su puesto: en esta locación no se puede perder.)
-- ¿Cuántas veces hizo Jorge esta misma cadena de favores? ¿Es una rutina real de cada turno, o es parte de un sueño que se repite? (Los diálogos están escritos para que sirvan en los dos casos.)
 - ¿A qué piso sube Jorge? ¿Cuántos pisos tiene Neural?
 - ¿Los pacientes de la sala de espera vuelven a aparecer? ¿Tienen nombre?
 - Un cubículo trabado con alguien adentro se parece al baño del departamento (ver "Historia y mundo" → Revelación). ¿Es un eco a propósito o conviene evitarlo?
@@ -805,7 +802,7 @@ Jorge sale del ascensor y tiene que **encontrar el consultorio del doctor Vela**
 2. **El consultorio:** Vela lo recibe y le hace **preguntas**. Jorge puede **decir la verdad o mentir**: lo elige el jugador.
 3. **El cuarto de inducción al sueño:** Vela le explica el tratamiento y Jorge se acuesta en la **máquina de los sueños**. Se le cierran los ojos y termina la locación.
 
-Después de esto empiezan las **sesiones**: cada una es una parte de la vida de Jorge, van en orden fijo y lo recuperado se suma a una **línea de tiempo** (ver "Historia y mundo" → Estructura, y "UI" → Línea de tiempo). _Qué pasa en cada sesión y qué hace el jugador dentro del sueño lúcido todavía no se diseña._
+Después de esto empiezan las **sesiones**: cada una es una parte de la vida de Jorge, van en orden fijo y lo recuperado se suma a una **línea de tiempo** (ver "Historia y mundo" → Estructura, y "UI" → Línea de tiempo). Son nueve, de la Sesión 1: La feria a la Sesión 9: El baño (ver cada una más abajo, y "Mecánicas" → Sueño lúcido).
 
 ### El pasillo
 
@@ -1247,14 +1244,12 @@ _¿Quién toca? Encaja con el final (ver "Historia y mundo" → Final): sería M
 
 ### Final de la locación
 
-Termina cuando Jorge **se duerme**: se le cierran los ojos. _Por definir: lo que sigue (la próxima ida a Neural y la Sesión 2)._
+Termina cuando Jorge **se duerme**: se le cierran los ojos. Sigue la **Pre-sesión 2**.
 
 ### Pendiente de definir
 
-- ¿Quién toca el portero de noche: es María? ¿Vuelve a pasar?
+- ¿Quién toca el portero de noche: es María? (Vuelve a sonar todas las noches y la voz se parece cada vez más a la de ella, pero nunca se dice.)
 - ¿Quién guardó la sortija en la caja: la mamá, Jorge?
-- ¿Cómo es la próxima mañana? ¿Vuelve el chofer, se repite algo del primer día?
-- ¿La casa cambia un poco cada vez que Jorge vuelve?
 
 ## Pre-sesión 2
 
@@ -1314,11 +1309,6 @@ _Provisorio (ver "Consultorio" → El test de memoria)._ Al empezar, Vela le pid
 | En el cuarto de inducción | Acostarme en la camilla |
 
 **Todas las pre-sesiones empiezan igual:** Jorge en su cuarto y **siempre toca el portero**.
-
-### Pendiente de definir
-
-- ¿Quién toca el portero: el remis o María? (Ver "Historia y mundo" → Final.)
-- Además del portero, ¿cambia algo en cada pre-sesión?
 
 ## Sesión 2: El boletín
 
@@ -1409,7 +1399,7 @@ Con el boletín, el Japo:
 - Un segundo de silencio (_"…"_). Después **el aula entera se ríe**, y Jorge también: _"¡Jajaja! ¡Estás loco, Japo!"_ La llama crece.
 - El Japo, desde el piso: _"…Diez puntos. ¿No?"_ Jorge: _"Me estoy riendo."_ / _"Con el boletín en la mochila, y me estoy riendo."_
 
-**El pizarrón de hoy:** por la grieta, el pizarrón se vuelve por un momento **la pizarra de la casa de Jorge**, la de ahora: blanca, con la línea de 0 a 40, la feria a los 5, un "?" a los 15 y _"¿Quién soy?"_ arriba. _"El pizarrón…"_ / _"Es el de casa. El mío. El de ahora."_ Vela: _"Es el sueño, Jorge. A veces se mezcla con lo de hoy."_ Se apaga y vuelve el pizarrón del aula.
+**El pizarrón de hoy:** por la grieta, el pizarrón se vuelve por un momento **la pizarra de la casa de Jorge**, la de ahora: blanca, con la línea de 0 a 40, la feria cerca de los 7, un "?" a los 15 y _"¿Quién soy?"_ arriba. _"El pizarrón…"_ / _"Es el de casa. El mío. El de ahora."_ Vela: _"Es el sueño, Jorge. A veces se mezcla con lo de hoy."_ Se apaga y vuelve el pizarrón del aula.
 
 El Japo se levanta. **Suena el timbre.** _"¡Y que te lo firme tu viejo, eh! Si no, la preceptora te come."_ La llama vuelve a su tamaño.
 
@@ -1531,7 +1521,6 @@ Se suma a la línea de tiempo: _"Adolescencia · El boletín"_.
 
 ### Pendiente de definir
 
-- ¿Cuántos años tiene Jorge exactamente? (En el prototipo: "quince, dieciséis".)
 - ¿El papá vivía con ellos o aparecía y desaparecía?
 - ¿Por qué se distanciaron Jorge y el Japo? ¿Vuelve a aparecer de grande?
 
@@ -1639,7 +1628,6 @@ Termina cuando Jorge **se duerme**. En el prototipo completo sigue la **Pre-sesi
 
 ### Pendiente de definir
 
-- ¿La voz del portero vuelve a hablar en las próximas noches? ¿Dice algo más cada vez?
 - ¿Quién guardó el cuaderno en la caja?
 
 ## Pre-sesión 3
@@ -1910,7 +1898,6 @@ Termina cuando Jorge **se duerme**. En el prototipo completo sigue la **Pre-sesi
 
 ### Pendiente de definir
 
-- ¿La voz del portero cambia en las noches siguientes?
 - ¿Por qué Jorge sacó la foto del portarretratos?
 
 ## Pre-sesión 4
@@ -2207,10 +2194,6 @@ Los mismos de las otras noches: **Anotar lo que recordé en la pizarra** → **A
 
 Termina cuando Jorge **se duerme**. En el prototipo completo sigue la **Pre-sesión 5**.
 
-### Pendiente de definir
-
-- ¿La voz del portero vuelve a hablar? ¿Jorge vuelve a atender?
-
 ## Pre-sesión 5
 
 ### Resumen
@@ -2375,7 +2358,6 @@ Se suma a la línea de tiempo: _"Los 30 · El reencuentro"_.
 
 - ¿Quién es el marido de María? ¿Aparece alguna vez?
 - ¿Qué hace María después de esa noche? ¿Lo busca?
-- ¿Por qué María toca el portero en el final? (Queda para más adelante.)
 
 ## La quinta noche
 
@@ -2602,8 +2584,6 @@ Se suma a la línea de tiempo: _"Adultez · El viaje del 12/08"_.
 ### Pendiente de definir
 
 - ¿Cuántos años tiene Jorge exactamente? (En el prototipo: treinta y ocho.)
-- _Resuelto por el usuario: entre el viaje y el segundo ACV pasan quince días (ver Sesión 7)._
-- _En la Sesión 7 la cara de la mamá se sigue viendo._
 
 ## La sexta noche
 
@@ -2790,9 +2770,7 @@ El bip del monitor se va espaciando: cuatro bips, cada vez más separados, y sil
 
 ### Las últimas palabras
 
-**Lo que le dijo la mamá queda en misterio** _(decidido por el usuario)_. Se revela **en el final del juego, después de que María va a buscar a Jorge**. La idea del usuario, todavía tentativa, es que le haya pedido **que no viva con rencor**: lo mismo que quería esa noche de la pelea, cuando le dio el papelito con el número del papá. Eso conecta con el epílogo, cuando Jorge llama a su papá.
-
-_Por definir: la frase exacta, y cómo se revela (¿Jorge se acuerda solo? ¿María se la dice, porque él se la contó? ¿Vuelve el recuerdo de la habitación, ahora sin tachar?)._
+**Lo que le dijo la mamá queda en misterio** _(decidido por el usuario)_. Se revela **en el final del juego**: en la Sesión 9 vuelve el recuerdo de la habitación, ahora sin tachar, y la frase es _"No vivas con rencor, hijo."_ _(decidido por el usuario)_. Es lo mismo que quería esa noche de la pelea, cuando le dio el papelito con el número del papá, y conecta con el epílogo, cuando Jorge llama a su papá.
 
 ### El amanecer
 
@@ -2842,8 +2820,6 @@ Se suma a la línea de tiempo: _"La pérdida · La muerte de mamá"_. Al despedi
 
 ### Pendiente de definir
 
-- Las últimas palabras de la mamá y cómo se revelan (ver arriba).
-- ¿Hay velorio o entierro? En el prototipo no se muestra.
 - ¿A quién le avisa Jorge? (En La séptima noche piensa que no llamó a nadie: _provisorio_.)
 
 ## La séptima noche
