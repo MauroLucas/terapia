@@ -1152,12 +1152,24 @@ El orden es libre, salvo dos cosas: no se puede dormir sin anotar el recuerdo (_
 
 ### La pizarra
 
-Se abre la línea de tiempo, todavía vacía: "MI VIDA", de "Nací" a "HOY" (los 40), con marcas cada diez años. Jorge piensa _"¿Dónde va lo de la feria?"_ y aparecen cuatro opciones:
+Se abre la línea de tiempo, todavía vacía: "MI VIDA", de "Nací" a "HOY" (los 40), con marcas cada diez años. Después hay que **armar el recuerdo** (ver "Mecánicas" → Armar el recuerdo): una hoja con la pregunta _"¿Qué recordé?"_ y una frase con huecos, que se completan de a uno eligiendo palabras.
 
-| Opción | Qué pasa |
-|---|---|
-| **Entre los 0 y los 10 años** | Es la correcta. Se marca la infancia en verde y, cerca de los 7 años, Jorge escribe con su letra **"La feria con mamá"** y abajo _"me perdí y ella me encontró"_ |
-| Entre los 10 y los 20 / Entre los 20 y los 30 / Entre los 30 y los 40 | _"No… Era chico. Tenía las manos chiquitas."_ y vuelve a elegir |
+> Fui a la feria con **[mamá]**. Me perdí en **[la calesita]** y **[me quedé quieto]** hasta que ella me encontró. Tenía **[7]** años.
+
+| Hueco | Opciones | Si se equivoca |
+|---|---|---|
+| Con quién | **mamá** · papá · una vecina | _"No. Papá nunca venía a esas cosas."_ / _"No. Era mamá. Me compró algodón de azúcar."_ |
+| Dónde se perdió | **la calesita** · la vuelta al mundo · el tren fantasma | _"No. Fue en la calesita: me bajé del otro lado."_ |
+| Qué hizo | **me quedé quieto** · salí a buscarla · me puse a gritar | _"No… Ella me había dicho algo al entrar. «Si te perdés…»"_ |
+| **La edad** | 5 · 6 · **7** · 8 · _(Mirar la sortija)_ | _"No. Tiene que haber algo que diga en qué grado iba."_ A la segunda: _"El papelito decía «el año que empezó segundo grado»."_ / _"A primer grado se entra a los seis."_ |
+
+**La edad no se adivina: se deduce.** La pista es **el papelito de la mamá** que está en la caja con la sortija: _"La sortija de Jorgito. De la feria, el año que empezó segundo grado."_ A primer grado se entra a los seis, así que tenía siete. Mientras se completa ese hueco se puede elegir _"(Mirar la sortija)"_ para volver a leer el papelito.
+
+**Si todavía no abrió la caja**, al llegar a la edad Jorge piensa _"¿Cuántos años tenía?"_ / _"Era chico… pero no sé cuánto."_ / _"Tiene que haber algo en esta casa que lo diga."_ La hoja se cierra, **lo que ya completó queda guardado** y el objetivo pasa a **Buscar algo que diga cuántos años tenía**. Cuando vuelve a la pizarra, sigue desde la edad.
+
+Las palabras se mezclan cada vez; las edades van en orden. Las opciones equivocadas no castigan: Jorge se corrige solo y se vuelve a elegir. _Las frases y las opciones son provisorias, propuestas por el agente; la edad (cerca de los 7) es la que ya estaba en la pizarra._
+
+Con el recuerdo completo se marca la infancia en verde y, cerca de los 7 años, Jorge escribe con su letra **"La feria con mamá"** y abajo _"me perdí y ella me encontró"_.
 
 Al anotarlo: _"«La feria con mamá.»"_ / _"Es lo primero que anoto."_ La marca también aparece en la pizarra de la pared. Si la vuelve a mirar: _"Es lo único que hay. Pero ya no está vacía."_
 
@@ -1175,7 +1187,11 @@ Adentro está **la sortija de la calesita** y se guarda en el inventario.
 >
 > **Jorge (piensa):** Fue real.
 >
-> **Jorge (piensa):** Alguien la guardó todos estos años.
+> **Jorge (piensa):** Y un papelito con la letra de mamá.
+>
+> **Jorge (piensa):** La guardó ella. Todos estos años.
+
+Con la sortija viene **el papelito de la mamá**, que se ve como segunda página del objeto: _"La sortija de Jorgito. De la feria, el año que empezó segundo grado."_ Es la pista de la edad para la pizarra.
 
 Es la prueba de que **los recuerdos no mienten**: lo que vio en el sueño pasó.
 
@@ -1556,13 +1572,20 @@ Las reglas son las de La primera noche: no se puede dormir sin anotar el recuerd
 
 ### La pizarra
 
-Ya tiene la feria. Jorge piensa _"¿Dónde va lo del boletín?"_:
+Ya tiene la feria. Como en La primera noche, hay que **armar el recuerdo**:
 
-| Opción | Qué pasa |
-|---|---|
-| Entre los 0 y los 10 años | _"No. Ya no era tan chico. Iba a la secundaria."_ |
-| **Entre los 10 y los 20** | Es la correcta. Se marca la adolescencia y, cerca de los 15, Jorge escribe **"El boletín"**. Abajo, más chico: _"papá. Esa noche no le abrí a mamá. Conocí a María"_ |
-| Entre los 20 y los 30 / Entre los 30 y los 40 | _"No… Era más chico. Tenía quince, dieciséis."_ |
+> Papá no me firmó **[el boletín]**. Esa noche no le abrí la puerta a **[mamá]**. Ese mismo día conocí a **[María]**. Tenía **[15]** años.
+
+| Hueco | Opciones | Si se equivoca |
+|---|---|---|
+| Qué no le firmó | **el boletín** · el cuaderno · la autorización | _"No. Era el boletín. El tres en matemática."_ |
+| A quién no le abrió | **mamá** · papá · María | _"No. Él ya se había ido. La que golpeó despacio fue mamá."_ / _"No. A María la conocí a la tarde, en la plaza."_ |
+| A quién conoció | **María** · la vecina · la preceptora | _"No. A la vecina la conocía de siempre."_ / _"No. A la preceptora la veía todos los días."_ |
+| **La edad** | 13 · 14 · **15** · 16 · _(Mirar el boletín)_ | _"No. El boletín dice en qué año iba."_ A la segunda: _"Tercer año."_ / _"Primer año lo empecé a los trece."_ |
+
+**La pista de la edad es el boletín**, que Jorge trajo del sueño: dice **"3.er año"**. La secundaria se empieza a los trece, así que tenía quince. _Provisorio, propuesto por el agente._
+
+Con el recuerdo completo se marca la adolescencia y, cerca de los 15, Jorge escribe **"El boletín"**. Abajo, más chico: _"papá. Esa noche no le abrí a mamá. Conocí a María"_
 
 Al anotarlo: _"«El boletín.»"_ / _"No quiero escribir más que eso."_ Si la vuelve a mirar: _"Dos cosas. Ya es algo."_
 

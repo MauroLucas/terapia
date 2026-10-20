@@ -356,7 +356,7 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 
 ![Boletín sin firmar](sprites/documentos/boletin-1.png) ![Boletín firmado](sprites/documentos/boletin-2.png)
 
-![Cuaderno de matemática](sprites/documentos/cuaderno-1.png) ![Sortija](sprites/documentos/sortija-1.png)
+![Cuaderno de matemática](sprites/documentos/cuaderno-1.png) ![Sortija](sprites/documentos/sortija-1.png) ![Sortija: el papelito de mamá](sprites/documentos/sortija-2.png)
 
 ![Foto de la fiesta](sprites/documentos/fotoFiesta-1.png) ![Papelito](sprites/documentos/papelito-1.png) ![Servilleta](sprites/documentos/servilleta-1.png) ![Boletos](sprites/documentos/boleto-1.png) ![El número de María](sprites/documentos/numeroMaria-1.png)
 
@@ -375,7 +375,7 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 | El número de María | Una hojita arrancada de una agenda, con renglones, y la letra de María en violeta: "María", un número de teléfono (inventado) y "llamame" subrayado |
 | Boletos del micro | Dos boletos de micro de larga distancia, Buenos Aires → San Rafael, salida 11/08, asientos 23 y 24 |
 | Foto de la fiesta | Foto de papel con flash, de una fiesta de egresados: Jorge (suéter verde) y María (vestido bordó) abrazados, guirnaldas de colores atrás. En el borde blanco, "J y M" con la letra de María. Es la foto del portarretratos |
-| Sortija | La sortija de cerca, sobre un fondo oscuro |
+| Sortija | La sortija de cerca, sobre un fondo oscuro. Segunda página: **el papelito de la mamá** que venía con ella, en un papel amarillento con su letra: _"La sortija de Jorgito. De la feria, el año que empezó segundo grado."_ Es la pista de la edad en la pizarra de La primera noche |
 
 ## Fondos
 

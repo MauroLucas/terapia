@@ -123,6 +123,7 @@ export class Apartment extends Phaser.Scene {
   private goal?: ReturnType<typeof objective>
   private pizarraHecha = false
   private cajaVista = false
+  private armado: string[] = [] // lo que ya completó del recuerdo en la pizarra (si dejó a medias)
   private timbreNoche: 'no' | 'sonando' | 'atendido' = 'no'
   private caja?: Phaser.GameObjects.Graphics
   private roomTone?: { stop: (fade?: number) => void }
@@ -139,6 +140,7 @@ export class Apartment extends Phaser.Scene {
     this.vuelta = data.vuelta ?? 1
     this.pizarraHecha = this.cajaVista = this.fotoPuesta = this.papelitoVisto = this.servilletaVista = this.boletoVisto = this.informeLeido = this.numeroVisto = false
     this.timbreNoche = 'no'
+    this.armado = []
     this.goal = undefined
     this.room = 'cuarto'
     this.busy = true
@@ -1034,6 +1036,82 @@ export class Apartment extends Phaser.Scene {
     }, { w: 820, h: 420, paper: 0xe9e9e4 })
   }
 
+  // La pizarra: armar el recuerdo. Una frase con huecos que el jugador completa eligiendo palabras; el último hueco es la
+  // edad, que se deduce de una pista de la casa (un papelito, el boletín). Si se equivoca, Jorge se corrige solo y, a la
+  // segunda, da una pista más clara: no se puede perder. Si falta la pista de la edad, deja el recuerdo a medias
+  // (`armado`) y lo retoma después. Devuelve si quedó completo
+  private async armarRecuerdo(r: {
+    frase: string[]
+    huecos: { opciones: string[]; ok: number; mal: string[]; edad?: boolean; ayuda?: string[]; mirar?: { label: string; ver: () => Promise<void> }; sinPista?: string[] }[]
+  }) {
+    const { width } = this.scale
+    const cam = this.cameras.main
+    const piensa = (t: string): Line => ({ kind: 'thought', text: t, anchor: () => ({ x: cam.scrollX + width / 2, y: cam.scrollY + 420 }) })
+    const dim = this.add.rectangle(0, 0, width, this.scale.height, 0x000000, 0.7).setOrigin(0)
+    const paper = this.add.graphics()
+    const pw = Math.min(920, width - 24)
+    paper.fillStyle(0x000000, 0.4).fillRect(-pw / 2 + 8, 10, pw, 250)
+    paper.fillStyle(0xe9e9e4).fillRect(-pw / 2, 0, pw, 250)
+    const titulo = text(this, -pw / 2 + 30, 34, '¿Qué recordé?', 26, '#2b3140', { fontFamily: HAND_FONT, fontStyle: 'bold' }).setOrigin(0, 0.5)
+    const frase = text(this, 0, 140, '', 26, '#2b3140', { fontFamily: HAND_FONT, align: 'center', wordWrap: { width: pw - 60 } }).setOrigin(0.5)
+    const hoja = this.add.container(width / 2, 70, [paper, titulo, frase])
+    const root = this.add.container(0, 0, [dim, hoja]).setScrollFactor(0).setDepth(980).setAlpha(0)
+    this.tweens.add({ targets: root, alpha: 1, duration: 200 })
+    const pintar = (actual: number) => {
+      let t = r.frase[0]
+      r.huecos.forEach((_, k) => {
+        t += k < this.armado.length ? this.armado[k] : k === actual ? '[ ? ]' : '_____'
+        t += r.frase[k + 1]
+      })
+      frase.setText(t)
+    }
+    let completo = true
+    for (let k = this.armado.length; k < r.huecos.length; k++) {
+      const h = r.huecos[k]
+      pintar(k)
+      if (h.sinPista) {
+        await say(this, h.sinPista.map(piensa))
+        completo = false
+        break
+      }
+      let errores = 0
+      // Las palabras se mezclan; las edades van en orden
+      const orden = h.opciones.map((_, j) => j)
+      if (!h.edad) Phaser.Utils.Array.Shuffle(orden)
+      for (;;) {
+        const opciones = orden.map((j) => h.opciones[j])
+        if (h.mirar) opciones.push(`(${h.mirar.label})`)
+        const elegida = await choose(this, opciones, { x: 560, y: 690 })
+        if (h.mirar && elegida === h.opciones.length) {
+          root.setVisible(false)
+          await h.mirar.ver()
+          root.setVisible(true)
+          continue
+        }
+        const i = orden[elegida]
+        if (i === h.ok) break
+        errores++
+        sfx.paper()
+        const malas = h.opciones.map((_, j) => j).filter((j) => j !== h.ok)
+        const linea = h.mal[Math.min(malas.indexOf(i), h.mal.length - 1)]
+        await say(this, [piensa(linea), ...(errores >= 2 && h.ayuda ? h.ayuda.map(piensa) : [])])
+      }
+      this.armado.push(h.opciones[h.ok])
+      sfx.click()
+      pintar(k + 1)
+      if (h.edad) await say(this, [piensa('Eso es.')])
+    }
+    if (completo) await this.wait(900)
+    await new Promise<void>((res) => this.tweens.add({ targets: root, alpha: 0, duration: 200, onComplete: () => res() }))
+    root.destroy()
+    if (completo) this.armado = []
+    return completo
+  }
+
+  private wait(ms: number) {
+    return new Promise<void>((res) => this.time.delayedCall(ms, () => res()))
+  }
+
   private async pizarraNoche() {
     if (this.vuelta === 8) return this.pizarraNoche8()
     if (this.vuelta === 7) return this.pizarraNoche7()
@@ -1048,11 +1126,26 @@ export class Apartment extends Phaser.Scene {
       return
     }
     await this.pizarraOverlay(0)
-    await say(this, [this.think('¿Dónde va lo de la feria?')])
-    for (;;) {
-      const i = await choose(this, ['Entre los 0 y los 10 años', 'Entre los 10 y los 20', 'Entre los 20 y los 30', 'Entre los 30 y los 40'], { x: 640, y: 600 })
-      if (i === 0) break
-      await say(this, [this.think('No… Era chico. Tenía las manos chiquitas.')])
+    const listo = await this.armarRecuerdo({
+      frase: ['Fui a la feria con ', '. Me perdí en ', ' y ', ' hasta que ella me encontró. Tenía ', ' años.'],
+      huecos: [
+        { opciones: ['mamá', 'papá', 'una vecina'], ok: 0, mal: ['No. Papá nunca venía a esas cosas.', 'No. Era mamá. Me compró algodón de azúcar.'] },
+        { opciones: ['la calesita', 'la vuelta al mundo', 'el tren fantasma'], ok: 0, mal: ['No. Fue en la calesita: me bajé del otro lado.', 'No. Fue en la calesita: me bajé del otro lado.'] },
+        { opciones: ['me quedé quieto', 'salí a buscarla', 'me puse a gritar'], ok: 0, mal: ['No… Ella me había dicho algo al entrar. "Si te perdés…"', 'No… Ella me había dicho algo al entrar. "Si te perdés…"'] },
+        {
+          edad: true,
+          opciones: ['5', '6', '7', '8'],
+          ok: 2,
+          mal: ['No. Tiene que haber algo que diga en qué grado iba.'],
+          ayuda: ['El papelito decía "el año que empezó segundo grado".', 'A primer grado se entra a los seis.'],
+          mirar: { label: 'Mirar la sortija', ver: () => showObjeto(this, 'sortija') },
+          sinPista: this.cajaVista ? undefined : ['¿Cuántos años tenía?', 'Era chico… pero no sé cuánto.', 'Tiene que haber algo en esta casa que lo diga.'],
+        },
+      ],
+    })
+    if (!listo) {
+      this.goal?.set('Buscar algo que diga cuántos años tenía')
+      return
     }
     sfx.paper()
     await this.pizarraOverlay(1)
@@ -1076,12 +1169,24 @@ export class Apartment extends Phaser.Scene {
       return
     }
     await this.pizarraOverlay(1)
-    await say(this, [this.think('¿Dónde va lo del boletín?')])
-    for (;;) {
-      const i = await choose(this, ['Entre los 0 y los 10 años', 'Entre los 10 y los 20', 'Entre los 20 y los 30', 'Entre los 30 y los 40'], { x: 640, y: 600 })
-      if (i === 1) break
-      await say(this, [this.think(i === 0 ? 'No. Ya no era tan chico. Iba a la secundaria.' : 'No… Era más chico. Tenía quince, dieciséis.')])
-    }
+    // El boletín lo trajo del sueño: si se juega La segunda noche suelta, igual está en el inventario
+    if (!state.inventario.includes('boletin')) state.inventario.push('boletin')
+    await this.armarRecuerdo({
+      frase: ['Papá no me firmó ', '. Esa noche no le abrí la puerta a ', '. Ese mismo día conocí a ', '. Tenía ', ' años.'],
+      huecos: [
+        { opciones: ['el boletín', 'el cuaderno', 'la autorización'], ok: 0, mal: ['No. Era el boletín. El tres en matemática.', 'No. Era el boletín. El tres en matemática.'] },
+        { opciones: ['mamá', 'papá', 'María'], ok: 0, mal: ['No. Él ya se había ido. La que golpeó despacio fue mamá.', 'No. A María la conocí a la tarde, en la plaza.'] },
+        { opciones: ['María', 'la vecina', 'la preceptora'], ok: 0, mal: ['No. A la vecina la conocía de siempre.', 'No. A la preceptora la veía todos los días.'] },
+        {
+          edad: true,
+          opciones: ['13', '14', '15', '16'],
+          ok: 2,
+          mal: ['No. El boletín dice en qué año iba.'],
+          ayuda: ['Tercer año.', 'Primer año lo empecé a los trece.'],
+          mirar: { label: 'Mirar el boletín', ver: () => showPage(this, 'boletin', 0) },
+        },
+      ],
+    })
     sfx.paper()
     await this.pizarraOverlay(2)
     await say(this, [this.think('"El boletín."'), this.think('No quiero escribir más que eso.')])
@@ -1361,8 +1466,9 @@ export class Apartment extends Phaser.Scene {
     sfx.pickup()
     this.addInventory('sortija')
     await showObjeto(this, 'sortija')
-    await say(this, [this.think('La sortija de la calesita.'), this.think('Fue real.'), this.think('Alguien la guardó todos estos años.')])
-    this.pista('La sortija', 'En una caja de cosas de chico estaba la sortija de la calesita. El recuerdo fue real.')
+    await say(this, [this.think('La sortija de la calesita.'), this.think('Fue real.'), this.think('Y un papelito con la letra de mamá.'), this.think('La guardó ella. Todos estos años.')])
+    this.pista('La sortija', 'En una caja de cosas de chico estaba la sortija de la calesita, con un papelito de mamá: "La sortija de Jorgito. De la feria, el año que empezó segundo grado." El recuerdo fue real.')
+    if (!this.pizarraHecha && this.armado.length) this.goal?.set('Anotar lo que recordé en la pizarra')
   }
 
   // Segunda noche: abajo de todo en la caja, el cuaderno de matemática con la letra de María

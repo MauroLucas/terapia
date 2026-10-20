@@ -126,7 +126,21 @@ El juego avanza por **sesiones** en Neural. Cada sesión es un sueño lúcido qu
 - Las sesiones son **nueve**, de la infancia hasta hoy (ver "Historia y mundo" → Mapa de sesiones). Están todas en el prototipo.
 - **Las idas a Neural después de la primera son cortas** (ver "Locaciones" → Pre-sesión 2): Jorge se despierta, **siempre suena el portero** y, al salir del cuarto, aparece directo en la consulta con Vela. No se repiten el viaje, el hall ni el pasillo.
 
-**La vuelta a casa** quedó definida con la primera (ver "Locaciones" → La primera noche): es **corta y sin puzzle**. Jorge **anota el recuerdo en la pizarra**, encuentra **un objeto** que prueba que el recuerdo fue real, y se va a dormir.
+**La vuelta a casa** quedó definida con la primera (ver "Locaciones" → La primera noche): es **corta**. Jorge **arma el recuerdo en la pizarra**, encuentra **un objeto** que prueba que el recuerdo fue real, y se va a dormir.
+
+### Armar el recuerdo
+
+_Pedido del usuario: que el juego tenga más dificultad. La primera prueba es la pizarra de las noches; el detalle es provisorio, propuesto por el agente._
+
+Al volver de una sesión, anotar el recuerdo ya no es elegir en qué década va: hay que **reconstruirlo**. En la pizarra aparece una frase con huecos (_"Fui a la feria con ___. Me perdí en ___…"_) y el jugador la completa **de a un hueco**, eligiendo entre tres o cuatro palabras. La referencia son los juegos de deducción como _The Case of the Golden Idol_.
+
+- **Los huecos de palabras** se contestan con lo que se vio en el sueño (con quién estaba, dónde, qué hizo). Las opciones equivocadas son cosas que podrían haber sido, y se mezclan cada vez.
+- **El último hueco es la edad, y no se adivina: se deduce** con una pista de la casa o del sueño. En La primera noche, el papelito de la mamá con la sortija dice _"el año que empezó segundo grado"_ (a primer grado se entra a los seis → siete). En La segunda, el boletín dice _"3.er año"_ (la secundaria se empieza a los trece → quince). Mientras se completa la edad se puede **mirar la pista** sin salir de la pizarra.
+- **No se puede perder.** Si se equivoca, Jorge se corrige pensando en voz alta; a la segunda, da una pista más clara.
+- **Si falta la pista**, el recuerdo queda a medias y guardado: Jorge piensa que tiene que haber algo en la casa que lo diga, y el objetivo cambia a buscarlo.
+- **Es argentino a propósito:** las deducciones usan cómo es la escuela acá (primer grado a los seis, la secundaria a los trece, "3.er año").
+
+_Por ahora está en La primera noche y La segunda noche, para probar cómo se siente. Idea para las demás (sin implementar): la fiesta con la fecha atrás de la foto, la pelea con "veinte años" en el papelito del papá, el reencuentro con lo que dice María en el bar ("diez años sin vernos"), el viaje con el boleto (12/08) y la muerte de la mamá contando los quince días._
 
 ### Sueño lúcido
 

@@ -77,7 +77,9 @@ Jorge tiene la misma línea de tiempo en una **pizarra en su cuarto**. El jugado
 
 _En el prototipo, la pizarra está vacía a la mañana y se actualiza en **La primera noche**._
 
-**Cómo se actualiza:** al volver de una sesión, Jorge **ubica el recuerdo** en la línea: el jugador elige entre los tramos de diez años, y si se equivoca Jorge lo corrige con lo que vio en el sueño (_"Era chico. Tenía las manos chiquitas."_). Después lo escribe con su letra. La marca queda también en la pizarra de la pared. Ver "Locaciones" → La primera noche.
+**Cómo se actualiza:** al volver de una sesión, Jorge **arma el recuerdo** (ver "Mecánicas" → Armar el recuerdo). Sobre la pizarra aparece **una hoja clara** con el título _"¿Qué recordé?"_ y una frase en letra de Jorge con huecos (`_____`); el que se está completando se ve como **[ ? ]**. Las opciones salen abajo, como en los diálogos, y cuando la pista de la edad es un objeto, la última opción es _"(Mirar …)"_, que lo abre encima y vuelve. Lo que piensa Jorge aparece en globos de pensamiento entre la hoja y las opciones. Con la frase completa, Jorge lo escribe en la línea y la marca queda también en la pizarra de la pared. Ver "Locaciones" → La primera noche.
+
+_En el prototipo, armar el recuerdo está en La primera noche y La segunda noche (prueba). De la tercera en adelante todavía se elige el tramo de diez años._
 
 **Primer tramo:** _"Infancia · La feria"_. Al despertar de la Sesión 1 se avisa con un cartel chico abajo a la derecha, y esa noche Jorge lo escribe en la pizarra: _"La feria con mamá"_.
 

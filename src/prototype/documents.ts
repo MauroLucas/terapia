@@ -373,7 +373,7 @@ export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: P
   },
   sortija: {
     nombre: 'Sortija',
-    texto: 'La sortija de la calesita de la feria. Estaba en una caja de cosas de cuando era chico.',
+    texto: 'La sortija de la calesita de la feria. Estaba en una caja de cosas de cuando era chico, con un papelito de mamá: "el año que empezó segundo grado".',
     pages: [
       {
         opts: { w: 420, h: 380, paper: 0x2b2018 },
@@ -384,6 +384,16 @@ export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: P
           g.lineStyle(5, 0xfff0b8).beginPath().arc(0, -10, 92, Math.PI * 1.08, Math.PI * 1.45).strokePath()
           c.add(g)
           c.add(text(scene, 0, 140, 'La sortija de la calesita', 22, '#e8dcc0', { fontFamily: HAND_FONT }).setOrigin(0.5))
+        },
+      },
+      {
+        // El papelito que venía con la sortija, con la letra de la mamá: la pista de la edad en La primera noche (provisorio)
+        opts: { w: 460, h: 260, paper: 0xefe6cf },
+        build: (scene, c) => {
+          const ink = '#3a3550'
+          c.add(text(scene, 0, -70, 'La sortija de Jorgito.', 30, ink, { fontFamily: HAND_FONT }).setOrigin(0.5))
+          c.add(text(scene, 0, 0, 'De la feria, el año', 26, ink, { fontFamily: HAND_FONT }).setOrigin(0.5))
+          c.add(text(scene, 0, 44, 'que empezó segundo grado.', 26, ink, { fontFamily: HAND_FONT }).setOrigin(0.5))
         },
       },
     ],
