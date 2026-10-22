@@ -30,3 +30,7 @@ Al final, Jorge está **encerrado en el baño con una vela**.
 ### Coleccionables
 
 Estaría bueno agregar **coleccionables** al juego. _Cuáles y dónde: por definir._
+
+### La culpa como villano
+
+El juego se tiene que basar en el **sentimiento de culpa**, y el villano debería ser **la culpa misma**. Idea para el personaje: una figura **negra** que, en lugar de cara, tiene **un ojo gigante**, como si te estuviera observando.
