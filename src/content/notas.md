@@ -18,3 +18,7 @@ Que la **Sesión 1** no sea una feria sino un **circo**: van de visita a ver al 
 - El recuerdo sigue igual: Jorge de chico va con su mamá, **se pierde** y se queda quieto para que ella lo encuentre.
 - **La sortija** se cambia por algo del circo, que también vuelve después en el juego. _Qué objeto: por definir._
 - Por ahora queda solo como nota: todavía no se pasó al resto del GDD ni al prototipo.
+
+### Sesiones pensadas como mapas
+
+Estaría bueno pensar mejor las sesiones **como si fueran mapas**. Quizás no todas, pero sí las que pasan en la **ciudad natal de Jorge: Adrogué, Buenos Aires**.
