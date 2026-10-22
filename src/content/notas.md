@@ -14,3 +14,7 @@ El juego está pensado para un jugador:
 ### La Sesión 1: un circo en vez de una feria
 
 Que la **Sesión 1** no sea una feria sino un **circo**: van de visita a ver al **actor Augusto**, un reconocido actor para chicos, con un flequillo como el de Carlitos Balá.
+
+- El recuerdo sigue igual: Jorge de chico va con su mamá, **se pierde** y se queda quieto para que ella lo encuentre.
+- **La sortija** se cambia por algo del circo, que también vuelve después en el juego. _Qué objeto: por definir._
+- Por ahora queda solo como nota: todavía no se pasó al resto del GDD ni al prototipo.
