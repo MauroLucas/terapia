@@ -8,7 +8,7 @@ _Las imágenes son los sprites provisorios del prototipo. La lista completa, con
 |---|---|
 | Edad | ~40 años |
 | Rasgo principal | Tiene problemas para recordar su vida _(dentro del sueño: en realidad es disociación, ver "Historia y mundo" → Lore)_ |
-| Motivación | Reconstruir su pasado _(por confirmar)_ |
+| Motivación | **Recuperar su memoria** _(decidido por el usuario)_ |
 | Lo que carga _(spoiler)_ | **Culpa** por la pelea con su mamá, que murió poco después de que se reencontraran |
 | Tratamiento | Paciente de Neural. Lleva **11 sesiones**, pero no recuerda haber ido |
 | Habilidades | Caminar, explorar e interactuar con objetos |
