@@ -162,7 +162,7 @@ function drawVela(g: Phaser.GameObjects.Graphics, pose: Legs | 'sit') {
   g.fillStyle(C.ink).fillCircle(40, 25 + dy, 1.6)
 }
 
-// Jorge de chico (primera sesión: la feria). Mismo suéter verde, cabeza más grande, pantalón corto y zapatillas
+// Jorge de chico (primera sesión: el circo). Mismo suéter verde, cabeza más grande, pantalón corto y zapatillas
 function drawKid(g: Phaser.GameObjects.Graphics, legs: Legs) {
   const feet: [number, number][] =
     legs === 'stand' ? [[17, 100], [27, 100]] : legs === 'walkA' ? [[9, 100], [35, 100]] : [[15, 100], [29, 100]]
@@ -400,7 +400,105 @@ function drawJapo(g: Phaser.GameObjects.Graphics, legs: Legs) {
   g.lineStyle(1.8, 0x9a5a4a).beginPath().arc(38, 31, 5, 0.1, 1.5).strokePath()
 }
 
-// Gente de la feria: siluetas grises, sin cara
+// Lechuga, el presentador del circo (Sesión 1): referencia a Carlitos Balá, con su flequillo recto.
+// Saco rojo de presentador, moño, micrófono y una sonrisa enorme. `enojado`: la cara roja, las cejas y la boca abierta
+function drawLechuga(g: Phaser.GameObjects.Graphics, enojado: boolean) {
+  const skin = enojado ? 0xe0907a : 0xe7c09a
+  g.lineStyle(10, 0x1b1b22)
+  g.lineBetween(25, 106, 24, 144)
+  g.lineBetween(36, 106, 37, 144)
+  g.fillStyle(C.shoes).fillRoundedRect(16, 143, 15, 7, 3).fillRoundedRect(31, 143, 16, 7, 3)
+  // Saco rojo con solapas, camisa blanca y moño
+  g.fillStyle(0xc0392b).fillRoundedRect(11, 46, 38, 66, 10)
+  g.fillStyle(0x962a20).fillTriangle(22, 46, 30, 70, 14, 60).fillTriangle(38, 46, 30, 70, 46, 60)
+  g.fillStyle(0xf6f3ea).fillTriangle(23, 46, 37, 46, 30, 66)
+  g.fillStyle(0x2b6cb0).fillTriangle(30, 51, 22, 47, 22, 55).fillTriangle(30, 51, 38, 47, 38, 55).fillCircle(30, 51, 2.5)
+  g.fillStyle(0xe0b04a).fillCircle(30, 78, 2.5).fillCircle(30, 90, 2.5)
+  // Brazos: uno con el micrófono; enojado, el otro levantado, señalando
+  g.fillStyle(0xa8321f).fillRoundedRect(8, 52, 9, 40, 4)
+  g.fillStyle(skin).fillCircle(12, 94, 4.5)
+  if (enojado) {
+    g.lineStyle(9, 0xa8321f).lineBetween(46, 54, 56, 30)
+    g.fillStyle(skin).fillCircle(57, 26, 4.5)
+  } else {
+    g.fillStyle(0xa8321f).fillRoundedRect(43, 52, 9, 34, 4)
+    g.fillStyle(skin).fillCircle(48, 86, 4.5)
+    g.fillStyle(0x222228).fillRect(46, 70, 4, 14)
+    g.fillStyle(0x55585f).fillCircle(48, 68, 5)
+  }
+  // Cabeza, de frente
+  g.fillStyle(skin).fillRect(25, 36, 10, 12).fillCircle(30, 25, 15)
+  g.fillStyle(skin).fillCircle(15, 27, 3.5).fillCircle(45, 27, 3.5)
+  // El flequillo: corte "taza", recto a la altura de las cejas
+  g.fillStyle(0x2a1d14)
+  g.slice(30, 22, 16, Math.PI, Math.PI * 2, false)
+  g.fillPath()
+  g.fillRect(14, 14, 32, 10)
+  g.fillRect(14, 14, 4, 12).fillRect(42, 14, 4, 12)
+  g.lineStyle(1, 0x45321f)
+  for (let x = 17; x < 44; x += 4) g.lineBetween(x, 17, x, 24)
+  if (enojado) {
+    g.lineStyle(3, 0x1a120c).lineBetween(20, 24, 28, 28).lineBetween(40, 24, 32, 28)
+    g.fillStyle(C.ink).fillCircle(25, 29, 2).fillCircle(35, 29, 2)
+    g.fillStyle(0x5a1414).fillEllipse(30, 35, 11, 8)
+    g.fillStyle(0xf6f3ea).fillRect(26, 31.5, 8, 2)
+  } else {
+    g.fillStyle(C.ink).fillCircle(25, 28, 2).fillCircle(35, 28, 2)
+    g.fillStyle(0xe8a0a0, 0.7).fillCircle(20, 32, 3).fillCircle(40, 32, 3)
+    g.lineStyle(2, 0x7a2020).beginPath().arc(30, 30, 7, 0.25, Math.PI - 0.25).strokePath()
+  }
+}
+
+// El elefante del circo (Sesión 1), mirando a la izquierda: gris, con una manta roja en el lomo. Triste
+function drawElefante(g: Phaser.GameObjects.Graphics) {
+  const piel = 0x8d8f98
+  const sombra = 0x6f717a
+  // Patas de atrás (a la derecha) y de adelante
+  g.fillStyle(sombra).fillRoundedRect(168, 130, 28, 62, 8).fillRoundedRect(84, 134, 28, 58, 8)
+  g.fillStyle(piel).fillRoundedRect(142, 132, 30, 62, 8).fillRoundedRect(56, 132, 30, 62, 8)
+  g.fillStyle(0xd8d4c8)
+  for (const x of [58, 86, 144, 170]) g.fillRect(x + 4, 188, 6, 4).fillRect(x + 14, 188, 6, 4)
+  // Cuerpo, cola y manta
+  g.fillStyle(piel).fillEllipse(128, 104, 176, 112)
+  g.lineStyle(4, sombra).lineBetween(214, 96, 228, 136)
+  g.fillStyle(sombra).fillEllipse(230, 140, 8, 14)
+  g.fillStyle(0xb8322a).fillRoundedRect(96, 52, 80, 46, 8)
+  g.fillStyle(0xe0b04a).fillRect(96, 92, 80, 6)
+  for (let x = 100; x < 176; x += 12) g.fillStyle(0xe0b04a).fillTriangle(x, 98, x + 8, 98, x + 4, 106)
+  // Cabeza, oreja, trompa y colmillo
+  g.fillStyle(piel).fillCircle(52, 82, 42)
+  g.fillStyle(sombra).fillEllipse(78, 84, 46, 70)
+  g.fillStyle(0x9a9ca5).fillEllipse(76, 84, 34, 56)
+  g.fillStyle(piel)
+  for (let i = 0; i <= 10; i++) {
+    const t = i / 10
+    g.fillCircle(22 - Math.sin(t * 2.2) * 12, 100 + t * 78, 15 - t * 7)
+  }
+  g.fillStyle(0xf1ece0).fillTriangle(30, 108, 40, 110, 22, 124)
+  // Ojo triste: el párpado caído, medio cerrado, y una arruga abajo
+  g.fillStyle(C.ink).fillCircle(40, 73, 3.5)
+  g.fillStyle(piel).fillRect(35, 68, 11, 4.5)
+  g.lineStyle(2, 0x55575f).lineBetween(35, 70, 46, 72)
+  g.lineStyle(1.5, 0x6f717a).beginPath().arc(40, 76, 6, 0.3, Math.PI - 0.3).strokePath()
+}
+
+// Los entes (Sesión 1): fallas del sueño. Una silueta como la de la gente sin cara, pero cortada en franjas
+// corridas, con bordes cian y magenta, como una imagen que se rompe
+function drawEnte(g: Phaser.GameObjects.Graphics) {
+  const shift = [0, 3, -4, 6, -2, 0, -6, 4, 1, -3, 5, -5, 2, 0, -4, 3, 6, -2, 0, 4, -3, 2, -6, 1, 0]
+  const ancho = (y: number) => (y < 38 ? 26 : y < 46 ? 12 : y < 112 ? 36 : 28)
+  for (let i = 0; i < 25; i++) {
+    const y = i * 6
+    const w = ancho(y)
+    const x = 30 - w / 2 + shift[i]
+    g.fillStyle(0x3ff2ff, 0.8).fillRect(x - 3, y, w, 5)
+    g.fillStyle(0xff3fd8, 0.8).fillRect(x + 3, y, w, 5)
+    g.fillStyle(0x07080d).fillRect(x, y, w, 5)
+  }
+  g.fillStyle(0xf6f3ea).fillRect(24, 18, 4, 3).fillRect(33, 19, 4, 3)
+}
+
+// Gente del circo (y de la Sesión 1 en general): siluetas grises, sin cara
 function drawSombra(g: Phaser.GameObjects.Graphics) {
   g.fillStyle(0x4d5363)
   g.fillRect(19, 104, 9, 42).fillRect(31, 104, 9, 42)
@@ -536,7 +634,7 @@ export function makeTextures(scene: Phaser.Scene) {
   g.fillStyle(0x8f7220).fillRect(9, 6, 4, 10)
   g.generateTexture('ficha', 22, 22)
 
-  // La sortija de la calesita (La primera noche)
+  // La sortija de la calesita del circo (La primera noche)
   g.clear()
   g.lineStyle(4, 0xe0b04a).strokeCircle(11, 11, 8)
   g.lineStyle(1.5, 0xfff0b8).beginPath().arc(11, 11, 8, Math.PI * 1.1, Math.PI * 1.5).strokePath()
@@ -577,7 +675,21 @@ export function makeTextures(scene: Phaser.Scene) {
     g.generateTexture(key, w, 140)
   }
 
-  // Sesión 1, la feria: Jorge de chico, su mamá, la gente sin cara y la llama del doctor Vela
+  // Sesión 1, el circo: Lechuga (el presentador), el elefante y los entes (fallas del sueño)
+  g.clear()
+  drawLechuga(g, false)
+  g.generateTexture('lechuga', 60, 150)
+  g.clear()
+  drawLechuga(g, true)
+  g.generateTexture('lechugaEnojado', 60, 150)
+  g.clear()
+  drawElefante(g)
+  g.generateTexture('elefante', 240, 196)
+  g.clear()
+  drawEnte(g)
+  g.generateTexture('ente', 60, 150)
+
+  // Sesión 1, el circo: Jorge de chico, su mamá, la gente sin cara y la llama del doctor Vela
   const kid: [string, Legs][] = [['chico0', 'stand'], ['chico1', 'walkA'], ['chico2', 'walkB']]
   for (const [key, legs] of kid) {
     g.clear()

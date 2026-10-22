@@ -373,7 +373,7 @@ export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: P
   },
   sortija: {
     nombre: 'Sortija',
-    texto: 'La sortija de la calesita de la feria. Estaba en una caja de cosas de cuando era chico, con un papelito de mamá: "el año que empezó segundo grado".',
+    texto: 'La sortija de la calesita del circo. Estaba en una caja de cosas de cuando era chico, con un papelito de mamá: "el año que empezó segundo grado".',
     pages: [
       {
         opts: { w: 420, h: 380, paper: 0x2b2018 },
@@ -392,7 +392,7 @@ export const OBJETOS: Record<ObjetoId, { nombre: string; texto: string; pages: P
         build: (scene, c) => {
           const ink = '#3a3550'
           c.add(text(scene, 0, -70, 'La sortija de Jorgito.', 30, ink, { fontFamily: HAND_FONT }).setOrigin(0.5))
-          c.add(text(scene, 0, 0, 'De la feria, el año', 26, ink, { fontFamily: HAND_FONT }).setOrigin(0.5))
+          c.add(text(scene, 0, 0, 'Del circo, el año', 26, ink, { fontFamily: HAND_FONT }).setOrigin(0.5))
           c.add(text(scene, 0, 44, 'que empezó segundo grado.', 26, ink, { fontFamily: HAND_FONT }).setOrigin(0.5))
         },
       },

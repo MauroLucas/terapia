@@ -20,7 +20,7 @@ El juego es una **aventura narrativa 2D de vista lateral**. Minuto a minuto, el 
 | Bajar / subir escaleras | → / ↓ bajar · ← / ↑ volver | Stick | Cruceta en pantalla |
 | Avanzar diálogo | Espacio / E / Enter | A / ✕ | Tocar la pantalla |
 | Elegir opción de diálogo | ↑ / ↓ + Enter | Cruceta + A / ✕ | Tocar la opción |
-| Sueño: mirarse las manos, agarrar la sortija | E | A / ✕ | Botón **E** |
+| Sueño: mirarse las manos, agarrar la sortija, esconderse | E | A / ✕ | Botón **E** |
 | Sueño: bailar (Sesión 3) | ← / → alternando | Cruceta | ◀ ▶ alternando |
 | Sueño: quedarse quieto | No tocar nada | No tocar nada | No tocar nada |
 | Diario (pistas y objetos) | TAB | Select / Touchpad | Botón **Diario** |
@@ -132,7 +132,7 @@ El juego avanza por **sesiones** en Neural. Cada sesión es un sueño lúcido qu
 
 _Pedido del usuario: que el juego tenga más dificultad. La primera prueba es la pizarra de las noches; el detalle es provisorio, propuesto por el agente._
 
-Al volver de una sesión, anotar el recuerdo ya no es elegir en qué década va: hay que **reconstruirlo**. En la pizarra aparece una frase con huecos (_"Fui a la feria con ___. Me perdí en ___…"_) y el jugador la completa **de a un hueco**, eligiendo entre tres o cuatro palabras. La referencia son los juegos de deducción como _The Case of the Golden Idol_.
+Al volver de una sesión, anotar el recuerdo ya no es elegir en qué década va: hay que **reconstruirlo**. En la pizarra aparece una frase con huecos (_"Fui al circo con ___. Me escapé para soltar al ___…"_) y el jugador la completa **de a un hueco**, eligiendo entre tres o cuatro palabras. La referencia son los juegos de deducción como _The Case of the Golden Idol_.
 
 - **Los huecos de palabras** se contestan con lo que se vio en el sueño (con quién estaba, dónde, qué hizo). Las opciones equivocadas son cosas que podrían haber sido, y se mezclan cada vez.
 - **El último hueco es la edad, y no se adivina: se deduce** con una pista de la casa o del sueño. En La primera noche, el papelito de la mamá con la sortija dice _"el año que empezó segundo grado"_ (a primer grado se entra a los seis → siete). En La segunda, el boletín dice _"3.er año"_ (la secundaria se empieza a los trece → quince). Mientras se completa la edad se puede **mirar la pista** sin salir de la pizarra.
@@ -144,18 +144,18 @@ _Por ahora está en La primera noche y La segunda noche, para probar cómo se si
 
 ### Sueño lúcido
 
-Adentro de una sesión, las reglas cambian. Esto es lo que se definió con la primera (ver "Locaciones" → Sesión 1: La feria):
+Adentro de una sesión, las reglas cambian. Esto es lo que se definió con la primera (ver "Locaciones" → Sesión 1: El circo):
 
-- **Jorge tiene la edad del recuerdo.** En la feria es un chico.
+- **Jorge tiene la edad del recuerdo.** En el circo es un chico.
 - **El doctor Vela es una llama** que flota al lado de Jorge y lo sigue. Su voz sale de ahí, con el globo dentado del portero eléctrico.
 - **Recordar es iluminar.** El sueño está a oscuras; lo que la llama ilumina un rato pasa de gris a color, y recién ahí se puede examinar.
 - **Los recuerdos se ven como figuras transparentes** que repiten lo que pasó y se desvanecen. Cada recuerdo se anota como pista en el diario.
 - **Mirarse las manos** es la prueba de que se está soñando: en el sueño, las manos salen mal (un dedo de más).
-- **Lógica de sueño:** lugares que se repiten (la feria vuelve a empezar), recuerdos que saltan de un día a otro (en la Sesión 3, de la plaza a la fiesta), gente sin cara.
+- **Lógica de sueño:** lugares que se repiten, recuerdos que saltan de un día a otro (en la Sesión 3, de la plaza a la fiesta), gente sin cara.
 - **La llama cambia según lo que hay cerca** (desde la Sesión 2): cerca de lo que lastima a Jorge (el papá y sus cosas) se achica y hace frío; cerca de lo que lo cuida (María) crece. En la Sesión 3, una sesión de respiro, no hay frío.
 - **Momentos sin forma de fallar:** algunos recuerdos piden una acción simple, como bailar con María en la Sesión 3 (apretar ← → alternando). No hay ritmo que seguir ni forma de hacerlo mal.
 - **El recuerdo no se puede cambiar.** Si el jugador elige algo que no pasó, el sueño no lo deja (en la Sesión 2, la tinta de la firma se borra). La elección está para dar ilusión de control.
-- **No se puede perder.** Los puzzles ayudan si el jugador se traba (la sortija se agranda, Vela da pistas).
+- **No se puede perder.** Los puzzles ayudan si el jugador se traba (la sortija se agranda, la galera de la pelotita brilla, Vela da pistas). En el sigilo, si lo ven, vuelve al último lugar seguro.
 - **Los momentos violentos no los hace el jugador.** El recuerdo se corta justo antes, como si la mente de Jorge no quisiera mirarlo, y sigue con lo que quedó. En la Sesión 2 el corte es a negro; en la pelea de la Sesión 4, **la imagen se rompe como un vidrio** y lo siguiente es la mamá en el piso.
 - **El odio nubla** (Sesión 4): cuando Jorge se enoja, la pantalla se tiñe de rojo, la llama se achica y se pone roja, y **la voz de Vela llega rota**, con letras que faltan. Jorge no la escucha hasta que sale de la casa.
 - **La lluvia** (Sesión 5): bajo la lluvia la llama se achica y se ve menos; bajo un toldo o el paraguas de María, crece.
@@ -189,7 +189,7 @@ _Idea del usuario. Se probó en la Sesión 1 y se sacó del prototipo porque no 
 - **Qué es:** al final de una sesión, el sueño **se descontrola**. Todo se congela, se pierde la comunicación con Vela y **la gente sin cara se vuelve violenta**: se pone negra, crece, se le parte la cabeza al medio con dientes grandes y **grita al cielo** (con una cinemática). Son **personajes del subconsciente de Jorge que no quieren que siga buscando**.
 - **La persecución:** Jorge tiene que buscar la forma de despertar **entrando por distintos cuartos** hasta encontrar la salida.
 - **Si lo agarran,** vuelve a **la primera puerta**.
-- **En la feria (Sesión 1):** todo se congela y Jorge empieza a caminar solo hasta una parte del mapa donde aparece el primero.
+- **En la Sesión 1** (cuando era la feria): todo se congela y Jorge empieza a caminar solo hasta una parte del mapa donde aparece el primero.
 
 **Lo que se probó** (para retomar): una carpa que aparece detrás de Jorge como primera puerta; un callejón de carpas rojo con cuartos (espejos, los caballitos colgados, una carpa con un ser agachado y la salida con la sortija); correr; quedarse quieto para que no lo vean (lo que le dijo su mamá en la feria); un latido y un tinte rojo cuando están cerca; pedazos de la voz de Vela entre la estática.
 
@@ -206,7 +206,7 @@ _Idea del usuario: las sesiones siguen siendo **lineales**, pero con **más para
 
 | Edad | El mapa |
 |---|---|
-| 7 (la feria) | Crayones, trazos torcidos y fuera de escala: la calesita enorme, la mamá más grande que los juegos |
+| 7 (el circo) | Crayones, trazos torcidos y fuera de escala: la carpa enorme, el elefante más grande que todo |
 | 15 (el boletín) | Birome en una hoja cuadriculada de la carpeta del colegio, con flechas y tachones |
 | 17 (la fiesta) | Lápiz, más prolijo y con perspectiva |
 | 30 en adelante | Planos de arquitecto: escala, cotas, rótulo, papel de calco |
@@ -219,7 +219,7 @@ _Idea del usuario: las sesiones siguen siendo **lineales**, pero con **más para
 
 #### Sigilo y los entes
 
-_Idea del usuario (22/10/2026), para la Sesión 1 rediseñada (el circo). Sin implementar._
+_Idea del usuario (22/10/2026), para la Sesión 1 rediseñada (el circo). **Ya está en el prototipo**, en la Sesión 1 (ver "Locaciones" → Sesión 1 → Atrás de la carpa: sigilo). Los detalles son provisorios._
 
 - **Sigilo:** después del show, Jorge chico se escapa y tiene que **moverse sin que lo vean** hasta llegar al elefante (decidido por el usuario).
 - **Los entes:** con esa mecánica se introducen los **entes**, que son **fallas del sueño**. Jorge **no los puede atacar, solo esquivar** (decidido por el usuario). Ver "Personajes" → Los entes.
@@ -227,11 +227,15 @@ _Idea del usuario (22/10/2026), para la Sesión 1 rediseñada (el circo). Sin im
 - **Con las reglas del sueño lúcido:** sigue valiendo que **no se puede perder** y que **el jugador nunca ejecuta la violencia**.
 - **Relación con "El final se descontrola"** (arriba): esa idea se probó y se sacó. Los entes pueden ser la forma de retomarla más adelante, pero arrancan como algo que se esquiva. _Por definir con el usuario._
 
-_Ideas del agente (provisorias):_
+**Cómo quedó en el prototipo** _(provisorio, propuesto por el agente)_:
 
-- Escondites: cajas, debajo de las gradas, entre los carromatos, detrás de una lona.
-- **La llama de Vela delata:** la luz que ayuda a recordar también hace que lo vean. Para pasar sin ser visto, Vela tiene que achicarse (_"Me voy a hacer chiquito, Jorge"_), y el sueño se ve menos.
-- Si lo ven, no hay castigo: vuelve al último escondite.
+- **Esconderse** con **E** en los escondites (las cajas, el carromato): Jorge queda atrás y nadie lo ve. Se sale con **E** o caminando.
+- **El cuidador** camina de punta a punta con una **linterna**: si la luz alumbra a Jorge un instante (o se lo choca), lo ve. La luz de la linterna se ve de lejos, aunque esté oscuro.
+- **El ente** va y viene, titilando: si toca a Jorge, la imagen se sacude.
+- **Si lo ven o lo toca un ente, no hay castigo:** vuelve al último lugar seguro (el último escondite, o el tramo entre una parte y otra).
+- **La llama de Vela se achica** atrás de la carpa (_"Si ven mi luz, te van a ver a vos."_ / _"Me voy a hacer chiquito."_): el sueño se ve menos.
+
+_Ideas para más adelante:_ que la llama delate de verdad (que el cuidador vea la luz si Jorge no se esconde a tiempo), más escondites (debajo de las gradas, detrás de una lona), y entes que no se puedan esquivar escondiéndose, sino pasando en el momento justo.
 
 ### Combate
 

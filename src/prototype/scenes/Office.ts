@@ -105,13 +105,13 @@ const SEGUNDA: Pregunta[] = [
   {
     id: 's2-semana',
     q: '¿Cómo estuviste esta semana?',
-    verdad: { dice: 'Raro. Me acuerdo de la feria, pero de casi nada más.', vela: ['Es un comienzo, Jorge.'] },
+    verdad: { dice: 'Raro. Me acuerdo del circo, pero de casi nada más.', vela: ['Es un comienzo, Jorge.'] },
     mentira: { dice: 'Bien. Tranquilo.', vela: ['Me alegra.'] },
   },
   {
     id: 's2-pizarra',
     q: '¿Pudiste anotar algo de lo que viste?',
-    verdad: { dice: 'Sí. En la pizarra de mi cuarto: la feria con mi mamá.', vela: ['Muy bien. Eso es tuyo: ya no se pierde.'] },
+    verdad: { dice: 'Sí. En la pizarra de mi cuarto: el circo con mi mamá.', vela: ['Muy bien. Eso es tuyo: ya no se pierde.'] },
     mentira: { dice: 'No, nada.', vela: ['No importa. Lo vamos a ir armando juntos.'] },
   },
 ]
@@ -982,7 +982,7 @@ export class Office extends Phaser.Scene {
     } else {
       await say(this, [
         this.doc('Despacio. Ya estás acá.'),
-        this.doc('Lo vi todo en la pantalla: la feria, la calesita… tu mamá.'),
+        this.doc('Lo vi todo en la pantalla: el circo, el elefante… tu mamá.'),
         this.think('Mi mamá.'),
         this.think('No le pude ver la cara.'),
         this.doc('Es normal. Los recuerdos vuelven de a poco.'),
@@ -992,7 +992,7 @@ export class Office extends Phaser.Scene {
     sfx.handle()
     await this.tween({ targets: this.helmet, y: HELMET.up, duration: 2000, ease: 'Sine.InOut', onUpdate: () => this.drawCable() })
     sfx.click()
-    toast(this, ['✎ Línea de tiempo: Infancia · La feria', '✎ Línea de tiempo: Adolescencia · El boletín', '✎ Línea de tiempo: Adolescencia · La fiesta', '✎ Línea de tiempo: Juventud · La pelea', '✎ Línea de tiempo: Los 30 · El reencuentro', '✎ Línea de tiempo: Adultez · El viaje del 12/08', '✎ Línea de tiempo: La pérdida · La muerte de mamá', '✎ Línea de tiempo: La pérdida · El velorio'][this.sesion - 1])
+    toast(this, ['✎ Línea de tiempo: Infancia · El circo', '✎ Línea de tiempo: Adolescencia · El boletín', '✎ Línea de tiempo: Adolescencia · La fiesta', '✎ Línea de tiempo: Juventud · La pelea', '✎ Línea de tiempo: Los 30 · El reencuentro', '✎ Línea de tiempo: Adultez · El viaje del 12/08', '✎ Línea de tiempo: La pérdida · La muerte de mamá', '✎ Línea de tiempo: La pérdida · El velorio'][this.sesion - 1])
     await this.wait(800)
     await say(this, this.sesion === 7
       ? [this.doc('Por hoy alcanza, Jorge.'), this.doc('Andá a tu casa. Descansá.')]
@@ -1044,7 +1044,7 @@ export class Office extends Phaser.Scene {
       return
     }
     // Jugando la Sesión 1 suelta, termina acá; en el prototipo completo Jorge vuelve a su casa
-    if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'Sesión 1: La feria' })
+    if (this.registry.get('solo')) this.scene.start('LevelEnd', { titulo: 'Fin de la locación', locacion: 'Sesión 1: El circo' })
     else this.scene.start('Apartment', { noche: true })
   }
 

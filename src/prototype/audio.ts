@@ -146,6 +146,35 @@ export const sfx = {
     }
   },
   timbreColegio() { for (let i = 0; i < 26; i++) tone(i % 2 ? 1180 : 1040, 0.06, 'square', 0.018, i * 0.06) },
+  // Sesión 1, el circo: el látigo (se oye, no se ve pegar), los aplausos, el redoblante del truco y el elefante
+  latigo() { noiseBurst(0.09, 4200, 0.28, 'highpass'); tone(2400, 0.04, 'square', 0.03) },
+  aplausos(seg = 2.4) {
+    const n = Math.round(seg * 26)
+    for (let i = 0; i < n; i++) setTimeout(() => noiseBurst(0.05, 1800 + Math.random() * 2500, 0.05 * (1 - i / n) + 0.01, 'bandpass'), i * 38 + Math.random() * 30)
+  },
+  redoble(seg = 1.6) {
+    const n = Math.round(seg * 22)
+    for (let i = 0; i < n; i++) setTimeout(() => noiseBurst(0.04, 1200, 0.03 + (i / n) * 0.05, 'bandpass'), i * 45)
+    setTimeout(() => { noiseBurst(0.9, 6000, 0.12, 'highpass'); tone(140, 0.3, 'sine', 0.12) }, n * 45)
+  },
+  trompeta() {
+    const a = out()
+    if (!a) return
+    const t = a.c.currentTime
+    const o = a.c.createOscillator()
+    const g = a.c.createGain()
+    o.type = 'sawtooth'
+    o.frequency.setValueAtTime(260, t)
+    o.frequency.linearRampToValueAtTime(520, t + 0.25)
+    o.frequency.linearRampToValueAtTime(380, t + 0.9)
+    g.gain.setValueAtTime(0.0001, t)
+    g.gain.linearRampToValueAtTime(0.05, t + 0.08)
+    g.gain.exponentialRampToValueAtTime(0.0001, t + 1.1)
+    o.connect(g).connect(a.m)
+    o.start(t)
+    o.stop(t + 1.2)
+  },
+  cadena() { for (let i = 0; i < 6; i++) tone(1800 + Math.random() * 900, 0.08, 'triangle', 0.03, i * 0.06); noiseBurst(0.3, 3000, 0.05, 'highpass') },
 }
 
 // Música y ambientes en loop
@@ -255,11 +284,11 @@ export function startMachine(): Loop {
   return { stop: (fade = 2) => fadeOutAndStop(g, nodes, fade) }
 }
 
-// Sueño de la feria: la música de la calesita, lejos y apagada, un poco desafinada.
-// `clear` abre el filtro: la música se escucha nítida (cuando aparece la mamá).
-export function startFeria(): Loop & { clear: () => void } {
+// Sesión 1, el circo: la música de la calesita, lejos y apagada, un poco desafinada.
+// `clear` abre el filtro: la música se escucha nítida (en la función y cuando aparece la mamá). `muffle` la vuelve a apagar.
+export function startCalesita(): Loop & { clear: () => void; muffle: () => void } {
   const a = out()
-  if (!a) return { stop() {}, clear() {} }
+  if (!a) return { stop() {}, clear() {}, muffle() {} }
   const t = a.c.currentTime
   const g = a.c.createGain()
   g.gain.setValueAtTime(0, t)
@@ -294,6 +323,7 @@ export function startFeria(): Loop & { clear: () => void } {
       fadeOutAndStop(g, [], fade)
     },
     clear: () => f.frequency.setTargetAtTime(3500, a.c.currentTime, 1.2),
+    muffle: () => f.frequency.setTargetAtTime(500, a.c.currentTime, 0.8),
   }
 }
 

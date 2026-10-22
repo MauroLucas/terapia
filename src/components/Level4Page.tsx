@@ -21,12 +21,12 @@ export function Level4Page() {
   return (
     <article className="content prototype">
       <header className="section-header">
-        <span className="section-icon">🎠</span>
-        <h1>Prototipo: Sesión 1, la feria</h1>
+        <span className="section-icon">🎪</span>
+        <h1>Prototipo: Sesión 1, el circo</h1>
       </header>
       <p>
-        Solo la primera sesión: el sueño lúcido de la feria, cuando Jorge se perdió de chico, y el despertar en la camilla
-        del doctor Vela (en el prototipo completo, después sigue La primera noche). Ver "Locaciones" → Sesión 1: La feria.
+        Solo la primera sesión: el sueño lúcido del circo, cuando Jorge se escapó de chico para soltar a un elefante, y el despertar en la camilla
+        del doctor Vela (en el prototipo completo, después sigue La primera noche). Ver "Locaciones" → Sesión 1: El circo.
       </p>
       <div className="game-frame" ref={ref} />
       <div className="game-actions">

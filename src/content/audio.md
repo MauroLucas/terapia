@@ -119,16 +119,24 @@ _En el prototipo se reutilizan los sonidos de las otras locaciones (provisorio).
 
 _Provisorio. Lo único nuevo es el zumbido de la máquina._
 
-### Sesión 1: La feria
+### Sesión 1: El circo
 
 | Sonido | Cuándo | Notas |
 |---|---|---|
-| **Música de la calesita** | Todo el sueño | **Nuevo.** Un vals de calesita, **lejos y apagado** (como escuchado a través de una pared) y un poco desafinado. Al final, cuando aparece la mamá, se escucha **nítido** |
+| **Música de la calesita** | Todo el sueño | Un vals de calesita, **lejos y apagado** (como escuchado a través de una pared) y un poco desafinado. Adentro de la carpa se escucha **nítido**; atrás, otra vez apagado. **Se corta** cuando aparece Lechuga enojado, y vuelve nítido cuando llega la mamá |
+| Redoblante | Antes de que aparezca Lechuga y antes del número del elefante | **Nuevo.** Un redoble que crece y termina en un platillo |
+| Aplausos | En la función | **Nuevo.** Muchas palmas a destiempo |
+| Látigo | En el número del elefante | **Nuevo.** Un chasquido seco. **Se oye, no se ve pegar** |
+| Trompeta del elefante | Cuando entra a la pista y en el banquito | **Nuevo.** Un barrito que sube y baja |
+| Las galeras | En el truco, cada vez que se cambian de lugar | El clic de los menús |
+| La cadena | Cuando Jorge saca la estaca | **Nuevo.** Eslabones que tintinean |
+| Estática | Cuando aparece un ente, cuando toca a Jorge y cuando Lechuga se rompe | La misma del portero eléctrico |
 | Aparece la llama | Cuando aparece el doctor Vela, en forma de llama | **Nuevo.** Un soplido y dos notas suaves |
 | Algo toma color | Cuando la luz ilumina un objeto del recuerdo | **Nuevo.** Dos notas agudas, muy suaves |
 | Voz de Vela | Cada vez que habla | El chasquido del portero eléctrico: habla "por la máquina" |
 | Pasos | Al caminar | Más cortos que de grande |
 | Sortija | Al sacarla | El mismo sonido de agarrar un objeto |
+| Esconderse | Al meterse atrás de las cajas o del carromato | El sonido de un papel |
 
 _Provisorio._
 

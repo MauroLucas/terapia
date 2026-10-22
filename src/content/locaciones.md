@@ -10,7 +10,7 @@ El juego se divide en **locaciones**: cada una es un lugar con sus ambientes, su
 | — | Secuencia de títulos y auto | Escaleras del edificio y viaje a Neural | Bajar hasta la planta baja mientras aparecen los títulos; charla con el chofer | En el prototipo |
 | 2 | **Hall del edificio** | Hall de entrada de Neural | Entrar sin el carnet: lograr que el de seguridad deje los molinetes. Termina con el ascensor | En el prototipo |
 | 3 | **Consultorio** | Pasillo de los consultorios, consultorio del doctor Vela y cuarto de inducción al sueño | Encontrar el consultorio, charlar con el doctor y acostarse en la máquina de los sueños | En el prototipo |
-| 4 | **Sesión 1: La feria** | Sueño lúcido: una feria de noche, en la infancia de Jorge | Recordar el día que Jorge se perdió de chico y quedarse quieto para que su mamá lo encuentre | En el prototipo |
+| 4 | **Sesión 1: El circo** | Sueño lúcido: un circo de noche, en la infancia de Jorge | Recordar la noche en el circo, escaparse sin que lo vean para soltar al elefante y quedarse quieto para que su mamá lo encuentre | En el prototipo |
 | 5 | **La primera noche** | Casa de Jorge, de noche, después de la Sesión 1 | Anotar el recuerdo en la pizarra y dormir. Alguien toca el portero | En el prototipo |
 | 6 | **Pre-sesión 2** | Casa de Jorge (la mañana, una semana después) y el consultorio | Despertarse, salir del cuarto e ir directo a la consulta con Vela | En el prototipo |
 | 7 | **Sesión 2: El boletín** | Sueño lúcido: el aula, la casa de la mamá y el barrio, a los 15 | El Japo y el pizarrón. Conseguir que el papá firme el boletín. Conoce a María | En el prototipo |
@@ -802,7 +802,7 @@ Jorge sale del ascensor y tiene que **encontrar el consultorio del doctor Vela**
 2. **El consultorio:** Vela lo recibe y le hace **preguntas**. Jorge puede **decir la verdad o mentir**: lo elige el jugador.
 3. **El cuarto de inducción al sueño:** Vela le explica el tratamiento y Jorge se acuesta en la **máquina de los sueños**. Se le cierran los ojos y termina la locación.
 
-Después de esto empiezan las **sesiones**: cada una es una parte de la vida de Jorge, van en orden fijo y lo recuperado se suma a una **línea de tiempo** (ver "Historia y mundo" → Estructura, y "UI" → Línea de tiempo). Son nueve, de la Sesión 1: La feria a la Sesión 9: El baño (ver cada una más abajo, y "Mecánicas" → Sueño lúcido).
+Después de esto empiezan las **sesiones**: cada una es una parte de la vida de Jorge, van en orden fijo y lo recuperado se suma a una **línea de tiempo** (ver "Historia y mundo" → Estructura, y "UI" → Línea de tiempo). Son nueve, de la Sesión 1: El circo a la Sesión 9: El baño (ver cada una más abajo, y "Mecánicas" → Sueño lúcido).
 
 ### El pasillo
 
@@ -960,7 +960,7 @@ En el pasillo, durante las preguntas y al acostarse, el cartel no aparece.
 
 ### Final de la locación
 
-Termina cuando a Jorge **se le cierran los ojos** en la camilla. Sigue en **Sesión 1: La feria**, adentro del sueño lúcido.
+Termina cuando a Jorge **se le cierran los ojos** en la camilla. Sigue en **Sesión 1: El circo**, adentro del sueño lúcido.
 
 ### Pendiente de definir
 
@@ -970,70 +970,70 @@ Termina cuando a Jorge **se le cierran los ojos** en la camilla. Sigue en **Sesi
 - ¿Se escucha o se ve algo detrás de las otras puertas del pasillo?
 - ¿El pasillo es tan tranquilo como parece, o hay algo raro en la ciudad que se ve por las ventanas?
 
-## Sesión 1: La feria
-
-### Rediseño: el circo _(en curso)_
-
-_Decidido por el usuario (22/10/2026): la Sesión 1 se replantea entera. Lo que sigue más abajo (la feria) es lo que **todavía está en el prototipo**, hasta que se rehaga._
-
-**Por qué:** aplicar **"Salva al gato"** (ver "Historia y mundo" → Referencias). Al empezar los sueños, Jorge tiene que hacer algo con lo que el jugador empatice: de chico, se escapa para **liberar a un elefante**.
-
-| Qué | Lo decidido por el usuario |
-|---|---|
-| Lugar | Un **circo** en vez de una feria. En el circo trabajan con **animales**, y a Jorge **no le gusta** |
-| La calesita | Sigue, **afuera de la carpa**. Así se mantiene **la sortija** y todo lo que la usa después (La primera noche, las consultas, la caja de la Sesión 4, los juegos de memoria) |
-| El presentador | Una **referencia a Carlitos Balá** (ver "Personajes" → El presentador del circo) |
-| El show | **Secuencias de puzzles** durante la función |
-| La escapada | Al terminar el show, en un **descuido de la mamá**, Jorge se escapa para ir a **rescatar al elefante** |
-| Sigilo | Escenas en las que Jorge tiene que **moverse sin que lo vean** hasta llegar al elefante (ver "Mecánicas" → Ideas a implementar → Sigilo y los entes) |
-| Los entes | Con el sigilo se introducen los **entes**: **fallas del sueño**. Jorge **no los puede atacar, solo esquivar** |
-| El elefante | Jorge **lo suelta, pero el elefante no hace nada**. Referencia a _El elefante encadenado_, de Jorge Bucay (ver "Historia y mundo" → Referencias) |
-| Después | Aparece el presentador y **le reprocha a Jorge, de muy mala manera** |
-
-**Por definir:** cómo termina la sesión después del reproche (¿se mantiene el _"quedate quieto, que yo te encuentro"_ y la mamá lo encuentra?), qué puzzles tiene el show, en qué momento va la calesita, el nombre del presentador, qué pasa si a Jorge lo ven, y cómo quedan los textos que nombran "la feria" en el resto del juego (la pizarra de La primera noche, las consultas con Vela y las Sesiones 2, 7 y 9).
-
-_Ideas del agente para cuando se arme (provisorias):_
-
-- Mostrar al elefante **sin crueldad explícita**: la cadena en la pata, la mirada, el látigo que se oye pero no se ve pegar.
-- Cuando aparece el presentador enojado, **la llama de Vela se achica y hace frío**, como cerca del papá en la Sesión 2: la mente de Jorge puede estar poniéndole al papá la cara de alguien querido, como disfraza a María de chofer.
-- La parte de atrás de la carpa (jaulas, carromatos, gradas por debajo) es buen lugar para los **desvíos opcionales** y el **mapa en crayones** (ver "Mecánicas" → Sueños lineales pero explorables).
+## Sesión 1: El circo
 
 ### Resumen
 
-Es el **primer sueño lúcido** y la primera sesión: un recuerdo de la **infancia** de Jorge. Una noche, de chico, fue a una **feria** con su mamá y **se perdió**.
+Es el **primer sueño lúcido** y la primera sesión: un recuerdo de la **infancia** de Jorge. Una noche, de chico, fue al **circo** con su mamá. Afuera de la carpa había una **calesita**. Adentro, en la función, el presentador **Lechuga** lo llamó para un truco, y después hicieron trabajar a **un elefante encadenado**. A Jorge no le gustó, y en un descuido de su mamá **se escapó para soltarlo**. Lo soltó, pero **el elefante no se fue**.
 
-Jorge aparece **de chico**. La feria está **a oscuras**, y el doctor Vela lo acompaña como una **llama** que flota a su lado: lo que ilumina toma forma y color. Hay que recordar **tres momentos** de esa noche y, al final, hacer lo que le había dicho su mamá: **quedarse quieto** para que ella lo encuentre.
+Jorge aparece **de chico**. El sueño está **a oscuras**, y el doctor Vela lo acompaña como una **llama** que flota a su lado: lo que ilumina toma forma y color.
 
-_La idea (perderse de chico, Jorge de chico, Vela como llama) es del usuario. Los detalles del recuerdo, los diálogos y los puzzles los propuso el agente y son provisorios._
+_Rediseño decidido por el usuario (22/10/2026), en lugar de la feria: el circo, la calesita afuera de la carpa (para mantener la sortija), Lechuga (referencia a Carlitos Balá, con su flequillo), un show con puzzles, la escapada para rescatar al elefante, el sigilo para llegar sin que lo vean, los entes (fallas del sueño que solo se esquivan), el elefante que no hace nada cuando Jorge lo suelta, y el reproche de Lechuga, de muy mala manera. Lo demás (los diálogos, el truco de las galeras, cómo es el sigilo y el final quedándose quieto) lo propuso el agente y es **provisorio**._
 
-**Por qué este recuerdo:** es un comienzo suave, con la mamá presente pero sin cara, porque Jorge todavía no la reconoce (como en la foto de la billetera). Y deja una idea que vuelve al final del juego: **alguien viene a buscarlo**.
+**Por qué este recuerdo:** aplica **"Salva al gato"** (ver "Historia y mundo" → Referencias): lo primero que el jugador ve hacer a Jorge es algo con lo que empatiza, querer liberar a un animal que sufre. Además planta la imagen de _El elefante encadenado_, de Bucay: un elefante que podría irse y no se va. Y, como antes, deja una idea que vuelve al final del juego: **alguien viene a buscarlo**.
 
 ### Cómo es el sueño
 
 | Regla | Qué pasa |
 |---|---|
-| **Oscuridad** | Todo está a oscuras, menos un círculo de luz alrededor de la llama |
+| **Oscuridad** | Afuera y atrás de la carpa todo está a oscuras, menos un círculo de luz alrededor de la llama. Adentro, en la función, hay luz: la pista tiene un reflector |
 | **La llama es Vela** | Sigue a Jorge con un poco de atraso, flotando. La voz del doctor sale de ahí, con el globo dentado del portero eléctrico (habla "por la máquina") |
 | **Recordar es iluminar** | Lo que no se recuerda se ve **gris**. Si la luz lo toca un rato, toma color con un brillo suave. Recién ahí se puede examinar |
-| **Recuerdos** | Al examinar algo importante, el recuerdo aparece como **figuras transparentes y cálidas** (la mamá y Jorge chico) que dicen lo que dijeron esa noche y se desvanecen |
+| **Recuerdos** | Afuera, al examinar algo importante, el recuerdo aparece como **figuras transparentes y cálidas** (la mamá y Jorge chico) que dicen lo que dijeron esa noche y se desvanecen |
 | **La mamá no tiene cara** | Una luz blanca le tapa la cabeza. Se le ve la cara recién en la Sesión 6, cuando Jorge le pide perdón |
-| **La gente no tiene cara** | Siluetas grises que no se iluminan nunca: no son parte del recuerdo |
-| **La feria no termina** | Pasando la vuelta al mundo, la feria vuelve a empezar desde la entrada |
-| **No se puede perder** | No hay tiempo límite ni forma de trabarse |
+| **La gente no tiene cara** | Siluetas grises: no son parte del recuerdo. Lechuga **sí tiene cara** |
+| **Atrás, la llama se achica** | Para que no lo vean, Vela se hace chiquito: se ve menos |
+| **No se puede perder** | No hay tiempo límite. Si a Jorge lo ven o lo toca un ente, vuelve al último lugar seguro, sin castigo |
 
-### La feria
+### Recorrido
 
-Se recorre de izquierda a derecha. Jorge aparece **al lado de la calesita**, donde se perdió.
+Se recorre de izquierda a derecha, en tres partes:
+
+| Parte | Qué hay |
+|---|---|
+| **Afuera** | El puesto de algodón de azúcar, el banco, la calesita y la carpa. Hay que recordar dos cosas para poder entrar |
+| **La función** | Adentro de la carpa, fija en una pantalla: las gradas con la gente sin cara, la pista con el reflector y Lechuga. El truco de las galeras y el número del elefante |
+| **Atrás de la carpa** | De noche, con jaulas y carromatos. Sigilo: el cuidador con la linterna y un ente. Al final, el elefante |
+
+### Afuera
+
+Jorge aparece **al lado del banco**, cerca de la calesita.
 
 | Lugar | Qué hay |
 |---|---|
-| Entrada | Un arco rojo con lamparitas y el cartel **FERIA**: la "E" se apaga y se prende. Afuera no hay nada, todo negro. Acá está el recuerdo de **lo que le dijo la mamá** |
-| Algodón de azúcar | Un carrito con toldo rosa y blanco y algodones en palitos. Recuerdo del **algodón** |
+| Algodón de azúcar | Un carrito con toldo rosa y blanco y algodones en palitos. Recuerdo **opcional** del algodón (un desvío: no hace falta para seguir) |
 | Banco | Al lado de la calesita. Ahí lo esperaba la mamá |
 | Calesita | Techo a gajos rojos y blancos, cuatro caballitos que suben y bajan, el palo de la **sortija** a la derecha. Recuerdo de la **calesita** |
-| Vuelta al mundo | Atrás de todo, con un banco abajo. Decorado |
-| Gente | Cinco siluetas sin cara repartidas por la feria. Dos se pueden "hablar" |
-| Guirnaldas | Lamparitas de colores colgadas arriba, a lo largo de toda la feria |
+| Gente | Tres siluetas sin cara. Una se puede "hablar": _"¿Y tu mamá, nene?"_ → _"No tiene cara."_ |
+| La carpa | Rayas rojas y blancas, el cartel **CIRCO** (la "I" se apaga y se prende) y la entrada con las cortinas atadas. Acá está el recuerdo de **lo que le dijo la mamá** |
+| Afiche | Al costado de la entrada: Lechuga, con su flequillo. _"«¡Lechuga!»"_ / _"El señor del flequillo. Lo veía en la tele."_ |
+| Guirnaldas | Lamparitas de colores colgadas arriba |
+
+| Recuerdo | Dónde | Cómo se destraba | Qué se ve | Qué piensa Jorge |
+|---|---|---|---|---|
+| **La calesita** | Calesita | Subirse (**E**) y **sacar la sortija** (ver abajo) | Desde el banco, la mamá lo saluda: _"¡Muy bien, Jorge! ¡Te ganaste otra vuelta!"_ / _"Pero después, ¿eh? Que ya empieza la función."_ | _"La sortija."_ / _"Y después, la función."_ |
+| **Lo que le dijo la mamá** | Entrada de la carpa | Examinarla con **E** | La mamá, agachada a su altura: _"Jorge, mirame."_ / _"Adentro hay mucha gente."_ / _"Si te perdés, no salgas a buscarme."_ / _"Quedate quieto donde estás, que yo te encuentro. ¿Sí?"_ Jorge chico: _"Sí, mamá."_ | _"Mamá…"_ / _"Vine al circo con mi mamá."_ (o _"La mujer de la calesita era mi mamá."_, si ya vio la calesita) |
+| **El algodón de azúcar** _(opcional)_ | Carrito de algodón | Examinarlo con **E** | La mamá: _"Uno chiquito, ¿eh? Que después no cenás."_ Jorge chico: _"¡El rosa!"_ | _"Vine con alguien. Una mujer."_ / _"No le puedo ver la cara."_ (o, si ya sabe: _"Mamá me compró algodón de azúcar."_) |
+
+Después del primero, Vela: _"Eso que viste es un recuerdo, Jorge. Lo veo en la pantalla."_ / _"Seguí buscando."_ Después del segundo: _"Vas muy bien."_ / _"Ahora, la carpa."_ Si intenta entrar antes de la calesita: _"Todavía no."_ / _"Antes de entrar fuimos a la calesita. Me acuerdo de la música."_
+
+### La sortija
+
+Jorge se sube a un caballito, que sube y baja. Abajo aparece una barra con un **anillo que va y viene** y una franja dorada en el medio: hay que apretar **E** cuando el anillo pasa por la franja.
+
+- Si falla, no pasa nada: piensa _"Casi…"_ y sigue intentando.
+- **El sueño ayuda:** después de tres intentos fallidos, la franja se agranda.
+- Al sacarla, la sortija sale volando del palo. La calesita para.
 
 ### Secuencia
 
@@ -1042,50 +1042,98 @@ Se recorre de izquierda a derecha. Jorge aparece **al lado de la calesita**, don
 3. La voz de Vela: _"Jorge, ¿me escuchás? Soy el doctor Vela."_ / _"Estás soñando. Mirate las manos."_
 4. **Mirarse las manos** (**E**): la pantalla se oscurece y se ven sus manos de cerca. _"Son chiquitas."_ / _"Son manos de chico."_ Después le aparece **un sexto dedo**: _"…¿Seis dedos?"_ Vela: _"En los sueños las manos nunca salen bien. Así te das cuenta de que estás soñando."_ Es la prueba de realidad de los sueños lúcidos, y le enseña al jugador que acá las reglas cambian.
 5. **Aparece la llama** desde arriba y la luz se abre. Vela: _"Esa luz soy yo. Voy a estar con vos todo el tiempo."_ / _"Esto es un recuerdo tuyo, de cuando eras chico. Lo que ilumine, lo vas a poder recordar."_
-6. **Explorar y recordar** los tres momentos, en cualquier orden (ver abajo). Cada tanto se escucha a la mamá, lejos: _"¡Jorge…!"_. La primera vez, Jorge piensa _"Alguien me llama."_ / _"Es una voz de mujer."_ y Vela le dice _"¿La escuchás? Tu sueño la está recordando. Seguí la luz."_
-7. Con los tres recordados, Vela: _"Ya lo tenés, Jorge."_ / _"¿Qué te dijo tu mamá?"_ Jorge piensa: _"Que me quede quieto…"_ / _"…donde estoy."_
-8. **Quedarse quieto** (ver "El final"). Llega la mamá.
-9. Vela: _"Muy bien, Jorge. Ya está."_ / _"Ahora vas a despertar."_ La imagen **funde a blanco**.
-10. **Despertar** en la camilla (ver "El despertar").
+6. **Afuera:** recordar **la calesita** y **lo que le dijo la mamá**, en cualquier orden (el algodón es opcional).
+7. **Entrar a la carpa** (**E** en la entrada).
+8. **La función** (ver abajo): Lechuga, el truco de las galeras y el número del elefante.
+9. **El descuido:** se le acerca a la mamá una conocida y se ponen a hablar. Jorge se escapa por debajo de las gradas.
+10. **Atrás de la carpa:** sigilo hasta llegar al elefante (ver abajo).
+11. **El elefante:** Jorge lo suelta, pero no se va.
+12. **El reproche de Lechuga**, que se rompe.
+13. **Quedarse quieto** (ver "El final"). Llega la mamá.
+14. Vela: _"Muy bien, Jorge. Ya está."_ / _"Ahora vas a despertar."_ La imagen **funde a blanco**.
+15. **Despertar** en la camilla (ver "El despertar").
 
-### Los tres recuerdos
+### La función
 
-Lo que dice Jorge al final de cada uno cambia según si ya sabe que la mujer es su mamá (eso se descubre en la entrada).
+La carpa por dentro: lonas rojas en gajos desde el centro, guirnaldas, gradas a los dos lados con la gente sin cara y la pista de arena con el borde rojo. Jorge está parado adelante de las gradas, con su mamá al lado.
 
-| Recuerdo | Dónde | Cómo se destraba | Qué se ve | Qué piensa Jorge |
-|---|---|---|---|---|
-| **El algodón de azúcar** | Carrito de algodón | Examinarlo con **E** | La mamá: _"Uno chiquito, ¿eh? Que después no cenás."_ Jorge chico: _"¡El rosa!"_ | _"Vine con alguien. Una mujer."_ / _"No le puedo ver la cara."_ (o, si ya sabe: _"Mamá me compró algodón de azúcar."_) |
-| **La calesita** | Calesita | Subirse (**E**) y **sacar la sortija** (ver abajo) | Desde el banco, la mamá lo saluda: _"¡Muy bien, Jorge! ¡Te ganaste otra vuelta!"_ La calesita para y Jorge se baja **del otro lado** | _"Me bajé del otro lado."_ / _"Di la vuelta y ella ya no estaba en el banco."_ |
-| **Lo que le dijo la mamá** | Arco de la entrada | Examinarlo con **E** | La mamá, agachada a su altura: _"Jorge, mirame."_ / _"Si te perdés, no salgas a buscarme."_ / _"Quedate quieto donde estás, que yo te encuentro. ¿Sí?"_ Jorge chico: _"Sí, mamá."_ | _"Mamá…"_ / _"La mujer de la feria era mi mamá."_ (o _"Vine a la feria con mi mamá."_, si es el primero) |
+1. _"Adentro de la carpa."_ / _"Hay olor a pochoclo."_ Suena un redoblante, se prende **el reflector** y aparece **Lechuga**. Aplausos.
+2. **Lechuga:** _"¡Buenas noches, chicos y chicas!"_ / _"¡Bienvenidos al circo más lindo del mundo!"_ / _"¡Yo soy Lechuga! ¿Me conocen?"_ Jorge: _"Lechuga. El de la tele."_ / _"Tiene el flequillo más lindo del mundo."_
+3. **Lechuga:** _"Para el primer número necesito un ayudante."_ / _"¡A ver… vos! ¡El del suéter verde!"_ El reflector va a Jorge. La mamá: _"Andá, Jorge. Andá."_ Jorge baja a la pista.
+4. **El truco de las galeras** (ver abajo). Después, Jorge vuelve al lado de su mamá.
+5. **El número del elefante** (ver abajo).
+6. **Lechuga:** _"¡Gracias, chicos! ¡Hasta la próxima!"_ Aplausos. Se apaga el reflector.
+7. **El descuido:** una mujer sin cara se acerca: _"¡Hola! ¡Tanto tiempo!"_ La mamá se da vuelta: _"¡Ay, hola! ¿Cómo andan los chicos?"_ Jorge: _"Mamá está hablando."_ / _"El elefante está atrás de la carpa."_ / _"Lo voy a soltar."_ Vela: _"Jorge… esto ya pasó. Es un recuerdo."_ / _"Mostrame qué hiciste."_ Objetivo: **Ir a soltar al elefante, sin que mamá me vea**. Hay que ir hasta las gradas y **pasar por debajo** (**E**).
 
-Después de cada uno, Vela comenta: _"Eso que viste es un recuerdo, Jorge. Lo veo en la pantalla."_ / _"Seguí buscando."_ (el primero) y _"Vas muy bien. Falta poco."_ (el segundo).
+### El truco de las galeras _(puzzle provisorio)_
 
-### La sortija
+Para el show, el usuario pidió ideas de puzzles. Este es el primero, propuesto por el agente: **"¿dónde quedó la pelotita?"**.
 
-Jorge se sube a un caballito, que sube y baja. Abajo aparece una barra con un **anillo que va y viene** y una franja dorada en el medio: hay que apretar **E** cuando el anillo pasa por la franja.
+- Sobre una mesa hay **tres galeras**. Lechuga muestra una pelotita roja abajo de una: _"Esta pelotita se esconde abajo de una galera."_ / _"¡Mirá bien, eh! ¡No le saques los ojos de encima!"_
+- Las galeras **se mezclan** (se cambian de lugar de a dos). Después hay que elegir una con **← →** y levantarla con **E**.
+- Son **dos vueltas**: la segunda, más rápida (_"Ahora, más rápido. ¿Te animás?"_).
+- Si acierta: _"¡Muy bien! ¡Qué ojo tiene este pibe!"_, y en la segunda _"¡Otra vez! ¡No te puedo engañar!"_ / _"¡Un aplauso para mi ayudante!"_
+- **No se puede perder:** si se equivoca, Lechuga levanta la buena (_"¡Uy! ¡Casi, casi!"_ / _"Vamos otra vez."_) y se repite **más lenta, con menos cambios**, y la galera de la pelotita **brilla un poco** (el sueño ayuda).
 
-- Si falla, no pasa nada: piensa _"Casi…"_ y sigue intentando.
-- **El sueño ayuda:** después de tres intentos fallidos, la franja se agranda.
-- Al sacarla, la sortija sale volando del palo.
+_Otras ideas para el show (sin implementar, para que elija el usuario):_ Lechuga pregunta adivinanzas y el público contesta (opciones de respuesta); un número de malabares en el que hay que apretar la tecla al ritmo, sin forma de fallar; un mago que hace desaparecer algo y hay que encontrarlo con la luz de la llama en las gradas; o un payaso que imita lo que hace Jorge (un juego de espejo).
 
-### La gente sin cara
+### El número del elefante
 
-| Dónde | Qué dice | Qué piensa Jorge |
-|---|---|---|
-| Entre el algodón y la calesita | _"¿Y tu mamá, nene?"_ | _"No tiene cara."_ |
-| Pasando la calesita | _"…"_ | _"Hablan, pero no se les entiende nada."_ |
+- **Lechuga:** _"Y ahora…"_ / _"¡la estrella de la noche!"_ Redoblante. Entra **el elefante**, tirado de una cadena por un cuidador sin cara. _"¡El elefante más grande del mundo!"_ Aplausos y una trompeta del elefante.
+- Lo hacen **subirse a un banquito**. **El látigo se oye, no se ve pegar**: cada vez que suena, el elefante tiembla. Lechuga: _"¡Arriba, arriba!"_
+- Jorge: _"No quiere."_ / _"Tiene una cadena en la pata."_ / _"Cada vez que suena eso, tiembla."_ La mamá: _"¿Te gusta, Jorgito?"_ Jorge: _"No."_ Vela: _"¿Qué sentís, Jorge?"_ Jorge: _"Que no tendría que estar acá."_
+- El elefante baja y se lo llevan.
 
-### El final: quedarse quieto
+### Atrás de la carpa: sigilo
 
-Es el **último puzzle** y la solución es **no hacer nada**: después de los tres recuerdos, el jugador tiene que **soltar las teclas y esperar** unos segundos, donde sea. Mientras está quieto, la llama brilla cada vez más.
+Jorge sale por abajo de la lona: _"Salí por abajo de la lona."_ / _"Acá atrás están los animales."_ Vela: _"Jorge, esperá."_ / _"Si ven mi luz, te van a ver a vos."_ / _"Me voy a hacer chiquito."_ La llama se achica y se ve menos. Objetivo: **Llegar al elefante sin que me vean**.
 
-- Si camina, el tiempo vuelve a cero. Correr hacia la voz de la mamá no sirve: la feria vuelve a empezar.
-- Si camina mucho rato, Vela lo ayuda: _"Jorge, pará un segundo."_ / _"Acordate de lo que te dijo tu mamá."_
+| Lugar (de izquierda a derecha) | Qué hay |
+|---|---|
+| La lona | Por donde sale Jorge. Lugar seguro |
+| Jaula del león _(desvío)_ | _"Un león."_ / _"Está muy flaco."_ / _"Ni me mira."_ |
+| **El cuidador** | Una silueta sin cara con una **linterna**, que camina de punta a punta y se frena un rato en cada una antes de darse vuelta. La luz de la linterna se ve de lejos, aunque esté oscuro |
+| Cajas | **Escondite** en el medio del camino del cuidador |
+| Jaula de los monos _(desvío)_ | _"Monitos."_ / _"Me miran."_ / _"Ellos también quieren salir."_ Lugar seguro |
+| **El ente** | Una falla del sueño que va y viene, titilando |
+| Carromato | Con una lona que cuelga hasta el piso: **escondite** en el medio del camino del ente |
+| El elefante | Encadenado de una pata a **una estaca chiquita**, con fardos de pasto al lado |
+
+- **Esconderse:** en las cajas y en el carromato, con **E** (Jorge queda atrás y la llama se apaga un poco). Para salir, **E** otra vez o caminar.
+- **El cuidador:** al acercarse, Jorge piensa _"Un señor con una linterna."_ / _"Si me ve, me lleva con mamá."_ y Vela: _"Esperá a que mire para el otro lado."_ / _"Si se da vuelta, escondete atrás de las cajas."_ Si la linterna lo alumbra (o se lo choca): _"¡Eh, nene! ¿Qué hacés acá atrás?"_ y Jorge vuelve al último lugar seguro.
+- **El ente:** la primera vez aparece con estática. Vela: _"Jorge, quieto."_ / _"Eso no es parte del recuerdo. Es una falla del sueño."_ / _"No lo podés tocar, ni él a vos. Esquivalo: escondete hasta que pase."_ **No se lo puede atacar.** Si lo toca: la imagen se sacude, un destello magenta, y Jorge vuelve al último lugar seguro.
+- **Escondido, nadie lo ve:** ni el cuidador ni el ente. Los lugares seguros son la lona, el último escondite usado y los tramos entre una parte y otra.
+- La primera vez que lo ven, Vela ayuda: _"Despacio, Jorge. Esperá a que mire para el otro lado."_; la primera vez que lo toca el ente: _"No lo toques. Escondete en el carromato hasta que pase."_
+
+### El elefante
+
+1. Jorge: _"Hola."_ / _"Es enorme."_ / _"Te voy a sacar de acá."_ / _"La cadena está atada a un palito."_ / _"Es chiquito."_
+2. **Saca la estaca** y la cadena queda suelta. _"¡Listo!"_ / _"¡Sos libre!"_ / _"Dale, andate."_
+3. **El elefante no se mueve** (decidido por el usuario). Jorge lo empuja de la pata: nada. _"¿Por qué no te vas?"_ / _"Está suelto."_ / _"Y no se mueve."_ Vela: _"Jorge…"_
+
+### El reproche de Lechuga
+
+_Decidido por el usuario: Lechuga aparece y le reprocha de muy mala manera. Cómo, provisorio (propuesto por el agente). Lechuga no le pega ni lo toca: grita._
+
+- Se corta la música. Desde la oscuridad: _"¡¿QUÉ HACÉS, MOCOSO?!"_ Entra **Lechuga**, enojado: la cara roja, las cejas juntas, la boca abierta, el brazo levantado señalando.
+- **La llama se achica y hace frío** (la pantalla se tiñe de azul), como cerca del papá en la Sesión 2.
+- **Lechuga:** _"¡¿Quién te dio permiso?!"_ / _"¡Ese animal es mío! ¡MÍO!"_ Jorge: _"Está triste…"_ Lechuga, cada vez más grande: _"¡¿Triste?! ¡Los animales no están tristes, nene! ¡Trabajan!"_ / _"¿Y tu madre? ¿Dónde está tu madre? ¡Así te crían!"_ / _"¡Mocoso metido! ¡Te vas a acordar de esto toda la vida!"_
+- Vela: _"Jorge… no lo mires a él."_ / _"Esto ya no es el recuerdo."_
+- **Lechuga se rompe:** titila entre él y un ente, se aplasta y desaparece con estática. Así, lo feo se lee como **una falla del sueño**, no como algo de la persona real a la que homenajea.
+- La oscuridad se cierra. Jorge: _"Se rompió."_ / _"Me quiero ir."_ / _"No sé volver."_ / _"¿Dónde está mamá?"_ Vela: _"Jorge. ¿Qué te dijo tu mamá en la entrada?"_ Jorge: _"Que me quede quieto…"_ / _"…donde estoy."_
+
+### El final: quedarse quieto _(provisorio)_
+
+_Cómo termina la sesión después del reproche está **por definir** con el usuario. Mientras tanto, el prototipo usa el final de antes (el de la feria): se queda quieto y la mamá lo encuentra. Así siguen funcionando las referencias del resto del juego (la pizarra, "Me perdí y ella me encontró", la Sesión 7)._
+
+Es el **último puzzle** y la solución es **no hacer nada**: el jugador tiene que **soltar las teclas y esperar** unos segundos, al lado del elefante, que tampoco se mueve. Mientras está quieto, la llama brilla cada vez más.
+
+- Si camina, el tiempo vuelve a cero. Si camina mucho rato, Vela lo ayuda: _"Jorge, pará un segundo."_ / _"Acordate de lo que te dijo tu mamá."_
 
 Cuando lo logra:
 
 1. Se escucha _"¡Jorge!"_, cerca.
-2. **Se hace la luz:** la oscuridad se abre, todo el recuerdo toma color y la música de la calesita se escucha nítida.
+2. **Se hace la luz:** se va el frío, la oscuridad se abre, todo toma color y vuelve la música de la calesita, nítida.
 3. La mamá entra caminando y se agacha frente a él. La cara sigue tapada por la luz.
 
 > **Mamá:** ¡Acá estás!
@@ -1096,6 +1144,8 @@ Cuando lo logra:
 
 Jorge chico la abraza.
 
+> **Jorge chico:** Lo solté, mamá. Pero no se fue.
+>
 > **Mamá:** Vamos a casa.
 >
 > **Jorge (piensa):** No le puedo ver la cara.
@@ -1104,11 +1154,11 @@ Jorge chico la abraza.
 
 ### El despertar
 
-Jorge abre los ojos en la camilla del cuarto de inducción. La pantalla grande brilla en tonos cálidos, como la feria.
+Jorge abre los ojos en la camilla del cuarto de inducción. La pantalla grande brilla en tonos cálidos, como el circo.
 
 > **Vela:** Despacio. Ya estás acá.
 >
-> **Vela:** Lo vi todo en la pantalla: la feria, la calesita… tu mamá.
+> **Vela:** Lo vi todo en la pantalla: el circo, el elefante… tu mamá.
 >
 > **Jorge (piensa):** Mi mamá.
 >
@@ -1116,22 +1166,27 @@ Jorge abre los ojos en la camilla del cuarto de inducción. La pantalla grande b
 >
 > **Vela:** Es normal. Los recuerdos vuelven de a poco.
 
-El casco sube y se anota el primer tramo de la **línea de tiempo**: _"Infancia · La feria"_. Vela cierra: _"Por hoy alcanza, Jorge."_ / _"La semana que viene seguimos."_
+El casco sube y se anota el primer tramo de la **línea de tiempo**: _"Infancia · El circo"_. Vela cierra: _"Por hoy alcanza, Jorge."_ / _"La semana que viene seguimos."_
 
 ### Objetivo en pantalla
 
 | Cuándo | Objetivo |
 |---|---|
-| Después de que aparece la llama | Seguir la luz y recordar qué pasó (0/3), y el número sube con cada recuerdo |
-| Con los tres recuerdos | Quedarme quieto donde estoy |
+| Después de que aparece la llama | Seguir la luz y recordar qué pasó (0/2), y el número sube con cada recuerdo |
+| Con los dos recuerdos de afuera | Entrar a la carpa |
+| Después de la función | Ir a soltar al elefante, sin que mamá me vea |
+| Atrás de la carpa | Llegar al elefante sin que me vean |
+| Después del reproche | Quedarme quieto donde estoy |
 
 ### Pistas del diario
 
 | Pista | Cuándo se anota |
 |---|---|
-| El algodón de azúcar: "Fui a la feria con una mujer. Me compró algodón de azúcar. No le puedo ver la cara." (o "con mamá", si ya lo sabe) | Al recordar el algodón |
-| La calesita: "Saqué la sortija. Ella me saludaba desde el banco. Me bajé del otro lado de la calesita y no la vi más." | Al recordar la calesita |
-| Lo que me dijo mamá: "Al entrar a la feria, mamá me dijo: «Si te perdés, quedate quieto donde estás, que yo te encuentro»." | Al recordar la entrada |
+| La calesita: "Afuera del circo había una calesita. Saqué la sortija. Mamá (o una mujer) me saludaba desde el banco." | Al recordar la calesita |
+| Lo que me dijo mamá: "En la entrada del circo, mamá me dijo: «Si te perdés, quedate quieto donde estás, que yo te encuentro»." | Al recordar la entrada |
+| El algodón de azúcar _(opcional)_: "Fui al circo con una mujer. Me compró algodón de azúcar. No le puedo ver la cara." (o "con mamá", si ya lo sabe) | Al recordar el algodón |
+| La función: "En el circo, Lechuga, el presentador, me llamó para un truco con galeras. Después hicieron trabajar a un elefante con una cadena en la pata. No me gustó." | Al terminar la función |
+| El elefante: "Me escapé para soltar al elefante. Le saqué la estaca de la cadena: era un palito. Pero no se fue. Se quedó quieto." | Al soltarlo |
 
 ### Final de la locación
 
@@ -1139,16 +1194,20 @@ Termina en el despertar, cuando Vela cierra la sesión. Sigue en **La primera no
 
 ### Pendiente de definir
 
-- ¿Cuántos años tiene Jorge en este recuerdo? (En el prototipo parece de unos 7.)
-- ¿Dónde era la feria? ¿Tiene nombre?
-- ¿La mamá le dice "Jorge" o tiene un apodo para él?
-- _Idea a implementar más adelante:_ que al final de la sesión el sueño se descontrole y haya una persecución (ver "Mecánicas" → Ideas a implementar).
+- **Cómo termina la sesión** después del reproche (hoy, provisorio: quedarse quieto y la mamá lo encuentra).
+- **Los puzzles del show:** si queda el de las galeras o se cambia por otro (ver las ideas arriba).
+- Si Lechuga tiene que ver con el papá (la llama se achica y hace frío, como cerca de él).
+- Si el elefante tiene nombre, y si vuelve más adelante (ver "Historia y mundo" → Referencias).
+- ¿Cuántos años tiene Jorge en este recuerdo? (En el prototipo, unos 7.)
+- ¿Dónde era el circo? ¿Tiene nombre?
+- ¿La mamá le dice "Jorge" o tiene un apodo para él? (En el circo le dice "Jorgito" una vez.)
+- _Idea a implementar más adelante:_ que al final de la sesión el sueño se descontrole y haya una persecución (ver "Mecánicas" → Ideas a implementar). Los entes podrían ser el comienzo de eso.
 
 ## La primera noche
 
 ### Resumen
 
-Jorge **vuelve a su casa** después de la Sesión 1. Es la misma Casa de Jorge, **de noche**, pero ahora sabe una cosa nueva: tuvo una mamá que lo encontró en una feria.
+Jorge **vuelve a su casa** después de la Sesión 1. Es la misma Casa de Jorge, **de noche**, pero ahora sabe una cosa nueva: tuvo una mamá que lo encontró en un circo.
 
 Es una locación **corta y tranquila**, sin puzzle. Sirve para cerrar la sesión y mostrar que **lo que Jorge recupera en los sueños sigue con él en la casa**: lo anota en la pizarra y encuentra una prueba de que el recuerdo fue real.
 
@@ -1168,7 +1227,7 @@ _La idea (la vuelta a casa, la pizarra, la caja de cosas de chico sin puzzle, la
 ### Secuencia
 
 1. La imagen aparece desde negro. Jorge acaba de entrar: está en el pasillo, al lado de la salida.
-2. Piensa: _"Ya está. Volví a casa."_ / _"Mi mamá. La feria. La calesita."_ / _"Tengo que anotarlo antes de que se me olvide."_ Objetivo: **Anotar lo que recordé en la pizarra**.
+2. Piensa: _"Ya está. Volví a casa."_ / _"Mi mamá. El circo. El elefante."_ / _"Tengo que anotarlo antes de que se me olvide."_ Objetivo: **Anotar lo que recordé en la pizarra**.
 3. **La pizarra** (en el cuarto): Jorge ubica el recuerdo en la línea de tiempo (ver abajo). Objetivo: **Irme a dormir**.
 4. **El portero:** la primera vez que sale del cuarto después de la pizarra, suena el timbre. _"¿El portero? ¿A esta hora?"_ Objetivo: **Atender el portero**. Sigue sonando cada tanto hasta que lo atiende (ver abajo).
 5. **Dormir:** en la cama. Si todavía no abrió la caja, Jorge piensa _"Hay algo debajo de la cama."_ y la abre antes (ver "La caja").
@@ -1180,24 +1239,24 @@ El orden es libre, salvo dos cosas: no se puede dormir sin anotar el recuerdo (_
 
 Se abre la línea de tiempo, todavía vacía: "MI VIDA", de "Nací" a "HOY" (los 40), con marcas cada diez años. Después hay que **armar el recuerdo** (ver "Mecánicas" → Armar el recuerdo): una hoja con la pregunta _"¿Qué recordé?"_ y una frase con huecos, que se completan de a uno eligiendo palabras.
 
-> Fui a la feria con **[mamá]**. Me perdí en **[la calesita]** y **[me quedé quieto]** hasta que ella me encontró. Tenía **[7]** años.
+> Fui al circo con **[mamá]**. Me escapé para soltar al **[elefante]** y **[me quedé quieto]** hasta que ella me encontró. Tenía **[7]** años.
 
 | Hueco | Opciones | Si se equivoca |
 |---|---|---|
 | Con quién | **mamá** · papá · una vecina | _"No. Papá nunca venía a esas cosas."_ / _"No. Era mamá. Me compró algodón de azúcar."_ |
-| Dónde se perdió | **la calesita** · la vuelta al mundo · el tren fantasma | _"No. Fue en la calesita: me bajé del otro lado."_ |
+| A quién quiso soltar | **elefante** · león · mono | _"No. Era el elefante: tenía una cadena en la pata."_ |
 | Qué hizo | **me quedé quieto** · salí a buscarla · me puse a gritar | _"No… Ella me había dicho algo al entrar. «Si te perdés…»"_ |
 | **La edad** | 5 · 6 · **7** · 8 · _(Mirar la sortija)_ | _"No. Tiene que haber algo que diga en qué grado iba."_ A la segunda: _"El papelito decía «el año que empezó segundo grado»."_ / _"A primer grado se entra a los seis."_ |
 
-**La edad no se adivina: se deduce.** La pista es **el papelito de la mamá** que está en la caja con la sortija: _"La sortija de Jorgito. De la feria, el año que empezó segundo grado."_ A primer grado se entra a los seis, así que tenía siete. Mientras se completa ese hueco se puede elegir _"(Mirar la sortija)"_ para volver a leer el papelito.
+**La edad no se adivina: se deduce.** La pista es **el papelito de la mamá** que está en la caja con la sortija: _"La sortija de Jorgito. Del circo, el año que empezó segundo grado."_ A primer grado se entra a los seis, así que tenía siete. Mientras se completa ese hueco se puede elegir _"(Mirar la sortija)"_ para volver a leer el papelito.
 
 **Si todavía no abrió la caja**, al llegar a la edad Jorge piensa _"¿Cuántos años tenía?"_ / _"Era chico… pero no sé cuánto."_ / _"Tiene que haber algo en esta casa que lo diga."_ La hoja se cierra, **lo que ya completó queda guardado** y el objetivo pasa a **Buscar algo que diga cuántos años tenía**. Cuando vuelve a la pizarra, sigue desde la edad.
 
 Las palabras se mezclan cada vez; las edades van en orden. Las opciones equivocadas no castigan: Jorge se corrige solo y se vuelve a elegir. _Las frases y las opciones son provisorias, propuestas por el agente; la edad (cerca de los 7) es la que ya estaba en la pizarra._
 
-Con el recuerdo completo se marca la infancia en verde y, cerca de los 7 años, Jorge escribe con su letra **"La feria con mamá"** y abajo _"me perdí y ella me encontró"_.
+Con el recuerdo completo se marca la infancia en verde y, cerca de los 7 años, Jorge escribe con su letra **"El circo con mamá"** y abajo _"me perdí y ella me encontró"_.
 
-Al anotarlo: _"«La feria con mamá.»"_ / _"Es lo primero que anoto."_ La marca también aparece en la pizarra de la pared. Si la vuelve a mirar: _"Es lo único que hay. Pero ya no está vacía."_
+Al anotarlo: _"«El circo con mamá.»"_ / _"Es lo primero que anoto."_ La marca también aparece en la pizarra de la pared. Si la vuelve a mirar: _"Es lo único que hay. Pero ya no está vacía."_
 
 ### La caja
 
@@ -1217,7 +1276,7 @@ Adentro está **la sortija de la calesita** y se guarda en el inventario.
 >
 > **Jorge (piensa):** La guardó ella. Todos estos años.
 
-Con la sortija viene **el papelito de la mamá**, que se ve como segunda página del objeto: _"La sortija de Jorgito. De la feria, el año que empezó segundo grado."_ Es la pista de la edad para la pizarra.
+Con la sortija viene **el papelito de la mamá**, que se ve como segunda página del objeto: _"La sortija de Jorgito. Del circo, el año que empezó segundo grado."_ Es la pista de la edad para la pizarra.
 
 Es la prueba de que **los recuerdos no mienten**: lo que vio en el sueño pasó.
 
@@ -1273,16 +1332,16 @@ _¿Quién toca? Encaja con el final (ver "Historia y mundo" → Final): sería M
 
 | Pista | Cuándo se anota |
 |---|---|
-| Pizarra: "Anoté mi primer recuerdo: la feria con mamá, cuando era chico." | Al anotar el recuerdo |
+| Pizarra: "Anoté mi primer recuerdo: el circo con mamá, cuando era chico." | Al anotar el recuerdo |
 | La sortija: "En una caja de cosas de chico estaba la sortija de la calesita. El recuerdo fue real." | Al abrir la caja |
-| La señora de la foto: "Creo que es mi mamá: la misma que me encontró en la feria." | Al mirar la foto |
+| La señora de la foto: "Creo que es mi mamá: la misma que me encontró en el circo." | Al mirar la foto |
 | El portero, de noche: "Alguien tocó el portero de noche. Atendí y no habló nadie. Se cortó." | Al atender el portero |
 
 ### Objetos
 
 | Objeto | Dónde | Qué es |
 |---|---|---|
-| Sortija ✓ | Cuarto: caja debajo de la cama | La sortija de la calesita de la feria. Se puede volver a ver desde el diario |
+| Sortija ✓ | Cuarto: caja debajo de la cama | La sortija de la calesita del circo. Se puede volver a ver desde el diario |
 
 ### Final de la locación
 
@@ -1307,7 +1366,7 @@ _La idea (el cuarto, el portero, "debe ser el remis", repasar la pizarra y pasar
 2. Jorge duerme en su cama (las "z" suben de su cabeza) hasta que **suena el portero**.
 3. Desde la cama: _"El portero."_ / _"Debe ser el remis."_ Se levanta.
 4. _"Quizás pueda repasar un poco mis recuerdos de la pizarra."_ Objetivo: **Salir: me espera el remis**. El portero sigue sonando cada tanto.
-5. **La pizarra** (opcional): la línea de tiempo con _"La feria con mamá"_. _"Me perdí y ella me encontró."_ / _"Todavía está. No me lo olvidé."_
+5. **La pizarra** (opcional): la línea de tiempo con _"El circo con mamá"_. _"Me perdí y ella me encontró."_ / _"Todavía está. No me lo olvidé."_
 6. **Al salir del cuarto**, funde a negro y Jorge aparece **sentado en el consultorio, frente a Vela**.
 7. **La consulta**, corta: _"Hola, Jorge. Pasó una semana."_ y dos preguntas, con verdad o mentira, como en la primera (ver abajo).
 8. Vela: _"Bien."_ / _"Hoy vamos a ir un poco más adelante en tu vida."_ / _"Acompañame."_ Se va por la puerta del cuarto de inducción y el jugador lo sigue.
@@ -1316,7 +1375,7 @@ _La idea (el cuarto, el portero, "debe ser el remis", repasar la pizarra y pasar
 
 ### En el cuarto
 
-Es el mismo cuarto de la Casa de Jorge, de día. La caja de cosas de chico quedó abierta debajo de la cama, y la pizarra tiene la marca de la feria. Solo se usa el cuarto: al salir, sigue la sesión.
+Es el mismo cuarto de la Casa de Jorge, de día. La caja de cosas de chico quedó abierta debajo de la cama, y la pizarra tiene la marca del circo. Solo se usa el cuarto: al salir, sigue la sesión.
 
 | Objeto | Qué piensa Jorge |
 |---|---|
@@ -1331,8 +1390,8 @@ _Provisorias, propuestas por el agente._ Como en la primera consulta, las respue
 
 | Pregunta | La verdad | La mentira |
 |---|---|---|
-| ¿Cómo estuviste esta semana? | "Raro. Me acuerdo de la feria, pero de casi nada más." → _"Es un comienzo, Jorge."_ | "Bien. Tranquilo." → _"Me alegra."_ |
-| ¿Pudiste anotar algo de lo que viste? | "Sí. En la pizarra de mi cuarto: la feria con mi mamá." → _"Muy bien. Eso es tuyo: ya no se pierde."_ | "No, nada." → _"No importa. Lo vamos a ir armando juntos."_ |
+| ¿Cómo estuviste esta semana? | "Raro. Me acuerdo del circo, pero de casi nada más." → _"Es un comienzo, Jorge."_ | "Bien. Tranquilo." → _"Me alegra."_ |
+| ¿Pudiste anotar algo de lo que viste? | "Sí. En la pizarra de mi cuarto: el circo con mi mamá." → _"Muy bien. Eso es tuyo: ya no se pierde."_ | "No, nada." → _"No importa. Lo vamos a ir armando juntos."_ |
 
 ### El test de memoria
 
@@ -1375,7 +1434,7 @@ Siguen las reglas de la Sesión 1 (ver "Mecánicas" → Sueño lúcido): Vela es
 | **El frío del papá** | Cerca de sus cosas (la campera, su silla, el bar) **la llama se achica** y la imagen se pone **fría y azulada**. Cuando el papá está, casi se apaga |
 | **El calor de María** | Cerca de María, **la llama crece** |
 | **El papá no tiene cara** | Es una silueta oscura, más grande que las demás. No se lo ve de frente |
-| **La mamá tampoco** | Una luz le tapa la cabeza, como en la feria |
+| **La mamá tampoco** | Una luz le tapa la cabeza, como en el circo |
 | **María sí tiene cara** | Está viva. _(Propuesta del agente: los que no tienen cara son los que Jorge evita mirar.)_ |
 | **El Japo también tiene cara** | Es alguien que le importó. Cuando lo hace reír, **la llama crece**, como con María |
 | **No se puede cambiar el recuerdo** | Si el jugador elige algo que no pasó (firmar él el boletín), la tinta se borra: _"No fue así, Jorge. Es un recuerdo: no se puede cambiar."_ |
@@ -1441,7 +1500,7 @@ Con el boletín, el Japo:
 - Un segundo de silencio (_"…"_). Después **el aula entera se ríe**, y Jorge también: _"¡Jajaja! ¡Estás loco, Japo!"_ La llama crece.
 - El Japo, desde el piso: _"…Diez puntos. ¿No?"_ Jorge: _"Me estoy riendo."_ / _"Con el boletín en la mochila, y me estoy riendo."_
 
-**El pizarrón de hoy:** por la grieta, el pizarrón se vuelve por un momento **la pizarra de la casa de Jorge**, la de ahora: blanca, con la línea de 0 a 40, la feria cerca de los 7, un "?" a los 15 y _"¿Quién soy?"_ arriba. _"El pizarrón…"_ / _"Es el de casa. El mío. El de ahora."_ Vela: _"Es el sueño, Jorge. A veces se mezcla con lo de hoy."_ Se apaga y vuelve el pizarrón del aula.
+**El pizarrón de hoy:** por la grieta, el pizarrón se vuelve por un momento **la pizarra de la casa de Jorge**, la de ahora: blanca, con la línea de 0 a 40, el circo cerca de los 7, un "?" a los 15 y _"¿Quién soy?"_ arriba. _"El pizarrón…"_ / _"Es el de casa. El mío. El de ahora."_ Vela: _"Es el sueño, Jorge. A veces se mezcla con lo de hoy."_ Se apaga y vuelve el pizarrón del aula.
 
 El Japo se levanta. **Suena el timbre.** _"¡Y que te lo firme tu viejo, eh! Si no, la preceptora te come."_ La llama vuelve a su tamaño.
 
@@ -1581,7 +1640,7 @@ _Lo decidió el usuario: el objeto es el cuaderno de matemática con la letra de
 | Lugar | La segunda noche |
 |---|---|
 | Todo el departamento | Igual que La primera noche: oscuro, con luz azulada y la lámpara de la mesita prendida |
-| Pizarra de la pared | Ya tiene la marca de la feria (cerca de los 7 años). Al anotar el boletín se suma otra cerca de los 15 |
+| Pizarra de la pared | Ya tiene la marca del circo (cerca de los 7 años). Al anotar el boletín se suma otra cerca de los 15 |
 | Caja | La tapa quedó al costado, como la dejó Jorge la primera noche |
 | Puerta del baño | **Igual**: trabada desde adentro |
 | Calendario | _"Otra semana. Otra vez Neural."_ |
@@ -1598,7 +1657,7 @@ Las reglas son las de La primera noche: no se puede dormir sin anotar el recuerd
 
 ### La pizarra
 
-Ya tiene la feria. Como en La primera noche, hay que **armar el recuerdo**:
+Ya tiene el circo. Como en La primera noche, hay que **armar el recuerdo**:
 
 > Papá no me firmó **[el boletín]**. Esa noche no le abrí la puerta a **[mamá]**. Ese mismo día conocí a **[María]**. Tenía **[15]** años.
 
@@ -1689,7 +1748,7 @@ Una semana después de La segunda noche. Es igual a la Pre-sesión 2: Jorge se d
 
 | Lugar | Pre-sesión 3 |
 |---|---|
-| Pizarra | Tiene la feria y el boletín. Al repasarla: _"«La feria con mamá.» «El boletín.»"_ / _"Y María, en la plaza. Todavía está."_ |
+| Pizarra | Tiene el circo y el boletín. Al repasarla: _"«El circo con mamá.» «El boletín.»"_ / _"Y María, en la plaza. Todavía está."_ |
 | Caja | _"Mi cuaderno de matemática."_ / _"La letra de María."_ |
 | La consulta | Dos preguntas nuevas (ver abajo) |
 | Cuarto de inducción | _"Hoy no hay nada que buscar, Jorge."_ / _"Solo quiero que te acuerdes de algo lindo."_ / _"Acostate."_ |
@@ -1880,7 +1939,7 @@ _Decidido por el usuario: que la foto que falta en el portarretratos sea la de e
 
 ### La pizarra
 
-Ya tiene la feria y el boletín. _"¿Dónde va lo de la fiesta?"_
+Ya tiene el circo y el boletín. _"¿Dónde va lo de la fiesta?"_
 
 | Opción | Qué pasa |
 |---|---|
@@ -1959,7 +2018,7 @@ Una semana después de La tercera noche. Igual que las otras pre-sesiones: Jorge
 
 | Lugar | Pre-sesión 4 |
 |---|---|
-| Pizarra | La feria, el boletín y la fiesta. _"La feria. El boletín. La fiesta."_ / _"Lo último que anoté es lindo. Ojalá lo que sigue también."_ |
+| Pizarra | El circo, el boletín y la fiesta. _"El circo. El boletín. La fiesta."_ / _"Lo último que anoté es lindo. Ojalá lo que sigue también."_ |
 | Portarretratos | Ya tiene la foto: _"María y yo. Diecisiete años."_ |
 | Caja | _"Mi cuaderno de matemática."_ / _"Y abajo estaba la foto."_ |
 | Cuarto de inducción | _"Hoy va a ser difícil, Jorge."_ / _"Voy a estar con vos todo el tiempo. Aunque no me escuches."_ / _"Acostate."_ |
@@ -2189,7 +2248,7 @@ No se explica: queda la duda de si fue real. Va en esta noche porque es la de m�
 
 ### La pizarra
 
-Ya tiene la feria, el boletín y la fiesta. _"¿Dónde va lo de la pelea?"_
+Ya tiene el circo, el boletín y la fiesta. _"¿Dónde va lo de la pelea?"_
 
 | Opción | Qué pasa |
 |---|---|
@@ -2253,7 +2312,7 @@ Una semana después de La cuarta noche. Igual que las otras: Jorge se despierta,
 
 | Lugar | Pre-sesión 5 |
 |---|---|
-| Pizarra | Ya tiene la pelea, en rojo. _"La feria. El boletín. La fiesta."_ / _"Y la pelea. No quiero mirarla mucho."_ |
+| Pizarra | Ya tiene la pelea, en rojo. _"El circo. El boletín. La fiesta."_ / _"Y la pelea. No quiero mirarla mucho."_ |
 | Cuarto de inducción | _"Hoy vamos diez años más adelante."_ / _"Ya sos grande, Jorge. Casi como ahora."_ / _"Acostate."_ |
 
 ### Las preguntas
@@ -2426,7 +2485,7 @@ _Lo propuso el agente y es provisorio._
 
 ### La pizarra
 
-Ya tiene la feria, el boletín, la fiesta y la pelea. _"¿Dónde va lo de María, en el bar?"_
+Ya tiene el circo, el boletín, la fiesta y la pelea. _"¿Dónde va lo de María, en el bar?"_
 
 | Opción | Qué pasa |
 |---|---|
@@ -2775,7 +2834,7 @@ Se oye un latido grave, que sigue hasta que Jorge se queda con ella. Jorge la ll
 
 **El teléfono:** _"¡Necesito una ambulancia!"_ / _"Mi mamá. Tuvo un ACV hace dos semanas. Creo que es otro."_ Del otro lado: _"Ya sale una unidad."_ / _"No la deje sola. Quédese con ella."_
 
-**Con ella:** _"Ya vienen, ma."_ / _"Ya vienen."_ / _"Me agarró la mano."_ / _"Fuerte. Como en la feria."_
+**Con ella:** _"Ya vienen, ma."_ / _"Ya vienen."_ / _"Me agarró la mano."_ / _"Fuerte. Como cuando me encontró en el circo."_
 
 ### El médico
 
@@ -3235,7 +3294,7 @@ Es la escena más delicada del juego. Jorge está en el baño, a punto de quitar
 ### Secuencia
 
 1. Cartel: _"Hoy · La última sesión"_. **Se le abren los ojos** en su cuarto. _"Mi casa."_ / _"Es de noche."_ / _"Es hoy."_ Vela: _"Llegamos, Jorge."_ / _"Es la última."_ Objetivo: **Mirar la pizarra**.
-2. **La pizarra:** _"La pizarra está llena."_ / _"La feria. El boletín. La fiesta. La pelea."_ / _"María en el bar. El viaje. Mamá. El velorio."_ / _"Falta hoy."_ Vela: _"Hoy es lo que más te costó mirar."_ Objetivo: **Ir al pasillo**.
+2. **La pizarra:** _"La pizarra está llena."_ / _"El circo. El boletín. La fiesta. La pelea."_ / _"María en el bar. El viaje. Mamá. El velorio."_ / _"Falta hoy."_ Vela: _"Hoy es lo que más te costó mirar."_ Objetivo: **Ir al pasillo**.
 3. Al entrar al pasillo **suena el portero**: _"El portero."_ / _"Como el primer día."_ Objetivo: **Atender el portero**.
 4. **El portero** y **la verdad** (ver abajo). El sueño se desarma. Objetivo: **Ir hasta la puerta del baño**.
 5. **La puerta del baño** (ver abajo). Por el portero: _"Jorge, por favor."_
@@ -3329,7 +3388,7 @@ Jorge abre los ojos en el piso. Afuera, el portero sigue sonando, apagado.
 | Intento | Qué piensa |
 |---|---|
 | 1 | _"Me pesa todo el cuerpo."_ |
-| 2 | _"«Si te perdés, quedate quieto donde estás, que yo te encuentro.»"_ (lo que le dijo su mamá en la feria, Sesión 1) |
+| 2 | _"«Si te perdés, quedate quieto donde estás, que yo te encuentro.»"_ (lo que le dijo su mamá en el circo, Sesión 1) |
 | 3 | _"Me quedé quieto mucho tiempo."_ / _"Esta vez me vinieron a buscar."_ Y se levanta |
 
 **La puerta:** Jorge la destraba y la abre. Entra la luz del pasillo.

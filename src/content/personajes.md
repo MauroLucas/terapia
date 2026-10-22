@@ -14,7 +14,7 @@ _Las imágenes son los sprites provisorios del prototipo. La lista completa, con
 | Tratamiento | Paciente de Neural. Lleva **11 sesiones**, pero no recuerda haber ido |
 | Habilidades | Caminar, explorar e interactuar con objetos |
 | En el final _(spoiler)_ | **Sesión 9: El baño.** Se despierta en el piso del baño, con las rodillas contra el pecho. Se levanta (cuesta tres intentos), destraba la puerta y atiende a María. Cuando ella le pregunta si está bien: _"…No."_ / _"Pero abrí."_ (provisorio). En el epílogo llama a su papá |
-| De chico | En la Sesión 1 (la feria) aparece de chico, de unos 7 años _(provisorio)_: el mismo suéter verde, pantalón corto azul y zapatillas blancas |
+| De chico | En la Sesión 1 (el circo) aparece de chico, de unos 7 años _(provisorio)_: el mismo suéter verde, pantalón corto azul y zapatillas blancas. **No soporta que el circo haga trabajar a los animales** y se escapa para soltar al elefante ("Salva al gato", decidido por el usuario) |
 
 #### Apariencia
 
@@ -59,7 +59,7 @@ _Sprites provisorios del prototipo: parado, caminando, sentado, en el piso del b
 | Detalle clave | Jorge no la reconoce: al ver la foto pregunta "¿Quién es esta señora?". Pero en el cajón con candado dejó una nota con su letra: "Te extraño, mamá" |
 | Qué pasó con ella _(spoiler)_ | Tuvo un **primer ACV** y el médico le recomendó estar más tranquila. Por eso hizo un **viaje con Jorge**, en el que se reencontraron como madre e hijo y volvieron a tener una relación cercana. **Quince días después** murió de un **segundo ACV**, terminal, con Jorge al lado. La foto de la billetera es de ese viaje, y "12/08" es su fecha. Ver "Historia y mundo" → Lore |
 | En la Sesión 2 | En la casa del barrio: se ofrece a firmar el boletín, le pide que se lo dé al papá "cuando esté tranquilo", y a la noche se lo pasa firmado por debajo de la puerta. Sigue sin cara |
-| En el sueño | En la Sesión 1 (la feria) aparece en el recuerdo de cuando Jorge se perdió de chico: le compra algodón de azúcar, lo mira desde el banco de la calesita y, al final, lo encuentra. **No tiene cara**: una luz se la tapa. Le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Aspecto en el prototipo: pelo largo castaño, tapado terracota (provisorio) |
+| En el sueño | En la Sesión 1 (el circo) aparece en el recuerdo de esa noche: lo saluda desde el banco de la calesita, le dice en la entrada _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_, lo mira en la función y, al final, lo encuentra al lado del elefante. **No tiene cara**: una luz se la tapa. Se distrae hablando con una conocida y ahí Jorge se escapa. Aspecto en el prototipo: pelo largo castaño, tapado terracota (provisorio) |
 | Distancia | De grande, cuando Jorge se fue de la casa, tuvieron **una pelea fuerte**: Jorge la empujó, ella se cayó y se lastimó. Después ella lo buscaba y él la esquivaba: se veían poco (como mucho tres veces por año), todo cortante, y **nunca hablaron de esa noche**. Así hasta el viaje. A Jorge le dejó **mucha culpa** |
 | Su muerte _(spoiler)_ | Es lo que llevó a Jorge a la crisis del baño |
 | La pelea | Le quería dar un número para que llamara a su papá, que estaba mal: no quería que su hijo viviera con rencor ni con culpa. Jorge no quería y ella insistió. Le dijo que se estaba pareciendo a él (_"Vas a terminar como tu padre"_, provisorio) y ahí Jorge la empujó. Esa misma tarde, María había cortado con él. Se juega en la **Sesión 4: La pelea** |
@@ -203,35 +203,40 @@ _Los diálogos del Japo son provisorios._
 | La revelación | **Sesión 9.** Se lo dice a Jorge: _"Yo no soy un doctor."_ / _"Neural no existe."_ / _"Soy vos, Jorge. La parte de vos que quiere seguir."_ (provisorio). En la Pre-sesión 9, antes de la última sesión, le hace los **juegos de memoria** más largos |
 | Por definir | Nombre de pila |
 
-### Gente de la feria _(sin nombre)_
+### Gente del circo _(sin nombre)_
 
 ![Gente sin cara](sprites/sombra.png)
 
 | Campo | Valor |
 |---|---|
-| Primera aparición | Sesión 1: La feria |
-| Qué son | Siluetas grises, **sin cara**, repartidas por la feria. No son parte del recuerdo: la luz no las ilumina |
-| Qué dicen | Casi nada: _"¿Y tu mamá, nene?"_, o algo que no se entiende |
+| Primera aparición | Sesión 1: El circo |
+| Qué son | Siluetas grises, **sin cara**: la gente de afuera de la carpa, el público de las gradas, la conocida que distrae a la mamá (_"¡Hola! ¡Tanto tiempo!"_) y los cuidadores (el que trae al elefante a la pista y el de la linterna, atrás de la carpa). No son parte del recuerdo |
+| Qué dicen | Casi nada: _"¿Y tu mamá, nene?"_. El cuidador, si ve a Jorge: _"¡Eh, nene! ¿Qué hacés acá atrás?"_ (provisorio) |
 
-_Los tres personajes que siguen son del **rediseño de la Sesión 1** (el circo), todavía no están en el prototipo. Ver "Locaciones" → Sesión 1 → Rediseño._
+_Los tres personajes que siguen son de la **Sesión 1: El circo** (decididos por el usuario el 22/10/2026). Ver "Locaciones" → Sesión 1: El circo._
 
 ### El presentador del circo _(nombre por definir)_
 
 | Campo | Valor |
 |---|---|
-| Primera aparición | Sesión 1 (rediseño: el circo) |
+| Primera aparición | Sesión 1: El circo (en el afiche de la entrada; en persona, en la función) |
+| Nombre | **Lechuga** (decidido por el usuario) |
 | Qué es | El presentador de la función. **Una referencia a Carlitos Balá** (decidido por el usuario; ver "Historia y mundo" → Referencias) |
-| Rol | Presenta el show, con sus secuencias de puzzles. Cuando Jorge suelta al elefante, aparece y **le reprocha de muy mala manera** (decidido por el usuario) |
+| Rol | Presenta el show y llama a Jorge como ayudante para el truco de las galeras. Presenta el número del elefante. Cuando Jorge suelta al elefante, aparece y **le reprocha de muy mala manera** (decidido por el usuario): _"¡¿QUÉ HACÉS, MOCOSO?!"_ / _"¡Ese animal es mío! ¡MÍO!"_ / _"¡Mocoso metido! ¡Te vas a acordar de esto toda la vida!"_ (provisorio). Crece, y después **se rompe** como un ente y desaparece |
+| Aspecto | **El flequillo típico de Carlitos Balá** (decidido por el usuario): recto, corte "taza". En el prototipo: saco rojo de presentador con botones dorados, moño azul, micrófono y una sonrisa enorme. Enojado: la cara roja, las cejas juntas, la boca abierta (provisorio) |
+| Frases | _"¡Buenas noches, chicos y chicas!"_ / _"¡Yo soy Lechuga! ¿Me conocen?"_ / _"¡Qué ojo tiene este pibe!"_ (provisorio) |
 | Cuidado _(sugerencia del agente)_ | Es un homenaje a alguien muy querido y real: conviene que el personaje tenga **otro nombre** y que lo feo se lea como **una distorsión del sueño** (el presentador se deforma, la llama se achica), no como algo de la persona real |
-| Por definir | Nombre, aspecto, frases, si tiene cara, qué tiene que ver con el papá |
+| Tiene cara | Sí |
+| Por definir | Qué tiene que ver con el papá (cerca de él la llama se achica y hace frío, como con el papá) |
 
 ### El elefante
 
 | Campo | Valor |
 |---|---|
-| Primera aparición | Sesión 1 (rediseño: el circo) |
+| Primera aparición | Sesión 1: El circo (en la función y atrás de la carpa) |
 | Qué es | Un elefante del circo, encadenado. Lo hacen trabajar en la función, y a Jorge eso no le gusta |
-| Qué pasa | Jorge se escapa para liberarlo. **Lo suelta, pero el elefante no hace nada** (decidido por el usuario) |
+| Qué pasa | En la función lo hacen subirse a un banquito; el látigo se oye y el elefante tiembla. Jorge se escapa para liberarlo, saca la estaca (es un palito) y **el elefante no hace nada** (decidido por el usuario): no se va aunque esté suelto |
+| Aspecto | En el prototipo: gris, con una manta roja con flecos dorados en el lomo y el párpado caído (provisorio) |
 | Referencia | _El elefante encadenado_, de Jorge Bucay (ver "Historia y mundo" → Referencias) |
 | Por definir | Si tiene nombre, si vuelve a aparecer |
 
@@ -239,10 +244,11 @@ _Los tres personajes que siguen son del **rediseño de la Sesión 1** (el circo)
 
 | Campo | Valor |
 |---|---|
-| Primera aparición | Sesión 1 (rediseño: el circo), en las escenas de sigilo |
+| Primera aparición | Sesión 1: El circo, atrás de la carpa (el sigilo). Lechuga se rompe como uno de ellos |
 | Qué son | **Fallas del sueño** (decidido por el usuario) |
 | Qué hacen | Jorge **no los puede atacar, solo esquivar** (decidido por el usuario). Ver "Mecánicas" → Ideas a implementar → Sigilo y los entes |
-| Por definir | Cómo se ven, qué pasa si tocan a Jorge, si tienen que ver con la gente sin cara, en qué otras sesiones aparecen |
+| Cómo son | En el prototipo: una silueta como la de la gente sin cara, cortada en franjas corridas, casi negra, con bordes cian y magenta, que titila. Si tocan a Jorge, la imagen se sacude y vuelve al último lugar seguro (provisorio) |
+| Por definir | Si tienen que ver con la gente sin cara, en qué otras sesiones aparecen |
 
 ### El inmobiliario _(sin nombre)_
 
@@ -281,7 +287,7 @@ _Los tres personajes que siguen son del **rediseño de la Sesión 1** (el circo)
 |---|---|
 | Primera aparición | Sesión 2: El boletín |
 | Quiénes | **La preceptora** y los compañeros del aula (_"Que lo firme tu papá, ¿eh? Necesito hablar con él"_), **el almacenero** (vio al papá ir para el bar) y **la vecina** (_"Decile a tu mamá que cualquier cosa, me golpea la pared"_) |
-| Cómo son | Siluetas sin cara, como la gente de la feria. Saben lo que pasa en la casa y no dicen nada |
+| Cómo son | Siluetas sin cara, como la gente del circo. Saben lo que pasa en la casa y no dicen nada |
 
 ## Aliados
 

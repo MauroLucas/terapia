@@ -81,7 +81,7 @@ _En el prototipo, la pizarra está vacía a la mañana y se actualiza en **La pr
 
 _En el prototipo, armar el recuerdo está en La primera noche y La segunda noche (prueba). De la tercera en adelante todavía se elige el tramo de diez años._
 
-**Primer tramo:** _"Infancia · La feria"_. Al despertar de la Sesión 1 se avisa con un cartel chico abajo a la derecha, y esa noche Jorge lo escribe en la pizarra: _"La feria con mamá"_.
+**Primer tramo:** _"Infancia · El circo"_. Al despertar de la Sesión 1 se avisa con un cartel chico abajo a la derecha, y esa noche Jorge lo escribe en la pizarra: _"El circo con mamá"_.
 
 **Segundo tramo:** _"Adolescencia · El boletín"_. Al despertar de la Sesión 2 se avisa igual, y en **La segunda noche** Jorge lo escribe cerca de los 15: _"El boletín"_. No quiere escribir más que eso.
 
@@ -201,7 +201,7 @@ _Propuesta:_ de fondo, el cuarto de Jorge a oscuras con él durmiendo.
 ## Flujo de pantallas
 
 ```
-Aviso de contenido → Menú principal → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio y cuarto de inducción) → Sesión 1: La feria → Despertar → La primera noche → Pre-sesión 2 → Sesión 2: El boletín → Despertar → La segunda noche → Pre-sesión 3 → Sesión 3: La fiesta → Despertar → La tercera noche → Pre-sesión 4 → Sesión 4: La pelea → Despertar → La cuarta noche → Pre-sesión 5 → Sesión 5: El reencuentro → Despertar → La quinta noche → Pre-sesión 6 → Sesión 6: El viaje del 12/08 → Despertar → La sexta noche → Pre-sesión 7 → Sesión 7: La muerte de su mamá → Despertar → La séptima noche → Pre-sesión 8 → Sesión 8: El velorio → Despertar → La octava noche → Pre-sesión 9 → Sesión 9: El baño → Epílogo → Cierre
+Aviso de contenido → Menú principal → Casa de Jorge → Escaleras (títulos) → Cinemática del auto → Hall del edificio → Ascensor → Consultorio (pasillo, consultorio y cuarto de inducción) → Sesión 1: El circo → Despertar → La primera noche → Pre-sesión 2 → Sesión 2: El boletín → Despertar → La segunda noche → Pre-sesión 3 → Sesión 3: La fiesta → Despertar → La tercera noche → Pre-sesión 4 → Sesión 4: La pelea → Despertar → La cuarta noche → Pre-sesión 5 → Sesión 5: El reencuentro → Despertar → La quinta noche → Pre-sesión 6 → Sesión 6: El viaje del 12/08 → Despertar → La sexta noche → Pre-sesión 7 → Sesión 7: La muerte de su mamá → Despertar → La séptima noche → Pre-sesión 8 → Sesión 8: El velorio → Despertar → La octava noche → Pre-sesión 9 → Sesión 9: El baño → Epílogo → Cierre
                           ↑                    ↓
                           └──── Menú de pausa (Diario / Opciones)
 ```

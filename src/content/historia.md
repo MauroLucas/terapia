@@ -22,7 +22,7 @@ En Neural, una inteligencia artificial permite que el **doctor Vela** vea en pan
 | Pasillo de los consultorios | Arriba, al salir del ascensor: un pasillo largo con ventanales a la ciudad y una puerta por doctor, cada una con su placa. La del doctor Vela es la última. Es la primera parte de la locación **Consultorio** |
 | Consultorio del doctor Vela | Al final del pasillo: un cuarto cálido, con biblioteca y escritorio, donde Vela charla con Jorge antes de cada sesión. Es la segunda parte de la locación **Consultorio** |
 | Cuarto de inducción al sueño | Al lado del consultorio. Tiene la **máquina de los sueños**: una camilla con un casco que lee las ondas del cerebro, una pantalla grande donde se ven los sueños y una consola |
-| La feria _(sueño)_ | Primera sesión: una feria de noche, en la infancia de Jorge, con calesita, algodón de azúcar y vuelta al mundo. Ahí se perdió de chico y su mamá lo encontró. Es la locación **Sesión 1: La feria** |
+| El circo _(sueño)_ | Primera sesión: un circo de noche, en la infancia de Jorge, con una calesita afuera de la carpa. Ahí se escapó de chico para soltar a un elefante, y su mamá lo encontró. Es la locación **Sesión 1: El circo** |
 | La casa de la mamá y el barrio _(sueño)_ | Segunda sesión, a los 15: la casa donde creció Jorge, el bar del papá y la plaza donde conoce a María. Es la locación **Sesión 2: El boletín** |
 | La plaza, el club y la casa de María _(sueño)_ | Tercera sesión, a los 17: los martes en la plaza, la fiesta de egresados en el club del barrio y la casa de la familia de María. Es la locación **Sesión 3: La fiesta** |
 | Carnet de Neural | Credencial que los pacientes presentan en la recepción. Jorge no lo lleva encima |
@@ -127,7 +127,7 @@ Por eso la culpa es doble: **lastimó a su mamá** y **se convirtió en lo que m
 
 _Por definir: qué le pasaba al papá y qué fue de él, cómo se hace sentir la culpa en el resto del juego, y en qué año fue el viaje._
 
-**Un recuerdo de la infancia (Sesión 1):** una noche, de chico, Jorge fue a una feria con su mamá y se perdió. Al entrar, ella le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Él se quedó quieto, y ella lo encontró. _Detalles provisorios, propuestos por el agente. **Rediseño en curso** (decidido por el usuario): la feria pasa a ser un **circo**, donde Jorge se escapa para liberar a un elefante (ver "Locaciones" → Sesión 1 → Rediseño)._
+**Un recuerdo de la infancia (Sesión 1):** una noche, de chico, Jorge fue al circo con su mamá. En un descuido de ella, se escapó para soltar a un elefante y se perdió. Al entrar, ella le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Él se quedó quieto, y ella lo encontró. _El circo, el elefante y Lechuga los decidió el usuario (antes era una feria); el resto de los detalles es provisorio. Ver "Locaciones" → Sesión 1: El circo._
 
 ### María, la ex novia de Jorge (spoiler)
 
@@ -158,7 +158,7 @@ Son **nueve sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 
 | # | Etapa | Recuerdo | Qué se sabe | Estado |
 |---|---|---|---|---|
-| 1 | Infancia | **La feria** | Se perdió de chico y su mamá lo encontró. _Rediseño en curso: pasa a ser **un circo**, y Jorge se escapa para liberar a un elefante (ver "Locaciones" → Sesión 1 → Rediseño)_ | En el prototipo (la versión de la feria) |
+| 1 | Infancia | **El circo** | Fue al circo con su mamá. No le gustó cómo trataban al elefante y se escapó para soltarlo: lo soltó y el elefante no se fue. Lechuga, el presentador, le gritó. Se quedó quieto y su mamá lo encontró | En el prototipo |
 | 2 | Adolescencia (~15) | **El boletín** | El papá: un padre ausente que resolvía todo con violencia, contra la mamá y contra Jorge. Empieza en el colegio, con el Japo. Jorge termina en el piso de su cuarto, trabando la puerta. Ese día conoce a María | En el prototipo (con La segunda noche) |
 | 3 | Adolescencia (~17) | **La fiesta** | **Sesión de respiro:** sin el papá, todo calor. Los martes en la plaza con María (ya no estudian: fantasean con un depto propio), la fiesta de egresados (bailan y el Japo, su amigo, les saca **la foto que hoy falta en el portarretratos**), la noche en la casa de la familia de María y **el primer beso** | En el prototipo (con La tercera noche) |
 | 4 | Juventud (~20) | **La pelea** | Empieza con Jorge y María **visitando el departamento con un inmobiliario**. El mismo día: María se va a Córdoba y cortan; a la noche, la mamá le da el número del papá, insiste y él la empuja: la imagen se rompe. Después se ven poco y nunca hablan de eso. Le deja mucha culpa | En el prototipo (con La cuarta noche) |
@@ -173,7 +173,7 @@ Son **nueve sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 - La 3 (la fiesta) la sumó el usuario para profundizar la relación con María antes de la pelea: así la separación duele más.
 - La 5 la sumó el usuario como "una secuencia a los 30". Después decidió que es **una sesión larga**.
 - La 8 (el velorio) la sumó el usuario antes del baño, para que Jorge y María vuelvan a hablar: ella preocupada, él distante. Por eso el baño pasó a ser la 9.
-- Las edades, como están en la pizarra: la feria cerca de los 7, el boletín a los 15, la fiesta a los 17, la pelea y la separación a los 20, el reencuentro a los 30, el viaje y la muerte de la mamá a los 38, el velorio a los 38 y hoy a los 40. _Son las del prototipo; la mayoría las propuso el agente._
+- Las edades, como están en la pizarra: el circo cerca de los 7, el boletín a los 15, la fiesta a los 17, la pelea y la separación a los 20, el reencuentro a los 30, el viaje y la muerte de la mamá a los 38, el velorio a los 38 y hoy a los 40. _Son las del prototipo; la mayoría las propuso el agente._
 
 _El mapa lo propuso el agente con lo que ya estaba en el GDD, y el usuario lo aprobó como base. Se ajusta sesión por sesión._
 
@@ -194,7 +194,7 @@ _Obras que el juego toma como referencia. Se toma la idea o la imagen, nunca el 
 ### _El elefante encadenado_, de Jorge Bucay
 
 - **Qué es:** un cuento de **Jorge Bucay**, escritor y terapeuta argentino (está en _Déjame que te cuente_). Un chico ve en el circo a un elefante enorme atado a una estaca chiquita y no entiende por qué no se escapa. La explicación: lo ataron así desde que era cría; tiró y no pudo, y se convenció de que no puede. De grande ya ni lo intenta.
-- **Dónde va:** en la **Sesión 1** rediseñada (el circo). Jorge chico **suelta al elefante, pero el elefante no hace nada** (decidido por el usuario): no se va aunque esté libre.
+- **Dónde va:** en la **Sesión 1: El circo** (en el prototipo). Jorge chico **suelta al elefante, pero el elefante no hace nada** (decidido por el usuario): no se va aunque esté libre. La cadena está atada a una estaca chiquita, un palito, como en el cuento.
 - **Qué dice de Jorge** _(propuesta del agente)_: Jorge de grande es ese elefante. Aprendió de chico, con su papá, que las cosas se resuelven a los golpes o no se resuelven, y cree que no puede ser distinto. El final se puede leer igual: en el baño, Jorge se levanta en tres intentos y abre la puerta, como el elefante que por fin tira de la estaca.
 - **Por qué le queda bien al juego:** es argentino (identidad argentina), el autor es terapeuta en un juego que se llama _Terapia_ y se llama Jorge, como el protagonista.
 - **"Los elefantes nunca olvidan":** el dicho popular, en un juego cuya motivación es recuperar la memoria.
@@ -208,4 +208,4 @@ _Obras que el juego toma como referencia. Se toma la idea o la imagen, nunca el 
 ### Carlitos Balá
 
 - **Quién es:** humorista y animador argentino, muy querido por varias generaciones de chicos.
-- **Dónde va:** el **presentador del circo** de la Sesión 1 es una referencia a él (decidido por el usuario). Ver "Personajes" → El presentador del circo.
+- **Dónde va:** el **presentador del circo** de la Sesión 1, **Lechuga**, es una referencia a él (decidido por el usuario): tiene su flequillo. Ver "Personajes" → El presentador del circo.

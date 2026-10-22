@@ -414,7 +414,7 @@ export class Dream7 extends Phaser.Scene {
     this.latido?.remove()
     this.player.setX(POS.silla + 70).setFlipX(true)
     this.facing = -1
-    await say(this, [this.speak('Ya vienen, ma.'), this.speak('Ya vienen.'), this.think('Me agarró la mano.'), this.think('Fuerte. Como en la feria.')])
+    await say(this, [this.speak('Ya vienen, ma.'), this.speak('Ya vienen.'), this.think('Me agarró la mano.'), this.think('Fuerte. Como cuando me encontró en el circo.')])
     this.pista('El segundo ACV', 'Quince días después del viaje, en su casa, mientras yo ponía la mesa, a mamá le dio otro ACV. La senté, llamé a la ambulancia y me quedé con ella.')
     sfx.sirena()
     await this.wait(1800)

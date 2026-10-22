@@ -137,7 +137,7 @@ export function createLevel6Game(parent: HTMLElement) {
   return game
 }
 
-// Sesión 1 sola (la feria): el sueño y el despertar en la camilla
+// Sesión 1 sola (el circo): el sueño y el despertar en la camilla
 export function createLevel4Game(parent: HTMLElement) {
   resetState()
   const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), scene: [Warning, Dream, Office, LevelEnd] }))

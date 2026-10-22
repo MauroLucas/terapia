@@ -56,7 +56,7 @@ green V-neck sweater over a black t-shirt, black trousers, black shoes
 |---|---|
 | Claves | `chico0` (parado) · `chico1`, `chico2` (caminata) |
 | Tamaño en pantalla | 44 × 104 px |
-| Dónde | Sesión 1: La feria |
+| Dónde | Sesión 1: El circo |
 | Descripción | Jorge a los 7 años _(provisorio)_: el mismo suéter verde, pantalón corto azul, zapatillas blancas. Cabeza grande para el cuerpo |
 
 ```
@@ -89,9 +89,9 @@ dark grey trousers, black shoes, warm calm expression
 
 | Campo | Valor |
 |---|---|
-| Claves | `mama` (parada) · `mamaAgachada` (se agacha para abrazarlo, al final de la feria) |
+| Claves | `mama` (parada) · `mamaAgachada` (se agacha para hablarle en la entrada y para abrazarlo, al final del circo) |
 | Tamaño en pantalla | 64 × 150 px |
-| Dónde | Sesión 1: La feria y Sesión 2: El boletín |
+| Dónde | Sesión 1: El circo y Sesión 2: El boletín |
 | Descripción | Mujer de unos 35 años en los recuerdos _(provisorio)_. Pelo largo castaño oscuro, tapado terracota con bufanda clara, pantalón oscuro. **No se le ve la cara**: en el juego, una luz se la tapa |
 
 ```
@@ -234,7 +234,7 @@ _Por definir: cómo es en el epílogo, cuando Jorge va a verlo en persona._
 security guard, dark navy uniform, peaked cap, small golden badge on the chest, bored expression
 ```
 
-### Gente sin cara (feria y barrio)
+### Gente sin cara (circo y barrio)
 
 ![Gente sin cara](sprites/sombra.png)
 
@@ -242,11 +242,60 @@ security guard, dark navy uniform, peaked cap, small golden badge on the chest, 
 |---|---|
 | Clave | `sombra` |
 | Tamaño en pantalla | 60 × 150 px (en el barrio y el bar se usa más chica y más oscura) |
-| Dónde | La feria (Sesión 1), el aula y el barrio: la preceptora, los compañeros, el almacenero, la vecina y la gente del bar (Sesión 2), la gente que baila en la fiesta (Sesión 3) y el inmobiliario (Sesión 4: más claro, con una carpeta azul) |
+| Dónde | El circo (Sesión 1: afuera, el público de las gradas, la conocida de la mamá y el cuidador, que va un poco más claro), el aula y el barrio: la preceptora, los compañeros, el almacenero, la vecina y la gente del bar (Sesión 2), la gente que baila en la fiesta (Sesión 3) y el inmobiliario (Sesión 4: más claro, con una carpeta azul) |
 | Descripción | Siluetas grises, lisas, **sin cara**. No son parte del recuerdo: la luz no las ilumina |
 
 ```
 plain grey human silhouette, no face, no details, slightly blurred edges, dreamlike
+```
+
+### Lechuga, el presentador del circo
+
+![Lechuga](sprites/lechuga.png) ![Lechuga enojado](sprites/lechugaEnojado.png)
+
+| Campo | Valor |
+|---|---|
+| Claves | `lechuga` (presentando, con el micrófono) · `lechugaEnojado` (el reproche: la cara roja, las cejas juntas, la boca abierta, el brazo levantado) |
+| Tamaño en pantalla | 60 × 150 px (en el reproche crece hasta ×1,4) |
+| Dónde | Sesión 1: El circo (el afiche de la entrada, la función y el reproche) |
+| Descripción | Presentador de circo, **referencia a Carlitos Balá** (decidido por el usuario): **el flequillo recto**, corte "taza", castaño oscuro. Saco rojo de presentador con solapas y botones dorados, camisa blanca, moño azul, pantalón negro y un micrófono. Sonrisa enorme. **Tiene cara** |
+
+```
+circus ringmaster in his 50s, dark brown bowl haircut with a straight thick fringe down to the eyebrows,
+big friendly smile, red ringmaster jacket with gold buttons, white shirt, blue bow tie, black trousers,
+holding a microphone (an homage, not a likeness of any real person)
+```
+
+### El elefante del circo
+
+![Elefante](sprites/elefante.png)
+
+| Campo | Valor |
+|---|---|
+| Clave | `elefante` |
+| Tamaño en pantalla | 240 × 196 px |
+| Dónde | Sesión 1: El circo (el número de la función y atrás de la carpa) |
+| Descripción | Elefante gris, mirando a la izquierda, con una manta roja con flecos dorados en el lomo. **Triste:** el párpado caído. Atrás de la carpa, encadenado de una pata a una estaca chiquita (se dibujan aparte) |
+
+```
+sad circus elephant, grey skin, small red blanket with golden fringe on its back, droopy eyelid,
+standing still, side view facing left, gentle and tired
+```
+
+### Los entes (fallas del sueño)
+
+![Ente](sprites/ente.png)
+
+| Campo | Valor |
+|---|---|
+| Clave | `ente` |
+| Tamaño en pantalla | 60 × 150 px |
+| Dónde | Sesión 1: El circo, atrás de la carpa (y cuando Lechuga se rompe) |
+| Descripción | Una silueta como la de la gente sin cara, pero **cortada en franjas corridas**, casi negra, con bordes **cian y magenta**: una imagen que se rompe. Titila y tiembla. Dos puntitos blancos en lugar de ojos |
+
+```
+glitched dark human silhouette made of horizontally shifted slices, near-black body,
+cyan and magenta chromatic edges, two tiny white dots for eyes, flickering, unsettling but not gory
 ```
 
 ### Personajes dibujados en la escena
@@ -302,7 +351,7 @@ El prototipo usa solo poses sueltas. Con el arte final harían falta, como míni
 | ![](sprites/gaseosa3.png) | `gaseosa3` | 24 × 14 | Lata de Lima-limón (verde) | Hall del edificio: máquina de bebidas |
 | ![](sprites/gaseosa4.png) | `gaseosa4` | 24 × 14 | Lata de Pomelo (amarilla) | Hall del edificio: máquina de bebidas |
 | ![](sprites/gaseosa5.png) | `gaseosa5` | 24 × 14 | Lata de Tónica (celeste) | Hall del edificio: máquina de bebidas |
-| ![](sprites/sortija.png) | `sortija` | 22 × 22 | Sortija dorada de la calesita | Sesión 1 (la calesita) y La primera noche (la caja) |
+| ![](sprites/sortija.png) | `sortija` | 22 × 22 | Sortija dorada de la calesita | Sesión 1 (la calesita de afuera del circo) y La primera noche (la caja) |
 | ![](sprites/boletin.png) | `boletin` | 22 × 28 | Boletín de calificaciones (ícono) | Sesión 2: El boletín |
 | ![](sprites/cuaderno.png) | `cuaderno` | 22 × 28 | Cuaderno de tapa azul (ícono) | La segunda noche: la caja |
 | ![](sprites/papelito.png) | `papelito` | 24 × 20 | Papelito doblado con el número del papá (ícono) | Sesión 4 (en el piso, después de la pelea) y La cuarta noche (en la billetera) |
@@ -375,7 +424,7 @@ Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y 
 | El número de María | Una hojita arrancada de una agenda, con renglones, y la letra de María en violeta: "María", un número de teléfono (inventado) y "llamame" subrayado |
 | Boletos del micro | Dos boletos de micro de larga distancia, Buenos Aires → San Rafael, salida 11/08, asientos 23 y 24 |
 | Foto de la fiesta | Foto de papel con flash, de una fiesta de egresados: Jorge (suéter verde) y María (vestido bordó) abrazados, guirnaldas de colores atrás. En el borde blanco, "J y M" con la letra de María. Es la foto del portarretratos |
-| Sortija | La sortija de cerca, sobre un fondo oscuro. Segunda página: **el papelito de la mamá** que venía con ella, en un papel amarillento con su letra: _"La sortija de Jorgito. De la feria, el año que empezó segundo grado."_ Es la pista de la edad en la pizarra de La primera noche |
+| Sortija | La sortija de cerca, sobre un fondo oscuro. Segunda página: **el papelito de la mamá** que venía con ella, en un papel amarillento con su letra: _"La sortija de Jorgito. Del circo, el año que empezó segundo grado."_ Es la pista de la edad en la pizarra de La primera noche |
 
 ## Fondos
 
@@ -439,13 +488,29 @@ Uno por ambiente. Las capturas son del prototipo sin la interfaz (a veces se ve 
 
 **Cuarto de inducción** (1400 px). Clínico y en penumbra, azules fríos: la camilla con el casco, una pantalla grande y la máquina.
 
-### Sesión 1: La feria
+### Sesión 1: El circo
 
-![Feria](sprites/fondos/feria.png)
+![Algodón de azúcar](sprites/fondos/circo-algodon.png)
 
-![Calesita](sprites/fondos/feria-calesita.png)
+![Calesita](sprites/fondos/circo-calesita.png)
 
-**La feria** (4400 px). Noche, guirnaldas de luces, el puesto de algodón de azúcar, la calesita, bancos y la vuelta al mundo. Todo empieza gris y toma color cuando lo ilumina la llama.
+![La carpa](sprites/fondos/circo-carpa.png)
+
+**Afuera** (2400 px). Noche, guirnaldas de luces, el puesto de algodón de azúcar, el banco, la calesita y la carpa del circo, con rayas rojas y blancas, el cartel CIRCO y el afiche de Lechuga. Todo empieza gris y toma color cuando lo ilumina la llama.
+
+![La función](sprites/fondos/circo-funcion.png)
+
+**La función** (una pantalla, 1280 px). Adentro de la carpa: lonas rojas en gajos, guirnaldas, gradas con la gente sin cara y la pista de arena con el borde rojo. Un reflector desde arriba.
+
+![Atrás de la carpa](sprites/fondos/circo-atras.png)
+
+![Las cajas](sprites/fondos/circo-escondite.png)
+
+![El carromato](sprites/fondos/circo-carromato.png)
+
+![El elefante](sprites/fondos/circo-elefante.png)
+
+**Atrás de la carpa** (4000 px). De noche: la lona por donde sale Jorge, la jaula del león, las cajas, la jaula de los monos, el carromato con su lona y, al final, el elefante encadenado a una estaca chiquita, con fardos de pasto.
 
 ### Sesión 2: El boletín
 

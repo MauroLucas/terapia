@@ -337,7 +337,7 @@ export class Dream2 extends Phaser.Scene {
     // El papá: más grande, de espaldas
     this.add.image(POS.bar, 462, 'sombra').setScale(0.68).setDepth(2.5).setTint(0x101014)
 
-    // El almacenero y la vecina: sin cara, como la gente de la feria
+    // El almacenero y la vecina: sin cara, como la gente del circo
     this.add.image(POS.almacen, FLOOR - 75, 'sombra').setAlpha(0.9).setDepth(8)
     this.add.image(POS.vecina, FLOOR - 75, 'sombra').setAlpha(0.9).setDepth(8).setFlipX(true)
 
@@ -646,7 +646,7 @@ export class Dream2 extends Phaser.Scene {
       g.fillStyle(color).fillCircle(lx, Y, 6)
       capa.add(this.add.text(lx, Y - 40, t, { fontFamily: FONT, fontSize: '14px', color: css, resolution: 2, fontStyle: 'italic' }).setOrigin(0.5))
     }
-    marca(7, 'La feria', 0x2b6cb0, '#2b6cb0')
+    marca(7, 'El circo', 0x2b6cb0, '#2b6cb0')
     marca(15, '?', 0xb03a2e, '#b03a2e')
     capa.add(this.add.text(7480, 330, '¿Quién soy?', { fontFamily: FONT, fontSize: '18px', color: '#2b3140', resolution: 2, fontStyle: 'italic' }).setOrigin(0.5))
     sfx.flash()
@@ -726,7 +726,7 @@ export class Dream2 extends Phaser.Scene {
       return
     }
     if (!this.f.boletin) {
-      await say(this, [this.mamaSays('¿Ya hiciste la tarea?'), this.think('No le puedo ver la cara. Como en la feria.')])
+      await say(this, [this.mamaSays('¿Ya hiciste la tarea?'), this.think('No le puedo ver la cara. Como en el circo.')])
       return
     }
     if (this.f.mama) {

@@ -384,7 +384,7 @@ export class Dream9 extends Phaser.Scene {
   private async mirarPizarra() {
     await say(this, [
       this.think('La pizarra está llena.'),
-      this.think('La feria. El boletín. La fiesta. La pelea.'),
+      this.think('El circo. El boletín. La fiesta. La pelea.'),
       this.think('María en el bar. El viaje. Mamá. El velorio.'),
       this.think('Falta hoy.'),
       this.vela('Hoy es lo que más te costó mirar.'),

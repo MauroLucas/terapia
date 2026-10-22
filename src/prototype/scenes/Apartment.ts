@@ -932,7 +932,7 @@ export class Apartment extends Phaser.Scene {
       ? [this.think('Volví.'), this.think('La plaza. La fiesta. La casa de María.'), this.think('Hoy no me duele nada.'), this.think('Tengo que anotarlo.')]
       : this.vuelta === 2
       ? [this.think('Volví.'), this.think('Mi papá. El boletín. Esa noche, en el piso de mi cuarto.'), this.think('Y María.'), this.think('Tengo que anotarlo.')]
-      : [this.think('Ya está. Volví a casa.'), this.think('Mi mamá. La feria. La calesita.'), this.think('Tengo que anotarlo antes de que se me olvide.')])
+      : [this.think('Ya está. Volví a casa.'), this.think('Mi mamá. El circo. El elefante.'), this.think('Tengo que anotarlo antes de que se me olvide.')])
     this.goal?.set('Anotar lo que recordé en la pizarra')
     this.busy = false
     const help = text(this, 24, this.scale.height - 34, controlsHelp('← → / A D caminar   ·   E examinar / usar puertas   ·   Espacio avanzar texto   ·   TAB diario   ·   F pantalla completa'), 16, '#aab2c4')
@@ -949,7 +949,7 @@ export class Apartment extends Phaser.Scene {
 
   // La pizarra: el jugador elige en qué parte de la línea va el recuerdo
   private pizarraOverlay(recuerdos: number) {
-    const feria = recuerdos >= 1
+    const circo = recuerdos >= 1
     const boletin = recuerdos >= 2
     const fiesta = recuerdos >= 3
     return overlay(this, (c, w) => {
@@ -963,13 +963,13 @@ export class Apartment extends Phaser.Scene {
         g.lineBetween(x, -12, x, 12)
         c.add(text(this, x, 22, String(age), 16, '#7a8090', { fontFamily: HAND_FONT }).setOrigin(0.5, 0))
       }
-      if (feria) {
-        // Primer tramo: la infancia, con la feria marcada cerca de los 7 años
+      if (circo) {
+        // Primer tramo: la infancia, con el circo marcado cerca de los 7 años
         const xa = x0 + ((x1 - x0) * 7) / 40
         g.lineStyle(10, 0x3e7d3c, 0.35).lineBetween(x0, 0, x0 + (x1 - x0) / 4, 0)
         g.fillStyle(0x3e7d3c).fillCircle(xa, 0, 9)
         g.lineStyle(2, 0x3e7d3c).lineBetween(xa, -10, xa, -62)
-        c.add(text(this, xa, -66, 'La feria con mamá', 22, '#2e5f2c', { fontFamily: HAND_FONT }).setOrigin(0.5, 1))
+        c.add(text(this, xa, -66, 'El circo con mamá', 22, '#2e5f2c', { fontFamily: HAND_FONT }).setOrigin(0.5, 1))
         c.add(text(this, xa, 58, 'me perdí y\nella me encontró', 16, '#4a5060', { fontFamily: HAND_FONT, align: 'center' }).setOrigin(0.5, 0))
       }
       if (boletin) {
@@ -1127,10 +1127,10 @@ export class Apartment extends Phaser.Scene {
     }
     await this.pizarraOverlay(0)
     const listo = await this.armarRecuerdo({
-      frase: ['Fui a la feria con ', '. Me perdí en ', ' y ', ' hasta que ella me encontró. Tenía ', ' años.'],
+      frase: ['Fui al circo con ', '. Me escapé para soltar al ', ' y ', ' hasta que ella me encontró. Tenía ', ' años.'],
       huecos: [
         { opciones: ['mamá', 'papá', 'una vecina'], ok: 0, mal: ['No. Papá nunca venía a esas cosas.', 'No. Era mamá. Me compró algodón de azúcar.'] },
-        { opciones: ['la calesita', 'la vuelta al mundo', 'el tren fantasma'], ok: 0, mal: ['No. Fue en la calesita: me bajé del otro lado.', 'No. Fue en la calesita: me bajé del otro lado.'] },
+        { opciones: ['elefante', 'león', 'mono'], ok: 0, mal: ['No. Era el elefante: tenía una cadena en la pata.', 'No. Era el elefante: tenía una cadena en la pata.'] },
         { opciones: ['me quedé quieto', 'salí a buscarla', 'me puse a gritar'], ok: 0, mal: ['No… Ella me había dicho algo al entrar. "Si te perdés…"', 'No… Ella me había dicho algo al entrar. "Si te perdés…"'] },
         {
           edad: true,
@@ -1149,15 +1149,15 @@ export class Apartment extends Phaser.Scene {
     }
     sfx.paper()
     await this.pizarraOverlay(1)
-    await say(this, [this.think('"La feria con mamá."'), this.think('Es lo primero que anoto.')])
+    await say(this, [this.think('"El circo con mamá."'), this.think('Es lo primero que anoto.')])
     this.pizarraHecha = true
     // En la pizarra de la pared también aparece la marca
     const mark = this.add.graphics().setDepth(5)
     mark.lineStyle(5, 0x3e7d3c, 0.5).lineBetween(900, 312, 935, 312)
     mark.fillStyle(0x3e7d3c).fillCircle(924, 312, 4)
     mark.lineStyle(1.5, 0x3e7d3c).lineBetween(924, 308, 924, 286)
-    if (!state.lineaDeTiempo.includes('Infancia: la feria')) state.lineaDeTiempo.push('Infancia: la feria')
-    this.pista('Pizarra', 'Anoté mi primer recuerdo: la feria con mamá, cuando era chico.')
+    if (!state.lineaDeTiempo.includes('Infancia: el circo')) state.lineaDeTiempo.push('Infancia: el circo')
+    this.pista('Pizarra', 'Anoté mi primer recuerdo: el circo con mamá, cuando era chico.')
     this.nextGoal()
   }
 
@@ -1442,7 +1442,7 @@ export class Apartment extends Phaser.Scene {
       this.think('Pero algo me dice que es ella. Mi mamá.'),
     ])
     if (!state.inventario.includes('foto')) this.addInventory('foto')
-    this.pista('La señora de la foto', 'Creo que es mi mamá: la misma que me encontró en la feria.')
+    this.pista('La señora de la foto', 'Creo que es mi mamá: la misma que me encontró en el circo.')
     this.removeItem('billetera')
   }
 
@@ -1467,7 +1467,7 @@ export class Apartment extends Phaser.Scene {
     this.addInventory('sortija')
     await showObjeto(this, 'sortija')
     await say(this, [this.think('La sortija de la calesita.'), this.think('Fue real.'), this.think('Y un papelito con la letra de mamá.'), this.think('La guardó ella. Todos estos años.')])
-    this.pista('La sortija', 'En una caja de cosas de chico estaba la sortija de la calesita, con un papelito de mamá: "La sortija de Jorgito. De la feria, el año que empezó segundo grado." El recuerdo fue real.')
+    this.pista('La sortija', 'En una caja de cosas de chico estaba la sortija de la calesita, con un papelito de mamá: "La sortija de Jorgito. Del circo, el año que empezó segundo grado." El recuerdo fue real.')
     if (!this.pizarraHecha && this.armado.length) this.goal?.set('Anotar lo que recordé en la pizarra')
   }
 
@@ -1842,7 +1842,7 @@ export class Apartment extends Phaser.Scene {
     this.fridgeNotes?.destroy()
     this.drawerNote?.destroy()
     this.bannerStrip?.destroy()
-    // La caja de cosas de chico, ya abierta, y la marca de la feria en la pizarra
+    // La caja de cosas de chico, ya abierta, y la marca del circo en la pizarra
     const g = this.add.graphics().setDepth(4)
     g.fillStyle(0x9a7a4e).fillRect(270, 562, 96, 38)
     g.fillStyle(0xb08d5c).fillRect(372, 590, 104, 10)
@@ -1917,12 +1917,12 @@ export class Apartment extends Phaser.Scene {
       : this.vuelta >= 5
       ? [this.think('Ya casi llego a hoy.'), this.think('El reencuentro. Me fui.')]
       : this.vuelta >= 4
-      ? [this.think('La feria. El boletín. La fiesta.'), this.think('Y la pelea. No quiero mirarla mucho.')]
+      ? [this.think('El circo. El boletín. La fiesta.'), this.think('Y la pelea. No quiero mirarla mucho.')]
       : this.vuelta >= 3
-      ? [this.think('La feria. El boletín. La fiesta.'), this.think('Lo último que anoté es lindo. Ojalá lo que sigue también.')]
+      ? [this.think('El circo. El boletín. La fiesta.'), this.think('Lo último que anoté es lindo. Ojalá lo que sigue también.')]
       : this.vuelta >= 2
-      ? [this.think('"La feria con mamá." "El boletín."'), this.think('Y María, en la plaza. Todavía está.')]
-      : [this.think('"La feria con mamá." Me perdí y ella me encontró.'), this.think('Todavía está. No me lo olvidé.')])
+      ? [this.think('"El circo con mamá." "El boletín."'), this.think('Y María, en la plaza. Todavía está.')]
+      : [this.think('"El circo con mamá." Me perdí y ella me encontró.'), this.think('Todavía está. No me lo olvidé.')])
   }
 
   // Al salir del cuarto, sigue directo en la sesión con el doctor Vela
