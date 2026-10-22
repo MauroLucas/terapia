@@ -78,6 +78,9 @@ Dónde va cada cosa en el GDD:
 | Historia, lore, revelaciones | `historia.md` |
 | Motor, plataformas, prototipo | `tecnico.md` |
 | Sprites nuevos o cambios en uno (personaje, objeto, documento, fondo) | `sprites.md` |
+| Notas personales del usuario, por fecha (la más nueva arriba, con encabezado `## DD/MM/AAAA`) | `notas.md` |
+
+**Notas personales** (`notas.md`) es el anotador de Mauro: cuando pida "agregar una nota", va ahí con la fecha del día, con sus palabras y sin inventar de más. Si una nota cambia algo del diseño, preguntarle si también hay que pasarla a la sección que corresponda.
 
 ### 2. Idioma y tono
 

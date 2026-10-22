@@ -18,6 +18,7 @@ export const sections: Section[] = [
   { id: 'ui', title: 'Interfaz (UI/UX)', icon: '🖥️' },
   { id: 'tecnico', title: 'Aspectos técnicos', icon: '🛠️' },
   { id: 'roadmap', title: 'Roadmap', icon: '🚀' },
+  { id: 'notas', title: 'Notas personales', icon: '📝' },
 ]
 
 const files = import.meta.glob('./content/*.md', {
