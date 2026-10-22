@@ -26,3 +26,7 @@ Estaría bueno pensar mejor las sesiones **como si fueran mapas**. Quizás no to
 ### El final: Jorge en el baño con una vela
 
 Al final, Jorge está **encerrado en el baño con una vela**.
+
+### Coleccionables
+
+Estaría bueno agregar **coleccionables** al juego. _Cuáles y dónde: por definir._
