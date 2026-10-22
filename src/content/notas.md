@@ -11,6 +11,6 @@ El juego está pensado para un jugador:
 - **Emocional:** que le impacte lo que le pasa al personaje.
 - **Detallista:** que le guste saber todo del universo y de los NPC.
 
-### El primer nivel, ambientado como un circo
+### La Sesión 1: un circo en vez de una feria
 
-Estaría bueno que el primer nivel esté más ambientado como si fuera un **circo**: van de visita a ver al **actor Augusto**, un reconocido actor para chicos, con un flequillo como el de Carlitos Balá.
+Que la **Sesión 1** no sea una feria sino un **circo**: van de visita a ver al **actor Augusto**, un reconocido actor para chicos, con un flequillo como el de Carlitos Balá.
