@@ -213,6 +213,37 @@ _Los diálogos del Japo son provisorios._
 | Qué son | Siluetas grises, **sin cara**, repartidas por la feria. No son parte del recuerdo: la luz no las ilumina |
 | Qué dicen | Casi nada: _"¿Y tu mamá, nene?"_, o algo que no se entiende |
 
+_Los tres personajes que siguen son del **rediseño de la Sesión 1** (el circo), todavía no están en el prototipo. Ver "Locaciones" → Sesión 1 → Rediseño._
+
+### El presentador del circo _(nombre por definir)_
+
+| Campo | Valor |
+|---|---|
+| Primera aparición | Sesión 1 (rediseño: el circo) |
+| Qué es | El presentador de la función. **Una referencia a Carlitos Balá** (decidido por el usuario; ver "Historia y mundo" → Referencias) |
+| Rol | Presenta el show, con sus secuencias de puzzles. Cuando Jorge suelta al elefante, aparece y **le reprocha de muy mala manera** (decidido por el usuario) |
+| Cuidado _(sugerencia del agente)_ | Es un homenaje a alguien muy querido y real: conviene que el personaje tenga **otro nombre** y que lo feo se lea como **una distorsión del sueño** (el presentador se deforma, la llama se achica), no como algo de la persona real |
+| Por definir | Nombre, aspecto, frases, si tiene cara, qué tiene que ver con el papá |
+
+### El elefante
+
+| Campo | Valor |
+|---|---|
+| Primera aparición | Sesión 1 (rediseño: el circo) |
+| Qué es | Un elefante del circo, encadenado. Lo hacen trabajar en la función, y a Jorge eso no le gusta |
+| Qué pasa | Jorge se escapa para liberarlo. **Lo suelta, pero el elefante no hace nada** (decidido por el usuario) |
+| Referencia | _El elefante encadenado_, de Jorge Bucay (ver "Historia y mundo" → Referencias) |
+| Por definir | Si tiene nombre, si vuelve a aparecer |
+
+### Los entes
+
+| Campo | Valor |
+|---|---|
+| Primera aparición | Sesión 1 (rediseño: el circo), en las escenas de sigilo |
+| Qué son | **Fallas del sueño** (decidido por el usuario) |
+| Qué hacen | Jorge **no los puede atacar, solo esquivar** (decidido por el usuario). Ver "Mecánicas" → Ideas a implementar → Sigilo y los entes |
+| Por definir | Cómo se ven, qué pasa si tocan a Jorge, si tienen que ver con la gente sin cara, en qué otras sesiones aparecen |
+
 ### El inmobiliario _(sin nombre)_
 
 | Campo | Valor |

@@ -127,7 +127,7 @@ Por eso la culpa es doble: **lastimó a su mamá** y **se convirtió en lo que m
 
 _Por definir: qué le pasaba al papá y qué fue de él, cómo se hace sentir la culpa en el resto del juego, y en qué año fue el viaje._
 
-**Un recuerdo de la infancia (Sesión 1):** una noche, de chico, Jorge fue a una feria con su mamá y se perdió. Al entrar, ella le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Él se quedó quieto, y ella lo encontró. _Detalles provisorios, propuestos por el agente._
+**Un recuerdo de la infancia (Sesión 1):** una noche, de chico, Jorge fue a una feria con su mamá y se perdió. Al entrar, ella le había dicho: _"Si te perdés, quedate quieto donde estás, que yo te encuentro"_. Él se quedó quieto, y ella lo encontró. _Detalles provisorios, propuestos por el agente. **Rediseño en curso** (decidido por el usuario): la feria pasa a ser un **circo**, donde Jorge se escapa para liberar a un elefante (ver "Locaciones" → Sesión 1 → Rediseño)._
 
 ### María, la ex novia de Jorge (spoiler)
 
@@ -158,7 +158,7 @@ Son **nueve sesiones**, de la infancia hasta hoy. Jorge tiene **unos 40 años**.
 
 | # | Etapa | Recuerdo | Qué se sabe | Estado |
 |---|---|---|---|---|
-| 1 | Infancia | **La feria** | Se perdió de chico y su mamá lo encontró | En el prototipo |
+| 1 | Infancia | **La feria** | Se perdió de chico y su mamá lo encontró. _Rediseño en curso: pasa a ser **un circo**, y Jorge se escapa para liberar a un elefante (ver "Locaciones" → Sesión 1 → Rediseño)_ | En el prototipo (la versión de la feria) |
 | 2 | Adolescencia (~15) | **El boletín** | El papá: un padre ausente que resolvía todo con violencia, contra la mamá y contra Jorge. Empieza en el colegio, con el Japo. Jorge termina en el piso de su cuarto, trabando la puerta. Ese día conoce a María | En el prototipo (con La segunda noche) |
 | 3 | Adolescencia (~17) | **La fiesta** | **Sesión de respiro:** sin el papá, todo calor. Los martes en la plaza con María (ya no estudian: fantasean con un depto propio), la fiesta de egresados (bailan y el Japo, su amigo, les saca **la foto que hoy falta en el portarretratos**), la noche en la casa de la familia de María y **el primer beso** | En el prototipo (con La tercera noche) |
 | 4 | Juventud (~20) | **La pelea** | Empieza con Jorge y María **visitando el departamento con un inmobiliario**. El mismo día: María se va a Córdoba y cortan; a la noche, la mamá le da el número del papá, insiste y él la empuja: la imagen se rompe. Después se ven poco y nunca hablan de eso. Le deja mucha culpa | En el prototipo (con La cuarta noche) |
@@ -186,3 +186,26 @@ _Salieron de preguntas al usuario sobre su vida. Están para armarse más adelan
 | **El Japo**, el amigo del secundario | Un amigo inseparable con el que hacían locuras. Lo más gracioso: salía corriendo desde el fondo del aula, se estrellaba contra el pizarrón y caía al piso | **Sesión 2**, en el aula, el día del boletín: choca contra el pizarrón, el pizarrón se agrieta y por un momento es la pizarra de Jorge hoy. También es el de la cámara descartable que les saca la foto en la **Sesión 3** | **En el prototipo.** Decidido por el usuario: el apodo ("Japo", de japonés) y que con los años **se distanciaron** (no murió) |
 | **Los veranos en Mar del Plata** | Un departamento en Mar del Plata, varios veranos de la infancia, y el mar | Una sesión de respiro en la infancia: un verano **con la mamá** (decidido por el usuario: iban los dos), el departamento y el mar. O el mar como imagen que vuelve en los sueños | Idea |
 | **La cucaracha en el techo** | Una vez, muy estresado, le pareció ver una cucaracha gigante en el techo, casi del tamaño del cuarto | La cuarta noche | **En el prototipo** (ver "Locaciones" → La cuarta noche) |
+
+## Referencias
+
+_Obras que el juego toma como referencia. Se toma la idea o la imagen, nunca el texto: no se citan en el juego._
+
+### _El elefante encadenado_, de Jorge Bucay
+
+- **Qué es:** un cuento de **Jorge Bucay**, escritor y terapeuta argentino (está en _Déjame que te cuente_). Un chico ve en el circo a un elefante enorme atado a una estaca chiquita y no entiende por qué no se escapa. La explicación: lo ataron así desde que era cría; tiró y no pudo, y se convenció de que no puede. De grande ya ni lo intenta.
+- **Dónde va:** en la **Sesión 1** rediseñada (el circo). Jorge chico **suelta al elefante, pero el elefante no hace nada** (decidido por el usuario): no se va aunque esté libre.
+- **Qué dice de Jorge** _(propuesta del agente)_: Jorge de grande es ese elefante. Aprendió de chico, con su papá, que las cosas se resuelven a los golpes o no se resuelven, y cree que no puede ser distinto. El final se puede leer igual: en el baño, Jorge se levanta en tres intentos y abre la puerta, como el elefante que por fin tira de la estaca.
+- **Por qué le queda bien al juego:** es argentino (identidad argentina), el autor es terapeuta en un juego que se llama _Terapia_ y se llama Jorge, como el protagonista.
+- **"Los elefantes nunca olvidan":** el dicho popular, en un juego cuya motivación es recuperar la memoria.
+- _Por definir: si el elefante o la estaca vuelven más adelante (en la pizarra, en un objeto de la casa, en la Sesión 9)._
+
+### "Salva al gato"
+
+- **Qué es:** la regla del manual de guion _¡Salva al gato!_, de Blake Snyder: mostrar temprano al protagonista haciendo algo que haga que el público lo quiera y esté de su lado.
+- **Dónde va:** en la **Sesión 1** (decidido por el usuario): Jorge chico no soporta que el circo haga trabajar a los animales y se escapa para liberar al elefante.
+
+### Carlitos Balá
+
+- **Quién es:** humorista y animador argentino, muy querido por varias generaciones de chicos.
+- **Dónde va:** el **presentador del circo** de la Sesión 1 es una referencia a él (decidido por el usuario). Ver "Personajes" → El presentador del circo.

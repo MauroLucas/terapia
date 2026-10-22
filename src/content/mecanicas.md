@@ -217,6 +217,22 @@ _Idea del usuario: las sesiones siguen siendo **lineales**, pero con **más para
   - Neural es un edificio entero que inventa la mente de un arquitecto: una pista que se entiende al final.
   - En la Sesión 9, el plano más detallado de todos sería el de su departamento, con el baño sin dibujar. Tratarlo con cuidado, sin golpe de efecto.
 
+#### Sigilo y los entes
+
+_Idea del usuario (22/10/2026), para la Sesión 1 rediseñada (el circo). Sin implementar._
+
+- **Sigilo:** después del show, Jorge chico se escapa y tiene que **moverse sin que lo vean** hasta llegar al elefante (decidido por el usuario).
+- **Los entes:** con esa mecánica se introducen los **entes**, que son **fallas del sueño**. Jorge **no los puede atacar, solo esquivar** (decidido por el usuario). Ver "Personajes" → Los entes.
+- **Puzzles del show:** antes de escaparse, la función tiene secuencias de puzzles _(cuáles, por definir)_.
+- **Con las reglas del sueño lúcido:** sigue valiendo que **no se puede perder** y que **el jugador nunca ejecuta la violencia**.
+- **Relación con "El final se descontrola"** (arriba): esa idea se probó y se sacó. Los entes pueden ser la forma de retomarla más adelante, pero arrancan como algo que se esquiva. _Por definir con el usuario._
+
+_Ideas del agente (provisorias):_
+
+- Escondites: cajas, debajo de las gradas, entre los carromatos, detrás de una lona.
+- **La llama de Vela delata:** la luz que ayuda a recordar también hace que lo vean. Para pasar sin ser visto, Vela tiene que achicarse (_"Me voy a hacer chiquito, Jorge"_), y el sueño se ve menos.
+- Si lo ven, no hay castigo: vuelve al último escondite.
+
 ### Combate
 
 No hay combate.

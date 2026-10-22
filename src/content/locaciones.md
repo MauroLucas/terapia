@@ -972,6 +972,32 @@ Termina cuando a Jorge **se le cierran los ojos** en la camilla. Sigue en **Sesi
 
 ## Sesión 1: La feria
 
+### Rediseño: el circo _(en curso)_
+
+_Decidido por el usuario (22/10/2026): la Sesión 1 se replantea entera. Lo que sigue más abajo (la feria) es lo que **todavía está en el prototipo**, hasta que se rehaga._
+
+**Por qué:** aplicar **"Salva al gato"** (ver "Historia y mundo" → Referencias). Al empezar los sueños, Jorge tiene que hacer algo con lo que el jugador empatice: de chico, se escapa para **liberar a un elefante**.
+
+| Qué | Lo decidido por el usuario |
+|---|---|
+| Lugar | Un **circo** en vez de una feria. En el circo trabajan con **animales**, y a Jorge **no le gusta** |
+| La calesita | Sigue, **afuera de la carpa**. Así se mantiene **la sortija** y todo lo que la usa después (La primera noche, las consultas, la caja de la Sesión 4, los juegos de memoria) |
+| El presentador | Una **referencia a Carlitos Balá** (ver "Personajes" → El presentador del circo) |
+| El show | **Secuencias de puzzles** durante la función |
+| La escapada | Al terminar el show, en un **descuido de la mamá**, Jorge se escapa para ir a **rescatar al elefante** |
+| Sigilo | Escenas en las que Jorge tiene que **moverse sin que lo vean** hasta llegar al elefante (ver "Mecánicas" → Ideas a implementar → Sigilo y los entes) |
+| Los entes | Con el sigilo se introducen los **entes**: **fallas del sueño**. Jorge **no los puede atacar, solo esquivar** |
+| El elefante | Jorge **lo suelta, pero el elefante no hace nada**. Referencia a _El elefante encadenado_, de Jorge Bucay (ver "Historia y mundo" → Referencias) |
+| Después | Aparece el presentador y **le reprocha a Jorge, de muy mala manera** |
+
+**Por definir:** cómo termina la sesión después del reproche (¿se mantiene el _"quedate quieto, que yo te encuentro"_ y la mamá lo encuentra?), qué puzzles tiene el show, en qué momento va la calesita, el nombre del presentador, qué pasa si a Jorge lo ven, y cómo quedan los textos que nombran "la feria" en el resto del juego (la pizarra de La primera noche, las consultas con Vela y las Sesiones 2, 7 y 9).
+
+_Ideas del agente para cuando se arme (provisorias):_
+
+- Mostrar al elefante **sin crueldad explícita**: la cadena en la pata, la mirada, el látigo que se oye pero no se ve pegar.
+- Cuando aparece el presentador enojado, **la llama de Vela se achica y hace frío**, como cerca del papá en la Sesión 2: la mente de Jorge puede estar poniéndole al papá la cara de alguien querido, como disfraza a María de chofer.
+- La parte de atrás de la carpa (jaulas, carromatos, gradas por debajo) es buen lugar para los **desvíos opcionales** y el **mapa en crayones** (ver "Mecánicas" → Sueños lineales pero explorables).
+
 ### Resumen
 
 Es el **primer sueño lúcido** y la primera sesión: un recuerdo de la **infancia** de Jorge. Una noche, de chico, fue a una **feria** con su mamá y **se perdió**.
