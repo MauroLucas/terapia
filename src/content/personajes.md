@@ -9,6 +9,7 @@ _Las imágenes son los sprites provisorios del prototipo. La lista completa, con
 | Edad | ~40 años |
 | Rasgo principal | Tiene problemas para recordar su vida _(dentro del sueño: en realidad es disociación, ver "Historia y mundo" → Lore)_ |
 | Motivación | **Recuperar su memoria** _(decidido por el usuario)_ |
+| Profesión | **Arquitecto** _(decidido por el usuario)_. Ver "Mecánicas" → Ideas a implementar → Sueños lineales pero explorables |
 | Lo que carga _(spoiler)_ | **Culpa** por la pelea con su mamá, que murió poco después de que se reencontraran |
 | Tratamiento | Paciente de Neural. Lleva **11 sesiones**, pero no recuerda haber ido |
 | Habilidades | Caminar, explorar e interactuar con objetos |

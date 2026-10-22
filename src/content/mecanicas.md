@@ -195,6 +195,28 @@ _Idea del usuario. Se probó en la Sesión 1 y se sacó del prototipo porque no 
 
 _Por definir, si se retoma: qué no funcionó y qué cambiar (el ritmo, el arte de los seres, el largo, la dificultad), en qué sesiones va y si convive con el tono de las sesiones tiernas._
 
+#### Sueños lineales pero explorables, con un mapa que se dibuja
+
+_Idea del usuario: las sesiones siguen siendo **lineales**, pero con **más para explorar**, y con un **mapa** que en la infancia está hecho con **crayones** y se va volviendo más elaborado, hasta ser **planos súper detallados** al final, porque **Jorge es arquitecto** (decidido por el usuario). El detalle es provisorio, propuesto por el agente. Sin implementar._
+
+- **Camino principal fijo**, como hoy. Al costado, **desvíos opcionales** (una puerta, una callecita, un rincón) con **recuerdos de más**: detalles de la vida de Jorge, del Japo o de su mamá.
+- **Los desvíos nunca son necesarios** para avanzar ni para armar el recuerdo en la pizarra: las pistas de la edad siguen en el camino principal o en la casa (no se puede perder).
+- **El mapa es un registro del recorrido**, no un menú: se va dibujando a medida que Jorge camina. Los desvíos sin visitar aparecen como bocetos punteados y se dibujan bien cuando se visitan. Al final de la sesión se ve cuánto quedó sin dibujar.
+- **Cómo se dibuja según la edad:**
+
+| Edad | El mapa |
+|---|---|
+| 7 (la feria) | Crayones, trazos torcidos y fuera de escala: la calesita enorme, la mamá más grande que los juegos |
+| 15 (el boletín) | Birome en una hoja cuadriculada de la carpeta del colegio, con flechas y tachones |
+| 17 (la fiesta) | Lápiz, más prolijo y con perspectiva |
+| 30 en adelante | Planos de arquitecto: escala, cotas, rótulo, papel de calco |
+
+- **Para probar primero:** la Sesión 2 (el barrio tiene muchos lugares al costado del camino: el almacén, el patio del colegio, la casa de la vecina).
+- **Otras ideas que salen de que sea arquitecto:**
+  - La oficina de la Sesión 6 sería un estudio de arquitectura (mesa de dibujo, planos, maquetas). Hoy Jorge dice _"Planillas, mails, el café frío"_: se ajusta en el GDD y el prototipo cuando se decida.
+  - Neural es un edificio entero que inventa la mente de un arquitecto: una pista que se entiende al final.
+  - En la Sesión 9, el plano más detallado de todos sería el de su departamento, con el baño sin dibujar. Tratarlo con cuidado, sin golpe de efecto.
+
 ### Combate
 
 No hay combate.
