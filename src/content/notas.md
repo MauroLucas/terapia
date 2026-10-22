@@ -22,3 +22,7 @@ Que la **Sesión 1** no sea una feria sino un **circo**: van de visita a ver al 
 ### Sesiones pensadas como mapas
 
 Estaría bueno pensar mejor las sesiones **como si fueran mapas**. Quizás no todas, pero sí las que pasan en la **ciudad natal de Jorge: Adrogué, Buenos Aires**.
+
+### El final: Jorge en el baño con una vela
+
+Al final, Jorge está **encerrado en el baño con una vela**.
