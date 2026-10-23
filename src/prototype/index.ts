@@ -14,6 +14,7 @@ import { Dream9 } from './scenes/Dream9'
 import { LevelEnd } from './scenes/LevelEnd'
 import { Neural } from './scenes/Neural'
 import { Office } from './scenes/Office'
+import { Persecucion } from './scenes/Persecucion'
 import { Stairs } from './scenes/Stairs'
 import { Warning } from './scenes/Warning'
 import { resetState } from './state'
@@ -335,6 +336,15 @@ export function createLevel28Game(parent: HTMLElement) {
   resetState()
   const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), scene: [Warning, Dream9, LevelEnd] }))
   game.registry.set('start', 'Dream9')
+  game.registry.set('solo', true)
+  return game
+}
+
+// Demo (en prueba): la persecución de la cucaracha al final de la Sesión 1, estilo Limbo. No está en el prototipo completo
+export function createDemoPersecucionGame(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), scene: [Warning, Persecucion, LevelEnd] }))
+  game.registry.set('start', 'Persecucion')
   game.registry.set('solo', true)
   return game
 }

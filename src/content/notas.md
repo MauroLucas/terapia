@@ -2,6 +2,17 @@ Notas personales de Mauro sobre el juego, ordenadas por fecha (la más nueva arr
 
 ---
 
+## 23/10/2026
+
+### Estilo Little Nightmares o Limbo
+
+Orientar el juego a algo estilo **Little Nightmares** o **Limbo**: que existan **obstáculos** en algunos momentos y que **te persiga un monstruo**.
+
+- Quizás al final de liberar al elefante podría haber **una secuencia de escape** donde **Lechuga se convierte en una cucaracha gigante** que te persigue por todo el juego.
+- Se armó una demo para probarlo: ver "Locaciones" → Sesión 1: El circo → Demo: la persecución.
+
+---
+
 ## 21/10/2026
 
 ### Tipo de jugador

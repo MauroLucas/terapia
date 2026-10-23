@@ -393,6 +393,40 @@ giant cockroach seen from below on a bedroom ceiling, dark glossy brown, long an
 spiky legs, realistic, unsettling, 2D side-scroller game, night, dim light
 ```
 
+### La cucaracha gigante, de perfil _(demo de la persecución)_
+
+![La cucaracha de perfil](sprites/cucarachaLado0.png)
+
+| Campo | Valor |
+|---|---|
+| Claves | `cucarachaLado0`, `cucarachaLado1` (dos posiciones de patas, marcha en trípode) |
+| Tamaño en pantalla | 680 × 280 px, a ×1,15: casi el doble de alta que Jorge chico |
+| Dónde | Demo: la persecución (Sesión 1, en prueba): sale de la falla cuando Lechuga se rompe y persigue a Jorge |
+| Descripción | La misma cucaracha enorme, pero **de perfil**, caminando por el piso, con la cabeza a la derecha (se da vuelta para buscar): marrón casi negro, brillante, alas con un reflejo húmedo, abdomen segmentado, seis patas con espinas (las del otro lado, más oscuras), mandíbulas y antenas larguísimas para adelante. Un ojo con un brillo apenas, que se ve en la oscuridad. Provisorio |
+
+```
+giant cockroach walking on the ground, side view facing right, as tall as a doorway,
+dark glossy brown almost black, wet highlight on the wings, segmented abdomen, six spiky legs,
+long antennae reaching forward, faint glint in the eye, realistic, disgusting and scary,
+2D side-scroller in the style of Limbo / Little Nightmares, night fog, silhouette lighting
+```
+
+### Jorge de chico, agachado _(demo de la persecución)_
+
+![Jorge chico agachado](sprites/chicoAgachado.png)
+
+| Campo | Valor |
+|---|---|
+| Clave | `chicoAgachado` |
+| Tamaño en pantalla | 44 × 104 px (el lienzo de `chico0`; la figura ocupa la mitad de abajo) |
+| Dónde | Demo: la persecución: para pasar bajo la lona y las guirnaldas caídas, y escondido atrás de un barril |
+| Descripción | Jorge chico de perfil, agachado en cuclillas, inclinado para adelante: el mismo suéter verde, pantalón corto azul y zapatillas blancas. Provisorio |
+
+```
+small boy around 7 years old crouching low, side view facing right, green sweater, short blue trousers,
+white sneakers, black hair, scared, 2D side-scroller game sprite
+```
+
 ## Documentos (primer plano)
 
 Lo que Jorge mira de cerca. Son ilustraciones a pantalla completa: los textos y la letra de Jorge y de María se escriben encima, por código.

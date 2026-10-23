@@ -7,6 +7,7 @@ import { Level1Page } from './components/Level1Page'
 import { Level2Page } from './components/Level2Page'
 import { Level3Page } from './components/Level3Page'
 import { Level4Page } from './components/Level4Page'
+import { DemoPersecucionPage } from './components/DemoPersecucionPage'
 import { Level5Page } from './components/Level5Page'
 import { Level6Page } from './components/Level6Page'
 import { Level7Page } from './components/Level7Page'
@@ -50,6 +51,7 @@ export default function App() {
           <Route path="/hall" element={<Level2Page />} />
           <Route path="/consultorio" element={<Level3Page />} />
           <Route path="/sesion-1" element={<Level4Page />} />
+          <Route path="/demo-persecucion" element={<DemoPersecucionPage />} />
           <Route path="/primera-noche" element={<Level5Page />} />
           <Route path="/pre-sesion-2" element={<Level7Page />} />
           <Route path="/sesion-2" element={<Level6Page />} />

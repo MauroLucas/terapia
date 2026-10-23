@@ -540,6 +540,78 @@ function drawCucaracha(g: Phaser.GameObjects.Graphics, paso: 0 | 1) {
   g.fillStyle(0x2e1b0d).fillEllipse(cx + 240, cy, 44, 52)
 }
 
+// Demo de la persecución (Sesión 1): Jorge de chico agachado, de perfil mirando a la derecha (mismo lienzo que `chico0`)
+function drawKidAgachado(g: Phaser.GameObjects.Graphics) {
+  // Piernas dobladas: muslo para adelante, rodilla arriba, pie abajo
+  g.lineStyle(6, C.skin)
+  g.lineBetween(15, 86, 28, 80).lineBetween(28, 80, 26, 97)
+  g.lineBetween(19, 88, 33, 85).lineBetween(33, 85, 33, 97)
+  g.fillStyle(0xf1efe8).fillRoundedRect(21, 96, 13, 6, 3).fillRoundedRect(28, 96, 13, 6, 3)
+  g.fillStyle(0x2b3a5c).fillRect(9, 79, 18, 11)
+  // Torso inclinado para adelante
+  g.fillStyle(C.sweater).fillRoundedRect(8, 58, 26, 26, 7)
+  g.fillStyle(C.sweaterDark).fillRoundedRect(22, 62, 9, 20, 4)
+  g.fillStyle(C.skin).fillCircle(27, 84, 4)
+  // Cabeza más baja y adelante
+  g.fillStyle(C.skin).fillRect(21, 54, 8, 7).fillCircle(26, 46, 13).fillTriangle(37, 44, 41, 49, 37, 50)
+  g.fillStyle(C.skinDark).fillCircle(22, 49, 2.5)
+  g.fillStyle(C.hair)
+  g.slice(25, 44, 14, Math.PI, Math.PI * 2, false)
+  g.fillPath()
+  g.fillRect(12, 41, 7, 11)
+  g.fillStyle(C.ink).fillCircle(33, 46, 2)
+}
+
+// Demo de la persecución: la cucaracha gigante de perfil, con la cabeza a la derecha (lo que sale cuando Lechuga se rompe).
+// Lienzo de 680 × 280; las patas apoyan en y = 272. `paso` alterna las patas (marcha en trípode)
+function drawCucarachaLado(g: Phaser.GameObjects.Graphics, paso: 0 | 1) {
+  const pata = (ax: number, ay: number, kx: number, ky: number, fx: number, color: number, fy = 272) => {
+    g.lineStyle(9, color).lineBetween(ax, ay, kx, ky)
+    g.lineStyle(6, color).lineBetween(kx, ky, fx, fy)
+    // Espinas en la tibia
+    g.lineStyle(2, color)
+    for (let t = 0.25; t < 0.9; t += 0.2) {
+      const px = kx + (fx - kx) * t
+      const py = ky + (fy - ky) * t
+      g.lineBetween(px, py, px + (fx > kx ? 10 : -10), py - 6)
+    }
+    g.lineStyle(3, color).lineBetween(fx, fy, fx + (fx > kx ? 12 : -12), fy)
+  }
+  const s = paso === 0 ? 1 : -1
+  // Patas del otro lado: más oscuras y un poco más arriba
+  const lejos = 0x120a04
+  pata(250, 196, 170 - s * 18, 176, 110 - s * 24, lejos, 264)
+  pata(350, 200, 350 + s * 22, 190, 330 + s * 30, lejos, 264)
+  pata(440, 196, 500 - s * 18, 188, 560 - s * 20, lejos, 264)
+  // Cerco y abdomen segmentado
+  g.lineStyle(4, 0x24150a).lineBetween(70, 150, 30, 136).lineBetween(72, 160, 34, 170)
+  g.fillStyle(0x2c1a0c).fillEllipse(250, 150, 380, 128)
+  g.lineStyle(2, 0x1c1007)
+  for (let x = 110; x < 330; x += 34) g.lineBetween(x, 168, x + 8, 212)
+  // Alas: más claras, con un brillo húmedo
+  g.fillStyle(0x4a2c14).fillEllipse(245, 128, 360, 88)
+  g.fillStyle(0x6a4220, 0.55).fillEllipse(250, 112, 300, 34)
+  g.lineStyle(3, 0x9a6a3a, 0.5).lineBetween(110, 116, 380, 104)
+  g.lineStyle(1.5, 0x2a170b, 0.8).lineBetween(90, 134, 420, 128).lineBetween(140, 150, 400, 144)
+  // Escudo (pronoto) y cabeza, inclinada para abajo
+  g.fillStyle(0x3a2310).fillEllipse(450, 136, 132, 100)
+  g.fillStyle(0x7a5030, 0.45).fillEllipse(456, 118, 80, 30)
+  g.fillStyle(0x24140a).fillEllipse(522, 168, 62, 74)
+  g.fillStyle(0x0a0603).fillEllipse(532, 158, 18, 22)
+  g.fillStyle(0xc9a070, 0.8).fillCircle(535, 153, 3)
+  // Mandíbulas y palpos
+  g.lineStyle(3, 0x1c1007).lineBetween(536, 198, 552, 222).lineBetween(526, 202, 532, 228).lineBetween(546, 196, 566, 210)
+  // Antenas largas, para adelante
+  g.lineStyle(3, 0x2e1b0d)
+  g.beginPath().moveTo(544, 140).lineTo(590, 96 - s * 6).lineTo(640, 60 - s * 10).lineTo(676, 52).strokePath()
+  g.beginPath().moveTo(548, 146).lineTo(600, 120 + s * 6).lineTo(650, 112 + s * 12).lineTo(678, 128).strokePath()
+  // Patas de este lado: atrás, al medio y adelante
+  const cerca = 0x2a170a
+  pata(240, 204, 160 + s * 20, 196, 90 + s * 26, cerca)
+  pata(340, 210, 340 - s * 24, 200, 300 - s * 32, cerca)
+  pata(430, 206, 490 + s * 20, 196, 548 + s * 22, cerca)
+}
+
 export function makeTextures(scene: Phaser.Scene) {
   if (scene.textures.exists('jorge0')) return
   const g = scene.make.graphics({}, false)
@@ -710,6 +782,15 @@ export function makeTextures(scene: Phaser.Scene) {
     drawCucaracha(g, paso)
     g.generateTexture(`cucaracha${paso}`, 720, 260)
   }
+  // Demo de la persecución: la cucaracha de perfil y Jorge chico agachado
+  for (const paso of [0, 1] as const) {
+    g.clear()
+    drawCucarachaLado(g, paso)
+    g.generateTexture(`cucarachaLado${paso}`, 680, 280)
+  }
+  g.clear()
+  drawKidAgachado(g)
+  g.generateTexture('chicoAgachado', 44, 104)
   g.clear()
   g.fillStyle(0xf2a33a).fillEllipse(12, 26, 20, 30).fillTriangle(3, 22, 21, 22, 12, 0)
   g.fillStyle(0xffd27a).fillEllipse(12, 28, 12, 20).fillTriangle(7, 26, 17, 26, 12, 8)

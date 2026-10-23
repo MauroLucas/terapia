@@ -67,6 +67,7 @@ Para no tener que jugar todo desde el principio, **cada locación tiene su propi
 | **🏥 Hall del edificio** | Aviso de contenido → Hall de Neural → Ascensor → "Fin de la locación" | `src/prototype/scenes/Neural.ts` |
 | **🩺 Consultorio** | Aviso de contenido → Pasillo de los consultorios → Consultorio del doctor Vela → Cuarto de inducción → "Fin de la locación" | `Corridor.ts` y `Office.ts`, en `src/prototype/scenes/` |
 | **🎪 Sesión 1: El circo** | Aviso de contenido → Sueño del circo → Despertar en la camilla → "Fin de la locación" | `Dream.ts` y `Office.ts` (modo despertar), en `src/prototype/scenes/` |
+| **🪳 Demo: la persecución** _(en prueba)_ | Aviso de contenido → La persecución de la cucaracha (estilo Limbo) → "Fin de la demo". No está en el prototipo completo | `src/prototype/scenes/Persecucion.ts` |
 | **🌙 La primera noche** | Aviso de contenido → Casa de Jorge de noche → "Fin de la locación" | `Apartment.ts` (modo noche), en `src/prototype/scenes/` |
 | **☀️ Pre-sesión 2** | Aviso de contenido → Casa de Jorge, la mañana → Consulta con Vela → Cuarto de inducción → "Fin de la locación" | `Apartment.ts` (modo mañana) y `Office.ts` (sesión 2), en `src/prototype/scenes/` |
 | **📄 Sesión 2: El boletín** | Aviso de contenido → Sueño de la casa de la mamá y el barrio → Despertar en la camilla → "Fin de la locación" | `Dream2.ts` y `Office.ts` (despertar de la sesión 2), en `src/prototype/scenes/` |
