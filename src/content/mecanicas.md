@@ -182,9 +182,21 @@ Adentro de una sesión, las reglas cambian. Esto es lo que se definió con la pr
 
 ### Ideas a implementar
 
+#### Estilo Limbo: obstáculos y un monstruo que persigue _(en prueba)_
+
+_Idea del usuario (23/10/2026): orientar el juego a algo estilo **Limbo** o **Little Nightmares**: que en algunos momentos haya obstáculos y que un monstruo persiga a Jorge. La primera prueba es la **demo de la persecución** al final de la Sesión 1, con la cucaracha gigante (ver "Locaciones" → Sesión 1: El circo → Demo: la persecución). Los controles y las reglas son provisorios, propuestos por el agente._
+
+- **Controles nuevos** (solo en la demo): **saltar** (↑, W o Espacio), **agacharse** (↓ o S; bajo algo bajo, sigue agachado aunque se suelte la tecla), **empujar** (caminar contra una caja) y **esconderse** (E al lado de un barril; E o caminar para salir). En la persecución Jorge **corre** siempre.
+- **Física simple**, sin Matter: gravedad, piso con pozos, cajones que se pisan, cosas bajas que obligan a agacharse. Con un margen chico para saltar justo después de un borde o un poco antes de tocar el piso, para que no se sienta injusto.
+- **El monstruo** corre un poco más lento que Jorge: alcanza solo si Jorge se frena (agacharse, esperar a un ente, equivocarse un salto). Si quedó muy lejos, acelera; si está encima, afloja apenas, para que haya "casi".
+- **Miedo:** cerca del monstruo, latido más rápido, pantalla roja y el ruido de las patas. En la oscuridad, primero se le ven los ojos.
+- **Morir** es un corte a negro y volver al último punto de control, al toque. Sin vidas.
+- **Quedarse quieto** sigue siendo el gesto de Jorge: el final de la persecución se resuelve sin hacer nada, como le dijo su mamá.
+- _Por definir:_ si esto se suma al resto del juego (y en qué sesiones), y si los saltos y el agacharse quedan como controles de siempre.
+
 #### El final se descontrola: los seres y las persecuciones
 
-_Idea del usuario. Se probó en la Sesión 1 y se sacó del prototipo porque no convenció cómo quedó: queda como posibilidad para más adelante._
+_Idea del usuario. Se probó en la Sesión 1 y se sacó del prototipo porque no convenció cómo quedó: queda como posibilidad para más adelante. Ahora se está probando otra versión, estilo Limbo (ver arriba)._
 
 - **Qué es:** al final de una sesión, el sueño **se descontrola**. Todo se congela, se pierde la comunicación con Vela y **la gente sin cara se vuelve violenta**: se pone negra, crece, se le parte la cabeza al medio con dientes grandes y **grita al cielo** (con una cinemática). Son **personajes del subconsciente de Jorge que no quieren que siga buscando**.
 - **La persecución:** Jorge tiene que buscar la forma de despertar **entrando por distintos cuartos** hasta encontrar la salida.

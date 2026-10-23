@@ -1152,6 +1152,45 @@ Jorge chico la abraza.
 >
 > **Jorge (piensa):** Pero sé que es ella.
 
+### Demo: la persecución _(en prueba)_
+
+_Idea del usuario (23/10/2026): orientar el juego a algo estilo **Limbo** o **Little Nightmares**, con obstáculos en algunos momentos y un monstruo que persigue a Jorge; al final de liberar al elefante, una **secuencia de escape** en la que **Lechuga se convierte en una cucaracha gigante** que lo persigue. Lo demás (el recorrido, los obstáculos, los textos y que termine quedándose quieto) lo propuso el agente y es **provisorio**. Por ahora es una **demo suelta** (página **🪳 Demo: la persecución**): la Sesión 1 del prototipo completo sigue terminando como antes._
+
+**Cómo empieza.** Atrás de la carpa, con el elefante ya suelto. Jorge: _"Está suelto."_ / _"Y no se mueve."_ Entra Lechuga: _"¡¿QUÉ HACÉS, MOCOSO?!"_ / _"¡Ese animal es mío! ¡MÍO!"_ / _"¡Te vas a acordar de esto toda la vida!"_ Crece y **se rompe como un ente**; de esa falla del sueño sale **la cucaracha gigante**, de perfil, casi el doble de alta que Jorge. Se para en dos patas un segundo (la ventaja para escapar). Vela: _"¡Jorge! ¡Corré!"_
+
+_Que la cucaracha salga de la falla, y no que sea Lechuga transformado, mantiene lo que ya estaba decidido: lo feo se lee como una distorsión del sueño, no como algo de la persona real a la que homenajea Lechuga. También engancha con la cucaracha del techo de La cuarta noche._
+
+**Cómo se ve.** De noche, con niebla clara en el horizonte y todo en siluetas negras, por capas (carpas lejos, postes y jaulas al medio, pasto adelante), como Limbo. La llama de Vela, chiquita y azulada por el miedo, va atrás de Jorge. La cucaracha casi no se ve en la oscuridad: primero aparecen sus ojos. Cuando está cerca, la pantalla se tiñe de rojo, el latido se acelera y se oyen las patas.
+
+**El recorrido** (de izquierda a derecha, unos 7000 px):
+
+| Tramo | Qué hay | Qué hace el jugador |
+|---|---|---|
+| La huida | Cajones, un escalón, **un pozo** (el piso se rompe, con estática), **una lona caída**, **un ente que titila**, otro cajón y otro pozo | Saltar, **agacharse** para pasar bajo la lona y esperar a que el ente se apague. Vela avisa una vez: _"¡Saltá!"_, _"¡Agachate!"_, _"No lo toques. Esperá a que se apague."_ |
+| La reja | Una reja de jaula que **se cae detrás de Jorge** | La cucaracha queda trabada del otro lado y golpea. Vela: _"Se quedó trabada."_ Un respiro |
+| El carromato | El carromato del cuidador, muy alto, y una caja | **Empujar la caja** hasta el carromato, subirse y pasar. Vela: _"Es muy alto. ¿Y esa caja?"_ |
+| Los barriles | Dos barriles | La cucaracha vuelve **de frente, buscándolo**, despacio. Vela: _"Algo viene… ¡Escondete!"_ Hay que **esconderse atrás de un barril** (E) hasta que pase (_"Ya pasó. Despacito…"_). Si lo ve, se le tira encima |
+| La carrera | Cajón, otro ente, **guirnaldas caídas** (agacharse), un cajón al borde de un pozo y uno chico | La cucaracha lo encontró (_"¡Te vio! ¡Corré!"_): todo de nuevo, más rápido |
+| Sin salida | La calesita torcida y la lona de la carpa, que no se puede pasar | Vela: _"No hay salida…"_ / _"Jorge. ¿Qué te dijo tu mamá en la entrada?"_ |
+
+**El final: quedarse quieto.** Es el mismo puzzle de siempre, pero ahora con el bicho encima: la cucaracha se acerca despacio y se queda olfateando con la cabeza sobre Jorge. **Hay que soltar las teclas y no moverse** unos segundos (la llama brilla cada vez más). Si se mueve con la cucaracha cerca, lo agarra. Si aguanta: _"¡Jorge!"_, la luz, la cucaracha titila, se aplasta y desaparece como un ente, y llega la mamá.
+
+> **Mamá:** ¡Acá estás!
+>
+> **Mamá:** ¿Viste? Te quedaste quieto y te encontré.
+>
+> **Jorge chico:** Mamá…
+>
+> **Jorge chico:** Había un bicho enorme.
+>
+> **Mamá:** Ya está. Ya pasó. Vamos a casa.
+>
+> **Vela:** Muy bien, Jorge.
+
+**Si lo agarran** (la cucaracha, un pozo o un ente): corte a negro y vuelve enseguida al último **punto de control** (al empezar la huida, después de la reja, al bajar del carromato, al salir de los barriles y al llegar al final), como en Limbo. No hay vidas ni pantalla de "perdiste".
+
+_Por definir con el usuario:_ si la persecución reemplaza el final de la Sesión 1 o va en otra sesión (o en varias, al final, como la idea del sueño que se descontrola); si Jorge vuelve a pasar por la carpa y la calesita; el arte de la cucaracha; la dificultad (la velocidad de la cucaracha y cuánta ventaja tiene); si los saltos y el agacharse se suman a los controles del resto del juego.
+
 ### El despertar
 
 Jorge abre los ojos en la camilla del cuarto de inducción. La pantalla grande brilla en tonos cálidos, como el circo.
@@ -1194,7 +1233,7 @@ Termina en el despertar, cuando Vela cierra la sesión. Sigue en **La primera no
 
 ### Pendiente de definir
 
-- **Cómo termina la sesión** después del reproche (hoy, provisorio: quedarse quieto y la mamá lo encuentra).
+- **Cómo termina la sesión** después del reproche (hoy, provisorio: quedarse quieto y la mamá lo encuentra). **En prueba:** la persecución de la cucaracha (ver Demo: la persecución, arriba).
 - **Los puzzles del show:** si queda el de las galeras o se cambia por otro (ver las ideas arriba).
 - Si Lechuga tiene que ver con el papá (la llama se achica y hace frío, como cerca de él).
 - Si el elefante tiene nombre, y si vuelve más adelante (ver "Historia y mundo" → Referencias).
