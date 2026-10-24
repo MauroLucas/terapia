@@ -4,6 +4,13 @@ Notas personales de Mauro sobre el juego, ordenadas por fecha (la más nueva arr
 
 ## 24/10/2026
 
+### Vela se une a Jorge: bolas de fuego
+
+Estaría bueno que en **una de las últimas sesiones** **Vela se pueda unir a Jorge** y que **Jorge pueda lanzar bolas de fuego**: un guiño al típico juego de Mario.
+
+- Quizás agregar al **pasado de Jorge** que **le gustaba un juego de un fontanero que tiraba bolas de fuego**.
+- Por ahora queda solo como nota: todavía no se pasó al resto del GDD ni al prototipo.
+
 ### La persecución: un perro
 
 En la persecución, que Lechuga **se transforme en perro** (en vez de la cucaracha).
