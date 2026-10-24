@@ -98,6 +98,7 @@ Al final del menú hay una sección **Prototipos**: ideas que se están probando
 
 | Página | Qué abre | Código |
 |---|---|---|
+| **🗺️ Casa de Jorge (top-down)** _(en prueba)_ | Aviso de contenido → Departamento → Escaleras (5.º a PB, con los títulos) → Calle → Viaje por la 9 de Julio → "Fin de la locación". La primera locación completa en vista top-down estilo RPG. Ver "Locaciones" → Casa de Jorge → Prototipo top-down | `src/prototype/scenes/CasaRPG.ts` y `src/prototype/rpg/` (pixel art y caja de diálogo) · página `#/casa-de-jorge-rpg` |
 | **🪳 La persecución** _(en prueba)_ | Aviso de contenido → La persecución de la cucaracha al final de la Sesión 1 (estilo Limbo) → "Fin de la demo". Ver "Locaciones" → Sesión 1: El circo → Demo: la persecución | `src/prototype/scenes/Persecucion.ts` · página `#/demo-persecucion` |
 
 _El prototipo y este documento se mantienen sincronizados: cada cambio de diseño en uno se refleja en el otro._

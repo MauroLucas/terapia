@@ -1,5 +1,6 @@
 import * as Phaser from 'phaser'
 import { Apartment } from './scenes/Apartment'
+import { CasaRPG } from './scenes/CasaRPG'
 import { Car } from './scenes/Car'
 import { Corridor } from './scenes/Corridor'
 import { Dream } from './scenes/Dream'
@@ -345,6 +346,15 @@ export function createDemoPersecucionGame(parent: HTMLElement) {
   resetState()
   const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), scene: [Warning, Persecucion, LevelEnd] }))
   game.registry.set('start', 'Persecucion')
+  game.registry.set('solo', true)
+  return game
+}
+
+// Prototipo (en prueba): la Casa de Jorge completa en vista top-down, estilo RPG (Pokémon). No está en el prototipo completo
+export function createCasaRPGGame(parent: HTMLElement) {
+  resetState()
+  const game = fullscreenKey(new Phaser.Game({ ...baseConfig(parent), scene: [Warning, CasaRPG, LevelEnd] }))
+  game.registry.set('start', 'CasaRPG')
   game.registry.set('solo', true)
   return game
 }

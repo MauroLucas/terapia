@@ -687,6 +687,52 @@ small Argentine flag, morning light through tall windows, muted dreamlike palett
 
 **La cocina, unos días después** (1280 px). De día, clara: una ventana con sol, una planta en una maceta, la mesa con la billetera y el teléfono de pared.
 
+## Prototipo top-down _(en prueba)_
+
+_Arte del prototipo **Casa de Jorge (top-down)**, de la sección Prototipos. Pixel art provisorio, dibujado por código en `src/prototype/rpg/pixel.ts`: **16 × 16 px por casillero**, mostrado a ×4, con contorno oscuro de 1 pixel. Las imágenes de abajo están ampliadas._
+
+### Jorge y el chofer
+
+![Jorge, top-down](sprites/rpg/jorge.png)
+
+![El chofer, top-down](sprites/rpg/chofer.png)
+
+| Campo | Valor |
+|---|---|
+| Claves | `jorge-<dirección>-<cuadro>` y `chofer-<dirección>-<cuadro>`: `down`, `up`, `right` (la izquierda es la derecha espejada) × `0` parado, `1` y `2` los pasos |
+| Tamaño | 16 × 24 px (en pantalla, 64 × 96) |
+| Orden en la lámina | Abajo, arriba, derecha e izquierda; en cada una, parado y los dos pasos |
+| Descripción | Jorge con su ropa de siempre: suéter verde con escote en V, remera negra, pantalón y zapatos negros, pelo negro corto. El chofer, de azul marino, con gorra y canas |
+
+```
+16x24 pixel art overworld sprite sheet, GBA Pokémon style, 1px dark outline,
+man around 40, short black hair, green V-neck sweater over black t-shirt, black trousers and shoes,
+4 directions (down, up, right, left) x 3 frames (idle, step left, step right), transparent background
+```
+
+### Los mapas
+
+![Departamento](sprites/rpg/mapa-depto.png)
+
+![Palier de las escaleras](sprites/rpg/mapa-escalera.png)
+
+![La calle](sprites/rpg/mapa-calle.png)
+
+| Mapa | Casilleros | Qué tiene |
+|---|---|---|
+| Departamento | 30 × 15 | Cuarto (piso de madera), cocina (baldosas en damero), pasillo, la puerta del baño, el portero y la salida |
+| Escaleras | 12 × 6 | Palier de granito, puertas A y B, ascensor, número del piso, escalera para abajo (y la planta baja, con los buzones y la puerta de calle) |
+| Calle | 24 × 12 | Baldosas vainilla, plátanos, kiosco, cordón y asfalto |
+| La 9 de Julio | 20 × 74 | Seis carriles por mano, cantero con jacarandás, la Plaza de la República con el Obelisco y la esquina del microcentro con Neural |
+
+### Muebles y objetos
+
+![Muebles y objetos](sprites/rpg/objetos.png)
+
+Cama (vacía y con Jorge durmiendo), mesita de luz con la billetera, cómoda con el portarretratos, pizarra, heladera (con y sin notas), reloj, mesada, pastillas, calendario, aparador (cerrado y abierto), mesa y sillas, la basura de la mesa, el banner, la llave, alfombra, felpudo, planta, perchero, un cuadro, los autos (el del chofer, un taxi, uno blanco y uno rojo), el colectivo, un plátano, un jacarandá, el Obelisco desde arriba y el semáforo.
+
+_Se regeneran desde el juego en desarrollo (no con `scripts/sprites.py`): las texturas `rpg-*`, `jorge-*` y `chofer-*` de la escena `CasaRPG`._
+
 ## Cómo se regeneran las imágenes
 
 Con el servidor de desarrollo levantado (`npm run dev -- --port 5199`):

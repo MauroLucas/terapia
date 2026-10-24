@@ -2,6 +2,20 @@ Notas personales de Mauro sobre el juego, ordenadas por fecha (la más nueva arr
 
 ---
 
+## 24/10/2026
+
+### Sección de prototipos
+
+Que los prototipos vayan en **una sección de prototipos** del menú.
+
+### La primera locación en top-down
+
+Un prototipo de **todo el primer nivel** pero como si fuera una vista **top-down estilo RPG Pokémon**.
+
+- Se armó: ver "Locaciones" → Casa de Jorge → Prototipo top-down y "Mecánicas" → Ideas a implementar → Vista top-down estilo RPG.
+
+---
+
 ## 23/10/2026
 
 ### Estilo Little Nightmares o Limbo

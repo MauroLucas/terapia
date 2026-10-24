@@ -182,6 +182,18 @@ Adentro de una sesión, las reglas cambian. Esto es lo que se definió con la pr
 
 ### Ideas a implementar
 
+#### Vista top-down estilo RPG _(en prueba)_
+
+_Idea del usuario: evaluar pasar el juego a una vista **top-down estilo RPG**, como Pokémon (le atrae porque los sprites se hacen más fácil con IA). El 24/10/2026 pidió un prototipo de **toda la primera locación** así: está en la sección **Prototipos** (ver "Locaciones" → Casa de Jorge → Prototipo top-down). Lo demás lo propuso el agente y es provisorio. Todavía no está decidido._
+
+- **Arte:** pixel art de **16 × 16 px por casillero**, mostrado a **×4** (cada casillero ocupa 64 px en pantalla), con contorno oscuro de 1 pixel, como los sprites de Game Boy Advance. Los personajes son de 16 × 24, con **4 direcciones** y **3 cuadros** cada una (parado y los dos pasos).
+- **Movimiento:** por casilleros. Mantener la flecha camina; un toque corto solo gira. No se puede caminar a través de muebles ni paredes.
+- **Examinar:** lo que Jorge tiene **enfrente** (no lo que tiene cerca). Arriba de Jorge aparece un cartelito con la E y el nombre de lo que puede examinar.
+- **Puertas:** algunas se abren al caminar contra ellas (la salida, la del baño, la de la calle). Las aberturas entre ambientes se cruzan caminando.
+- **Diálogos:** caja de texto estilo Pokémon y menú de opciones con cursor. El diario (TAB), el inventario y los documentos en primer plano son los mismos que en la vista lateral.
+- **Qué se reaprovecha:** la historia, los textos, los puzzles, el diario, los documentos y el sonido. **Qué se rehace:** el movimiento, los mapas y todo el arte.
+- _Por definir:_ si el juego pasa a top-down; si los sueños también (la llama de Vela, el sigilo, los entes); si se usa un editor de mapas (Tiled) y sprites generados con IA (PixelLab).
+
 #### Estilo Limbo: obstáculos y un monstruo que persigue _(en prueba)_
 
 _Idea del usuario (23/10/2026): orientar el juego a algo estilo **Limbo** o **Little Nightmares**: que en algunos momentos haya obstáculos y que un monstruo persiga a Jorge. La primera prueba es la **demo de la persecución** al final de la Sesión 1, con la cucaracha gigante (ver "Locaciones" → Sesión 1: El circo → Demo: la persecución). Los controles y las reglas son provisorios, propuestos por el agente._

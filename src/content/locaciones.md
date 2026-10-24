@@ -366,6 +366,40 @@ Los objetos marcados con **✓** se guardan en el inventario al encontrarlos y s
 | Informe de Neural ✓ | Dentro del cajón con candado | Seguimiento de Jorge. Una parte está tachada |
 | Llave ✓ | Cocina: debajo del banner | Abre la puerta y termina la locación |
 
+### Prototipo top-down _(en prueba)_
+
+_Pedido del usuario (24/10/2026): un prototipo de toda la primera locación, pero en vista **top-down estilo RPG** (como Pokémon). Está en la sección **Prototipos** del menú (página **🗺️ Casa de Jorge (top-down)**). No reemplaza a la versión lateral: es para probar la perspectiva. La distribución de los ambientes y los textos nuevos los propuso el agente y son **provisorios**._
+
+**Qué se mantiene igual:** los objetos, los dos puzzles (la mesa y el candado 1-2-0-8), las pistas del diario, el inventario, los documentos en primer plano y todos los diálogos de esta sección, de las escaleras y del auto. El orden también: primero el portero, la cocina cerrada hasta atender, y para salir hacen falta la llave y el informe.
+
+**Qué cambia por la perspectiva:**
+
+| Parte | En top-down |
+|---|---|
+| Movimiento | Por casilleros, en cuatro direcciones (← ↑ → ↓). Un toque corto gira sin caminar. E / Espacio / Enter examina lo que Jorge tiene **enfrente** |
+| Diálogos | Caja de texto abajo, de lado a lado, con el nombre de quién habla (los pensamientos en cursiva, con "Jorge (piensa)"). Las opciones del auto, en un menú con cursor ▶ |
+| El departamento | Un solo mapa visto desde arriba: el **cuarto** arriba a la izquierda, la **cocina** arriba a la derecha y el **pasillo** abajo, de punta a punta. Desde el pasillo se entra al cuarto y a la cocina por dos aberturas. La puerta del **baño** está en la pared del pasillo, al lado de la cocina, y del baño solo se ve oscuridad. Al fondo del pasillo, el **portero** en la pared y la **salida** abajo, con un felpudo |
+| Objetos con física | La lata de la cocina y el bollo de papel del cuarto se patean: si Jorge camina contra ellos, se corren un casillero |
+| La mesa con basura | Con cada E, Jorge tira una cosa al piso (la caja de delivery, el papel y la lata). Del banner solo asoma la punta hasta que la mesa queda despejada |
+| Las escaleras | Un palier por piso, del 5.º a la planta baja: las puertas A y B, el número del piso y el ascensor con un cartel de "NO FUNCIONA". Se baja por la escalera de la derecha. **TERAPIA** aparece al llegar al 3.º y **Creado por Mauro Pereyra** al llegar al 1.º. En la planta baja están los buzones y la puerta de calle |
+| La calle | La vereda de baldosas, los plátanos, un **kiosco** al lado del edificio, un colectivo que pasa y el chofer parado al lado del auto |
+| El auto | El viaje se ve desde arriba: la **9 de Julio** con sus carriles, el cantero con **jacarandás**, el cartel verde, taxis negros y amarillos, el **colectivo 60** y el **Obelisco** en la Plaza de la República. Si la charla no terminó, el auto frena en un semáforo antes del Obelisco. Termina en la esquina del **microcentro**, frente a Neural (al lado de un edificio viejo con balcones) |
+
+**Textos nuevos (provisorios):**
+
+| Dónde | Texto |
+|---|---|
+| La cama | _"No es momento de dormir."_ |
+| La pileta | _"Platos sin lavar. Hace días que nadie lava nada acá."_ |
+| El cajón, ya abierto | _"El cajón ya está abierto. Está vacío."_ |
+| El ascensor | _"El ascensor tiene un cartel: «NO FUNCIONA»."_ / _"Por la escalera, entonces."_ |
+| La escalera para arriba | _"Para arriba no. El chofer me espera abajo."_ |
+| La puerta del edificio, desde la calle | _"Ya bajé. El chofer me está esperando."_ |
+| El kiosco | _"Un kiosco."_ / _"No hay tiempo, el chofer me está esperando."_ |
+| El chofer, en la vereda | _"¡Acá estoy! Suba, que llegamos justo."_ |
+
+_Por definir: si el juego pasa a top-down (ver "Mecánicas" → Ideas a implementar → Vista top-down estilo RPG)._
+
 ### Pendiente de definir
 
 - ¿Por qué Jorge sacó la foto de su primera novia (María)? El departamento es el que iban a alquilar juntos.

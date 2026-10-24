@@ -270,6 +270,14 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
           <span className="nav-icon">🪳</span>
           La persecución
         </NavLink>
+        <NavLink
+          to="/casa-de-jorge-rpg"
+          onClick={onNavigate}
+          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+        >
+          <span className="nav-icon">🗺️</span>
+          Casa de Jorge (top-down)
+        </NavLink>
       </nav>
     </aside>
   )
