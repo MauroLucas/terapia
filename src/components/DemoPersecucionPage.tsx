@@ -22,10 +22,10 @@ export function DemoPersecucionPage() {
     <article className="content prototype">
       <header className="section-header">
         <span className="section-icon">🪳</span>
-        <h1>Demo: la persecución</h1>
+        <h1>Prototipo: la persecución</h1>
       </header>
       <p>
-        <strong>En prueba.</strong> Una idea para el final de la Sesión 1, estilo <em>Limbo</em> o <em>Little Nightmares</em>: después de soltar al
+        <strong>En prueba</strong> (sección Prototipos: ideas sueltas que todavía no están en el juego completo). Una idea para el final de la Sesión 1, estilo <em>Limbo</em> o <em>Little Nightmares</em>: después de soltar al
         elefante, Lechuga se rompe como un ente y de la falla sale una cucaracha gigante que persigue a Jorge. Hay obstáculos (saltar, agacharse,
         empujar una caja, esconderse) y al final no hay salida: hay que quedarse quieto, como le dijo su mamá. No está en el prototipo completo.
         Ver "Locaciones" → Sesión 1: El circo → Demo: la persecución.

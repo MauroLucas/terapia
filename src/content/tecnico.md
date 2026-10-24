@@ -67,7 +67,6 @@ Para no tener que jugar todo desde el principio, **cada locación tiene su propi
 | **🏥 Hall del edificio** | Aviso de contenido → Hall de Neural → Ascensor → "Fin de la locación" | `src/prototype/scenes/Neural.ts` |
 | **🩺 Consultorio** | Aviso de contenido → Pasillo de los consultorios → Consultorio del doctor Vela → Cuarto de inducción → "Fin de la locación" | `Corridor.ts` y `Office.ts`, en `src/prototype/scenes/` |
 | **🎪 Sesión 1: El circo** | Aviso de contenido → Sueño del circo → Despertar en la camilla → "Fin de la locación" | `Dream.ts` y `Office.ts` (modo despertar), en `src/prototype/scenes/` |
-| **🪳 Demo: la persecución** _(en prueba)_ | Aviso de contenido → La persecución de la cucaracha (estilo Limbo) → "Fin de la demo". No está en el prototipo completo | `src/prototype/scenes/Persecucion.ts` |
 | **🌙 La primera noche** | Aviso de contenido → Casa de Jorge de noche → "Fin de la locación" | `Apartment.ts` (modo noche), en `src/prototype/scenes/` |
 | **☀️ Pre-sesión 2** | Aviso de contenido → Casa de Jorge, la mañana → Consulta con Vela → Cuarto de inducción → "Fin de la locación" | `Apartment.ts` (modo mañana) y `Office.ts` (sesión 2), en `src/prototype/scenes/` |
 | **📄 Sesión 2: El boletín** | Aviso de contenido → Sueño de la casa de la mamá y el barrio → Despertar en la camilla → "Fin de la locación" | `Dream2.ts` y `Office.ts` (despertar de la sesión 2), en `src/prototype/scenes/` |
@@ -92,6 +91,14 @@ Para no tener que jugar todo desde el principio, **cada locación tiene su propi
 | **🌖 La octava noche** | Aviso de contenido → Casa de Jorge, la octava noche → "Fin de la locación" | `Apartment.ts` (modo noche, `vuelta: 8`), en `src/prototype/scenes/` |
 | **🌅 Pre-sesión 9** | Aviso de contenido → Casa de Jorge, la mañana → Consulta y juegos de memoria con Vela → Cuarto de inducción → "Fin de la locación" | `Apartment.ts` (modo mañana, `vuelta: 8`) y `Office.ts` (sesión 9), en `src/prototype/scenes/` |
 | **🚪 Sesión 9: El baño** | Aviso de contenido → Su casa en el sueño → El baño y el pasillo → Epílogo → Cierre → "Fin" | `Dream9.ts`, en `src/prototype/scenes/` |
+
+### Prototipos
+
+Al final del menú hay una sección **Prototipos**: ideas que se están probando y **todavía no están en el juego completo** (pedido del usuario). Cada una tiene su página suelta, arranca con el aviso de contenido y termina en su propio cierre. Si una idea se aprueba, pasa al flujo de **Prototipo** y a la locación que corresponda.
+
+| Página | Qué abre | Código |
+|---|---|---|
+| **🪳 La persecución** _(en prueba)_ | Aviso de contenido → La persecución de la cucaracha al final de la Sesión 1 (estilo Limbo) → "Fin de la demo". Ver "Locaciones" → Sesión 1: El circo → Demo: la persecución | `src/prototype/scenes/Persecucion.ts` · página `#/demo-persecucion` |
 
 _El prototipo y este documento se mantienen sincronizados: cada cambio de diseño en uno se refleja en el otro._
 

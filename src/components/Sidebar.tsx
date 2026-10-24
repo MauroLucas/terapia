@@ -68,14 +68,6 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
           Sesión 1: El circo
         </NavLink>
         <NavLink
-          to="/demo-persecucion"
-          onClick={onNavigate}
-          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
-        >
-          <span className="nav-icon">🪳</span>
-          Demo: la persecución
-        </NavLink>
-        <NavLink
           to="/primera-noche"
           onClick={onNavigate}
           className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
@@ -266,6 +258,17 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
         >
           <span className="nav-icon">🚪</span>
           Sesión 9: El baño
+        </NavLink>
+        <div className="nav-sep" />
+        {/* Prototipos: ideas en prueba, sueltas, que todavía no están en el juego completo */}
+        <span className="nav-group">Prototipos</span>
+        <NavLink
+          to="/demo-persecucion"
+          onClick={onNavigate}
+          className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+        >
+          <span className="nav-icon">🪳</span>
+          La persecución
         </NavLink>
       </nav>
     </aside>

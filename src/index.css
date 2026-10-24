@@ -71,6 +71,7 @@ img { max-width: 100%; border-radius: 8px; }
 .empty { color: var(--muted); }
 
 .nav-sep { height: 1px; background: var(--border); margin: 12px; }
+.nav-group { display: block; padding: 0 12px 6px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .prototype { max-width: 1200px; }
 .game-actions { display: flex; align-items: center; gap: 12px; margin: 12px 0; flex-wrap: wrap; }
 .game-actions button {

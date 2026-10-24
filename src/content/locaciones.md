@@ -1154,7 +1154,7 @@ Jorge chico la abraza.
 
 ### Demo: la persecución _(en prueba)_
 
-_Idea del usuario (23/10/2026): orientar el juego a algo estilo **Limbo** o **Little Nightmares**, con obstáculos en algunos momentos y un monstruo que persigue a Jorge; al final de liberar al elefante, una **secuencia de escape** en la que **Lechuga se convierte en una cucaracha gigante** que lo persigue. Lo demás (el recorrido, los obstáculos, los textos y que termine quedándose quieto) lo propuso el agente y es **provisorio**. Por ahora es una **demo suelta** (página **🪳 Demo: la persecución**): la Sesión 1 del prototipo completo sigue terminando como antes._
+_Idea del usuario (23/10/2026): orientar el juego a algo estilo **Limbo** o **Little Nightmares**, con obstáculos en algunos momentos y un monstruo que persigue a Jorge; al final de liberar al elefante, una **secuencia de escape** en la que **Lechuga se convierte en una cucaracha gigante** que lo persigue. Lo demás (el recorrido, los obstáculos, los textos y que termine quedándose quieto) lo propuso el agente y es **provisorio**. Por ahora es una **demo suelta**, en la sección **Prototipos** del menú (página **🪳 La persecución**): la Sesión 1 del prototipo completo sigue terminando como antes._
 
 **Cómo empieza.** Atrás de la carpa, con el elefante ya suelto. Jorge: _"Está suelto."_ / _"Y no se mueve."_ Entra Lechuga: _"¡¿QUÉ HACÉS, MOCOSO?!"_ / _"¡Ese animal es mío! ¡MÍO!"_ / _"¡Te vas a acordar de esto toda la vida!"_ Crece y **se rompe como un ente**; de esa falla del sueño sale **la cucaracha gigante**, de perfil, casi el doble de alta que Jorge. Se para en dos patas un segundo (la ventaja para escapar). Vela: _"¡Jorge! ¡Corré!"_
 
