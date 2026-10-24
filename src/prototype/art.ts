@@ -562,54 +562,112 @@ function drawKidAgachado(g: Phaser.GameObjects.Graphics) {
   g.fillStyle(C.ink).fillCircle(33, 46, 2)
 }
 
-// Demo de la persecución: la cucaracha gigante de perfil, con la cabeza a la derecha (lo que sale cuando Lechuga se rompe).
-// Lienzo de 680 × 280; las patas apoyan en y = 272. `paso` alterna las patas (marcha en trípode)
-function drawCucarachaLado(g: Phaser.GameObjects.Graphics, paso: 0 | 1) {
-  const pata = (ax: number, ay: number, kx: number, ky: number, fx: number, color: number, fy = 272) => {
-    g.lineStyle(9, color).lineBetween(ax, ay, kx, ky)
-    g.lineStyle(6, color).lineBetween(kx, ky, fx, fy)
-    // Espinas en la tibia
-    g.lineStyle(2, color)
-    for (let t = 0.25; t < 0.9; t += 0.2) {
-      const px = kx + (fx - kx) * t
-      const py = ky + (fy - ky) * t
-      g.lineBetween(px, py, px + (fx > kx ? 10 : -10), py - 6)
-    }
-    g.lineStyle(3, color).lineBetween(fx, fy, fx + (fx > kx ? 12 : -12), fy)
+// Demo de la persecución: el perro gigante en que se transforma Lechuga, de perfil, mirando a la derecha.
+// Flaco y sarnoso, con el moño azul de Lechuga como collar. Lienzo de 600 × 320; las patas apoyan en y = 312.
+// Poses: `corre0` (estirado), `corre1` (encogido), `olfatea0` y `olfatea1` (camina despacio, con la nariz al piso)
+export type PosePerro = 'corre0' | 'corre1' | 'olfatea0' | 'olfatea1'
+// Dónde queda el ojo en cada pose (para el brillo que se ve en la oscuridad)
+export const OJO_PERRO: Record<PosePerro, [number, number]> = { corre0: [518, 95], corre1: [518, 99], olfatea0: [516, 210], olfatea1: [516, 214] }
+function drawPerroLado(g: Phaser.GameObjects.Graphics, pose: PosePerro) {
+  const pelo = 0x2b2522
+  const lejos = 0x161210
+  const brillo = 0x4a3f38
+  type Pt = [number, number]
+  const pata = (a: Pt, b: Pt, c: Pt, color: number, w = 24) => {
+    g.lineStyle(w, color).lineBetween(a[0], a[1], b[0], b[1])
+    g.lineStyle(w * 0.72, color).lineBetween(b[0], b[1], c[0], c[1])
+    g.fillStyle(color).fillEllipse(c[0] + 8, c[1] - 4, 32, 14)
+    // Uñas
+    g.fillStyle(0x0b0908)
+    for (const k of [0, 9, 18]) g.fillTriangle(c[0] + 12 + k, c[1] - 6, c[0] + 18 + k, c[1] - 2, c[0] + 12 + k, c[1] + 1)
   }
-  const s = paso === 0 ? 1 : -1
-  // Patas del otro lado: más oscuras y un poco más arriba
-  const lejos = 0x120a04
-  pata(250, 196, 170 - s * 18, 176, 110 - s * 24, lejos, 264)
-  pata(350, 200, 350 + s * 22, 190, 330 + s * 30, lejos, 264)
-  pata(440, 196, 500 - s * 18, 188, 560 - s * 20, lejos, 264)
-  // Cerco y abdomen segmentado
-  g.lineStyle(4, 0x24150a).lineBetween(70, 150, 30, 136).lineBetween(72, 160, 34, 170)
-  g.fillStyle(0x2c1a0c).fillEllipse(250, 150, 380, 128)
-  g.lineStyle(2, 0x1c1007)
-  for (let x = 110; x < 330; x += 34) g.lineBetween(x, 168, x + 8, 212)
-  // Alas: más claras, con un brillo húmedo
-  g.fillStyle(0x4a2c14).fillEllipse(245, 128, 360, 88)
-  g.fillStyle(0x6a4220, 0.55).fillEllipse(250, 112, 300, 34)
-  g.lineStyle(3, 0x9a6a3a, 0.5).lineBetween(110, 116, 380, 104)
-  g.lineStyle(1.5, 0x2a170b, 0.8).lineBetween(90, 134, 420, 128).lineBetween(140, 150, 400, 144)
-  // Escudo (pronoto) y cabeza, inclinada para abajo
-  g.fillStyle(0x3a2310).fillEllipse(450, 136, 132, 100)
-  g.fillStyle(0x7a5030, 0.45).fillEllipse(456, 118, 80, 30)
-  g.fillStyle(0x24140a).fillEllipse(522, 168, 62, 74)
-  g.fillStyle(0x0a0603).fillEllipse(532, 158, 18, 22)
-  g.fillStyle(0xc9a070, 0.8).fillCircle(535, 153, 3)
-  // Mandíbulas y palpos
-  g.lineStyle(3, 0x1c1007).lineBetween(536, 198, 552, 222).lineBetween(526, 202, 532, 228).lineBetween(546, 196, 566, 210)
-  // Antenas largas, para adelante
-  g.lineStyle(3, 0x2e1b0d)
-  g.beginPath().moveTo(544, 140).lineTo(590, 96 - s * 6).lineTo(640, 60 - s * 10).lineTo(676, 52).strokePath()
-  g.beginPath().moveTo(548, 146).lineTo(600, 120 + s * 6).lineTo(650, 112 + s * 12).lineTo(678, 128).strokePath()
-  // Patas de este lado: atrás, al medio y adelante
-  const cerca = 0x2a170a
-  pata(240, 204, 160 + s * 20, 196, 90 + s * 26, cerca)
-  pata(340, 210, 340 - s * 24, 200, 300 - s * 32, cerca)
-  pata(430, 206, 490 + s * 20, 196, 548 + s * 22, cerca)
+  const corre = pose === 'corre0' || pose === 'corre1'
+  const legs: Record<PosePerro, Pt[][]> = {
+    corre0: [
+      [[405, 205], [450, 255], [500, 305]],
+      [[190, 200], [150, 250], [105, 305]],
+      [[420, 200], [480, 250], [545, 300]],
+      [[175, 195], [120, 240], [60, 300]],
+    ],
+    corre1: [
+      [[405, 205], [415, 262], [400, 310]],
+      [[195, 200], [230, 255], [250, 310]],
+      [[420, 200], [400, 260], [360, 310]],
+      [[180, 195], [240, 250], [290, 310]],
+    ],
+    olfatea0: [
+      [[405, 205], [400, 260], [395, 310]],
+      [[190, 200], [205, 255], [215, 310]],
+      [[420, 205], [430, 260], [440, 310]],
+      [[175, 200], [150, 255], [165, 310]],
+    ],
+    olfatea1: [
+      [[405, 205], [418, 260], [430, 310]],
+      [[190, 200], [180, 255], [175, 310]],
+      [[420, 205], [412, 260], [405, 310]],
+      [[175, 200], [190, 255], [205, 310]],
+    ],
+  }
+  const [lf, lb, cf, cb] = legs[pose]
+  // Las patas del otro lado, más oscuras
+  pata(lf[0], lf[1], lf[2], lejos)
+  pata(lb[0], lb[1], lb[2], lejos)
+  // Cola peluda
+  g.lineStyle(24, pelo)
+  g.beginPath()
+  if (pose === 'corre1') g.moveTo(140, 150).lineTo(95, 105).lineTo(70, 80)
+  else g.moveTo(140, 150).lineTo(85, 128).lineTo(48, 140)
+  g.strokePath()
+  // Cuerpo: anca, lomo y pecho
+  g.fillStyle(pelo).fillEllipse(185, 172, 135, 130).fillEllipse(275, 168, 300, 120).fillEllipse(390, 180, 150, 145)
+  // Pelo erizado en el lomo
+  for (let x = 150; x < 410; x += 20) {
+    const h = 14 + ((x * 7) % 13)
+    g.fillStyle(pelo).fillTriangle(x, 122, x + 22, 122, x + 6, 122 - h)
+  }
+  g.lineStyle(3, brillo, 0.9).beginPath().moveTo(150, 118).lineTo(260, 108).lineTo(400, 116).strokePath()
+  // Costillas marcadas
+  g.lineStyle(3, 0x3d342f)
+  for (let x = 262; x < 352; x += 16) g.lineBetween(x, 150, x - 8, 205)
+  // Cuello y cabeza
+  const baja = !corre
+  g.fillStyle(pelo)
+  if (baja) g.fillPoints([new Phaser.Math.Vector2(370, 130), new Phaser.Math.Vector2(440, 140), new Phaser.Math.Vector2(505, 190), new Phaser.Math.Vector2(465, 252), new Phaser.Math.Vector2(390, 215)], true)
+  else g.fillPoints([new Phaser.Math.Vector2(370, 125), new Phaser.Math.Vector2(450, 70), new Phaser.Math.Vector2(505, 100), new Phaser.Math.Vector2(445, 190), new Phaser.Math.Vector2(380, 200)], true)
+  const dy = baja ? (pose === 'olfatea1' ? 119 : 115) : pose === 'corre1' ? 4 : 0
+  const V = (x: number, y: number) => new Phaser.Math.Vector2(x, y + dy)
+  // Oreja parada
+  g.fillStyle(pelo).fillTriangle(455, 75 + dy, 478, 28 + dy, 494, 82 + dy)
+  g.fillStyle(0x4a2a2a).fillTriangle(466, 72 + dy, 478, 42 + dy, 486, 76 + dy)
+  // Cabeza y hocico
+  g.fillStyle(pelo).fillEllipse(495, 105 + dy, 108, 88)
+  if (baja) {
+    // Hocico al piso, con la boca cerrada: olfatea
+    g.fillPoints([V(520, 90), V(590, 128), V(582, 158), V(522, 150)], true)
+    g.fillStyle(0x0d0b0a).fillCircle(588, 140 + dy, 9)
+    g.lineStyle(3, 0x0d0b0a).lineBetween(530, 145 + dy, 580, 152 + dy)
+  } else {
+    // Hocico abierto: dientes y la boca roja oscura
+    g.fillPoints([V(520, 85), V(592, 106), V(590, 138), V(530, 146)], true)
+    g.fillStyle(0x5a1414).fillPoints([V(530, 136), V(588, 140), V(545, 168)], true)
+    g.fillStyle(pelo).fillPoints([V(498, 132), V(578, 150), V(562, 174), V(500, 168)], true)
+    g.fillStyle(0xe9e2cf)
+    for (let x = 538; x < 584; x += 9) g.fillTriangle(x, 137 + dy, x + 6, 137 + dy, x + 3, 147 + dy)
+    for (let x = 544; x < 576; x += 10) g.fillTriangle(x, 152 + dy, x + 6, 152 + dy, x + 3, 143 + dy)
+    g.fillStyle(0x0d0b0a).fillCircle(590, 112 + dy, 9)
+  }
+  // Ojo
+  g.fillStyle(0x0d0b0a).fillCircle(518, 95 + dy, 7)
+  g.fillStyle(0xd9a860).fillCircle(520, 93 + dy, 2.5)
+  // Collar con el moño azul de Lechuga
+  const c: Pt = baja ? [462, 178] : [450, 150]
+  if (baja) g.lineStyle(9, 0x7a1f1f).lineBetween(c[0] - 22, c[1] - 34, c[0] + 4, c[1] + 16)
+  else g.lineStyle(9, 0x7a1f1f).lineBetween(c[0] - 14, c[1] - 52, c[0] + 4, c[1] + 18)
+  g.fillStyle(0x2b6cb0).fillTriangle(c[0], c[1], c[0] - 18, c[1] - 11, c[0] - 18, c[1] + 11).fillTriangle(c[0], c[1], c[0] + 18, c[1] - 11, c[0] + 18, c[1] + 11)
+  g.fillStyle(0x1f4f84).fillCircle(c[0], c[1], 5)
+  // Las patas de este lado, adelante de todo
+  pata(cb[0], cb[1], cb[2], pelo)
+  pata(cf[0], cf[1], cf[2], pelo)
 }
 
 export function makeTextures(scene: Phaser.Scene) {
@@ -782,11 +840,11 @@ export function makeTextures(scene: Phaser.Scene) {
     drawCucaracha(g, paso)
     g.generateTexture(`cucaracha${paso}`, 720, 260)
   }
-  // Demo de la persecución: la cucaracha de perfil y Jorge chico agachado
-  for (const paso of [0, 1] as const) {
+  // Demo de la persecución: el perro de perfil y Jorge chico agachado
+  for (const pose of ['corre0', 'corre1', 'olfatea0', 'olfatea1'] as const) {
     g.clear()
-    drawCucarachaLado(g, paso)
-    g.generateTexture(`cucarachaLado${paso}`, 680, 280)
+    drawPerroLado(g, pose)
+    g.generateTexture(`perro-${pose}`, 600, 320)
   }
   g.clear()
   drawKidAgachado(g)

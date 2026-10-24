@@ -267,7 +267,7 @@ export function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
           onClick={onNavigate}
           className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
         >
-          <span className="nav-icon">🪳</span>
+          <span className="nav-icon">🐕</span>
           La persecución
         </NavLink>
         <NavLink

@@ -294,3 +294,17 @@ No hay voces grabadas: todos los diálogos y pensamientos son **texto en pantall
 ## Tema principal
 
 Pieza **atmosférica**, sin una melodía marcada: capas de sonido, drones y texturas que crecen mientras Jorge baja las escaleras. Tiene que transmitir extrañeza y melancolía, no épica.
+
+## Demo: la persecución _(en prueba)_
+
+_Sonidos sintetizados por código, provisorios (propuestos por el agente). Ver "Locaciones" → Sesión 1: El circo → Demo: la persecución._
+
+| Momento | Sonido |
+|---|---|
+| Ambiente | El zumbido grave del sueño (el mismo de las sesiones), con grano de película en la imagen |
+| Lechuga se transforma | Estática y un **gruñido largo** mientras titila entre él y el perro; un golpe seco y un **ladrido doble** cuando queda en cuatro patas |
+| El perro cerca | **Latido** cada vez más rápido y sus **pisadas**, pesadas |
+| El perro busca (en los barriles y al final) | **Olfateo**: tres resoplidos cortos, cada un segundo y algo |
+| La reja | Golpes contra la reja y ladridos |
+| Si lo agarra | Golpe, ladrido y gruñido, y corte a negro |
+| Pozos y entes | El crujido de la grieta y la estática de los entes |

@@ -1,17 +1,17 @@
 import * as Phaser from 'phaser'
-import { addVignette, makeTextures } from '../art'
+import { OJO_PERRO, addVignette, makeTextures, type PosePerro } from '../art'
 import { sfx, startDrone } from '../audio'
 import { controlsHelp } from '../touch'
 import { objective, say, text, type Line, type Point } from '../ui'
 
 // DEMO (en prueba): la persecución al final de la Sesión 1, estilo Limbo / Little Nightmares.
-// Jorge acaba de soltar al elefante. Lechuga le reprocha, se rompe como un ente y de la falla sale una cucaracha gigante
+// Jorge acaba de soltar al elefante. Lechuga le reprocha, se rompe como un ente y se transforma en un perro gigante
 // que lo persigue. Se corre de izquierda a derecha, de noche, entre la niebla, atrás de la carpa:
 //   [elefante] … cajones · pozo · lona caída (agacharse) · ente que titila · cajón y pozo · [la reja] ·
 //   caja para empujar · carromato · barriles (esconderse) · cajón · ente · guirnaldas caídas · pozo · [sin salida]
 // Al final no hay salida: hay que quedarse quieto, como le dijo su mamá, y ella lo encuentra.
 // Física propia y simple (sin Matter): gravedad, saltar, agacharse y empujar. Todo se mueve con `delta`.
-// Si la cucaracha lo alcanza, se corta a negro y se vuelve al último punto de control.
+// Si el perro lo alcanza, se corta a negro y se vuelve al último punto de control.
 
 const FLOOR = 600
 const END = 7400
@@ -28,12 +28,12 @@ const HW = 12 // medio ancho del cuerpo
 const H_STAND = 94
 const H_CROUCH = 54
 
-// La cucaracha
-const ROACH = 228 // velocidad normal, un poco menos que Jorge corriendo
-const ROACH_FAR = 330 // si quedó muy lejos, alcanza (que la presión no se pierda)
-const ROACH_NEAR = 200 // si está encima, afloja un poco (para que haya "casi")
-const ROACH_SEARCH = 120 // buscando, en la parte de los barriles
-const ROACH_SCALE = 1.15
+// El perro: sigue el rastro de Jorge con la nariz
+const PERRO = 228 // velocidad normal, un poco menos que Jorge corriendo
+const PERRO_FAR = 330 // si quedó muy lejos, alcanza (que la presión no se pierda)
+const PERRO_NEAR = 200 // si está encima, afloja un poco (para que haya "casi")
+const PERRO_SEARCH = 120 // buscando, en la parte de los barriles
+const PERRO_SCALE = 1
 const STILL_MS = 4500 // cuánto hay que quedarse quieto al final
 
 type RectKind = 'solid' | 'box'
@@ -51,7 +51,7 @@ interface Ente {
   offset: number
   img: Phaser.GameObjects.Image
 }
-type RoachMode = 'off' | 'intro' | 'chase' | 'stuck' | 'search' | 'final' | 'lunge'
+type PerroMode = 'off' | 'intro' | 'chase' | 'stuck' | 'search' | 'final' | 'lunge'
 type Section = 'intro' | 'huida' | 'reja' | 'caja' | 'barriles' | 'carrera' | 'quieto' | 'final'
 
 // Pozos: donde el piso se rompe (una falla del sueño)
@@ -84,9 +84,9 @@ export class Persecucion extends Phaser.Scene {
   private dark!: Phaser.GameObjects.Image
   private red!: Phaser.GameObjects.Rectangle
   private grain!: Phaser.GameObjects.TileSprite
-  private roach!: Phaser.GameObjects.Container
-  private roachImg!: Phaser.GameObjects.Image
-  private roachEyes!: Phaser.GameObjects.Graphics
+  private perro!: Phaser.GameObjects.Container
+  private perroImg!: Phaser.GameObjects.Image
+  private perroEyes!: Phaser.GameObjects.Graphics
   private lechuga!: Phaser.GameObjects.Image
   private boxG!: Phaser.GameObjects.Graphics
   private rejaG!: Phaser.GameObjects.Graphics
@@ -115,18 +115,19 @@ export class Persecucion extends Phaser.Scene {
   private alive = true
   private busy = true
 
-  // Estado de la cucaracha y de la secuencia
-  private roachMode: RoachMode = 'off'
-  private roachWait = 0
-  private roachStep = 0
-  private roachDir = 1
+  // Estado del perro y de la secuencia
+  private perroMode: PerroMode = 'off'
+  private perroWait = 0
+  private perroStep = 0
+  private perroDir = 1
   private section: Section = 'intro'
   private cp = 0
   private said = new Set<string>()
   private stillMs = 0
   private searchDone = false
   private beat = 0
-  private patitasMs = 0
+  private pisadasMs = 0
+  private olfateoMs = 0
   private calloutUntil = 0
   private clock = 0 // reloj propio, hecho con `delta`: los entes titilan al mismo ritmo que se mueve Jorge, a cualquier FPS
 
@@ -139,14 +140,14 @@ export class Persecucion extends Phaser.Scene {
     this.entes = []
     this.reja = undefined
     this.said = new Set()
-    this.vx = this.vy = this.stillMs = this.beat = this.patitasMs = this.clock = 0
+    this.vx = this.vy = this.stillMs = this.beat = this.pisadasMs = this.olfateoMs = this.clock = 0
     this.grounded = true
     this.crouch = this.hidden = this.searchDone = false
     this.alive = true
     this.busy = true
     this.cp = 0
     this.section = 'intro'
-    this.roachMode = 'off'
+    this.perroMode = 'off'
     makeTextures(this)
 
     this.cameras.main.setBackgroundColor('#1b1f27')
@@ -160,10 +161,10 @@ export class Persecucion extends Phaser.Scene {
     this.flameGlow = this.add.circle(0, 0, 50, 0xffc56b, 0.16).setBlendMode(Phaser.BlendModes.ADD)
     this.flame = this.add.container(660, FLOOR - 160, [this.flameGlow, this.add.image(0, 0, 'llama')]).setDepth(790).setScale(0.75)
 
-    this.roachImg = this.add.image(0, 0, 'cucarachaLado0').setOrigin(1, 1)
-    this.roach = this.add.container(-900, FLOOR + 6, [this.roachImg]).setDepth(22).setScale(ROACH_SCALE).setVisible(false)
+    this.perroImg = this.add.image(0, 0, 'perro-corre0').setOrigin(1, 1)
+    this.perro = this.add.container(-900, FLOOR + 8, [this.perroImg]).setDepth(22).setScale(PERRO_SCALE).setVisible(false)
     // Los ojos brillan apenas, por encima de la oscuridad: se los ve antes que al bicho
-    this.roachEyes = this.add.graphics().setDepth(782).setBlendMode(Phaser.BlendModes.ADD)
+    this.perroEyes = this.add.graphics().setDepth(782).setBlendMode(Phaser.BlendModes.ADD)
 
     this.dark = this.add.image(0, 0, this.darkness()).setDepth(780)
     this.red = this.add.rectangle(0, 0, this.scale.width, this.scale.height, 0x8a0f0f, 0).setOrigin(0).setScrollFactor(0).setDepth(786)
@@ -437,7 +438,7 @@ export class Persecucion extends Phaser.Scene {
     fn()
   }
 
-  // ---------- Intro: Lechuga se rompe y sale la cucaracha ----------
+  // ---------- Intro: Lechuga se rompe y se transforma en perro ----------
 
   private async intro() {
     this.goal.set(null)
@@ -452,24 +453,25 @@ export class Persecucion extends Phaser.Scene {
     await say(this, [this.lech('¡Ese animal es mío! ¡MÍO!')])
     this.tweens.add({ targets: this.lechuga, scale: 1.3, duration: 600 })
     await say(this, [this.lech('¡Te vas a acordar de esto toda la vida!')])
-    // Se rompe: titila entre él y un ente, cada vez más grande y más oscuro
+    // Se transforma: titila entre él y el perro, cada vez más grande, hasta que queda en cuatro patas
     this.drone?.stop(0.3)
     sfx.estatica()
-    for (let i = 0; i < 10; i++) {
-      this.lechuga.setTexture(i % 2 ? 'ente' : 'lechugaEnojado').setX(440 + (i % 2 ? 10 : -10)).setScale(1.3 + i * 0.12)
-      await this.wait(90 + i * 8)
+    sfx.grunido(1.6)
+    this.perroImg.setTexture('perro-corre1')
+    this.perroFace(1)
+    for (let i = 0; i < 12; i++) {
+      const esPerro = i % 2 === 1 || i > 8
+      const k = 0.35 + i * 0.055
+      this.lechuga.setVisible(!esPerro).setTexture(i < 6 ? 'lechugaEnojado' : 'ente').setX(440 + (i % 2 ? 10 : -10)).setScale(1.3 + i * 0.12)
+      this.perro.setVisible(esPerro).setAlpha(0.6 + Math.random() * 0.4).setScale(PERRO_SCALE * k).setPosition(440 + 300 * PERRO_SCALE * k, FLOOR + 8)
+      await this.wait(90 + i * 10)
     }
-    this.lechuga.setTexture('ente')
-    sfx.grieta()
-    await this.tween({ targets: this.lechuga, scaleX: 3.2, scaleY: 0.25, alpha: 0.8, duration: 260 })
-    // De la falla sale la cucaracha
-    this.roachImg.setTexture('cucarachaLado0')
-    this.roach.setVisible(true).setPosition(500, FLOOR + 6).setScale(ROACH_SCALE * 0.4).setAlpha(0)
-    this.tweens.add({ targets: this.lechuga, alpha: 0, duration: 300 })
-    sfx.patitas()
-    this.roar()
-    await this.tween({ targets: this.roach, scale: ROACH_SCALE, alpha: 1, duration: 700, ease: 'Back.Out' })
     this.lechuga.setVisible(false)
+    sfx.grieta()
+    this.perro.setAlpha(1)
+    this.perroImg.setTexture('perro-corre0')
+    this.roar()
+    await this.tween({ targets: this.perro, scale: PERRO_SCALE, x: 500, duration: 650, ease: 'Back.Out' })
     this.cameras.main.shake(500, 0.01)
     this.tweens.add({ targets: this.flame, scale: 0.5, duration: 600 })
     this.flameGlow.setFillStyle(0x9fd6ff, 0.18)
@@ -479,9 +481,9 @@ export class Persecucion extends Phaser.Scene {
     this.section = 'huida'
     this.goal.set('Escapar')
     this.help()
-    this.roachMode = 'intro'
-    this.roachWait = 1500 // se para en dos patas antes de salir: ventaja para Jorge
-    this.tweens.add({ targets: this.roach, angle: -9, duration: 500, yoyo: true, hold: 400 })
+    this.perroMode = 'intro'
+    this.perroWait = 1500 // se planta y gruñe antes de salir: ventaja para Jorge
+    this.tweens.add({ targets: this.perro, angle: -9, duration: 500, yoyo: true, hold: 400 })
     this.release()
   }
 
@@ -494,13 +496,13 @@ export class Persecucion extends Phaser.Scene {
 
   private roar() {
     sfx.golpe()
-    sfx.estatica()
-    sfx.patitas()
+    sfx.ladrido()
+    sfx.grunido(0.8)
   }
 
   // ---------- Momentos de la persecución ----------
 
-  // Pasó la reja: se cae detrás de él y la cucaracha queda trabada del otro lado
+  // Pasó la reja: se cae detrás de él y el perro queda trabado del otro lado
   private rejaCae() {
     this.reja = this.solid(REJA - 20, REJA + 40, 100, FLOOR)
     this.tweens.add({ targets: this.rejaG, y: 0, duration: 260, ease: 'Quad.In', onComplete: () => { sfx.golpe(); this.cameras.main.shake(250, 0.008) } })
@@ -519,7 +521,7 @@ export class Persecucion extends Phaser.Scene {
     this.goal.set('Quedarme quieto')
   }
 
-  // Se quedó quieto: la mamá lo encuentra y la cucaracha se deshace con la luz
+  // Se quedó quieto: la mamá lo encuentra y el perro se deshace con la luz
   private async final() {
     this.section = 'final'
     this.busy = true
@@ -528,18 +530,18 @@ export class Persecucion extends Phaser.Scene {
     const view = this.cameras.main.worldView
     await say(this, [{ kind: 'speech', text: '¡Jorge!', anchor: () => ({ x: view.left + 60, y: 400 }) }])
     this.drone?.stop(1.2)
-    // La luz: la cucaracha titila, se aplasta y se va como una falla del sueño
+    // La luz: el perro titila, se aplasta y se va como una falla del sueño
     sfx.estatica()
     for (let i = 0; i < 8; i++) {
-      this.roachImg.setTexture(i % 2 ? 'ente' : 'cucarachaLado0')
-      this.roach.setAlpha(0.5 + Math.random() * 0.5).setX(this.roach.x + (i % 2 ? 12 : -12))
+      this.perroImg.setTexture(i % 2 ? 'ente' : 'perro-olfatea0')
+      this.perro.setAlpha(0.5 + Math.random() * 0.5).setX(this.perro.x + (i % 2 ? 12 : -12))
       await this.wait(110)
     }
     sfx.grieta()
-    await this.tween({ targets: this.roach, scaleY: 0.1, scaleX: ROACH_SCALE * 1.8, alpha: 0, duration: 320 })
-    this.roach.setVisible(false)
-    this.roachEyes.clear()
-    this.roachMode = 'off'
+    await this.tween({ targets: this.perro, scaleY: 0.1, scaleX: PERRO_SCALE * 1.8, alpha: 0, duration: 320 })
+    this.perro.setVisible(false)
+    this.perroEyes.clear()
+    this.perroMode = 'off'
     this.tweens.add({ targets: this.red, fillAlpha: 0, duration: 800 })
     this.tweens.add({ targets: this.dark, alpha: 0.35, duration: 2500 })
     this.tweens.add({ targets: this.flame, scale: 1, duration: 1500 })
@@ -558,7 +560,7 @@ export class Persecucion extends Phaser.Scene {
       { kind: 'speech', text: '¡Acá estás!', anchor: head },
       { kind: 'speech', text: '¿Viste? Te quedaste quieto y te encontré.', anchor: head },
       this.kid('Mamá…'),
-      this.kid('Había un bicho enorme.'),
+      this.kid('Había un perro enorme.'),
       { kind: 'speech', text: 'Ya está. Ya pasó. Vamos a casa.', anchor: head },
       this.vela('Muy bien, Jorge.'),
     ])
@@ -570,16 +572,16 @@ export class Persecucion extends Phaser.Scene {
 
   // ---------- Morir y volver ----------
 
-  private async die(por: 'cucaracha' | 'pozo' | 'ente') {
+  private async die(por: 'perro' | 'pozo' | 'ente') {
     if (!this.alive) return
     this.alive = false
     this.busy = true
     const cam = this.cameras.main
-    if (por === 'cucaracha') {
-      this.roachMode = 'lunge'
+    if (por === 'perro') {
+      this.perroMode = 'lunge'
       this.roar()
       cam.shake(250, 0.02)
-      await this.tween({ targets: this.roach, x: this.player.x + 40 * this.roachDir, duration: 160, ease: 'Quad.In' })
+      await this.tween({ targets: this.perro, x: this.player.x + 40 * this.perroDir, duration: 160, ease: 'Quad.In' })
     } else if (por === 'ente') {
       sfx.estatica()
       cam.shake(200, 0.01)
@@ -612,29 +614,29 @@ export class Persecucion extends Phaser.Scene {
     this.section = c.section
     this.stillMs = 0
     this.flame.setPosition(c.x + 60, FLOOR - 160)
-    this.roach.setVisible(true).setAlpha(1).setScale(ROACH_SCALE).setAngle(0)
-    this.roachFace(1)
+    this.perro.setVisible(true).setAlpha(1).setScale(PERRO_SCALE).setAngle(0)
+    this.perroFace(1)
     this.red.fillAlpha = 0
     this.goal.set(c.section === 'caja' ? 'Subir al carromato' : c.section === 'barriles' ? 'Seguir sin que me vea' : c.section === 'quieto' ? null : 'Escapar')
     if (c.section === 'huida') {
-      this.roach.setX(c.x - 560)
-      this.roachMode = 'intro'
-      this.roachWait = 700
+      this.perro.setX(c.x - 560)
+      this.perroMode = 'intro'
+      this.perroWait = 700
     } else if (c.section === 'caja') {
-      this.roach.setX(REJA - 24)
-      this.roachMode = 'stuck'
+      this.perro.setX(REJA - 24)
+      this.perroMode = 'stuck'
     } else if (c.section === 'barriles') {
-      this.roach.setVisible(false)
-      this.roachMode = 'off'
+      this.perro.setVisible(false)
+      this.perroMode = 'off'
       this.searchDone = false
       this.said.delete('busca')
     } else if (c.section === 'carrera') {
-      this.roach.setX(c.x - 620)
-      this.roachMode = 'intro'
-      this.roachWait = 600
+      this.perro.setX(c.x - 620)
+      this.perroMode = 'intro'
+      this.perroWait = 600
     } else if (c.section === 'quieto') {
-      this.roach.setX(c.x - 700)
-      this.roachMode = 'final'
+      this.perro.setX(c.x - 700)
+      this.perroMode = 'final'
       void this.finalQuieto()
     }
   }
@@ -655,9 +657,9 @@ export class Persecucion extends Phaser.Scene {
     this.player.setFlipX(this.facing < 0)
   }
 
-  private roachFace(dir: number) {
-    this.roachDir = dir
-    this.roachImg.setFlipX(dir < 0).setOrigin(dir < 0 ? 0 : 1, 1)
+  private perroFace(dir: number) {
+    this.perroDir = dir
+    this.perroImg.setFlipX(dir < 0).setOrigin(dir < 0 ? 0 : 1, 1)
   }
 
   private setKid(pose: 'stand' | 'walk' | 'air' | 'crouch') {
@@ -782,28 +784,28 @@ export class Persecucion extends Phaser.Scene {
     }
   }
 
-  // ---------- La cucaracha ----------
+  // ---------- El perro ----------
 
-  private stepRoach(dt: number, time: number) {
+  private stepPerro(dt: number, time: number) {
     const s = dt / 1000
     const px = this.player.x
     let v = 0
-    switch (this.roachMode) {
+    switch (this.perroMode) {
       case 'intro':
-        this.roachWait -= dt
-        if (this.roachWait <= 0) this.roachMode = 'chase'
+        this.perroWait -= dt
+        if (this.perroWait <= 0) this.perroMode = 'chase'
         break
       case 'chase': {
-        this.roachFace(1)
-        const gap = px - this.roach.x
-        v = gap > 650 ? ROACH_FAR : gap < 130 ? ROACH_NEAR : ROACH
+        this.perroFace(1)
+        const gap = px - this.perro.x
+        v = gap > 650 ? PERRO_FAR : gap < 130 ? PERRO_NEAR : PERRO
         // No pasa la reja
-        if (this.reja && this.roach.x < REJA && this.roach.x + v * s >= REJA - 24) {
-          this.roach.x = REJA - 24
-          this.roachMode = 'stuck'
+        if (this.reja && this.perro.x < REJA && this.perro.x + v * s >= REJA - 24) {
+          this.perro.x = REJA - 24
+          this.perroMode = 'stuck'
           this.roar()
           this.cameras.main.shake(300, 0.012)
-          this.once('trabada', () => this.time.delayedCall(700, () => this.shout('Se quedó trabada.')))
+          this.once('trabada', () => this.time.delayedCall(700, () => this.shout('Se quedó trabado.')))
           v = 0
         }
         break
@@ -811,54 +813,72 @@ export class Persecucion extends Phaser.Scene {
       case 'stuck':
         // Golpea la reja
         if (Math.sin(time / 120) > 0.95) {
-          this.roach.x = REJA - 24 - Math.random() * 10
+          this.perro.x = REJA - 24 - Math.random() * 10
           if (Math.random() < 0.05) sfx.golpe()
+          if (Math.random() < 0.03) sfx.ladrido()
         }
         if (px > 3500) {
-          this.roachMode = 'off'
-          this.tweens.add({ targets: this.roach, alpha: 0, x: REJA - 300, duration: 1800, onComplete: () => this.roach.setVisible(false) })
+          this.perroMode = 'off'
+          this.tweens.add({ targets: this.perro, alpha: 0, x: REJA - 300, duration: 1800, onComplete: () => this.perro.setVisible(false) })
           this.shout('Se fue… por ahora.')
         }
         break
       case 'search':
-        this.roachFace(-1)
-        v = -ROACH_SEARCH
-        if (this.roach.x < 4120) {
-          this.roachMode = 'off'
+        this.perroFace(-1)
+        v = -PERRO_SEARCH
+        if (this.perro.x < 4120) {
+          this.perroMode = 'off'
           this.searchDone = true
-          this.tweens.add({ targets: this.roach, alpha: 0, duration: 900, onComplete: () => this.roach.setVisible(false) })
+          this.tweens.add({ targets: this.perro, alpha: 0, duration: 900, onComplete: () => this.perro.setVisible(false) })
           this.time.delayedCall(800, () => this.shout('Ya pasó. Despacito…'))
         }
         break
       case 'final':
-        this.roachFace(1)
+        this.perroFace(1)
         // Se acerca despacio y se queda olfateando, con la cabeza encima de Jorge
-        if (this.roach.x < px - 30) v = this.roach.x < px - 500 ? 260 : 90
+        if (this.perro.x < px - 30) v = this.perro.x < px - 500 ? 260 : 90
         break
     }
-    this.roach.x += v * s
+    this.perro.x += v * s
+    const busca = this.perroMode === 'search' || (this.perroMode === 'final' && Math.abs(v) < 200)
     if (v !== 0) {
-      this.roachStep += Math.abs(v) * s
-      this.roachImg.setTexture(Math.floor(this.roachStep / 38) % 2 ? 'cucarachaLado1' : 'cucarachaLado0')
-      this.roach.y = FLOOR + 6 + Math.abs(Math.sin(this.roachStep / 24)) * -4
-    } else if (this.roachMode === 'final' && this.roach.visible) {
-      // Olfatea: tiembla apenas
-      this.roachImg.setTexture(Math.sin(time / 60) > 0 ? 'cucarachaLado1' : 'cucarachaLado0')
+      this.perroStep += Math.abs(v) * s
+      if (busca) {
+        this.perroImg.setTexture(Math.floor(this.perroStep / 45) % 2 ? 'perro-olfatea1' : 'perro-olfatea0')
+        this.perro.y = FLOOR + 8
+      } else {
+        // Galope: estirado y encogido, con un saltito
+        const fase = Math.floor(this.perroStep / 70) % 2
+        this.perroImg.setTexture(fase ? 'perro-corre1' : 'perro-corre0')
+        this.perro.y = FLOOR + 8 - (fase ? 0 : 10)
+      }
+    } else if (this.perroMode === 'final' && this.perro.visible) {
+      // Olfatea a Jorge, con la nariz encima
+      this.perroImg.setTexture(Math.sin(time / 180) > 0 ? 'perro-olfatea1' : 'perro-olfatea0')
+      this.perro.y = FLOOR + 8
+    }
+    if (busca && this.perro.visible) {
+      this.olfateoMs -= dt
+      if (this.olfateoMs <= 0) {
+        sfx.olfateo()
+        this.olfateoMs = 1100 + Math.random() * 500
+      }
     }
 
     // Los ojos, apenas, por encima de la oscuridad
-    this.roachEyes.clear()
-    if (this.roach.visible && this.roach.alpha > 0.3) {
-      const ex = this.roach.x + (this.roachDir > 0 ? -148 : 148) * ROACH_SCALE
-      const ey = this.roach.y - (280 - 155) * ROACH_SCALE
-      this.roachEyes.fillStyle(0xd9a860, 0.35 * this.roach.alpha).fillCircle(ex, ey, 4)
+    this.perroEyes.clear()
+    if (this.perro.visible && this.perro.alpha > 0.3) {
+      const [ox, oy] = OJO_PERRO[this.perroImg.texture.key.slice(6) as PosePerro] ?? OJO_PERRO.corre0
+      const ex = this.perro.x + (this.perroDir > 0 ? -1 : 1) * (600 - ox) * PERRO_SCALE * this.perro.scaleX
+      const ey = this.perro.y - (320 - oy) * PERRO_SCALE * this.perro.scaleY
+      this.perroEyes.fillStyle(0xd9a860, 0.35 * this.perro.alpha).fillCircle(ex, ey, 4)
     }
   }
 
-  // Cerca de la cucaracha: latido más rápido, pantalla roja y el ruido de las patas
+  // Cerca del perro: latido más rápido, pantalla roja y las pisadas
   private fear(dt: number) {
-    const active = this.roach.visible && (this.roachMode === 'chase' || this.roachMode === 'search' || this.roachMode === 'final' || this.roachMode === 'intro')
-    const dist = active ? Math.abs(this.player.x - this.roach.x) : 9999
+    const active = this.perro.visible && (this.perroMode === 'chase' || this.perroMode === 'search' || this.perroMode === 'final' || this.perroMode === 'intro')
+    const dist = active ? Math.abs(this.player.x - this.perro.x) : 9999
     const near = Phaser.Math.Clamp(1 - dist / 750, 0, 1)
     this.red.fillAlpha += (near * 0.22 - this.red.fillAlpha) * Math.min(1, dt / 200)
     this.beat -= dt
@@ -866,10 +886,10 @@ export class Persecucion extends Phaser.Scene {
       sfx.latido()
       this.beat = 950 - near * 600
     }
-    this.patitasMs -= dt
-    if (near > 0.3 && this.patitasMs <= 0 && this.roachMode !== 'final') {
-      sfx.patitas()
-      this.patitasMs = 650 - near * 300
+    this.pisadasMs -= dt
+    if (near > 0.3 && this.pisadasMs <= 0 && this.perroMode !== 'final' && this.perroMode !== 'search') {
+      sfx.pisadas()
+      this.pisadasMs = 520 - near * 200
     }
   }
 
@@ -901,7 +921,7 @@ export class Persecucion extends Phaser.Scene {
     }
 
     if (this.section !== 'intro' && this.section !== 'final') {
-      this.stepRoach(dt, clock)
+      this.stepPerro(dt, clock)
       this.fear(dt)
     }
     if (this.busy || !this.alive) return
@@ -948,8 +968,8 @@ export class Persecucion extends Phaser.Scene {
         return
       }
     }
-    if (this.roach.visible && this.roachDir > 0 && (this.roachMode === 'chase' || this.roachMode === 'final') && this.roach.x >= px - 8) {
-      void this.die('cucaracha')
+    if (this.perro.visible && this.perroDir > 0 && (this.perroMode === 'chase' || this.perroMode === 'final') && this.perro.x >= px - 8) {
+      void this.die('perro')
       return
     }
 
@@ -974,25 +994,25 @@ export class Persecucion extends Phaser.Scene {
     } else if (this.section === 'barriles') {
       if (px > 4130) {
         this.once('busca', () => {
-          this.roach.setVisible(true).setAlpha(0).setX(5450).setScale(ROACH_SCALE).setAngle(0)
-          this.roachFace(-1)
-          this.roachMode = 'search'
-          this.tweens.add({ targets: this.roach, alpha: 1, duration: 1500 })
+          this.perro.setVisible(true).setAlpha(0).setX(5450).setScale(PERRO_SCALE).setAngle(0)
+          this.perroFace(-1)
+          this.perroMode = 'search'
+          this.tweens.add({ targets: this.perro, alpha: 1, duration: 1500 })
           this.shout('Algo viene… ¡Escondete!', 2600)
         })
       }
       // Buscando: si lo ve fuera del barril, se le tira encima
-      if (this.roachMode === 'search' && !this.hidden && px > this.roach.x - 380 && px < this.roach.x + 120) {
-        void this.die('cucaracha')
+      if (this.perroMode === 'search' && !this.hidden && px > this.perro.x - 380 && px < this.perro.x + 120) {
+        void this.die('perro')
         return
       }
       if (this.searchDone && px > 5040) {
         this.cp = 3
         this.section = 'carrera'
         this.goal.set('Escapar')
-        this.roach.setVisible(true).setAlpha(1).setX(px - 760)
-        this.roachMode = 'intro'
-        this.roachWait = 500
+        this.perro.setVisible(true).setAlpha(1).setX(px - 760)
+        this.perroMode = 'intro'
+        this.perroWait = 500
         this.roar()
         this.cameras.main.shake(400, 0.01)
         this.shout('¡Te vio! ¡Corré!', 1800)
@@ -1000,12 +1020,12 @@ export class Persecucion extends Phaser.Scene {
     } else if (this.section === 'carrera') {
       if (px > 6700) {
         this.cp = 4
-        if (this.roach.x < px - 900) this.roach.setX(px - 900)
-        this.roachMode = 'final'
+        if (this.perro.x < px - 900) this.perro.setX(px - 900)
+        this.perroMode = 'final'
         void this.finalQuieto()
       }
     } else if (this.section === 'quieto') {
-      const near = this.roach.x > px - 420
+      const near = this.perro.x > px - 420
       const quieto = dir === 0 && !jump && !down && this.grounded
       if (quieto) {
         if (near) this.stillMs += dt
@@ -1016,8 +1036,8 @@ export class Persecucion extends Phaser.Scene {
       } else {
         this.stillMs = 0
         // Si se mueve con el bicho encima, lo ve
-        if (this.roach.x > px - 260) {
-          void this.die('cucaracha')
+        if (this.perro.x > px - 260) {
+          void this.die('perro')
           return
         }
       }

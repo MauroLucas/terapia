@@ -4,6 +4,12 @@ Notas personales de Mauro sobre el juego, ordenadas por fecha (la más nueva arr
 
 ## 24/10/2026
 
+### La persecución: un perro
+
+En la persecución, que Lechuga **se transforme en perro** (en vez de la cucaracha).
+
+- Se cambió en la demo: ver "Locaciones" → Sesión 1: El circo → Demo: la persecución.
+
 ### Sección de prototipos
 
 Que los prototipos vayan en **una sección de prototipos** del menú.

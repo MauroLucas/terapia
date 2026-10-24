@@ -132,6 +132,25 @@ export const sfx = {
   tecla() { const [a, b] = [[697, 1209], [770, 1336], [852, 1477], [941, 1336]][Math.floor(Math.random() * 4)]; tone(a, 0.12, 'sine', 0.03); tone(b, 0.12, 'sine', 0.03) },
   llamando() { tone(425, 1.0, 'sine', 0.045) },
   // La cuarta noche: patas de cucaracha contra el techo, un repiqueteo seco
+  // El perro de la persecución: ladrido (doble), gruñido largo, olfateo y pisadas pesadas
+  ladrido() {
+    const uno = () => {
+      tone(330, 0.13, 'sawtooth', 0.12)
+      tone(230, 0.11, 'square', 0.06, 0.03)
+      noiseBurst(0.15, 900, 0.18, 'bandpass')
+    }
+    uno()
+    setTimeout(uno, 230)
+  },
+  grunido(seg = 1.1) {
+    const n = Math.round(seg / 0.055)
+    for (let i = 0; i < n; i++) tone(78 + Math.random() * 14, 0.07, 'sawtooth', 0.08, i * 0.055)
+    noiseBurst(seg, 280, 0.06)
+  },
+  olfateo() {
+    for (let i = 0; i < 3; i++) setTimeout(() => noiseBurst(0.07, 2400, 0.06, 'highpass'), i * 120)
+  },
+  pisadas() { noiseBurst(0.08, 260, 0.2); setTimeout(() => noiseBurst(0.07, 220, 0.16), 140) },
   patitas() { for (let i = 0; i < 16; i++) tone(2600 + Math.random() * 1800, 0.018, 'square', 0.018, i * 0.035 + Math.random() * 0.02) },
   // Sesión 2: el Japo contra el pizarrón, la grieta, el aula que se ríe y el timbre del colegio
   golpe() { tone(70, 0.4, 'sine', 0.3); noiseBurst(0.35, 500, 0.3); tone(140, 0.15, 'square', 0.04) },

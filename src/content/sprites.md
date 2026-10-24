@@ -393,22 +393,21 @@ giant cockroach seen from below on a bedroom ceiling, dark glossy brown, long an
 spiky legs, realistic, unsettling, 2D side-scroller game, night, dim light
 ```
 
-### La cucaracha gigante, de perfil _(demo de la persecución)_
+### El perro gigante _(demo de la persecución)_
 
-![La cucaracha de perfil](sprites/cucarachaLado0.png)
+![El perro corriendo](sprites/perro-corre0.png) ![El perro corriendo, encogido](sprites/perro-corre1.png) ![El perro olfateando](sprites/perro-olfatea0.png)
 
 | Campo | Valor |
 |---|---|
-| Claves | `cucarachaLado0`, `cucarachaLado1` (dos posiciones de patas, marcha en trípode) |
-| Tamaño en pantalla | 680 × 280 px, a ×1,15: casi el doble de alta que Jorge chico |
-| Dónde | Demo: la persecución (Sesión 1, en prueba): sale de la falla cuando Lechuga se rompe y persigue a Jorge |
-| Descripción | La misma cucaracha enorme, pero **de perfil**, caminando por el piso, con la cabeza a la derecha (se da vuelta para buscar): marrón casi negro, brillante, alas con un reflejo húmedo, abdomen segmentado, seis patas con espinas (las del otro lado, más oscuras), mandíbulas y antenas larguísimas para adelante. Un ojo con un brillo apenas, que se ve en la oscuridad. Provisorio |
+| Claves | `perro-corre0` y `perro-corre1` (el galope: estirado y encogido) · `perro-olfatea0` y `perro-olfatea1` (camina despacio, con la nariz al piso) |
+| Tamaño en pantalla | 600 × 320 px: casi tres veces más alto que Jorge chico |
+| Dónde | Demo: la persecución (Sesión 1, en prueba): en lo que se transforma Lechuga. Corre cuando persigue; olfatea cuando busca en los barriles y al final, encima de Jorge |
+| Descripción | Un perro negro, flaco y sarnoso, de perfil, con la cabeza a la derecha (se da vuelta para buscar): pelo erizado en el lomo, costillas marcadas, una oreja parada, ojos con un brillo ámbar, la boca abierta con los dientes a la vista. Lleva **el moño azul de Lechuga** en un collar rojo oscuro. Provisorio |
 
 ```
-giant cockroach walking on the ground, side view facing right, as tall as a doorway,
-dark glossy brown almost black, wet highlight on the wings, segmented abdomen, six spiky legs,
-long antennae reaching forward, faint glint in the eye, realistic, disgusting and scary,
-2D side-scroller in the style of Limbo / Little Nightmares, night fog, silhouette lighting
+giant gaunt black dog, side view facing right, as tall as a doorway, mangy bristling fur on its back,
+visible ribs, one pointed ear, amber glinting eye, open mouth with sharp teeth, red collar with a blue bow tie,
+running and sniffing poses, 2D side-scroller in the style of Limbo / Little Nightmares, night fog, silhouette lighting
 ```
 
 ### Jorge de chico, agachado _(demo de la persecución)_

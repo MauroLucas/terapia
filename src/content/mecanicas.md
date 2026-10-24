@@ -196,7 +196,7 @@ _Idea del usuario: evaluar pasar el juego a una vista **top-down estilo RPG**, c
 
 #### Estilo Limbo: obstáculos y un monstruo que persigue _(en prueba)_
 
-_Idea del usuario (23/10/2026): orientar el juego a algo estilo **Limbo** o **Little Nightmares**: que en algunos momentos haya obstáculos y que un monstruo persiga a Jorge. La primera prueba es la **demo de la persecución** al final de la Sesión 1, con la cucaracha gigante (ver "Locaciones" → Sesión 1: El circo → Demo: la persecución). Los controles y las reglas son provisorios, propuestos por el agente._
+_Idea del usuario (23/10/2026): orientar el juego a algo estilo **Limbo** o **Little Nightmares**: que en algunos momentos haya obstáculos y que un monstruo persiga a Jorge. La primera prueba es la **demo de la persecución** al final de la Sesión 1, con Lechuga transformado en un perro gigante (antes era una cucaracha) (ver "Locaciones" → Sesión 1: El circo → Demo: la persecución). Los controles y las reglas son provisorios, propuestos por el agente._
 
 - **Controles nuevos** (solo en la demo): **saltar** (↑, W o Espacio), **agacharse** (↓ o S; bajo algo bajo, sigue agachado aunque se suelte la tecla), **empujar** (caminar contra una caja) y **esconderse** (E al lado de un barril; E o caminar para salir). En la persecución Jorge **corre** siempre.
 - **Física simple**, sin Matter: gravedad, piso con pozos, cajones que se pisan, cosas bajas que obligan a agacharse. Con un margen chico para saltar justo después de un borde o un poco antes de tocar el piso, para que no se sienta injusto.
