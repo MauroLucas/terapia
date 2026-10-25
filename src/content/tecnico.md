@@ -57,6 +57,8 @@ Es el mismo código: `juego/index.html` y `src/juego.ts` arrancan el juego compl
 
 **Es provisorio:** los gráficos y los sonidos están hechos por código (sin archivos de arte ni audio). Sirve para probar ritmo, puzzles y diálogos, no el aspecto final.
 
+**El guion** de todo lo que se dice en el prototipo está en la sección **🎬 Guion**, en el orden en que se juega. Si cambia un diálogo, un pensamiento o un cartel en el código, se cambia también ahí.
+
 ### Locaciones sueltas
 
 Para no tener que jugar todo desde el principio, **cada locación tiene su propia página** en el menú, debajo de **Prototipo**. Una locación suelta arranca con el diario y el inventario vacíos y, al terminar, muestra su cierre ("Fin de la locación") en vez de seguir a la locación siguiente:

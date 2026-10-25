@@ -73,6 +73,19 @@ Desde el Hall del edificio, Jorge se cruza con gente. Se les habla con **E**, ig
 - Cuando Jorge tiene un objeto que le sirve a ese personaje, aparece **una opción más** para dárselo (primera de la lista).
 - Un personaje puede **cortarle el paso**: si Jorge intenta pasar de largo, lo frena y le habla.
 
+### Escribir diálogos: mostrar, no contar
+
+_Criterio del usuario (24/10/2026; ver "Notas personales"): Jorge y Vela muchas veces dan información de más. Como guionista, hay que **mostrar y no contar**. Las reglas de abajo las propuso el agente a partir de esa nota y son provisorias._
+
+- **Si el jugador ya lo ve, lo oye o lo puede deducir, nadie lo dice.** Jorge no narra lo que hay en pantalla ("Un león.", "No contesta.").
+- **Las reglas del sueño se aprenden jugando**, no las explica Vela: la luz da color, el ente devuelve atrás, la tinta se borra.
+- **Vela no adelanta ni resume.** En el consultorio no cuenta qué va a pasar en la sesión, y al despertar no repite lo que pasó.
+- **Jorge no explica qué significa un momento.** Si una imagen tiene peso (la estaca, la puerta trabada, la cara de la mamá), se muestra y se deja en silencio.
+- **Las pistas van en el objetivo en pantalla o en el escenario**, no en voz alta.
+- **Un detalle concreto vale más que una explicación.** El modelo: _"Si no lo abro, todavía no pasó nada."_, _"Cinco años, dijo. Fueron siete."_, _"La cocina no tiene ninguna."_
+
+_La revisión línea por línea de los diálogos actuales con este criterio está hecha, pero todavía no se aplicó: el usuario elige qué cortar._
+
 ### Cadena de favores
 
 Un tipo de puzzle: alguien bloquea el camino y quiere algo; para conseguirlo hay que hacerle un favor a otro. Ejemplo (Hall del edificio): papel higiénico → fichas → gaseosa → el de seguridad deja los molinetes.

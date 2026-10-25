@@ -26,6 +26,7 @@ Antes de dar un cambio por terminado: `npm run build` y `npm run lint` sin error
 | Ruta | Qué hay |
 |---|---|
 | `src/content/*.md` | **El GDD**: una sección por archivo, en Markdown |
+| `src/content/guion.md` | Sección **Guion**: todo lo que se dice en el juego, locación por locación, como un guion. Se mantiene igual al código |
 | `src/sections.ts` | Orden, título e ícono de cada sección del menú |
 | `src/game.ts` | Nombre y versión del juego |
 | `src/components/` | Sidebar, página de sección, página del prototipo (juego completo) y una página por locación |
@@ -73,6 +74,7 @@ Dónde va cada cosa en el GDD:
 | Cambio | Sección |
 |---|---|
 | Ambientes, objetos, eventos, puzzles, pistas de cada locación | `locaciones.md` |
+| Diálogos, pensamientos, opciones y carteles (el texto que se ve en pantalla), en el orden en que se juega | `guion.md` (además de `locaciones.md`) |
 | Controles, sistemas (diálogos, física, puertas) | `mecanicas.md` |
 | Globos, inventario, diario, menús, opciones | `ui.md` |
 | Música, efectos, ambientes sonoros | `audio.md` |

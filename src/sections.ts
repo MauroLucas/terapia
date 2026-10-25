@@ -12,6 +12,7 @@ export const sections: Section[] = [
   { id: 'personajes', title: 'Personajes', icon: '🧙' },
   { id: 'mecanicas', title: 'Mecánicas', icon: '⚙️' },
   { id: 'locaciones', title: 'Locaciones', icon: '🗺️' },
+  { id: 'guion', title: 'Guion', icon: '🎬' },
   { id: 'arte', title: 'Arte y estilo', icon: '🎨' },
   { id: 'sprites', title: 'Sprites', icon: '🧩' },
   { id: 'audio', title: 'Audio', icon: '🎵' },
