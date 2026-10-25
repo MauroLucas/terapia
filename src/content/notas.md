@@ -4,6 +4,10 @@ Notas personales de Mauro sobre el juego, ordenadas por fecha (la más nueva arr
 
 ## 24/10/2026
 
+### Mostrar, no contar
+
+**No contar tanto y mostrar.** Creo que **Jorge y Vela muchas veces dan información de más**, y eso está mal: uno, como guionista, **debe mostrar y no contar**.
+
 ### Vela se une a Jorge: bolas de fuego
 
 Estaría bueno que en **una de las últimas sesiones** **Vela se pueda unir a Jorge** y que **Jorge pueda lanzar bolas de fuego**: un guiño al típico juego de Mario.
